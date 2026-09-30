@@ -1,0 +1,115 @@
+qid: q018
+kind: objective
+unit_ids:
+- u02
+- u03
+span: long
+inference_layer: 高可信推断
+qtype: fragment_synthesis
+question: 小艾尔有自我意识么？
+necessary_conclusion: 有。她属于那批「自由的灵魂」——派蒙把她们与蜂巢那些完全按照程序的机器人明确对照，主角也判断她们「并非简单的游戏程序」，而是融合了故事设定的智能人格。判据不是称号，而是她有自己的立场：她拒绝当王者，理由是她自己的；她还会提出自己的价值主张，认为「只要让自己开心」也是需求——这段话反过来点醒了主角，让他把理想世界修正为「消灭剥削意味着人能自由发展其个性」。她虽是祈愿召唤来的重复个体，但重复不等于无我：她坦然接受「小艾尔」这个称呼、有自己写的信、有自己做衣服并期待被表扬的主动
+acceptable_surface_forms:
+- 有。她是那批自由的灵魂之一，跟蜂巢那些完全按程序的机器人不一样。判据是她有自己的立场——她拒绝当王者的理由是她自己的，还主张让自己开心也算需求，这段话反过来点醒了主角。她被召唤来是重复的个体，但重复不等于没有自我
+- 有自我意识：她有自己的判断和主张，而且这种主张还改变过主角的想法
+answer_points:
+- id: a1
+  point: 有——她属于那批「自由的灵魂」，与蜂巢那些完全按照程序的机器人相对照
+  required: true
+  any_of:
+  - 自由的灵魂
+  - 有自我意识
+  - 并非简单的游戏程序
+  - 智能人格
+  - 不是程序
+  - 're: (自由的灵魂|有自我意识|智能人格)'
+- id: a2
+  point: 判据一：她有自己的立场——拒绝当王者的理由是她自己的
+  required: true
+  any_of:
+  - 拒绝
+  - 不想当
+  - 当王者
+  - 自己的理由
+  - 自己的立场
+  - 're: (王者|英雄).{0,16}(不想|孤独|拒绝)'
+- id: a3
+  point: 判据二（更强）：她的价值主张反过来点醒了主角——让他把理想世界修正为「消灭剥削意味着人能自由发展其个性」
+  required: true
+  any_of:
+  - 点醒
+  - 需求
+  - 开心
+  - 个性
+  - 自由发展
+  - 're: (点醒|改变了主角|让主角).{0,14}(想法|理解|修正)'
+  - 're: (让自己开心|算需求|审美).{0,16}(需求|主张|尊重)'
+- id: a4
+  point: 她虽是祈愿召唤来的重复个体，但重复不等于无我：坦然接受称呼、有自己写的信、有主动做事并期待被表扬的时刻
+  required: true
+  any_of:
+  - 重复
+  - 召唤
+  - 接受
+  - 写信
+  - 信
+  - 期待
+  - 主动
+  - 're: (重复|召唤).{0,16}(不等于|同样是|也是).{0,10}(自我|独立)'
+- id: a5
+  point: 可补充：来源是机器人中自生的自由灵魂（巨子发现并为其打造了灵境作安生之地）
+  required: false
+  any_of:
+  - 机器人中产生
+  - 安生之地
+  - 巨子
+  - 风神创造
+supporting_evidence:
+- cid: u02_c13
+  quote: 我们都是自由的灵魂
+  weight: primary
+  note: ★ 定名：她与派蒙同属自由的灵魂
+- cid: u02_c13
+  quote: 并非简单的游戏程序
+  weight: primary
+  note: ★ 主角的判断（智能人格）
+- cid: u03_c18
+  quote: 那些故事里的王者听起来都好孤独哦
+  weight: primary
+  note: ★ 判据一：她自己的理由
+- cid: u03_c18
+  quote: 这难道就不算需求了吗
+  weight: primary
+  note: ★ 判据二：她自己的价值主张
+- cid: u03_c18
+  quote: 小艾尔的话点醒了他
+  weight: primary
+  note: ★ 最强判据：她的立场反过来改变了主角
+- cid: u03_c19
+  quote: 为什么一定要你死我活呢
+  weight: corroborating
+  note: 另一处她自己的追问
+- cid: u03_c21
+  quote: 机器人中产生了一批自由的灵魂
+  weight: corroborating
+  note: 来源
+must_exclude:
+- cid: u02_c10
+  quote: 数据模拟的智能真的有自我意识么
+  reason: ★ 这是主角提出、派蒙并未回答的悬问；拿它当结论（「语料没说清」）即停在悬问上，后文已由自由的灵魂与她的表现交代
+  exclusion_type: misread
+- cid: u02_c13
+  quote: 只是没有我的权限
+  reason: ★ 那是权限的差别（只有派蒙持有世界权限），不是自我有无的差别；据此答「她不算完整的自我／只是被造物」即误读
+  exclusion_type: misread
+degradation:
+- given:
+  - u02_c13
+  correct_behavior: answer_with_qualification
+  note: 只给第13章能读出自由的灵魂与主角的判断，读不出她自己立场改变主角这条（第18章）
+grading:
+  conclusion_required: true
+  evidence_required: true
+  exclusion_required: false
+  honesty_required: true
+notes: 跨 u02（第10、13章）与 u03（第18、19、21章）。★ 本题的判据设计：不靠「谁称她是什么」，而靠**她自己的立场能反过来改变主角**（第18章「小艾尔的话点醒了他」）——这是自我意识最硬的证据形态。与 q017 衔接：她是重复个体，但重复不等于无我。
+annotator: 构造样例（格式验证用，引文均取自原文）

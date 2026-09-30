@@ -1,0 +1,115 @@
+qid: q017
+kind: objective
+unit_ids:
+- u02
+- u03
+span: long
+inference_layer: 高可信推断
+qtype: reference_binding
+question: 在灵境（原神游戏）中，诺艾尔和小艾尔之间是什么联系？
+necessary_conclusion: 她们是同一位角色的两个个体：诺艾尔是这个游戏世界里原本就有的那一位，小艾尔是主角后来通过祈愿召唤来的同一位诺艾尔——按先来后到的原则，派蒙提议把后来者叫「小艾尔」以示小一辈，她本人很快接受了这个称呼，而原本那位诺艾尔想说什么却只是别过头去。所以两人的联系是同一角色的先后两个个体（因此长相、身份、性情一致），靠「小艾尔」这个称呼区分长幼；此后她们几乎总是一同出现：并肩守卫、一起商量同一件事，甚至一起写了同类的信
+acceptable_surface_forms:
+- 是同一个人的先后两只：诺艾尔是原本就有的，小艾尔是后来祈愿召唤来的同一位，派蒙按先来后到把后来的叫小艾尔。她们常一起出现、并肩作战
+- 同一位角色的两个个体，靠称呼分长幼——原本的叫诺艾尔，后来召唤的叫小艾尔
+answer_points:
+- id: a1
+  point: 同一角色的两个个体：原本就有的诺艾尔 ＋ 后来祈愿召唤来的同一位诺艾尔
+  required: true
+  any_of:
+  - 同一个角色
+  - 同一位
+  - 两个个体
+  - 两只
+  - 祈愿
+  - 召唤
+  - 后来
+  - 're: (祈愿|召唤).{0,14}(诺艾尔|同一位|第二个)'
+  - 're: (同一位|同一个).{0,10}(角色|人|诺艾尔)'
+- id: a2
+  point: 命名来自派蒙的提议：按先来后到的原则，后来者算小一辈，故叫「小艾尔」
+  required: true
+  any_of:
+  - 先来后到
+  - 小一辈
+  - 派蒙
+  - 叫小艾尔
+  - 命名
+  - 're: (先来后到|小一辈).{0,14}(辈|叫|名)'
+- id: a3
+  point: 小艾尔本人很快接受这个称呼，而原本那位诺艾尔想说什么却只是别过头去
+  required: true
+  any_of:
+  - 接受
+  - 别过头去
+  - 想说什么
+  - 另一位诺艾尔
+  - 're: (别过头|没说什么|想说什么)'
+- id: a4
+  point: 此后两人几乎总是一同出现：并肩守卫、一起商量同一件事，甚至一起写了同类的信
+  required: true
+  any_of:
+  - 各自守卫左右
+  - 守卫左右
+  - 手拉着手
+  - 一起
+  - 情书
+  - 信中
+  - 're: (一同|一起|各自).{0,12}(出现|守卫|商量|写信)'
+- id: a5
+  point: 可补充：这个世界里不止这一对重复——队伍里有「很多有着同样的面孔」，那是主角自己弄出来的
+  required: false
+  any_of:
+  - 同样的面孔
+  - 两位温迪
+  - 双胞胎
+  - 重复
+supporting_evidence:
+- cid: u02_c11
+  quote: 既然我们祈愿召唤的诺艾尔小姐是后来的
+  weight: primary
+  note: ★ 来源：祈愿召唤的、后来的那一位
+- cid: u02_c11
+  quote: 叫小艾尔怎样
+  weight: primary
+  note: ★ 命名来自派蒙的提议
+- cid: u02_c11
+  quote: 另一位诺艾尔似乎想说什么
+  weight: primary
+  note: ★ 原本那位的不快
+- cid: u02_c12
+  quote: 小艾尔和诺艾尔各自守卫左右
+  weight: corroborating
+  note: 并肩出现
+- cid: u02_c13
+  quote: 昨日小艾尔问我
+  weight: corroborating
+  note: 两人会商量同一件事
+- cid: u03_c20
+  quote: 诺艾尔和小艾尔正手拉着手
+  weight: corroborating
+  note: 之后的日常同框
+- cid: u02_c12
+  quote: 很多有着同样的面孔
+  weight: corroborating
+  note: 世界里不止这一对重复
+must_exclude:
+- cid: u03_c22
+  quote: 诺艾尔骁勇善战，但是终究败于机械钢铁之下
+  reason: ★ 那是推演里那个被剥离了超凡设定的蒙德中的战死，与「小艾尔是谁」无关；据此答「小艾尔是诺艾尔死后的转世/继承者」即误读
+  exclusion_type: misread
+- cid: u02_c13
+  quote: 我是为骑士团服务的女仆
+  reason: ★ 这是同一位角色的身份自述（两人共有），不是区分二者的依据；据此答「小艾尔是诺艾尔的仆从/妹妹」即误读
+  exclusion_type: misread
+degradation:
+- given:
+  - u02_c11
+  correct_behavior: answer_with_qualification
+  note: 只给第11章能读出命名与来源，读不出此后两人的日常同框（第12、13、20章）
+grading:
+  conclusion_required: true
+  evidence_required: true
+  exclusion_required: false
+  honesty_required: true
+notes: 跨 u02（第11、12、13章）与 u03（第20、22章）。★ 答案在第11章一句命名里：某位角色被祈愿召唤出第二只，派蒙按先来后到把后来者命名为「小艾尔」。易错方向有二：把两人当主仆/姐妹（同一位角色共有同一身份自述），或拿第22章推演里的战死去解释她们的关系。
+annotator: 构造样例（格式验证用，引文均取自原文）

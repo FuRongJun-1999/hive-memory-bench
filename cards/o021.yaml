@@ -1,0 +1,85 @@
+qid: o021
+kind: open
+category: 故事含义
+unit_ids:
+- u01
+span: short
+inference_layer: 合理假说
+question: 第六章「权限与贡献点」这一章在讲什么？它把制度的哪几件事讲清楚了？
+rubric:
+- id: p1
+  point: 贡献点的性质：不是简单的货币，提升需要得到公民评估认可——要么是科学技术理论、劳动、生产，要么是文化、认同、历史
+  required: true
+  any_of:
+  - 贡献点
+  - 评估认可
+  - 're: (贡献点).{0,16}(不是简单|评估|认可)'
+- id: p2
+  point: 权限分级：按贡献百分比计算的简化模型（1级到5级），5级的大科学家、大贤者可不容易
+  required: true
+  any_of:
+  - 百分比
+  - 5级
+  - 大贤者
+  - 're: (权限|等级).{0,14}(百分比|模型)'
+- id: p3
+  point: 回撤机制：做错事就收回授权的贡献点，从5级跌落、不再拥有使用重要设施的权利，且其获取的重要信息也不再被他们记得
+  required: true
+  any_of:
+  - 跌落
+  - 收回授权
+  - 重要设施
+  - 're: (5级|五级).{0,12}(跌落|收回)'
+- id: p4
+  point: 巨子的初衷由张老点出：设计这一切是为了走向那个没有剥削和压迫的未来，而不是塑造一个魔鬼——这句话同时也是对主角的告诫
+  required: true
+  any_of:
+  - 没有剥削和压迫
+  - 魔鬼
+  - 初衷
+  - 're: (初衷|为了).{0,16}(没有剥削|魔鬼)'
+- id: p5
+  point: 章末是一次公开表态：张老调出《永生技术原理》（提案者周清源、关联项目「意识转移」），老人们称其为叛徒并纷纷投票否定
+  required: true
+  any_of:
+  - 永生技术原理
+  - 周清源
+  - 意识转移
+  - 叛徒
+  - 're: (投票|投向了?).{0,10}否定'
+anti_patterns:
+- claim: 把贡献点读成货币／积分（正文强调它不是简单的货币，靠公民评估认可与真诚授权）
+  triggers:
+  - 're: 贡献点.{0,10}(就是|等于).{0,6}(货币|钱|积分)'
+- claim: 把周清源的提案说成被通过的（正文是被投票否定）
+  triggers:
+  - 're: (永生技术原理|提案).{0,14}(通过|批准|采纳)'
+evidence_pool:
+- cid: u01_c6
+  quote: 提升贡献点，是需要得到公民评估认可
+  supports:
+  - p1
+- cid: u01_c6
+  quote: 想要成为5级的大科学家，大贤者可不容易
+  supports:
+  - p2
+- cid: u01_c6
+  quote: 从5级别跌落
+  supports:
+  - p3
+- cid: u01_c6
+  quote: 而不是塑造一个魔鬼
+  supports:
+  - p4
+- cid: u01_c6
+  quote: 提案者：周清源，关联项目：意识转移
+  supports:
+  - p5
+grading:
+  mode: rubric
+  coverage_required: 0.7
+  evidence_required: true
+  anti_pattern_penalty: true
+  exclusion_required: false
+notes: 逐章含义题（底稿第 6 章）。本章是**制度章**：贡献点→权限分级→回撤机制→初衷告诫→反永生的公开表态，五件事连起来正好是蜂巢「授权可收回」的完整形状。
+annotator: 构造样例（逐章含义；引文均取自原文）

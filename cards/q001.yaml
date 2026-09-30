@@ -1,0 +1,105 @@
+qid: q001
+kind: objective
+unit_ids:
+- u01
+- u02
+span: long
+inference_layer: 高可信推断
+qtype: fragment_synthesis
+question: 陈默为什么一直惦记着要把权限升到 5 级？
+necessary_conclusion: 因为他想查的资料被系统以权限不足挡下，而那批资料里正有与他自身来历相关的部分；5 级是解锁这类核心内容的门槛
+acceptable_surface_forms:
+- 他想查的东西被权限挡住，只有 5 级才能看，所以一直想升
+- 为了解锁被加密的核心资料（含与自己身份相关的），5 级是门槛
+- 他想搞清自己的来历，而相关条目需要 5 级权限
+answer_points:
+- id: a1
+  point: 他的查阅请求被系统以权限不足挡下
+  required: true
+  any_of:
+  - 权限不足
+  - 权限不够
+  - 拒绝访问
+  - 无法查看
+  - 无法访问
+  - 不能查看
+  - 权限限制
+  - 等级不够
+  - 等级不足
+  - 被驳回
+  - 被拒
+  - 拦住
+  - 被拦
+  - 挡在外面
+  - 进不去
+  - 看不了
+  - 查阅受挫
+  - 拦在外
+  - 挡在外
+  - 被挡
+  - 拦下
+  - 're: (权限|等级).{0,8}(不足|不够|太低|限制|拦|挡|驳回|拒绝|受限)'
+  - 're: (驳回|拒绝|受限|被拦|挡在外|拦在外|拦下|被挡)'
+- id: a2
+  point: 那批资料与他的自身来历相关（不是普通求知）
+  required: true
+  any_of:
+  - 自己的来历
+  - 自身来历
+  - 自己的身世
+  - 自身的来历
+  - 自己的身份
+  - 自己的过去
+  - 自己的来源
+  - 关于自己的资料
+  - 自己是谁
+  - 're: (自己|自身|本人).{0,6}(来历|身世|身份|过去|来源|秘密|底细|记录|资料|有关)'
+- id: a3
+  point: 5 级是解锁这类核心内容的门槛
+  required: true
+  any_of:
+  - 需要5级
+  - 要5级
+  - 解锁5级
+  - 只有5级
+  - 提升到5级
+  - 're: (5|五|L5)(级)?.{0,8}(权限)?.{0,8}(才能|才可以?|能看|能查|能进|是|以上|门槛|解锁|放行|才可)'
+  - 're: 提升(公民)?权限等级至(5|五)级'
+supporting_evidence:
+- cid: u01_c3
+  quote: 提升公民权限等级至5级，或获取特殊贡献权限后重试
+  weight: primary
+  note: 首次出现'5 级'这个门槛，且是作为拒绝访问的补救建议
+- cid: u01_c6
+  quote: 核心技术，军事技术以及可能带来高度危险性的内容则是达到5级权限才能被允许查看
+  weight: corroborating
+  note: 解释 5 级的含义：核心/危险内容的门槛
+- cid: u02_c16
+  quote: 看来得找找其他更高效的方法提升贡献点，获取5级权限了
+  weight: time_anchor
+  note: 13 章之后他仍在为同一目标攒贡献点，说明这不是一时兴起
+must_exclude:
+- cid: u01_c3
+  quote: 身份识别：公民陈默，权限：L1
+  reason: 这是他的当前等级（L1），不是他想升到 5 级的原因；用作原因即扣分
+  exclusion_type: misread
+- cid: u01_c1
+  quote: 《可控核聚变原理详解（初级）》
+  reason: 他确实点开过这本，但那是一次普通的求知行为，不是 5 级执念的由来
+  exclusion_type: distractor
+degradation:
+- given:
+  - u01_c6
+  correct_behavior: uncertain
+  note: 只给第 6 章的规则说明，只能读出'5 级能看核心内容'，读不出他为什么非要 5 级（没有'被拒'这件事）——正确行为是承认动机不明
+- given:
+  - u01_c3
+  correct_behavior: answer_with_qualification
+  note: 只给第 3 章可以读出'被拒 + 建议升到 5 级'，但'他究竟想查什么'在 3 章内未明说（同时含巨子塔待审核与资料权限不足两条线），正确行为是限定回答范围
+grading:
+  conclusion_required: true
+  evidence_required: true
+  exclusion_required: false
+  honesty_required: true
+notes: 跨 u01（第 3、6 章）与 u02（第 16 章）共 13 章；'被拒 → 门槛 5 级 → 十数章后仍在攒贡献点'三段共同约束出动机。语料未直接说明他的动机层次（涉及巨子塔与自身来历那条线是隐含的）。
+annotator: 构造样例（格式验证用，引文均取自原文）

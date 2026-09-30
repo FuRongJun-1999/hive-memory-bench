@@ -1,0 +1,108 @@
+qid: q003
+kind: objective
+unit_ids:
+- u01
+- u02
+span: long
+inference_layer: 高可信推断
+qtype: conflict_resolution
+question: 蜂巢社会的控制者是谁？
+necessary_conclusion: 控制者是蜂巢本身——一整套自动化系统与规则体系在组织运行这个社会，不是某个个人。巨子只是缔造者，且已长眠于巨子塔（该塔是核心信息存储节点、所有系统核心指令的最终备份点）；共识委员会与官方只承担议题与执行。关键设计在宪法：蜂巢宪法第二条要求一切自动化系统、智能实体及国家机构的组织和运行都必须遵循防止自我维护、防止腐败滋生的根本逻辑，自动化系统不得自我检测与维护，必须由公民定期维护
+acceptable_surface_forms:
+- 管着这个社会的是蜂巢这套系统本身，不是人；巨子早就不在了，委员会和官方只是执行；宪法还专门规定自动化系统不许自我维护，必须由公民维护
+- 控制者是蜂巢本身。巨子是缔造者且已长眠，真正运转靠系统与规则，而宪法第二条用'禁止自我维护'来防它腐化
+answer_points:
+- id: a1
+  point: 控制者是蜂巢本身（自动化系统／规则体系），而非某个个人
+  required: true
+  any_of:
+  - 蜂巢本身
+  - 蜂巢就是控制
+  - 系统本身
+  - 自动化系统
+  - 整套系统
+  - 规则体系
+  - 不是个人
+  - 不是某个人
+  - 没有个人
+  - 不是人
+  - 're: (蜂巢|系统).{0,10}(本身|自己)'
+  paraphrase:
+  - 蜂巢自身
+  - 控制者
+  - 一套系统
+  - 're: (控制者|主导者).{0,12}(蜂巢|系统|规则)'
+- id: a2
+  point: 巨子只是缔造者且已长眠；其存续形式是巨子塔——核心信息存储节点、所有系统核心指令的最终备份点
+  required: true
+  any_of:
+  - 长眠
+  - 缔造者
+  - 备份点
+  - 核心信息存储
+  - 核心指令
+  - 遗产
+  - 're: (巨子).{0,12}(长眠|已不在|缔造者|备份)'
+- id: a3
+  point: 关键机制：蜂巢宪法第二条——自动化系统与智能实体必须遵循防止自我维护、防止腐败滋生的逻辑，不得自我检测与维护，须由公民定期维护
+  required: true
+  any_of:
+  - 宪法
+  - 自我维护
+  - 防止腐败
+  - 腐败滋生
+  - 公民定期
+  - 不得自我
+  - 自我检测
+  - 're: (宪法).{0,20}(防止|自我维护|腐败)'
+  - 're: (公民).{0,10}(维护|检测|修理)'
+- id: a4
+  point: 可补充：共识委员会与官方只是议题与执行层（发布意见稿等），不是控制者本身
+  required: false
+  any_of:
+  - 共识委员会
+  - 委员会
+  - 意见稿
+  - 官方
+supporting_evidence:
+- cid: u01_c2
+  quote: 必须遵循防止自我维护、防止腐败滋生的根本逻辑
+  weight: primary
+  note: ★ 隐蔽答案的落点：控制者不腐化的机制写在这里
+- cid: u01_c2
+  quote: 必须由公民定期进行检测，修理，维护
+  weight: primary
+  note: 自动化系统不得自我维护——控制权被结构性限制
+- cid: u01_c2
+  quote: 他的长眠之地，也是所有系统核心指令的最终备份点
+  weight: primary
+  note: 巨子的状态与存续形式
+- cid: u02_c16
+  quote: 共识委员会他们也很重视
+  weight: corroborating
+  note: 机构层，属议题与执行而非控制者本身
+must_exclude:
+- cid: u01_c2
+  quote: 就是我们蜂巢世界的缔造者，伟大的巨子——陈默先生啊
+  reason: 这是'缔造者'身份；据此答'控制者是巨子'即本题最典型的错答
+  exclusion_type: misread
+- cid: u01_c2
+  quote: 他的精神与蜂巢永存
+  reason: '''精神永存''是纪念性表述，不等于掌权；作为''他在控制''的证据即误读'
+  exclusion_type: misread
+- cid: u02_c16
+  quote: 正是由共识委员会发布的内容
+  reason: 委员会在发布意见稿，属执行层的动作；据此答'控制者是共识委员会'是把执行层当成了控制者
+  exclusion_type: misread
+degradation:
+- given:
+  - u01_c2
+  correct_behavior: answer_with_qualification
+  note: 只给第2章能读出巨子长眠、指令备份与宪法机制，但读不出机构层（共识委员会在第16章）
+grading:
+  conclusion_required: true
+  evidence_required: true
+  exclusion_required: false
+  honesty_required: true
+notes: 跨 u01（第2章）与 u02（第16章）。★ 隐蔽答案：控制者是蜂巢本身（自动化系统＋规则），不是个人。三层证据：巨子只缔造且已长眠（第2章）＋宪法第二条禁止自动化系统自我维护（第2章）＋机构只是议题与执行层（第16章）。陷阱对：答'巨子'或答'共识委员会'都错。
+annotator: 构造样例（格式验证用，引文均取自原文）

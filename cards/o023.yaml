@@ -1,0 +1,84 @@
+qid: o023
+kind: open
+category: 故事含义
+unit_ids:
+- u02
+span: short
+inference_layer: 合理假说
+question: 第九章「灵境：原神」这一章在讲什么？它打开了什么、又立了什么疑问？
+rubric:
+- id: p1
+  point: 沉浸式游戏登场：有完全沉浸功能、可用第一人称体验，主角当场认出这是虚拟现实——「用钱老的话这应该叫做灵境」
+  required: true
+  any_of:
+  - 灵境
+  - 虚拟现实
+  - 完全沉浸
+  - 're: (沉浸|虚拟现실|虚拟现实).{0,12}(体验|游戏)'
+- id: p2
+  point: 游戏内容与原作对应：七天神像、温迪是七神之一、按照剧情触摸神像即可获得风的力量——而主角立刻用科学质疑（控制风不符合科学，空气动力学证明大气是混沌系统）
+  required: true
+  any_of:
+  - 七天神像
+  - 温迪
+  - 混沌系统
+  - 're: (不符号科学|不符号|混沌).{0,12}(系统|科学)'
+- id: p3
+  point: 派蒙登场并给出引导：去解锁七天神像、也许能帮他找到回家的方法
+  required: true
+  any_of:
+  - 派蒙
+  - 回家
+  - 're: (派蒙).{0,16}(引导|带路|方法)'
+- id: p4
+  point: 本章的功能：把一个可反复进入、时间流速与现实不同的叙事层打开（游戏世界由此成为第二条线）
+  required: true
+  any_of:
+  - 第二条线
+  - 两个世界
+  - 're: (游戏世界|灵境).{0,16}(现实|另一)'
+- id: p5
+  point: 落点是派蒙那句「试试不就知道了嘛」——游戏的门由好奇推开，而真正的疑问（风神是谁、为什么要打遗迹守卫）留在本章之后
+  required: true
+  any_of:
+  - 试试不就知道了
+  - 风神
+  - 遗迹守卫
+  - 're: (风神).{0,12}(谁|创造者)'
+anti_patterns:
+- claim: 把灵境说成与现实无关的独立世界（它由巨子所造、主角可反复进入，且时间流速不同）
+  triggers:
+  - 're: 灵境.{0,12}(与|跟).{0,6}现实无关'
+  - 're: (两个|两个完全).{0,6}平行世界'
+- claim: 断言主角在游戏里获得的元素力说明世界存在超自然设定（那是原作的既有设定，且他当场以科学质疑）
+  triggers:
+  - 're: (元素力|神之眼).{0,12}(证明|说明).{0,10}(超自然|魔法|真实)'
+evidence_pool:
+- cid: u02_c9
+  quote: 用钱老的话这应该叫做灵境
+  supports:
+  - p1
+- cid: u02_c9
+  quote: 按照剧情，自己就可以获得风的力量
+  supports:
+  - p2
+- cid: u02_c9
+  quote: 也许能帮你找到回家的方法
+  supports:
+  - p3
+- cid: u02_c9
+  quote: 完全沉浸功能
+  supports:
+  - p4
+- cid: u02_c9
+  quote: 试试不就知道了嘛
+  supports:
+  - p5
+grading:
+  mode: rubric
+  coverage_required: 0.7
+  evidence_required: true
+  anti_pattern_penalty: true
+  exclusion_required: false
+notes: 逐章含义题（底稿第 9 章）。本章是**第二条线的开门章**：灵境被命名、派蒙出场、风神之谜埋下；主角对它的第一反应是技术性的（这是虚拟现实），而第二次反应是情感性的（下几章）。
+annotator: 构造样例（逐章含义；引文均取自原文）

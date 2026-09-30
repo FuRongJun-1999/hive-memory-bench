@@ -1,0 +1,84 @@
+qid: o044
+kind: open
+category: 主要事件
+unit_ids:
+- u01
+span: short
+inference_layer: 高可信推断
+question: 事件链题：旧时代是怎么终结的？请把起因、经过、结果串成一条链。
+rubric:
+- id: p1
+  point: 起因在旧时代自身：自动化、智能化、无人化的科技发展被广大的失业人群愤怒抨击；更深一层是信息错配——虚假信息切断反馈、蒙蔽眼睛、纵容腐败
+  required: true
+  any_of:
+  - 自动化
+  - 失业
+  - 信息错配
+  - 're: (被广大的失业人群|失业人群).{0,12}(抨击|愤怒)'
+- id: p2
+  point: 经过是战争的复合形态：核战争、细菌病毒战和机器人大战几乎摧毁了一切——所有城市都陷入一片火海、连南极的科考站都不放过
+  required: true
+  any_of:
+  - 核战争
+  - 细菌病毒战
+  - 机器人大战
+  - 're: (火海|摧毁了一切)'
+- id: p3
+  point: 结果是人口的代价：那场战争夺走了九成九以上的人口，活下来的也大多疾病缠身
+  required: true
+  any_of:
+  - 九成九
+  - 疾病缠身
+  - 're: (夺走了|损失).{0,12}(九成九|人口)'
+- id: p4
+  point: 结果是生态与居住条件的代价：地表生态系统彻底崩溃，人类失去了回到地面的条件，只能依靠合成食物与轨道设施生存
+  required: true
+  any_of:
+  - 地表生态
+  - 失去
+  - 合成
+  - 're: (失去了回到地面的条件|回到地面的条件)'
+- id: p5
+  point: 结果是知识与传承的代价：历史出现了大量的空白、许多资料不复存在，现在能看到的都是幸存者的回忆（经神经认证上传的信息或许有保留，但绝非虚假）
+  required: true
+  any_of:
+  - 大量的空白
+  - 回忆
+  - 神经认证
+  - 're: (资料|历史).{0,12}(不复存在|空白)'
+anti_patterns:
+- claim: 把三战写成单一形态的战争（正文列的是核、细菌病毒与机器人三种形态叠加）
+  triggers:
+  - 're: (第三次世界大战|三战).{0,14}(只是|仅).{0,8}(核战|核战争)'
+- claim: 断言战后人类重建了地表生态（正文写的是失去回到地面的条件）
+  triggers:
+  - 're: (战后|之后).{0,12}(重建|恢复).{0,8}(地表|地面生态)'
+evidence_pool:
+- cid: u01_c4
+  quote: 自动化，智能化，无人化的科技发展被广大的失业人群愤怒抨击
+  supports:
+  - p1
+- cid: u01_c5
+  quote: 核战争，细菌病毒战和机器人大战几乎摧毁了一切
+  supports:
+  - p2
+- cid: u01_c5
+  quote: 那场战争夺走了我们九成九以上的人口
+  supports:
+  - p3
+- cid: u01_c5
+  quote: 地表生态系统彻底崩溃
+  supports:
+  - p4
+- cid: u01_c5
+  quote: 我们经过神经认证上传的信息或许有保留
+  supports:
+  - p5
+grading:
+  mode: rubric
+  coverage_required: 0.7
+  evidence_required: true
+  anti_pattern_penalty: true
+  exclusion_required: false
+notes: 事件链题（作者口径：把主要事件做成因果题）。这条链的四个结果必须分开答：**人口、生态、居住条件、知识传承**——只答「人口锐减」= 漏了三端。
+annotator: 构造样例（逐章含义；引文均取自原文）

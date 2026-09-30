@@ -1,0 +1,123 @@
+qid: q009
+kind: objective
+unit_ids:
+- u01
+- u02
+- u03
+span: long
+inference_layer: 高可信推断
+qtype: fragment_synthesis
+question: 巨子陈默的遗愿为什么没有执行？
+necessary_conclusion: 有四层原因：一是那个难题他本人就没解决——他自述面对一个永恒的难题、只能不断尝试，交出去的是问题而非答案；二是最像答案的那批存在（机器人中自生的自由灵魂）在蜂巢初建后不久就被禁止，只能被安放在灵境，无法公开出场；三是他拒绝永生也拒绝权威、不愿成为束缚，因此即便长眠也不以权威的形式代为执行；四是人类一侧不可托付——他认为人类不值得永远信任、背叛始终在不断发生（周清源被众人斥为叛徒，其提案被投票否决）
+acceptable_surface_forms:
+- 因为难题他没解出来（交的是问题不是答案）；能当答案的自由灵魂在蜂巢被禁、只能藏在灵境；他自己又不肯永生、不肯当束缚；而人类这边他也不信——他说人类不值得永远信任，背叛一直在发生
+- 四条：难题本身未解、候选答案被禁止、他不愿以权威形式执行、人类不可托付
+answer_points:
+- id: a1
+  point: 问题本身未解：他自述面对一个永恒的难题、没能解决，交出去的是问题而不是答案
+  required: true
+  any_of:
+  - 永恒的难题
+  - 没能解决
+  - 不断尝试
+  - 未竟
+  - 交给你
+  - 后来人
+  - 're: (没能|没有|未).{0,6}(解决)'
+  paraphrase:
+  - 解不掉
+  - 题没解开
+  - 交下来的只是问题
+  - 're: (难题|问题).{0,10}(没|未|解不掉|交)'
+  - 're: (解不掉|没解开|未解)'
+- id: a2
+  point: 候选答案被禁止：具有自我意识的 AI 在蜂巢初建后不久就被禁止，自由灵魂只能安放于灵境
+  required: true
+  any_of:
+  - 禁止
+  - 自我意识
+  - 安放
+  - 安生之地
+  - 灵境
+  - 藏
+  - 're: (禁止|被禁).{0,14}(ai|AI|自我意识)'
+- id: a3
+  point: 他不愿成为束缚、不能开永生的头，故即便长眠也不以权威形式执行
+  required: true
+  any_of:
+  - 束缚
+  - 不能开
+  - 反对永生
+  - 反对权威
+  - 先行者
+  - 're: (不|拒绝|反对).{0,8}(成为).{0,4}(束缚)'
+  paraphrase:
+  - 枷锁
+  - 不肯当
+  - 不肯开永生的头
+  - 替后人拍板
+  - 're: (不肯|不愿).{0,8}(枷锁|永生|束缚)'
+- id: a4
+  point: 人类一侧不可托付：他认为人类不值得永远信任、背叛不断发生（周清源被斥叛徒、其提案被否决）
+  required: true
+  any_of:
+  - 不值得永远信任
+  - 背叛
+  - 叛徒
+  - 周清源
+  - 否决
+  - 're: (背叛|叛徒).{0,12}(不断|一直|发生|周清源)'
+- id: a5
+  point: 可补充：自由派利用灵境做渗透（认知污染），使局面进一步偏离
+  required: false
+  any_of:
+  - 自由派
+  - 渗透
+  - 认知污染
+  - 诱导
+supporting_evidence:
+- cid: u03_c21
+  quote: 我面对一个永恒的难题，没能解决它，只能不断尝试
+  weight: primary
+  note: ★ 原因一：问题本身未解
+- cid: u02_c16
+  quote: 有自我意识的ai，在蜂巢初建后不久就被禁止了
+  weight: primary
+  note: ★ 原因二：候选答案被禁
+- cid: u03_c21
+  quote: 我不该成为他们的束缚
+  weight: primary
+  note: ★ 原因三：不愿以权威形式执行
+- cid: u03_c21
+  quote: 人类过去的经验说明了人类不值得永远信任
+  weight: primary
+  note: ★ 原因四：人类不可托付
+- cid: u01_c6
+  quote: 这叛徒还想重新拿到授权
+  weight: corroborating
+  note: 背叛的具体例子（周清源）
+- cid: u01_c6
+  quote: 提案者：周清源，关联项目：意识转移
+  weight: corroborating
+  note: 被否的提案
+must_exclude:
+- cid: u01_c2
+  quote: 他的精神与蜂巢永存
+  reason: '''精神永存''是纪念性表述，不等于遗愿被执行'
+  exclusion_type: misread
+- cid: u01_c2
+  quote: 我们都相信，他的精神与蜂巢永存
+  reason: 同上：纪念语被当成'遗愿已落实'的依据即误读
+  exclusion_type: misread
+degradation:
+- given:
+  - u03_c21
+  correct_behavior: answer_with_qualification
+  note: 只给第21章能读出原因一、三、四，读不出原因二（禁止自我意识 AI 在第16章）
+grading:
+  conclusion_required: true
+  evidence_required: true
+  exclusion_required: false
+  honesty_required: true
+notes: 跨 u01（第6章）、u02（第16章）、u03（第21章）。答案的四条原因分居三章，须合成。★ 与 q008 的分工：q008 问'为何必须有那样一个存在'（存在形态的必然性），本题问'为何遗愿没被执行'（未执行的成因）。
+annotator: 构造样例（格式验证用，引文均取自原文）

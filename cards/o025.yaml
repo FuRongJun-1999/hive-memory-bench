@@ -1,0 +1,87 @@
+qid: o025
+kind: open
+category: 故事含义
+unit_ids:
+- u02
+span: short
+inference_layer: 合理假说
+question: 第十一章「接风宴」这一章在讲什么？它把谁的动机摆上了台面？
+rubric:
+- id: p1
+  point: 蒙德对主角的接纳：西风骑士团为他和诺艾尔准备接风宴，并设立荣誉骑士称号、承诺极为丰厚的报酬（任何能满足的要求都可以兑现）
+  required: true
+  any_of:
+  - 接风宴
+  - 荣誉骑士
+  - 报酬
+  - 're: (荣誉骑士|报酬).{0,16}(称号|兑现|丰厚)'
+- id: p2
+  point: 派蒙的动机第一次被摆上台面：她在圆桌上演讲，要创造享受自由的世界、让旅行者打消回家的念头
+  required: true
+  any_of:
+  - 打消回家的念头
+  - 打造
+  - 自由之地
+  - 're: (让旅行者|让他).{0,12}(打消|留下)'
+- id: p3
+  point: 琴的表态：为蒙德而战、为自由而战，我在所不辞
+  required: true
+  any_of:
+  - 为蒙德而战
+  - 在所不辞
+  - 're: (琴|她).{0,12}(蒙德而战|自由而战)'
+- id: p4
+  point: 博士第一次登场并提出新方案：引导旅行者去追求「更大的自由」——更多的美食、更多的美人、更多的权力、更多人的敬仰，让他成为英雄；他的目标是让旅行者留在这块自由之地
+  required: true
+  any_of:
+  - 更大的自由
+  - 成为英雄
+  - 自由之地
+  - 're: (更多的).{0,20}(美食|美人|权力)'
+- id: p5
+  point: 派蒙对博士的态度被写明：只能有限合作、不能信任——因为他带来的手段与风神教导自己的大相径庭（永生的诱惑当场被派蒙拒绝）
+  required: true
+  any_of:
+  - 有限合作
+  - 不能信任
+  - 永生
+  - 're: (永生).{0,14}(诱惑|算了)'
+anti_patterns:
+- claim: 把这一章读成单纯的欢迎仪式（派蒙的动机与博士的方案都在这一章摆上台面）
+  triggers:
+  - 本章只是欢迎仪式
+  - 这一章只是接风
+  - 没有冲突
+- claim: 断言派蒙完全信任博士（正文写的是只能有限合作、不能信任）
+  triggers:
+  - 're: 派蒙.{0,12}(完全|非常).{0,6}信任.{0,6}博士'
+  - 're: (派蒙).{0,10}信任.{0,6}博士'
+evidence_pool:
+- cid: u02_c11
+  quote: 这是西风骑士团为你们准备的接风宴
+  supports:
+  - p1
+- cid: u02_c11
+  quote: 让旅行者打消回家的念头
+  supports:
+  - p2
+- cid: u02_c11
+  quote: 诸位，为蒙德而战，为自由而战
+  supports:
+  - p3
+- cid: u02_c11
+  quote: 更多的美食，更多的美人
+  supports:
+  - p4
+- cid: u02_c11
+  quote: 只能有限合作，不能信任
+  supports:
+  - p5
+grading:
+  mode: rubric
+  coverage_required: 0.7
+  evidence_required: true
+  anti_pattern_penalty: true
+  exclusion_required: false
+notes: 逐章含义题（底稿第 11 章）。本章是**动机章**：三方动机在一场接风宴上同时摊开——骑士团的守护、派蒙的挽留、博士的诱导，而主角此刻还只是被争夺的对象。
+annotator: 构造样例（逐章含义；引文均取自原文）

@@ -1,0 +1,85 @@
+qid: o022
+kind: open
+category: 故事含义
+unit_ids:
+- u01
+span: short
+inference_layer: 合理假说
+question: 第七章「被请喝茶」这一章在讲什么？它如何写出这个世界的另一面？
+rubric:
+- id: p1
+  point: 本章的由头是巨子塔的异常通行记录：主角被盘问——用这个名字你可真有胆子的，巨子塔的访问记录异常是不是和你有关
+  required: true
+  any_of:
+  - 异常
+  - 通行记录
+  - 访问记录
+  - 're: (巨子塔).{0,16}(记录|异常)'
+- id: p2
+  point: 审讯的敌意被写实：另一处房间里有人主张严格处理（谁知道他是不是自由派的探子、他叫陈默就更需要严格），主角感受到前所未有的敌意与压力
+  required: true
+  any_of:
+  - 探子
+  - 敌意
+  - 严格
+  - 're: (自由派).{0,12}探子'
+- id: p3
+  point: 秦熙出场并自我介绍：「我是秦熙，这里的负责人」——她取下头盔，为机构的严厉致歉（请你谅解我们的职责），随后说明最近情况不安定、警戒级别提升到最高
+  required: true
+  any_of:
+  - 秦熙
+  - 负责人
+  - 谅解
+  - 're: (警戒级别|情况).{0,12}(提升|不安定)'
+- id: p4
+  point: 由她交代自由派是什么：一种不认可巨子蜂巢蓝图、想要建立真正绝对自由的新世界的思潮；他们从残缺的历史里找到依据，要重现那种世界；她判断他们近期的行动直指蜂巢的根基
+  required: true
+  any_of:
+  - 自由派
+  - 绝对自由
+  - 蜂巢的根基
+  - 're: (不认可|不认同).{0,10}蓝图'
+- id: p5
+  point: 落点：主角意识到自己被卷入危险的漩涡，而巨子塔可能成为极其敏感的目标——他对这个世界的归属感与警惕同时产生
+  required: true
+  any_of:
+  - 漩涡
+  - 敏感
+  - 're: (巨子塔).{0,16}(敏感|目标)'
+anti_patterns:
+- claim: 把秦熙写成本章的审讯者／反派（审讯另有其人，她是出面解围并解释的一方）
+  triggers:
+  - 're: 秦熙.{0,10}(审讯|审问|盘问).{0,6}主角'
+  - 're: (秦熙).{0,8}(是|属于).{0,6}自由派'
+- claim: 断言主角当场承认了自己是自由派（他否认并说明只是好奇）
+  triggers:
+  - 're: (主角|他).{0,10}(承认|招认).{0,10}自由派'
+evidence_pool:
+- cid: u01_c7
+  quote: 陈默？用这个名字，你可真有胆子的
+  supports:
+  - p1
+- cid: u01_c7
+  quote: 说，你是不是自由派的探子
+  supports:
+  - p2
+- cid: u01_c7
+  quote: 我是秦熙，这里的负责人
+  supports:
+  - p3
+- cid: u01_c7
+  quote: 不认可巨子的蜂巢蓝图
+  supports:
+  - p4
+- cid: u01_c7
+  quote: 巨子塔可能成为极其敏感的目标
+  supports:
+  - p5
+grading:
+  mode: rubric
+  coverage_required: 0.7
+  evidence_required: true
+  anti_pattern_penalty: true
+  exclusion_required: false
+notes: 逐章含义题（底稿第 7 章）。本章写的是**世界的另一面**：一个宣称平等的世界里，一个同名者照样被怀疑、被审、被严密处理——而这种严厉本身又有它的理由（情况不安定）。
+annotator: 构造样例（逐章含义；引文均取自原文）

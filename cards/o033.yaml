@@ -1,0 +1,83 @@
+qid: o033
+kind: open
+category: 故事含义
+unit_ids:
+- u03
+span: short
+inference_layer: 合理假说
+question: 第二十章「致命危机」这一章在讲什么？它把危机的形态写成了什么样？
+rubric:
+- id: p1
+  point: 阴谋被击退这一结果：博士和富人的计划没有成功，蒙德城的居民们击退了阴谋
+  required: true
+  any_of:
+  - 计划没有成功
+  - 居民们
+  - 're: (博士|富人).{0,14}(没有成功|失败|击退)'
+- id: p2
+  point: 但危机并没有结束：在这片安宁的背后，是博士和富人们新的计划
+  required: true
+  any_of:
+  - 新的计划
+  - 安宁的背后
+  - 're: 背后.{0,14}新.{0,6}计划'
+- id: p3
+  point: 下一幕的形态被写明：蒙德将会出现至冬的信徒和代言人，这是一种潜移默化的入侵；如果他们成功了，蒙德将会逐步接纳绝对自由
+  required: true
+  any_of:
+  - 至冬
+  - 代言人
+  - 潜移默化的入侵
+  - 're: (逐步|逐渐).{0,10}(接纳|接受).{0,8}绝对自由'
+- id: p4
+  point: 本章因此把危机的性质讲清楚了：不是一次攻城，而是慢慢改变精神——琴也说过他们的坏主意会像水滴石穿一样，也许不会马上发生，但只需要十年二十年，下一代人、下下代人
+  required: true
+  any_of:
+  - 水滴石穿
+  - 下一代
+  - 're: (十年|下一代).{0,14}(改变|精神)'
+- id: p5
+  point: 可补充：本章直接为第22章的时间跳跃推演铺路（下一章给出「如果放任不管会怎样」的完整结果）
+  required: true
+  any_of:
+  - 推演
+  - 铺路
+  - 're: (第22|下一章|后续).{0,12}(推演|结果)'
+anti_patterns:
+- claim: 把这一章读成胜利收尾（本章明写胜利之后还有新的计划）
+  triggers:
+  - 本章是胜利收尾
+  - 危机结束了
+  - 阴谋被击退后一切结束
+- claim: 断言入侵是靠武力（正文写的是信徒与代言人、潜移默化）
+  triggers:
+  - 're: (入侵|渗透).{0,12}(武力|军队|开战)'
+evidence_pool:
+- cid: u03_c20
+  quote: 博士和富人的计划没有成功
+  supports:
+  - p1
+- cid: u03_c20
+  quote: 不过在这片安宁的背后
+  supports:
+  - p2
+- cid: u03_c20
+  quote: 蒙德将会出现至冬的信徒和代言人
+  supports:
+  - p3
+- cid: u03_c20
+  quote: 潜移默化的入侵
+  supports:
+  - p3
+- cid: u03_c21
+  quote: 水滴石穿
+  supports:
+  - p4
+grading:
+  mode: rubric
+  coverage_required: 0.7
+  evidence_required: true
+  anti_pattern_penalty: true
+  exclusion_required: false
+notes: 逐章含义题（底稿第 20 章）。本章是**危机形态章**：把「糖衣」的长期效果写清楚——一次进攻可以被击退，但信徒与代言人式的渗透会一代一代地改变精神。它也因此解释了下一章为什么要跳到几十年后去看结果。
+annotator: 构造样例（逐章含义；引文均取自原文）

@@ -1,0 +1,86 @@
+qid: q004
+kind: objective
+unit_ids:
+- u01
+span: short
+inference_layer: 高可信推断
+qtype: reference_binding
+question: 蜂巢的智能终端是什么？
+necessary_conclusion: 智能终端是「指南」——全书唯一具有智能的存在：它既是百科目录，也是个人操作终端，直接在脑中显示，可查询与解锁词条、建立连接，还出现过反常的停顿；巨子塔只是核心信息存储节点（存储不等于智能），不是智能终端
+acceptable_surface_forms:
+- 是指南：既是目录也是个人操作终端，在脑中直接给提示、解锁词条；巨子塔只是存储节点，不算智能
+- 智能终端只有指南；巨子塔是存东西的地方
+answer_points:
+- id: a1
+  point: 智能终端是「指南」：既是百科目录，也是个人操作终端
+  required: true
+  any_of:
+  - 指南
+  - 个人操作终端
+  - 操作终端
+  - 百科目录
+  - 're: (指南).{0,14}(终端|目录|词条|查询)'
+- id: a2
+  point: 指南直接在脑中显示、与他交互，并出现过反常的停顿（体现其自主性）
+  required: true
+  any_of:
+  - 脑中
+  - 脑海
+  - 停顿
+  - 罕见
+  - 're: (脑中|脑海).{0,10}(出现|显示|提示)'
+- id: a3
+  point: 巨子塔只是核心信息存储节点——存储不等于智能，不能把它当智能终端
+  required: true
+  any_of:
+  - 存储
+  - 核心信息存储节点
+  - 备份
+  - 不是智能
+  - 不算智能
+  - 're: (存储|备份).{0,10}(节点|不等于|不是智能)'
+- id: a4
+  point: 指南是全书唯一出现的智能终端（书名即《蜂巢世界漫游指南》）
+  required: true
+  any_of:
+  - 唯一
+  - 只有一个
+  - 唯一一个
+  - 书名
+  - 漫游指南
+  - 're: (唯一|只有).{0,8}(智能|终端|指南)'
+supporting_evidence:
+- cid: u01_c2
+  quote: 指南不仅作为百科目录，同时也可以作为个人操作终端
+  weight: primary
+  note: 终端身份的正面交代
+- cid: u01_c3
+  quote: 指南信息提示罕见的停顿了几秒
+  weight: primary
+  note: ★ 反常停顿——指南并非被动工具的证据
+- cid: u01_c3
+  quote: 核心信息存储节点，巨子塔欢迎您
+  weight: corroborating
+  note: 巨子塔的定位是存储，不是智能
+must_exclude:
+- cid: u01_c2
+  quote: 所有系统核心指令的最终备份点
+  reason: ★ 错答会拿这句当'巨子塔＝智能核心'的依据；但备份点同样是存储语，不能证明它是智能
+  exclusion_type: misread
+- cid: u01_c1
+  quote: 核心生产节点
+  reason: 第1章地图里的资源节点（收集水、空气、矿物并合成食物），名字也含'核心'，但它是生产节点
+  exclusion_type: distractor
+degradation:
+- given:
+  - u01_c3
+  correct_behavior: answer_with_qualification
+  note: 只给第3章能读出巨子塔是核心信息存储节点并有反常停顿，读不出指南的终端身份（第2章）
+grading:
+  conclusion_required: true
+  evidence_required: true
+  exclusion_required: false
+  honesty_required: true
+notes: 全部落在 u01。★ 注意：不要把「核心信息存储节点」本身列为 must_exclude——正确答案必须引它来做存储/智能的对照（实测曾因此误伤正确回答）。★ 本题经作者纠正过一次：我原先把'核心'答成了巨子塔，作者指出存储≠智能、全书只有一个智能终端。修正后本题的分辨点正是'存储
+  vs 智能'，干扰项两个（核心信息存储节点／核心生产节点）都带'核心'二字。
+annotator: 构造样例（格式验证用，引文均取自原文）

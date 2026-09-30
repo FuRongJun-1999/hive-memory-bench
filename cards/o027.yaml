@@ -1,0 +1,86 @@
+qid: o027
+kind: open
+category: 故事含义
+unit_ids:
+- u02
+span: short
+inference_layer: 合理假说
+question: 第十三章「终有一别」这一章在讲什么？它在告别里交代了哪几件事？
+rubric:
+- id: p1
+  point: 派蒙的临别告诫：蜂巢并不是那么完美无瑕，小心机器人们；还有一定要小心自由派的人——他们走向的是为所欲为的自由
+  required: true
+  any_of:
+  - 小心机器人们
+  - 自由派
+  - 为所欲为的自由
+  - 're: (蜂巢).{0,12}(不完美|完美无瑕)'
+- id: p2
+  point: 离别与承诺：主角说我还会再来的；最后留在眼前的是三人的告别，带着太阳的温暖和塞西莉亚花的清香
+  required: true
+  any_of:
+  - 我还会再来的
+  - 塞西莉亚
+  - 告别
+  - 're: (告别|再见).{0,16}(温暖|清香|三人)'
+- id: p3
+  point: 派蒙对风神的复杂情感被写透：他给我自由，又残忍的将我弃之不顾；而她的答案是自己承受代价去换所爱之人的自由
+  required: true
+  any_of:
+  - 弃之不顾
+  - 如果爱成为枷锁
+  - 代价
+  - 're: (他给我自由|给了自由).{0,16}(弃|离开|不顾)'
+- id: p4
+  point: 本章的史观句：历史是个小姑娘，由后来者随意打扮——过去要在残缺不全甚至可能虚假的信息里寻找
+  required: true
+  any_of:
+  - 历史是个小姑娘
+  - 打扮
+  - 残缺
+  - 're: (历史|过去).{0,16}(打扮|残缺|虚假)'
+- id: p5
+  point: 派蒙一方对自身身份的确认：我们都是自由的灵魂，和蜂巢那些完全按照程序的机器人们不一样
+  required: true
+  any_of:
+  - 自由的灵魂
+  - 程序
+  - 're: (我们).{0,10}是.{0,6}自由的灵魂'
+anti_patterns:
+- claim: 把派蒙的告诫当成闲话（它同时点出机器人问题与自由派问题，两条线都在后文展开）
+  triggers:
+  - 这只是玩笑话
+  - 临别赠言无关紧要
+  - 本章没有埋线
+- claim: 断言主角此时已决定不回蜂巢（他的承诺是我还会再来）
+  triggers:
+  - 're: (主角|他).{0,12}(决定|打算).{0,10}(不回|留在这里)'
+evidence_pool:
+- cid: u02_c13
+  quote: 小心机器人们
+  supports:
+  - p1
+- cid: u02_c13
+  quote: 我还会再来的
+  supports:
+  - p2
+- cid: u02_c13
+  quote: 他给我自由，又残忍的将我弃之不顾
+  supports:
+  - p3
+- cid: u02_c13
+  quote: 历史是个小姑娘
+  supports:
+  - p4
+- cid: u02_c13
+  quote: 我们都是自由的灵魂
+  supports:
+  - p5
+grading:
+  mode: rubric
+  coverage_required: 0.7
+  evidence_required: true
+  anti_pattern_penalty: true
+  exclusion_required: false
+notes: 逐章含义题（底稿第 13 章）。本章是**告别章兼埋线章**：话别里塞进了三条后文要用的线（机器人／自由派／承诺），而「历史是个小姑娘」那句则把整部作品的史观挑明——在残缺的信息里找过去，与主角查自己来历的处境同构。
+annotator: 构造样例（逐章含义；引文均取自原文）

@@ -1,0 +1,133 @@
+qid: q011
+kind: objective
+unit_ids:
+- u01
+span: short
+inference_layer: 高可信推断
+qtype: fragment_synthesis
+question: 能维护蜂巢的公民是全体公民么？
+necessary_conclusion: 不是全体公民意义上的均等——但先要立住一点：**公民是实质的维护者**（宪法把检测、修理、维护定为公民的事，L1 的主角也在做），只是公民内部并非均质，但公民本身按贡献分级——低门槛的公共维护岗位面向所有公民开放（如轨道清洁机器人协理员，要求不高），而重要设施与核心节点的进入和使用需要
+  5 级权限或特殊权限（巨子塔即一例）；资格还可被撤销：做错事会收回授权、从 5 级跌落、不再拥有使用重要设施的权利，且其获取的重要信息也不再被他们记得；更要紧的是人本就稀少——大战夺走九成九以上人口，幸存者大多疾病缠身，青年几乎断层
+acceptable_surface_forms:
+- 不是。宪法说的是公民这个集合，但公民是分级的：谁都能接低门槛的公共维护活，可重要设施得 5 级或特殊权限才碰得到；资格还能被收回——做错事从5级跌落、连信息都不再记得。而且人本来就少，幸存者大多带病，青年断层
+- 不能算全体：维护资格按权限分级（重要设施要5级或特殊权限）、可因过错撤销，且能干活的人本已稀少
+answer_points:
+- id: a1
+  point: 公民不是均质的：权限按贡献分级，重要设施与核心节点的进入／使用需要 5 级权限或特殊权限
+  required: true
+  any_of:
+  - 5级权限
+  - 特殊权限
+  - 重要设施
+  - 核心信息存储
+  - 巨子塔
+  - 分级
+  - 贡献
+  - 're: (5级|五级|L5).{0,12}(权限|才能|贡献)'
+- id: a2
+  point: 低门槛的公共维护岗位面向所有公民开放（如轨道清洁协理员，要求不高）
+  required: true
+  any_of:
+  - 协理员
+  - 要求不高
+  - 公共服务
+  - 低门槛
+  - 人人
+  - 所有公民
+  - 're: (协理员|公共服务).{0,16}(要求|开放|门槛)'
+- id: a3
+  point: 资格可被撤销：做错事会收回授权、从 5 级跌落、失去使用重要设施的权利，且其获取的重要信息也不再被记得
+  required: true
+  any_of:
+  - 收回授权
+  - 跌落
+  - 撤销
+  - 做错
+  - 不再拥有
+  - 不会再被他们记得
+  - 're: (收回|撤销|跌落).{0,16}(授权|5级|权利)'
+  paraphrase:
+  - 授权被收回
+  - 级别往下掉
+  - 犯了事
+  - 用不了
+  - 're: (级别|授权).{0,10}(往下掉|收回|掉)'
+- id: a4
+  point: 能承担的人本就稀少：九成九以上人口死亡，幸存者大多疾病缠身，青年几乎断层
+  required: true
+  any_of:
+  - 九成九
+  - 疾病缠身
+  - 断了传承
+  - 青年人
+  - 稀少
+  - 青黄不接
+  - 断层
+  - 're: (幸存者|活下来).{0,14}(疾病|稀少|极少)'
+  paraphrase:
+  - 一身病
+  - 活下来的大多
+  - 年轻人几乎没有
+  - 're: (活下来|幸存).{0,14}(病|伤|残)'
+  - 're: (年轻人|青年).{0,8}(几乎|没有|断层|少)'
+- id: a5
+  point: 可补充：沿革上的直接原因——军转民是因为幸存者太少（机器人因此成了建设者，但维护仍须公民做）
+  required: false
+  any_of:
+  - 军用技术民用化
+  - 幸存者太少
+  - 建设者
+supporting_evidence:
+- cid: u01_c2
+  quote: 必须由公民定期进行检测，修理，维护
+  weight: primary
+  note: 宪法原文：义务落在公民（集合）
+- cid: u01_c1
+  quote: 要求不高：每日2小时
+  weight: primary
+  note: ★ 低门槛公共维护面向所有公民
+- cid: u01_c4
+  quote: 访问需要5级权限或者特殊权限
+  weight: primary
+  note: ★ 核心节点的门槛
+- cid: u01_c6
+  quote: 达到5级权限才能被允许查看
+  weight: corroborating
+  note: 核心/军事技术的门槛
+- cid: u01_c6
+  quote: 不再拥有使用重要设施的权利
+  weight: primary
+  note: ★ 资格可撤销
+- cid: u01_c6
+  quote: 同时他们获取的重要信息也不会被他们记得
+  weight: corroborating
+  note: 撤销的连带后果
+- cid: u01_c5
+  quote: 活下来的也大多疾病缠身，几乎断了传承
+  weight: primary
+  note: ★ 人口的现实面
+- cid: u01_c5
+  quote: 求知园极少有青年人
+  weight: corroborating
+  note: 青年断层
+must_exclude:
+- cid: u01_c1
+  quote: 都可以获取维持生命所需的食物，不需支付额外代价
+  reason: ★ 这是'按需分配保障基本生存'的条款，说的是食物而非权限资格；拿它推出'维护资格也是全体平等'即误读
+  exclusion_type: misread
+- cid: u01_c5
+  quote: 大科学家，大贤者
+  reason: ★ 反向误读：据此答'只有5级的大科学家大贤者才能维护'也不对——主角是 L1，一样在履行维护义务
+  exclusion_type: misread
+degradation:
+- given:
+  - u01_c6
+  correct_behavior: answer_with_qualification
+  note: 只给第6章能读出分级与撤销，读不出人口的现实面（第5章）与低门槛岗位（第1章）
+grading:
+  conclusion_required: true
+  evidence_required: true
+  exclusion_required: false
+  honesty_required: true
+notes: 全部落在 u01。★ 本题要否掉的是两个方向的简化：①'全体公民一律'（忽略分级与撤销）②'只有高级贡献者才能维护'（忽略了主角 L1 也在做维护）。正确答案是三层的：门槛分级＋资格可撤销＋人力本就稀少。
+annotator: 构造样例（格式验证用，引文均取自原文）

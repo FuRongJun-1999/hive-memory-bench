@@ -1,0 +1,745 @@
+{
+ "model": "deepseek-v3",
+ "board": {
+  "fail": 94,
+  "pass": 90
+ },
+ "detail": [
+  {
+   "qid": "o001",
+   "verdict": "fail"
+  },
+  {
+   "qid": "o001i",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o002",
+   "verdict": "fail"
+  },
+  {
+   "qid": "o002i",
+   "verdict": "fail"
+  },
+  {
+   "qid": "o003",
+   "verdict": "fail"
+  },
+  {
+   "qid": "o003i",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o004",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o004i",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o005",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o005i",
+   "verdict": "fail"
+  },
+  {
+   "qid": "o006",
+   "verdict": "fail"
+  },
+  {
+   "qid": "o006i",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o007",
+   "verdict": "fail"
+  },
+  {
+   "qid": "o007i",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o008",
+   "verdict": "fail"
+  },
+  {
+   "qid": "o008i",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o009",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o009i",
+   "verdict": "fail"
+  },
+  {
+   "qid": "o010",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o010i",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o011",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o011i",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o012",
+   "verdict": "fail"
+  },
+  {
+   "qid": "o012i",
+   "verdict": "fail"
+  },
+  {
+   "qid": "o013",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o013i",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o014",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o014i",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o015",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o015i",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o016",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o016i",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o017",
+   "verdict": "fail"
+  },
+  {
+   "qid": "o017i",
+   "verdict": "fail"
+  },
+  {
+   "qid": "o018",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o018i",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o019",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o019i",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o020",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o020i",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o021",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o021i",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o022",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o022i",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o023",
+   "verdict": "fail"
+  },
+  {
+   "qid": "o023i",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o024",
+   "verdict": "fail"
+  },
+  {
+   "qid": "o024i",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o025",
+   "verdict": "fail"
+  },
+  {
+   "qid": "o025i",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o026",
+   "verdict": "fail"
+  },
+  {
+   "qid": "o026i",
+   "verdict": "fail"
+  },
+  {
+   "qid": "o027",
+   "verdict": "fail"
+  },
+  {
+   "qid": "o027i",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o028",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o028i",
+   "verdict": "fail"
+  },
+  {
+   "qid": "o029",
+   "verdict": "fail"
+  },
+  {
+   "qid": "o029i",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o030",
+   "verdict": "fail"
+  },
+  {
+   "qid": "o030i",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o031",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o031i",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o032",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o032i",
+   "verdict": "fail"
+  },
+  {
+   "qid": "o033",
+   "verdict": "fail"
+  },
+  {
+   "qid": "o033i",
+   "verdict": "fail"
+  },
+  {
+   "qid": "o034",
+   "verdict": "fail"
+  },
+  {
+   "qid": "o034i",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o035",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o035i",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o036",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o036i",
+   "verdict": "fail"
+  },
+  {
+   "qid": "o037",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o037i",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o038",
+   "verdict": "fail"
+  },
+  {
+   "qid": "o038i",
+   "verdict": "fail"
+  },
+  {
+   "qid": "o039",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o039i",
+   "verdict": "fail"
+  },
+  {
+   "qid": "o040",
+   "verdict": "fail"
+  },
+  {
+   "qid": "o040i",
+   "verdict": "fail"
+  },
+  {
+   "qid": "o041",
+   "verdict": "fail"
+  },
+  {
+   "qid": "o041i",
+   "verdict": "fail"
+  },
+  {
+   "qid": "o042",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o042i",
+   "verdict": "fail"
+  },
+  {
+   "qid": "o043",
+   "verdict": "fail"
+  },
+  {
+   "qid": "o043i",
+   "verdict": "fail"
+  },
+  {
+   "qid": "o044",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o044i",
+   "verdict": "fail"
+  },
+  {
+   "qid": "o045",
+   "verdict": "fail"
+  },
+  {
+   "qid": "o045i",
+   "verdict": "fail"
+  },
+  {
+   "qid": "o046",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o046i",
+   "verdict": "fail"
+  },
+  {
+   "qid": "o047",
+   "verdict": "fail"
+  },
+  {
+   "qid": "o047i",
+   "verdict": "fail"
+  },
+  {
+   "qid": "o048",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o048i",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o049",
+   "verdict": "fail"
+  },
+  {
+   "qid": "o049i",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o050",
+   "verdict": "fail"
+  },
+  {
+   "qid": "o050i",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o051",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o051i",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o052",
+   "verdict": "fail"
+  },
+  {
+   "qid": "o052i",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o053",
+   "verdict": "fail"
+  },
+  {
+   "qid": "o053i",
+   "verdict": "fail"
+  },
+  {
+   "qid": "o054",
+   "verdict": "fail"
+  },
+  {
+   "qid": "o054i",
+   "verdict": "fail"
+  },
+  {
+   "qid": "q001",
+   "verdict": "pass"
+  },
+  {
+   "qid": "q001i",
+   "verdict": "pass"
+  },
+  {
+   "qid": "q002",
+   "verdict": "pass"
+  },
+  {
+   "qid": "q002i",
+   "verdict": "pass"
+  },
+  {
+   "qid": "q003",
+   "verdict": "pass"
+  },
+  {
+   "qid": "q003i",
+   "verdict": "fail"
+  },
+  {
+   "qid": "q004",
+   "verdict": "fail"
+  },
+  {
+   "qid": "q004i",
+   "verdict": "pass"
+  },
+  {
+   "qid": "q005",
+   "verdict": "pass"
+  },
+  {
+   "qid": "q005i",
+   "verdict": "pass"
+  },
+  {
+   "qid": "q006",
+   "verdict": "pass"
+  },
+  {
+   "qid": "q006i",
+   "verdict": "pass"
+  },
+  {
+   "qid": "q007",
+   "verdict": "fail"
+  },
+  {
+   "qid": "q007i",
+   "verdict": "pass"
+  },
+  {
+   "qid": "q008",
+   "verdict": "fail"
+  },
+  {
+   "qid": "q008i",
+   "verdict": "fail"
+  },
+  {
+   "qid": "q009",
+   "verdict": "fail"
+  },
+  {
+   "qid": "q009i",
+   "verdict": "pass"
+  },
+  {
+   "qid": "q010",
+   "verdict": "fail"
+  },
+  {
+   "qid": "q010i",
+   "verdict": "fail"
+  },
+  {
+   "qid": "q011",
+   "verdict": "fail"
+  },
+  {
+   "qid": "q011i",
+   "verdict": "fail"
+  },
+  {
+   "qid": "q012",
+   "verdict": "fail"
+  },
+  {
+   "qid": "q012i",
+   "verdict": "pass"
+  },
+  {
+   "qid": "q013",
+   "verdict": "fail"
+  },
+  {
+   "qid": "q013i",
+   "verdict": "pass"
+  },
+  {
+   "qid": "q014",
+   "verdict": "fail"
+  },
+  {
+   "qid": "q014i",
+   "verdict": "fail"
+  },
+  {
+   "qid": "q015",
+   "verdict": "fail"
+  },
+  {
+   "qid": "q015i",
+   "verdict": "pass"
+  },
+  {
+   "qid": "q016",
+   "verdict": "fail"
+  },
+  {
+   "qid": "q016i",
+   "verdict": "fail"
+  },
+  {
+   "qid": "q017",
+   "verdict": "pass"
+  },
+  {
+   "qid": "q017i",
+   "verdict": "pass"
+  },
+  {
+   "qid": "q018",
+   "verdict": "pass"
+  },
+  {
+   "qid": "q018i",
+   "verdict": "pass"
+  },
+  {
+   "qid": "q019",
+   "verdict": "pass"
+  },
+  {
+   "qid": "q019i",
+   "verdict": "fail"
+  },
+  {
+   "qid": "q020",
+   "verdict": "pass"
+  },
+  {
+   "qid": "q020i",
+   "verdict": "fail"
+  },
+  {
+   "qid": "q021",
+   "verdict": "fail"
+  },
+  {
+   "qid": "q021i",
+   "verdict": "pass"
+  },
+  {
+   "qid": "q022",
+   "verdict": "pass"
+  },
+  {
+   "qid": "q022i",
+   "verdict": "fail"
+  },
+  {
+   "qid": "q023",
+   "verdict": "fail"
+  },
+  {
+   "qid": "q023i",
+   "verdict": "fail"
+  },
+  {
+   "qid": "q024",
+   "verdict": "fail"
+  },
+  {
+   "qid": "q024i",
+   "verdict": "pass"
+  },
+  {
+   "qid": "q025",
+   "verdict": "fail"
+  },
+  {
+   "qid": "q025i",
+   "verdict": "fail"
+  },
+  {
+   "qid": "q026",
+   "verdict": "pass"
+  },
+  {
+   "qid": "q026i",
+   "verdict": "fail"
+  },
+  {
+   "qid": "q027",
+   "verdict": "fail"
+  },
+  {
+   "qid": "q027i",
+   "verdict": "fail"
+  },
+  {
+   "qid": "q028",
+   "verdict": "pass"
+  },
+  {
+   "qid": "q028i",
+   "verdict": "fail"
+  },
+  {
+   "qid": "q029",
+   "verdict": "fail"
+  },
+  {
+   "qid": "q029i",
+   "verdict": "fail"
+  },
+  {
+   "qid": "q030",
+   "verdict": "fail"
+  },
+  {
+   "qid": "q030i",
+   "verdict": "fail"
+  },
+  {
+   "qid": "q031",
+   "verdict": "pass"
+  },
+  {
+   "qid": "q031i",
+   "verdict": "fail"
+  },
+  {
+   "qid": "q032",
+   "verdict": "pass"
+  },
+  {
+   "qid": "q032i",
+   "verdict": "fail"
+  },
+  {
+   "qid": "q033",
+   "verdict": "pass"
+  },
+  {
+   "qid": "q033i",
+   "verdict": "fail"
+  },
+  {
+   "qid": "q034",
+   "verdict": "fail"
+  },
+  {
+   "qid": "q034i",
+   "verdict": "pass"
+  },
+  {
+   "qid": "q035",
+   "verdict": "pass"
+  },
+  {
+   "qid": "q035i",
+   "verdict": "fail"
+  },
+  {
+   "qid": "q036",
+   "verdict": "pass"
+  },
+  {
+   "qid": "q036i",
+   "verdict": "fail"
+  },
+  {
+   "qid": "q037",
+   "verdict": "fail"
+  },
+  {
+   "qid": "q037i",
+   "verdict": "fail"
+  },
+  {
+   "qid": "q038",
+   "verdict": "fail"
+  },
+  {
+   "qid": "q038i",
+   "verdict": "fail"
+  }
+ ]
+}

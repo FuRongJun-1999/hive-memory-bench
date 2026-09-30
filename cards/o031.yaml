@@ -1,0 +1,83 @@
+qid: o031
+kind: open
+category: 故事含义
+unit_ids:
+- u03
+span: short
+inference_layer: 合理假说
+question: 第十八章「新的故事」这一章在讲什么？它写的「糖衣」是怎么做的？
+rubric:
+- id: p1
+  point: 派蒙坦白她的设计：她把博士和富人他们的策略混合升级了——他们不再直接抢夺神之心，而是散播思想、像播种一样
+  required: true
+  any_of:
+  - 散播思想
+  - 播种
+  - 神之心
+  - 're: 策略.{0,12}(混合|升级)'
+- id: p2
+  point: 新故事的手法：把绝对自由包装成乌托邦，用精心编织的故事和感官刺激，引诱人们放弃蜂巢的共识与约束
+  required: true
+  any_of:
+  - 包装成乌托邦
+  - 感官刺激
+  - 're: 绝对自由.{0,14}(包装|乌托邦)'
+- id: p3
+  point: 风之种的设定（新故事的核心装置）：它让人相信自己所需要的东西都会通过与他人的协作和共同的繁荣而自然得到满足——没有人需要囤积财富
+  required: true
+  any_of:
+  - 风之种
+  - 协作
+  - 囤积
+  - 're: 需要.{0,14}(协作|共同繁荣).{0,12}满足'
+- id: p4
+  point: 主角的判断：这是在用美好的词汇包装危险的概念——永生被说成永恒守护、私有制被美化为拥有美好的自由、绝对权力被歌颂为承担责任的勇气
+  required: true
+  any_of:
+  - 美好的词汇
+  - 永恒守护
+  - 承担责任
+  - 're: 美好.{0,10}(词汇|包装)'
+- id: p5
+  point: 落点：他要模拟的正是如何应对这种糖衣——本章因此从「写故事」转向「拆故事」
+  required: true
+  any_of:
+  - 如何应对这种糖衣
+  - 拆
+  - 're: (应对|拆).{0,10}(糖衣|包装)'
+anti_patterns:
+- claim: 把风之种读成超自然的赐福（它是叙事装置，服务于说服）
+  triggers:
+  - 're: 风之种.{0,12}(神迹|魔法|真的赐福|超自然)'
+- claim: 断言这一章是主角在教派蒙写故事（是派蒙把策略混合升级后拿给他看，他要模拟的是反制）
+  triggers:
+  - 're: (主角|他).{0,10}(教|指导).{0,8}派蒙.{0,8}(写|做)故事'
+evidence_pool:
+- cid: u03_c18
+  quote: 我把博士和富人他们的策略混合升级了
+  supports:
+  - p1
+- cid: u03_c18
+  quote: 写出一个完美无瑕的乌托邦故事
+  supports:
+  - p2
+- cid: u03_c18
+  quote: 风之种
+  supports:
+  - p3
+- cid: u03_c18
+  quote: 用美好的词汇包装危险的概念
+  supports:
+  - p4
+- cid: u03_c18
+  quote: 如何应对这种糖衣
+  supports:
+  - p5
+grading:
+  mode: rubric
+  coverage_required: 0.7
+  evidence_required: true
+  anti_pattern_penalty: true
+  exclusion_required: false
+notes: 逐章含义题（底稿第 18 章）。本章是**方法章**：把第15章推演出的威胁做成可操作的剧本，于是读者第一次看清「糖衣」的构造（绝对自由＋乌托邦故事＋感官刺激＋风之种式的说服装置），而主角的任务随之从写故事变成拆故事。
+annotator: 构造样例（逐章含义；引文均取自原文）

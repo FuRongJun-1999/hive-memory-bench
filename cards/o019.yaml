@@ -1,0 +1,84 @@
+qid: o019
+kind: open
+category: 故事含义
+unit_ids:
+- u01
+span: short
+inference_layer: 合理假说
+question: 第三章「身份谜团」这一章在讲什么？它给出的三条硬信息是什么？
+rubric:
+- id: p1
+  point: 第一条硬信息：指南查出「现存公民名称为陈默的结果是5人」——同名不是孤例
+  required: true
+  any_of:
+  - 5人
+  - 五个
+  - 同名
+  - 're: (现存公民).{0,12}(5|五)'
+- id: p2
+  point: 第二条硬信息：命名是极大的忌讳——以开国领导人的名字起名本身就是极大的忌讳，而忌讳之下仍有五个同名者
+  required: true
+  any_of:
+  - 忌讳
+  - 开国领导人
+  - 're: (以开国领导人|领导人的名字).{0,10}(起名|命名)'
+- id: p3
+  point: 第三条硬信息：创始人的资料是分层的——理论可以免费阅读，其他相关信息被加密、需要提升到5级权限或获取特殊贡献权限
+  required: true
+  any_of:
+  - 加密
+  - 5级权限
+  - 特殊贡献权限
+  - 're: (权限不足|加密).{0,14}(建议|提升|重试)'
+- id: p4
+  point: 他对《社会控制论》的读后感：极少数学公式、大量贴近旧时代生活的比喻，「不像是论文，更像是科普，宣传，但结论非常严谨」
+  required: true
+  any_of:
+  - 科普
+  - 宣传
+  - 结论非常严谨
+  - 're: (不像是论文|更像).{0,12}(科普|宣传)'
+- id: p5
+  point: 落点是他下的决心：「就让我看看，这个世界究竟藏着怎样的秘密吧」——对巨子塔的探查由此开始
+  required: true
+  any_of:
+  - 秘密
+  - 决心
+  - 're: (看看|探查).{0,16}(秘密|巨子塔)'
+anti_patterns:
+- claim: 把五个同名者读成同一个人留下的复制品（本章只给计数，未给关系）
+  triggers:
+  - 're: 五个同名.{0,12}(都是|全是).{0,8}(复制|同一个人)'
+  - 're: (五个|5人).{0,10}复制体'
+- claim: 断言创始人的资料都能免费读（理论可读，其他被加密）
+  triggers:
+  - 're: (创始人|巨子).{0,10}(资料|信息).{0,10}(全部|都).{0,6}公开'
+evidence_pool:
+- cid: u01_c3
+  quote: 现存公民名称为陈默的结果是5人
+  supports:
+  - p1
+- cid: u01_c3
+  quote: 以开国领导人的名字起名，这本身就是极大的忌讳
+  supports:
+  - p2
+- cid: u01_c3
+  quote: 其他相关信息已被加密
+  supports:
+  - p3
+- cid: u01_c3
+  quote: 更像是科普，宣传，但结论非常严谨
+  supports:
+  - p4
+- cid: u01_c3
+  quote: 这个世界究竟藏着怎样的秘密吧
+  supports:
+  - p5
+grading:
+  mode: rubric
+  coverage_required: 0.7
+  evidence_required: true
+  anti_pattern_penalty: true
+  exclusion_required: false
+notes: 逐章含义题（底稿第 3 章）。三条硬信息（五人／忌讳／加密）合起来才推得出「同名是被赋予的身份标识」——那是 q007 的答案，本章是它的原料章。
+annotator: 构造样例（逐章含义；引文均取自原文）

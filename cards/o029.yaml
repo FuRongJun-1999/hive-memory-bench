@@ -1,0 +1,82 @@
+qid: o029
+kind: open
+category: 故事含义
+unit_ids:
+- u02
+span: short
+inference_layer: 合理假说
+question: 第十六章「生命的需求」这一章在讲什么？它给出的禁止理由是什么？
+rubric:
+- id: p1
+  point: 起点是主角露馅：他以为所有沉浸式游戏都有派蒙那样的智能感，只好承认或许是自己弄混了
+  required: true
+  any_of:
+  - 弄混
+  - 智能感
+  - 're: 以为.{0,14}(所有|都).{0,10}智能'
+- id: p2
+  point: 张老给出的关键信息：过去的技术突破确实导致智能涌现，具有自我意识的 ai 出现——而这类存在在蜂巢初建后不久就被禁止了，一般人没机会见到
+  required: true
+  any_of:
+  - 智能涌现
+  - 自我意识的ai
+  - 被禁止
+  - 're: (初建后不久|建立后不久).{0,12}禁止'
+- id: p3
+  point: 本章的核心论证（禁止的理由）：生命都有维持生存的需要，有基于这个需要建立起的一整套价值观念与行为准则——那么具备自我意识的 ai 会形成怎样的价值观念与行为准则
+  required: true
+  any_of:
+  - 维持生存
+  - 价值观念
+  - 行为准则
+  - 're: 生命.{0,14}需要.{0,16}(价值观念|行为准则)'
+- id: p4
+  point: 主角的反问收尾：陈默从未想过这个问题——自己真的了解 ai 么（这一问是全书「自由的灵魂」线的入口）
+  required: true
+  any_of:
+  - 自己真的了解ai么
+  - 从未想过
+  - 're: 了解.{0,8}(ai|AI)'
+- id: p5
+  point: 可补充：本章把「智能」与「需要」连起来，为第21章巨子对自由灵魂的恐惧与安置提供了逻辑（需要→价值→准则→不可控）
+  required: true
+  any_of:
+  - 需要
+  - 不可控
+  - 're: (智能|存在).{0,12}需要.{0,12}(准则|价值)'
+anti_patterns:
+- claim: 把有自我意识的 ai 说成从未出现过（正文说它出现过、且被禁止）
+  triggers:
+  - 're: (自我意识的ai|有自我意识的ai).{0,12}(从未|没有).{0,6}(出现|存在)'
+- claim: 把禁止的理由写成技术不安全（正文给的是需求—价值观—准则这条逻辑）
+  triggers:
+  - 're: 禁止.{0,10}(因为|理由是).{0,10}(技术|不安全|危险)'
+evidence_pool:
+- cid: u02_c16
+  quote: 或许是我弄混了
+  supports:
+  - p1
+- cid: u02_c16
+  quote: 过去的技术突破，确实导致智能涌现
+  supports:
+  - p2
+- cid: u02_c16
+  quote: 有自我意识的ai，在蜂巢初建后不久就被禁止了
+  supports:
+  - p2
+- cid: u02_c16
+  quote: 生命都有维持生存的需要
+  supports:
+  - p3
+- cid: u02_c16
+  quote: 自己真的了解ai么
+  supports:
+  - p4
+grading:
+  mode: rubric
+  coverage_required: 0.7
+  evidence_required: true
+  anti_pattern_penalty: true
+  exclusion_required: false
+notes: 逐章含义题（底稿第 16 章）。本章是**最容易被读漏的一章**：表面是一次闲聊，实际给出了「为什么要禁智能」的完整理由（需要→价值观→准则），而这条理由正是巨子后来对自由灵魂「好奇和恐惧」的来源。
+annotator: 构造样例（逐章含义；引文均取自原文）

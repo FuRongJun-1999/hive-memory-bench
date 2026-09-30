@@ -1,0 +1,83 @@
+qid: o050
+kind: open
+category: 主要地点
+unit_ids:
+- u02
+- u03
+span: long
+inference_layer: 高可信推断
+question: 地点关系题：风神像、风龙废墟、摘星崖、无风之地这几个地点各承担什么？它们之间是什么关系？
+rubric:
+- id: p1
+  point: 风神像承担**视角与身份确认**：主角与派蒙坐在风神像的手掌上俯瞰蒙德，而蒙德供奉的风神就是巨子陈默——这一处让两个世界在同一个形象上对齐
+  required: true
+  any_of:
+  - 风神像
+  - 手掌
+  - 俯瞰
+  - 're: (风神像).{0,18}(俯瞰|巨子|陈默)'
+- id: p2
+  point: 风龙废墟承担**战斗与暴露**：讨伐风魔龙的队伍来到这里，遗迹守卫与毒血、封印都在此地；这也是自由派布置得以被看见的战场
+  required: true
+  any_of:
+  - 风龙废墟
+  - 特瓦林
+  - 封印
+  - 're: (风龙废墟).{0,16}(讨伐|战斗|特瓦林)'
+- id: p3
+  point: 摘星崖承担**离别与回望**：结尾的告别发生在这里（带着花香的清风），主角从这里回到舱室——它是两个世界之间的门
+  required: true
+  any_of:
+  - 摘星崖
+  - 花香
+  - 're: (摘星崖).{0,16}(离别|告别|清风)'
+- id: p4
+  point: 无风之地承担**故事与隐喻**：幻想朋友那个关于被困在无风之地的灵魂的故事，正是引出风神信息的引子——它用一个小故事打开全书的收束章
+  required: true
+  any_of:
+  - 无风之地
+  - 幻想朋友
+  - 're: (无风之地).{0,16}(幻想朋友|灵魂|引子)'
+- id: p5
+  point: 四处合起来是**同一条动线上的四种功能**：看（风神像）→ 打（风龙废墟）→ 别（摘星崖）→ 引（无风之地）；而它们全都指向同一个主题——自由要怎么被守护
+  required: true
+  any_of:
+  - 四种功能
+  - 动线
+  - 're: (看|打|别|引).{0,16}(功能|动线)'
+anti_patterns:
+- claim: 把风神像说成蒙德原作的设定摆设（这本书里它的意义是风神＝巨子）
+  triggers:
+  - 're: 风神像.{0,14}(只是|不过是).{0,8}(摆设|原作设定)'
+- claim: 断言摘星崖是战斗地点（它是离别处；战斗在风龙废墟）
+  triggers:
+  - 're: 摘星崖.{0,14}(战斗|讨伐|决战)'
+evidence_pool:
+- cid: u02_c12
+  quote: 讨伐风魔龙的队伍来到风龙废墟
+  supports:
+  - p2
+- cid: u03_c18
+  quote: 风神像的手掌
+  supports:
+  - p1
+- cid: u03_c21
+  quote: 关于被困在无风之地的人
+  supports:
+  - p4
+- cid: u03_c23
+  quote: 摘星崖上带着花香的清风
+  supports:
+  - p3
+- cid: u03_c21
+  quote: 同时也是蜂巢的巨子陈默
+  supports:
+  - p1
+grading:
+  mode: rubric
+  coverage_required: 0.7
+  evidence_required: true
+  anti_pattern_penalty: true
+  exclusion_required: false
+notes: 地点关系题。四处的功能分工是**看／打／别／引**——这条线解释了下半部为什么每个地点都只对应一次关键场景（空间被按功能分工，不做重复使用）。
+annotator: 构造样例（逐章含义；引文均取自原文）

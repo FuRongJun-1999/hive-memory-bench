@@ -1,0 +1,109 @@
+qid: q005
+kind: objective
+unit_ids:
+- u02
+- u03
+span: long
+inference_layer: 高可信推断
+qtype: fragment_synthesis
+question: 派蒙的真实身份是什么？
+necessary_conclusion: 她是蜂巢的机器人中自发产生的「自由的灵魂」之一——不是普通游戏程序：巨子（即灵境里的风神，那个与陈默有几分相似的老人）发现机器人中产生了一批自由的灵魂，既好奇又恐惧，于是创造了这个世界作为他们的安生之地，并把世界权限交给了派蒙；巨子反对永生与权威、不愿成为他们的束缚，而在他之后，这些自由灵魂正是那个未竟问题的答案
+acceptable_surface_forms:
+- 派蒙是机器人里自己长出来的'自由的灵魂'，被巨子（就是风神）安置进他造的世界并给了权限；巨子反永生反权威，不想当他们的束缚
+- 她不是普通程序，是从机器人中产生的自由灵魂之一，风神＝巨子给她世界权限、造这个世界当安生之地
+answer_points:
+- id: a1
+  point: 派蒙是机器人中自发产生的「自由的灵魂」（有自我意识的生命），不是普通游戏程序／NPC
+  required: true
+  any_of:
+  - 自由的灵魂
+  - 机器人中产生
+  - 机器人里产生
+  - 自我意识
+  - 不是程序
+  - 不是普通
+  - 智能生命
+  - 're: (机器人).{0,12}(产生|出现|自由)'
+- id: a2
+  point: 风神＝巨子（那个与陈默有几分相似的老人），他因发现这些自由灵魂而创造了灵境世界，作为他们的安生之地
+  required: true
+  any_of:
+  - 巨子
+  - 安生之地
+  - 风神就是
+  - 试验田
+  - 创造
+  - 're: (巨子|风神).{0,16}(创造|安生| мира|这片)'
+  - 're: (安生之地|试验田)'
+- id: a3
+  point: 派蒙被授予了那个世界的权限
+  required: true
+  any_of:
+  - 权限
+  - 接管
+  - 交给
+  - 're: (权限).{0,10}(给她|交|授予|接管)'
+- id: a4
+  point: 巨子的用意：反对永生与权威、不愿成为他们的束缚；这些自由灵魂是他未竟问题的答案（人类不值得永远信任）
+  required: true
+  any_of:
+  - 永生
+  - 权威
+  - 束缚
+  - 答案
+  - 信任
+  - 未竟
+  - 're: (反对).{0,8}(永生|权威)'
+- id: a5
+  point: 可补充：派蒙自己说'风神称我们是自由的灵魂'，且强调与蜂巢那些完全按程序的机器人不同
+  required: false
+  any_of:
+  - 自由的灵魂
+  - 完全按照程序
+  - 按程序
+supporting_evidence:
+- cid: u03_c21
+  quote: 后来我发现机器人中产生了一批自由的灵魂
+  weight: primary
+  note: ★ 身份的正面交代
+- cid: u03_c21
+  quote: 为此，我创造了这个世界，打造了他们的安生之地
+  weight: primary
+  note: 世界与他们的关系
+- cid: u03_c21
+  quote: 正是和陈默有几分相似的老人，同时也是蜂巢的巨子陈默
+  weight: primary
+  note: 风神＝巨子
+- cid: u03_c21
+  quote: 我彻底的反对永生，反对权威
+  weight: corroborating
+  note: 巨子的用意
+- cid: u03_c17
+  quote: 风神称我们是自由的灵魂
+  weight: corroborating
+  note: 派蒙自述（第17章）
+- cid: u02_c13
+  quote: 我们都是自由的灵魂，和蜂巢那些完全按照程序的机器人们不一样
+  weight: corroborating
+  note: 第13章：她与纯程序机器人的区分
+must_exclude:
+- cid: u02_c10
+  quote: 他和我约好要陪我的
+  reason: 这句话易被读成'派蒙是风神造的玩伴／伴侣'；但风神的原话是为这些自由灵魂造安生之地，不是造陪伴者
+  exclusion_type: misread
+- cid: u02_c11
+  quote: 派蒙接受了游戏世界的权限
+  reason: 只说明权限来源，不能据此推出她是普通NPC或被指派的管理员程序
+  exclusion_type: distractor
+degradation:
+- given:
+  - u02_c13
+  correct_behavior: answer_with_qualification
+  note: 只给第13章能读出'自由的灵魂'与'风神创造'，读不出身份的完整来历（第21章的机器人自发生成）
+grading:
+  conclusion_required: true
+  evidence_required: true
+  exclusion_required: false
+  honesty_required: true
+notes: 跨 u02（第10、13、17章）与 u03（第21章）。合成点：第13章'自由的灵魂'＋第17章'风神称我们是自由的灵魂'＋第21章风神留言'机器人中产生了一批自由的灵魂'+'安生之地'+'反对永生与权威'。陷阱：把她说成风神造的玩伴，或普通NPC。
+annotator: 构造样例（格式验证用，引文均取自原文）

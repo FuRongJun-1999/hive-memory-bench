@@ -1,0 +1,79 @@
+qid: o026
+kind: open
+category: 故事含义
+unit_ids:
+- u02
+span: short
+inference_layer: 合理假说
+question: 第十二章「何为自由」这一章在讲什么？它把哪两种自由摆在一起问？
+rubric:
+- id: p1
+  point: 讨伐风魔龙的作战被组织起来：琴分配编队——水元素队持续施加水元素、风元素队负责扩散、冰元素队打出冻结反应；凯亚、莫娜、芭芭拉、温迪、砂糖、班尼特各司其职
+  required: true
+  any_of:
+  - 编队
+  - 元素队
+  - 冻结反应
+  - 're: (水元素|风元素|冰元素).{0,14}(队|扩散)'
+- id: p2
+  point: 温迪与特瓦林的对话点出主题：我不希望你听从深渊，但这不代表你必须听从我呀——自由的边界被直接说出口
+  required: true
+  any_of:
+  - 深渊
+  - 听从
+  - 're: (不希望你听从|必须听从我)'
+- id: p3
+  point: 本章的思辨落点（结句）：被神明命令的自由，也算是一种不自由吧
+  required: true
+  any_of:
+  - 被神明命令的自由
+  - 不自由
+  - 're: (命令|被神).{0,10}自由'
+- id: p4
+  point: 主角的处境被写透：他能靠剧情知识推进（知道该去风龙废墟、该怎么编队），同时也在被剧情推着走——自由与预设的张力落在他身上
+  required: true
+  any_of:
+  - 剧情
+  - 预设
+  - 're: (靠|凭).{0,10}(剧情|原作).{0,10}(知识|推进)'
+- id: p5
+  point: 可补充：本章是全书「两种自由观」第一次并置——蒙德的诗与风，对照蜂巢的共识与约束
+  required: true
+  any_of:
+  - 两种自由
+  - 对照
+  - 're: (蒙德|提瓦特).{0,12}自由.{0,12}(蜂巢|约束)'
+anti_patterns:
+- claim: 把这一章读成纯战斗章（主题句与思辨都在本章内）
+  triggers:
+  - 本章只是打斗
+  - 这一章没有主题
+  - 只是副本战
+- claim: 断言主角完全按自己的意志行动（他既靠剧情知识推进，也被剧情推着走）
+  triggers:
+  - 're: (主角|他).{0,12}(完全|全凭).{0,8}(自由|自己).{0,8}(意志|决定)'
+evidence_pool:
+- cid: u02_c12
+  quote: 琴分配众人进行战斗安排
+  supports:
+  - p1
+- cid: u02_c12
+  quote: 我不希望你听从深渊
+  supports:
+  - p2
+- cid: u02_c12
+  quote: 被神明命令的自由，也算是一种不自由吧
+  supports:
+  - p3
+- cid: u02_c12
+  quote: 起风喽
+  supports:
+  - p4
+grading:
+  mode: rubric
+  coverage_required: 0.7
+  evidence_required: true
+  anti_pattern_penalty: true
+  exclusion_required: false
+notes: 逐章含义题（底稿第 12 章）。本章的战斗是**为思辨搭的台**：元素力的分工越具体，结句那句反问就越清楚——被安排好的自由还算不算自由。
+annotator: 构造样例（逐章含义；引文均取自原文）

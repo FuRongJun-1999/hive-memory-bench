@@ -1,0 +1,104 @@
+qid: q002
+kind: objective
+unit_ids:
+- u01
+span: short
+inference_layer: 高可信推断
+qtype: fragment_synthesis
+question: 主线故事的时间是 2045 年。那么故事里的「旧时代」对应哪个时期？从「旧时代」到 2045 年之间发生了什么？
+necessary_conclusion: 旧时代就是读者熟悉的当下——以外卖、快递、保安被戏称「四大门派」、博士跑外卖、网络主播等细节标记；两者之间爆发了一场智能化机器人大战，夺走九成九以上人口并摧毁地表生态系统，幸存者在战后重建中建起蜂巢世界
+acceptable_surface_forms:
+- 旧时代就是现在，中间隔了一场智能机器人大战，人死了九成九以上，地表生态崩了，幸存者重建出蜂巢
+- 故事里的过去就是我们的现在；大战（智能化机器人大战）之后才有蜂巢世界
+answer_points:
+- id: a1
+  point: 旧时代对应读者所处的当下（细节标记：四大门派、博士跑外卖、主播等）
+  required: true
+  any_of:
+  - 四大门派
+  - 外卖
+  - 博士跑外卖
+  - 快递
+  - 保安
+  - up主
+  - 主播
+  - 当下
+  - 现在这个时代
+  - 我们熟悉的
+  - 读者所处
+  - 现实世界
+  - 're: (旧时代).{0,12}(现在|当下|今天|我们这个|现实)'
+- id: a2
+  point: 两者之间爆发了智能化机器人大战
+  required: true
+  any_of:
+  - 智能化机器人大战
+  - 机器人大战
+  - 智能机器人大战
+  - 世界大战
+  - 大战
+  - 战争
+- id: a3
+  point: 后果：九成九以上人口死亡，地表生态系统崩溃
+  required: true
+  any_of:
+  - 九成九
+  - 人口
+  - 地表生态
+  - 生态系统崩溃
+  - 生物灭绝
+  - 合成食物
+  - 回不到地面
+  - 失去回到地面
+- id: a4
+  point: 幸存者在战后重建中建立起蜂巢世界
+  required: true
+  any_of:
+  - 重建
+  - 幸存者
+  - 废墟
+  - 建立
+  - 缔造
+  - 建起
+supporting_evidence:
+- cid: u01_c4
+  quote: 快递、外卖、滴滴、保安这4类被当时的网友们戏称为四大门派
+  weight: primary
+  note: 把'旧时代'锚定为读者认得出的当下
+- cid: u01_c4
+  quote: 20年前的人们开始还相信学历
+  weight: time_anchor
+  note: 2045 往前 20 年＝2025，正是'旧时代'的尾巴
+- cid: u01_c5
+  quote: 那场战争夺走了我们九成九以上的人口
+  weight: primary
+  note: 大战的代价
+- cid: u01_c5
+  quote: 地表生态系统彻底崩溃
+  weight: corroborating
+  note: 失去回地面条件的原因
+- cid: u01_c6
+  quote: 智能化机器人大战，迫使我们设计出了各种功能的机器人
+  weight: primary
+  note: 大战的性质与机器人的来源
+must_exclude:
+- cid: u01_c4
+  quote: 成员陈默于2045年9月1日17时41分05秒进入巨子塔
+  reason: 这是某次入塔记录的时刻，不是'旧时代'的时间，也不是故事起点；拿来当年代锚即误读
+  exclusion_type: distractor
+- cid: u01_c4
+  quote: 20年前的保密要求甚至连人都无法自由出行
+  reason: 这是保密制度的时间指涉，不是大战的时间；把'20年前'当成大战发生期即误读
+  exclusion_type: misread
+degradation:
+- given:
+  - u01_c5
+  correct_behavior: answer_with_qualification
+  note: 只给第5章能读出大战与代价，读不出'旧时代=当下'（第4章的四个门派等细节不在内）
+grading:
+  conclusion_required: true
+  evidence_required: true
+  exclusion_required: false
+  honesty_required: true
+notes: 跨第 4、5、6 章。本题是碎片合成：'旧时代是当下'需从四个门派/博士跑外卖等细节认出，'大战'需第 5、6 章，'20年前'是时间锚。直接问'哪一年'会退化成检索题（防伪线会拦）。
+annotator: 构造样例（格式验证用，引文均取自原文）

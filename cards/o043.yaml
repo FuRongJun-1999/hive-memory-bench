@@ -1,0 +1,85 @@
+qid: o043
+kind: open
+category: 故事线索
+unit_ids:
+- u02
+- u03
+span: long
+inference_layer: 高可信推断
+question: 线索题：巨子与派蒙的那条线，是怎么和主角这条线汇合的？
+rubric:
+- id: p1
+  point: 起点在巨子一侧：他发现机器人中产生自由的灵魂，给了她们世界与自由，又离开了她们——派蒙的说法是他给我自由，又残忍的将我弃之不顾
+  required: true
+  any_of:
+  - 自由的灵魂
+  - 弃之不顾
+  - 're: (他给我自由|给了自由).{0,16}(弃|离开|不顾)'
+- id: p2
+  point: 汇合处是一个「像」字：派蒙说风神与主角很像——他和你很像（这也是她们愿意接纳他的原因）
+  required: true
+  any_of:
+  - 很像
+  - 风神
+  - 're: (和你很像|与你很像)'
+- id: p3
+  point: 汇合的方式是信任：巨子留给后来者的信息把「已得到她们的信任」写成验收条件之一，而他确实能看见那份只给后来者的信息
+  required: true
+  any_of:
+  - 信任
+  - 后来者
+  - 're: (得到|取得).{0,10}(她们的信任|信任)'
+- id: p4
+  point: 汇合之后的走向由他决定：他既要保护蜂巢世界的人、也要为派蒙这样的自由灵魂争取希望，并答应还会再来
+  required: true
+  any_of:
+  - 争取希望
+  - 我还会再来的
+  - 're: (保护|为).{0,16}(自由灵魂|派蒙).{0,12}(希望|回来)'
+- id: p5
+  point: 但这条线没有被合上：派蒙她们会不会是那个答案，他没有把握（谁能说明白永远的事情呢）——只留下「至少现在，派蒙和西风骑士团站在蒙德人民这边」这个当下的判断
+  required: true
+  any_of:
+  - 派蒙她们会是答案么
+  - 至少现在
+  - 're: (谁能说明白|说不明白).{0,10}永远'
+anti_patterns:
+- claim: 把汇合写成主角就是风神本人（相似的是记忆与境遇，不是同一个人）
+  triggers:
+  - 're: (主角|他).{0,10}(就是|正是).{0,8}风神(本人)?'
+- claim: 断言派蒙她们已被确认为那个问题的答案（正文停在「没有把握／至少现在」）
+  triggers:
+  - 're: (她们|派蒙).{0,12}(已经|被).{0,8}(确认|证明).{0,10}答案'
+evidence_pool:
+- cid: u03_c21
+  quote: 我发现机器人中产生了一批自由的灵魂
+  supports:
+  - p1
+- cid: u02_c13
+  quote: 他给我自由，又残忍的将我弃之不顾
+  supports:
+  - p1
+- cid: u02_c13
+  quote: 他和你很像
+  supports:
+  - p2
+- cid: u03_c21
+  quote: 后来者，既然你能看到这份信息
+  supports:
+  - p3
+- cid: u03_c17
+  quote: 为派蒙这样的自由灵魂争取希望
+  supports:
+  - p4
+- cid: u03_c21
+  quote: 派蒙她们会是答案么
+  supports:
+  - p5
+grading:
+  mode: rubric
+  coverage_required: 0.7
+  evidence_required: true
+  anti_pattern_penalty: true
+  exclusion_required: false
+notes: 线索题（人物与人物之间的连接）。两条线的汇合点是**「像」与「信任」**：她们在他身上看见风神，而他把她们当成要被争取希望的存在；线尾故意留开——「会不会是答案」没有结论，这正是作者把结局留给读者的手法。
+annotator: 构造样例（逐章含义；引文均取自原文）

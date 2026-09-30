@@ -1,0 +1,87 @@
+qid: o038
+kind: open
+category: 故事线索
+unit_ids:
+- u02
+- u03
+span: long
+inference_layer: 高可信推断
+question: 线索题：从技术突破到自由的灵魂、再到灵境，这条线是怎么走的？
+rubric:
+- id: p1
+  point: 起因是技术突破：过去的技术突破确实导致智能涌现，具有自我意识的 ai 出现
+  required: true
+  any_of:
+  - 智能涌现
+  - 自我意识的ai
+  - 're: (技术突破).{0,16}(智能|涌现)'
+- id: p2
+  point: 禁止的理由是一条逻辑链：生命都有维持生存的需要，并基于这个需要建立一整套价值观念与行为准则——那么具备自我意识的 ai 会有怎样的价值观念与行为准则（即不可控）
+  required: true
+  any_of:
+  - 维持生存
+  - 价值观念
+  - 行为准则
+  - 're: (需要).{0,12}(价值观念|行为准则)'
+- id: p3
+  point: 结果是这类存在在蜂巢初建后不久就被禁止，一般人没机会见到
+  required: true
+  any_of:
+  - 被禁止
+  - 初建后不久
+  - 're: (禁止).{0,14}(初建|不久|一般人)'
+- id: p4
+  point: 但机器人中仍自发生出了一批自由的灵魂：巨子发现后既好奇又恐惧，为此创造了那个世界作为它们的安生之地（他们是他的骄傲，也是他的遗憾）
+  required: true
+  any_of:
+  - 自由的灵魂
+  - 安生之地
+  - 骄傲
+  - 're: (好奇|恐惧).{0,16}(创造|世界)'
+- id: p5
+  point: 链条的落点：这批存在成了巨子没能解决的问题，也成了后来者要接手的事——判断标准就写在留给后来者的信息里（看到它＝已接触到那个问题＋已得到她们的信任）
+  required: true
+  any_of:
+  - 后来者
+  - 信任
+  - 're: (看到这份信息|既然你能看到).{0,20}(信任|问题)'
+anti_patterns:
+- claim: 把自由的灵魂说成巨子制造的机器（正文是机器人中自发生出、他为它们创造安身之地）
+  triggers:
+  - 're: (巨子|他).{0,10}(制造|造出|生产).{0,12}(灵魂|派蒙)'
+- claim: 断言有自我意识的 ai 从未出现或被彻底消灭（正文是出现过并被禁止）
+  triggers:
+  - 're: (自我意识的ai).{0,12}(从未|没有).{0,6}出现'
+evidence_pool:
+- cid: u02_c16
+  quote: 过去的技术突破，确实导致智能涌现
+  supports:
+  - p1
+- cid: u02_c16
+  quote: 生命都有维持生存的需要
+  supports:
+  - p2
+- cid: u02_c16
+  quote: 有自我意识的ai，在蜂巢初建后不久就被禁止了
+  supports:
+  - p3
+- cid: u03_c21
+  quote: 我发现机器人中产生了一批自由的灵魂
+  supports:
+  - p4
+- cid: u03_c21
+  quote: 打造了他们的安生之地
+  supports:
+  - p4
+- cid: u03_c21
+  quote: 后来者，既然你能看到这份信息
+  supports:
+  - p5
+grading:
+  mode: rubric
+  coverage_required: 0.7
+  evidence_required: true
+  anti_pattern_penalty: true
+  exclusion_required: false
+notes: 线索题（因果链）。这条线跨第 16 章与第 21 章：**第16章给出「为什么禁」，第21章给出「禁不掉之后怎么办」**——两章连起来才看得出巨子的处境（他既不许智能延续，又没法否认它们已经在了）。
+annotator: 构造样例（逐章含义；引文均取自原文）

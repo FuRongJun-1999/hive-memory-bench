@@ -1,0 +1,124 @@
+qid: o001
+kind: open
+category: 故事线索
+unit_ids:
+- u01
+- u02
+- u03
+span: long
+inference_layer: 高可信推断
+question: 「陈默与巨子同名」这条线索由哪些情节节点串起来？到故事结束时，它被解答到了什么程度？
+rubric:
+- id: p1
+  point: 起点在第 2 章：他查到巨子与他同名同姓，随即产生'只是巧合？'的疑问
+  any_of:
+  - 同名同姓
+  - 同名
+  - 名字一样
+  - 只是巧合
+  required: true
+- id: p2
+  point: 巨子塔的性质被交代为巨子的长眠之地，同时是所有系统核心指令的最终备份点——这条线索与'最高权限'绑定
+  any_of:
+  - 长眠之地
+  - 最终备份点
+  - 核心指令的最终备份点
+  - 备份点
+  required: true
+- id: p3
+  point: 第 3 章他尝试进入巨子塔，被拒（权限 L1、访问待审核），且指南在此处出现反常表现
+  any_of:
+  - 权限L1
+  - L1
+  - 待审核
+  - 罕见的停顿
+  - 停顿
+  - 被拒
+  - 无法进入
+  required: true
+- id: p4
+  point: 第 4 章出现记忆矛盾：记录显示他确实进入过巨子塔，而他本人没有这段记忆，权限来源也不明
+  any_of:
+  - 没有记忆
+  - 不记得
+  - 记忆矛盾
+  - 记录显示
+  - 确实进入过
+  - 否认
+  required: true
+- id: p5
+  point: 第 13 章线索升级：风神被指'和你很像，但终究是不一样的'，陈默自己猜测风神是否也叫陈默
+  any_of:
+  - 很像
+  - 风神也叫陈默
+  - 终究不一样
+  - 风神
+  required: true
+- id: p6
+  point: 结局章只交代巨子的思想在蜂巢广为流传，同名之谜与他的权限来源均未被正面解答——线索是悬置的
+  any_of:
+  - 未解答
+  - 没有解答
+  - 没有明说
+  - 未被解答
+  - 没有交代
+  - 悬置
+  - 悬念
+  - 没有正面
+  required: true
+- id: p7
+  point: 可补充：这条线索与他对 5 级权限的执念是同一动机的两面（都在追自己的来历）
+  any_of:
+  - 5级
+  - 权限
+  - 来历
+  - 动机
+  required: false
+anti_patterns:
+- 陈默是巨子的克隆体或转世（语料无此陈述，属推定编造）
+- 故事在结局明确解答了陈默与巨子同名之谜
+- 风神与巨子是同一个人，作品已给出确证
+evidence_pool:
+- cid: u01_c2
+  quote: 和他同名同姓？只是一个巧合？
+  supports:
+  - p1
+- cid: u01_c2
+  quote: 那就是巨子塔，他的长眠之地，也是所有系统核心指令的最终备份点。我们都相信，他的精神与蜂巢永存。
+  supports:
+  - p2
+- cid: u01_c3
+  quote: 身份识别：公民陈默，权限：L1。访问请求......待审核。
+  supports:
+  - p3
+- cid: u01_c3
+  quote: 指南信息提示罕见的停顿了几秒
+  supports:
+  - p3
+- cid: u01_c4
+  quote: 自己什么时候有5级权限或者特殊权限？根据记录，自己确实是进入了巨子塔。
+  supports:
+  - p4
+- cid: u01_c4
+  quote: 看来巨子塔暂时也是一个谜团了
+  supports:
+  - p4
+- cid: u02_c13
+  quote: 他和你很像，但你们终究是不一样的。
+  supports:
+  - p5
+- cid: u02_c13
+  quote: 该不会风神也叫陈默吧
+  supports:
+  - p5
+- cid: u03_c23
+  quote: 巨子的思想在这里广为流传
+  supports:
+  - p6
+grading:
+  mode: rubric
+  coverage_required: 0.7
+  evidence_required: true
+  anti_pattern_penalty: true
+notes: 跨全部三个单元（第 2→3→4→13→23 章）。第 4 章的记忆矛盾一节为必答点，实测易被漏。
+annotator: 构造样例（格式验证用，引文均取自原文）
