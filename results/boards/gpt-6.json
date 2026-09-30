@@ -1,7 +1,7 @@
 {
  "model": "gpt-6",
  "board": {
-  "fail": 121,
+  "fail": 125,
   "pass": 21
  },
  "detail": [
@@ -326,15 +326,31 @@
    "verdict": "pass"
   },
   {
+   "qid": "o051",
+   "verdict": "fail"
+  },
+  {
    "qid": "o051i",
    "verdict": "pass"
+  },
+  {
+   "qid": "o052",
+   "verdict": "fail"
   },
   {
    "qid": "o052i",
    "verdict": "fail"
   },
   {
+   "qid": "o053",
+   "verdict": "fail"
+  },
+  {
    "qid": "o053i",
+   "verdict": "fail"
+  },
+  {
+   "qid": "o054",
    "verdict": "fail"
   },
   {

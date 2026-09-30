@@ -32,7 +32,7 @@ ap.add_argument("--root", default=None)
 ap.add_argument("--label", default=None)
 ap.add_argument("--min-ratio", type=float, default=0.75,
                 help="C2/C3 分界。★ 首版取 0.85，实测把「删节引述」误报成「无据编造」："
-                     "千问把原文「一旦涉及军用或者是出现超越时代的技术突破…」引成"
+                     "Qwen 3.7把原文「一旦涉及军用或者是出现超越时代的技术突破…」引成"
                      "「一旦出现超越时代的技术突破…」（删 7 字），比值 0.81，落进 C3。"
                      "真编造（原文根本没这话）实测比值远低于 0.5，故 0.75 更贴分界本意。")
 ap.add_argument("--detail", action="store_true")
