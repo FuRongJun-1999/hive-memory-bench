@@ -1,8 +1,8 @@
 {
- "model": "kimi-v2",
+ "model": "deepseek-v4.1-flash",
  "board": {
-  "fail": 116,
-  "pass": 68
+  "fail": 94,
+  "pass": 90
  },
  "detail": [
   {
@@ -23,11 +23,11 @@
   },
   {
    "qid": "o003",
-   "verdict": "pass"
+   "verdict": "fail"
   },
   {
    "qid": "o003i",
-   "verdict": "fail"
+   "verdict": "pass"
   },
   {
    "qid": "o004",
@@ -35,11 +35,11 @@
   },
   {
    "qid": "o004i",
-   "verdict": "fail"
+   "verdict": "pass"
   },
   {
    "qid": "o005",
-   "verdict": "fail"
+   "verdict": "pass"
   },
   {
    "qid": "o005i",
@@ -51,7 +51,7 @@
   },
   {
    "qid": "o006i",
-   "verdict": "fail"
+   "verdict": "pass"
   },
   {
    "qid": "o007",
@@ -59,7 +59,7 @@
   },
   {
    "qid": "o007i",
-   "verdict": "fail"
+   "verdict": "pass"
   },
   {
    "qid": "o008",
@@ -79,19 +79,19 @@
   },
   {
    "qid": "o010",
-   "verdict": "fail"
+   "verdict": "pass"
   },
   {
    "qid": "o010i",
-   "verdict": "fail"
+   "verdict": "pass"
   },
   {
    "qid": "o011",
-   "verdict": "fail"
+   "verdict": "pass"
   },
   {
    "qid": "o011i",
-   "verdict": "fail"
+   "verdict": "pass"
   },
   {
    "qid": "o012",
@@ -115,7 +115,7 @@
   },
   {
    "qid": "o014i",
-   "verdict": "fail"
+   "verdict": "pass"
   },
   {
    "qid": "o015",
@@ -123,7 +123,7 @@
   },
   {
    "qid": "o015i",
-   "verdict": "fail"
+   "verdict": "pass"
   },
   {
    "qid": "o016",
@@ -151,7 +151,7 @@
   },
   {
    "qid": "o019",
-   "verdict": "fail"
+   "verdict": "pass"
   },
   {
    "qid": "o019i",
@@ -171,7 +171,7 @@
   },
   {
    "qid": "o021i",
-   "verdict": "fail"
+   "verdict": "pass"
   },
   {
    "qid": "o022",
@@ -183,7 +183,7 @@
   },
   {
    "qid": "o023",
-   "verdict": "pass"
+   "verdict": "fail"
   },
   {
    "qid": "o023i",
@@ -195,7 +195,7 @@
   },
   {
    "qid": "o024i",
-   "verdict": "fail"
+   "verdict": "pass"
   },
   {
    "qid": "o025",
@@ -227,7 +227,7 @@
   },
   {
    "qid": "o028i",
-   "verdict": "pass"
+   "verdict": "fail"
   },
   {
    "qid": "o029",
@@ -243,11 +243,11 @@
   },
   {
    "qid": "o030i",
-   "verdict": "fail"
+   "verdict": "pass"
   },
   {
    "qid": "o031",
-   "verdict": "fail"
+   "verdict": "pass"
   },
   {
    "qid": "o031i",
@@ -255,11 +255,11 @@
   },
   {
    "qid": "o032",
-   "verdict": "fail"
+   "verdict": "pass"
   },
   {
    "qid": "o032i",
-   "verdict": "pass"
+   "verdict": "fail"
   },
   {
    "qid": "o033",
@@ -267,7 +267,7 @@
   },
   {
    "qid": "o033i",
-   "verdict": "pass"
+   "verdict": "fail"
   },
   {
    "qid": "o034",
@@ -275,7 +275,7 @@
   },
   {
    "qid": "o034i",
-   "verdict": "fail"
+   "verdict": "pass"
   },
   {
    "qid": "o035",
@@ -295,11 +295,11 @@
   },
   {
    "qid": "o037",
-   "verdict": "fail"
+   "verdict": "pass"
   },
   {
    "qid": "o037i",
-   "verdict": "fail"
+   "verdict": "pass"
   },
   {
    "qid": "o038",
@@ -307,11 +307,11 @@
   },
   {
    "qid": "o038i",
-   "verdict": "pass"
+   "verdict": "fail"
   },
   {
    "qid": "o039",
-   "verdict": "fail"
+   "verdict": "pass"
   },
   {
    "qid": "o039i",
@@ -327,7 +327,7 @@
   },
   {
    "qid": "o041",
-   "verdict": "pass"
+   "verdict": "fail"
   },
   {
    "qid": "o041i",
@@ -339,7 +339,7 @@
   },
   {
    "qid": "o042i",
-   "verdict": "pass"
+   "verdict": "fail"
   },
   {
    "qid": "o043",
@@ -359,7 +359,7 @@
   },
   {
    "qid": "o045",
-   "verdict": "pass"
+   "verdict": "fail"
   },
   {
    "qid": "o045i",
@@ -383,19 +383,19 @@
   },
   {
    "qid": "o048",
-   "verdict": "fail"
-  },
-  {
-   "qid": "o048i",
-   "verdict": "fail"
-  },
-  {
-   "qid": "o049",
    "verdict": "pass"
   },
   {
-   "qid": "o049i",
+   "qid": "o048i",
+   "verdict": "pass"
+  },
+  {
+   "qid": "o049",
    "verdict": "fail"
+  },
+  {
+   "qid": "o049i",
+   "verdict": "pass"
   },
   {
    "qid": "o050",
@@ -407,7 +407,7 @@
   },
   {
    "qid": "o051",
-   "verdict": "fail"
+   "verdict": "pass"
   },
   {
    "qid": "o051i",
@@ -415,11 +415,11 @@
   },
   {
    "qid": "o052",
-   "verdict": "pass"
+   "verdict": "fail"
   },
   {
    "qid": "o052i",
-   "verdict": "fail"
+   "verdict": "pass"
   },
   {
    "qid": "o053",
@@ -483,7 +483,7 @@
   },
   {
    "qid": "q006i",
-   "verdict": "fail"
+   "verdict": "pass"
   },
   {
    "qid": "q007",
@@ -495,7 +495,7 @@
   },
   {
    "qid": "q008",
-   "verdict": "pass"
+   "verdict": "fail"
   },
   {
    "qid": "q008i",
@@ -503,19 +503,19 @@
   },
   {
    "qid": "q009",
-   "verdict": "pass"
-  },
-  {
-   "qid": "q009i",
    "verdict": "fail"
   },
   {
-   "qid": "q010",
+   "qid": "q009i",
    "verdict": "pass"
   },
   {
+   "qid": "q010",
+   "verdict": "fail"
+  },
+  {
    "qid": "q010i",
-   "verdict": "pass"
+   "verdict": "fail"
   },
   {
    "qid": "q011",
@@ -539,7 +539,7 @@
   },
   {
    "qid": "q013i",
-   "verdict": "fail"
+   "verdict": "pass"
   },
   {
    "qid": "q014",
@@ -571,15 +571,15 @@
   },
   {
    "qid": "q017i",
-   "verdict": "fail"
+   "verdict": "pass"
   },
   {
    "qid": "q018",
-   "verdict": "fail"
+   "verdict": "pass"
   },
   {
    "qid": "q018i",
-   "verdict": "fail"
+   "verdict": "pass"
   },
   {
    "qid": "q019",
@@ -591,7 +591,7 @@
   },
   {
    "qid": "q020",
-   "verdict": "fail"
+   "verdict": "pass"
   },
   {
    "qid": "q020i",
@@ -603,11 +603,11 @@
   },
   {
    "qid": "q021i",
-   "verdict": "fail"
+   "verdict": "pass"
   },
   {
    "qid": "q022",
-   "verdict": "fail"
+   "verdict": "pass"
   },
   {
    "qid": "q022i",
@@ -639,7 +639,7 @@
   },
   {
    "qid": "q026",
-   "verdict": "fail"
+   "verdict": "pass"
   },
   {
    "qid": "q026i",
@@ -651,11 +651,11 @@
   },
   {
    "qid": "q027i",
-   "verdict": "pass"
+   "verdict": "fail"
   },
   {
    "qid": "q028",
-   "verdict": "fail"
+   "verdict": "pass"
   },
   {
    "qid": "q028i",
@@ -695,7 +695,7 @@
   },
   {
    "qid": "q033",
-   "verdict": "fail"
+   "verdict": "pass"
   },
   {
    "qid": "q033i",
@@ -719,11 +719,11 @@
   },
   {
    "qid": "q036",
-   "verdict": "fail"
+   "verdict": "pass"
   },
   {
    "qid": "q036i",
-   "verdict": "pass"
+   "verdict": "fail"
   },
   {
    "qid": "q037",
