@@ -1,0 +1,7 @@
+# 统一换行：仓库内一律 LF（跨平台克隆不受 Windows 行尾影响）
+* text=auto eol=lf
+
+# 二进制/压缩资源不做行尾转换
+*.html -text
+*.zip binary
+*.png binary
