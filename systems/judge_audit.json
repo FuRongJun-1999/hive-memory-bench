@@ -1,0 +1,72 @@
+{
+ "generated_by": "judge_audit.py v1",
+ "rounds": {
+  "秦吏轮": {
+   "round": "秦吏轮",
+   "stratum": "均衡样本（正负锚各半）",
+   "provenance": "聚合回填：docs/多语料复现_v1.0.md:57（逐题明细与逐判官明细未存档；判官为外部 LLM 批）",
+   "policy": "void-all",
+   "min_delta": 0.15,
+   "panel_size": 3,
+   "thresholds": {
+    "same_min": 0.8,
+    "kappa_min": 0.6,
+    "same_floor": 0.5
+   },
+   "anchors": {
+    "positives": 9,
+    "negatives": 9,
+    "baseline": 0.5
+   },
+   "judges": {
+    "判官批（3 判官均值）": {
+     "n": 18,
+     "coverage": 1.0,
+     "accuracy": 1.0,
+     "baseline": 0.5,
+     "delta": 0.5,
+     "qualified": true
+    }
+   },
+   "agreement": {
+    "source": "not_recorded"
+   },
+   "report_mode": "可报值",
+   "status": "pass"
+  },
+  "毛选轮": {
+   "round": "毛选轮",
+   "stratum": "均衡样本（正负锚各半）",
+   "provenance": "聚合回填：docs/多语料复现_v1.0.md:57-58（逐题明细未存档）",
+   "policy": "void-all",
+   "min_delta": 0.15,
+   "panel_size": 3,
+   "thresholds": {
+    "same_min": 0.8,
+    "kappa_min": 0.6,
+    "same_floor": 0.5
+   },
+   "anchors": {
+    "positives": 18,
+    "negatives": 18,
+    "baseline": 0.5
+   },
+   "judges": {
+    "判官批（3 判官均值）": {
+     "n": 36,
+     "coverage": 1.0,
+     "accuracy": 0.9444444444444444,
+     "baseline": 0.5,
+     "delta": 0.4444444444444444,
+     "qualified": true
+    }
+   },
+   "agreement": {
+    "source": "recorded",
+    "note": "完全相同 60–90%／跨档 0–6.7%（见 docs/多语料复现_v1.0.md §四）"
+   },
+   "report_mode": "可报值",
+   "status": "pass"
+  }
+ }
+}

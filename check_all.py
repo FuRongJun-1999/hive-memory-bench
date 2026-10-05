@@ -709,6 +709,8 @@ DOC_RULES = [
     ("docs/基准定位与三层结构_v1.0.md", "6.1 万字", "6.0 万字符"),
     ("docs/基线分析_v1.0.md", "2506 条引文", "2975 条引文"),               # A7 引文总数与编造计数
     ("docs/判分可靠性_v1.0.md", None, "3 判官 × 温度 0/0.5/1"),           # A6 协议底线 vs 实跑配置
+    ("docs/判分可靠性_v1.0.md", None, "judge_audit.py"),                  # #4 协议已实装
+    ("README.md", None, "judge_audit.py"),                                # #4 README 可复现性边界提到机械件
 ]
 
 

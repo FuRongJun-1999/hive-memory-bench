@@ -1,0 +1,16 @@
+{
+ "round": "秦吏轮",
+ "stratum": "均衡样本（正负锚各半）",
+ "provenance": "聚合回填：docs/多语料复现_v1.0.md:57（逐题明细与逐判官明细未存档；判官为外部 LLM 批）",
+ "summary": {
+  "positives": 9,
+  "negatives": 9,
+  "judges": {
+   "判官批（3 判官均值）": {
+    "pos_hit": 9,
+    "neg_miss": 0
+   }
+  }
+ },
+ "panel_size": 3
+}
