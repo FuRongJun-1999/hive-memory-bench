@@ -697,10 +697,70 @@ def check_boards() -> int:
     return 1 if errs else 0
 
 
+# ---------------------------------------------------------------- docs
+
+# 文档一致性守卫（外部评审 issue #3）：跨文档的同一事实只允许一个值。
+# 每条＝(文件, 禁止串, 必须串)；禁止串=旧口径残留，必须串=现行口径锚点。
+DOC_RULES = [
+    ("docs/干预轮对比_v1.0.md", "九家", "六家外测"),                      # A4 家数与表格一致
+    ("docs/干预轮对比_v1.0.md", "本库的判分链是纯规则的", "本库的**规则层**判分链是纯规则的"),  # A5
+    ("README.md", "6.1 万字", "6.0 万字符"),                              # A9 规模口径
+    ("docs/基线分析_v1.0.md", "6.1 万字", "6.0 万字符"),
+    ("docs/基准定位与三层结构_v1.0.md", "6.1 万字", "6.0 万字符"),
+    ("docs/基线分析_v1.0.md", "2506 条引文", "2975 条引文"),               # A7 引文总数与编造计数
+    ("docs/判分可靠性_v1.0.md", None, "3 判官 × 温度 0/0.5/1"),           # A6 协议底线 vs 实跑配置
+]
+
+
+def check_docs() -> int:
+    errs = []
+    print("=== 文档口径一致性 ===")
+    for rel, banned, required in DOC_RULES:
+        fp = ROOT / rel
+        if not fp.exists():
+            errs.append(f"{rel}: 文件不存在")
+            continue
+        t = fp.read_text(encoding="utf-8")
+        bad = bool(banned) and banned in t
+        miss = bool(required) and required not in t
+        print(f"  [{'ERR' if (bad or miss) else 'OK '}] {rel}: 禁 {banned!r}／必 {required!r}")
+        if bad:
+            errs.append(f"{rel}: 仍含旧口径 {banned!r}")
+        if miss:
+            errs.append(f"{rel}: 缺关键串 {required!r}")
+
+    # A4 家数：干预轮对比 §2 表必须恰好 6 行（与「六家外测」表述一致）
+    fp = ROOT / "docs" / "干预轮对比_v1.0.md"
+    if fp.exists():
+        t = fp.read_text(encoding="utf-8")
+        if "## 2. 统一总表" in t and "### 2.1" in t:
+            sec = t.split("## 2. 统一总表", 1)[1].split("### 2.1", 1)[0]
+            rows = [l for l in sec.splitlines() if re.match(r"^\| \*\*.+\*\* \| .*/92", l)]
+            ok = len(rows) == 6
+            print(f"  [{'OK ' if ok else 'ERR'}] 干预轮对比 §2 表行数 = {len(rows)}（应为 6）")
+            if not ok:
+                errs.append(f"干预轮对比 §2 表行数 {len(rows)} ≠ 6")
+
+    # A8 回归：成绩总表 节号不得重复
+    fp = ROOT / "results" / "成绩总表.md"
+    if fp.exists():
+        nums = re.findall(r"^## (\d+)\.", fp.read_text(encoding="utf-8"), flags=re.M)
+        dup = len(nums) != len(set(nums))
+        print(f"  [{'ERR' if dup else 'OK '}] 成绩总表 节号 = {nums}（不得重复）")
+        if dup:
+            errs.append(f"成绩总表 节号重复：{nums}")
+    print(f"\n结果：{len(errs)} 错误")
+    for m in errs:
+        print(f"  [ERR] {m}")
+    return 1 if errs else 0
+
+
 def main():
     cmd = sys.argv[1] if len(sys.argv) > 1 else "check"
     if cmd == "boards":
         return check_boards()
+    if cmd == "docs":
+        return check_docs()
     if cmd == "probe":
         if len(sys.argv) < 3:
             print('用法: python check_all.py probe "一句话"')
