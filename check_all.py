@@ -616,8 +616,91 @@ def probe(sentence: str):
     return 0
 
 
+# ---------------------------------------------------------------- boards
+
+# 「成绩总表 / README / 干预轮对比」采用的读数＝唯一口径，本表是文档数字的机械真源。
+# 为什么要有它（外部评审 issue #2 实测）：同一格曾在文档间漂移（Kimi 33/34；GPT-6 7/15/16），
+# 根因是"数字从多个工作台手工搬运"。此后一切读数从 boards/ 重算核对。
+BOARD_EXPECT = {                      # 文件名: (n, pass, 主轮, 干预)
+    "ours.json":                (184, 122, 67, 55),
+    "glm-5.3-flash.json":       (184, 91, 50, 41),
+    "deepseek-v4.1-flash.json": (184, 90, 43, 47),
+    "qwen-3.7.json":            (184, 82, 46, 36),
+    "kimi-k3.json":             (184, 68, 35, 33),   # v2 批（契约口径）
+    "gemini-3.7.json":          (92, 5, 0, 5),
+    "gpt-6-intervention.json":  (92, 15, 0, 15),     # 补交盲测批（合并口径）＝干预轮主值
+    "gpt-6.json":               (146, 21, 5, 16),    # 早期 146 题批：主轮 5 为主值来源；干预 16 已被取代
+}
+DOC_TABLE_EXPECT = {                  # 文档层口径（GPT-6 主轮取 gpt-6.json、干预取补交批）
+    "参考实现":             (184, 122, 67, 55),
+    "GLM 5.3 Flash":        (184, 91, 50, 41),
+    "DeepSeek V4.1 Flash":  (184, 90, 43, 47),
+    "Qwen 3.7":             (184, 82, 46, 36),
+    "Kimi K3":              (184, 68, 35, 33),
+    "GPT-6":                (146, 20, 5, 15),
+    "Gemini 3.7":           (92, 5, 0, 5),
+}
+# 文档字样核对：三份文档的关键格子必须逐字含这些串（issue #2 的验收判据“三处同格一致”）
+DOC_STRINGS = [
+    ("results/成绩总表.md", "| Kimi K3 | 33/92 | 35.9% |"),
+    ("results/成绩总表.md", "| GPT-6 | 15/92 | 16.3% |"),
+    ("results/成绩总表.md", "| **GPT-6** | **20** | **13.7%** | 5 | **15** |"),
+    ("README.md",          "| GPT-6 | 20/146 | 13.7% | 5/54 | 15/92 |"),
+    ("README.md",          "| Kimi K3 | 68/184 | 37.0% | 35/92 | 33/92 |"),
+    ("docs/干预轮对比_v1.0.md", "| **Kimi K3** | 33/92 | 35.9% |"),
+    ("docs/干预轮对比_v1.0.md", "| **GPT-6** | 15/92 | 16.3% |"),
+    ("docs/因果边界保持_v1.0.md", "Kimi K3 35.9% ／ GPT-6 16.3%"),
+]
+
+
+def _board_counts(fp: Path):
+    d = json.loads(fp.read_text(encoding="utf-8"))
+    det = d["detail"]
+    p = sum(1 for r in det if r["verdict"] == "pass")
+    inter = sum(1 for r in det if str(r["qid"]).endswith("i") and r["verdict"] == "pass")
+    return len(det), p, p - inter, inter
+
+
+def check_boards() -> int:
+    """机械重算 boards/ 的三列，并校验（a）与文档声明一致（b）主轮+干预=总数（c）文档字样。"""
+    errs = []
+    boards_dir = ROOT / "results" / "boards"
+    print(f"=== boards/ 重算（{len(list(boards_dir.glob('*.json')))} 个文件）===")
+    for name, exp in BOARD_EXPECT.items():
+        fp = boards_dir / name
+        if not fp.exists():
+            errs.append(f"{name}: 文件不存在")
+            continue
+        got = _board_counts(fp)
+        n, p, m, i = got
+        tag = "OK " if got == exp else "ERR"
+        print(f"  [{tag}] {name:28s} n={n:4d} pass={p:4d} 主轮={m:3d} 干预={i:3d}")
+        if got != exp:
+            errs.append(f"{name}: 重算 {got} ≠ 声明 {exp}")
+        if m + i != p:
+            errs.append(f"{name}: ★ 主轮+干预（{m}+{i}）≠ 总通过 {p}")
+    print("=== 文档层口径（成绩总表/README/干预轮对比 采用的数）===")
+    for label, (n, p, m, i) in DOC_TABLE_EXPECT.items():
+        print(f"  {label:22s} {p}/{n} = {100.0*p/n:.1f}%   （主轮 {m} ＋ 干预 {i} = {m+i}）")
+        if m + i != p:
+            errs.append(f"{label}: ★ 主轮+干预（{m}+{i}）≠ 总通过 {p}")
+    print("=== 文档字样核对（三处同格数字）===")
+    for rel, needle in DOC_STRINGS:
+        fp = ROOT / rel
+        ok = fp.exists() and needle in fp.read_text(encoding="utf-8")
+        print(f"  [{'OK ' if ok else 'ERR'}] {rel}: {needle}")
+        if not ok:
+            errs.append(f"{rel} 缺少字样：{needle}")
+    print(f"\n结果：{len(errs)} 错误")
+    for m in errs:
+        print(f"  [ERR] {m}")
+    return 1 if errs else 0
+
+
 def main():
     cmd = sys.argv[1] if len(sys.argv) > 1 else "check"
+    if cmd == "boards":
+        return check_boards()
     if cmd == "probe":
         if len(sys.argv) < 3:
             print('用法: python check_all.py probe "一句话"')
