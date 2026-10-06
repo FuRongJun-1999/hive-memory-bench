@@ -5,3 +5,6 @@
 *.html -text
 *.zip binary
 *.png binary
+
+# e2e/corpus：真实对话语料按字节保真（源为 CRLF，禁用行尾转换）
+e2e/corpus/** -text
