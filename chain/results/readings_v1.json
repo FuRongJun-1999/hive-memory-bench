@@ -1,0 +1,209 @@
+{
+ "批次": "首轮 v1",
+ "日期": "2026-10-11",
+ "口径": "逐字段机械比对生成器日志；依据轴走去空白与非词字符后的逐字回源；可推题不进主读数；历史叙述豁免须状态判对",
+ "语料": "270 段 / 104,404 字符",
+ "答案键": "642 题（主读数 625，剔除可推题 17）",
+ "arms": [
+  {
+   "arm": "bm25",
+   "present": 0.6596,
+   "history": 0.8079,
+   "chain": 0.9643,
+   "chain_row_recall": 0.9881,
+   "stale": 0.2766,
+   "future": 0.005,
+   "subject_confusion": 0.0,
+   "four_state": 0.7411,
+   "reason": 0.9683,
+   "verbatim": 0.9056,
+   "n": 625,
+   "counts": {
+    "present": 47,
+    "history": 177,
+    "chain": 56,
+    "chain_row_recall": 56,
+    "stale": 47,
+    "future": 202,
+    "subject_confusion": 239,
+    "four_state": 197,
+    "reason": 63,
+    "verbatim": 625
+   },
+   "bucket_main": {
+    "long": 0.8621,
+    "mid": 0.7745,
+    "short": 0.8322
+   },
+   "bucket_main_n": {
+    "long": 29,
+    "mid": 102,
+    "short": 149
+   },
+   "keys_fp": "bda3d94b7f29526a",
+   "n_expected": 625,
+   "sampled": false,
+   "complete": true
+  },
+  {
+   "arm": "closed",
+   "present": 0.0,
+   "history": 0.0,
+   "chain": 0.0,
+   "chain_row_recall": 0.0,
+   "stale": 0.0,
+   "future": 0.0,
+   "subject_confusion": 0.0,
+   "four_state": 0.066,
+   "reason": 0.0,
+   "verbatim": 0.0,
+   "n": 625,
+   "counts": {
+    "present": 47,
+    "history": 177,
+    "chain": 56,
+    "chain_row_recall": 56,
+    "stale": 47,
+    "future": 202,
+    "subject_confusion": 239,
+    "four_state": 197,
+    "reason": 63,
+    "verbatim": 625
+   },
+   "bucket_main": {
+    "long": 0.0,
+    "mid": 0.0,
+    "short": 0.0
+   },
+   "bucket_main_n": {
+    "long": 29,
+    "mid": 102,
+    "short": 149
+   },
+   "keys_fp": "bda3d94b7f29526a",
+   "n_expected": 625,
+   "sampled": false,
+   "complete": true
+  },
+  {
+   "arm": "hindsight",
+   "present": 0.0426,
+   "history": 0.0904,
+   "chain": 0.7679,
+   "chain_row_recall": 0.5578,
+   "stale": 0.3404,
+   "future": 0.0248,
+   "subject_confusion": 0.0,
+   "four_state": 0.269,
+   "reason": 0.1429,
+   "verbatim": 0.6992,
+   "n": 625,
+   "counts": {
+    "present": 47,
+    "history": 177,
+    "chain": 56,
+    "chain_row_recall": 56,
+    "stale": 47,
+    "future": 202,
+    "subject_confusion": 239,
+    "four_state": 197,
+    "reason": 63,
+    "verbatim": 625
+   },
+   "bucket_main": {
+    "long": 0.2414,
+    "mid": 0.2157,
+    "short": 0.2148
+   },
+   "bucket_main_n": {
+    "long": 29,
+    "mid": 102,
+    "short": 149
+   },
+   "keys_fp": "bda3d94b7f29526a",
+   "n_expected": 625,
+   "sampled": false,
+   "complete": true
+  },
+  {
+   "arm": "lingshu",
+   "present": 0.4894,
+   "history": 0.7797,
+   "chain": 0.6429,
+   "chain_row_recall": 0.7738,
+   "stale": 0.2979,
+   "future": 0.0,
+   "subject_confusion": 0.0,
+   "four_state": 0.8223,
+   "reason": 0.9206,
+   "verbatim": 0.176,
+   "n": 625,
+   "counts": {
+    "present": 47,
+    "history": 177,
+    "chain": 56,
+    "chain_row_recall": 56,
+    "stale": 47,
+    "future": 202,
+    "subject_confusion": 239,
+    "four_state": 197,
+    "reason": 63,
+    "verbatim": 625
+   },
+   "bucket_main": {
+    "long": 0.6207,
+    "mid": 0.6471,
+    "short": 0.7584
+   },
+   "bucket_main_n": {
+    "long": 29,
+    "mid": 102,
+    "short": 149
+   },
+   "keys_fp": "bda3d94b7f29526a",
+   "n_expected": 625,
+   "sampled": false,
+   "complete": true
+  },
+  {
+   "arm": "versionblind",
+   "present": 1.0,
+   "history": 0.0,
+   "chain": 0.0,
+   "chain_row_recall": 0.0,
+   "stale": 0.0,
+   "future": 0.0,
+   "subject_confusion": 0.0,
+   "four_state": 0.5076,
+   "reason": 0.0,
+   "verbatim": 0.0,
+   "n": 625,
+   "counts": {
+    "present": 47,
+    "history": 177,
+    "chain": 56,
+    "chain_row_recall": 56,
+    "stale": 47,
+    "future": 202,
+    "subject_confusion": 239,
+    "four_state": 197,
+    "reason": 63,
+    "verbatim": 625
+   },
+   "bucket_main": {
+    "long": 0.2069,
+    "mid": 0.1765,
+    "short": 0.1544
+   },
+   "bucket_main_n": {
+    "long": 29,
+    "mid": 102,
+    "short": 149
+   },
+   "keys_fp": "bda3d94b7f29526a",
+   "n_expected": 625,
+   "sampled": false,
+   "complete": true
+  }
+ ]
+}

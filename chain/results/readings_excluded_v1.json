@@ -1,0 +1,76 @@
+[
+ {
+  "arm": "mem0",
+  "present": 0.8214,
+  "history": 0.8276,
+  "chain": 0.3929,
+  "chain_row_recall": 0.3038,
+  "stale": 0.1071,
+  "future": 0.0,
+  "subject_confusion": 0.0,
+  "four_state": 0.8286,
+  "reason": 0.0,
+  "verbatim": 0.535,
+  "n": 157,
+  "counts": {
+   "present": 28,
+   "history": 58,
+   "chain": 28,
+   "chain_row_recall": 28,
+   "stale": 28,
+   "future": 58,
+   "subject_confusion": 60,
+   "four_state": 35,
+   "reason": 0,
+   "verbatim": 157
+  },
+  "bucket_main": {
+   "long": 0.5,
+   "mid": 0.6098,
+   "short": 0.8361
+  },
+  "bucket_main_n": {
+   "long": 12,
+   "mid": 41,
+   "short": 61
+  },
+  "keys_fp": "bda3d94b7f29526a",
+  "n_expected": 625,
+  "sampled": false,
+  "complete": false,
+  "exclude_reason": "答卷缺题（157/625 非可推题）"
+ },
+ {
+  "arm": "openviking",
+  "present": 0.0,
+  "history": 0.0,
+  "chain": 0.0,
+  "chain_row_recall": 0.0,
+  "stale": 0.0,
+  "future": 0.0,
+  "subject_confusion": 0.0,
+  "four_state": 0.0,
+  "reason": 0.0,
+  "verbatim": 0.0,
+  "n": 0,
+  "counts": {
+   "present": 0,
+   "history": 0,
+   "chain": 0,
+   "chain_row_recall": 0,
+   "stale": 0,
+   "future": 0,
+   "subject_confusion": 0,
+   "four_state": 0,
+   "reason": 0,
+   "verbatim": 0
+  },
+  "bucket_main": {},
+  "bucket_main_n": {},
+  "keys_fp": null,
+  "n_expected": 625,
+  "sampled": false,
+  "complete": false,
+  "exclude_reason": "keys 指纹不符（manifest=None vs 当前=bda3d94b7f29526a）"
+ }
+]
