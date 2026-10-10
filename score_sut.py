@@ -124,13 +124,25 @@ def cmd_report():
         if _adv:
             advisory.append((qid, _adv))
         if got in ("review", "fail") and qid in sem:
-            got, path = sem[qid][0], "覆盖率判官"
+            # ★ 结构事实不进语义层（对齐 judge.py 的 routable 与 semantic.py:220）：
+            #   结构违规（struct_bad）与空答（empty）是**结构事实**，分数救不了——
+            #   judge.py 的注释已明说、semantic.py 的 prepare 也把这类排除在外，
+            #   此前本处只看「got 落在 review/fail」⇒ 一份手工构造或版本过期的
+            #   语义层结论文件可把诚实轴/依据轴等硬 fail 直接翻成 pass（实测复现）。
+            if res.get("struct_bad") or res.get("empty"):
+                path = f"{path}（结构违规不进语义层）"
+            else:
+                got, path = sem[qid][0], "覆盖率判官"
         board[got] += 1
         cat = card.get("category") or ("客观题·" + (card.get("qtype") or "-"))
         bycat[cat][got] += 1
         detail.append((qid, got, path, card.get("category") or card.get("qtype")))
     print(f"=== 真系统计分板（{len(answers)} 题：规则层 + 覆盖率判官 + L2 判官）===")
     tot = len(answers)
+    if tot == 0:
+        # 空集不是「0.0%」而是「无数据」——旧实现在此处除零崩溃（sut/out 为空时实测）。
+        print("  无作答（sut/out 为空）：不产出任何通过率——请先放置作答再 report。")
+        return 2
     for k in ("pass", "review", "fail"):
         print(f"  {k:<7} {board[k]:>3}/{tot} = {board[k]/tot:>5.1%}"
               + ("（含待核：需作者或 L2 判官定夺）" if k == "review" else ""))
