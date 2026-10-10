@@ -709,6 +709,7 @@ def run_calib(root: Path):
         print(f"标定集为空：{root}")
         return 1
     tp = tn = fp = fn = 0
+    skipped = 0          # 缺卡被跳过的用例数（空集门禁判据）
     rev = 0            # 待复核（规则层）
     rev_true = 0       # 待复核里"其实正确"的（＝召回缺口）
     fn_rule = 0        # 规则层口径的召回缺口（未折叠语义层时）
@@ -721,9 +722,14 @@ def run_calib(root: Path):
     for c in cases:
         obj = json.loads(c.read_text(encoding="utf-8"))
         qid = obj.get("qid") or (obj.get("response") or {}).get("qid")
-        card_path = CARDS / f"{qid}.yaml"
+        # 干预变体（qid 形如 `q001i`）：答案键在原卡的 intervention 子结构里，
+        # 没有独立卡 ⇒ 回退到原卡。此前本处是唯一漏做回退的读卡点，于是含干预轮
+        # 的标定集会把这些用例静默丢弃（实测：0 例 → 0/0 → 打印「通过 ✓」）。
+        base_qid = qid[:-1] if str(qid).endswith("i") else qid
+        card_path = CARDS / f"{base_qid}.yaml"
         if not card_path.exists():
             print(f"  [ERR] {c.name}: 找不到卡片 {card_path.name}")
+            skipped += 1
             continue
         card = load_card(card_path)
         res = judge(card, obj["response"], idx)
@@ -811,6 +817,14 @@ def run_calib(root: Path):
             print(f"  待复核率 = {rev}/{len(rows)} = {rev/len(rows):.1%}"
                   f"（含 {rev_true} 例实为正确 ⇒ 规则层召回缺口；须由语义层裁决）")
     ok = fp_rate <= 0.05 and (holdout or fn_rate <= 0.10)
+    # ★ 空集不是「通过」：全部用例都因缺卡被跳过时 rows 为空 ⇒ 两轴读数都是 0/0，
+    #   旧实现由此判定 ok=True 并打印「通过 ✓」——这是**无证据的结论**
+    #   （实测：标定集只放干预轮用例 q001i 时报 0 例 + 通过）。空集一律 fail-closed。
+    empty = (len(rows) == 0)
+    if empty:
+        ok = False
+        print(f"\n⚠ 标定集 0 例（缺卡跳过 {skipped} 例 / 输入 {len(cases)} 例）："
+              f"无判决可依 ⇒ 门判定 fail-closed（不产出「通过」）。")
     print(f"\n阶段 0 门（结构轴{'仅假阳率·留出集不作调参' if holdout else '：假阳率 ≤5% ∧ 硬假阴率 ≤10%'}）："
           f"{'通过 ✓' if ok else '未通过 ✗'}")
     return 0 if ok else 1
