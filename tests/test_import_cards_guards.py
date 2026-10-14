@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import glob
 import json
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -112,6 +113,46 @@ def main():
     ok(not bare,
        "#22 o050 的采分词不得是题干里的光杆地名（改用地名＋功能共现正则）",
        f"光杆题干词={bare}")
+
+    # ---------- #6：README 的判官协议 CLI 必须能照抄跑起来 ----------
+    bare = sh("judge_audit.py")
+    ok(bare.returncode == 2 and "required" in (bare.stderr or ""),
+       "#6 只写脚本名确实 exit 2（子命令 cmd 必填）——README 的写法必须带子命令",
+       f"exit={bare.returncode}, stderr={bare.stderr.strip()[:80]}")
+    bad = []
+    for doc in [ROOT / "README.md"] + sorted((ROOT / "docs").glob("*.md")):
+        for i, line in enumerate(doc.read_text(encoding="utf-8").splitlines(), 1):
+            for m in re.finditer(r"python (?:-X utf8 )?judge_audit\.py", line):
+                tail = line[m.end():].strip(" \`")
+                if not (tail.startswith("check") or tail.startswith("selftest")):
+                    bad.append(f"{doc.name}:{i}: {line.strip()[:70]}")
+    ok(not bad,
+       "#6 对外文档里 judge_audit.py 的命令都必须带子命令（check/selftest），不得写成光脚本名",
+       bad)
+    ok("if False else None" not in (ROOT / "semantic.py").read_text(encoding="utf-8"),
+       "#6 semantic.py 的旧实现残骸（\"… if False else None\"）已清除")
+
+    # ---------- #32：独立性口径的方向必须写对 ----------
+    doc = (ROOT / "docs/题目独立性_v1.0.md").read_text(encoding="utf-8")
+    ok("有效样本量是**上界估计**——真实值只会更小" not in doc,
+       "#32 「章级是粗代理 ⇒ 有效样本量是上界估计、真值只会更小」的旧表述已清除"
+       "（粗代理 ⇒ 分量偏少 ⇒ 真值只会更大）")
+    ok("方向反了" in doc,
+       "#32 文档须显式标出旧口径方向写反了（不是悄悄改掉）")
+    ok("只会更大" in doc or "只会**更大**" in doc,
+       "#32 文档须写明「章级分量数偏少 ⇒ 真值只会更大」")
+    ok("句级" in doc and "92" in doc,
+       "#32 文档须给出句级对照读数（章级 24 vs 句级 92）")
+    rd = json.loads((ROOT / "results/独立性读数.json").read_text(encoding="utf-8"))
+    ok(rd.get("分量数") == 24 and rd.get("句级分量数") == 92,
+       "#32 读数 JSON 须同时含章级与句级分量数",
+       f"章级={rd.get('分量数')} 句级={rd.get('句级分量数')}")
+    p = sh("独立性分析.py")
+    ok(p.returncode == 0 and "句级对照" in p.stdout and "既不是上界" in p.stdout,
+       "#32 独立性分析.py 须能跑出句级对照并明说「≤24 既不是上界」",
+       f"exit={p.returncode}")
+    ok("≤ 24」折算" not in (ROOT / "README.md").read_text(encoding="utf-8"),
+       "#32 README 不得再要求「按有效样本量 ≤ 24 折算」")
 
     for f in made:
         f.unlink(missing_ok=True)
