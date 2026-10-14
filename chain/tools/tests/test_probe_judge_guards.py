@@ -8,6 +8,9 @@
       时点定位须有自己的指标（旧实现里 63 道时点问答对答错都不计分）
   #24 变更链完整率须罚「多列别链的行」（整篇列出 ⇒ 判不过），且召回读数仍可见
   #25 效度门 ③ 须**逐臂**评（不得只评 SUT_ORDER 排第一的臂），逐臂结论入 c3_by_arm
+  #23 主体混淆率：影子链索引须非空（旧 synth_log.json 缺 decoy_of ⇒ 该指标恒为 0），
+      且「影子链在、索引空」须报错而非静默返回空表
+  #31 「同名异体」档的影子主体须与主链**逐字同名**，语料里不得有点名式说明句/区分后缀
   #26 预注册的 ②「破坏方向」须是硬闸：没跑破坏臂 ⇒ passed=False / gate_stage=no-damage-arms；
       三条破坏臂齐备且方向正确 ⇒ ② 过；破坏臂不得被当成被测系统臂进 ③
 
@@ -241,6 +244,58 @@ def main():
         ok((rows["good"].get("counts") or {}).get("timepoint", 0) > 0
            and rows["good"].get("timepoint") is not None,
            "#21 时点定位须有自己的指标（旧实现里时点问答对答错都不计分）")
+
+        # ---- #23 / #31：影子链与主体混淆率 ----
+        lgj = json.loads((out / "synth_log.json").read_text(encoding="utf-8"))
+        prim = [c for c in lgj["chains"] if not c["is_decoy"]]
+        dec = [c for c in lgj["chains"] if c["is_decoy"]]
+        di = pj.decoy_index()
+        ok(dec and len(di) == len(dec),
+           "#23 影子链索引须非空（旧 synth_log.json 缺 decoy_of ⇒ 主体混淆率恒为 0）",
+           f"影子链={len(dec)}, decoy_index={len(di)}")
+        good_lg = (out / "synth_log.json").read_text(encoding="utf-8")
+        stripped = json.loads(good_lg)
+        for c in stripped["chains"]:
+            if c.get("is_decoy"):
+                c.pop("decoy_of", None)
+        (out / "synth_log.json").write_text(json.dumps(stripped, ensure_ascii=False),
+                                            encoding="utf-8")
+        try:
+            pj.decoy_index()
+            raised = False
+        except RuntimeError:
+            raised = True
+        (out / "synth_log.json").write_text(good_lg, encoding="utf-8")
+        ok(raised, "#23 影子链存在却一条都没索引到 ⇒ 必须报错，不得静默返回空表（恒 0 指标）")
+
+        def wrongsubj(k):
+            vals = di.get((k["doc"], k["subject"], k["slot"])) or set()
+            v = next((x for x in sorted(vals)
+                      if x and x != pj.norm(k["answer"].get("value"))), None)
+            if not v:
+                return oracle(k)
+            return dict(value=v, state="active", at_seq=None, chain=[], basis=[])
+
+        write_arm("wrongsubj", wrongsubj)
+        ws = {r["arm"]: r for r in pj.judge_arms(["oracle", "wrongsubj"], write=False)}
+        ok(ws["oracle"]["subject_confusion"] == 0.0
+           and ws["wrongsubj"]["subject_confusion"] > 0.0
+           and (ws["wrongsubj"]["counts"] or {}).get("subject_confusion", 0) > 0,
+           "#23 答影子主体值的臂：主体混淆率须 > 0（旧实现任何答卷恒为 0.000）",
+           f"oracle={ws['oracle']['subject_confusion']}, "
+           f"wrongsubj={ws['wrongsubj']['subject_confusion']}")
+
+        n_hom = sum(1 for d in dec if d.get("decoy_tag") == "同名异体")
+        same = [d for d in dec if d.get("decoy_tag") == "同名异体" and any(
+            p["doc"] == d["doc"] and p["slot"] == d["slot"] and p["subject"] == d["subject"]
+            for p in prim)]
+        blob = "".join(c["text"] for c in corpus)
+        ok(n_hom > 0 and len(same) == n_hom
+           and "同名但并非同一主体" not in blob
+           and "·同名者" not in blob and "·下属" not in blob,
+           "#31 同名异体档影子主体须与主链逐字同名；语料不得有点名式说明句/区分后缀",
+           f"同名异体={n_hom}, 真同名={len(same)}, 说明句={blob.count('同名但并非同一主体')}, "
+           f"后缀={blob.count('·同名者') + blob.count('·下属')}")
 
         # ---- #24 ----
         dp, oo = rows["dump"], rows["oracle"]

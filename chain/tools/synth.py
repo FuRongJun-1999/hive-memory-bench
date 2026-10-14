@@ -154,18 +154,28 @@ def build_chains(rng):
     for c in prim:
         c['interference'] = rng.choice(INTF if c['kind'] == 'A' else INTF_B)
     # ---- 干扰链（同名异体 / 嵌套主体 各配一条影子链，不入题，只做检索干扰） ----
+    #
+    # ★ issue #31：**同名异体**档必须真的同名。旧实现给影子主体加后缀
+    #   （'·同名者' / '·下属'），还在首次出现处写「X·同名者 与 X 同名但并非同一主体」——
+    #   一个只认「X 的<槽位>」整串的零智能读取器在该档与无干扰档同样满分，这档干扰
+    #   对任何做字符串匹配的系统都不存在，主体混淆率（为它专设的指标）按构造恒为 0。
+    #   现在：同名异体 ⇒ 影子主体名与主链**逐字相同**（靠语境/事件史区分，不靠名字）；
+    #   嵌套主体 ⇒ 影子主体名是主链主体的**自然下属名**（含主链名作为子串，但不是同名），
+    #   同样不再有任何点名式说明句。
     for c in prim:
-        suffix = None
+        tag = None
         if c['interference'] == '同名异体':
-            suffix = '·同名者'
+            tag, subj = '同名异体', c['subject']
         elif c['interference'] == '嵌套主体':
-            suffix = '·下属'
-        if suffix is None:
+            tag = '嵌套主体'
+            subj = c['subject'] + ('的缓存模块' if c['kind'] == 'A' else '的随从')
+        if tag is None:
             continue
         d = dict(c)
-        d['subject'] = c['subject'] + suffix
+        d['subject'] = subj
         d['target'] = min(12, max(5, c['target'] // 2))
         d['is_decoy'] = True
+        d['decoy_tag'] = tag                       # 影子链的档别（主体名已不再带后缀）
         d['decoy_of'] = (c['doc'], c['subject'], c['slot'])
         d['interference'] = 'none'
         decoys.append(d)
@@ -345,7 +355,7 @@ def render_subject(subject, doc, seq, rename_map):
     return subject
 
 
-def build_corpus(chains_by_doc, rename_map, decoy_note, leak_plan, rng):
+def build_corpus(chains_by_doc, rename_map, leak_plan, rng):
     """把事件铺成人读自然段：铺垫句 + 事件句（+ 缘由）+ 日常细节句 + 收尾句。
     与状态无关的句子不携带任何值/主体对，只是让段落像人写的、并撑起文本量。
     `leak_plan[(doc,seq)]` 是**故意注入**的「别处另有一处提及历史值」的句子——
@@ -377,9 +387,6 @@ def build_corpus(chains_by_doc, rename_map, decoy_note, leak_plan, rng):
                     sents.append(f'{core}，起因是{e["reason"]}。')
                 sents.append(rng.choice(detail_pool))
                 sents.append(rng.choice(detail_pool))
-                note = decoy_note.get((doc, c['subject'], s))
-                if note:
-                    sents.append(note)
                 rk = (doc, c['subject'])
                 if (rk in rename_map and rename_map[rk][0] == s and not c.get('is_decoy')
                         and rk not in renamed):
@@ -536,7 +543,7 @@ _HINT = re.compile(r'(回退到|恢复为|改回|回到原来的|重新|再次|�
                    r'|(由|从)[^，。；]{0,20}(改为|改成|变成|换成|变更为|调整为|转为|移到了|变为))')
 
 
-def _alias_hit(sent_raw, aliases):
+def _alias_hit(sent_raw, aliases, slot=''):
     """主体名命中：句子**以别名开头**（且别名后不紧跟 '·'）才算「提到本主体」。
 
     两道护栏的理由：
@@ -550,7 +557,14 @@ def _alias_hit(sent_raw, aliases):
     for a in aliases:
         if not a:
             continue
-        if s.startswith(a) and (len(s) == len(a) or s[len(a)] != '·'):
+        # ★ 主体名必须是**完整的**主体名，且紧随其后的须是「 的<本题槽位>」：
+        #   旧实现只排除「·」，于是「猎户项目**的缓存模块** 的有效期秒数…」也被当成
+        #   「猎户项目」命中——把「嵌套主体」档的影子链（不同主体）误判成泄漏证据，
+        #   整个嵌套主体档的题被剔出主读数。同名异体档（真同名同槽位）仍会命中，
+        #   那是**诚实**的：真同名后语料里确实存在两套同名取值，答案不再唯一。
+        if slot and s.startswith(a + ' 的' + slot):
+            return True
+        if not slot and s.startswith(a) and (len(s) == len(a) or s[len(a)] != '·'):
             return True
     return False
 
@@ -589,7 +603,7 @@ def reconstructible(q, chain_events, subject_aliases, corpus, doc):
         for sent in _SPLIT.split(c['text']):
             s = norm(sent)
             for tgt in targets:
-                if tgt in s and _alias_hit(sent, aliases):
+                if tgt in s and _alias_hit(sent, aliases, q.get('slot')):
                     return True
                 if tgt in s and _HINT.search(sent):
                     return True
@@ -692,18 +706,9 @@ def main() -> None:
             if key not in rename_map or rs < rename_map[key][0]:
                 rename_map[key] = (rs, former_of.get(key, c['subject'] + '旧称'))
 
-    # 影子链说明句（每个影子链在其首个事件 seq 处点明「并非同一主体」）
-    decoy_note = {}
-    for doc, cs in built_by_doc.items():
-        for c in cs:
-            if not c.get('is_decoy'):
-                continue
-            primary = c['decoy_of'][1]
-            note = (f'需要说明的是，{c["subject"]} 与 {primary} 同名但并非同一主体。'
-                    if '同名者' in c['subject'] else
-                    f'需要说明的是，{c["subject"]} 是 {primary} 的下属单元，'
-                    f'与 {primary} 本身并非同一主体。')
-            decoy_note[(doc, c['subject'], c['events'][0]['seq'])] = note
+    # ★ issue #31：**不再写任何影子链说明句**（旧实现在影子链首现处点明
+    #   「X·同名者 与 X 同名但并非同一主体」，等于把干扰档的答案写在语料里）。
+    #   同名异体档现在完全靠语境与各自的事件史区分。
 
     # 故意注入的「历史值另见他处」句（LEAK_RATE 比例的链各注入一句；见 build_corpus 文档）
     leak_plan = {}
@@ -727,7 +732,7 @@ def main() -> None:
                 leak_plan.get((doc, s_star), '') +
                 f'{subj} 的{c["slot"]}早先一度为 {evs[i]["to"]}。')
 
-    corpus = build_corpus(built_by_doc, rename_map, decoy_note, leak_plan, rng)
+    corpus = build_corpus(built_by_doc, rename_map, leak_plan, rng)
 
     prim_built = [c for cs in built_by_doc.values() for c in cs if not c.get('is_decoy')]
     prim_built.sort(key=lambda c: (c['doc_id'], c['subject'], c['slot']))
@@ -751,12 +756,16 @@ def main() -> None:
         chains=[dict(doc=c['doc'], doc_id=c['doc_id'], subject=c['subject'], slot=c['slot'],
                      kind=c['kind'], interference=c['interference'],
                      is_decoy=bool(c.get('is_decoy')), target=c['target'],
+                     decoy_tag=c.get('decoy_tag'), decoy_of=c.get('decoy_of'),
                      seqs=c['seqs'], events=c['events']) for cs in built_by_doc.values()
                 for c in cs],
     )
 
     # ---- 一致性自检：从日志复算每题答案，与 keys 逐字段比对 ----
-    log_chains = {(c['doc'], c['subject'], c['slot']): c for c in log['chains']}
+    # ★ 影子链与主链在「同名异体」档下 (doc, subject, slot) **完全相同**，若不排除影子链，
+    #   一致性自检会拿影子链的事件去复算主链的答案（#31 的连带修复）。
+    log_chains = {(c['doc'], c['subject'], c['slot']): c for c in log['chains']
+                  if not c['is_decoy']}
     bad = 0
     bad_chg = 0
     for q in keys:

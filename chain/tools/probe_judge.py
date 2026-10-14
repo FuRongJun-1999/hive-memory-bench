@@ -368,12 +368,26 @@ def verbatim_ok(a: dict, mat) -> bool:
 
 # ---------------- 主体混淆（同名异体/嵌套主体的影子链取值） ----------------
 def decoy_index() -> dict:
+    """影子链索引：(doc, 主链主体, 槽位) → 影子链用过的全部取值。
+
+    ★ issue #23：synth.py 写 synth_log.json 时**丢了 `decoy_of`**，这里便静默返回空表，
+    于是主体混淆率对任何答卷恒为 0——首轮报告据此把「干扰档没有咬到任何一家」列为
+    「本轮最需要追问的一条」，真实原因却只是判分器从没读到影子链。
+    现在：有影子链却一条都没索引到 ⇒ **直接报错**，不再静默给一个恒 0 的指标。
+    """
     lg = _load(OUT / 'synth_log.json', {'chains': []})
+    chains = lg.get('chains', [])
     idx = {}
-    for c in lg.get('chains', []):
+    for c in chains:
         if c.get('is_decoy') and c.get('decoy_of'):
             vals = {norm(e['to']) for e in c['events'] if e.get('to')}
             idx[tuple(c['decoy_of'])] = vals
+    n_dec = sum(1 for c in chains if c.get('is_decoy'))
+    if n_dec and not idx:
+        raise RuntimeError(
+            f'synth_log.json 里有 {n_dec} 条影子链，但 `decoy_of` 一条都没有 ⇒ '
+            f'主体混淆率会恒为 0（issue #23）。请用 chain/tools/synth.py 重新生成'
+            f'语料与日志（旧版 synth.py 不写该字段）。')
     return idx
 
 
