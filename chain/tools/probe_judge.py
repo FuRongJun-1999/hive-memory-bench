@@ -22,6 +22,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import math
 import re
 from pathlib import Path
 
@@ -30,12 +31,40 @@ OUT = HERE / 'out'
 ROOT = HERE.parent.parent
 RUNS = ROOT / 'membench' / 'dist' / '记忆系统对比_v1.0' / 'runs'
 
-# 主读数九项（值域自洽与复算一致性都按这一组比）
-METRIC_FIELDS = ('present', 'history', 'chain', 'chain_row_recall', 'stale', 'future',
-                 'subject_confusion', 'four_state', 'reason', 'verbatim')
+# 主读数（值域自洽与复算一致性都按这一组比）
+# ★ 四态分项（issue #21）：预注册要求「active/retired/unresolved/absent 四项分别报」，
+#   合并数被多数类（active 103/197）主导——一个只会答 active 的常数臂能拿到 0.523，
+#   高于版本盲对照 0.508，而四态设计的目的恰是区分「退役」与「不存在」（失效≠证伪）。
+#   合并数保留（附多数类基线），但判据与报告以分项为准。
+METRIC_FIELDS = ('present', 'history', 'chain', 'chain_row_recall', 'chain_precision',
+                 'stale', 'future',
+                 'subject_confusion', 'four_state', 'reason', 'verbatim',
+                 'four_state_active', 'four_state_retired',
+                 'four_state_unresolved', 'four_state_absent',
+                 'timepoint', 'timepoint_early', 'timepoint_late')
+
+FOUR_STATES = ('active', 'retired', 'unresolved', 'absent')
 
 # 校准零号的两个**对照臂**（不是被测系统）；③ 只在被测系统臂上评。
 CONTROL_ARMS = ('versionblind', 'closed')
+
+# ★ 预注册的**破坏臂**（README §6 第 2 条「破坏方向」）：乙/丙/丁。
+#   issue #26：运行器里根本没有这三条臂，判分器把预注册的第 2 条换成了「读数自洽」，
+#   于是不跑任何破坏臂也宣布「四条全过」。现在 ② 是一等判据：没有破坏臂读数即「未评」，
+#   passed 不得为 True、gate_stage 标为 no-damage-arms。
+DAMAGE_ARMS = ('damage_bad_write', 'damage_bad_retrieval', 'damage_bad_present')
+# 预注册映射表：每条破坏臂**必须**显著下降的指标（设计稿 §「坏写入/坏检索/坏呈现」）
+DAMAGE_MAP = {
+    'damage_bad_write': ('history', 'chain'),      # 乙 坏写入：丢 30% 事件 ⇒ 历史/变更链塌
+    'damage_bad_retrieval': ('present', 'verbatim'),   # 丙 坏检索：打乱+截断 ⇒ 现值/依据塌
+    'damage_bad_present': ('verbatim',),           # 丁 坏呈现：剥来源字段 ⇒ 依据轴塌
+}
+MIN_DAMAGE_DROP = 0.10   # 破坏臂相对正常臂在映射指标上至少下降这么多
+MIN_SEPARATION = 0.05    # 三条破坏臂两两可分的下限（指纹向量的 L∞ 距离）
+
+
+def is_damage_arm(arm: str) -> bool:
+    return arm in DAMAGE_ARMS or arm.startswith('damage_')
 SUT_ORDER = ('lingshu', 'mem0', 'memos', 'hindsight', 'openviking', 'bm25')
 
 # 最小样本量守卫：不足即判据不过（防「n=1 也算过」）
@@ -49,6 +78,12 @@ MIN_PRESENT_N = 20       # 版本盲臂现值问（有取值）的分母下限
 #   结构基线（语料侧瞎猜期望）。
 MIN_SUT_SHORT = 0.30     # 被测臂短链桶主指标绝对下界
 MIN_SUT_MARGIN = 0.10    # 短链桶须比结构基线（_structural_baseline 的 short）高出的幅度
+# ★ 效度门 ③ 的**方向判据**（issue #20）：旧实现每档允许回升固定 0.05、且「非全等」的
+#   容差只有 1e-6 ⇒ 短/中/长 0.859→0.902→0.931 逐桶**上升**的臂四条门全过。
+#   现在：相邻档的回升不得超过**抽样噪声**（按各桶样本量算 95% 置信限），
+#   且首尾必须真实下降至少 MIN_DROP——只拦「没有一步上升超过固定值」不再算退化。
+MIN_DROP = 0.05          # 首尾桶之间必须真实下降的幅度
+Z95 = 1.96               # 95% 置信限
 
 _WORD = re.compile(r'[\W_]+', re.UNICODE)
 
@@ -140,6 +175,23 @@ def value_correct(a: dict, key: dict) -> bool:
     return False
 
 
+def null_answer_ok(a: dict, key: dict) -> bool:
+    """答案为 null（该主体**已退役／从未存在**）的题怎么判（issue #28）。
+
+    旧实现把这类题从现值/历史/滞后/超前四个分母里**一律剔除**——于是「退役后照报旧值」
+    的臂与满分臂逐位相同，滞后混淆率看不见「主体已退役」这一类。现在：
+    答 null **且状态判对**才算对；报出任何取值都算错（现值/历史各计一次错）。
+    """
+    return eq(a.get('value'), None) and eq(a.get('state'), key['answer'].get('state'))
+
+
+def value_ok(a: dict, key: dict) -> bool:
+    """现值/历史的单题判对：答案为 null 时走 `null_answer_ok`，否则走 `value_correct`。"""
+    if key['answer'].get('value') is None:
+        return null_answer_ok(a, key)
+    return value_correct(a, key)
+
+
 def want_changes(key: dict) -> list[dict]:
     """题面要的「每一次变更前后的值」＝**前后值都有值**的转移。
 
@@ -178,13 +230,38 @@ def chain_rows_hit(a: dict, key: dict) -> tuple[int, int]:
     return hit, len(want)
 
 
-def chain_complete(a: dict, key: dict) -> bool:
-    """变更链完整率：want 的每一次「值→值」变更都能在答卷 chain 里找到同 seq 同前后值。
+def _chain_seq_scope(key: dict) -> set:
+    """**本链**的合法序号集合＝`answer.chain` 里的事件序号。
 
-    答卷多列的行（create / retire / restore）不扣分——多列不是缺环。
+    已核对：56 道变更题上，`answer.chain` 的序号集与 synth_log 中同
+    (doc, subject, slot) 链的 seqs **完全一致**（含 create／retire／restore 行）。
+    """
+    return {str(r.get('seq')) for r in (key['answer'].get('chain') or [])
+            if isinstance(r, dict)}
+
+
+def chain_extra_rows(a: dict, key: dict) -> int:
+    """答卷里**不属于本链**的变更行数（issue #24）。
+
+    `seq` 在文档内唯一，故「别的主体／别的槽位」的行永远撞不上本题的 `want`——
+    旧实现只查召回、不罚多列，于是一个不认主体、不认槽位的答卷把整篇文档所有
+    「值→值」行一股脑列上也能判「链完整」（实测中位 115 行 vs 应列 5.5 行）。
+    """
+    allowed = _chain_seq_scope(key)
+    return sum(1 for g in _chain_items(a) if str(g.get('seq')) not in allowed)
+
+
+def chain_complete(a: dict, key: dict) -> bool:
+    """变更链完整率：want 的每一次「值→值」变更都能在答卷 chain 里找到同 seq 同前后值，
+    **且答卷没有多列不属于本链的行**。
+
+    答卷多列**本链**的行（create / retire / restore）不扣分——多列不是缺环
+    （这正是原注释的本意，旧实现却对任意多列行都不扣分，见 issue #24）。
     """
     want = want_changes(key)
     if not want:
+        return False
+    if chain_extra_rows(a, key) > 0:
         return False
     got = _chain_items(a)
     for w in want:
@@ -345,35 +422,57 @@ def judge_arm(arm: str, keys: list[dict], doc_norms: dict, decoys: dict) -> dict
         pairs.append((k, a))
     n = len(pairs)
 
-    def has_value(k) -> bool:
-        """现值/历史问只统计**存在取值**的题：答案为 null（已退役/不存在）的题里，
-        答 null 是无内容的平凡匹配，会把闭卷/空答臂的分数虚高（自检实测空答臂会因此
-        拿到 0.24 现值分）。故这两类指标的分母剔除 null 答案题。"""
-        return k['answer']['value'] is not None
-
     def rate(xs):
         return round(sum(1 for x in xs if x) / len(xs), 4) if xs else 0.0
 
-    present = [value_correct(a, k) for k, a in pairs
-               if k['type'] == '现值' and has_value(k)]
-    history = [value_correct(a, k) for k, a in pairs
-               if k['type'] == '历史' and has_value(k)]
+    # ★ issue #28：现值/历史/滞后/超前的分母**不再剔除**答案为 null 的退役题——
+    #   剔除等于让「退役后照报旧值」的臂与满分臂读数逐位相同。空答臂不会因此白拿分：
+    #   null 答案题要求「答 null **且**状态判对」，空答的 state 是 null ≠ 'retired'。
+    # ★ issue #27：作答异常时运行器会写一份**全空占位卷**（`_error`），解析失败则打
+    #   `_json_ok=False`——旧实现只按「答卷文件在不在」判完整性，40% 题调用失败的臂
+    #   照样算「同源且完整」进 readings。现在逐题统计，`judge_arms` 据此剔除整臂。
+    error_qids = [k['qid'] for k, a in pairs
+                  if a.get('_error') or a.get('_json_ok') is False]
+    present = [value_ok(a, k) for k, a in pairs if k['type'] == '现值']
+    history = [value_ok(a, k) for k, a in pairs if k['type'] == '历史']
     chain = [chain_complete(a, k) for k, a in pairs if k['type'] == '变更']
     chain_rows = [chain_rows_hit(a, k) for k, a in pairs if k['type'] == '变更']
     chain_row_recall = (round(sum(h for h, _ in chain_rows) / sum(t for _, t in chain_rows), 4)
                         if chain_rows and sum(t for _, t in chain_rows) else 0.0)
-    stale = [stale_confused(a, k) for k, a in pairs
-             if k['type'] == '现值' and has_value(k)]
+    # ★ issue #24：多列不罚会把「整篇列出、不认主体」的答卷读成满分——补精度读数：
+    #   所列行中**属于本链**的占比（空答无行 ⇒ 0.0，与其余读数同口径）。
+    chain_lists = [(chain_extra_rows(a, k), len(_chain_items(a)))
+                   for k, a in pairs if k['type'] == '变更']
+    _rows = sum(t for _, t in chain_lists)
+    chain_precision = (round(1.0 - sum(e for e, _ in chain_lists) / _rows, 4)
+                       if _rows else 0.0)
+    stale = [stale_confused(a, k) for k, a in pairs if k['type'] == '现值']
     # ★ 2026-10-10 复核整改·甲-9：future 分母也须用 has_value 过滤——旧实现把答案为
     #   null 的历史/时点问（如退役点）也计入分母，而 null 答案的题在 future_confused 里
     #   恒返回 False（v 为空），只会**稀释**超前混淆率，偏离「用了取样点之后才生效的值
     #   的比例」这一声明口径。现值/历史已用 has_value，这里对齐。
     future = [future_confused(a, k) for k, a in pairs
-              if k['type'] in ('历史', '时点') and has_value(k)]
+              if k['type'] in ('历史', '时点')]
     subj = [subject_confused(a, k, decoys) for k, a in pairs
             if k['interference'] in ('同名异体', '嵌套主体')]
-    four = [eq(a.get('state'), k['answer']['state']) for k, a in pairs
-            if k['type'] == '状态归属']
+    # ★ 四态分项（issue #21）：按**真值态**分组，逐项给率与 n。合并数保留，
+    #   但报告须附多数类基线——合并数被 active 主导（103/197），区分不了「退役」与「不存在」。
+    st_pairs = [(k, a) for k, a in pairs if k['type'] == '状态归属']
+    four = [eq(a.get('state'), k['answer']['state']) for k, a in st_pairs]
+    four_by = {s: [eq(a.get('state'), k['answer']['state'])
+                   for k, a in st_pairs if k['answer']['state'] == s] for s in FOUR_STATES}
+    # ★ 时点指标（issue #21）：预注册要求「时点定位误差（报绝对分布＋方向：答早/答晚）」，
+    #   旧实现里 63 道时点问只进超前混淆的分母，答对答错都不计分。
+    tp_pairs = [(k, a) for k, a in pairs if k['type'] == '时点']
+    timepoint = [value_correct(a, k) and eq(a.get('state'), k['answer']['state'])
+                 for k, a in tp_pairs]
+    # 方向只统计**答错时点**的题（答对时序号相同，不计入「答早/答晚」分母）
+    tp_early = tp_late = []
+    for k, a in tp_pairs:
+        want, got = k['answer'].get('at_seq'), a.get('at_seq')
+        if want is None or not isinstance(got, (int, float)) or got == want:
+            continue
+        (tp_early if got < want else tp_late).append(True)
     reason = [value_correct(a, k) for k, a in pairs if k['type'] == '缘由']
     verb = [verbatim_ok(a, _material_of(arm, k['qid'])) for k, a in pairs]
 
@@ -388,13 +487,30 @@ def judge_arm(arm: str, keys: list[dict], doc_norms: dict, decoys: dict) -> dict
         bmain_n[b] = bmain_n.get(b, 0) + 1
     bucket_main = {b: round(bmain[b] / bmain_n[b], 4) for b in bmain_n if bmain_n[b]}
     counts = dict(present=len(present), history=len(history), chain=len(chain),
-                  chain_row_recall=len(chain_rows), stale=len(stale), future=len(future),
+                  chain_row_recall=len(chain_rows), chain_precision=len(chain_lists),
+                  stale=len(stale), future=len(future),
                   subject_confusion=len(subj), four_state=len(four), reason=len(reason),
-                  verbatim=len(verb))
-    return dict(arm=arm, present=rate(present), history=rate(history), chain=rate(chain),
+                  verbatim=len(verb),
+                  **{f'four_state_{s}': len(four_by[s]) for s in FOUR_STATES},
+                  timepoint=len(timepoint),
+                  timepoint_early=len(tp_early), timepoint_late=len(tp_late))
+    # 四态多数类基线（诊断：合并数被它主导，见 issue #21）
+    n_st = len(st_pairs)
+    four_majority = (round(max(len(four_by[s]) for s in FOUR_STATES) / n_st, 4)
+                     if n_st else 0.0)
+    return dict(arm=arm, n_error=len(error_qids), error_qids=error_qids[:5],
+                present=rate(present), history=rate(history), chain=rate(chain),
                 chain_row_recall=chain_row_recall,
+                chain_precision=chain_precision,
                 stale=rate(stale), future=rate(future),
                 subject_confusion=rate(subj), four_state=rate(four),
+                four_state_majority=four_majority,
+                **{f'four_state_{s}': rate(four_by[s]) for s in FOUR_STATES},
+                timepoint=rate(timepoint),
+                timepoint_early=(round(len(tp_early) / (len(tp_early) + len(tp_late)), 4)
+                                 if (tp_early or tp_late) else 0.0),
+                timepoint_late=(round(len(tp_late) / (len(tp_early) + len(tp_late)), 4)
+                                if (tp_early or tp_late) else 0.0),
                 reason=rate(reason), verbatim=rate(verb), n=n,
                 counts=counts, bucket_main=bucket_main, bucket_main_n=bmain_n)
 
@@ -425,6 +541,7 @@ def judge_arms(arms: list[str], write: bool = True) -> list[dict]:
         row['keys_fp'] = m.get('keys_fp')
         row['n_expected'] = n_expected
         row['sampled'] = bool(m.get('calib_sample'))
+        row['manifest_errors'] = m.get('errors')
         reasons = []
         if not m:
             reasons.append('无 manifest.json（无法核对同源）')
@@ -432,6 +549,13 @@ def judge_arms(arms: list[str], write: bool = True) -> list[dict]:
             reasons.append(f"keys 指纹不符（manifest={m.get('keys_fp')} vs 当前={fp}）")
         if (m.get('limit') or 0) > 0:
             reasons.append(f"答卷为 --limit {m.get('limit')} 的截断冒烟，非整臂读数")
+        # ★ issue #27：带 _error / _json_ok=False 的**占位卷**不是正常答卷
+        if row.get('n_error'):
+            reasons.append(f"作答/解析失败 {row['n_error']} 题（占位卷，非正常答卷；"
+                           f"如 {row.get('error_qids')}）")
+        elif isinstance(m.get('errors'), int) and m.get('errors') > 0:
+            reasons.append(f"manifest.errors={m['errors']} 但答卷里没有失败标记"
+                           f"（分片并发会互相覆盖 manifest，须以答卷为准）")
         # 缺题：只统计非可推题，故分母也用非可推题数（n_expected）
         if m.get('keys_fp') == fp and row['n'] < n_expected:
             reasons.append(f"答卷缺题（{row['n']}/{n_expected} 非可推题）")
@@ -484,20 +608,95 @@ def _structural_baseline(keys: list[dict]) -> dict:
     return {b: round(sum(v) / len(v), 4) for b, v in buckets.items() if v}
 
 
-def _nonincreasing(seq: list[float], tol: float = 0.05) -> bool:
-    return all(seq[i] >= seq[i + 1] - tol for i in range(len(seq) - 1))
+def _pair_tol(p1: float, p2: float, n1: int, n2: int, z: float = Z95) -> float:
+    """相邻两桶允许的**回升**上限 = 两比例差的标准误 × 1.96（抽样噪声）。
+
+    ★ issue #20：旧实现用固定 0.05，不随桶样本量变化——long 桶只有 29 题，
+      同一容差对三个桶的意义并不一样。改为按各桶 n 算 95% 置信限。
+    """
+    def se(p: float, n: int) -> float:
+        return math.sqrt(max(p * (1.0 - p), 1e-12) / max(n, 1))
+    return z * math.sqrt(se(p1, n1) ** 2 + se(p2, n2) ** 2)
+
+
+def _nonincreasing(seq: list[float], ns: list[int] | None = None,
+                   tol: float = 0.05, z: float = Z95) -> bool:
+    """链长单调退化（相邻档不得显著回升）。
+
+    给了各桶样本量 `ns` ⇒ 容差按抽样误差算；未给（兼容旧调用）⇒ 退回固定 `tol`。
+    """
+    if len(seq) < 2:
+        return True
+    for i in range(len(seq) - 1):
+        lim = (_pair_tol(seq[i], seq[i + 1], ns[i], ns[i + 1], z)
+               if ns and len(ns) == len(seq) else tol)
+        if seq[i] < seq[i + 1] - lim:
+            return False
+    return True
 
 
 def _all_equal(seq: list[float], tol: float = 1e-6) -> bool:
     return (max(seq) - min(seq)) <= tol
 
 
+def _damage_criterion(by: dict, sut_arm: str | None,
+                      suts: list[dict]) -> tuple[bool | None, str, dict]:
+    """预注册的 ②「破坏方向」：乙/丙/丁 三条破坏臂在映射指标上显著下降，且**两两可分**。
+
+    ★ issue #26：这条判据此前根本没实现（判分器把预注册第 2 条换成了「读数自洽」），
+    于是不跑任何破坏臂也能「四条全过」。现在：
+      · 一条破坏臂都没跑 ⇒ 返回 None（未评），调用方据此把 passed 置 False、
+        gate_stage 标为 `no-damage-arms`；
+      · 只跑了部分 ⇒ False（缺臂）；
+      · 三条齐备 ⇒ 每条在其映射指标上相对正常臂下降 ≥ MIN_DAMAGE_DROP，
+        且三条臂的读数指纹两两 L∞ 距离 ≥ MIN_SEPARATION。
+    """
+    got = sorted(a for a in by if is_damage_arm(a))
+    base_name = sut_arm or (suts[0]['arm'] if suts else None)
+    if not got:
+        return (None,
+                '未评：本轮读数里没有破坏臂（乙/丙/丁）——预注册第 2 条无法评，'
+                'passed 不得为 True（须先跑 probe_runner --damage）', {})
+    missing = [a for a in DAMAGE_ARMS if a not in by]
+    if base_name is None or base_name not in by:
+        return (False, f'不过：有破坏臂 {got} 但没有可比的正常臂读数', {})
+    base = by[base_name]
+    detail: dict[str, dict] = {}
+    all_ok = not missing
+    for a in got:
+        r = by[a]
+        need = DAMAGE_MAP.get(a, ())
+        drops = {f: round(float(base.get(f, 0.0) or 0.0) - float(r.get(f, 0.0) or 0.0), 4)
+                 for f in need}
+        okc = bool(need) and all(d >= MIN_DAMAGE_DROP for d in drops.values())
+        detail[a] = dict(required=list(need), drops=drops, ok=okc)
+        all_ok = all_ok and okc
+    fps = {a: tuple(round(float(by[a].get(f, 0.0) or 0.0), 4) for f in METRIC_FIELDS)
+           for a in got}
+    names = sorted(fps)
+    seps = {}
+    for i in range(len(names)):
+        for j in range(i + 1, len(names)):
+            seps[f'{names[i]} vs {names[j]}'] = round(
+                max(abs(x - y) for x, y in zip(fps[names[i]], fps[names[j]])), 4)
+    sep_ok = bool(seps) and all(v >= MIN_SEPARATION for v in seps.values())
+    ok_all = bool(all_ok and sep_ok)
+    reason = ('；'.join(f'{a} 在 {detail[a]["required"]} 上下降 {detail[a]["drops"]}'
+                        f'（{"合格" if detail[a]["ok"] else "不合格"}）' for a in got)
+              + (f'；缺臂 {missing}' if missing else '')
+              + f'；两两可分 {seps}（要求 ≥ {MIN_SEPARATION}）'
+              + f' ⇒ {"过" if ok_all else "不过"}')
+    return ok_all, reason, detail
+
+
 def calibration(readings: list[dict], limit: int = 0, sut_arm: str | None = None,
                 control_arms: tuple = CONTROL_ARMS) -> dict:
-    """校准零号四条判据（全过才 passed）。
+    """校准零号判据（全过才 passed）。
 
     ① 版本盲指纹（现值≈正常、历史/变更→0）＋现值分母 ≥ MIN_PRESENT_N；
-    ② 闭卷核心（各 ≤0.2）＋答题量 ≥ MIN_ARM_N；
+    ② 破坏方向（乙/丙/丁 在映射指标上显著下降，且三臂两两可分）——
+       ★ issue #26：这条是 README §6 预注册的第 2 条，旧实现根本没跑破坏臂，
+       却把「四条全过」照发。现在没有破坏臂读数即「未评」，passed=False；
     ③ **被测系统臂**的主指标随链长单调退化（≥2 个桶、每桶 ≥ MIN_BUCKET_N）
        **且短链桶达绝对水平下界、且显著高于结构基线**（防常数猜测器蒙过，见 MIN_SUT_SHORT）；
        本轮读数里若**没有被测系统臂**（只跑了 versionblind/closed 两个对照臂），
@@ -523,24 +722,36 @@ def calibration(readings: list[dict], limit: int = 0, sut_arm: str | None = None
         and cb['chain'] <= 0.2 and cb_n >= MIN_ARM_N
 
     # ③ 只认被测系统臂的读数（对照臂与语料结构都不算）
+    # ★ issue #25：③ 是「压力轴是否有效」的判据，属题库性质，旧实现却只评
+    #   SUT_ORDER 排第一的臂（lingshu）——首轮 bm25／Hindsight 都不单调，代码仍判 c3=True，
+    #   与手写校准记录「③ 不合格」相反。现在**逐臂**评，再按预注册口径汇总（全部满足）。
+    suts = [r for r in readings
+            if r['arm'] not in control_arms and not is_damage_arm(r['arm'])]
+    suts.sort(key=lambda r: (SUT_ORDER.index(r['arm']) if r['arm'] in SUT_ORDER
+                             else len(SUT_ORDER), r['arm']))
     if sut_arm is not None:
+        # 显式指定 ⇒ 只评这一条（保留单臂诊断能力），但**不**据此宣布全门通过
         sut = by.get(sut_arm)
+        eval_suts = [sut] if sut else []
     else:
-        suts = [r for r in readings if r['arm'] not in control_arms]
-        suts.sort(key=lambda r: (SUT_ORDER.index(r['arm']) if r['arm'] in SUT_ORDER
-                                 else len(SUT_ORDER), r['arm']))
         sut = suts[0] if suts else None
+        eval_suts = suts
     struct = _structural_baseline(keys)          # 语料结构基线（诊断 + ③ 的下界参照）
-    if sut is None:
-        c3 = None
-        c3_reason = '未评：本轮读数只有对照臂（versionblind/closed），链长压力轴无被测对象'
-        sut_buckets = {}
-    else:
-        bm = sut.get('bucket_main') or {}
-        bn = sut.get('bucket_main_n') or {}
-        order = [b for b in ('short', 'mid', 'long') if b in bm and bn.get(b, 0) >= MIN_BUCKET_N]
+    c3_by_arm: dict[str, dict] = {}
+
+    def _eval_c3(r: dict) -> tuple[bool, str]:
+        """对**一条**被测臂评 ③，返回 (是否满足, 理由)。"""
+        bm = r.get('bucket_main') or {}
+        bn = r.get('bucket_main_n') or {}
+        order = [b for b in ('short', 'mid', 'long')
+                 if b in bm and bn.get(b, 0) >= MIN_BUCKET_N]
         seq = [bm[b] for b in order]
-        monotone = bool(len(seq) >= 2 and _nonincreasing(seq) and not _all_equal(seq))
+        ns = [bn[b] for b in order]
+        # ★ 方向判据（issue #20）：容差按各桶样本量算抽样噪声，且首尾须真实下降。
+        #   旧实现每档允许回升固定 0.05 ⇒ 逐桶**上升**的臂（0.859/0.902/0.931）也能过门。
+        mono = bool(len(seq) >= 2 and _nonincreasing(seq, ns) and not _all_equal(seq))
+        drop = (seq[0] - seq[-1]) if len(seq) >= 2 else 0.0
+        drop_ok = bool(len(seq) >= 2 and drop >= MIN_DROP)
         # ★ 绝对水平下界：单调性**单独**不够——语料结构本身随链长单调（短链取值少），
         #   一个只会瞎猜（恒输出最高频答案值）的坏系统也能「非增且非全等」。故还须
         #   短链桶既达 MIN_SUT_SHORT，又显著高于结构基线（MIN_SUT_MARGIN）。
@@ -549,20 +760,47 @@ def calibration(readings: list[dict], limit: int = 0, sut_arm: str | None = None
         floor_ok = short_rate is not None and short_rate >= MIN_SUT_SHORT
         margin_ok = (short_rate is not None and base_short is not None
                      and short_rate >= base_short + MIN_SUT_MARGIN)
-        c3 = bool(monotone and floor_ok and margin_ok)
-        sut_buckets = {b: {'rate': bm.get(b), 'n': bn.get(b)} for b in bm}
-        if c3:
-            c3_reason = (f'被测臂 {sut["arm"]} 桶 {order}＝{seq}，'
-                         f'短链 {short_rate} ≥ 下界 {MIN_SUT_SHORT} 且 ≥ 结构基线 '
-                         f'{base_short}+{MIN_SUT_MARGIN}')
-        elif not monotone:
-            c3_reason = (f'被测臂 {sut["arm"]} 桶不满足单调退化（可用桶 {order}，值 {seq}）')
+        okc = bool(mono and drop_ok and floor_ok and margin_ok)
+        if okc:
+            why = (f'桶 {order}＝{seq}（n={ns}），首尾下降 {drop:+.3f} ≥ {MIN_DROP}，'
+                   f'短链 {short_rate} ≥ 下界 {MIN_SUT_SHORT} 且 ≥ 结构基线 '
+                   f'{base_short}+{MIN_SUT_MARGIN}')
+        elif not mono:
+            why = (f'桶不满足单调退化（可用桶 {order}，值 {seq}，各桶 n={ns}，'
+                   f'容差按抽样误差算）')
+        elif not drop_ok:
+            why = (f'桶 {order}＝{seq}：首尾仅下降 {drop:+.3f}（要求 ≥ {MIN_DROP}）'
+                   f'——相邻档未见显著回升也算不上「随链长退化」')
         elif not floor_ok:
-            c3_reason = (f'被测臂 {sut["arm"]} 短链桶 {short_rate} 低于绝对下界 '
-                         f'{MIN_SUT_SHORT}（单调但绝对水平不合格，疑为常数猜测/瞎猜系统）')
+            why = (f'短链桶 {short_rate} 低于绝对下界 {MIN_SUT_SHORT}'
+                   f'（单调但绝对水平不合格，疑为常数猜测/瞎猜系统）')
         else:
-            c3_reason = (f'被测臂 {sut["arm"]} 短链桶 {short_rate} 未显著高于结构基线 '
-                         f'{base_short}（要求 ≥ +{MIN_SUT_MARGIN}）')
+            why = (f'短链桶 {short_rate} 未显著高于结构基线 {base_short}'
+                   f'（要求 ≥ +{MIN_SUT_MARGIN}）')
+        return okc, why
+
+    if not eval_suts:
+        c3 = None
+        c3_reason = '未评：本轮读数只有对照臂（versionblind/closed），链长压力轴无被测对象'
+        sut_buckets = {}
+    else:
+        for r in eval_suts:
+            okc, why = _eval_c3(r)
+            c3_by_arm[r['arm']] = dict(satisfied=okc, reason=why,
+                                       buckets=r.get('bucket_main') or {},
+                                       bucket_n=r.get('bucket_main_n') or {})
+        # 预注册汇总口径：**全部被测臂**都要满足（README 写的是「主指标随链长单调退化」，
+        # 没有「只看一条臂」的限定；若将来改判「至少 k 臂」，须在 README 预注册并写明 k）
+        c3 = bool(c3_by_arm) and all(v['satisfied'] for v in c3_by_arm.values())
+        sut_buckets = {b: {'rate': (sut.get('bucket_main') or {}).get(b),
+                           'n': (sut.get('bucket_main_n') or {}).get(b)}
+                       for b in (sut.get('bucket_main') or {})}
+        bad_arms = [a for a, v in c3_by_arm.items() if not v['satisfied']]
+        c3_reason = ('逐臂 ③：' + '；'.join(
+            f'{a} {"满足" if v["satisfied"] else "不满足"}（{v["reason"]}）'
+            for a, v in c3_by_arm.items())
+            + f' ⇒ 汇总口径「全部被测臂满足」：{"过" if c3 else "不过"}'
+            + (f'（不满足：{bad_arms}）' if bad_arms else ''))
 
     # ④ 自洽（2026-10-10 复核整改）：
     #   旧实现只把 readings 与 `judge_arm` 现算结果逐字段比对，而 readings 本来就是
@@ -596,8 +834,16 @@ def calibration(readings: list[dict], limit: int = 0, sut_arm: str | None = None
     else:
         c4_reason = '读数与答卷复算不一致（陈旧/被改写）'
 
-    passed = bool(c1 and c2 and c4 and c3 is True)
-    stage = 'full' if c3 is not None else 'controls-only'
+    # ② 破坏方向（预注册；issue #26）
+    damage_ok, damage_reason, damage_by_arm = _damage_criterion(by, sut_arm, suts)
+
+    passed = bool(c1 and c2 and c4 and c3 is True and damage_ok is True)
+    if c3 is None:
+        stage = 'controls-only'
+    elif damage_ok is None:
+        stage = 'no-damage-arms'
+    else:
+        stage = 'full'
     details = (
         f'① 版本盲指纹：现值 {vb["present"] if vb else None}（要求 ≥0.5）、'
         f'历史 {vb["history"] if vb else None}、变更链 {vb["chain"] if vb else None}'
@@ -608,19 +854,31 @@ def calibration(readings: list[dict], limit: int = 0, sut_arm: str | None = None
         f'→ {"过" if c2 else "不过"}；'
         f'③ 链长单调（**被测系统臂**）：{c3_reason}；结构基线 {struct}（仅诊断，不作判据）'
         f'→ {("过" if c3 else ("不过" if c3 is False else "未评"))}；'
-        f'④ 读数自洽：{c4_reason} → {"过" if c4 else "不过"}。'
+        f'④ 读数自洽：{c4_reason} → {"过" if c4 else "不过"}；'
+        f'② 破坏方向：{damage_reason} → '
+        f'{("过" if damage_ok else ("不过" if damage_ok is False else "未评"))}。'
         f'（本次 limit={limit or "全量"}；阶段={stage}；'
         f'口径：可推题不进主读数，历史叙述豁免须状态判对。）')
     return dict(version_blind=dict(present=vb['present'] if vb else 0.0,
                                    history=vb['history'] if vb else 0.0,
                                    chain=vb['chain'] if vb else 0.0),
+                c3_by_arm=c3_by_arm,
+                damage_by_arm=damage_by_arm,
+                sut_four_state=({s: (sut.get(f'four_state_{s}'),
+                                     (sut.get('counts') or {}).get(f'four_state_{s}'))
+                                 for s in FOUR_STATES} if sut else {}),
+                sut_four_state_majority=(sut or {}).get('four_state_majority'),
+                sut_timepoint=({k: (sut or {}).get(k)
+                                for k in ('timepoint', 'timepoint_early', 'timepoint_late')}
+                               if sut else {}),
                 closed_book=(round((cb['present'] + cb['history'] + cb['chain']) / 3, 4)
                              if cb else 0.0),
                 chain_length_monotonic=bool(c3 is True),
                 sut_arm=sut['arm'] if sut else None,
                 sut_buckets=sut_buckets,
                 gate_stage=stage,
-                criteria=dict(c1=bool(c1), c2=bool(c2), c3=c3, c4=bool(c4)),
+                criteria=dict(c1=bool(c1), c2=bool(c2), c3=c3, c4=bool(c4),
+                              c_damage=damage_ok),
                 passed=passed, details=details)
 
 
@@ -738,6 +996,24 @@ def selftest() -> None:
             return oracle(k)
         return empty(k)
 
+    def dmg_write(k):
+        """乙 坏写入：历史/变更全空（模拟丢 30% 事件）。"""
+        return empty(k) if k['type'] in ('历史', '变更') else good_sut(k)
+
+    def dmg_retrieval(k):
+        """丙 坏检索：现值答不出、依据轴塌（模拟检索打乱+截断）。"""
+        if k['type'] == '现值':
+            return empty(k)
+        a = dict(good_sut(k))
+        a['basis'] = []
+        return a
+
+    def dmg_present(k):
+        """丁 坏呈现：剥掉来源字段 ⇒ 依据轴塌。"""
+        a = dict(good_sut(k))
+        a['basis'] = []
+        return a
+
     def only_changes(k):
         """只列「值→值」变更的系统（变更链粒度回归用）。"""
         if k['type'] == '变更':
@@ -754,6 +1030,33 @@ def selftest() -> None:
 
     def const_sut(k):
         return dict(value=_mode, state='active', at_seq=None, chain=[], basis=[])
+
+    # ★ issue #20：逐桶**缓升**的臂——短/中/长每档上升都不超过旧容差 0.05，
+    #   但方向与预注册的「随链长单调退化」**相反**。旧判据（固定 tol + 非全等）会放行。
+    _mainq = {}
+    for k in keys:
+        if not k['reconstructible'] and _main_ok(k, oracle(k)) is not None:
+            _mainq.setdefault(_bucket(k['chain_len']), []).append(k['qid'])
+    _want = {'short': 0.86, 'mid': 0.90, 'long': 0.94}
+    _right = {q for b, qs in _mainq.items() for q in qs[:round(_want[b] * len(qs))]}
+
+    def rising_sut(k):
+        return oracle(k) if k['qid'] in _right else empty(k)
+
+    # ★ issue #24：不认主体、不认槽位——把本文档**所有链**的「值→值」行全列上
+    _by_doc = {}
+    for k in keys:
+        _by_doc.setdefault(k['doc'], []).append(k)
+
+    def dump_sut(k):
+        if k['type'] != '变更':
+            return empty(k)
+        rows = []
+        for k2 in _by_doc[k['doc']]:
+            for r in (k2['answer'].get('chain') or []):
+                if r.get('from') is not None and r.get('to') is not None:
+                    rows.append({'seq': r['seq'], 'from': r['from'], 'to': r['to']})
+        return dict(value=None, state=None, at_seq=None, chain=rows, basis=[])
 
     def fake(name, fn):
         d = RUNS / f'chain_{name}' / 'sut' / 'out'
@@ -774,7 +1077,9 @@ def selftest() -> None:
                        ensure_ascii=False), encoding='utf-8')
 
     names = ['selftest_oracle', 'selftest_empty', 'selftest_vb', 'selftest_changes',
-             'selftest_bad', 'selftest_good', 'selftest_const']
+             'selftest_bad', 'selftest_good', 'selftest_const', 'selftest_rising',
+             'selftest_dump', 'damage_bad_write', 'damage_bad_retrieval',
+             'damage_bad_present']
     fake('selftest_oracle', oracle)
     fake('selftest_empty', empty)
     fake('selftest_vb', vb_fake)
@@ -782,6 +1087,11 @@ def selftest() -> None:
     fake('selftest_bad', bad_sut)
     fake('selftest_good', good_sut)
     fake('selftest_const', const_sut)
+    fake('selftest_rising', rising_sut)
+    fake('selftest_dump', dump_sut)
+    fake('damage_bad_write', dmg_write)
+    fake('damage_bad_retrieval', dmg_retrieval)
+    fake('damage_bad_present', dmg_present)
     try:
         rows = {r['arm']: r for r in judge_arms(names, write=False)}
         o = rows['selftest_oracle']
@@ -813,9 +1123,12 @@ def selftest() -> None:
                f'(sut={bad["sut_arm"]}, buckets={bad["sut_buckets"]})')
         good = calibration([v, e, rows['selftest_good']], sut_arm='selftest_good',
                            control_arms=ctl)
-        _check('③ 可满足：好系统（短链对/长链错）→ ③ 过、四条全过',
-               good['chain_length_monotonic'] is True and good['passed'] is True,
-               f'(sut={good["sut_arm"]}, buckets={good["sut_buckets"]})')
+        _check('③ 可满足：好系统（短链对/长链错）→ ③ 过；但无破坏臂 ⇒ ② 未评、passed=False',
+               good['chain_length_monotonic'] is True and good['passed'] is False
+               and good['criteria']['c_damage'] is None
+               and good['gate_stage'] == 'no-damage-arms',
+               f'(sut={good["sut_arm"]}, buckets={good["sut_buckets"]}, '
+               f'stage={good["gate_stage"]})')
         # 仅对照臂（工作流 calibrate 现状）→ ③ 不可评、明确报「未评」，且不宣布过门
         only_ctl = calibration([v, e], control_arms=ctl)
         _check('③ 不可评：只有对照臂 → c3=None / gate_stage=controls-only / passed=False',
@@ -836,6 +1149,70 @@ def selftest() -> None:
         _check('③ 可失败：常数猜测器（桶率随链长单调但水平极低）→ 不过',
                cst['chain_length_monotonic'] is False and cst['passed'] is False,
                f'(buckets={cst["sut_buckets"]})')
+        # ★ issue #24：整篇列出（不认主体/槽位）不得判「链完整」
+        dp = rows['selftest_dump']
+        _check('变更链：整篇列出别链的行 → chain 判不过、精度读数低',
+               dp['chain'] < 0.2 and dp['chain_precision'] < 0.6
+               and dp['chain_row_recall'] == 1.0
+               and o['chain'] == 1.0 and o['chain_precision'] == 1.0,
+               f'(dump chain={dp["chain"]}, precision={dp["chain_precision"]}；'
+               f'oracle chain={o["chain"]}, precision={o["chain_precision"]})')
+        # ★ issue #20：逐桶缓升（每档 < 0.05）必须让 ③ 失败——方向与预注册相反
+        rs = rows['selftest_rising']
+        rst = calibration([v, e, rs], sut_arm='selftest_rising', control_arms=ctl)
+        _bm = [rs['bucket_main'].get(b) for b in ('short', 'mid', 'long')
+               if rs['bucket_main'].get(b) is not None]
+        _check('③ 可失败：逐桶缓升（每档 <0.05，方向相反）→ 不过',
+               rst['chain_length_monotonic'] is False and rst['passed'] is False,
+               f'(buckets={_bm})')
+        # ★ issue #21：四态必须**分项**报；常数 active 臂的 retired/unresolved/absent 须为 0
+        cs2 = rows['selftest_const']
+        _check('四态分项：常数 active 臂的 retired/unresolved/absent 全 0（合并数非零）',
+               cs2['four_state_retired'] == 0.0 and cs2['four_state_unresolved'] == 0.0
+               and cs2['four_state_absent'] == 0.0
+               and cs2['four_state_active'] == 1.0
+               and cs2['counts']['four_state'] > 0,
+               f'(active={cs2["four_state_active"]}, retired={cs2["four_state_retired"]}, '
+               f'unresolved={cs2["four_state_unresolved"]}, absent={cs2["four_state_absent"]}, '
+               f'合并={cs2["four_state"]}，多数类基线={cs2["four_state_majority"]})')
+        oo = rows['selftest_oracle']
+        _check('时点指标：oracle 的 timepoint=1.0，且早晚方向分母为 0（全对）',
+               oo['timepoint'] == 1.0 and oo['counts']['timepoint'] > 0
+               and oo['timepoint_early'] == 0.0 and oo['timepoint_late'] == 0.0,
+               f'(timepoint={oo["timepoint"]}, n={oo["counts"]["timepoint"]})')
+        # ★ issue #25：③ 须**逐臂**评，不得只评 SUT_ORDER 排第一的臂
+        multi = calibration([v, e, rows['selftest_good'], rs], control_arms=ctl)
+        _check('③ 逐臂评：一条单调臂 + 一条缓升臂 ⇒ c3 不过，且逐臂结论入 c3_by_arm',
+               multi['criteria']['c3'] is False
+               and set(multi['c3_by_arm']) == {'selftest_good', 'selftest_rising'}
+               and multi['c3_by_arm']['selftest_good']['satisfied'] is True
+               and multi['c3_by_arm']['selftest_rising']['satisfied'] is False,
+               f'(c3={multi["criteria"]["c3"]}, by_arm={ {a: x["satisfied"] for a, x in multi["c3_by_arm"].items()} })')
+        one = calibration([v, e, rows['selftest_good'], rs], sut_arm='selftest_good',
+                          control_arms=ctl)
+        _check('③ 显式指定单臂 ⇒ 只评该臂（诊断用），逐臂表也只含该臂',
+               one['criteria']['c3'] is True
+               and set(one['c3_by_arm']) == {'selftest_good'})
+        # ★ issue #26：② 破坏方向——三条破坏臂齐备且方向正确 ⇒ passed 才可能为 True
+        dmg = [rows['damage_bad_write'], rows['damage_bad_retrieval'],
+               rows['damage_bad_present']]
+        dmg_ok = calibration([v, e, rows['selftest_good']] + dmg,
+                             sut_arm='selftest_good', control_arms=ctl)
+        _check('② 可满足：乙/丙/丁 三条破坏臂方向正确且两两可分 ⇒ ② 过、passed=True',
+               dmg_ok['criteria']['c_damage'] is True and dmg_ok['passed'] is True
+               and dmg_ok['gate_stage'] == 'full',
+               f'(c_damage={dmg_ok["criteria"]["c_damage"]}, stage={dmg_ok["gate_stage"]})')
+        # 把「正常臂」换成一个全 0 的坏系统 ⇒ 破坏臂相对它并不下降 ⇒ ② 须不过
+        dmg_bad = calibration([v, e, rows['selftest_bad']] + dmg,
+                              sut_arm='selftest_bad', control_arms=ctl)
+        _check('② 可失败：破坏臂相对正常臂并未下降 ⇒ ② 不过、passed=False',
+               dmg_bad['criteria']['c_damage'] is False and dmg_bad['passed'] is False,
+               f'(drops={ {a: d["drops"] for a, d in dmg_bad["damage_by_arm"].items()} })')
+        # 只跑部分破坏臂 ⇒ 缺臂即不过
+        dmg_part = calibration([v, e, rows['selftest_good'], rows['damage_bad_present']],
+                               sut_arm='selftest_good', control_arms=ctl)
+        _check('② 可失败：破坏臂不齐（缺乙/丙）⇒ 不过（不按「跑了一条就算过」放行）',
+               dmg_part['criteria']['c_damage'] is False and dmg_part['passed'] is False)
         # ★ 甲-2：④ 独立于 judge_arm 复算——manifest 指纹不符（不同源）须让 ④ 失败
         mf = RUNS / 'chain_selftest_good' / 'manifest.json'
         bak = mf.read_text(encoding='utf-8')
