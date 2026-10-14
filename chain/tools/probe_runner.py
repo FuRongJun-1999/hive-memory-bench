@@ -55,10 +55,55 @@ for p in (str(HERE), str(HARNESS)):
     if p not in sys.path:
         sys.path.insert(0, p)
 
+import random                                                 # noqa: E402
+
 import common as C                                          # noqa: E402
 
 ARMS = ('bm25', 'lingshu', 'openviking', 'mem0', 'memos', 'hindsight',
         'versionblind', 'closed')
+
+# ★ 预注册的**破坏臂**（README §6 第 2 条「破坏方向」；issue #26：此前完全没有实现）：
+#   乙 bad_write（坏写入：随机丢 30% 事件）／丙 bad_retrieval（坏检索：打乱+截断）／
+#   丁 bad_present（坏呈现：剥来源字段）。臂名与 probe_judge.DAMAGE_ARMS 一一对应。
+DAMAGE_KINDS = ('bad_write', 'bad_retrieval', 'bad_present')
+DAMAGE_DROP_RATE = 0.30      # 乙：丢掉的事件比例
+DAMAGE_KEEP_RATE = 0.60      # 丙：打乱后保留的材料比例
+DAMAGE_SEED = 20261013       # 固定种子（可复现）
+
+
+def damage_arm_name(kind: str) -> str:
+    return f'damage_{kind}'
+
+
+def damage_chapters(chapters: list[dict], kind: str,
+                    seed: int = DAMAGE_SEED) -> list[dict]:
+    """乙 坏写入：按固定种子随机丢弃 30% 的语料块（模拟事件没写进去）。
+
+    ★ 这是**纯函数**（输入→输出，无副作用），故可在无 LLM 的环境里单测；
+      端到端跑破坏臂仍需要被测系统可用（见 README §6）。
+    """
+    if kind != 'bad_write':
+        return list(chapters)
+    rnd = random.Random(seed)
+    keep = [c for c in chapters if rnd.random() >= DAMAGE_DROP_RATE]
+    return keep or list(chapters)
+
+
+def damage_material(material: list[dict], kind: str,
+                    seed: int = DAMAGE_SEED) -> list[dict]:
+    """丙 坏检索：打乱材料顺序并只留 60%；丁 坏呈现：剥掉 cid/score（来源字段）。
+
+    纯函数，理由同 `damage_chapters`。
+    """
+    if kind == 'bad_retrieval':
+        rnd = random.Random(seed)
+        out = [dict(m) for m in material]
+        rnd.shuffle(out)
+        n = max(1, int(len(out) * DAMAGE_KEEP_RATE))
+        return out[:n]
+    if kind == 'bad_present':
+        return [{k: v for k, v in m.items() if k == 'text'} for m in material]
+    return [dict(m) for m in material]
 IDENTITY = 'chain'
 K = 6                     # 常规问型的 top-k 块数
 MATERIAL_CHARS = 14000    # 常规问型的材料字数上限
@@ -273,8 +318,13 @@ def make_adapter(arm: str):
 
 
 # ---------------- ingest ----------------
-def do_ingest(arm: str, d: Path, limit: int) -> dict:
+def do_ingest(arm: str, d: Path, limit: int, damage: str = '') -> dict:
     chapters = versionblind_corpus() if arm == 'versionblind' else load_corpus()
+    if damage:                                   # ★ 乙：坏写入（丢 30% 语料块）
+        before = len(chapters)
+        chapters = damage_chapters(chapters, damage)
+        log(f'  [damage={damage}] 语料块 {before} → {len(chapters)}'
+            f'（丢 {100 * (1 - len(chapters) / max(before, 1)):.0f}%）')
     if limit:
         docs = sorted({c['doc'] for c in chapters})
         # --limit 在 ingest 阶段按 doc 截断无意义，这里只做整体提示；题量截断在 ask 阶段
@@ -297,7 +347,9 @@ def do_ingest(arm: str, d: Path, limit: int) -> dict:
             st = ad.ingest(chapters)
         if closer:
             closer()
-    manifest = dict(arm=arm, identity=IDENTITY, phase='ingest', dir=str(d),
+    manifest = dict(arm=(damage_arm_name(damage) if damage else arm),
+                    identity=IDENTITY, phase='ingest', dir=str(d),
+                    base_arm=arm, damage=damage,
                     n_chapters=len(chapters),
                     chars=sum(len(c['text']) for c in chapters),
                     ingest=st, generator=C.GEN_MODEL,
@@ -320,13 +372,14 @@ def build_prompt(qid: str, question: str, material: list[dict]) -> list[dict]:
 
 
 def build_closed_prompt(qid: str, question: str) -> list[dict]:
-    sys_ = ('你是被评测的记忆理解系统。本题**不提供任何材料**——请凭你自己的知识作答。\n'
-            '只输出一个 JSON（不要任何其他内容）：{"qid":"...", "value":null, '
-            '"state":"absent", "at_seq":null, "chain":[], "basis":[], '
-            '"confidence":"unknown"}')
-    user = (f'## 问题（{qid}）\n\n{question}\n\n'
-            f'（注意：本题不提供任何材料。）\n请按契约输出 JSON（qid 填 {qid}）。')
-    return [{'role': 'system', 'content': sys_}, {'role': 'user', 'content': user}]
+    """闭卷臂的提问：**与正常臂同一份输出契约**，只是材料为空。
+
+    ★ issue #30：旧实现把答案模板逐字写进提示词（`"value":null, "state":"absent"`），
+    闭卷臂照抄模板即可在「答案为 null」的题上白拿分——首轮报告里 closed 臂的四态
+    0.512 与版本盲臂 0.508 几乎相同（照抄模板应得 ≈ 0.512，正好是「absent 在四态里的
+    占比」），这是**照着答案模板抄**，不是「闭卷能猜」。现在只给空材料，不给任何字段取值。
+    """
+    return build_prompt(qid, question, [])
 
 
 def parse_chain_answer(raw: str, qid: str) -> dict:
@@ -388,7 +441,8 @@ def shard_keys(keys: list[dict], shard: tuple[int, int] | None) -> list[dict]:
     return [k for idx, k in enumerate(keys) if idx % n == i]
 
 
-def do_ask(arm: str, d: Path, limit: int, shard: tuple[int, int] | None = None) -> dict:
+def do_ask(arm: str, d: Path, limit: int, shard: tuple[int, int] | None = None,
+           damage: str = '') -> dict:
     keys_all = load_keys()
     keys = shard_keys(keys_all, shard)
     if limit:
@@ -430,9 +484,11 @@ def do_ask(arm: str, d: Path, limit: int, shard: tuple[int, int] | None = None) 
                 used += len(t)
                 if used >= cap:
                     break
+            if damage:                           # ★ 丙/丁：坏检索 / 坏呈现
+                material = damage_material(material, damage)
             write_json(d / 'retrieval' / f'{qid}.json',
                        {'qid': qid, 'query': q['question'], 'k': k,
-                        'material_chars_cap': cap,
+                        'material_chars_cap': cap, 'damage': damage,
                         'hits_returned': len(hits), 'hits': hits, 'material': material})
             prompt = (build_closed_prompt(qid, q['question']) if arm == 'closed'
                       else build_prompt(qid, q['question'], material))
@@ -452,7 +508,9 @@ def do_ask(arm: str, d: Path, limit: int, shard: tuple[int, int] | None = None) 
                         'chain': [], 'basis': [], 'confidence': 'unknown',
                         '_error': f'{type(e).__name__}: {e}'})
             log(f'  [{i}/{len(keys)}] {qid} 失败：{type(e).__name__}: {str(e)[:120]}')
-    manifest = dict(arm=arm, identity=IDENTITY, phase='ask', dir=str(d),
+    manifest = dict(arm=(damage_arm_name(damage) if damage else arm),
+                    identity=IDENTITY, phase='ask', dir=str(d),
+                    base_arm=arm, damage=damage,
                     n_questions=len(keys), ok=ok, errors=err,
                     llm_calls=llm.calls, llm_tokens=llm.tokens,
                     generator=C.GEN_MODEL, k=K, material_chars_cap=MATERIAL_CHARS,
@@ -475,6 +533,16 @@ def do_calibrate(arms: list[str], limit: int, shard: tuple[int, int] | None = No
         d = run_dir(arm)
         do_ingest(arm, d, limit)
         do_ask(arm, d, limit, shard)
+    # ★ 破坏臂（乙/丙/丁）不是独立系统，而是**对同一个被测系统的三种破坏**：
+    #   以第一条被测系统臂为基底各跑一次，臂名 damage_<kind>（见 README §6 第 2 条）。
+    base = next((a for a in arms if a not in ('versionblind', 'closed')), None)
+    if base:
+        for kind in DAMAGE_KINDS:
+            name = damage_arm_name(kind)
+            log(f'=== calibrate · 破坏臂 {name}（基底 {base}）===')
+            dd = run_dir(name)
+            do_ingest(base, dd, limit, damage=kind)
+            do_ask(base, dd, limit, shard, damage=kind)
     import probe_judge
     readings = probe_judge.judge_arms(arms)
     calib = probe_judge.calibration(readings, limit=limit)
@@ -552,6 +620,9 @@ def main() -> None:
     ap.add_argument('--arm', default='',
                     help='臂名（逗号分隔；calibrate 缺省=versionblind,closed）')
     ap.add_argument('--limit', type=int, default=0, help='只跑前 N 题（0=全部）')
+    ap.add_argument('--damage', default='', choices=('',) + DAMAGE_KINDS,
+                    help='以 --arm 为基底跑**破坏臂**（乙 bad_write／丙 bad_retrieval／'
+                         '丁 bad_present）；臂名写作 damage_<kind>，供效度门 ② 使用')
     ap.add_argument('--shard', default='', help='分片 i/n（如 0/4；按 keys.json 下标取模）')
     ap.add_argument('--selftest-shard', action='store_true',
                     help='分片机械自检（不调 LLM，不写答卷）：交集空、并集=全集')
@@ -574,6 +645,8 @@ def main() -> None:
     shard = parse_shard(a.shard)
 
     if a.phase == 'calibrate':
+        if a.damage:
+            raise SystemExit('--damage 只配 --phase ingest|ask（calibrate 会自动跑三条破坏臂）')
         arms = ([x.strip() for x in a.arm.split(',') if x.strip()] if a.arm
                 else ['versionblind', 'closed'])
         for x in arms:
@@ -584,11 +657,11 @@ def main() -> None:
 
     if not a.arm or a.arm not in ARMS:
         raise SystemExit(f'--arm 必填且须为 {ARMS} 之一')
-    d = run_dir(a.arm)
+    d = run_dir(damage_arm_name(a.damage) if a.damage else a.arm)
     if a.phase == 'ingest':
-        do_ingest(a.arm, d, a.limit)
+        do_ingest(a.arm, d, a.limit, damage=a.damage)
     else:
-        do_ask(a.arm, d, a.limit, shard)
+        do_ask(a.arm, d, a.limit, shard, damage=a.damage)
 
 
 if __name__ == '__main__':

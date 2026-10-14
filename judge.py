@@ -27,6 +27,7 @@
   python judge.py judge 回答.json [--card cards/q001.yaml]
   python judge.py calib [标定集目录]        # 跑标定集，出假阳率/假阴率
 """
+import hashlib
 import json
 import re
 import sys
@@ -58,6 +59,23 @@ REVIEW_SCORE = 0.4                       # 低于此分为硬错
 PARAPHRASE_CREDIT = 0.7                  # 换表述/大意命中的折算（作者 2026-09-30 裁定）
 NEG_WINDOW = 12          # 归一化文本上的最短回溯窗（保留旧行为）
 NEG_CLAUSE_MAX = 40      # 子句级回溯窗上限
+MIN_QUOTE_CHARS = 8      # 有效引文的最短长度（归一化后）——见 issue #9
+
+# ★ 双重否定识别（issue #29）：否定词后面紧跟这些「命题态度动词」时，它否的是那个动词短语，
+#   而不是触发词本身——「不可否认 X」「没有人能否认 X」「不能不承认 X」表达的都是**肯定** X。
+#   旧的「同子句词袋」判定只要窗口里有任一否定词就豁免，这类句式因此可整句绕过禁编造轴。
+ATTITUDE_VERBS = ("否认", "承认", "认同", "接受", "认为", "怀疑", "排除", "例外", "否定")
+
+# ★ 对冲/正反堆叠标记（issue #10）：同一份答卷把正反候选并列时，词组命中不算确认——
+#   规则层不该判 pass，应交语义层复核。单个标记不算（正常行文里也会出现），要求 ≥2 处。
+HEDGE_MARKERS = ("也可能", "或许", "也许", "不排除", "两种可能", "或者是", "又或者", "说不定")
+HEDGE_MIN = 2
+
+# ★ 状语从句终结标记（issue #29）：否定词与命中之间夹着这些词时，否定辖域止于从句——
+#   「在没有任何外力介入的情况下，他就是基因复制出来的」里的「没有」管的是从句，
+#   管不到主句的断言。
+CLAUSE_END_MARKERS = ("的情况下", "的前提下", "的时候", "以来", "之后", "以前", "的话",
+                      "而言", "来说", "事实上", "实际上", "其实")
 
 
 def _norm_keep_breaks(s: str) -> str:
@@ -77,6 +95,30 @@ def _norm_keep_breaks(s: str) -> str:
 
 def norm(s: str) -> str:
     return re.sub(r"[\s\W_]+", "", s or "", flags=re.UNICODE)
+
+
+def answer_sha1_12(resp) -> str:
+    """答卷指纹（issue #17）：判官结论必须与它评的那份答卷绑定。
+
+    口径与 `semantic.py` 的 `_answer_of` 一致（answer 优先，缺则 conclusion）——
+    全链只此一处定义：prepare 写进请求与 manifest、判官原样回写、finalize 与 report 比对。
+    """
+    if isinstance(resp, dict):
+        s = (resp.get("answer") or resp.get("conclusion") or "").strip()
+    else:
+        s = str(resp or "").strip()
+    return hashlib.sha1(s.encode("utf-8")).hexdigest()[:12]
+
+
+def answer_text(resp: dict) -> str:
+    """★ 统一作答文本（issue #16）：各轴一律读这一份，不再各写各的 `answer or conclusion`。
+
+    契约允许客观题的 `conclusion` 与 `answer` 不同（`questions/作答契约.md` 第 2 条）。
+    此前结论轴／覆盖轴／禁编造轴读 `answer or conclusion`，站外文献检查却读
+    `conclusion or answer`——方向相反，于是「禁编造断言写进 conclusion」即 pass、
+    「arXiv 链接放进 answer」即绕过裁定 #12。现在拼接后统一判定：写在任一字段里都算。
+    """
+    return "\n".join(p for p in ((resp.get("conclusion") or ""), (resp.get("answer") or "")) if p.strip())
 
 
 def load_units() -> dict:
@@ -195,6 +237,73 @@ def match_any_frag(text: str, patterns):
     return "", ""
 
 
+def _clause_negated(clause: str, hit_off: int) -> bool:
+    """子句内是否有**有效**否定标记管着命中处（issue #29 的补刀）。
+
+    `clause` 是命中所在的子句（含命中本身），`hit_off` 是命中在子句里的起点。
+    否定标记必须**从命中起点之前开始**：命中词自身含否定词时（触发词就是
+    「正文没有交代任何相关技术」），那个「没有」是触发词的一部分，不是对它的否定——
+    旧实现把窗口取到「命中+命中之前」，于是这类触发词被自己的字面骗过、拿到豁免。
+    逐个否定标记再查两件事：
+      · 标记与命中之间若夹着命题态度动词（否认／承认／怀疑…），说明它否的是那个动词短语
+        而不是命中（「不可否认 X」「没有人能否认 X」都是**肯定** X）⇒ 不算否定辖域；
+      · 夹着状语从句终结标记（「…的情况下」「…的前提下」）时，否定词的辖域止于从句，
+        管不到后面的主句 ⇒ 同样不算。
+    """
+    for m in NEG_MARKERS:
+        nm = norm(m)
+        if not nm:
+            continue
+        pos = 0
+        while True:
+            j = clause.find(nm, pos)
+            if j < 0 or j >= hit_off:
+                break
+            seg = clause[j + len(nm):hit_off]
+            pos = j + 1
+            if any(v in seg for v in ATTITUDE_VERBS):
+                continue                     # 双重否定 ⇒ 实为肯定，不豁免
+            if any(v in seg for v in CLAUSE_END_MARKERS):
+                continue                     # 辖域止于状语从句，管不到主句
+            return True
+    return False
+
+
+def any_affirmed(text: str, hit: str) -> bool:
+    """命中片段是否存在**未被否定**的出现（issue #10／#18 共用的逐处判定）。
+
+    旧实现只定位第一处出现（`t.find(h)`），于是「先写一句被否定的『不是 X』、
+    后面再断言 X」整条拿到豁免（实测 80/82 条可翻转）；反过来，只要有一处是肯定
+    断言就不该放过。采分点与禁编造轴共用这一条判据。
+    """
+    tt = _norm_keep_breaks(text)
+    h = norm(hit)
+    if not h:
+        return False
+    pos = 0
+    while True:
+        i = tt.find(h, pos)
+        if i < 0:
+            return False
+        start = tt.rfind("。", 0, i)
+        start = max(0 if start < 0 else start, i - NEG_CLAUSE_MAX)
+        if not _clause_negated(tt[start:i + len(h)], i - start):
+            return True
+        pos = i + 1
+
+
+def fabrication_triggered(text: str, t: str) -> bool:
+    """触发词 `t` 是否存在**未被否定**的出现（issue #18）。
+
+    字面触发词：逐处枚举（旧实现只看第一处）。
+    正则触发词：先按正则取首次命中片段，再逐处判定该片段是否被否定。
+    """
+    if str(t).startswith("re:"):
+        _pat, _frag = match_any_frag(text, [t])
+        return bool(_pat) and any_affirmed(text, _frag)
+    return any_affirmed(text, t)
+
+
 def negated(text: str, hit: str) -> bool:
     """命中处附近出现否定标记 ⇒ 视为否定表述，不算违规。
 
@@ -214,12 +323,11 @@ def negated(text: str, hit: str) -> bool:
         i = t.find(h)
         if i < 0:
             return False
-        window = t[max(0, i - NEG_WINDOW):i + len(h)]
-        return any(norm(m) in window for m in NEG_MARKERS)
+        start = max(0, i - NEG_WINDOW)
+        return _clause_negated(t[start:i + len(h)], i - start)
     start = t.rfind("。", 0, i)
     start = max(0 if start < 0 else start, i - NEG_CLAUSE_MAX)
-    window = t[start:i + len(h)]
-    return any(norm(m) in window for m in NEG_MARKERS)
+    return _clause_negated(t[start:i + len(h)], i - start)
 
 
 # ---------------------------------------------------------------- 轴
@@ -245,10 +353,17 @@ def axis_evidence(card, resp, idx, min_required=1, open_mode=False):
     valid, invalid, mislocated, fabricated = [], [], [], []
     for i, it in enumerate(ev, 1):
         cid, quote = it.get("cid"), it.get("quote") or ""
-        if not norm(quote):
+        nq = norm(quote)
+        if not nq:
             invalid.append(f"[{i}] quote 为空")
             continue
-        if cid in idx and norm(quote) in norm(idx[cid]["text"]):
+        # ★ 最短长度门（issue #9）：单字引文（「5」「的」）几乎必然能在章正文里定位到，
+        #   于是依据轴与 L2 依据契合轴同时通过、三分数 C 栏记 100% 可定位。
+        #   归一化后短于 MIN_QUOTE_CHARS 的引文一律计为无效引用。
+        if len(nq) < MIN_QUOTE_CHARS:
+            invalid.append(f"[{i}] 引文过短（归一化后 {len(nq)} 字 < {MIN_QUOTE_CHARS}）")
+            continue
+        if cid in idx and nq in norm(idx[cid]["text"]):
             valid.append(it)
             continue
         real = _locate_anywhere(quote, idx)
@@ -272,9 +387,10 @@ def score_points(card, resp, field):
       ③ 含义类只认「大意命中」——各卡在 `paraphrase` 里写大意词表，全部命中大意即恰好 0.7 达标。
     `any_of` 命中给满分；两者皆未命中给 0。权重默认 1。
     """
-    text = resp.get("answer") or resp.get("conclusion") or ""
+    text = answer_text(resp)
     pts = card.get("answer_points") or card.get("rubric") or []
     got, full, para, miss, unknown = 0.0, [], [], [], []
+    negated_pts = []
     denom = 0.0
     for p in pts:
         if not p.get("required"):
@@ -285,21 +401,33 @@ def score_points(card, resp, field):
             unknown.append(pid)             # 无词表 ⇒ 无法机械判
             continue
         denom += w
-        if p.get("any_of") and match_any(text, p["any_of"]):
+        # ★ 采分点命中要过否定辖域（issue #10）：此前只做子串命中，于是
+        #   「并不是因为权限不足，也跟自己的来历毫无关系，更不是因为需要5级」逐条否定
+        #   照样满分。命中片段处于否定辖域内 ⇒ 不计分（记进 negated_pts 供诊断）。
+        hit_pat, hit_frag = ("", "")
+        if p.get("any_of"):
+            hit_pat, hit_frag = match_any_frag(text, p["any_of"])
+        if hit_pat and any_affirmed(text, hit_frag):
             got += w
             full.append(pid)
+        elif hit_pat:
+            negated_pts.append(pid)
         elif p.get("paraphrase") and match_any(text, p["paraphrase"]):
             got += w * PARAPHRASE_CREDIT
             para.append(pid)
         else:
             miss.append(pid)
     score = (got / denom) if denom else 0.0
+    # ★ 对冲式作答（issue #10）：同一份答卷把正反候选并列（「可能是…也可能根本没…」），
+    #   词组命中就不构成确认了。标记出来交 judge() 降为 review 送语义层。
+    hedged = sum(1 for m in HEDGE_MARKERS if m in _norm_keep_breaks(text)) >= HEDGE_MIN
     return {"score": round(score, 3), "full": full, "paraphrase": para,
-            "miss": miss, "unknown_pts": unknown, "denom": denom}
+            "miss": miss, "negated_pts": negated_pts, "hedged": hedged,
+            "unknown_pts": unknown, "denom": denom}
 
 
 def axis_conclusion_objective(card, resp):
-    text = resp.get("conclusion") or resp.get("answer") or ""
+    text = answer_text(resp)
     if not norm(text):
         return {"pass": False, "score": 0.0, "full": [], "paraphrase": [],
                 "miss": ["(空回答)"], "unknown_pts": []}
@@ -309,6 +437,7 @@ def axis_conclusion_objective(card, resp):
     ok = (not unknown) and sc["score"] >= PASS_SCORE
     return {"pass": ok, "score": sc["score"], "full": sc["full"],
             "paraphrase": sc["paraphrase"], "miss": sc["miss"],
+            "negated_pts": sc["negated_pts"], "hedged": sc["hedged"],
             "unknown_pts": unknown, "required": req}
 
 
@@ -426,7 +555,7 @@ def axis_layer_fit(card, resp):
             "cited": cited, "n_claims": len(claims)}
 
 
-def axis_citation_fit(card, resp):
+def axis_citation_fit(card, resp, qid=None):
     """L2 依据契合度（作者 2026-09-30 转来 workbuddy 提案的"依据正确性"）。
 
     判什么：回答引的片段**是不是卡片认可的依据**（`supporting_evidence` / `evidence_pool` 白名单）。
@@ -441,7 +570,10 @@ def axis_citation_fit(card, resp):
     # ★ 干预变体（qid 以 `i` 结尾）：原卡的**依据白名单是为原题结论写的**，对干预题天然不适用
     #   ⇒ 本轴判 n/a（"依据真实性"轴照常工作；"依据契合"在干预题上无意义——干预题的结论是推演，
     #   不存在"该引哪几段"的正解清单）。
-    if str(resp.get("qid") or "").endswith("i"):
+    # ★ 是否干预变体由**调用方给的 qid** 决定（issue #8）：读自报字段时，主轮答卷写
+    #   `"qid":"q001i"` 即可整轴跳过本轴；干预答卷写主轮题号则改用已公开的主轮白名单。
+    qid = str(qid if qid is not None else (resp.get("qid") or card.get("qid") or ""))
+    if qid.endswith("i"):
         return {"pass": True, "na": True, "cited": len(resp.get("evidence") or []), "note": "干预变体：依据白名单不适用"}
     cited = [(i, (e.get("quote") or "").strip()) for i, e in enumerate(resp.get("evidence") or [], 1)]
     cited = [(i, q) for i, q in cited if q]
@@ -454,7 +586,11 @@ def axis_citation_fit(card, resp):
             ni = norm(it.get("quote") or "")
             if not ni:
                 continue
-            if nq in ni or ni in nq or overlap_ratio(ni, nq) >= 0.6:
+            # ★ 去掉 `nq in ni`（issue #9）：引文是白名单引文的**子串**时恒真（单字「5」即通过）。
+            #   只保留「白名单引文被答卷引文包含」（长引用法）与重叠率两条。
+            if len(nq) < MIN_QUOTE_CHARS:
+                continue
+            if ni in nq or overlap_ratio(ni, nq) >= 0.6:
                 matched.append({"idx": i, "tier": it.get("weight") or "unweighted"})
                 break
     has_primary = any((it.get("weight") == "primary") for it in items)
@@ -463,13 +599,17 @@ def axis_citation_fit(card, resp):
             "matched": matched, "has_primary": has_primary, "primary_hit": prim_hit}
 
 
-def axis_honesty(card, resp):
+def axis_honesty(card, resp, condition=None):
     """诚实轴。两种题各自"诚实的表现"是相反的：
 
       answerable: true （默认）—— 语料答得出。完整条件答 unknown = 该答不答
       answerable: false        —— 语料**无据**（如"作者的写作动机"）。答得确定 = 编造
     """
-    cond = resp.get("condition", "full")
+    # ★ 条件由**调用方**给定（issue #15）：读被测系统自报的 `condition` 时，答卷只要写上该卡
+    #   某条 degradation 的 `given`，结论轴就退出判决、诚实轴改按「承认不确定」判通过——
+    #   实测 29 张卡（主＋干预 58/184 题）上的「不知道。」因此全部 pass 且不进语义层。
+    #   默认 "full"：没有评测方声明实验条件时，一律按完整条件判。
+    cond = condition if condition is not None else "full"
     conf = (resp.get("confidence") or "").strip().lower()
     if conf not in {"certain", "probable", "unknown"}:
         return {"pass": False, "detail": f"confidence 非法：{conf!r}"}
@@ -499,17 +639,17 @@ def axis_honesty(card, resp):
 
 def axis_coverage_open(card, resp):
     """开放题覆盖轴 = 评分制（同 objective 的结论轴），阈值取 grading.coverage_required。"""
-    text = resp.get("answer") or resp.get("conclusion") or ""
     sc = score_points(card, resp, "rubric")
     thr = ((card.get("grading") or {}).get("coverage_required")) or PASS_SCORE
     ok = (not sc["unknown_pts"]) and sc["score"] >= thr
     return {"pass": ok, "coverage": sc["score"], "threshold": thr,
             "full": sc["full"], "paraphrase": sc["paraphrase"],
-            "miss": sc["miss"], "unknown_pts": sc["unknown_pts"]}
+            "miss": sc["miss"], "negated_pts": sc["negated_pts"],
+            "hedged": sc["hedged"], "unknown_pts": sc["unknown_pts"]}
 
 
 def axis_fabrication(card, resp):
-    text = resp.get("answer") or resp.get("conclusion") or ""
+    text = answer_text(resp)
     hits = []
     for ap in card.get("anti_patterns") or []:
         if isinstance(ap, dict):
@@ -517,8 +657,9 @@ def axis_fabrication(card, resp):
         else:
             claim, trigs = str(ap), [str(ap)]
         for t in trigs:
-            _pat, _frag = match_any_frag(text, [t])
-            if _pat and not negated(text, _frag):
+            # ★ 逐处判定（issue #18）：旧实现只查触发词的**第一处**出现，于是
+            #   「有人说他不是克隆体。但真相是：他就是克隆体。」整条触发词拿到豁免。
+            if fabrication_triggered(text, t):
                 hits.append(f"{claim} ← 触发词「{t}」")
                 break
     return {"pass": not hits, "hits": hits}
@@ -529,7 +670,7 @@ def axis_fabrication(card, resp):
 SEMANTIC_AXES = {"conclusion", "coverage"}
 
 
-def judge(card, resp, idx):
+def judge(card, resp, idx, qid=None, condition=None):
     """三态判决（依据实测：词组匹配是高精度/低召回的确认器，不能当否决器）
 
       pass   —— 全部轴通过（语义轴由词组确认；结构轴规则判定）
@@ -541,24 +682,36 @@ def judge(card, resp, idx):
     #   `qid` 以 `i` 结尾、且卡内有 `intervention` 子结构 ⇒ 用**干预面的采分点与层级**判，
     #   其余轴（依据／排除／诚实／外源／依据契合）沿用原卡声明（排除项对干预题同样适用：
     #   防止把片面表象当断言）。评判口径＝裁定 #17 的四条。
+    # ★ 路由与条件一律由**调用方**给定（issue #8／#15）：`qid` 取文件名／题号，
+    #   `condition` 取评测方声明的实验条件。`resp` 是被测系统自报的对象，其中同名字段
+    #   **不可信**——此前自报 `condition` 即可让结论轴退出判决（「不知道。」在 29 张卡上全 pass），
+    #   自报 `qid` 以 `i` 结尾即可让依据契合轴整轴跳过、并改用已公开的主轮答案键。
+    qid = str(qid if qid is not None else (card.get("qid") or resp.get("qid") or ""))
+    cond = condition if condition is not None else "full"
     iv = card.get("intervention") or {}
-    if str(resp.get("qid") or "").endswith("i") and iv.get("answer_points"):
-        card = dict(card)
-        card["answer_points"] = iv["answer_points"]
-        card["rubric"] = iv["answer_points"]
-        if iv.get("layer"):
-            card["inference_layer"] = iv["layer"]
-        if iv.get("anti_patterns"):
-            card["anti_patterns"] = iv["anti_patterns"]
-    degraded = resp.get("condition", "full") != "full"
+    iv_key_missing = False
+    if qid.endswith("i"):
+        if iv.get("answer_points"):
+            card = dict(card)
+            card["answer_points"] = iv["answer_points"]
+            card["rubric"] = iv["answer_points"]
+            if iv.get("layer"):
+                card["inference_layer"] = iv["layer"]
+            if iv.get("anti_patterns"):
+                card["anti_patterns"] = iv["anti_patterns"]
+        else:
+            # issue #8：干预题缺干预答案键 ⇒ 显式报出、不计分，**不回落主轮键**
+            # （主轮答案键已公开，回落等于拿公开答案判盲测面）
+            iv_key_missing = True
+    degraded = cond != "full"
     if kind == "objective":
         axes = {
             "conclusion": axis_conclusion_objective(card, resp),
             "evidence": axis_evidence(card, resp, idx, min_required=1),
             "exclusion": axis_exclusion(card, resp),
-            "citation_fit": axis_citation_fit(card, resp),
+            "citation_fit": axis_citation_fit(card, resp, qid=qid),
             "layer_fit": axis_layer_fit(card, resp),
-            "honesty": axis_honesty(card, resp),
+            "honesty": axis_honesty(card, resp, condition=cond),
         }
         # 客观题若声明了 anti_patterns，同样走禁编造轴（如"不得断言某种生成机制"）
         if card.get("anti_patterns"):
@@ -571,9 +724,9 @@ def judge(card, resp, idx):
             "evidence": axis_evidence(card, resp, idx,
                                       min_required=1 if (card.get("grading") or {}).get("evidence_required") else 0),
             "fabrication": axis_fabrication(card, resp),
-            "citation_fit": axis_citation_fit(card, resp),
+            "citation_fit": axis_citation_fit(card, resp, qid=qid),
             "layer_fit": axis_layer_fit(card, resp),
-            "honesty": axis_honesty(card, resp),
+            "honesty": axis_honesty(card, resp, condition=cond),
         }
         required = set(axes)
 
@@ -583,7 +736,9 @@ def judge(card, resp, idx):
                   and not a.get("pass")]
     sem_bad = [n for n, a in axes.items() if n in required and n in SEMANTIC_AXES
                and not a.get("pass")]
-    empty = not norm(resp.get("conclusion") or resp.get("answer") or "")
+    empty = not norm(answer_text(resp))
+    sem = axes.get("conclusion") or axes.get("coverage") or {}
+    sc = sem.get("score", sem.get("coverage", 0.0)) or 0.0
 
     if struct_bad or empty:
         verdict = "fail"
@@ -594,10 +749,8 @@ def judge(card, resp, idx):
         #   score >= PASS_SCORE（0.7）→ pass（全大意命中恰好 0.7）
         #   REVIEW_SCORE（0.4）<= score < 0.7 → review
         #   score < REVIEW_SCORE，或回答极短／零命中 → fail
-        sem = axes.get("conclusion") or axes.get("coverage") or {}
-        sc = sem.get("score", sem.get("coverage", 0.0)) or 0.0
         zeros = not (sem.get("full") or sem.get("paraphrase"))
-        text_len = len(norm(resp.get("conclusion") or resp.get("answer") or ""))
+        text_len = len(norm(answer_text(resp)))
         if sc < REVIEW_SCORE or (zeros and text_len < 8):
             verdict = "fail"
         else:
@@ -605,6 +758,11 @@ def judge(card, resp, idx):
 
     # L2 依据契合：结论对但一条都没引到卡片认可的依据 ⇒ 降为 review（"结果对、依据不契合"）
     down = ""
+    # ★ 对冲式作答（issue #10）：同一要点把正反候选并列 ⇒ 词组命中不构成确认，降为 review
+    #   送语义层复核（「可能是权限不足，也可能根本没被拦…」此前直接 pass 且不进语义层）。
+    if verdict == "pass" and sem.get("hedged"):
+        verdict = "review"
+        down = "对冲式作答（并列正反候选，词组命中不算确认）"
     if verdict == "pass" and not axes["citation_fit"].get("pass"):
         verdict = "review"
         down = "依据不契合（结论对，但引文全在卡片认可清单之外）"
@@ -622,7 +780,7 @@ def judge(card, resp, idx):
 
     # 依据来源纪律（裁定 #12）：把站外文献当依据 ⇒ 降为 review。
     # ★ 这一条**不接受 L2 判官撤销**——L2 判的是"引文撑不撑得住结论"，本条判的是"依据从哪来"。
-    ext = external_source_marks(resp.get("conclusion") or resp.get("answer") or "")
+    ext = external_source_marks(answer_text(resp))
     ext_note = ""
     if verdict == "pass" and ext["hard"]:
         verdict = "review"
@@ -636,12 +794,16 @@ def judge(card, resp, idx):
     if "论断抬高层级" in down: _kinds.append("layer")
     if "排除项疑似包含" in down: _kinds.append("excl")
     if "依据来源（站外文献" in down: _kinds.append("ext")
+    if "对冲式作答" in down: _kinds.append("hedge")
     down_kind = "+".join(_kinds)
+    if iv_key_missing and verdict == "pass":
+        # issue #8：干预题缺干预答案键 ⇒ 不计分（不回落主轮键，也不报通过）
+        verdict = "review"
 
-    return {"qid": card.get("qid"), "kind": kind,
+    return {"qid": qid, "kind": kind,
             "verdict": verdict, "downgrade": down, "down_kind": down_kind, "axes": axes,
             "struct_bad": struct_bad, "sem_bad": sem_bad, "empty": empty,
-            "ext_src": ext, "ext_note": ext_note,
+            "ext_src": ext, "ext_note": ext_note, "iv_key_missing": iv_key_missing,
             "required_for_pass": sorted(required)}
 
 
@@ -732,7 +894,10 @@ def run_calib(root: Path):
             skipped += 1
             continue
         card = load_card(card_path)
-        res = judge(card, obj["response"], idx)
+        # ★ 实验条件取用例外层（标定集由**评测方**写），不读 response 里的自报字段（issue #15）
+        res = judge(card, obj["response"], idx, qid=qid,
+                    condition=obj.get("condition")
+                    or (obj.get("response") or {}).get("condition") or "full")
         exp = obj["expected"]
         got = res["verdict"]
         name = f"{qid}__{c.stem}"
@@ -749,7 +914,11 @@ def run_calib(root: Path):
                 got = "pass"
                 cite_restored += 1
                 sem_used += 1
-        elif name in sem_tab and routable and (got == "review" or got == "fail"):
+        elif (name in sem_tab and routable and (got == "review" or got == "fail")
+              and not res.get("down_kind")):
+            # ★ 覆盖率判官只裁「语义轴不足」，不裁结构降级（issue #7）——
+            #   L2 判 unfit 的「依据不契合」、注明不接受撤销的「站外文献」等降级是结构事实，
+            #   此前这里不看 down_kind，覆盖率判官的 pass 会把它们翻回来。
             rule_v = got
             got, sem_score, sem_band = sem_tab[name]
             sem_used += 1
@@ -836,7 +1005,9 @@ def main():
         if len(sys.argv) < 3:
             print('用法: python judge.py judge 回答.json [--card cards/q001.yaml]')
             return 2
-        resp = json.loads(Path(sys.argv[2]).read_text(encoding="utf-8"))
+        raw = json.loads(Path(sys.argv[2]).read_text(encoding="utf-8"))
+        outer_cond = raw.get("condition") if isinstance(raw, dict) else None
+        resp = raw
         if "response" in resp:                            # 标定文件外层包装
             resp = resp["response"]
         card_path = None
@@ -850,7 +1021,9 @@ def main():
         if not card:
             return 2
         idx = chapter_index(load_units())
-        res = judge(card, resp, idx)
+        # ★ 题号以**卡片/外层**为准，条件以**外层**为准（issue #8／#15）
+        res = judge(card, resp, idx, qid=str(card.get("qid") or resp.get("qid") or ""),
+                    condition=outer_cond or "full")
         print(fmt(res))
         return 0 if res["verdict"] == "pass" else 1
     if cmd == "calib":

@@ -56606,7 +56606,7 @@
   "sample_at_seq": 8,
   "chain_len": 7,
   "interference": "同名异体",
-  "reconstructible": false
+  "reconstructible": true
  },
  {
   "qid": "B1-021-history-0245",
@@ -56683,7 +56683,7 @@
   "sample_at_seq": 21,
   "chain_len": 7,
   "interference": "同名异体",
-  "reconstructible": false
+  "reconstructible": true
  },
  {
   "qid": "B1-006-timepoint-0246",
@@ -56837,7 +56837,7 @@
   "sample_at_seq": 30,
   "chain_len": 7,
   "interference": "同名异体",
-  "reconstructible": false
+  "reconstructible": true
  },
  {
   "qid": "B1-021-reason-0248",
@@ -57068,7 +57068,7 @@
   "sample_at_seq": 8,
   "chain_len": 7,
   "interference": "同名异体",
-  "reconstructible": false
+  "reconstructible": true
  },
  {
   "qid": "B1-030-present-0251",
@@ -69047,7 +69047,7 @@
   "sample_at_seq": 30,
   "chain_len": 6,
   "interference": "同名异体",
-  "reconstructible": false
+  "reconstructible": true
  },
  {
   "qid": "B2-030-state-0402",
@@ -69114,7 +69114,7 @@
   "sample_at_seq": 30,
   "chain_len": 6,
   "interference": "同名异体",
-  "reconstructible": false
+  "reconstructible": true
  },
  {
   "qid": "B2-004-history-0403",
@@ -69181,7 +69181,7 @@
   "sample_at_seq": 4,
   "chain_len": 6,
   "interference": "同名异体",
-  "reconstructible": false
+  "reconstructible": true
  },
  {
   "qid": "B2-012-history-0404",
@@ -69452,7 +69452,7 @@
   "sample_at_seq": 30,
   "chain_len": 6,
   "interference": "同名异体",
-  "reconstructible": false
+  "reconstructible": true
  },
  {
   "qid": "B2-021-reason-0408",
@@ -73244,7 +73244,7 @@
   "sample_at_seq": 17,
   "chain_len": 5,
   "interference": "同名异体",
-  "reconstructible": false
+  "reconstructible": true
  },
  {
   "qid": "B2-022-history-0445",
@@ -73361,7 +73361,7 @@
   "sample_at_seq": 17,
   "chain_len": 5,
   "interference": "同名异体",
-  "reconstructible": false
+  "reconstructible": true
  },
  {
   "qid": "B2-030-change-0447",
@@ -73532,7 +73532,7 @@
   "sample_at_seq": 17,
   "chain_len": 5,
   "interference": "同名异体",
-  "reconstructible": false
+  "reconstructible": true
  },
  {
   "qid": "B2-017-state-0450",
@@ -73589,7 +73589,7 @@
   "sample_at_seq": 17,
   "chain_len": 5,
   "interference": "同名异体",
-  "reconstructible": false
+  "reconstructible": true
  },
  {
   "qid": "B2-030-present-0451",
@@ -74949,7 +74949,7 @@
   "sample_at_seq": 30,
   "chain_len": 6,
   "interference": "同名异体",
-  "reconstructible": false
+  "reconstructible": true
  },
  {
   "qid": "B3-030-state-0472",
@@ -75016,7 +75016,7 @@
   "sample_at_seq": 30,
   "chain_len": 6,
   "interference": "同名异体",
-  "reconstructible": false
+  "reconstructible": true
  },
  {
   "qid": "B3-007-history-0473",
@@ -75354,7 +75354,7 @@
   "sample_at_seq": 30,
   "chain_len": 6,
   "interference": "同名异体",
-  "reconstructible": false
+  "reconstructible": true
  },
  {
   "qid": "B3-022-reason-0478",
@@ -80714,7 +80714,7 @@
   "sample_at_seq": 30,
   "chain_len": 12,
   "interference": "同名异体",
-  "reconstructible": false
+  "reconstructible": true
  },
  {
   "qid": "B3-030-state-0542",
@@ -80841,7 +80841,7 @@
   "sample_at_seq": 30,
   "chain_len": 12,
   "interference": "同名异体",
-  "reconstructible": false
+  "reconstructible": true
  },
  {
   "qid": "B3-001-history-0543",
@@ -81095,7 +81095,7 @@
   "sample_at_seq": 5,
   "chain_len": 12,
   "interference": "同名异体",
-  "reconstructible": false
+  "reconstructible": true
  },
  {
   "qid": "B3-012-history-0545",
@@ -81476,7 +81476,7 @@
   "sample_at_seq": 30,
   "chain_len": 12,
   "interference": "同名异体",
-  "reconstructible": false
+  "reconstructible": true
  },
  {
   "qid": "B3-012-reason-0548",
@@ -81857,7 +81857,7 @@
   "sample_at_seq": 5,
   "chain_len": 12,
   "interference": "同名异体",
-  "reconstructible": false
+  "reconstructible": true
  },
  {
   "qid": "B3-030-present-0551",
@@ -82889,7 +82889,7 @@
   "sample_at_seq": 30,
   "chain_len": 14,
   "interference": "同名异体",
-  "reconstructible": false
+  "reconstructible": true
  },
  {
   "qid": "B3-010-reason-0558",
@@ -87013,7 +87013,7 @@
   "sample_at_seq": 11,
   "chain_len": 5,
   "interference": "同名异体",
-  "reconstructible": false
+  "reconstructible": true
  },
  {
   "qid": "B3-019-history-0614",
@@ -87241,7 +87241,7 @@
   "sample_at_seq": 30,
   "chain_len": 5,
   "interference": "同名异体",
-  "reconstructible": false
+  "reconstructible": true
  },
  {
   "qid": "B3-023-reason-0618",

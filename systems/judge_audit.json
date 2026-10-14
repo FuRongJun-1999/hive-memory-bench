@@ -31,8 +31,13 @@
    "agreement": {
     "source": "not_recorded"
    },
-   "report_mode": "可报值",
-   "status": "pass"
+   "report_mode": "只报序",
+   "status": "pass",
+   "report_mode_legacy": "可报值",
+   "reclassified": {
+    "by": "judge_audit.py（issue #13 补丁）",
+    "why": "未登记一致率 ⇒ 至多只报序（一致率是「可报值」的必要条件）"
+   }
   },
   "毛选轮": {
    "round": "毛选轮",
@@ -65,8 +70,13 @@
     "source": "recorded",
     "note": "完全相同 60–90%／跨档 0–6.7%（见 docs/多语料复现_v1.0.md §四）"
    },
-   "report_mode": "可报值",
-   "status": "pass"
+   "report_mode": "只报序",
+   "status": "pass",
+   "report_mode_legacy": "可报值",
+   "reclassified": {
+    "by": "judge_audit.py（issue #13 补丁）",
+    "why": "登记一致率按下限取值（同分 0.6）⇒ 只报序；与明细模式同口径"
+   }
   }
  }
 }

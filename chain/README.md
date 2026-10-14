@@ -96,15 +96,36 @@
 - 外部复核工具：[`tools/verify_keys.py`](tools/verify_keys.py)（只读三个数据文件，
   机械核验答案键与日志一致、语料无当前值泄漏）。
 
-## 6 校准零号 · 四条通过判据（预注册）
+## 6 校准零号 · 通过判据（预注册）
 
-沿用《秤》§6 校准零号纪律，**四条全过才进主轮**：
+沿用《秤》§6 校准零号纪律，**全部通过才进主轮**：
 
-1. **版本盲臂指纹**：`versionblind`（只留每条链最新值、丢弃全部历史）在**现值正确率**上 ≈ 正常臂，
-   在**历史召回率／变更链完整率**上 **→ 0**；
-2. **破坏方向**：`乙/丙/丁`（坏写入／坏检索／坏呈现）的下降方向与预注册映射表一致，且**两两可分**；
-3. **闭卷门**：`closed` 臂在核心指标上 **≈ 0**（否则题目可猜，须重造）；
-4. **链长单调性**：主指标随链长增大 **单调退化**（否则压力轴无效）。
+| # | 预注册判据 | 实现位置 | 未评时的行为 |
+|:--|:--|:--|:--|
+| ① | **版本盲臂指纹**：`versionblind`（只留每条链最新值、丢弃全部历史）在**现值正确率**上 ≈ 正常臂，在**历史召回率／变更链完整率**上 **→ 0** | `probe_judge.calibration` → `c1` | 记「不过」 |
+| ② | **破坏方向**：`乙/丙/丁`（坏写入／坏检索／坏呈现）的下降方向与预注册映射表一致，且**两两可分** | `probe_judge._damage_criterion` → `c_damage`；破坏臂由 `probe_runner --damage` 产出 | **`c_damage=None`（未评）⇒ `passed=False`、`gate_stage='no-damage-arms'`** |
+| ③ | **闭卷门**：`closed` 臂在核心指标上 **≈ 0**（否则题目可猜，须重造） | `calibration` → `c2` | 记「不过」 |
+| ④ | **链长单调性**：主指标随链长增大 **单调退化**（否则压力轴无效） | `calibration` → `c3`（**逐臂**评，汇总口径＝全部被测臂满足） | 无被测臂 ⇒ `c3=None`、`gate_stage='controls-only'` |
+| ⑤ | **读数自洽**：答卷与当前 keys 同源且完整、读数可由磁盘答卷独立复算 | `calibration` → `c4` | 记「不过」 |
+
+> **判据 ② 的现状（诚实边界）**：本判据此前**未实现**，判分器把预注册的 ② 换成了 ⑤「读数自洽」，
+> 于是不跑任何破坏臂也会宣布「全过」——首轮报告 §二 的「效度门按预注册的形状兑现」据此不成立。
+> 现已补齐代码与硬闸：**没跑破坏臂时 `passed` 恒为 false**。破坏臂需要被测系统可用才能跑：
+
+```bash
+# 以 bm25 为基底跑三条破坏臂（乙丢 30% 语料块／丙打乱+截断材料／丁剥来源字段）
+python -X utf8 chain/tools/probe_runner.py --phase ingest --arm bm25 --damage bad_write
+python -X utf8 chain/tools/probe_runner.py --phase ask    --arm bm25 --damage bad_write
+# … bad_retrieval / bad_present 同理；`--phase calibrate` 会自动补跑这三条臂
+```
+
+破坏臂的扰动是**纯函数**（`probe_runner.damage_chapters` / `damage_material`，固定种子可复现），
+故在无 LLM 的环境里也能单测；映射表与阈值在 `probe_judge.DAMAGE_MAP` / `MIN_DAMAGE_DROP` /
+`MIN_SEPARATION`。
+
+判据 ④ 的**方向**判据（issue #20）：相邻档容差按各桶样本量算 95% 置信限（不再固定 0.05），
+且首尾必须真实下降 ≥ `MIN_DROP`；判据 ④ 的**逐臂**口径（issue #25）：`calibration.json` 里
+`c3_by_arm` 逐臂给结论与理由，`criteria.c3` 取「全部被测臂满足」。
 
 ## 7 口径与政策
 
