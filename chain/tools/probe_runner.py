@@ -10,8 +10,10 @@
   全量门由跑完全部分片后的 `probe_judge.py --gate` 从合并答卷写出。
 
 口径（一句话一件）
-  · 复用现成 harness：`membench/dist/记忆系统对比_v1.0/harness/` 的 `common.py` 与
-    `adapters/*.py`（只 import，不改这些既有文件）；接线照 `run_e2e.py`。
+  · harness：优先用作者本地的完整 harness（`membench/dist/记忆系统对比_v1.0/harness/`，
+    六家真实适配器），没有则回落**随库发布**的参考 harness（`chain/harness/`：契约 ＋
+    bm25 参考实现 ＋ 五家桩）——第三方 clone 即可跑 bm25 臂（issue #35）。
+    只 import、不改这些文件；接线照 `run_e2e.py`。强制发布版：`HMB_HARNESS=repo`。
   · versionblind ＝ 自实现的「只留每条链最新值」伪记忆：写入时按 synth_log 把每条链
     折叠成一条「当前状态」记录（历史全部丢弃），检索仍用同一 BM25。
   · closed ＝ 不给任何材料作答（闭卷基线）。
@@ -50,7 +52,23 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 OUT = HERE / 'out'
 ROOT = HERE.parent.parent                                   # 仓根
-HARNESS = ROOT / 'membench' / 'dist' / '记忆系统对比_v1.0' / 'harness'
+# harness 解析（issue #35：第三方此前在 import 阶段就 ModuleNotFoundError）：
+#   · 仓内 `chain/harness/` 是**随库发布的参考 harness**（common.py ＋ 适配器契约
+#     ＋ bm25 参考实现 ＋ 五家桩）——第三方 clone 即可跑 bm25 臂，见 chain/README §8；
+#   · `membench/dist/记忆系统对比_v1.0/harness/` 是作者本地的完整 harness（六家真实
+#     适配器与题库切换，不在发布面）。
+#   默认顺序＝本地优先（作者既有行为不变）；第三方没有本地 harness 时自动回落仓内发布版。
+#   要强制用发布版：环境变量 HMB_HARNESS=repo。
+HARNESS_LOCAL = ROOT / 'membench' / 'dist' / '记忆系统对比_v1.0' / 'harness'
+HARNESS_REPO = ROOT / 'chain' / 'harness'
+HARNESS_CANDIDATES = ((HARNESS_REPO, HARNESS_LOCAL)
+                      if os.environ.get('HMB_HARNESS', '').strip().lower() == 'repo'
+                      else (HARNESS_LOCAL, HARNESS_REPO))
+HARNESS = next((p for p in HARNESS_CANDIDATES if (p / 'common.py').is_file()), None)
+if HARNESS is None:
+    raise SystemExit('找不到 harness（common.py）。已找过：\n  '
+                     + '\n  '.join(str(p) for p in HARNESS_CANDIDATES)
+                     + '\n本库已随库发布参考 harness：chain/harness/（见 chain/README §8）。')
 for p in (str(HERE), str(HARNESS)):
     if p not in sys.path:
         sys.path.insert(0, p)

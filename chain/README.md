@@ -156,13 +156,42 @@ python -X utf8 chain/tools/probe_judge.py
 > 想直接用已发布数据、不重跑生成器，把 `chain/corpus/corpus.json`、
 > `chain/keys/keys.json`、`chain/keys/synth_log.json` 复制成 `chain/tools/out/` 下同名文件即可。
 
-> **工具链依赖**：`probe_runner.py` / `probe_judge.py` 复用既有的记忆系统对比 harness
-> （`common.py` 与 `adapters/*.py`，只 import、不改），该 harness **不在本库内**
-> （各工具的路径常量仍指向该外部 harness 的相邻目录）。仅靠本库可跑的是
-> `synth.py`（生成）与 `verify_keys.py`（机械核验，已改为仓库内相对路径，开箱即用）。
-> 本轨发布的是**测评集本体（设计＋语料＋答案键＋工具链）**，跑臂所需的 harness 与各系统实例由使用者自备。
+> **工具链依赖（harness 已随库发布）**：[`harness/`](harness/) 是**随库发布的参考 harness**——
+> `common.py`（归一化／切块／固定生成器／产物根目录）、`adapters/base.py`（适配器契约）、
+> `adapters/naive_bm25.py`（参考实现，纯标准库、无外部服务），其余五家是**桩**
+> （模块 import 成功，实例化时报「未随库发布」并写明该臂需要什么服务）。
+> 故 clone 本库即可跑通 `bm25` 臂的「写入 → 检索 → 作答 → 判分」全链。
+> `probe_runner.py` 的 harness 解析顺序＝**本地完整 harness 优先 → 仓内发布版**
+> （`HMB_HARNESS=repo` 可强制用发布版）。作者本地的完整 harness（六家真实适配器、题库切换、
+> 报告生成）**不在发布面**；其余五臂与各系统实例由使用者自备，接口约定见 §9。
 
-## 9 归属
+## 9 自备适配器（跑你自己的记忆系统）
+
+接口只有四个方法，全文见 [`harness/adapters/base.py`](harness/adapters/base.py)：
+
+| 方法 | 约定 |
+|:--|:--|
+| `ingest(chapters)` | `chapters = [{"cid","title","text"}]`；返回统计 dict（如 `{"chunks": N}`） |
+| `retrieve(query, k)` | 返回 `[{"text","cid","score"}]`；**允许空列表**。`text` 必须是该系统自己吐出的原文片段，**不得由适配器代它改写或补写** |
+| `close()` | 可选，收尾时调用 |
+| `reset()` | 运行器**全流程不调用**（各臂可能共用既有库，误删代价高） |
+
+接上只有三步：
+
+```bash
+# ① 把适配器放进 chain/harness/adapters/（类名与既有桩一致即可）
+#    最快的路径是照 harness/adapters/naive_bm25.py 抄一遍（60 行）
+# ② 写入 → 作答（作答由 harness 的固定生成器完成，需环境变量 DEEPSEEK_API_KEY）
+python -X utf8 chain/tools/probe_runner.py --phase ingest --arm <你的臂>
+python -X utf8 chain/tools/probe_runner.py --phase ask    --arm <你的臂>
+# ③ 判分（纯机械，零 LLM）
+python -X utf8 chain/tools/probe_judge.py
+```
+
+**适配器不得替换固定生成器**——作答一律由 harness 的 LLM 完成，否则测的就不是记忆系统
+而是模型；这是本轨读数的前提。开箱可跑的只有 `bm25`（下限参照，也是 harness 自检）。
+
+## 10 归属
 
 本轨是《秤》v2.1 §11 实证路线**第四步「扰动＋生命周期＋对抗扩展」的生命周期件**
 （v2.1 为冻结版，新增测量维度一律走扩展轨道，读数不进认定等级）。

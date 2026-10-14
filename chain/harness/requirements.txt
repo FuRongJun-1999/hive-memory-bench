@@ -1,0 +1,5 @@
+# 随库发布的参考 harness 的最小依赖
+# 说明：评测**半侧**（synth.py / verify_keys.py / check_all.py / judge_audit.py 等）只用标准库；
+#       跑臂需要「固定生成器」作答，故需 openai SDK（DeepSeek 用 OpenAI 兼容接口）。
+#       六个适配器里只有 naive_bm25 是纯标准库；其余五家需自备服务与各自的 SDK。
+openai>=1.0

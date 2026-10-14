@@ -332,10 +332,18 @@ Mem0／MemOS／Hindsight）接到**同一台生成器**上、用同一批因果�
   拒绝写入读数记录并非零退出）；两轮历史审计记录见 [`systems/judge_audit.json`](systems/judge_audit.json)。
   自检含**定点变异用例**（人为把某判官锚正确率打到基线 +0pp，硬闸必须拒绝）：
   `python -X utf8 judge_audit.py selftest`。
+- **状态链轨的「写入 → 检索」半侧**：`chain/harness/` 是随库发布的参考 harness
+  （适配器契约 ＋ `bm25` 参考实现 ＋ 其余五家的桩），clone 即可跑——
+  `python -X utf8 chain/tools/probe_runner.py --phase ingest --arm bm25`（零 LLM、零网络）。
 
 **② 需要外部 LLM（需自备 key，非离线）**
 - 开放题的**语义层判官**（受 ① 的判官协议机械件约束：判官批先过锚自证与一致率才可报值）；
-- 被测系统的作答与生成器。
+- 被测系统的作答与生成器；
+- 状态链轨的**作答**（`chain/tools/probe_runner.py --phase ask`）：材料由适配器给，
+  作答一律由 harness 的固定生成器完成（需 `DEEPSEEK_API_KEY`）。
+  六臂里只有 `bm25` 开箱可跑，其余五家需**自备服务**——`chain/harness/adapters/` 里
+  是同名桩（实例化即报「未随库发布」并写明需要什么），接口约定见
+  [`chain/README.md`](chain/README.md) §9。
 
 **③ 人工步骤（已留痕，非机器保证）**
 - 作者裁定台账（答案键真源，见 [`docs/评测方法_v1.0.md`](docs/评测方法_v1.0.md)）；题目起草与干扰设计；语义层终裁。
