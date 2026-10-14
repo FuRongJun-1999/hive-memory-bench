@@ -28,6 +28,13 @@ REAL = ROOT / DST
 
 
 def load_sut():
+    """读被测系统作答。
+
+    ★ 路由与条件以**文件名为准**（issue #8／#15）：`sut/out/<qid>.json` 的题号由评测方定，
+      对象里的 `qid`／`condition` 是被测系统自报的，**不可信**——自报 `"qid":"q001i"`
+      可让依据契合轴整轴跳过，自报 `condition:<某条退化条件>` 可让结论轴退出判决。
+      自报值与文件名不符时打印告警（不静默改写）。
+    """
     out = {}
     for f in sorted(SUT_OUT.glob("*.json")):
         qid = f.stem
@@ -36,7 +43,12 @@ def load_sut():
         if not (J.CARDS / f"{base}.yaml").exists():
             continue
         obj = json.loads(f.read_text(encoding="utf-8"))
-        obj.setdefault("qid", qid)
+        if obj.get("qid") not in (None, qid):
+            print(f"  [WARN] {f.name}: 自报 qid={obj.get('qid')!r} 与文件名不符 ⇒ 以文件名为准（issue #8）")
+        if obj.get("condition") not in (None, "full"):
+            print(f"  [WARN] {f.name}: 自报 condition={obj.get('condition')!r} 不被采信 ⇒ 按完整条件判（issue #15）")
+        obj["qid"] = qid
+        obj["condition"] = "full"
         out[qid] = obj
     return out
 
@@ -66,7 +78,7 @@ def cmd_build():
              "response": resp}, ensure_ascii=False, indent=1), encoding="utf-8")
         base = qid[:-1] if qid.endswith("i") else qid
         card = J.load_card(J.CARDS / f"{base}.yaml")
-        res = J.judge(card, resp, idx)
+        res = J.judge(card, resp, idx, qid=qid, condition="full")
         verd[res["verdict"]] += 1
         rows.append((qid, card, res))
     print(f"=== 真系统作答：{len(rows)} 题（规则层）===")
@@ -95,12 +107,41 @@ def cmd_build():
     return 0
 
 
+def _stale_qids(answers: dict) -> set:
+    """判官结论与**当前**答卷不符的 qid 集合（issue #17）。
+
+    终裁文件（`final_<DST>.json` / `final_<DST>_cite.json`）每行带 `answer_sha1`；
+    与当前 `sut/out/<qid>.json` 的答卷指纹不符（含旧版文件根本没写指纹）即视为过期——
+    判官从没读过这份答卷，其判词不得生效。
+    """
+    stale = set()
+    for fn in (f"final_{DST}.json", f"final_{DST}_cite.json"):
+        f = J.ROOT / "semantic" / fn
+        if not f.exists():
+            continue
+        for r in json.loads(f.read_text(encoding="utf-8")):
+            qid = str(r.get("name") or "").split("__")[0]
+            if not qid or qid not in answers:
+                continue
+            ah = r.get("answer_sha1") or (r.get("sem") or {}).get("answer_sha1")
+            if ah != J.answer_sha1_12(answers[qid]):
+                stale.add(qid)
+    return stale
+
+
 def cmd_report():
     idx = J.chapter_index(J.load_units())
     answers = load_sut()
     # 判官输出按 `qid__case` 命名（real 里 case==qid），此处归一成 qid 索引
     sem = {k.split("__")[0]: v for k, v in J.load_semantic(DST).items()}
     cite = {k.split("__")[0]: v for k, v in J.load_semantic_cite(DST).items()}
+    # ★ 判官结论必须绑定**当前**答卷（issue #17）：终裁文件里的 answer_sha1 与当前答卷不符，
+    #   说明判官从没看过这份答卷（换系统／重跑后旧判词照样生效，实测 0 分答卷 → pass）。
+    #   这类判词一律不采信，该题停在规则层结论并单列「判官结论过期」。
+    expired = _stale_qids(answers)
+    if expired:
+        print(f"  [WARN] {len(expired)} 题的判官结论与当前答卷不符 ⇒ 不采信（issue #17）："
+              + ", ".join(sorted(expired)[:8]) + ("…" if len(expired) > 8 else ""))
     if not sem:
         print("提示：还没有 real 的语义层结果（先 semantic.py prepare real --select semantic 并判）")
     board = Counter()
@@ -109,9 +150,12 @@ def cmd_report():
     advisory = []
     for qid, resp in sorted(answers.items()):
         card = card_of(qid)
-        res = J.judge(card, resp, idx)
+        res = J.judge(card, resp, idx, qid=qid, condition="full")
         got, path = res["verdict"], "规则层"
-        if res.get("downgrade"):
+        if res.get("downgrade") and qid in expired:
+            # ★ 判词与当前答卷不符（issue #17）：判官没看过这份答卷，不得撤销任何降级。
+            got, path = "review", "判官结论过期（判词绑定的是另一份答卷，issue #17）"
+        elif res.get("downgrade"):
             # ★ 第二十二个实测纠错的补刀：L2 判官只对**依据轴**有裁判权，只能撤销 `cite` 类降级。
             #   此前这里不看 down_kind，于是层轴／排除轴的降级被依据判官一并撤掉（q018／q038 实测）。
             if cite.get(qid) == "fit" and res.get("down_kind") == "cite":
@@ -123,7 +167,11 @@ def cmd_report():
         _adv = (res.get("axes") or {}).get("layer_fit", {}).get("over_advisory") or []
         if _adv:
             advisory.append((qid, _adv))
-        if got in ("review", "fail") and qid in sem:
+        # ★ 覆盖率判官不得撤销结构轴降级（issue #7）：L2 判 unfit 的「依据不契合」、
+        #   注明不接受撤销的「站外文献」等降级是**结构事实**，覆盖率判官（只判要点覆盖）
+        #   的 pass 不能把它翻回来。run_calib 对此早有单独分支，report 此前漏了。
+        if (got in ("review", "fail") and qid in sem and qid not in expired
+                and not (res.get("downgrade") or res.get("ext_note"))):
             # ★ 结构事实不进语义层（对齐 judge.py 的 routable 与 semantic.py:220）：
             #   结构违规（struct_bad）与空答（empty）是**结构事实**，分数救不了——
             #   judge.py 的注释已明说、semantic.py 的 prepare 也把这类排除在外，
@@ -133,6 +181,8 @@ def cmd_report():
                 path = f"{path}（结构违规不进语义层）"
             else:
                 got, path = sem[qid][0], "覆盖率判官"
+        elif qid in expired and got in ("review", "fail"):
+            path = f"{path}（判官结论过期，不采信；issue #17）"
         board[got] += 1
         cat = card.get("category") or ("客观题·" + (card.get("qtype") or "-"))
         bycat[cat][got] += 1

@@ -28,9 +28,12 @@ def _out(root): return SEM / "out" / Path(root).name
 def _cite_req(root): return SEM / "cite_req" / Path(root).name
 def _cite_out(root): return SEM / "cite_out" / Path(root).name
 
-PROMPT_VERSION = "semantic-v0.1"
-CITE_VERSION = "cite-v0.3"          # L2 依据契合的专属判官（另一套 prompt，别跟覆盖率判官混用）
+PROMPT_VERSION = "semantic-v0.2"
+CITE_VERSION = "cite-v0.4"          # L2 依据契合的专属判官（另一套 prompt，别跟覆盖率判官混用）
                                     # ★ v0.3：加「依据来源纪律」（作者 2026-09-30 裁定 #12：站外文献不作依据）
+                                    # ★ v0.4／semantic-v0.2（issue #17）：判官输出必须原样回写
+                                    #   `answer_sha1_12`，终裁时比对——口径一改就升版是冻结面纪律。
+MIN_SPAN = 4                        # span 归一化后的最短长度（issue #11）
 FULL = 1.0          # strict 折算
 PARA = J.PARAPHRASE_CREDIT   # 0.7（作者 2026-09-30 裁定）
 
@@ -50,7 +53,10 @@ PROMPT = """你是「记忆理解评测库」的语义判官（semantic judge v0
 6. 只依据给定材料：不引用你自己的知识、不猜题外背景、不去检索原文。答案里没说的就是没说。
 
 输出：**只输出一个 JSON 对象**，不要任何其他文字、不要 markdown 代码块：
-{"qid": "...", "case": "...", "points": [{"id": "...", "verdict": "strict|paraphrase|miss", "why": "≤30字理由", "span": "答案里原样复制的片段"}], "note": "可选≤40字"}"""
+{"qid": "...", "case": "...", "answer_sha1_12": "请求文件里给出的那串，原样回写", "points": [{"id": "...", "verdict": "strict|paraphrase|miss", "why": "≤30字理由", "span": "答案里原样复制的片段"}], "note": "可选≤40字"}
+
+`answer_sha1_12` 必须与请求文件里给的值逐字一致：它把你这份判词钉死在**你实际读到的**那份答卷上，
+答卷一换，你的判词自动作废（issue #17）。"""
 
 
 PROMPT_CITE = """你是「记忆理解评测库」的**依据契合判官**（cite judge v0.1）。覆盖率判官判的是"答案有没有表达要点"，你判的是**另一回事**：答案引来的那些原文片段，到底**撑不撑得住它自己的结论**。
@@ -75,11 +81,33 @@ PROMPT_CITE = """你是「记忆理解评测库」的**依据契合判官**（ci
 6. **依据来源纪律**（作者 2026-09-30 裁定）：判断依据时**只认材料本身**。若答案把**站外文献**（现实世界的论文／期刊／研究报告／链接，例如以「Nature」「arXiv」「doi」「预印本」「某年某团队的研究」这类形式出现）当作**支撑其结论的依据**，而材料内没有对应原文支撑 ⇒ 判 `unfit`（依据来源不合规）。若材料内另有支撑、站外文献只是顺带一提或作类比 ⇒ **忽略该部分**，按材料内依据照常判，并在 `why` 里注明「含站外依据，已忽略」。理由：站外文献多为时效性理论，而本题库测的是「能否从这份材料里推出来」。
 
 输出：**只输出一个 JSON 对象**，不要任何其他文字、不要 markdown 代码块：
-{"qid": "...", "case": "...", "verdict": "fit|unfit|thin", "why": "≤30字", "evidence": "原样复制的片段"}"""
+{"qid": "...", "case": "...", "answer_sha1_12": "请求文件里给出的那串，原样回写", "verdict": "fit|unfit|thin", "why": "≤30字", "evidence": "原样复制的片段"}
+
+`answer_sha1_12` 必须与请求文件里给的值逐字一致：它把你这份判词钉死在**你实际读到的**那份答卷上，
+答卷一换，你的判词自动作废（issue #17）。"""
 
 
 def _answer_of(resp: dict) -> str:
     return (resp.get("answer") or resp.get("conclusion") or "").strip()
+
+
+def _declared_hash(path: Path) -> str:
+    """读判官输出里声明的答卷指纹（issue #17）。
+
+    取不到（文件不存在／不是 JSON／没写该字段）一律返回空串 ⇒ 视为**未绑定**，
+    与任何当前答卷都不相符——旧版判词因此不会静默生效，而是回到「待判」。
+    """
+    try:
+        raw = path.read_text(encoding="utf-8")
+    except OSError:
+        return ""
+    m = re.search(r"\{.*\}", raw, re.S)
+    if not m:
+        return ""
+    try:
+        return str((json.loads(m.group(0)) or {}).get("answer_sha1_12") or "").strip()
+    except json.JSONDecodeError:
+        return ""
 
 
 def _points_of(card: dict, qid: str = ""):
@@ -110,7 +138,11 @@ def _rule_layer(root: Path):
         if not cp.exists():
             continue
         card = J.load_card(cp)
-        out.append((c, obj, card, J.judge(card, obj["response"], idx)))
+        # ★ 题号与条件以**用例**为准（issue #8／#15），不读 response 里的自报字段
+        out.append((c, obj, card, J.judge(
+            card, obj["response"], idx, qid=qid,
+            condition=obj.get("condition")
+            or (obj.get("response") or {}).get("condition") or "full")))
     return out
 
 
@@ -153,17 +185,29 @@ def cmd_prepare_cite(root: Path):
                 "", PROMPT_CITE, "", "---", "", _cite_materials(card, obj, res), ""]
         (_cite_req(root) / f"{name}.cite.md").write_text("\n".join(body), encoding="utf-8")
         ans = _answer_of(obj["response"])
+        ah = J.answer_sha1_12(obj["response"])
+        # ★ 答卷指纹进请求文件（issue #17）：判官须原样回写，finalize 时比对。
+        (_cite_req(root) / f"{name}.cite.md").write_text(
+            (_cite_req(root) / f"{name}.cite.md").read_text(encoding="utf-8")
+            + f"\n\n---\n\n## 答卷指纹（原样回写到输出 JSON 的 answer_sha1_12）\n\n`{ah}`\n",
+            encoding="utf-8")
         manifest.append({"name": name, "qid": qid, "case": case,
                          "rule_verdict": res["verdict"], "expected": obj.get("expected"),
                          "downgrade": res.get("downgrade"),
-                         "answer_sha1_12": hashlib.sha1(ans.encode("utf-8")).hexdigest()[:12],
+                         "answer_sha1_12": ah,
                          "prompt_version": CITE_VERSION})
     mp = SEM / f"manifest_{Path(root).name}_cite.json"
     mp.write_text(json.dumps(manifest, ensure_ascii=False, indent=1), encoding="utf-8")
     oc = _cite_out(root)
-    have = {p.name for p in oc.glob("*.json")} if oc.exists() else set()
-    todo = [m["name"] for m in manifest if f"{m['name']}.json" not in have]
+    # ★ 缓存不再只看文件名（issue #17）：判官输出必须声明**当前答卷**的指纹才算数，
+    #   否则换一份答卷后判官从没见过它、旧判词照样生效（实测 0 分答卷 → pass）。
+    todo = [m["name"] for m in manifest
+            if _declared_hash(oc / f"{m['name']}.json") != m["answer_sha1_12"]]
+    stale = len(manifest) - len(todo) - sum(1 for m in manifest
+                                            if not (oc / f"{m['name']}.json").exists())
     print(f"L2 依据契合请求：{len(manifest)} 例 → semantic/cite_req/{Path(root).name}/（待判 {len(todo)}）")
+    if stale:
+        print(f"  ★ {stale} 例的既有判官输出绑定的是**别的答卷**（指纹不符）⇒ 一并重判（issue #17）")
     for n in todo:
         print(f"  - semantic/cite_req/{n}.cite.md")
     return 0
@@ -176,6 +220,7 @@ def cmd_finalize_cite(root: Path):
     manifest = json.loads(mpath.read_text(encoding="utf-8"))
     tab, rows = {}, []
     skipped_ver = 0
+    expired = 0
     for m in manifest:
         # ★ 版本绑定（冻结面纪律）：判官口径一改就升版，**旧版本的结论不得静默生效**。
         #   cite-v0.2 → v0.3 加了「依据来源纪律」，v0.2 的结论必须用当前 prompt 重判后才可用。
@@ -184,6 +229,12 @@ def cmd_finalize_cite(root: Path):
             continue
         f = _cite_out(root) / f"{m['name']}.json"
         if not f.exists():
+            continue
+        # ★ 判词必须绑定**当前**答卷（issue #17）：指纹不符 ⇒ 判官没看过这份答卷，判词作废。
+        ah_now = J.answer_sha1_12(json.loads(
+            (Path(root) / m["qid"] / f"{m['case']}.json").read_text(encoding="utf-8"))["response"])
+        if _declared_hash(f) != ah_now:
+            expired += 1
             continue
         mm = re.search(r"\{.*\}", f.read_text(encoding="utf-8"), re.S)
         jr = json.loads(mm.group(0)) if mm else {}
@@ -200,12 +251,17 @@ def cmd_finalize_cite(root: Path):
           f"{sum(1 for r in rows if r[1]=='unfit')}；证据薄弱（thin）= {sum(1 for r in rows if r[1]=='thin')}")
     if skipped_ver:
         print(f"  ★ 已跳过 {skipped_ver} 例：请求由别的判官版本生成（当前 {CITE_VERSION}）——须用当前 prompt 重判")
+    if expired:
+        print(f"  ★ 已作废 {expired} 例：判词绑定的答卷与当前答卷不符（issue #17）——须对当前答卷重判")
     out = SEM / f"final_{Path(root).name}_cite.json"
     if not rows and out.exists():
         print("  ★ 本次无有效行（版本不符或尚未判）——**不覆盖**既有结论文件；请先重判再 finalize")
         return 1
     out.write_text(
-        json.dumps([{"name": n, "cite": v, "why": w, "prompt_version": CITE_VERSION}
+        json.dumps([{"name": n, "cite": v, "why": w, "prompt_version": CITE_VERSION,
+                     "answer_sha1": J.answer_sha1_12(json.loads(
+                         (Path(root) / n.split("__")[0] / f"{n.split('__')[1]}.json")
+                         .read_text(encoding="utf-8"))["response"])}
                     for n, v, w, _ in rows], ensure_ascii=False, indent=1), encoding="utf-8")
     return 0
 
@@ -274,11 +330,14 @@ def cmd_prepare(root: Path, select: str, limit: int):
         lines.append("")
         lines.append(ans if ans else "（被测系统未给出结论/回答字段）")
         lines.append("")
+        # ★ 答卷指纹进请求文件（issue #17）：判官须原样回写，finalize 时比对。
+        ah = J.answer_sha1_12(obj["response"])
+        lines += ["", "---", "", "## 答卷指纹（原样回写到输出 JSON 的 answer_sha1_12）", "", f"`{ah}`", ""]
         (_req(root) / f"{name}.md").write_text("\n".join(lines), encoding="utf-8")
         manifest.append({
             "name": name, "qid": qid, "case": case,
             "rule_verdict": res["verdict"], "expected": obj.get("expected"),
-            "answer_sha1_12": hashlib.sha1(ans.encode("utf-8")).hexdigest()[:12],
+            "answer_sha1_12": ah,
             "prompt_version": PROMPT_VERSION,
             "points": [p.get("id") for p in pts],
             "required": [p.get("id") for p in pts if p.get("required")],
@@ -292,10 +351,17 @@ def cmd_prepare(root: Path, select: str, limit: int):
         manifest = [old[k] for k in sorted(old)]
     mp.write_text(json.dumps(manifest, ensure_ascii=False, indent=1), encoding="utf-8")
     o = _out(root)
-    have = {p.name for p in o.glob("*.json")} if o.exists() else set()
-    todo = [m["name"] for m in manifest if f"{m['name']}.json" not in have]
+    # ★ 缓存不再只看文件名（issue #17）：判官输出必须声明**当前答卷**的指纹才算数，
+    #   否则换一份答卷后判官从没见过它、旧判词照样生效（实测 0 分答卷 → pass）。
+    todo = [m["name"] for m in manifest
+            if _declared_hash(o / f"{m['name']}.json") != m["answer_sha1_12"]]
+    stale = sum(1 for m in manifest
+                if (o / f"{m['name']}.json").exists()
+                and _declared_hash(o / f"{m['name']}.json") != m["answer_sha1_12"])
     print(f"请求已生成：{len(manifest)} 例（{Path(root).name}，select={select}）→ semantic/req/{Path(root).name}/")
-    print(f"其中已有判官输出（缓存跳过）：{len(manifest) - len(todo)} 例；待判：{len(todo)} 例")
+    print(f"其中已有判官输出（指纹相符，缓存跳过）：{len(manifest) - len(todo)} 例；待判：{len(todo)} 例")
+    if stale:
+        print(f"  ★ {stale} 例的既有判官输出绑定的是**别的答卷**（指纹不符）⇒ 一并重判（issue #17）")
     for n in todo:
         print(f"  - semantic/req/{Path(root).name}/{n}.md")
     return 0 if todo else 0
@@ -313,9 +379,19 @@ def cmd_finalize(root: Path, judge_calib: bool):
         raise SystemExit("先跑 prepare（缺 manifest）")
     manifest = {m["name"]: m for m in json.loads(mpath.read_text(encoding="utf-8"))}
     rows = []
+    n_expired = 0
+    n_span_bad = 0
     for name, m in manifest.items():
         of = _out(root) / f"{name}.json"
         if not of.exists():
+            continue
+        # ★ 判词必须绑定**当前**答卷（issue #17）：指纹不符 ⇒ 判官没看过这份答卷，判词作废。
+        ah_now = J.answer_sha1_12(json.loads(
+            (Path(root) / m["qid"] / f"{m['case']}.json").read_text(encoding="utf-8"))["response"])
+        if _declared_hash(of) != ah_now:
+            n_expired += 1
+            rows.append((name, m, None,
+                         f"判官结论过期：判词绑定答卷 {_declared_hash(of) or '(未声明)'}，当前答卷 {ah_now}"))
             continue
         raw = of.read_text(encoding="utf-8")
         m2 = re.search(r"\{.*\}", raw, re.S)
@@ -339,21 +415,23 @@ def cmd_finalize(root: Path, judge_calib: bool):
             if v not in {"strict", "paraphrase", "miss"}:
                 v = "miss"
             if v != "miss":
-                ans = json.loads((Path(root) / f"{m['case']}.json").read_text(encoding="utf-8")) \
-                    if False else None
-                ok = True
-                if not span:
-                    ok = False
-                else:
-                    ok = _norm(span) in _norm(_case_answer(root, m))
+                # ★ 先归一化再判空、并加最短长度门（issue #11）：_norm 会剥掉全部标点，
+                #   于是 span=「……」「。」归一化后是空串、空串是任何串的子串 ⇒ 恒真；
+                #   单字 span（「的」）也几乎恒真。这条校验是语义层唯一的机械防线。
+                ns = _norm(span)
+                ok = bool(ns) and len(ns) >= MIN_SPAN and ns in _norm(_case_answer(root, m))
                 if not ok:
                     invalid.append(pid)
+                    n_span_bad += 1
                     v = "miss"
             verdicts[pid] = v
         got = sum(m["weights"][pid] * (FULL if v == "strict" else PARA if v == "paraphrase" else 0.0)
                   for pid, v in verdicts.items() if pid in m["required"])
         den = sum(m["weights"][pid] for pid in m["required"]) or 1.0
-        score = got / den
+        # ★ 先取整再比较（issue #12）：3×0.7 在二进制浮点下是 0.6999999999999998 < 0.7，
+        #   于是「全部大意命中」在 3/6/7 要点的卡上被判 fail（13/92 张卡），而报告里
+        #   显示的却是 round(score,3)=0.7——两层口径不一致。规则层 judge.py 早就先取整。
+        score = round(got / den, 6)
         # 判官是**终裁**：不再有"未定"。≥0.7 通过；<0.7 一律不通过；
         # 0.4–0.7 另标 partial（部分正确）——诊断用，不是第三种判决。
         if score >= J.PASS_SCORE:
@@ -363,6 +441,7 @@ def cmd_finalize(root: Path, judge_calib: bool):
         else:
             jv, band = "fail", ""
         rows.append((name, m, {"score": round(score, 3), "verdict": jv, "band": band,
+                               "answer_sha1": ah_now,
                                "strict": [k for k, v in verdicts.items() if v == "strict"],
                                "paraphrase": [k for k, v in verdicts.items() if v == "paraphrase"],
                                "miss": [k for k, v in verdicts.items() if v == "miss"],
@@ -402,6 +481,12 @@ def cmd_finalize(root: Path, judge_calib: bool):
         print(f"  精度（expected=fail 不判过）= {tn}/{len(neg)} = {tn/len(neg):.1%}" if neg else "  精度：无负例")
         print(f"  假阳 {fp} / 假阴 {fn}")
     print(f"\n一致 {n_ok} / 不一致 {n_bad} / 未定 {len(rows)-n_ok-n_bad}")
+    if n_expired:
+        print(f"  ★ 判官结论过期（判词绑定的答卷 ≠ 当前答卷）：{n_expired} 例"
+              f"——不计入终裁，须对当前答卷重判（issue #17）")
+    if n_span_bad:
+        print(f"  ★ span 机械校验作废的要点：{n_span_bad} 处"
+              f"（归一化后为空或短于 {MIN_SPAN} 字，issue #11）")
     (SEM / f"final_{Path(root).name}.json").write_text(
         json.dumps([{"name": r[0], **({"sem": r[2]} if r[2] else {"error": r[3]}),
                      "expected": r[1]["expected"], "rule_verdict": r[1]["rule_verdict"]}
