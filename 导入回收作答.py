@@ -10,7 +10,10 @@
    "qa_pairs":[…], "store":{…}}
 
 本脚本只取 `answers`（也兼容裸的逐题对象 / 对象数组），写成契约形状：
-  sut/out/<qid>.json = {"qid","conclusion","answer","evidence","confidence","claims"}
+  sut/out/<qid>.json = {"qid","conclusion","answer","evidence","confidence","claims","condition"}
+
+★ issue #19：`condition`（卡片 `degradation` 登记过的退化条件）必须一并带过——旧版 `KEEP`
+  不含它，退化条件实验的答卷经本脚本落盘后条件被丢弃，诚实轴按「正常条件」判，答卷被误杀。
 
 也吃 **Markdown 结果文件**（有的被测方直接交一份 `.md`，每段以题号起头）：
 
@@ -33,7 +36,9 @@ sys.path.insert(0, str(HERE))
 import judge as J       # noqa: E402
 
 OUT = HERE / "sut" / "out"
-KEEP = ("qid", "conclusion", "answer", "evidence", "confidence", "claims")
+# ★ issue #19：`condition` 是卡片 degradation 登记过的退化条件，判分器的诚实轴要读它；
+#   旧版 KEEP 不含它 ⇒ 经本脚本落盘的退化条件答卷一律丢掉条件、被诚实轴误判 fail。
+KEEP = ("qid", "conclusion", "answer", "evidence", "confidence", "claims", "condition")
 
 
 def norm(s: str) -> str:
@@ -110,6 +115,7 @@ def main():
     known |= {q + "i" for q in list(known)}
 
     got, seen, problems, _swapped = {}, set(), [], set()
+    _conf_defaulted = []          # ★ issue #19：缺 confidence 被补成 probable 的题（体检要看得见）
     for f in files:
         p = Path(f)
         if not p.exists():
@@ -140,7 +146,13 @@ def main():
             seen.add(qid)
             rec = {k: a.get(k) for k in KEEP}
             rec["qid"] = qid
-            rec.setdefault("confidence", "probable")
+            # ★ issue #19：旧写法 `rec.setdefault("confidence", "probable")` **永不生效**——
+            #   上面的字典推导已经把键建出来了（缺 confidence 时值是 None），setdefault 见键
+            #   已存在便直接返回。于是 docstring 声明的「缺省 probable」从未落地，缺 confidence
+            #   的答卷落盘后是 None，诚实轴按「unknown」判 fail。
+            if not rec.get("confidence"):
+                rec["confidence"] = "probable"
+                _conf_defaulted.append(qid)
             if len(rec.get("conclusion") or "") > len(rec.get("answer") or ""):
                 _swapped.add(qid)
             if "--merge-fields" in sys.argv:
@@ -171,6 +183,14 @@ def main():
         print(f"  ★ 字段疑似写反（conclusion 比 answer 长）：{len(swapped)} 题 = {len(swapped)/max(1,len(got)):.0%}"
               f" —— 契约是「conclusion＝一句话结论／answer＝完整回答」；判分器读 answer 优先，"
               f"写在 conclusion 里的内容会被丢掉。加 --merge-fields 可把两段合并后再判（并在报告里注明）")
+    if _conf_defaulted:
+        print(f"  ★ 缺 confidence 已补 probable：{len(_conf_defaulted)} 题"
+              f"（{'、'.join(_conf_defaulted[:6])}{' …' if len(_conf_defaulted) > 6 else ''}）"
+              f" —— 旧版这行 setdefault 永不生效，这些题会落盘成 null 并被诚实轴判 fail（issue #19）")
+    n_cond = sum(1 for r in got.values() if r.get("condition"))
+    if n_cond:
+        print(f"  带 condition 的作答：{n_cond} 题（已随卷落盘；判分器不采信自报条件，"
+              f"会打 WARN 并按完整条件判 —— issue #15/#19）")
     print(f"  引文存疑：{len(bad_ev)}" + ("" if not bad_ev else "（前 6 条）"))
     for m in bad_ev[:6]:
         print(f"    · {m}")

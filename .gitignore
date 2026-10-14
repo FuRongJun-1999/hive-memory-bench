@@ -4,8 +4,9 @@
 # 复现方式见 README「怎么用」——把它们当输入自己重跑即可，故不入库。
 __pycache__/
 *.pyc
-real_*/
-semantic/
 sut/
+semantic/
+real/
+real_*/
 # 状态链探针的合成语料/答案键/生成器日志（`chain/tools/synth.py` 生成，固定种子可复现）
 chain/tools/out/
