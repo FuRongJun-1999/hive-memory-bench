@@ -69,6 +69,47 @@ def norm(s: str) -> str:
     return re.sub(r"[\s\W_]+", "", s or "", flags=re.UNICODE)
 
 
+def _locatable(quote, text) -> bool:
+    """quote 能否在 text 里定位（issue #33 第九项）。
+
+    ★ 旧实现是 `norm(quote) not in norm(text)`：`norm('')` 是 `''`，而空串是**任何**
+      字符串的子串 ⇒ 空串／纯标点／缺 quote 键恒判「可定位」。后果不是文案问题：
+      判分器的排除轴（`judge.py`）与白名单同样「空则跳过」，排除轴整体失效。
+    """
+    nq = norm(quote)
+    return bool(nq) and nq in norm(text)
+
+
+def check_must_exclude(card, qid, idx, errs, warns) -> None:
+    """判据 (a) 的 must_exclude 分支：cid 存在 + quote 可定位 + 枚举合法。
+
+    ★ issue #33 第十项：此前 `check_card` 在 `kind == "open"` 时**提前 return** 到
+      `check_open_card`，而判据 (a) 只在客观题分支 ⇒ 开放题写了 must_exclude 也从不过检
+      （实测 o053 的 cid 改成不存在的 `u99_c999` ＋ 编造 quote ＋ bogus 枚举，仍 0 错误 rc=0）。
+      开放题排除项经 `semantic.py` 的 `_cite_materials()` 进 L2 判官材料——不校验的后果是
+      **判官拿到错误判据**。`exclusion_required: false` 意为「可以不写」，不是「写了也不校验」。
+    """
+    items = card.get("must_exclude") or []
+    if not isinstance(items, list):
+        errs.append(f"{qid}: must_exclude 不是列表")
+        return
+    for i, it in enumerate(items, 1):
+        if not isinstance(it, dict):
+            errs.append(f"{qid}/must_exclude[{i}]: 不是字典")
+            continue
+        cid, quote = it.get("cid"), it.get("quote") or ""
+        if cid not in idx:
+            errs.append(f"{qid}/must_exclude[{i}]: cid={cid!r} 不存在")
+            continue
+        if not norm(quote):
+            errs.append(f"{qid}/must_exclude[{i}]: quote 为空（空串／纯标点／缺键）——不可溯源")
+        elif not _locatable(quote, idx[cid]["text"]):
+            errs.append(f"{qid}/must_exclude[{i}]: quote 无法在 {cid} 正文中定位")
+        if it.get("exclusion_type") not in EXCLUSION_TYPES:
+            warns.append(f"{qid}/must_exclude[{i}]: exclusion_type 建议填 "
+                         f"{'/'.join(sorted(EXCLUSION_TYPES))} 之一")
+
+
 def lcs_len(a: str, b: str) -> int:
     a, b = norm(a), norm(b)
     if not a or not b:
@@ -176,24 +217,24 @@ def check_card(path: Path, idx: dict, units: dict) -> tuple:
         errs.append(f"{qid}: span 必须为 short|long")
 
     # —— 判据 (a)：quote 必须能定位到原文 ——
-    for field in ("supporting_evidence", "must_exclude"):
-        items = card.get(field) or []
-        if not isinstance(items, list):
-            errs.append(f"{qid}: {field} 不是列表")
+    # ★ issue #33 第九项：空串／纯标点／缺 quote 键此前恒判「可定位」（`''` 是任何串的子串），
+    #   故这里先区分「为空」与「无法定位」两种错误。
+    for i, it in enumerate(card.get("supporting_evidence") or [], 1):
+        if not isinstance(it, dict):
+            errs.append(f"{qid}/supporting_evidence[{i}]: 不是字典")
             continue
-        for i, it in enumerate(items, 1):
-            cid, quote = it.get("cid"), it.get("quote") or ""
-            if cid not in idx:
-                errs.append(f"{qid}/{field}[{i}]: cid={cid!r} 不存在")
-                continue
-            if norm(quote) not in norm(idx[cid]["text"]):
-                errs.append(f"{qid}/{field}[{i}]: quote 无法在 {cid} 正文中定位")
-            if field == "supporting_evidence" and it.get("weight") not in WEIGHTS:
-                warns.append(f"{qid}/supporting_evidence[{i}]: weight 建议填 "
-                             f"{'/'.join(sorted(WEIGHTS))} 之一")
-            if field == "must_exclude" and it.get("exclusion_type") not in EXCLUSION_TYPES:
-                warns.append(f"{qid}/must_exclude[{i}]: exclusion_type 建议填 "
-                             f"{'/'.join(sorted(EXCLUSION_TYPES))} 之一")
+        cid, quote = it.get("cid"), it.get("quote") or ""
+        if cid not in idx:
+            errs.append(f"{qid}/supporting_evidence[{i}]: cid={cid!r} 不存在")
+            continue
+        if not norm(quote):
+            errs.append(f"{qid}/supporting_evidence[{i}]: quote 为空（空串／纯标点／缺键）——不可溯源")
+        elif not _locatable(quote, idx[cid]["text"]):
+            errs.append(f"{qid}/supporting_evidence[{i}]: quote 无法在 {cid} 正文中定位")
+        if it.get("weight") not in WEIGHTS:
+            warns.append(f"{qid}/supporting_evidence[{i}]: weight 建议填 "
+                         f"{'/'.join(sorted(WEIGHTS))} 之一")
+    check_must_exclude(card, qid, idx, errs, warns)
     if len(card.get("must_exclude") or []) < 1:
         # 降为警告（2026-09-29 第三次同族教训）：作者补给 q025 的一条要点
         # （旧势力的阻碍被清除）正落在我先前列入 must_exclude 的那句引文上——
@@ -397,7 +438,10 @@ def check_intervention(card, qid, idx) -> list:
             if cid not in idx:
                 errs.append(f"{qid}/intervention[{i}].evidence[{j}]: cid={cid!r} 不存在")
                 continue
-            if norm(quote) not in norm(idx[cid]["text"]):
+            if not norm(quote):
+                errs.append(f"{qid}/intervention[{i}].evidence[{j}]: quote 为空（空串／纯标点／缺键）"
+                            f"——不可溯源")
+            elif not _locatable(quote, idx[cid]["text"]):
                 errs.append(f"{qid}/intervention[{i}].evidence[{j}]: quote 无法在 {cid} 中定位 —— {quote[:30]}")
             if declared and cid[:3] not in declared:
                 errs.append(f"{qid}/intervention[{i}].evidence[{j}]: 引文落在 {cid[:3]}，未在 unit_ids 中声明")
@@ -431,7 +475,9 @@ def lint_draft(path: Path, idx: dict) -> list:
             cid, quote = it.get("cid"), it.get("quote") or ""
             if cid not in idx:
                 errs.append(f"{qid}/{field}[{i}]: cid={cid!r} 不存在")
-            elif norm(quote) not in norm(idx[cid]["text"]):
+            elif not norm(quote):
+                errs.append(f"{qid}/{field}[{i}]: quote 为空（空串／纯标点／缺键）——不可溯源")
+            elif not _locatable(quote, idx[cid]["text"]):
                 errs.append(f"{qid}/{field}[{i}]: quote 无法在 {cid} 中定位 —— {quote[:30]}")
     nc = norm(card.get("necessary_conclusion") or "")
     if nc:
@@ -552,6 +598,8 @@ def check_open_card(card, qid, path, idx, errs, warns):
     if card.get("span") not in {"short", "long"}:
         errs.append(f"{qid}: span 必须为 short|long")
     errs.extend(check_answerable(card, qid))
+    # ★ issue #33 第十项：开放题的 must_exclude 此前整段不过检（判据 (a) 只在客观题分支）。
+    check_must_exclude(card, qid, idx, errs, warns)
     errs.extend(check_exclusion_conflict(card, qid, "evidence_pool"))
     errs.extend(check_ruling_phrases(card, qid))
     errs.extend(check_intervention(card, qid, idx))
@@ -580,7 +628,9 @@ def check_open_card(card, qid, path, idx, errs, warns):
             if cid not in idx:
                 errs.append(f"{qid}/evidence_pool[{i}]: cid={cid!r} 不存在")
                 continue
-            if norm(quote) not in norm(idx[cid]["text"]):
+            if not norm(quote):
+                errs.append(f"{qid}/evidence_pool[{i}]: quote 为空（空串／纯标点／缺键）——不可溯源")
+            elif not _locatable(quote, idx[cid]["text"]):
                 errs.append(f"{qid}/evidence_pool[{i}]: quote 无法在 {cid} 正文中定位")
             for sid in (it.get("supports") or []):
                 if sid not in rubric_ids:
@@ -594,7 +644,10 @@ def check_open_card(card, qid, path, idx, errs, warns):
         errs.append(f"{qid}: grading.coverage_required 须为 (0,1] 的数")
 
     # span 与 unit_ids 一致性（同客观题）
+    # ★ issue #33 第十项：排除项的 cid 也要并入 used（同客观题 :207-208）——
+    #   排除片段同样落在某个单元上，只算 evidence_pool 会漏报跨单元。
     used = {it.get("cid", "")[:3] for it in (pool or [])}
+    used |= {it.get("cid", "")[:3] for it in (card.get("must_exclude") or []) if isinstance(it, dict)}
     declared = set(card.get("unit_ids") or [])
     if declared and used and not used <= declared:
         errs.append(f"{qid}: 证据落在单元 {sorted(used - declared)}，未在 unit_ids 中声明")
@@ -714,6 +767,102 @@ DOC_RULES = [
 ]
 
 
+# ★ issue #33 第八项守卫：文档律与同文表格不得互相推翻。
+# ① A 表（「保住那一块」）与 systems/readings.json 必须逐格一致——旧文把灵枢 v0.7.1 的 2/9
+#    写成更新前的 5/9，正是从这里漂出去的；
+# ② 写「单调」的行里列出的 x/9 链必须非降（防止把两种口径混进一条链）；
+# ③ 「N 家 x/9」的家数必须 ≤ A 表里该读数的实际家数（旧文「原文检索两家 5/9」实为 1 家）。
+COMPRESS_DOC = "docs/压缩的代价就是因果丢失_v1.0.md"
+COMPRESS_SYS = [("朴素 BM25", "naive-bm25"), ("OpenViking", "openviking"),
+                ("灵枢", "lingshu"), ("Hindsight", "hindsight"),
+                ("Mem0", "mem0"), ("MemOS", "memos")]
+CJK_NUM = {"一": 1, "二": 2, "两": 2, "三": 3, "四": 4, "五": 5,
+           "六": 6, "七": 7, "八": 8, "九": 9, "十": 10}
+
+
+def check_compress_cost(errs: list) -> None:
+    fp = ROOT / COMPRESS_DOC
+    rp = ROOT / "systems" / "readings.json"
+    if not fp.exists() or not rp.exists():
+        errs.append(f"{COMPRESS_DOC} 或 systems/readings.json 不存在")
+        return
+    doc = fp.read_text(encoding="utf-8")
+    try:
+        rd = json.loads(rp.read_text(encoding="utf-8"))["压缩代价"]["systems"]
+    except Exception as e:                                     # noqa: BLE001
+        errs.append(f"systems/readings.json 读取失败：{e}")
+        return
+
+    # ① A 表 ↔ readings.json 逐格一致
+    cells = {}
+    for line in doc.splitlines():
+        m = re.match(r"^\|\s*(.+?)\s*\|\s*(.+?)\s*\|\s*$", line)
+        if not m:
+            continue
+        name = m.group(1).replace("*", "").strip()
+        key = next((k for n, k in COMPRESS_SYS if n in name), None)
+        if key is None:
+            continue
+        cell = m.group(2)
+        sm = re.search(r"(\d+)\s*/\s*9", cell)
+        lm = re.search(r"（\s*(\d+)\s*/\s*9\s*）", cell)
+        if not (sm and lm):
+            continue
+        got_s, got_l = f"{sm.group(1)}/9", f"{lm.group(1)}/9"
+        cells[key] = (got_s, got_l)
+        want_s, want_l = rd[key].get("覆盖_严格"), rd[key].get("覆盖_宽松")
+        if (got_s, got_l) != (want_s, want_l):
+            errs.append(f"{COMPRESS_DOC} A 表 {name} 为 {got_s}（{got_l}），"
+                        f"readings.json 为 {want_s}（{want_l}）")
+    ok_cells = len(cells) == len(COMPRESS_SYS)
+    print(f"  [{'OK ' if ok_cells else 'ERR'}] 压缩代价 A 表 ↔ readings.json："
+          f"{len(cells)}/{len(COMPRESS_SYS)} 家逐格比对")
+    if not ok_cells:
+        errs.append(f"压缩代价 A 表只解析到 {len(cells)}/{len(COMPRESS_SYS)} 家")
+
+    allv = {v for pair in rd.values() for v in
+            (pair.get("覆盖_严格"), pair.get("覆盖_宽松")) if v and v != "—"}
+
+    def scan(rel: str, text: str) -> None:
+        # 「口径更正」块是**对旧文的逐字引用**，不参与判据（否则守卫会去纠旧文自身）
+        in_correction = False
+        for ln, line in enumerate(text.splitlines(), 1):
+            if line.lstrip().startswith(">"):
+                if "口径更正" in line:
+                    in_correction = True
+                if in_correction:
+                    continue
+            else:
+                in_correction = False
+            # ③ 「N 家 x/9」的家数（家与 x/9 之间不得再出现别的数字——那说明是区间或枚举）
+            for m in re.finditer(r"([一二两三四五六七八九十])\s*家", line):
+                tail = line[m.end():m.end() + 12]
+                v = re.match(r"[^\d，。；\n]{0,10}?(\d+)\s*/\s*9", tail)
+                if not v or any(ch.isdigit() for ch in tail[:v.start(1)]):
+                    continue
+                n, x = CJK_NUM[m.group(1)], f"{v.group(1)}/9"
+                cnt = sum(1 for d in rd.values()
+                          if x in (d.get("覆盖_严格"), d.get("覆盖_宽松")))
+                if cnt < n:
+                    errs.append(f"{rel}:{ln} 称「{m.group(1)}家 {x}」，"
+                                f"但 A 表里 {x} 只有 {cnt} 家")
+            # ② 「单调」行里的 x/9 链必须非降
+            if "单调" in line:
+                vals = [int(v) for v in re.findall(r"(\d+)\s*/\s*9", line)]
+                if len(vals) >= 2 and any(b < a for a, b in zip(vals, vals[1:])):
+                    errs.append(f"{rel}:{ln} 写「单调」但 x/9 序列 {vals} 非降不成立")
+                for v in vals:
+                    if f"{v}/9" not in allv:
+                        errs.append(f"{rel}:{ln} 写「单调」引用了 A 表里没有的读数 {v}/9")
+
+    scan(COMPRESS_DOC, doc)
+    rdme = ROOT / "README.md"
+    if rdme.exists():
+        scan("README.md", rdme.read_text(encoding="utf-8"))
+    n_bad = len([e for e in errs if "压缩代价" in e or "单调" in e or "家 " in e])
+    print(f"  [{'OK ' if n_bad == 0 else 'ERR'}] 压缩代价 律二／律三 口径守卫：{n_bad} 处不符")
+
+
 def check_docs() -> int:
     errs = []
     print("=== 文档口径一致性 ===")
@@ -742,6 +891,9 @@ def check_docs() -> int:
             print(f"  [{'OK ' if ok else 'ERR'}] 干预轮对比 §2 表行数 = {len(rows)}（应为 6）")
             if not ok:
                 errs.append(f"干预轮对比 §2 表行数 {len(rows)} ≠ 6")
+
+    # ★ issue #33 第八项：压缩代价文档的律与表不得互相推翻
+    check_compress_cost(errs)
 
     # A8 回归：成绩总表 节号不得重复
     fp = ROOT / "results" / "成绩总表.md"

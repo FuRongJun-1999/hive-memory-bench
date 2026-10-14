@@ -123,7 +123,7 @@ def main():
     for doc in [ROOT / "README.md"] + sorted((ROOT / "docs").glob("*.md")):
         for i, line in enumerate(doc.read_text(encoding="utf-8").splitlines(), 1):
             for m in re.finditer(r"python (?:-X utf8 )?judge_audit\.py", line):
-                tail = line[m.end():].strip(" \`")
+                tail = line[m.end():].strip(" \u0060")
                 if not (tail.startswith("check") or tail.startswith("selftest")):
                     bad.append(f"{doc.name}:{i}: {line.strip()[:70]}")
     ok(not bad,
