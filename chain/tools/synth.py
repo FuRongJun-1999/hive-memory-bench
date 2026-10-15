@@ -20,6 +20,7 @@ import json
 import math
 import random
 import re
+from collections import Counter
 from pathlib import Path
 
 SEED = 20261010
@@ -472,7 +473,8 @@ def build_keys(prim, rng):
             return dict(qid=qid, type=qtype, doc=c['doc'], doc_id=c['doc_id'],
                         subject=c['subject'], slot=c['slot'], question=question,
                         answer=ans, sample_at_seq=at, chain_len=k,
-                        interference=c['interference'], reconstructible=False)
+                        interference=c['interference'], reconstructible=False,
+                        ambiguous=False)
 
         keys.append(mk('现值', N,
                        f'截至第 {N} {unit}，{c["subject"]} 的{c["slot"]}当前是什么值？'
@@ -530,7 +532,8 @@ def build_keys(prim, rng):
             question=(f'截至第 {N} {unit}，{subj} 的{slot}处于什么状态？'
                       f'（现行 active / 退役 retired / 未决 unresolved / 不存在 absent）'),
             answer=dict(value=None, state='absent', at_seq=None, chain=[], change_chain=[]),
-            sample_at_seq=N, chain_len=0, interference='none', reconstructible=False))
+            sample_at_seq=N, chain_len=0, interference='none', reconstructible=False,
+            ambiguous=False))
     return keys
 
 
@@ -630,6 +633,54 @@ def reconstructible_hint_only(q, chain_events, corpus, doc):
             if tgt in norm(sent) and _HINT.search(sent):
                 return True
     return False
+
+
+# ================= 7b. 同名异体歧义（issue #44-一） =================
+def merged_events(chains: list) -> list:
+    """把 (doc, subject, slot) 逐字相同的若干条链按 seq 合并成**一条**链的事件序列。
+
+    同一 seq 上有多条链的事件时按「链在 built_by_doc 里的次序」稳定排序——语料段内的事件句
+    是按 (subject, slot) 渲染的，同主体同槽位下谁先谁后**没有文本依据**，这里取固定次序只为
+    可复现，不代表语料能区分它们。
+    """
+    pairs = [(e, i) for i, c in enumerate(chains) for e in c['events']]
+    pairs.sort(key=lambda t: (t[0]['seq'], t[1]))
+    return [e for e, _ in pairs]
+
+
+def ambiguous(q: dict, merged: list) -> str:
+    """「同名合并读法」是否与答案键不一致；一致返回 ''，不一致返回一句说明。
+
+    ★ issue #44-一：`build_chains` 的「同名异体」档按 #31 把影子链的主体名做成与主链
+      **逐字相同**，同时删掉了说明句、也没有写入任何语境（所属/地点/身份）⇒ 语料里两条链
+      交错写成「X 的<槽位> …」，**没有任何文本依据**能把它们分开；答案键却只按主链取值。
+      把同名同槽位的句子按序号读成一条链，是语料**唯一支持**的读法——它在这批题上与答案键
+      不一致时，该题按语料不可答，须与 `reconstructible` 一样剔出主读数（判分器同口径）。
+
+    判据（机械、只读本题与合并链）：
+      · 缘由问不查（答案是「起因」，合并读法不改变它）；
+      · 变更问比 `change_view` 的行集合（seq/from/to）；
+      · 其余问型比 `state_at(合并链, sample_at_seq)` 的 value/state/at_seq（`accept` 视为一致）。
+    """
+    if q.get('type') == '缘由':
+        return ''
+    if q.get('type') == '变更':
+        got = [(r['seq'], norm(r['from']), norm(r['to'])) for r in change_view(merged)]
+        want = [(r['seq'], norm(r.get('from')), norm(r.get('to')))
+                for r in (q['answer'].get('change_chain') or [])]
+        return '' if got == want else f'合并读法 {len(got)} 行，答案键 {len(want)} 行'
+    st = state_at(merged, q['sample_at_seq'])
+    want_v = q['answer'].get('value')
+    accept = [a for a in (q['answer'].get('accept') or []) if a]
+    if norm(st['value']) != norm(want_v) and not any(norm(st['value']) == norm(a)
+                                                    for a in accept):
+        return f'合并读法 value={st["value"]!r}，答案键 {want_v!r}'
+    if norm(st['state']) != norm(q['answer'].get('state')):
+        return f'合并读法 state={st["state"]!r}，答案键 {q["answer"].get("state")!r}'
+    #   `at_seq` 只在**题面明写要序号**的现值问上比（状态归属/时点只问状态与值，不问序号）。
+    if q.get('type') == '现值' and st['at_seq'] != q['answer'].get('at_seq'):
+        return f'合并读法 at_seq={st["at_seq"]!r}，答案键 {q["answer"].get("at_seq")!r}'
+    return ''
 
 
 def leak_scan(corpus):
@@ -747,6 +798,34 @@ def main() -> None:
         aliases = [q['subject'], former_of.get((q['doc'], q['subject']), '')]
         q['reconstructible'] = reconstructible(q, c['events'], aliases, corpus, q['doc'])
 
+    # ---- 同名异体歧义（issue #44-一） ----
+    # ★ 同名异体档把影子链的主体名做成与主链**逐字相同**（#31 的修复），且没有写入任何
+    #   语境锚 ⇒ 语料里两条链交错写成「X 的<槽位> …」，唯一由语料支持的读法是把它们按序号
+    #   读成一条链；答案键却只按主链取值。凡合并读法与答案键不一致的题，按语料不可答，
+    #   与 `reconstructible` 一样剔出主读数（判分器 `probe_judge._excluded` 同口径）。
+    same_name: dict = {}
+    for _doc, _cs in built_by_doc.items():
+        _g: dict = {}
+        for _c in _cs:
+            _g.setdefault((_c['doc'], _c['subject'], _c['slot']), []).append(_c)
+        for _k, _v in _g.items():
+            if len(_v) > 1:
+                same_name[_k] = _v
+    n_amb, n_same_q, amb_by_type, amb_samples = 0, 0, Counter(), []
+    for q in keys:
+        grp = same_name.get((q['doc'], q['subject'], q['slot']))
+        if not grp or q['reconstructible']:
+            continue
+        n_same_q += 1
+        why = ambiguous(q, merged_events(grp))
+        if why:
+            q['ambiguous'] = True
+            q['ambiguous_why'] = why
+            n_amb += 1
+            amb_by_type[q['type']] += 1
+            if len(amb_samples) < 3:
+                amb_samples.append(f'{q["qid"]}：{why}')
+
     # ---- 日志（答案键的真源） ----
     log = dict(
         seed=SEED,
@@ -839,6 +918,12 @@ def main() -> None:
           f'其中仅由提示词护栏（_HINT）命中的 {n_hint} 题'
           f'（生产语料若为 0，说明该护栏只在正控上生效）；'
           f'故意注入的泄漏句 {len(leak_plan)} 处')
+    print(f'[synth] 同名异体歧义（issue #44-一）：同名同槽位的链组 {len(same_name)} 组、'
+          f'覆盖主读数题 {n_same_q} 道；合并读法 ≠ 答案键 {n_amb} 道'
+          f'（按问型 {dict(amb_by_type)}）——已标 ambiguous 剔出主读数；'
+          f'其余 {n_same_q - n_amb} 道合并读法与答案键一致（探测器不是恒 True）')
+    for _s in amb_samples:
+        print(f'       · {_s}')
     n_leak, leak_samples = leak_scan(corpus)
     print(f'[synth] 泄漏扫描：把前值/当前值摆在句面的段落 {len(n_leak)}/{len(corpus)}'
           f'（目标 0——变更句只写新值，前值须靠链式追踪）')

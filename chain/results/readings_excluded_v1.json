@@ -1,5 +1,8 @@
 [
  {
+  "_stale": "基于 9f31b1f 之前的旧语料/答案键；keys_fp 两套数据同为 bda3d94b7f29526a（旧指纹不覆盖语料，issue #44-二）。见 README.md 顶部横幅。"
+ },
+ {
   "arm": "mem0",
   "present": 0.8214,
   "history": 0.8276,

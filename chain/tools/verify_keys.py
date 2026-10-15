@@ -19,7 +19,7 @@
      非零读数里。现在 absent 题单列校验、越界只查**时点题**（题面「在第 X 次这个时间点」
      ／「在第 X 次时」），干净数据基线为 0。
 
-退出码：0＝干净；1＝有硬不符（①／②／⑥）。③④⑤ 是信息项，不影响退出码。
+退出码：0＝干净；1＝有硬不符（①／②／⑥／⑦）。③④⑤⑧ 是信息项，不影响退出码。
 """
 import importlib.util
 import json
@@ -178,6 +178,35 @@ print('⑥ 时点题取样点落在链内：%d/%d 通过，%d 道越界（其余
 for b in bad_sample[:8]:
     print('     ', b)
 hard_fail += len(bad_sample)
+
+# ---- ⑦ 同名异体歧义标记（issue #44-一）----
+# ★ 同名异体档的影子链与主链 (doc, subject, slot) **逐字相同**（#31 的修复），语料里没有
+#   任何文本依据能把两者分开 ⇒ 「把同名同槽位的句子按序号读成一条链」是语料唯一支持的
+#   读法，而答案键只按主链取值。synth.py 逐题机械算出 `ambiguous`；这里**独立复算**一遍
+#   （只读 keys/keys.json + keys/synth_log.json），标记不一致即硬不符。
+same_name = {}
+for _ch in log['chains']:
+    same_name.setdefault((_ch['doc'], _ch['subject'], _ch['slot']), []).append(_ch)
+amb_bad, amb_qs = [], []
+for q in keys:
+    grp = same_name.get((q['doc'], q['subject'], q['slot']))
+    want = bool(grp and len(grp) > 1 and not q['reconstructible']
+                and SY.ambiguous(q, SY.merged_events(grp)))
+    if bool(q.get('ambiguous')) != want:
+        amb_bad.append((q['qid'], q.get('ambiguous'), want))
+    if q.get('ambiguous'):
+        amb_qs.append(q)
+print('⑦ 同名异体歧义（合并读法 ≠ 答案键）：标 %d 道，与独立复算不符 %d 道'
+      % (len(amb_qs), len(amb_bad)))
+for b in amb_bad[:8]:
+    print('     ', b)
+hard_fail += len(amb_bad)
+
+# ---- ⑧ 主读数分母（信息项）----
+n_rec = sum(1 for q in keys if q['reconstructible'])
+n_amb = len(amb_qs)
+print('⑧ 主读数分母：%d 题 − 可推 %d − 歧义 %d ＝ **%d**（判分器 _excluded 同口径）'
+      % (len(keys), n_rec, n_amb, len(keys) - n_rec - n_amb))
 
 print('')
 print('== 硬不符合计 %d 处 ==' % hard_fail)

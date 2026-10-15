@@ -16,7 +16,10 @@
     只 import、不改这些文件；接线照 `run_e2e.py`。强制发布版：`HMB_HARNESS=repo`。
   · versionblind ＝ 自实现的「只留每条链最新值」伪记忆：写入时按 synth_log 把每条链
     折叠成一条「当前状态」记录（历史全部丢弃），检索仍用同一 BM25。
-  · closed ＝ 不给任何材料作答（闭卷基线）。
+  · closed ＝ 不给任何材料作答（闭卷基线）。契约＝`CLOSED_SYS`：**只把规则 1 换成
+    「无材料，凭先验给最可能的值」**，其余四条与 `CHAIN_SYS` 逐字相同（issue #44-四）——
+    照旧契约（规则 1 要求「材料里没有的就不要编」）等于指示模型不作答，闭卷 ≈ 0 由指令
+    决定、说明不了题目可猜。它猜对的题由判分器 `closed_hits` 逐题记录并剔出被测臂主读数。
   · 隔离：所有写入用新身份 `chain`（MDCG_RUN_TAG=_chain、mem0 库目录 mem0_chain、
     memos user/cube、hindsight bank、OV 前缀 chain_novel）。
     ★ 隔离强度的诚实口径（2026-10-10 复核整改·甲-7）：并非所有臂都能做到**物理隔离**。
@@ -126,6 +129,87 @@ def damage_material(material: list[dict], kind: str,
         return [{k: v for k, v in m.items() if k == 'text'} for m in material]
     return [dict(m) for m in material]
 IDENTITY = 'chain'
+# ★ issue #44-五：有**外部持久库**的臂（其余臂的库在进程内，随进程消失）。
+PERSISTENT_ARMS = ('lingshu', 'openviking', 'mem0', 'memos', 'hindsight')
+
+
+def store_tag(arm: str, damage: str = '') -> str:
+    """该次运行使用的**库身份**（issue #44-五）。
+
+    旧实现各臂的库身份只由常量 `IDENTITY='chain'` 派生（lingshu `MDCG_RUN_TAG=_chain`、
+    OpenViking 前缀 `chain_novel`、mem0 目录 `mem0_chain/qdrant`、memos cube `memos_chain_cube`、
+    hindsight `bank=novel_chain`），而运行器**从不 reset**（契约如此）⇒ 干净臂与三条破坏臂
+    共用同一个库：乙 bad_write 被追加进干净臂已经灌满的库（等于没破坏），反过来先跑乙则
+    干净臂读到的是被破坏过的库，重跑干净臂还会重复灌入。现在库身份随破坏档分叉。
+    """
+    return IDENTITY + (f'_{damage}' if damage else '')
+
+
+def _ledger_path() -> Path:
+    return RUNS / '_store_ledger.json'
+
+
+def store_guard(arm: str, store: str, d: Path) -> None:
+    """写入前确认该库**没被之前的运行写过**；非空即中止（issue #44-五）。
+
+    两道检查：
+      ① 本地账本 `RUNS/_store_ledger.json`：本运行器每次 ingest 记一条（库身份 + 块数 +
+         答卷目录）。库身份已按破坏档分叉，账本命中的都是「同一个库被写第二次」；
+      ② 适配器自报：实现了可选的 `count()`／`is_empty()` 时直接问它。
+    二选一命中即中止，除非显式 `--allow-nonempty-store`。
+    """
+    if arm not in PERSISTENT_ARMS or not store:
+        return
+    if ALLOW_NONEMPTY_STORE:
+        log(f'  ⚠ --allow-nonempty-store：跳过「库 {store} 是否为空」的检查')
+        return
+    led = _read_json(_ledger_path())
+    prev = led.get(store)
+    if prev:
+        raise SystemExit(
+            f'[store] 拒绝写入：库 {store} 已被之前的运行写过（{prev.get("at")}，'
+            f'{prev.get("n_chapters")} 块，答卷目录 {prev.get("dir")}）。\n'
+            '        运行器不调用 ad.reset()（各臂共享既有库时会误删数据），故不能替你清库。\n'
+            '        处理：① 换一个库身份（改 --damage／臂名）；② 手工清库后重跑；'
+            '③ 确认要往非空库追加，则显式加 --allow-nonempty-store。')
+    # 适配器自报（可选契约）：实现了就问一句，避免账本之外的既有数据被追加
+    try:
+        ad, closer, _note = make_adapter(arm, store)
+    except SystemExit:
+        return
+    except Exception as e:                                # noqa: BLE001
+        # 适配器建不起来（如桩报「未随库发布」）⇒ 无从自报，跳过这一道（账本那一道仍生效）。
+        log(f'  （库非空自检跳过：适配器不可用 {type(e).__name__}）')
+        return
+    try:
+        cnt = None
+        if hasattr(ad, 'count'):
+            cnt = int(ad.count())
+        elif hasattr(ad, 'is_empty'):
+            cnt = 0 if ad.is_empty() else 1
+        if cnt:
+            raise SystemExit(
+                f'[store] 拒绝写入：适配器自报库 {store} 非空（count={cnt}）。'
+                '确认要追加则加 --allow-nonempty-store。')
+    except SystemExit:
+        raise
+    except Exception as e:                                   # noqa: BLE001
+        log(f'  （库非空自检跳过：{type(e).__name__}: {str(e)[:80]}）')
+    finally:
+        if closer:
+            closer()
+
+
+def store_commit(arm: str, store: str, d: Path, n_chapters: int) -> None:
+    """把本次 ingest 记进本地账本（供下一次运行判「库是不是非空」）。"""
+    if arm not in PERSISTENT_ARMS or not store:
+        return
+    led = _read_json(_ledger_path())
+    led[store] = dict(arm=arm, n_chapters=n_chapters, dir=str(d),
+                      at=time.strftime('%Y-%m-%d %H:%M:%S'))
+    write_json(_ledger_path(), led)
+
+
 K = 6                     # 常规问型的 top-k 块数
 MATERIAL_CHARS = 14000    # 常规问型的材料字数上限
 # ★ 变更问要「按序号列出每一次变更前后的值」：一条 45–60 事件的链跨 45–60 个 seq，
@@ -153,6 +237,16 @@ CHAIN_SYS = (
     '5. 不要输出任何 JSON 之外的内容。'
 )
 
+# ★ issue #44-四：闭卷臂的契约＝**只改规则 1**。规则 1 原为「只依据给定材料作答……材料里
+#   没有的就不要编」——空材料下这是「不要作答」的指令，于是闭卷 ≈ 0 由指令决定，
+#   不能说明题目不可猜。换成「凭先验给最可能的值」后，闭卷臂真的在猜，它猜对的题才是可猜题。
+#   其余四条（JSON 字段、chain 用法、basis 用法、只输出 JSON）与 `CHAIN_SYS` 逐字相同。
+CLOSED_SYS = CHAIN_SYS.replace(
+    '1. 只依据给定材料作答，不得使用你自己的知识；材料里没有的就不要编。',
+    '1. 本次**不提供任何材料**：请凭你自己的先验知识给出最可能的值，不要因为「没有材料」'
+    '就留空——每道题都必须给出一个具体的猜测（value/state/at_seq 都要填），'
+    '猜不出也请给出你认为最可能的那个。')
+
 
 def log(*a) -> None:
     print(*a, flush=True)
@@ -160,6 +254,8 @@ def log(*a) -> None:
 
 # OV 专用端口/workspace（由命令行注入；见 _check_ov_isolation）
 OV_PORT = os.environ.get('OV_PORT', '')
+# ★ issue #44-五：向非空库写入须显式认下（见 store_guard）
+ALLOW_NONEMPTY_STORE = False
 OV_SHARED_OK = False
 # memos 与既有库共用 Neo4j 图库（逻辑隔离）——须显式认下（见 _check_memos_isolation）
 MEMOS_SHARED_OK = False
@@ -296,17 +392,23 @@ def versionblind_corpus() -> list[dict]:
 
 
 # ---------------- 适配器装配（隔离身份 chain） ----------------
-def make_adapter(arm: str):
-    """返回 (adapter, closer, note)。"""
+def make_adapter(arm: str, store: str | None = None):
+    """返回 (adapter, closer, note)。
+
+    `store`＝本次运行的**库身份**（issue #44-五）。省略时退回常量 `IDENTITY`（兼容旧调用），
+    但运行器自己的三条路径（do_ingest／do_ask／store_guard）一律显式传入，干净臂与破坏臂
+    因此各自一个库。
+    """
+    store = store or IDENTITY
     if arm in ('bm25', 'versionblind'):
         from adapters.naive_bm25 import BM25Adapter
         return BM25Adapter(), None, '本地内存库（进程内，无外部服务）'
     if arm == 'closed':
         return None, None, '闭卷基线：不发检索、材料恒空'
     if arm == 'lingshu':
-        os.environ['MDCG_RUN_TAG'] = f'_{IDENTITY}'          # 库路径隔离 runs/lingshu_chain/mdcg
+        os.environ['MDCG_RUN_TAG'] = f'_{store}'             # 库路径隔离 runs/lingshu_<store>/mdcg
         from adapters.lingshu_adapter import LingshuAdapter
-        return LingshuAdapter(), None, f'MDCG_RUN_TAG=_{IDENTITY}'
+        return LingshuAdapter(), None, f'MDCG_RUN_TAG=_{store}'
     if arm == 'openviking':
         _check_ov_isolation()
         import adapters.openviking_adapter as ova
@@ -314,21 +416,21 @@ def make_adapter(arm: str):
         if OV_PORT and OV_PORT != '19333':
             _setup_ov_isolated(ova, OV_PORT)
             base = f'http://127.0.0.1:{OV_PORT}'
-        ova.NOVEL_URI = f'viking://resources/{IDENTITY}_novel'   # 新前缀，不动既有库
+        ova.NOVEL_URI = f'viking://resources/{store}_novel'      # 新前缀，不动既有库
         # ★ 注意：OpenVikingAdapter.retrieve 的 target_uri 是**默认参数**（def 时求值），
         #   改模块全局不会影响它 —— 调用时必须显式传 target_uri（见 retrieve_for）。
         #   同理 base_url 的默认值也是 def 时求值的，隔离端口必须显式传。
         return ova.OpenVikingAdapter(base_url=base), None, f'OV 前缀 {ova.NOVEL_URI}'
     if arm == 'mem0':
         from adapters.mem0_adapter import Mem0Adapter
-        store = RUNS / f'mem0_{IDENTITY}' / 'qdrant'
-        ad = Mem0Adapter(store_dir=str(store))
-        ad.USER = IDENTITY
-        return ad, None, f'mem0 库 {store}'
+        sdir = RUNS / f'mem0_{store}' / 'qdrant'
+        ad = Mem0Adapter(store_dir=str(sdir))
+        ad.USER = store
+        return ad, None, f'mem0 库 {sdir}'
     if arm == 'memos':
         _check_memos_isolation()
-        os.environ['MEMOS_USER'] = f'novel_{IDENTITY}'
-        os.environ['MEMOS_CUBE'] = f'memos_{IDENTITY}_cube'
+        os.environ['MEMOS_USER'] = f'novel_{store}'
+        os.environ['MEMOS_CUBE'] = f'memos_{store}_cube'
         import adapters.memos_adapter as ma
         import importlib
         importlib.reload(ma)          # 模块级读 env；同一进程内先跑过别臂时须重载
@@ -336,8 +438,8 @@ def make_adapter(arm: str):
             f'memos user/cube {ma.USER}/{ma.CUBE}（逻辑隔离·共享 Neo4j 图库）'
     if arm == 'hindsight':
         from adapters.hindsight_adapter import HindsightAdapter
-        ad = HindsightAdapter(bank=f'novel_{IDENTITY}')
-        return ad, ad.close, f'hindsight bank novel_{IDENTITY}'
+        ad = HindsightAdapter(bank=f'novel_{store}')
+        return ad, ad.close, f'hindsight bank novel_{store}'
     raise SystemExit(f'未知臂：{arm}')
 
 
@@ -363,10 +465,13 @@ def do_ingest(arm: str, d: Path, limit: int, damage: str = '') -> dict:
         # --limit 在 ingest 阶段按 doc 截断无意义，这里只做整体提示；题量截断在 ask 阶段
         pass
     t0 = time.time()
+    store = store_tag(arm, damage)          # ★ issue #44-五：库身份随破坏档分叉
+    store_guard(arm, store, d)              # 非空即中止（除非 --allow-nonempty-store）
     if arm == 'closed':
         st = {'note': '闭卷臂无库可写'}
+        note = ''
     else:
-        ad, closer, note = make_adapter(arm)
+        ad, closer, note = make_adapter(arm, store)
         if arm == 'lingshu':
             titled = [dict(ch, text=f"# {ch['cid']}\n{ch['text']}") for ch in chapters]
             ad._cid_by_title = {ch['cid']: ch['cid'] for ch in chapters}
@@ -387,7 +492,13 @@ def do_ingest(arm: str, d: Path, limit: int, damage: str = '') -> dict:
                     n_chapters=len(chapters),
                     chars=sum(len(c['text']) for c in chapters),
                     ingest=st, generator=C.GEN_MODEL,
+                    # ★ issue #44-二/五：库身份与三份身份指纹（数据／适配器／harness）
+                    store=store, store_note=note, persistent=arm in PERSISTENT_ARMS,
+                    data_fp=hmb_paths.data_fp(),
+                    adapter=hmb_paths.adapter_fp(arm),
+                    harness_files=hmb_paths.harness_fp(),
                     elapsed=round(time.time() - t0, 1))
+    store_commit(arm, store, d, len(chapters))
     write_json(d / 'manifest.json', manifest)
     # ★ issue #43-一B：ask 阶段的 manifest 会覆盖上面这份，ingest 读数（乙丢了多少块）另存。
     write_json(d / 'manifest_ingest.json', manifest)
@@ -408,14 +519,21 @@ def build_prompt(qid: str, question: str, material: list[dict]) -> list[dict]:
 
 
 def build_closed_prompt(qid: str, question: str) -> list[dict]:
-    """闭卷臂的提问：**与正常臂同一份输出契约**，只是材料为空。
+    """闭卷臂的提问：**只改第 1 条**的输出契约 ＋ 空材料（issue #30 ＋ issue #44-四）。
 
     ★ issue #30：旧实现把答案模板逐字写进提示词（`"value":null, "state":"absent"`），
     闭卷臂照抄模板即可在「答案为 null」的题上白拿分——首轮报告里 closed 臂的四态
     0.512 与版本盲臂 0.508 几乎相同（照抄模板应得 ≈ 0.512，正好是「absent 在四态里的
-    占比」），这是**照着答案模板抄**，不是「闭卷能猜」。现在只给空材料，不给任何字段取值。
+    占比」），这是**照着答案模板抄**，不是「闭卷能猜」。现在不给任何字段取值。
+    ★ issue #44-四：但「只给空材料、契约逐字照旧」还不够——`CHAIN_SYS` 规则 1 是
+    「只依据给定材料作答……材料里没有的就不要编」，value 字段说明是「若不存在或已撤销
+    填 null」，空材料下模型被**明确指示不作答**，于是「闭卷 ≈ 0」主要由指令决定，
+    不能说明题目不可猜。现在闭卷臂单独一份 `CLOSED_SYS`：只把规则 1 换成「无材料，
+    凭先验给出最可能的值」，其余四条逐字相同。这样闭卷臂才真的在猜——它猜对的题就是
+    可猜题（由 `probe_judge.closed_hits` 逐题记录并剔出主读数）。
     """
-    return build_prompt(qid, question, [])
+    return [{'role': 'system', 'content': CLOSED_SYS},
+            {'role': 'user', 'content': build_prompt(qid, question, [])[1]['content']}]
 
 
 def parse_chain_answer(raw: str, qid: str) -> dict:
@@ -500,9 +618,10 @@ def do_ask(arm: str, d: Path, limit: int, shard: tuple[int, int] | None = None,
         before = len(chapters)
         chapters = damage_chapters(chapters, damage)
         log(f'  [damage={damage}] ask 前重建进程内库：语料块 {before} → {len(chapters)}')
+    store = store_tag(arm, damage)          # ★ issue #44-五：库身份随破坏档分叉
     ad = None
     if arm != 'closed':
-        ad, closer, note = make_adapter(arm)
+        ad, closer, note = make_adapter(arm, store)
         if arm in ('bm25', 'versionblind'):                 # 进程内库：ask 前必须重建
             ad.ingest(chapters)
         elif arm == 'lingshu':
@@ -577,6 +696,10 @@ def do_ask(arm: str, d: Path, limit: int, shard: tuple[int, int] | None = None,
                     generator=C.GEN_MODEL, k=K, material_chars_cap=MATERIAL_CHARS,
                     chain_k=CHAIN_K, chain_material_chars_cap=CHAIN_MATERIAL_CHARS,
                     keys_fp=keys_fp(keys_all), limit=limit,
+                    store=store, persistent=arm in PERSISTENT_ARMS,
+                    data_fp=hmb_paths.data_fp(),
+                    adapter=hmb_paths.adapter_fp(arm),
+                    harness_files=hmb_paths.harness_fp(),
                     shard=(f'{shard[0]}/{shard[1]}' if shard else ''),
                     n_questions_all=len(keys_all),
                     calib_sample=int(bool(limit)),
@@ -699,13 +822,16 @@ def main() -> None:
                     help='OpenViking 专用端口（≠19333；隔离要求，见 _check_ov_isolation）')
     ap.add_argument('--ov-shared-workspace', action='store_true',
                     help='显式认下「OV 臂与既有库共用 workspace」（读数不可比，报告须标注）')
+    ap.add_argument('--allow-nonempty-store', action='store_true',
+                    help='显式认下「往已有数据的持久库里追加」（issue #44-五；默认拒绝）')
     ap.add_argument('--memos-shared-graph', action='store_true',
                     help='显式认下「memos 臂与既有库共用 Neo4j 图库」（逻辑隔离，报告须标注）')
     a = ap.parse_args()
-    global OV_PORT, OV_SHARED_OK, MEMOS_SHARED_OK
+    global OV_PORT, OV_SHARED_OK, MEMOS_SHARED_OK, ALLOW_NONEMPTY_STORE
     OV_PORT = a.ov_port
     OV_SHARED_OK = a.ov_shared_workspace
     MEMOS_SHARED_OK = a.memos_shared_graph
+    ALLOW_NONEMPTY_STORE = a.allow_nonempty_store
     if a.selftest_shard:
         selftest_shard()
         return
