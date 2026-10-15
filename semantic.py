@@ -29,7 +29,8 @@ def _cite_req(root): return SEM / "cite_req" / Path(root).name
 def _cite_out(root): return SEM / "cite_out" / Path(root).name
 
 PROMPT_VERSION = "semantic-v0.2"
-CITE_VERSION = "cite-v0.4"          # L2 依据契合的专属判官（另一套 prompt，别跟覆盖率判官混用）
+CITE_VERSION = J.CITE_PROMPT_VERSION   # L2 依据契合的专属判官（另一套 prompt，别跟覆盖率判官混用）
+                                    # ★ 真源在 judge.py（issue #40）：report 侧按同一常量核对版本
                                     # ★ v0.3：加「依据来源纪律」（作者 2026-09-30 裁定 #12：站外文献不作依据）
                                     # ★ v0.4／semantic-v0.2（issue #17）：判官输出必须原样回写
                                     #   `answer_sha1_12`，终裁时比对——口径一改就升版是冻结面纪律。

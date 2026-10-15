@@ -52,22 +52,25 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 OUT = HERE / 'out'
 ROOT = HERE.parent.parent                                   # 仓根
-# harness 解析（issue #35：第三方此前在 import 阶段就 ModuleNotFoundError）：
+if str(HERE) not in sys.path:
+    sys.path.insert(0, str(HERE))
+
+import hmb_paths                                            # noqa: E402
+
+# harness / 答卷目录的解析**只此一处**（chain/tools/hmb_paths.py，issue #41）：
 #   · 仓内 `chain/harness/` 是**随库发布的参考 harness**（common.py ＋ 适配器契约
 #     ＋ bm25 参考实现 ＋ 五家桩）——第三方 clone 即可跑 bm25 臂，见 chain/README §8；
 #   · `membench/dist/记忆系统对比_v1.0/harness/` 是作者本地的完整 harness（六家真实
 #     适配器与题库切换，不在发布面）。
 #   默认顺序＝本地优先（作者既有行为不变）；第三方没有本地 harness 时自动回落仓内发布版。
 #   要强制用发布版：环境变量 HMB_HARNESS=repo。
-HARNESS_LOCAL = ROOT / 'membench' / 'dist' / '记忆系统对比_v1.0' / 'harness'
-HARNESS_REPO = ROOT / 'chain' / 'harness'
-HARNESS_CANDIDATES = ((HARNESS_REPO, HARNESS_LOCAL)
-                      if os.environ.get('HMB_HARNESS', '').strip().lower() == 'repo'
-                      else (HARNESS_LOCAL, HARNESS_REPO))
-HARNESS = next((p for p in HARNESS_CANDIDATES if (p / 'common.py').is_file()), None)
+#   ★ 判分器 `probe_judge.py` 读同一份解析结果——两边不再各写一个 RUNS（issue #41）。
+HARNESS = hmb_paths.harness_dir()[0]
+RUNS = hmb_paths.runs_dir()                                  # 答卷根目录（与判分器同源）
 if HARNESS is None:
     raise SystemExit('找不到 harness（common.py）。已找过：\n  '
-                     + '\n  '.join(str(p) for p in HARNESS_CANDIDATES)
+                     + '\n  '.join(str(p) for p in (hmb_paths.HARNESS_LOCAL,
+                                                    hmb_paths.HARNESS_REPO))
                      + '\n本库已随库发布参考 harness：chain/harness/（见 chain/README §8）。')
 for p in (str(HERE), str(HARNESS)):
     if p not in sys.path:
@@ -251,7 +254,10 @@ def keys_fp(keys: list[dict]) -> str:
 
 
 def run_dir(arm: str) -> Path:
-    d = C.RUNS / f'chain_{arm}'
+    # ★ 用 hmb_paths 的解析结果，**不读 harness 自己的 `C.RUNS`**（issue #41）：
+    #   答卷目录必须与 probe_judge.py 读的那个逐字相同，而 harness 是随库/本机两套，
+    #   各自的 RUNS 定义不一定同步。这里以判分器同源的那份为准。
+    d = RUNS / f'chain_{arm}'
     d.mkdir(parents=True, exist_ok=True)
     return d
 
@@ -315,7 +321,7 @@ def make_adapter(arm: str):
         return ova.OpenVikingAdapter(base_url=base), None, f'OV 前缀 {ova.NOVEL_URI}'
     if arm == 'mem0':
         from adapters.mem0_adapter import Mem0Adapter
-        store = C.RUNS / f'mem0_{IDENTITY}' / 'qdrant'
+        store = RUNS / f'mem0_{IDENTITY}' / 'qdrant'
         ad = Mem0Adapter(store_dir=str(store))
         ad.USER = IDENTITY
         return ad, None, f'mem0 库 {store}'
@@ -367,6 +373,7 @@ def do_ingest(arm: str, d: Path, limit: int, damage: str = '') -> dict:
             closer()
     manifest = dict(arm=(damage_arm_name(damage) if damage else arm),
                     identity=IDENTITY, phase='ingest', dir=str(d),
+                    harness=hmb_paths.harness_label(),
                     base_arm=arm, damage=damage,
                     n_chapters=len(chapters),
                     chars=sum(len(c['text']) for c in chapters),
@@ -528,6 +535,7 @@ def do_ask(arm: str, d: Path, limit: int, shard: tuple[int, int] | None = None,
             log(f'  [{i}/{len(keys)}] {qid} 失败：{type(e).__name__}: {str(e)[:120]}')
     manifest = dict(arm=(damage_arm_name(damage) if damage else arm),
                     identity=IDENTITY, phase='ask', dir=str(d),
+                    harness=hmb_paths.harness_label(),
                     base_arm=arm, damage=damage,
                     n_questions=len(keys), ok=ok, errors=err,
                     llm_calls=llm.calls, llm_tokens=llm.tokens,

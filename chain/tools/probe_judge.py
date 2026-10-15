@@ -24,12 +24,22 @@ import hashlib
 import json
 import math
 import re
+import sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 OUT = HERE / 'out'
 ROOT = HERE.parent.parent
-RUNS = ROOT / 'membench' / 'dist' / '记忆系统对比_v1.0' / 'runs'
+if str(HERE) not in sys.path:
+    sys.path.insert(0, str(HERE))
+
+import hmb_paths                                            # noqa: E402
+
+# ★ 答卷根目录与运行器**共用同一份解析**（issue #41）：
+#   此前这里写死 `membench/dist/记忆系统对比_v1.0/runs`（仓外路径），而发布版 harness 把
+#   答卷写进 `chain/tools/out/runs`——第三方照 README §8 跑完 bm25 全链，642 份答卷落盘、
+#   判分输出 `[]`、calibrate 两臂 n=0，且 rc=0（静默失败）。
+RUNS = hmb_paths.runs_dir()
 
 # 主读数（值域自洽与复算一致性都按这一组比）
 # ★ 四态分项（issue #21）：预注册要求「active/retired/unresolved/absent 四项分别报」，
@@ -550,17 +560,29 @@ def judge_arms(arms: list[str], write: bool = True) -> list[dict]:
     n_expected = sum(1 for k in keys if not k['reconstructible'])
     rows, excluded = [], []
     for arm in arms:
+        d = RUNS / f'chain_{arm}'
         row = judge_arm(arm, keys, doc_norms, decoys)
         m = _manifest(arm)
         row['keys_fp'] = m.get('keys_fp')
         row['n_expected'] = n_expected
         row['sampled'] = bool(m.get('calib_sample'))
         row['manifest_errors'] = m.get('errors')
+        # ★ 来源字段（issue #41）：读数行必须能看出「这个数字是哪次运行的答卷算出来的」。
+        #   旧读数行不带任何来源，判分器读到另一套 harness 的旧卷时读者无从分辨。
+        row['dir'] = str(d)
+        row['harness'] = m.get('harness')
         reasons = []
         if not m:
             reasons.append('无 manifest.json（无法核对同源）')
         elif m.get('keys_fp') != fp:
             reasons.append(f"keys 指纹不符（manifest={m.get('keys_fp')} vs 当前={fp}）")
+        # ★ manifest.dir 必须等于**自己实际读的目录**（issue #41）：keys_fp 只能证明
+        #   「答案是同一套题」，证明不了「这是这次跑的卷」——换一套 harness 重跑，
+        #   keys_fp 照样对得上。目录不一致即剔除并写明原因（与「无 manifest」同一路径）。
+        md = str(m.get('dir') or '').strip()
+        if md and Path(md).resolve() != d.resolve():
+            reasons.append('manifest.dir=' + md + ' ≠ 实际读取目录 ' + str(d)
+                           + '（判分器与运行器读写的不是同一个目录，issue #41）')
         if (m.get('limit') or 0) > 0:
             reasons.append(f"答卷为 --limit {m.get('limit')} 的截断冒烟，非整臂读数")
         # ★ issue #27：带 _error / _json_ok=False 的**占位卷**不是正常答卷
@@ -836,8 +858,14 @@ def calibration(readings: list[dict], limit: int = 0, sut_arm: str | None = None
                 and abs(float(r[f]) - float(fresh[r['arm']][f])) < 1e-9
                 for r in readings for f in METRIC_FIELDS) and \
         all(r.get('n') == fresh[r['arm']]['n'] for r in readings)
-    c4 = bool(in_range and repro and same_source and complete)
-    if c4:
+    # ★ issue #41：某条臂 n=0（答卷目录里根本没卷）时不得宣布「自洽」——旧实现把它当成
+    #   空集上的全称真命题，于是「判分器读错目录、什么都没判到」也会给 c4=True。
+    empty_arms = [r['arm'] for r in readings if not r.get('n')]
+    c4 = None if empty_arms else bool(in_range and repro and same_source and complete)
+    if empty_arms:
+        c4_reason = ('臂 ' + str(empty_arms) + ' 的答卷数 n=0：' + str(RUNS)
+                     + ' 下没有可判的答卷（判分器与运行器读写的不是同一个目录？issue #41）')
+    elif c4:
         c4_reason = '值域合法、答卷同源完整、且读数可由答卷独立复算'
     elif not in_range:
         c4_reason = '指标值域越界'
@@ -891,7 +919,9 @@ def calibration(readings: list[dict], limit: int = 0, sut_arm: str | None = None
                 sut_arm=sut['arm'] if sut else None,
                 sut_buckets=sut_buckets,
                 gate_stage=stage,
-                criteria=dict(c1=bool(c1), c2=bool(c2), c3=c3, c4=bool(c4),
+                # ★ c4 保留三态（issue #41）：n=0 的臂上是「未评」（None），不是「过」。
+                criteria=dict(c1=bool(c1), c2=bool(c2), c3=c3,
+                              c4=(None if c4 is None else bool(c4)),
                               c_damage=damage_ok),
                 passed=passed, details=details)
 
@@ -1266,8 +1296,19 @@ def main() -> None:
     else:
         arms = sorted(p.name[len('chain_'):] for p in RUNS.glob('chain_*')
                       if (p / 'sut' / 'out').is_dir())
+    # ★ issue #41：读不到任何答卷时**非零退出**。旧实现打一个空表 `[]`、rc=0，第三方
+    #   照 chain/README §8 跑完 bm25 全链会以为「判分跑过了、只是没有臂」。
+    if not arms:
+        print('[error] ' + str(RUNS) + ' 下没有找到任何答卷（runs/chain_*/sut/out/）。')
+        print('        判分器与运行器共用同一份解析（chain/tools/hmb_paths.py）；')
+        print('        请确认答卷目录：HMB_RUNS=<dir>，或先跑 chain/tools/probe_runner.py。')
+        sys.exit(2)
     rows = judge_arms(arms)
     print(json.dumps(rows, ensure_ascii=False, indent=1))
+    if not rows:
+        print('[error] ' + str(len(arms)) + ' 条臂全部被剔出整臂读数（无可用答卷）；')
+        print('        明细见 out/readings_excluded.json（答卷根目录 ' + str(RUNS) + '）')
+        sys.exit(2)
     if a.gate:
         excluded = _load(OUT / 'readings_excluded.json', [])
         if excluded:

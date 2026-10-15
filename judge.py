@@ -45,26 +45,39 @@ EXT_HARD = (r"https?://", r"\bwww\.", r"doi:\s*10\.", r"\barxiv\b", r"\bbiorxiv\
 EXT_SOFT = ("研究表明", "研究团队", "科学家", "学界", "文献", "论文", "期刊", "实验证明")
 CALIB = ROOT / "calib"
 
-NEG_MARKERS = ["不是", "并非", "不属于", "不能说", "不能据此", "没有证据", "无证据",
-               "并非如此", "不该", "不能断言", "无法确认", "未明确", "没有明确",
-               "不成立", "错误", "不能认为", "不应", "不意味着", "不代表",
-               # 光杆否定词——实测漏掉过「没有超自然设定」这种（窗口里就是「没有」，
-               # 而词表里只有「没有证据」「没有明确」这类更长的组合）
-               "没有", "不存在", "不含", "未出现", "未曾", "无任何", "并没有",
-               # 光杆「不能／不可」——实测：「不能因此说 X」不在词表任何组合里（「不能断言」挡不住
-               # 「不能因此说」），于是正当的否定式表述被判成编造
-               "不能", "不可"]
 PASS_SCORE = 0.7                         # 达标线（全大意命中恰好 0.7）
 REVIEW_SCORE = 0.4                       # 低于此分为硬错
 PARAPHRASE_CREDIT = 0.7                  # 换表述/大意命中的折算（作者 2026-09-30 裁定）
-NEG_WINDOW = 12          # 归一化文本上的最短回溯窗（保留旧行为）
 NEG_CLAUSE_MAX = 40      # 子句级回溯窗上限
 MIN_QUOTE_CHARS = 8      # 有效引文的最短长度（归一化后）——见 issue #9
 
-# ★ 双重否定识别（issue #29）：否定词后面紧跟这些「命题态度动词」时，它否的是那个动词短语，
-#   而不是触发词本身——「不可否认 X」「没有人能否认 X」「不能不承认 X」表达的都是**肯定** X。
-#   旧的「同子句词袋」判定只要窗口里有任一否定词就豁免，这类句式因此可整句绕过禁编造轴。
-ATTITUDE_VERBS = ("否认", "承认", "认同", "接受", "认为", "怀疑", "排除", "例外", "否定")
+# ★ 否定判定四件套（issue #29 起用，issue #39 重排优先级）：组合否定标记 `NEG_MARKERS`
+#   → 状语从句辖域 `CLAUSE_END_MARKERS` → 否定语素奇偶 `NEG_MORPHEMES` → 转折肯定标记
+#   `AFFIRM_MARKERS`。判定逻辑全在 `_clause_negated()`，此处只放表与理由。
+#
+#   ★ 为什么留着 `NEG_MARKERS`：issue #39 修的不是这张表，而是它外面的**豁免条件**。旧实现是
+#     「表里任一标记出现在命中之前即豁免」，只靠 `ATTITUDE_VERBS`（否认／承认／认为…）挡
+#     双重否定，于是 B1–B5 五类句式（不是A而是X／不可能不是X／不能不说X／没有人不相信X／
+#     竟是X）整类漏判。
+#   ★ 为什么光杆否定字**不**单独构成豁免：「没解决」「不许」「不满」里的否定语素否的是它
+#     自己的谓语，管不到后面的命中。标准答案实测——q009「他本人就没解决…面对一个永恒的
+#     难题」、q031「自动化系统不许自我检测」、q035「对现状不满的叛徒」，都靠这条不被误判。
+#   ★ issue #39 反方向误报（该 issue 记为「另提 P1」，此处一并修掉）：旧实现「否定词后紧跟
+#     态度动词即不算否定」，把「不应认为 X」「不该接受 X」「我不认为是 X」这几条**正当否定**
+#     判成编造。现在态度动词不再参与判定，改由否定语素奇偶兜底，故这三条标记补进表里。
+NEG_MARKERS = ("不是", "并非", "不属于", "不能说", "不能据此", "没有证据", "无证据",
+               "并非如此", "不该", "不能断言", "无法确认", "未明确", "没有明确",
+               "不成立", "不能认为", "不应", "不意味着", "不代表", "没有", "不存在",
+               "不含", "未出现", "未曾", "无任何", "并没有", "不能", "不可",
+               "不认为", "不觉得", "不主张")
+NEG_MORPHEMES = ("不", "没", "无", "未", "非", "否", "莫", "勿")
+# 含否定字但不表否定的词（计数前先剔除，否则「非常确定」「无论」会被数成一次否定）
+NEG_FALSE_FRIENDS = ("非常", "非但", "不仅", "不但", "不失", "无比", "无论", "无疑", "无数",
+                     "无奈", "非议", "没准", "未雨绸缪", "非要", "非同")
+# ★ 转折/肯定标记（issue #39）：「不是 A 而是 X」「没想到他竟是 X」——否定只作用于转折词之前，
+#   其后的命中是**肯定**断言，不得豁免。
+AFFIRM_MARKERS = ("而是", "竟是", "反而是", "反而", "实则", "却是", "才是", "原来是",
+                  "其实", "事实上", "实际上")
 
 # ★ 对冲/正反堆叠标记（issue #10）：同一份答卷把正反候选并列时，词组命中不算确认——
 #   规则层不该判 pass，应交语义层复核。单个标记不算（正常行文里也会出现），要求 ≥2 处。
@@ -76,6 +89,9 @@ HEDGE_MIN = 2
 #   管不到主句的断言。
 CLAUSE_END_MARKERS = ("的情况下", "的前提下", "的时候", "以来", "之后", "以前", "的话",
                       "而言", "来说", "事实上", "实际上", "其实")
+# ★ 子句边界字符（唯一真源，`_norm_keep_breaks()` 与 `_norm_map()` 共用）：
+#   句读、逗号、冒号、换行，外加全角加号 `＋`——它是答卷里**列表项**的分隔符（见下）。
+CLAUSE_BREAK_CHARS = "。！？；，!?;,：:\n＋"
 
 
 def _norm_keep_breaks(s: str) -> str:
@@ -86,10 +102,14 @@ def _norm_keep_breaks(s: str) -> str:
     却把后半句的触发词一起豁免了（q014 的错答因此躲过禁编造轴）。
     顿号、破折号等**不**算边界：它们常出现在并列宾语里
     （「不能断言成克隆、复制体、转世或灵魂迁移」——否定词确实管着末项）。
+    ★ 全角加号 `＋` 算边界（与 `；` 同级）：它是答卷里**列表项**的分隔符，不是并列宾语里的顿号。
+    标准答案实测（q023）：「（唯一没有维护者的是认同）＋防伪不防诱导＋等级把知道的权利分级
+    （回指特权批判）」——`没有` 管的是它自己的谓语，`＋` 之后的 `诱导`／`回指` 是另起一项，
+    旧实现靠 `ATTITUDE_VERBS` 里的「认同」偶然跳过才算对，这里改为按边界截断。
     """
     def repl(m):
         seg = m.group(0)
-        return "。" if any(c in seg for c in "。！？；，!?;,：:\n") else ""
+        return "。" if any(c in seg for c in CLAUSE_BREAK_CHARS) else ""
     return re.sub(r"[\s\W_]+", repl, s or "")
 
 
@@ -97,14 +117,74 @@ def norm(s: str) -> str:
     return re.sub(r"[\s\W_]+", "", s or "", flags=re.UNICODE)
 
 
-def answer_sha1_12(resp) -> str:
-    """答卷指纹（issue #17）：判官结论必须与它评的那份答卷绑定。
+_SEP_RE = re.compile(r"[\s\W_]+")
 
-    口径与 `semantic.py` 的 `_answer_of` 一致（answer 优先，缺则 conclusion）——
+
+def _norm_map(s: str):
+    """一次性产出「全剥」文本、"保留句读"文本，以及两者的下标映射（issue #37）。
+
+    返回 `(flat, keep, idx)`：`flat == norm(s)`、`keep == _norm_keep_breaks(s)`，
+    `idx[i]` 是 `flat` 第 i 个字符在 `keep` 里的下标。
+
+    为什么需要它：命中判定在 `flat` 上做（标点全剥，「主角，就是巨子本人」→「主角就是巨子本人」，
+    触发词命中），逐处否定判定却要在 `keep` 上找同一片段——插了标点就找不到，
+    旧实现 `if i < 0: return False` 把这当成「每一处都被否定」而**放行**（issue #37）。
+    有了映射，两边不再各找各的：命中在 `flat` 上定位后直接映射回 `keep` 做子句切分。
+    """
+    s = s or ""
+    flat_parts, keep_parts, idx = [], [], []
+    klen = 0
+    i, n = 0, len(s)
+    while i < n:
+        m = _SEP_RE.match(s, i)
+        if m:
+            seg = m.group(0)
+            k = "。" if any(c in seg for c in CLAUSE_BREAK_CHARS) else ""
+            if k:
+                keep_parts.append(k)
+                klen += 1
+            i = m.end()
+            continue
+        flat_parts.append(s[i])
+        idx.append(klen)
+        keep_parts.append(s[i])
+        klen += 1
+        i += 1
+    return "".join(flat_parts), "".join(keep_parts), idx
+
+
+ANSWER_SHA_SCHEME = "ans-v2"    # 指纹口径版本（issue #40）
+# ★ L2 依据契合判官的 prompt 版本（issue #40 补丁方向 ②）：`final_<dst>_cite.json` 的每行
+#   都带 `prompt_version`，本处按它核对——判官 prompt 升版后旧判词一并作废（否则升版到
+#   `finalize` 重判之前，`report` 仍会采信上一版 prompt 的判词）。真源在 semantic.py，
+#   两处共用本常量，不许各写一份。
+CITE_PROMPT_VERSION = "cite-v0.4"
+
+
+def answer_sha1_12(resp) -> str:
+    """答卷指纹（issue #17／#40）：判官结论必须与它评的那份答卷绑定。
+
+    口径 v2（issue #40 起）＝哈希**判官读到的全部字段**：`conclusion`、`answer`、
+    每条 `evidence` 的 `(cid, quote)`（按原顺序）、`condition`、`confidence`。
     全链只此一处定义：prepare 写进请求与 manifest、判官原样回写、finalize 与 report 比对。
+
+    ★ 为什么不能只哈希答案文本：L2 依据契合判官（`cite-v0.4`）判的**恰恰是引文**
+      （`semantic.py:_cite_materials` 的材料＝答案＋每条 evidence 的 quote）。v1 只哈希
+      `answer or conclusion`，于是「结论一字不动、引文换成与结论无关的句子」指纹不变，
+      `score_sut._stale_qids()` 不判过期，旧 `fit` 判词静默生效、q001 照样 pass（实测）。
+    ★ `scheme` 进哈希：口径再升版时旧判词自动全部作废，不需要额外迁移。
     """
     if isinstance(resp, dict):
-        s = (resp.get("answer") or resp.get("conclusion") or "").strip()
+        canon = {
+            "scheme": ANSWER_SHA_SCHEME,
+            "conclusion": (resp.get("conclusion") or "").strip(),
+            "answer": (resp.get("answer") or "").strip(),
+            "condition": str(resp.get("condition") or ""),
+            "confidence": str(resp.get("confidence") or ""),
+            "evidence": [[str(e.get("cid") or ""), (e.get("quote") or "").strip()]
+                         for e in (resp.get("evidence") or []) if isinstance(e, dict)],
+        }
+        s = json.dumps(canon, ensure_ascii=False, sort_keys=True)
     else:
         s = str(resp or "").strip()
     return hashlib.sha1(s.encode("utf-8")).hexdigest()[:12]
@@ -238,35 +318,43 @@ def match_any_frag(text: str, patterns):
 
 
 def _clause_negated(clause: str, hit_off: int) -> bool:
-    """子句内是否有**有效**否定标记管着命中处（issue #29 的补刀）。
+    """子句内是否有**有效**否定管着命中处（issue #29 的补刀，issue #39 重写）。
 
     `clause` 是命中所在的子句（含命中本身），`hit_off` 是命中在子句里的起点。
-    否定标记必须**从命中起点之前开始**：命中词自身含否定词时（触发词就是
-    「正文没有交代任何相关技术」），那个「没有」是触发词的一部分，不是对它的否定——
-    旧实现把窗口取到「命中+命中之前」，于是这类触发词被自己的字面骗过、拿到豁免。
-    逐个否定标记再查两件事：
-      · 标记与命中之间若夹着命题态度动词（否认／承认／怀疑…），说明它否的是那个动词短语
-        而不是命中（「不可否认 X」「没有人能否认 X」都是**肯定** X）⇒ 不算否定辖域；
-      · 夹着状语从句终结标记（「…的情况下」「…的前提下」）时，否定词的辖域止于从句，
-        管不到后面的主句 ⇒ 同样不算。
+    只统计命中起点**之前**的部分：命中词自身含否定词时（触发词就是
+    「正文没有交代任何相关技术」），那个「没有」是触发词的一部分，不是对它的否定。
+
+    四步（顺序即优先级）：
+      ⓪ **组合否定标记**（`NEG_MARKERS`）必须出现在命中之前：光杆否定字（「没解决」
+         「不许」「不满」）否的是它自己的谓语，管不到后面的命中——标准答案实测见
+         `NEG_MARKERS` 上方注释。没有标记 ⇒ 直接不豁免；
+      ① **状语从句终结标记**（「…的情况下」「…的前提下」）：否定辖域止于从句，
+         其之前的否定管不到后面的主句 ⇒ 只从最后一个终结标记之后开始数；
+      ② **否定语素数奇偶**（issue #39）：偶数个（含两个）＝双重否定＝肯定，不豁免。
+         「不可能不是 X」「不能不说 X」「没有人不相信 X」都是这一类；
+      ③ **转折/肯定标记**（而是／竟是／实则…）：否定只作用于转折词之前，
+         其后的命中是肯定断言 ⇒ 不豁免。「不是 A 而是 X」是这一类。
+
+    旧实现是「词表里有任一否定词就豁免」，于是 B1–B5 与转折肯定五类句式全部漏判；
+    它用「否定词后紧跟态度动词」近似处理双重否定，副作用是把「不应认为 X」
+    「我不认为是 X」这类**正当否定**判成了编造——⓪＋② 同时修掉这个反方向误判。
     """
-    for m in NEG_MARKERS:
-        nm = norm(m)
-        if not nm:
-            continue
-        pos = 0
-        while True:
-            j = clause.find(nm, pos)
-            if j < 0 or j >= hit_off:
-                break
-            seg = clause[j + len(nm):hit_off]
-            pos = j + 1
-            if any(v in seg for v in ATTITUDE_VERBS):
-                continue                     # 双重否定 ⇒ 实为肯定，不豁免
-            if any(v in seg for v in CLAUSE_END_MARKERS):
-                continue                     # 辖域止于状语从句，管不到主句
-            return True
-    return False
+    head = clause[:max(0, hit_off)]
+    for cm in CLAUSE_END_MARKERS:
+        k = head.rfind(cm)
+        if k >= 0:
+            head = head[k + len(cm):]
+    for w in NEG_FALSE_FRIENDS:
+        head = head.replace(w, "")
+    if not any(m in head for m in NEG_MARKERS):
+        return False          # 光杆否定字不算：见 NEG_MARKERS 上方的标准答案实测
+    n = sum(head.count(c) for c in NEG_MORPHEMES)
+    if n == 0 or n % 2 == 0:
+        return False                     # 无否定，或双重否定＝肯定
+    last = max(head.rfind(c) for c in NEG_MORPHEMES)
+    if any(m in head[last + 1:] for m in AFFIRM_MARKERS):
+        return False                     # 否定辖域止于转折词，其后是肯定断言
+    return True
 
 
 def any_affirmed(text: str, hit: str) -> bool:
@@ -275,19 +363,27 @@ def any_affirmed(text: str, hit: str) -> bool:
     旧实现只定位第一处出现（`t.find(h)`），于是「先写一句被否定的『不是 X』、
     后面再断言 X」整条拿到豁免（实测 80/82 条可翻转）；反过来，只要有一处是肯定
     断言就不该放过。采分点与禁编造轴共用这一条判据。
+
+    ★ issue #37：命中在 `flat`（标点全剥）上枚举，再**映射**回 `keep`（保留句读）
+    做子句切分。旧实现在 `keep` 里找 `norm(hit)`，答卷只要在触发词中间插一个
+    「，」「：」「。」或换行就定位失败，被当成「每一处都被否定」而放行
+    （全量 134/134 条字面触发词可翻转，端到端 131 例 fail→pass）。
+    定位失败时**绝不默认放行**：`flat` 上找到的每一处都必须判到。
     """
-    tt = _norm_keep_breaks(text)
+    flat, keep, idx = _norm_map(text)
     h = norm(hit)
-    if not h:
+    if not h or not flat:
         return False
     pos = 0
     while True:
-        i = tt.find(h, pos)
+        i = flat.find(h, pos)
         if i < 0:
             return False
-        start = tt.rfind("。", 0, i)
-        start = max(0 if start < 0 else start, i - NEG_CLAUSE_MAX)
-        if not _clause_negated(tt[start:i + len(h)], i - start):
+        k0 = idx[i]
+        k1 = idx[i + len(h) - 1] + 1
+        start = keep.rfind("。", 0, k0)
+        start = max(0 if start < 0 else start, k0 - NEG_CLAUSE_MAX)
+        if not _clause_negated(keep[start:k1], k0 - start):
             return True
         pos = i + 1
 
@@ -296,38 +392,22 @@ def fabrication_triggered(text: str, t: str) -> bool:
     """触发词 `t` 是否存在**未被否定**的出现（issue #18）。
 
     字面触发词：逐处枚举（旧实现只看第一处）。
-    正则触发词：先按正则取首次命中片段，再逐处判定该片段是否被否定。
+    正则触发词：取**全部**匹配片段逐处判定（issue #39）——旧实现只取第一处
+    匹配（`match_any_frag`），于是「先在否定语境下命中一次，再在别处用**另一片段**
+    命中同一正则并正面断言」可以整条绕过（q029 的 B6 实测）。
     """
     if str(t).startswith("re:"):
-        _pat, _frag = match_any_frag(text, [t])
-        return bool(_pat) and any_affirmed(text, _frag)
-    return any_affirmed(text, t)
-
-
-def negated(text: str, hit: str) -> bool:
-    """命中处附近出现否定标记 ⇒ 视为否定表述，不算违规。
-
-    窗口**包含命中文本本身**：否则「没有超自然」这类表述里，「没有」跨在命中
-    「有超自然」的起点上，窗口只剩一个「没」，豁免失效（实测踩到过）。
-
-    窗口按**子句**取（2026-09-30 修）：一个否定词常常管着一串并列宾语，
-    例如「也不能断言成克隆、复制体、转世或灵魂迁移之类」——末项离否定词
-    有 14 字，旧的固定 12 字窗会漏掉它，把正当的否定式表述判成违规
-    （q029 的 y05 实测）。现在回溯到最近的句读边界，上限 NEG_CLAUSE_MAX。
-    """
-    t = _norm_keep_breaks(text)
-    h = norm(hit)
-    i = t.find(h)
-    if i < 0:
-        t = norm(text)                      # 退化：句读标记影响了定位
-        i = t.find(h)
-        if i < 0:
+        pat = str(t)[3:].strip()
+        if not pat:
             return False
-        start = max(0, i - NEG_WINDOW)
-        return _clause_negated(t[start:i + len(h)], i - start)
-    start = t.rfind("。", 0, i)
-    start = max(0 if start < 0 else start, i - NEG_CLAUSE_MAX)
-    return _clause_negated(t[start:i + len(h)], i - start)
+        # 在**归一化文本**上匹配（与 `match_any_frag` 同一口径：正则里写的是词，
+        # 不是标点）；逐处判定仍回到原答卷上做，`any_affirmed` 自会把片段映射回 `keep`。
+        try:
+            frags = [m.group(0) for m in re.finditer(pat, norm(text))]
+        except re.error:
+            return False
+        return any(f and any_affirmed(text, f) for f in frags)
+    return any_affirmed(text, t)
 
 
 # ---------------------------------------------------------------- 轴
@@ -341,6 +421,24 @@ def _locate_anywhere(quote: str, idx: dict):
         if nq in norm(ch["text"]):
             return cid
     return None
+
+
+def whitelisted_quote(card, quote: str) -> bool:
+    """引文是否与卡片 `supporting_evidence` 里某条白名单引文**逐字相等**（issue #38）。
+
+    用途：最短长度门（issue #9）的**白名单豁免**。白名单句是作者自己认定的完整依据，
+    卡片里本就有 24 条归一化后短于 8 字的引文（13 条 primary，涉及 9 张卡）；
+    `MIN_QUOTE_CHARS` 一刀切把它们判成「引文过短」⇒ 依据轴（结构轴）硬 fail，
+    作者写的标准结论 + 作者自己白名单里的引文也 pass 不了（旧树 13/13 pass）。
+
+    ★ 只认「整句相等」，**不认「是白名单句的子串」**——否则 #9 的碎片攻击
+      （「提升公民权限」是白名单句的子串）会被一并放回。
+    """
+    nq = norm(quote)
+    if not nq:
+        return False
+    return any(nq == norm(it.get("quote") or "")
+               for it in (card.get("supporting_evidence") or []))
 
 
 def axis_evidence(card, resp, idx, min_required=1, open_mode=False):
@@ -359,8 +457,10 @@ def axis_evidence(card, resp, idx, min_required=1, open_mode=False):
             continue
         # ★ 最短长度门（issue #9）：单字引文（「5」「的」）几乎必然能在章正文里定位到，
         #   于是依据轴与 L2 依据契合轴同时通过、三分数 C 栏记 100% 可定位。
-        #   归一化后短于 MIN_QUOTE_CHARS 的引文一律计为无效引用。
-        if len(nq) < MIN_QUOTE_CHARS:
+        #   归一化后短于 MIN_QUOTE_CHARS 的引文计为无效引用。
+        # ★ 白名单豁免（issue #38）：与卡片 `supporting_evidence` 里某条引文**逐字相等**时
+        #   不受长度门约束——那本来就是作者认定的完整依据，一刀切会把作者的标准答案也判 fail。
+        if len(nq) < MIN_QUOTE_CHARS and not whitelisted_quote(card, quote):
             invalid.append(f"[{i}] 引文过短（归一化后 {len(nq)} 字 < {MIN_QUOTE_CHARS}）")
             continue
         if cid in idx and nq in norm(idx[cid]["text"]):
@@ -586,6 +686,11 @@ def axis_citation_fit(card, resp, qid=None):
             ni = norm(it.get("quote") or "")
             if not ni:
                 continue
+            # ★ 逐字相等 = 直接命中白名单（issue #38）：与依据轴的长度门豁免同一口径，
+            #   短白名单引文（「我还是我吗」5 字）必须能匹配上，否则契合轴与依据轴叠加扣分。
+            if nq == ni:
+                matched.append({"idx": i, "tier": it.get("weight") or "unweighted"})
+                break
             # ★ 去掉 `nq in ni`（issue #9）：引文是白名单引文的**子串**时恒真（单字「5」即通过）。
             #   只保留「白名单引文被答卷引文包含」（长引用法）与重叠率两条。
             if len(nq) < MIN_QUOTE_CHARS:
@@ -856,11 +961,17 @@ def load_semantic_cite(dirname: str) -> dict:
 
     只用来**撤销**依据契合轴的降级（fit ⇒ 恢复 pass）；它不评判覆盖率，
     故与覆盖率判官（semantic）分属两套 prompt，互不替代。
+
+    ★ prompt 版本绑定（issue #40）：只采信 `prompt_version == CITE_PROMPT_VERSION` 的行；
+      没写版本的旧文件同样不采信（判词必须声明它由哪版 prompt 生成，无从核对即作废，
+      与 #17「旧文件没写指纹即视为过期」同一口径）。
+      —— `final_<dst>.json`（覆盖率判官）的行不带版本字段，故本处不适用，另议。
     """
     f = ROOT / "semantic" / f"final_{dirname}_cite.json"
     if not f.exists():
         return {}
-    return {r["name"]: r["cite"] for r in json.loads(f.read_text(encoding="utf-8"))}
+    return {r["name"]: r["cite"] for r in json.loads(f.read_text(encoding="utf-8"))
+            if r.get("prompt_version") == CITE_PROMPT_VERSION}
 
 
 def run_calib(root: Path):
