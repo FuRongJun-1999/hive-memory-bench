@@ -115,7 +115,10 @@ def main():
                 (d / "retrieval" / f'{k["qid"]}.json').write_text(
                     json.dumps({"qid": k["qid"], "material": mat}, ensure_ascii=False),
                     encoding="utf-8")
-            m = {"arm": name, "phase": "ask", "keys_fp": fp, "n_questions": len(keys),
+            m = {"arm": name, "phase": "ask", "keys_fp": fp,
+                 # ★ issue #44-二：manifest 须带数据指纹，否则整臂被判「不同源」剔除。
+                 "data_fp": pj.hmb_paths.data_fp(),
+                 "n_questions": len(keys),
                  "limit": 0, "calib_sample": 0}
             m.update(manifest or {})
             (d / "manifest.json").write_text(json.dumps(m, ensure_ascii=False),
@@ -357,7 +360,8 @@ def main():
 
         pr.load_corpus = lambda: list(chapters)
         pr.load_keys = lambda: list(fkeys)
-        pr.make_adapter = lambda arm: (FakeAd(), None, "stub")
+        # ★ issue #44-五：make_adapter 多了 store 形参（库身份随破坏档分叉）。
+        pr.make_adapter = lambda arm, store=None: (FakeAd(), None, "stub")
         pr.retrieve_for = lambda arm, ad, q, k: [
             {"cid": f"D#{i}", "text": f"第{i}块正文", "score": 1.0} for i in (1, 2)]
         pr.C.LLM = _StubLLM

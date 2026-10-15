@@ -77,13 +77,15 @@
 | 项 | 实数 |
 |:--|:--|
 | 语料段 | **270 段**（A 类 3 项目 × 60 提交 ＋ B 类 3 故事 × 30 章） |
-| 语料体量 | **104,404 字符** |
+| 语料体量 | **103,168 字符** |
 | 题量 | **642 道** |
 | 主链 / 干扰影子链 | **63 条 / 24 条**（生成日志共 87 条链） |
 | 题类分布 | 状态归属 201／历史 189／现值 63／时点 63／变更 63／缘由 63 |
 | 四态分布 | active 425／retired 135／unresolved 70／absent 12 |
 | 干扰档分布（主链） | 同名异体 19／none 17／同值异时 12／同体异名 10／嵌套主体 5 |
-| `reconstructible=True` | **17 道**（可推题，单列不进主读数） |
+| `reconstructible=True` | **40 道**（可推题，单列不进主读数） |
+| `ambiguous=True` | **41 道**（同名异体歧义题，单列不进主读数；issue #44-一） |
+| 主读数题 | **561 道**（642 − 40 可推 − 41 歧义） |
 | 随机种子 | `20261010`（见 [`keys/synth_log.json`](keys/synth_log.json) `seed` 字段） |
 
 ## 5 真值内生 · 零判官
@@ -104,9 +106,9 @@
 |:--|:--|:--|:--|
 | ① | **版本盲臂指纹**：`versionblind`（只留每条链最新值、丢弃全部历史）在**现值正确率**上 ≈ 正常臂，在**历史召回率／变更链完整率**上 **→ 0** | `probe_judge.calibration` → `c1` | 记「不过」 |
 | ② | **破坏方向**：`乙/丙/丁`（坏写入／坏检索／坏呈现）的下降方向与预注册映射表一致，且**两两可分** | `probe_judge._damage_criterion` → `c_damage`；破坏臂由 `probe_runner --damage` 产出 | **`c_damage=None`（未评）⇒ `passed=False`、`gate_stage='no-damage-arms'`** |
-| ③ | **闭卷门**：`closed` 臂在核心指标上 **≈ 0**（否则题目可猜，须重造） | `calibration` → `c2` | 记「不过」 |
+| ③ | **闭卷门**：`closed` 臂在核心指标上 **≈ 0**，且**逐题**命中率 ≤ 5%（命中题＝可猜题，见下） | `calibration` → `c2`（聚合率 ＋ `closed_hits` 逐题率） | 记「不过」 |
 | ④ | **链长单调性**：主指标随链长增大 **单调退化**（否则压力轴无效） | `calibration` → `c3`（**逐臂**评，汇总口径＝全部被测臂满足） | 无被测臂 ⇒ `c3=None`、`gate_stage='controls-only'` |
-| ⑤ | **读数自洽**：答卷与当前 keys 同源且完整、读数可由磁盘答卷独立复算 | `calibration` → `c4` | 记「不过」 |
+| ⑤ | **读数自洽**：答卷与当前数据同源（`keys_fp` ＋ `data_fp`）且完整、读数可由磁盘答卷独立复算 | `calibration` → `c4` | 记「不过」 |
 
 > **判据 ② 的现状（诚实边界）**：本判据此前**未实现**，判分器把预注册的 ② 换成了 ⑤「读数自洽」，
 > 于是不跑任何破坏臂也会宣布「全过」——首轮报告 §二 的「效度门按预注册的形状兑现」据此不成立。
@@ -123,15 +125,39 @@ python -X utf8 chain/tools/probe_runner.py --phase ask    --arm bm25 --damage ba
 故在无 LLM 的环境里也能单测；映射表与阈值在 `probe_judge.DAMAGE_MAP` / `MIN_DAMAGE_DROP` /
 `MIN_SEPARATION`。
 
-判据 ④ 的**方向**判据（issue #20）：相邻档容差按各桶样本量算 95% 置信限（不再固定 0.05），
-且首尾必须真实下降 ≥ `MIN_DROP`；判据 ④ 的**逐臂**口径（issue #25）：`calibration.json` 里
-`c3_by_arm` 逐臂给结论与理由，`criteria.c3` 取「全部被测臂满足」。
+判据 ④ 的**方向**判据（issue #20 起、**issue #44-三** 定型）：不再只看点估计，而是**单侧
+两比例检验**——首尾两桶的 H1「短链 > 长链」须 `z ≥ 1.645`（α=0.05）**且**点估计下降
+≥ `MIN_DROP − 1e-9`（浮点残差不算「差一点」）；相邻档回升须点估计 ≤ `MIN_RISE` 且单侧
+`z < 1.645`。旧口径（首尾差 ≥ 0.05、相邻回升 ≤ 抽样噪声）会放行两类臂：**U 形**
+（0.80→0.60→0.75，首尾差恰 0.05）与**平坦臂**（真值三桶相同，靠抽样噪声凑出 0.05 的差，
+实测 2000 次二项抽样里 6.1% 判过，旧判据 24.2%）。判据 ④ 的**逐臂**口径（issue #25）：
+`calibration.json` 里 `c3_by_arm` 逐臂给结论与理由，`criteria.c3` 取「全部被测臂满足」。
+
+判据 ③ 的**逐题**口径（**issue #44-四**，补 issue #30 未落地的一半）：旧实现只比三个聚合率
+（现值／历史／变更链各 ≤ 0.2），于是闭卷臂在 642 题里答对 51 道（各率 18%）时 ③ 照样判过。
+现在 `closed_hits()` 逐题扫闭卷答卷，命中题（＝**可猜题**：没读材料就答对）须 ≤ `CLOSED_MAX_HIT`
+＝5%，否则 ③ 不过（题库须重造）；**且这些题从被测臂主读数中剔除**，分母随之下调，
+清单落 `chain/tools/out/closed_hits.json`，读数行带 `n_closed_excluded`。
 
 ## 7 口径与政策
 
 - **合成语料测「能力上限面」**：程序生成的规律性可能被检索系统「钻空子」；**真实表现回 [`../e2e/`](../e2e/) 轨**验证，两轨冲突以 e2e 为准；三线分数**不可横比**（语料、判据、量纲不同）；
 - **合成器代码随库公开**（[`tools/synth.py`](tools/synth.py)）：合成器 bug 即题库 bug，公开以便复核；
 - **不可重建性**：每题带 `reconstructible` 标记，可推题（可由其他记录逻辑反推答案）**单列、不进主读数**；
+- **同名异体歧义（issue #44-一）**：每题另带 `ambiguous` 标记。同名异体档的影子链与主链
+  `(doc, subject, slot)` **逐字相同**，语料里没有任何文本依据能把两者分开 ⇒「把同名同槽位的
+  句子按序号读成一条链」是语料**唯一支持**的读法，而答案键只按主链取值。凡合并读法与答案键
+  不一致的题（实测 41 道）**与可推题同口径剔出主读数**——旧实现只剔可推题，这 41 道留在
+  主读数里，忠实读者被判错、还被记成「主体混淆」。标记由 `synth.py` 逐题机械算出，
+  `verify_keys.py` ⑦ 独立复算；`probe_judge._excluded` 判分器同口径。
+- **主读数分母**：642 题 − 可推 40 − 歧义 41 ＝ **561**（`verify_keys.py` ⑧ 逐次打印）；
+- **库身份与三份指纹（issue #44-二/五）**：持久库的臂（lingshu／openviking／mem0／memos／
+  hindsight）此前各臂共用常量身份 `IDENTITY=chain`，而运行器**不调用** `ad.reset()` ⇒ 干净臂与
+  三条破坏臂互相污染（乙被追加进干净臂已灌满的库、干净臂读到被破坏过的库）。现在库身份按
+  `store_tag(arm, damage)` 分叉，写入前查本地账本与适配器自报的 `count()/is_empty()`，非空即
+  中止（`--allow-nonempty-store` 可显式认下）。manifest 另记 `data_fp`（语料＋答案键＋生成
+  日志的规范化哈希）、`adapter`（模块名／路径／源码哈希）、`harness_files`（harness 源码哈希表）
+  ——旧的 `keys_fp` 只哈希每题的值／状态／序号，**换一套语料它一位不变**。
 - **答案键公开 ⇒ 训练污染提醒**：`keys/` 与 `corpus/` 随本库公开，评测训练截止日在此之后的模型时，读数可能被污染，请自行评估。
 
 ## 8 用法（三步）
@@ -151,6 +177,13 @@ python -X utf8 chain/tools/probe_judge.py
 ```
 
 > 判分器与运行器读写**同一个**答卷目录（见上）；`HMB_RUNS=<dir>` 可把两边一起挪走。
+
+> **库身份与写入守卫（issue #44-五）**：有外部持久库的臂（lingshu／openviking／mem0／memos／
+> hindsight）在 ingest 前会做两道检查——本地账本 `runs/_store_ledger.json` 里该库是否已被
+> 写过、以及适配器自报的 `count()/is_empty()` 是否非空。命中即中止并给出处理办法
+> （换库身份／手工清库／显式 `--allow-nonempty-store`）。运行器**不调用** `ad.reset()`
+> （各臂共享既有库时会误删数据），所以库的隔离靠身份分叉：干净臂 `chain`、乙 `chain_bad_write`、
+> 丙 `chain_bad_retrieval`、丁 `chain_bad_present`。
 
 > **工作目录 vs 冻结快照**：三个工具共用 `chain/tools/out/` 作为工作目录（生成、答卷、
 > 读数都落在这里）。本库**已发布的数据**放在 [`corpus/`](corpus/) 与 [`keys/`](keys/)，
@@ -182,7 +215,8 @@ python -X utf8 chain/tools/probe_judge.py
 | `ingest(chapters)` | `chapters = [{"cid","title","text"}]`；返回统计 dict（如 `{"chunks": N}`） |
 | `retrieve(query, k)` | 返回 `[{"text","cid","score"}]`；**允许空列表**。`text` 必须是该系统自己吐出的原文片段，**不得由适配器代它改写或补写** |
 | `close()` | 可选，收尾时调用 |
-| `reset()` | 运行器**全流程不调用**（各臂可能共用既有库，误删代价高） |
+| `reset()` | 运行器**全流程不调用**（各臂可能共用既有库，误删代价高）。库的隔离靠**库身份**：运行器按 `store_tag(arm, damage)` 派生（干净 `chain`／乙 `chain_bad_write`／丙 `chain_bad_retrieval`／丁 `chain_bad_present`），写进 manifest 的 `store` 字段 |
+| `count()` / `is_empty()` | 可选。实现了就会在**写入前**被问一次，非空即中止（除非 `--allow-nonempty-store`）——避免往既有数据上追加而读数不可比 |
 
 接上只有三步：
 

@@ -15,7 +15,8 @@
 指标（全部机械，口径见函数 docstring）：
   现值正确率 / 历史召回率 / 变更链完整率 / 变更链行召回 / 滞后混淆率 / 超前混淆率 /
   主体混淆率 / 状态归属四态正确率 / 缘由随账率 / 依据轴逐字可回源率。
-可推题（reconstructible=True）不进主读数；历史叙述豁免须**自报状态与答案键一致**才生效。
+可推题（reconstructible=True）与**同名异体歧义题**（ambiguous=True，issue #44-一）不进主读数；
+历史叙述豁免须**自报状态与答案键一致**才生效。
 """
 from __future__ import annotations
 
@@ -79,6 +80,11 @@ SUT_ORDER = ('lingshu', 'mem0', 'memos', 'hindsight', 'openviking', 'bm25')
 
 # 最小样本量守卫：不足即判据不过（防「n=1 也算过」）
 MIN_ARM_N = 100          # 对照臂至少要答这么多非可推题
+# ★ issue #44-四：闭卷门 ② 的**逐题**判据（issue #30 的「逐题剔除」落地）。旧实现只比三个
+#   聚合率（现值/历史/变更链各 ≤ 0.2）——闭卷臂答对 51 道题（各率 18%）时 ② 照样判过，
+#   而那 51 道可猜题也照旧留在被测臂主读数里。现在逐题清单必须 ≤ 5%，且清单里的题
+#   从被测臂主读数中剔除（分母随之下调）。
+CLOSED_MAX_HIT = 0.05    # 闭卷臂逐题命中率上限
 MIN_BUCKET_N = 5         # 链长桶至少这么多题才允许进单调性判据
 MIN_PRESENT_N = 20       # 版本盲臂现值问（有取值）的分母下限
 # ★ 效度门 ③ 的**绝对水平下界**（2026-10-10 复核整改）：只要求「非增且非全等」会被
@@ -92,8 +98,16 @@ MIN_SUT_MARGIN = 0.10    # 短链桶须比结构基线（_structural_baseline �
 #   容差只有 1e-6 ⇒ 短/中/长 0.859→0.902→0.931 逐桶**上升**的臂四条门全过。
 #   现在：相邻档的回升不得超过**抽样噪声**（按各桶样本量算 95% 置信限），
 #   且首尾必须真实下降至少 MIN_DROP——只拦「没有一步上升超过固定值」不再算退化。
-MIN_DROP = 0.05          # 首尾桶之间必须真实下降的幅度
-Z95 = 1.96               # 95% 置信限
+MIN_DROP = 0.05          # 首尾桶之间必须真实下降的幅度（点估计）
+Z95 = 1.96               # 95% 置信限（双侧）
+# ★ issue #44-三：**首尾差 ≥ 0.05 也算不上退化**——它是点估计，与样本量无关。
+#   实测：真值三桶同为 0.80 的平坦臂，400 次二项抽样里有 24.2% 首尾差 ≥ 0.05 而判过；
+#   U 形臂（0.80→0.60→0.75）首尾差恰好 0.05 也被判过。故 ③ 改为**单侧两比例检验**：
+#   · 首尾：H1 短链 > 长链，z ≥ 1.645（α=0.05）**且**点估计下降 ≥ MIN_DROP − 1e-9；
+#   · 相邻：回升方向的单侧 z < 1.645 **且**点估计回升 ≤ MIN_RISE。
+MIN_DROP_Z = 1.645       # 首尾下降的单侧两比例 z 阈值（α=0.05）
+MIN_RISE = 0.05          # 相邻档点估计允许的回升上限
+DROP_EPS = 1e-9          # 点估计比较容差（0.04999999999999993 是浮点残差，不是「差一点」）
 
 _WORD = re.compile(r'[\W_]+', re.UNICODE)
 
@@ -123,6 +137,18 @@ def keys_fp(keys=None) -> str:
                              k['answer'].get('state'), k['answer'].get('at_seq')],
                             ensure_ascii=False, sort_keys=True).encode('utf-8'))
     return h.hexdigest()[:16]
+
+
+def _excluded(k: dict) -> bool:
+    """该题是否**不进主读数**：可推题（reconstructible）＋同名异体歧义题（ambiguous）。
+
+    ★ issue #44-一：同名异体档的影子链与主链**逐字同名同槽位**（#31 的修复），语料里没有
+      任何文本依据能把两者分开，而答案键只按主链取值 ⇒ 把同名同槽位的句子按序号读成一条链
+      （语料唯一支持的读法）在这批题上与答案键不一致。synth.py 逐题机械算出 `ambiguous`，
+      这里同口径剔除——旧实现只看 `reconstructible`，那 41 道题留在主读数里，忠实读者被判错、
+      还被记成「主体混淆」。
+    """
+    return bool(k.get('reconstructible')) or bool(k.get('ambiguous'))
 
 
 def _ans_of(arm: str, qid: str):
@@ -482,11 +508,59 @@ def _main_ok(k: dict, a: dict):
     return None
 
 
-def judge_arm(arm: str, keys: list[dict], doc_norms: dict, decoys: dict) -> dict:
-    """只统计**确实有答卷文件**的题（小样 --limit 跑时，未跑的题不进分母）。"""
-    pairs = []
+def closed_hit(k: dict, a: dict) -> bool:
+    """闭卷臂（无材料、凭常识作答）在这道题上**判对**了吗（issue #44-四）。
+
+    判据与该题在主读数里的轴一一对应：现值/历史/缘由看值（缘由的值＝起因），变更看链条
+    完整，状态归属看四态，时点看值＋状态＋时序号。闭卷臂判对的题＝**可猜题**：它没读
+    任何材料就答对了，说明该题由常识/多数类即可命中，不是「版本化召回」的读数。
+    """
+    t = k['type']
+    if t in ('现值', '历史', '缘由'):
+        return bool(value_correct(a, k))
+    if t == '变更':
+        return bool(chain_complete(a, k))
+    if t == '状态归属':
+        return bool(eq(a.get('state'), k['answer']['state']))
+    if t == '时点':
+        return bool(value_correct(a, k) and eq(a.get('state'), k['answer']['state'])
+                    and at_seq_ok(a, k))
+    return False
+
+
+def closed_hits(keys: list[dict], arm: str = 'closed') -> dict:
+    """逐题扫闭卷臂答卷，返回 `{qid: 题面类型}`（issue #44-四）。
+
+    ★ issue #30 的「逐题剔除」此前**没有落地**：闭卷门 ② 只比三个**聚合率**（现值/历史/
+      变更链各 ≤ 0.2），于是闭卷臂答对 51 道题（各率 18%）时 ② 照样判过，那 51 道可猜题
+      也照旧留在被测臂的主读数里。这里给出逐题清单：既用于 ② 的逐题判据，也用于把可猜题
+      从被测臂主读数里剔掉。
+    """
+    hits = {}
     for k in keys:
-        if k['reconstructible']:
+        if _excluded(k):
+            continue
+        a = _ans_of(arm, k['qid'])
+        if a is None:
+            continue
+        if closed_hit(k, a):
+            hits[k['qid']] = k['type']
+    return hits
+
+def judge_arm(arm: str, keys: list[dict], doc_norms: dict, decoys: dict,
+              skip: set | None = None) -> dict:
+    """只统计**确实有答卷文件**的题（小样 --limit 跑时，未跑的题不进分母）。
+
+    `skip`＝要从主读数里剔掉的 qid（issue #44-四：闭卷臂判对的**可猜题**）；被剔的题
+    既不入任何指标的分母，也不参与完整性核对，另记 `n_skipped`。
+    """
+    pairs = []
+    n_skipped = 0
+    for k in keys:
+        if _excluded(k):
+            continue
+        if skip and k['qid'] in skip:
+            n_skipped += 1
             continue
         a = _ans_of(arm, k['qid'])
         if a is None:
@@ -589,7 +663,11 @@ def judge_arm(arm: str, keys: list[dict], doc_norms: dict, decoys: dict) -> dict
                 timepoint_late=(round(len(tp_late) / (len(tp_early) + len(tp_late)), 4)
                                 if (tp_early or tp_late) else 0.0),
                 reason=rate(reason), verbatim=rate(verb), n=n,
-                counts=counts, bucket_main=bucket_main, bucket_main_n=bmain_n)
+                counts=counts, bucket_main=bucket_main, bucket_main_n=bmain_n,
+                n_skipped=n_skipped,
+                # ★ issue #44-三：单调性判据要做**单侧两比例检验**，需要各桶的命中数
+                #   （只有率与分母时用 round(率×分母) 反推会引入误差）。
+                bucket_main_k=bmain)
 
 
 def _corpus_index():
@@ -610,25 +688,51 @@ def judge_arms(arms: list[str], write: bool = True) -> list[dict]:
     """
     keys, doc_norms, decoys = _corpus_index()
     fp = keys_fp(keys)
-    n_expected = sum(1 for k in keys if not k['reconstructible'])
+    # ★ issue #44-二：keys_fp 只哈希每题的值/状态/序号——换一套**语料**（reconstructible、
+    #   change_chain、accept 全变）它一位不动。数据指纹把三份内容一并纳入，逐臂比对。
+    fp_data = hmb_paths.data_fp()
+    n_expected = sum(1 for k in keys if not _excluded(k))
+    n_amb = sum(1 for k in keys if k.get('ambiguous'))
+    # ★ issue #44-四：闭卷臂判对的**可猜题**逐题清单（issue #30 的「逐题剔除」落地）。
+    #   被测臂的主读数里剔掉这些题，且分母随之下调——旧实现只看三个聚合率，
+    #   闭卷臂答对 51 题（各率 18%）时 ② 照样判过，那 51 道可猜题留在主读数里。
+    chits = closed_hits(keys)
     rows, excluded = [], []
     for arm in arms:
         d = RUNS / f'chain_{arm}'
-        row = judge_arm(arm, keys, doc_norms, decoys)
+        skip = None if arm == 'closed' else set(chits)
+        row = judge_arm(arm, keys, doc_norms, decoys, skip=skip)
         m = _manifest(arm)
         row['keys_fp'] = m.get('keys_fp')
-        row['n_expected'] = n_expected
+        n_exp_arm = n_expected - (len(chits) if skip else 0)
+        row['n_expected'] = n_exp_arm
+        row['n_closed_excluded'] = (len(chits) if skip else 0)
+        row['closed_excluded_qids'] = sorted(chits)[:10] if skip else []
+        # ★ issue #44-一：读数行须能看出「分母为什么是这个数」——可推题与同名异体歧义题
+        #   都不进主读数，各自的题数单列。
+        row['n_reconstructible'] = sum(1 for k in keys if k.get('reconstructible'))
+        row['n_ambiguous'] = n_amb
         row['sampled'] = bool(m.get('calib_sample'))
         row['manifest_errors'] = m.get('errors')
         # ★ 来源字段（issue #41）：读数行必须能看出「这个数字是哪次运行的答卷算出来的」。
         #   旧读数行不带任何来源，判分器读到另一套 harness 的旧卷时读者无从分辨。
         row['dir'] = str(d)
         row['harness'] = m.get('harness')
+        # ★ issue #44-二/五：读数行须能看出「这份数字出自哪份数据／哪份适配器／哪个库」。
+        row['data_fp'] = m.get('data_fp')
+        row['adapter'] = m.get('adapter')
+        row['harness_files'] = m.get('harness_files')
+        row['store'] = m.get('store')
         reasons = []
         if not m:
             reasons.append('无 manifest.json（无法核对同源）')
         elif m.get('keys_fp') != fp:
             reasons.append(f"keys 指纹不符（manifest={m.get('keys_fp')} vs 当前={fp}）")
+        elif not m.get('data_fp'):
+            reasons.append('manifest 缺 data_fp（语料／答案键／生成日志指纹；issue #44-二）')
+        elif m.get('data_fp') != fp_data:
+            reasons.append(f"数据指纹不符（manifest={m.get('data_fp')} vs 当前={fp_data}；"
+                           '答卷出自从前的语料/答案键）')
         # ★ manifest.dir 必须等于**自己实际读的目录**（issue #41）：keys_fp 只能证明
         #   「答案是同一套题」，证明不了「这是这次跑的卷」——换一套 harness 重跑，
         #   keys_fp 照样对得上。目录不一致即剔除并写明原因（与「无 manifest」同一路径）。
@@ -646,8 +750,9 @@ def judge_arms(arms: list[str], write: bool = True) -> list[dict]:
             reasons.append(f"manifest.errors={m['errors']} 但答卷里没有失败标记"
                            f"（分片并发会互相覆盖 manifest，须以答卷为准）")
         # 缺题：只统计非可推题，故分母也用非可推题数（n_expected）
-        if m.get('keys_fp') == fp and row['n'] < n_expected:
-            reasons.append(f"答卷缺题（{row['n']}/{n_expected} 非可推题）")
+        if m.get('keys_fp') == fp and row['n'] < n_exp_arm:
+            reasons.append(f"答卷缺题（{row['n']}/{n_exp_arm} 主读数题；"
+                           f'已剔闭卷可猜题 {row["n_closed_excluded"]}）')
         row['complete'] = not reasons
         if reasons:
             row['exclude_reason'] = '；'.join(reasons)
@@ -659,6 +764,10 @@ def judge_arms(arms: list[str], write: bool = True) -> list[dict]:
             json.dumps(rows, ensure_ascii=False, indent=1), encoding='utf-8')
         (OUT / 'readings_excluded.json').write_text(
             json.dumps(excluded, ensure_ascii=False, indent=1), encoding='utf-8')
+        # ★ issue #44-四：可猜题的**全量**清单单独落盘（readings 行里只留前 10 个示例）。
+        (OUT / 'closed_hits.json').write_text(
+            json.dumps(chits, ensure_ascii=False, indent=1, sort_keys=True),
+            encoding='utf-8')
     return rows
 
 
@@ -668,7 +777,7 @@ def _bucket_rates(arm: str, keys: list[dict], field: str = 'present') -> dict:
 
     只作**诊断**用（③ 现在从 reading 行的 bucket_main 取，见 calibration）。
     """
-    qs = [k for k in keys if not k['reconstructible']]
+    qs = [k for k in keys if not _excluded(k)]
     if field == 'present':
         qs = [k for k in qs if k['type'] == '现值' and k['answer']['value'] is not None]
     buckets = {}
@@ -687,7 +796,7 @@ def _structural_baseline(keys: list[dict]) -> dict:
     ★ 这是**语料侧诊断**，只读 keys.json、与任何臂无关——**不得**作为效度门判据
     （否则一个答不对任何题的坏系统也能靠它过关）。
     """
-    qs = [k for k in keys if not k['reconstructible'] and k['type'] == '现值']
+    qs = [k for k in keys if not _excluded(k) and k['type'] == '现值']
     buckets = {}
     for k in qs:
         vals = {norm(e['to']) for e in k['answer']['chain'] if e.get('to')}
@@ -726,6 +835,67 @@ def _nonincreasing(seq: list[float], ns: list[int] | None = None,
 
 def _all_equal(seq: list[float], tol: float = 1e-6) -> bool:
     return (max(seq) - min(seq)) <= tol
+
+
+def two_prop_z(k1: int, n1: int, k2: int, n2: int) -> float:
+    """单侧两比例 z（H1: p1 > p2，合并比例算标准误）。
+
+    ★ issue #44-三：链长单调性此前只看**点估计**，与桶样本量无关 ⇒ 平坦臂靠抽样噪声就能
+    过门（真值 0.80 三桶相同，400 次二项抽样有 24.2% 首尾差 ≥ 0.05）。这里按各桶实际
+    命中数/分母算 z，样本不足或方差为 0 时返回 0（即「看不出差异」）。
+    """
+    if min(n1, n2) <= 0:
+        return 0.0
+    p1, p2 = k1 / n1, k2 / n2
+    p = (k1 + k2) / (n1 + n2)
+    se = math.sqrt(max(p * (1.0 - p), 1e-12) * (1.0 / n1 + 1.0 / n2))
+    if se <= 0:
+        return 0.0
+    return (p1 - p2) / se
+
+
+def c3_direction(bm: dict, bn: dict, bk: dict | None = None,
+                 min_bucket_n: int = MIN_BUCKET_N) -> tuple:
+    """③ 的**方向判据**（纯函数，供 calibration 与 selftest 共用）。
+
+    返回 `(是否满足, 理由, 明细)`；明细含 order/seq/ns/ks/z_drop/drop/rises。
+    绝对水平下界（MIN_SUT_SHORT／结构基线）不在这里——那是对照臂与语料侧的诊断，
+    由调用方另加。
+    """
+    bk = bk or {}
+    order = [b for b in ('short', 'mid', 'long')
+             if b in bm and bn.get(b, 0) >= min_bucket_n]
+    seq = [bm[b] for b in order]
+    ns = [bn[b] for b in order]
+    ks = [int(bk[b]) if bk.get(b) is not None else int(round(bm[b] * bn[b]))
+          for b in order]
+    det = dict(order=order, seq=seq, ns=ns, ks=ks, z_drop=0.0, drop=0.0, rises=[])
+    if len(seq) < 2:
+        return False, f'可用桶不足（{order}，各桶 n={ns}，要求各桶 n ≥ {min_bucket_n}）', det
+    drop = seq[0] - seq[-1]
+    z_drop = two_prop_z(ks[0], ns[0], ks[-1], ns[-1])
+    det.update(drop=round(drop, 4), z_drop=round(z_drop, 3))
+    rises = []
+    for i in range(len(seq) - 1):
+        zr = two_prop_z(ks[i + 1], ns[i + 1], ks[i], ns[i])
+        rises.append(dict(pair=f'{order[i]}→{order[i + 1]}',
+                          delta=round(seq[i + 1] - seq[i], 4), z=round(zr, 3)))
+    det['rises'] = rises
+    bad_rise = [x for x in rises if x['delta'] > MIN_RISE or x['z'] >= MIN_DROP_Z]
+    if _all_equal(seq):
+        return False, f'三桶读数全等（{dict(zip(order, seq))}）——没有退化', det
+    if bad_rise:
+        return False, ('相邻档回升 %s 超过容差（点估计 ≤ %s 且单侧 z < %s）'
+                       % (bad_rise, MIN_RISE, MIN_DROP_Z)), det
+    if drop < MIN_DROP - DROP_EPS:
+        return False, ('首尾仅下降 %+.4f（要求 ≥ %s）——相邻档未见显著回升也算不上「随链长退化」'
+                       % (drop, MIN_DROP)), det
+    if z_drop < MIN_DROP_Z:
+        return False, ('首尾下降 %+.4f 未达单侧显著（z=%.3f < %s，α=0.05）——'
+                       '点估计的差可能只是抽样噪声' % (drop, z_drop, MIN_DROP_Z)), det
+    return True, ('桶 %s＝%s（n=%s，k=%s）：首尾下降 %+.4f 且单侧 z=%.3f ≥ %s；'
+                  '相邻档回升均在容差内'
+                  % (order, seq, ns, ks, drop, z_drop, MIN_DROP_Z)), det
 
 
 def _damage_criterion(by: dict, sut_arm: str | None,
@@ -808,7 +978,8 @@ def _damage_criterion(by: dict, sut_arm: str | None,
 
 
 def calibration(readings: list[dict], limit: int = 0, sut_arm: str | None = None,
-                control_arms: tuple = CONTROL_ARMS) -> dict:
+                control_arms: tuple = CONTROL_ARMS,
+                closed_arm: str = 'closed') -> dict:
     """校准零号判据（全过才 passed）。
 
     ① 版本盲指纹（现值≈正常、历史/变更→0）＋现值分母 ≥ MIN_PRESENT_N；
@@ -827,7 +998,8 @@ def calibration(readings: list[dict], limit: int = 0, sut_arm: str | None = None
     """
     keys, doc_norms, decoys = _corpus_index()
     fp = keys_fp(keys)
-    n_expected = sum(1 for k in keys if not k['reconstructible'])
+    fp_data = hmb_paths.data_fp()          # ★ issue #44-二：同源的第二把尺（语料/答案键/日志）
+    n_expected = sum(1 for k in keys if not _excluded(k))
     by = {r['arm']: r for r in readings}
     vb = by.get(control_arms[0])
     cb = by.get(control_arms[1])
@@ -836,8 +1008,18 @@ def calibration(readings: list[dict], limit: int = 0, sut_arm: str | None = None
     cb_n = (cb or {}).get('n', 0)
     c1 = bool(vb) and vb['present'] >= 0.5 and vb['history'] <= 0.15 \
         and vb['chain'] <= 0.15 and vb_present_n >= MIN_PRESENT_N
-    c2 = bool(cb) and cb['present'] <= 0.2 and cb['history'] <= 0.2 \
+    # ★ issue #44-四：② 加**逐题**判据。旧实现只比三个聚合率：闭卷臂在 642 题里答对 51 道
+    #   （各率 18%），三条率都 ≤ 0.2 ⇒ ② 判过；可那 51 道题根本没读材料就答对了，
+    #   是**可猜题**，既说明题库有漏洞，也让被测臂在这些题上白拿分。现在两件事一起做：
+    #   (a) 逐题命中率 ≤ CLOSED_MAX_HIT，否则 ② 不过（题库须重造）；
+    #   (b) 命中清单从被测臂主读数中剔除（见 judge_arms 的 skip）。
+    chits = closed_hits(keys, arm=closed_arm)
+    n_main = sum(1 for k in keys if not _excluded(k))
+    cb_hit_rate = (round(len(chits) / n_main, 4) if n_main else 0.0)
+    c2_agg = bool(cb) and cb['present'] <= 0.2 and cb['history'] <= 0.2 \
         and cb['chain'] <= 0.2 and cb_n >= MIN_ARM_N
+    c2_hit_ok = bool(cb) and cb_hit_rate <= CLOSED_MAX_HIT
+    c2 = bool(c2_agg and c2_hit_ok)
 
     # ③ 只认被测系统臂的读数（对照臂与语料结构都不算）
     # ★ issue #25：③ 是「压力轴是否有效」的判据，属题库性质，旧实现却只评
@@ -861,15 +1043,13 @@ def calibration(readings: list[dict], limit: int = 0, sut_arm: str | None = None
         """对**一条**被测臂评 ③，返回 (是否满足, 理由)。"""
         bm = r.get('bucket_main') or {}
         bn = r.get('bucket_main_n') or {}
-        order = [b for b in ('short', 'mid', 'long')
-                 if b in bm and bn.get(b, 0) >= MIN_BUCKET_N]
-        seq = [bm[b] for b in order]
-        ns = [bn[b] for b in order]
-        # ★ 方向判据（issue #20）：容差按各桶样本量算抽样噪声，且首尾须真实下降。
-        #   旧实现每档允许回升固定 0.05 ⇒ 逐桶**上升**的臂（0.859/0.902/0.931）也能过门。
-        mono = bool(len(seq) >= 2 and _nonincreasing(seq, ns) and not _all_equal(seq))
-        drop = (seq[0] - seq[-1]) if len(seq) >= 2 else 0.0
-        drop_ok = bool(len(seq) >= 2 and drop >= MIN_DROP)
+        # ★ 方向判据（issue #20 起、issue #44-三 定型）：**单侧两比例检验**。
+        #   旧实现只看点估计（首尾差 ≥ 0.05、相邻回升 ≤ 抽样噪声）⇒ 平坦臂靠抽样噪声过门
+        #   （真值三桶同为 0.80，400 次二项抽样 24.2% 判过），U 形臂（0.80→0.60→0.75）
+        #   首尾差恰为 0.05 也判过。现在首尾须 z ≥ 1.645 且点估计差 ≥ 0.05 − 1e-9。
+        mono, why_dir, det = c3_direction(bm, bn, r.get('bucket_main_k'))
+        order, seq, ns = det['order'], det['seq'], det['ns']
+        drop, drop_ok = det['drop'], bool(mono)
         # ★ 绝对水平下界：单调性**单独**不够——语料结构本身随链长单调（短链取值少），
         #   一个只会瞎猜（恒输出最高频答案值）的坏系统也能「非增且非全等」。故还须
         #   短链桶既达 MIN_SUT_SHORT，又显著高于结构基线（MIN_SUT_MARGIN）。
@@ -880,15 +1060,10 @@ def calibration(readings: list[dict], limit: int = 0, sut_arm: str | None = None
                      and short_rate >= base_short + MIN_SUT_MARGIN)
         okc = bool(mono and drop_ok and floor_ok and margin_ok)
         if okc:
-            why = (f'桶 {order}＝{seq}（n={ns}），首尾下降 {drop:+.3f} ≥ {MIN_DROP}，'
-                   f'短链 {short_rate} ≥ 下界 {MIN_SUT_SHORT} 且 ≥ 结构基线 '
+            why = (f'{why_dir}；短链 {short_rate} ≥ 下界 {MIN_SUT_SHORT} 且 ≥ 结构基线 '
                    f'{base_short}+{MIN_SUT_MARGIN}')
-        elif not mono:
-            why = (f'桶不满足单调退化（可用桶 {order}，值 {seq}，各桶 n={ns}，'
-                   f'容差按抽样误差算）')
         elif not drop_ok:
-            why = (f'桶 {order}＝{seq}：首尾仅下降 {drop:+.3f}（要求 ≥ {MIN_DROP}）'
-                   f'——相邻档未见显著回升也算不上「随链长退化」')
+            why = why_dir
         elif not floor_ok:
             why = (f'短链桶 {short_rate} 低于绝对下界 {MIN_SUT_SHORT}'
                    f'（单调但绝对水平不合格，疑为常数猜测/瞎猜系统）')
@@ -934,8 +1109,13 @@ def calibration(readings: list[dict], limit: int = 0, sut_arm: str | None = None
     fresh = {r['arm']: judge_arm(r['arm'], keys, doc_norms, decoys) for r in readings}
     in_range = all(isinstance(r.get(f), (int, float)) and 0.0 <= r[f] <= 1.0
                    for r in readings for f in METRIC_FIELDS)
-    same_source = all(_manifest(r['arm']).get('keys_fp') == fp for r in readings)
-    complete = all(r.get('n') == n_expected for r in readings)
+    # ★ issue #44-二：同源要**两把尺**都过——keys_fp（每题的值/状态/序号）＋ data_fp（语料／
+    #   答案键／生成日志三份内容）。旧实现只有前者：9f31b1f 重新生成数据后语料 93/270 段已改、
+    #   23 道题 reconstructible 翻转，keys_fp 却一位不变（bda3d94b7f29526a），旧卷照样判「同源」。
+    same_source = all(_manifest(r['arm']).get('keys_fp') == fp
+                      and _manifest(r['arm']).get('data_fp') == fp_data for r in readings)
+    # ★ issue #44-四：分母随臂而异——被测臂已剔掉闭卷可猜题，须用**每行自己的** n_expected。
+    complete = all(r.get('n') == (r.get('n_expected') or n_expected) for r in readings)
     repro = all(r.get(f) is not None
                 and abs(float(r[f]) - float(fresh[r['arm']][f])) < 1e-9
                 for r in readings for f in METRIC_FIELDS) and \
@@ -948,13 +1128,15 @@ def calibration(readings: list[dict], limit: int = 0, sut_arm: str | None = None
         c4_reason = ('臂 ' + str(empty_arms) + ' 的答卷数 n=0：' + str(RUNS)
                      + ' 下没有可判的答卷（判分器与运行器读写的不是同一个目录？issue #41）')
     elif c4:
-        c4_reason = '值域合法、答卷同源完整、且读数可由答卷独立复算'
+        c4_reason = '值域合法、答卷同源（keys_fp＋data_fp）完整、且读数可由答卷独立复算'
     elif not in_range:
         c4_reason = '指标值域越界'
     elif not same_source:
-        c4_reason = '答卷与当前 keys 不同源（manifest.keys_fp 不符，或 manifest 缺失）'
+        c4_reason = ('答卷与当前数据不同源（manifest.keys_fp／data_fp 不符，或 manifest 缺失；'
+                     'issue #44-二）')
     elif not complete:
-        c4_reason = f'答卷缺题（存在臂的非可推题答卷数 < {n_expected}）'
+        c4_reason = (f'答卷缺题（存在臂的主读数答卷数 < 该臂 n_expected＝{n_expected} − 已剔的'
+                     f'闭卷可猜题）')
     else:
         c4_reason = '读数与答卷复算不一致（陈旧/被改写）'
 
@@ -975,7 +1157,9 @@ def calibration(readings: list[dict], limit: int = 0, sut_arm: str | None = None
         f'→ {"过" if c1 else "不过"}；'
         f'② 闭卷核心：现值 {cb["present"] if cb else None} / 历史 {cb["history"] if cb else None}'
         f' / 变更链 {cb["chain"] if cb else None}（各 ≤0.2）、答题量 {cb_n}（≥{MIN_ARM_N}）'
-        f'→ {"过" if c2 else "不过"}；'
+        f'→ {"过" if c2_agg else "不过"}；'
+        f'② 闭卷逐题：可猜题 {len(chits)}/{n_main}＝{cb_hit_rate}（要求 ≤{CLOSED_MAX_HIT}，'
+        f'已从被测臂主读数剔除）→ {"过" if c2_hit_ok else "不过"}；'
         f'③ 链长单调（**被测系统臂**）：{c3_reason}；结构基线 {struct}（仅诊断，不作判据）'
         f'→ {("过" if c3 else ("不过" if c3 is False else "未评"))}；'
         f'④ 读数自洽：{c4_reason} → {"过" if c4 else "不过"}；'
@@ -997,6 +1181,8 @@ def calibration(readings: list[dict], limit: int = 0, sut_arm: str | None = None
                                if sut else {}),
                 closed_book=(round((cb['present'] + cb['history'] + cb['chain']) / 3, 4)
                              if cb else 0.0),
+                closed_hits=dict(n=len(chits), n_main=n_main, rate=cb_hit_rate,
+                                 max=CLOSED_MAX_HIT, qids=sorted(chits)),
                 chain_length_monotonic=bool(c3 is True),
                 sut_arm=sut['arm'] if sut else None,
                 sut_buckets=sut_buckets,
@@ -1029,6 +1215,7 @@ def selftest() -> None:
         print('        或跑 chain/tools/tests/ 下的守卫套件（自带临时 out/，不写仓库）。')
         raise SystemExit(2)
     fp = keys_fp(keys)
+    fp_data = hmb_paths.data_fp()          # ★ issue #44-二：假 manifest 也要带数据指纹
     by_seq = {(c['doc'], c['seq']): c['text'] for c in corpus}
 
     # ---- 单元级正反例 ----
@@ -1169,7 +1356,7 @@ def selftest() -> None:
     #   但方向与预注册的「随链长单调退化」**相反**。旧判据（固定 tol + 非全等）会放行。
     _mainq = {}
     for k in keys:
-        if not k['reconstructible'] and _main_ok(k, oracle(k)) is not None:
+        if not _excluded(k) and _main_ok(k, oracle(k)) is not None:
             _mainq.setdefault(_bucket(k['chain_len']), []).append(k['qid'])
     _want = {'short': 0.86, 'mid': 0.90, 'long': 0.94}
     _right = {q for b, qs in _mainq.items() for q in qs[:round(_want[b] * len(qs))]}
@@ -1252,7 +1439,7 @@ def selftest() -> None:
             (RUNS / f'chain_{name}' / 'retrieval' / f'{k["qid"]}.json').write_text(
                 json.dumps({'qid': k['qid'], 'material': mat}, ensure_ascii=False),
                 encoding='utf-8')
-        m = {'arm': name, 'phase': 'ask', 'keys_fp': fp,
+        m = {'arm': name, 'phase': 'ask', 'keys_fp': fp, 'data_fp': fp_data,
              'n_questions': len(keys), 'limit': 0, 'calib_sample': 0}
         m.update(manifest or {})
         (RUNS / f'chain_{name}' / 'manifest.json').write_text(
@@ -1352,6 +1539,73 @@ def selftest() -> None:
         _check('③ 可失败：逐桶缓升（每档 <0.05，方向相反）→ 不过',
                rst['chain_length_monotonic'] is False and rst['passed'] is False,
                f'(buckets={_bm})')
+        # ★ issue #44-三：③ 的方向判据此前只看**点估计**（首尾差 ≥ 0.05、相邻回升 ≤ 抽样噪声），
+        #   于是两类臂能蒙过：U 形（0.80→0.60→0.75，首尾差恰 0.05）与平坦臂（真值三桶相同，
+        #   靠抽样噪声凑出 0.05 的差）。现在须过单侧两比例检验（z ≥ 1.645）。
+        _n = {'short': 138, 'mid': 98, 'long': 29}          # 本轨真实桶样本量
+        _u_bm = {'short': 0.80, 'mid': 0.60, 'long': 0.75}
+        _u_bk = {'short': 110, 'mid': 59, 'long': 22}
+        _u_ok, _u_why, _u_det = c3_direction(_u_bm, _n, _u_bk)
+        _check('③ 可失败：U 形臂（0.80→0.60→0.75，首尾差恰 0.05）→ 不过',
+               _u_ok is False,
+               f'(drop={_u_det["drop"]}, z_drop={_u_det["z_drop"]}, rises={_u_det["rises"]})')
+        _f_bm = {'short': 0.80, 'mid': 0.80, 'long': 0.80}
+        _f_bk = {'short': 110, 'mid': 78, 'long': 23}
+        _f_ok, _f_why, _f_det = c3_direction(_f_bm, _n, _f_bk)
+        _check('③ 可失败：平坦臂（三桶同 0.80）→ 不过',
+               _f_ok is False,
+               f'(drop={_f_det["drop"]}, z_drop={_f_det["z_drop"]})')
+        import random as _rndmod
+        _rnd = _rndmod.Random(20261015)
+        _npass = 0
+        _TRIALS = 2000
+        for _t in range(_TRIALS):
+            _bm, _bn, _bk = {}, {}, {}
+            for _b, _m in _n.items():
+                _k = sum(1 for _ in range(_m) if _rnd.random() < 0.80)
+                _bn[_b], _bk[_b], _bm[_b] = _m, _k, round(_k / _m, 4)
+            _ok_t, _, _ = c3_direction(_bm, _bn, _bk)
+            _npass += 1 if _ok_t else 0
+        # 真值三桶相同 ⇒ 「随链长退化」为假，判过即**假阳性**。旧判据（点估计）实测 24.2%，
+        # 新判据（单侧两比例检验 α=0.05）实测 ≈5.6%（有限样本离散 + 合并比例法的近似），
+        # 这里卡 ≤ 10%。
+        _check(f'③ 可失败：真值三桶同为 0.80 的 {_TRIALS} 次二项抽样 → 判过 {_npass}/{_TRIALS}'
+               f'（旧判据 24.2%，新判据要求 ≤ 10%）',
+               _npass <= _TRIALS // 10,
+               f'({_npass}/{_TRIALS} = {100 * _npass / _TRIALS:.1f}%)')
+        _fd = 0.8 - 0.7500000000000001                    # = 0.04999999999999993
+        _check(f'③ 浮点：首尾差 {_fd!r} 视为达标（≥ MIN_DROP − {DROP_EPS}）——'
+               '旧实现逐位比较会判「差一点」',
+               _fd >= MIN_DROP - DROP_EPS and _fd < MIN_DROP)
+        # ★ issue #44-四：闭卷臂逐题命中 18% ⇒ ② 不过（旧实现只看三个聚合率，判过）
+        _cq = [k for k in keys if not _excluded(k)]
+        _nc = int(round(0.18 * len(_cq)))
+        _hitq = {x['qid'] for x in _cq[:_nc]}
+
+        def closed18(k):
+            """闭卷臂：18% 的题给出与答案键一致的作答，其余空答。"""
+            return oracle(k) if k['qid'] in _hitq else empty(k)
+
+        fake('selftest_closed18', closed18)
+        e18 = judge_arm('selftest_closed18', keys, doc_norms, decoys)
+        c18 = calibration([v, e18, rows['selftest_good']], sut_arm='selftest_good',
+                          control_arms=(ctl[0], 'selftest_closed18'),
+                          closed_arm='selftest_closed18')
+        _check('② 可失败：闭卷臂逐题命中 18% ⇒ ② 不过（旧实现只比三个聚合率，判过）',
+               c18['criteria']['c2'] is False
+               and c18['closed_hits']['rate'] > CLOSED_MAX_HIT
+               and c18['closed_hits']['n'] > 0,
+               f'(c2={c18["criteria"]["c2"]}, closed_hits={c18["closed_hits"]["n"]}/'
+               f'{c18["closed_hits"]["n_main"]}={c18["closed_hits"]["rate"]}, '
+               f'present={e18["present"]}, history={e18["history"]}, chain={e18["chain"]})')
+        _g1 = judge_arm('selftest_good', keys, doc_norms, decoys)
+        _g2 = judge_arm('selftest_good', keys, doc_norms, decoys,
+                        skip=set(c18['closed_hits']['qids']))
+        _check('② 可猜题剔出被测臂主读数：分母按命中数下调，且 n_skipped 记账',
+               _g2['n'] == _g1['n'] - c18['closed_hits']['n']
+               and _g2['n_skipped'] == c18['closed_hits']['n'],
+               f'(n {_g1["n"]} → {_g2["n"]}，剔除 {_g2["n_skipped"]}；'
+               f'命中率 {c18["closed_hits"]["rate"]})')
         # ★ issue #21：四态必须**分项**报；常数 active 臂的 retired/unresolved/absent 须为 0
         cs2 = rows['selftest_const']
         _check('四态分项：常数 active 臂的 retired/unresolved/absent 全 0（合并数非零）',

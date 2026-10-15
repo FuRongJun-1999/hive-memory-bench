@@ -109,7 +109,11 @@ def main():
                     json.dumps({"qid": k["qid"], "material": mat}, ensure_ascii=False),
                     encoding="utf-8")
             (d / "manifest.json").write_text(json.dumps(
-                {"arm": name, "phase": "ask", "keys_fp": fp, "n_questions": len(keys),
+                {"arm": name, "phase": "ask", "keys_fp": fp,
+                 # ★ issue #44-二：manifest 须带数据指纹（语料／答案键／生成日志），
+                 #   否则整臂被判「不同源」剔除——指纹缺一项就算缺。
+                 "data_fp": pj.hmb_paths.data_fp(),
+                 "n_questions": len(keys),
                  "limit": 0, "calib_sample": 0}, ensure_ascii=False), encoding="utf-8")
 
         # 逐桶缓升的臂（#20）：短/中/长每档上升 < 0.05（与「随链长退化」方向相反）
@@ -209,8 +213,9 @@ def main():
 
         # ---- #28：退役题须进分母 ----
         nr = {r["arm"]: r for r in pj.judge_arms(["oracle", "noretire"], write=False)}
-        n_present = sum(1 for k in keys if not k["reconstructible"] and k["type"] == "现值")
-        n_null = sum(1 for k in keys if not k["reconstructible"] and k["type"] == "现值"
+        # ★ issue #44-一：分母口径 = `pj._excluded`（可推题 ＋ 同名异体歧义题）之外的题。
+        n_present = sum(1 for k in keys if not pj._excluded(k) and k["type"] == "现值")
+        n_null = sum(1 for k in keys if not pj._excluded(k) and k["type"] == "现值"
                      and k["answer"].get("value") is None)
         ok(nr["oracle"]["counts"]["present"] == n_present and n_null > 0,
            "#28 现值分母含答案为 null 的退役题（旧实现剔除它们）",
@@ -371,11 +376,20 @@ def main():
         # ---- #30：闭卷提示词不得内嵌答案模板 ----
         cp = pr.build_closed_prompt("q001", "某主体当前的值是什么？")
         blob = json.dumps(cp, ensure_ascii=False)
-        ok(cp[0]["content"] == pr.CHAIN_SYS and '"absent"' not in blob
+        ok(cp[0]["content"] == pr.CLOSED_SYS and '"absent"' not in blob
            and '"value":null' not in blob.replace(" ", "")
            and "（无材料）" in cp[1]["content"],
-           "#30 闭卷臂与正常臂同一份契约、只给空材料（不再把答案模板写进提示词）",
+           "#30 闭卷臂不给材料、不内嵌答案模板（不再把答案模板写进提示词）",
            blob[:200])
+        # ★ issue #44-四：闭卷契约＝只改规则 1。旧契约（与 CHAIN_SYS 逐字相同）规则 1 是
+        #   「材料里没有的就不要编」，空材料下等于指示模型不作答 ⇒ 闭卷 ≈ 0 由指令决定。
+        _cs, _ch = pr.CLOSED_SYS.split("\n"), pr.CHAIN_SYS.split("\n")
+        _df = [i for i in range(len(_cs)) if i >= len(_ch) or _cs[i] != _ch[i]]
+        ok(pr.CLOSED_SYS != pr.CHAIN_SYS and len(_cs) == len(_ch) and len(_df) == 1
+           and _cs[_df[0]].startswith("1. ")
+           and "先验" in _cs[_df[0]] and "不得使用你自己的知识" not in pr.CLOSED_SYS,
+           "#44-四 闭卷契约只改规则 1（其余四条与 CHAIN_SYS 逐字相同，且不再禁止作答）",
+           f"diff={[ (i, _ch[i], _cs[i]) for i in range(len(_cs)) if _cs[i] != _ch[i] ]}")
         ok(pr.damage_arm_name("bad_write") == "damage_bad_write"
            and {pr.damage_arm_name(k) for k in pr.DAMAGE_KINDS} == set(pj.DAMAGE_MAP),
            "#26 运行器与判分器的破坏臂名/映射表一一对应")
