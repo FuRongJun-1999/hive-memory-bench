@@ -7,11 +7,13 @@
    "provenance": "聚合回填：docs/多语料复现_v1.0.md:57（逐题明细与逐判官明细未存档；判官为外部 LLM 批）",
    "policy": "void-all",
    "min_delta": 0.15,
+   "coverage_min": 0.9,
    "panel_size": 3,
    "thresholds": {
     "same_min": 0.8,
     "kappa_min": 0.6,
-    "same_floor": 0.5
+    "same_floor": 0.5,
+    "kappa_floor": 0.0
    },
    "anchors": {
     "positives": 9,
@@ -22,22 +24,23 @@
     "判官批（3 判官均值）": {
      "n": 18,
      "coverage": 1.0,
+     "missing": [],
      "accuracy": 1.0,
      "baseline": 0.5,
      "delta": 0.5,
+     "delta_ok": true,
+     "coverage_ok": true,
      "qualified": true
     }
    },
+   "panel_kind": "batch",
+   "note_panel": "批汇总格式（summary_kind=panel_batch）：人数 3 由输入自报，无逐判官明细可核（issue #42-五）",
    "agreement": {
     "source": "not_recorded"
    },
    "report_mode": "只报序",
-   "status": "pass",
-   "report_mode_legacy": "可报值",
-   "reclassified": {
-    "by": "judge_audit.py（issue #13 补丁）",
-    "why": "未登记一致率 ⇒ 至多只报序（一致率是「可报值」的必要条件）"
-   }
+   "note": "未登记一致率 ⇒ 至多只报序（issue #13）",
+   "status": "pass"
   },
   "毛选轮": {
    "round": "毛选轮",
@@ -45,11 +48,13 @@
    "provenance": "聚合回填：docs/多语料复现_v1.0.md:57-58（逐题明细未存档）",
    "policy": "void-all",
    "min_delta": 0.15,
+   "coverage_min": 0.9,
    "panel_size": 3,
    "thresholds": {
     "same_min": 0.8,
     "kappa_min": 0.6,
-    "same_floor": 0.5
+    "same_floor": 0.5,
+    "kappa_floor": 0.0
    },
    "anchors": {
     "positives": 18,
@@ -60,23 +65,23 @@
     "判官批（3 判官均值）": {
      "n": 36,
      "coverage": 1.0,
+     "missing": [],
      "accuracy": 0.9444444444444444,
      "baseline": 0.5,
      "delta": 0.4444444444444444,
+     "delta_ok": true,
+     "coverage_ok": true,
      "qualified": true
     }
    },
+   "panel_kind": "batch",
+   "note_panel": "批汇总格式（summary_kind=panel_batch）：人数 3 由输入自报，无逐判官明细可核（issue #42-五）",
    "agreement": {
-    "source": "recorded",
-    "note": "完全相同 60–90%／跨档 0–6.7%（见 docs/多语料复现_v1.0.md §四）"
+    "source": "not_recorded"
    },
    "report_mode": "只报序",
-   "status": "pass",
-   "report_mode_legacy": "可报值",
-   "reclassified": {
-    "by": "judge_audit.py（issue #13 补丁）",
-    "why": "登记一致率按下限取值（同分 0.6）⇒ 只报序；与明细模式同口径"
-   }
+   "note": "未登记一致率 ⇒ 至多只报序（issue #13）",
+   "status": "pass"
   }
  }
 }

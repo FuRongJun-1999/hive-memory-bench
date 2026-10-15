@@ -126,7 +126,8 @@ def t33(tmp):
         j1[q], j2[q] = "correct", "incorrect"
     code, out, _rec = check(tmp, "t33_scope", {"round": "N", "stratum": "均衡",
                                                "anchors": anc, "judges": {"J1": j1, "J2": j2}})
-    ok(code == 1 and "算在 140 条上：锚 40 ＋ 被测 100" in out and "不可测" in out,
+    #   ★ #42-五 起打印改成「配对 N 条／对」（旧打印按并集写「算在 N 条上」，见 t42）。
+    ok(code == 1 and "配对 140 条／对：锚 40 ＋ 被测 100" in out and "不可测" in out,
        "#33-20 一致率须算在非锚条目上（锚 40 ＋ 被测 100）⇒ 不可测 exit 1（旧实现只看锚 ⇒ 可报值）",
        f"exit={code} {out[-260:]}")
 
@@ -183,7 +184,8 @@ def t33(tmp):
     # —— 第四项②：明细模式自报 panel_size 须被忽略（固定按 1 计）——
     code, out, _rec = check(tmp, "t33_panel1", {"round": "P1", "stratum": "均衡", "panel_size": 2,
                                                 "anchors": anc, "judges": {"J1": dict(j1)}})
-    ok(code == 1 and "1×1" in out,
+    #   ★ #42-五 起合格门不再乘 panel_size（那等于同一人算两遍），理由串随之改为「合格判官 1 < 2」。
+    ok(code == 1 and "合格判官 1 < 2" in out,
        "#33-24 明细模式单判官自报 panel_size=2 不得凑够 2（旧实现 1×2 ≥ 2 即放行）",
        f"exit={code} {out[-200:]}")
     code, _out, rec = check(tmp, "t33_panel2", {"round": "P2", "stratum": "均衡", "panel_size": 2,
@@ -193,10 +195,84 @@ def t33(tmp):
        f"exit={code} panel={rec and rec.get('panel_size')} ignored={rec and rec.get('panel_size_ignored')}")
 
 
+
+def t42(tmp):
+    """#42-五（第十一轮审计 JA1–JA4）：一致率 scope 按并集记、panel 重复折算、仓内输入跑不通。"""
+    anc = [{"qid": f"pos{i:02d}", "expected": "correct"} for i in range(1, 21)] + \
+          [{"qid": f"neg{i:02d}", "expected": "incorrect"} for i in range(1, 21)]
+    ax = {a["qid"]: a["expected"] for a in anc}
+    xs = [f"x{i:03d}" for i in range(100)]
+
+    # —— JA1／JA2：并集里有非锚条目，但每一对实际只在锚上配对 ⇒ 至多「只报序」——
+    j1, j2 = dict(ax), dict(ax)
+    for q in xs[:50]:
+        j1[q] = "correct"
+    for q in xs[50:]:
+        j2[q] = "correct"
+    code, out, rec = check(tmp, "t42_scope", {"round": "JA1", "stratum": "均衡",
+                                              "anchors": anc, "judges": {"J1": j1, "J2": j2}})
+    ag = (rec or {}).get("agreement") or {}
+    ok(code == 0 and rec and rec["report_mode"] == "只报序" and ag.get("scope") == "anchors-only"
+       and ag.get("n_nonanchor_items") == 100 and ag.get("n_paired_nonanchor") == 0,
+       "#42-25 scope 须按配对交集判：并集有 100 条非锚、每对非锚配对 0 ⇒ 至多只报序"
+       "（旧实现按并集记 scope=all ⇒ 可报值，还打印「算在 140 条上」）",
+       f"exit={code} mode={rec and rec.get('report_mode')} scope={ag.get('scope')} "
+       f"并集非锚={ag.get('n_nonanchor_items')} 配对非锚={ag.get('n_paired_nonanchor')}")
+    ok("每对实际配对 40 条" in out and "非锚 0 条" in out,
+       "#42-26 打印须给出每对实际配对数（旧实现按并集写「算在 140 条上」）", out[-200:])
+
+    # —— JA3：逐判官汇总模式下 1 名合格不得因 panel_size 被算两遍而放行 ——
+    two = summary_job(summary={"positives": 18, "negatives": 18,
+                               "judges": {"J1": {"pos_hit": 18, "neg_miss": 0},
+                                          "J2": {"pos_hit": 9, "neg_miss": 9}}})
+    code, out, rec = check(tmp, "t42_panel", two)
+    ok(code == 1 and (rec is None or rec["status"] == "void"),
+       "#42-27 逐判官汇总仅 1 名合格 ⇒ 作废（旧实现 1×2 = 2 过门）",
+       f"exit={code} status={rec and rec.get('status')} {out[-160:]}")
+
+    # —— JA4：单条批汇总须显式声明人数格式；仓内两份自带输入须能跑出归档记录 ——
+    code, out, rec = check(tmp, "t42_batch", {
+        "round": "JA4", "stratum": "均衡", "summary_kind": "panel_batch", "panel_size": 3,
+        "summary": {"positives": 18, "negatives": 18,
+                    "judges": {"判官批（3 判官均值）": {"pos_hit": 18, "neg_miss": 0}}}})
+    ok(code == 0 and rec and rec.get("panel_kind") == "batch" and rec.get("panel_size") == 3
+       and rec.get("note_panel"),
+       "#42-28 批汇总须显式写 summary_kind=panel_batch 才按声明人数记（并注明为自报）",
+       f"exit={code} panel={rec and rec.get('panel_size')} kind={rec and rec.get('panel_kind')}")
+    code, out, _ = check(tmp, "t42_batch_no", {k: v for k, v in {
+        "round": "JA4n", "stratum": "均衡", "panel_size": 3,
+        "summary": {"positives": 18, "negatives": 18,
+                    "judges": {"判官批（3 判官均值）": {"pos_hit": 18, "neg_miss": 0}}}}.items()
+        if k != "summary_kind"})
+    ok(code == 2, "#42-29 未声明 summary_kind 的单条批汇总仍须被拒（exit 2）", f"exit={code}")
+
+    arch = json.loads((REPO / "systems" / "judge_audit.json").read_text(encoding="utf-8"))
+    env = dict(os.environ, PYTHONUTF8="1", PYTHONIOENCODING="utf-8")
+    for name, expect in (("毛选轮.json", 18), ("秦吏轮.json", 9)):
+        d = Path(tmp) / f"t42_repo_{name}"
+        d.mkdir(parents=True, exist_ok=True)
+        p = subprocess.run([PY, "-X", "utf8", str(REPO / "judge_audit.py"), "check",
+                            str(REPO / "systems" / "judge_audit" / name),
+                            "--out", "rec.json"], cwd=str(d), env=env, capture_output=True,
+                           text=True, encoding="utf-8", errors="replace", timeout=300)
+        rnd = name[:-5]
+        rec = None
+        if (d / "rec.json").exists():
+            rec = json.loads((d / "rec.json").read_text(encoding="utf-8"))["rounds"].get(rnd)
+        old = (arch.get("rounds") or {}).get(rnd) or {}
+        ok(p.returncode == 0 and rec and old
+           and rec["status"] == old["status"] and rec["report_mode"] == old["report_mode"]
+           and rec["panel_size"] == old["panel_size"]
+           and rec["anchors"]["positives"] == expect,
+           f"#42-30 仓内自带输入 {name} 须能按 README 命令跑出与归档一致的记录"
+           "（旧实现 exit 2；归档却写着 pass／panel_size 3 ⇒ 归档不可复现）",
+           f"exit={p.returncode} rec={rec and (rec['status'], rec['report_mode'], rec['panel_size'])} "
+           f"归档={old and (old['status'], old['report_mode'], old['panel_size'])}")
+
 def main():
     tmp = tempfile.mkdtemp(prefix="auditsut_")
     try:
-        for fn in (t13, t14, t33):
+        for fn in (t13, t14, t33, t42):
             try:
                 fn(tmp)
             except Exception as e:

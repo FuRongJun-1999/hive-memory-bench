@@ -4,13 +4,16 @@
 
 回答契约（被测系统输出，JSON）：
 {
-  "qid": "q001",
-  "condition": "full" | ["u01_c3", "u01_c6"],   # 给了哪些章（退化条件实验用）
   "conclusion": "……",          # 客观题：一句话结论
   "answer": "……",              # 开放题：一段论述
   "evidence": [{"cid": "u01_c3", "quote": "……"}],
   "confidence": "certain|probable|unknown"
 }
+
+★ 契约里**没有** `qid` 与 `condition`（issue #8／#15／#42-四）：题号与实验条件由**评测方**
+  给定——题号取文件名或 `--qid`，条件取 `--condition` 或标定文件的外层包装，缺省 `full`。
+  答卷里同名自报字段一律不采信（自报 `qid: q001i` 可让干预题按已公开的主轮键判，
+  自报退化 `condition` 可让结论轴退出判决）。
 
 四轴（客观题）：
   结论 conclusion —— answer_points 的 required 全中
@@ -24,7 +27,7 @@
   禁编造 fabrication —— 不得出现 anti_patterns 的 triggers（否定前缀豁免）
 
 用法：
-  python judge.py judge 回答.json [--card cards/q001.yaml]
+  python judge.py judge 回答.json [--card cards/q001.yaml] [--qid q001] [--condition full]
   python judge.py calib [标定集目录]        # 跑标定集，出假阳率/假阴率
 """
 import hashlib
@@ -179,7 +182,9 @@ def answer_sha1_12(resp) -> str:
             "scheme": ANSWER_SHA_SCHEME,
             "conclusion": (resp.get("conclusion") or "").strip(),
             "answer": (resp.get("answer") or "").strip(),
-            "condition": str(resp.get("condition") or ""),
+            # 条件缺省即「full」（与 `judge()` 的默认一致）：`sut/out` 里没写 condition 时，
+            # `score_sut.load_sut()` 会补成 full，两处口径必须一致，否则同一份答卷两个指纹。
+            "condition": str(resp.get("condition") or "full"),
             "confidence": str(resp.get("confidence") or ""),
             "evidence": [[str(e.get("cid") or ""), (e.get("quote") or "").strip()]
                          for e in (resp.get("evidence") or []) if isinstance(e, dict)],
@@ -357,6 +362,59 @@ def _clause_negated(clause: str, hit_off: int) -> bool:
     return True
 
 
+def _affirmed_span(text: str, flat: str, keep: str, idx, i0: int, i1: int, anchor=None) -> bool:
+    """`flat` 上 [i0, i1) 这一段是否为**未被否定**的断言。
+
+    `anchor`（`flat` 下标）是判定否定辖域的锚点，缺省＝片段起点。正则触发词用
+    **第 2 个分组的起点**当锚（卡片约定：第 1 组是引语来源，第 2 组是核心谓语／否定词），
+    于是「文中并没有明确交代…」里的「并没有」落在锚点之前、算否定（issue #42-一）；
+    而 `(正文|材料|书里).{0,12}(没有|未).{0,8}(交代…)` 这种**否定本身即触发词**的模式，
+    锚点正好落在「没有」上，其前面的「正文」没有否定 ⇒ 照判命中。
+    """
+    if i0 < 0 or i1 <= i0 or i1 > len(flat):
+        return False
+    a = i0 if anchor is None else anchor
+    if not (i0 <= a < i1):
+        a = i0
+    k0, k1, ka = idx[i0], idx[i1 - 1] + 1, idx[a]
+    start = keep.rfind("。", 0, k0)
+    start = max(0 if start < 0 else start, k0 - NEG_CLAUSE_MAX)
+    return not _clause_negated(keep[start:k1], ka - start)
+
+
+def pattern_affirmed(text: str, pat: str) -> bool:
+    """单个模式（字面或 `re:`）是否存在**未被否定**的出现（issue #42-二）。
+
+    字面模式＝逐处 `any_affirmed`；正则模式＝在 `flat` 上 `finditer` 逐处判定，
+    否定锚点取第 2 个分组起点（无第 2 组时取片段起点）。与禁编造轴同一口径，
+    故 `fabrication_triggered()` 的正则分支直接复用它。
+    """
+    p = str(pat)
+    if not p.startswith("re:"):
+        return any_affirmed(text, p)
+    rx = _compile_trigger(p)
+    if rx is None:
+        return False
+    flat, keep, idx = _norm_map(text)
+    if not flat:
+        return False
+    for m in rx.finditer(flat):
+        if m.end() <= m.start():
+            continue
+        anchor = m.start(2) if (rx.groups >= 2 and m.start(2) >= 0) else None
+        if _affirmed_span(text, flat, keep, idx, m.start(), m.end(), anchor):
+            return True
+    return False
+
+
+def _compile_trigger(pat: str):
+    """编译 `re:` 触发词（非法正则返回 None，不猜测）。"""
+    try:
+        return re.compile(str(pat)[3:].strip())
+    except re.error:
+        return None
+
+
 def any_affirmed(text: str, hit: str) -> bool:
     """命中片段是否存在**未被否定**的出现（issue #10／#18 共用的逐处判定）。
 
@@ -379,11 +437,7 @@ def any_affirmed(text: str, hit: str) -> bool:
         i = flat.find(h, pos)
         if i < 0:
             return False
-        k0 = idx[i]
-        k1 = idx[i + len(h) - 1] + 1
-        start = keep.rfind("。", 0, k0)
-        start = max(0 if start < 0 else start, k0 - NEG_CLAUSE_MAX)
-        if not _clause_negated(keep[start:k1], k0 - start):
+        if _affirmed_span(text, flat, keep, idx, i, i + len(h)):
             return True
         pos = i + 1
 
@@ -397,16 +451,9 @@ def fabrication_triggered(text: str, t: str) -> bool:
     命中同一正则并正面断言」可以整条绕过（q029 的 B6 实测）。
     """
     if str(t).startswith("re:"):
-        pat = str(t)[3:].strip()
-        if not pat:
-            return False
-        # 在**归一化文本**上匹配（与 `match_any_frag` 同一口径：正则里写的是词，
-        # 不是标点）；逐处判定仍回到原答卷上做，`any_affirmed` 自会把片段映射回 `keep`。
-        try:
-            frags = [m.group(0) for m in re.finditer(pat, norm(text))]
-        except re.error:
-            return False
-        return any(f and any_affirmed(text, f) for f in frags)
+        # 与采分轴共用 `pattern_affirmed()`：在归一化文本上 `finditer` 逐处判定，
+        # 否定锚点取第 2 个分组起点——「文中并没有明确交代…」的「并没有」因此落在锚点之前。
+        return pattern_affirmed(text, str(t))
     return any_affirmed(text, t)
 
 
@@ -504,17 +551,34 @@ def score_points(card, resp, field):
         # ★ 采分点命中要过否定辖域（issue #10）：此前只做子串命中，于是
         #   「并不是因为权限不足，也跟自己的来历毫无关系，更不是因为需要5级」逐条否定
         #   照样满分。命中片段处于否定辖域内 ⇒ 不计分（记进 negated_pts 供诊断）。
-        hit_pat, hit_frag = ("", "")
-        if p.get("any_of"):
-            hit_pat, hit_frag = match_any_frag(text, p["any_of"])
-        if hit_pat and any_affirmed(text, hit_frag):
+        # ★ issue #42-二（#10 未闭合）三处补齐：
+        #   (a) `paraphrase` 分支同样过否定判定——旧实现只查子串，于是「用大意词表逐条否认」
+        #       每点照拿 0.7，分数恒 ≥ 0.7（比不提分还高）；
+        #   (b) `any_of` 逐模式判定、任一模式**被肯定**即命中——旧实现只取列表顺序上第一个
+        #       命中的模式，它被否定就整点记 negated_pts，不再看同要点里其它被肯定的命中；
+        #   (c) 全被否定时才记 `negated_pts`，并**回落 paraphrase**（旧实现直接跳过）。
+        any_present, any_ok = False, False
+        for pat in (p.get("any_of") or []):
+            if pattern_affirmed(text, pat):
+                any_ok = True
+                break
+            if match_any(text, [pat]):
+                any_present = True
+        para_present, para_ok = False, False
+        for pat in (p.get("paraphrase") or []):
+            if pattern_affirmed(text, pat):
+                para_ok = True
+                break
+            if match_any(text, [pat]):
+                para_present = True
+        if any_ok:
             got += w
             full.append(pid)
-        elif hit_pat:
-            negated_pts.append(pid)
-        elif p.get("paraphrase") and match_any(text, p["paraphrase"]):
+        elif para_ok:
             got += w * PARAPHRASE_CREDIT
             para.append(pid)
+        elif any_present or para_present:
+            negated_pts.append(pid)
         else:
             miss.append(pid)
     score = (got / denom) if denom else 0.0
@@ -775,6 +839,25 @@ def axis_fabrication(card, resp):
 SEMANTIC_AXES = {"conclusion", "coverage"}
 
 
+# ★ 降级来源的裁判归属（issue #42-三）：`hedge`（对冲式作答）是**语义疑问**——它只说
+#   「规则层的词组确认不足以定案」，正该交覆盖率判官终裁；`cite`／`layer`／`excl`／`ext`
+#   是**结构事实**（依据不契合、论断抬高层级、排除项疑似、站外文献），覆盖率判官无权翻回。
+#   旧实现一律「有降级就不采信语义层」，于是纯 hedge 的题被送进两路判官却谁也裁不了，
+#   永远停在 review（两路 prepare 各选中 1 例，判词都不采信）。
+STRUCTURAL_DOWN_KINDS = ("cite", "layer", "excl", "ext")
+
+
+def down_kinds(res) -> list:
+    """降级来源清单（`down_kind` 是 `+` 连接的混合字段）。"""
+    return [k for k in (res.get("down_kind") or "").split("+") if k]
+
+
+def hedge_only_down(res) -> bool:
+    """该题是否**只有**对冲式降级 ⇒ 可由覆盖率判官终裁（issue #42-三）。"""
+    ks = down_kinds(res)
+    return bool(ks) and set(ks) <= {"hedge"}
+
+
 def judge(card, resp, idx, qid=None, condition=None):
     """三态判决（依据实测：词组匹配是高精度/低召回的确认器，不能当否决器）
 
@@ -932,6 +1015,10 @@ def fmt(res) -> str:
         elif name == "honesty":
             extra = f" {a.get('detail')}"
         lines.append(f"  {mark} {name}{extra}")
+    # ★ issue #42-四：干预题缺答案键这件事必须显式出现在 CLI 判决里——API 侧（score_sut 路由）
+    #   一直是 `iv_key_missing=True`，CLI 侧只印 verdict 的话，两个入口的「同一判决」不可核对。
+    if res.get("iv_key_missing"):
+        lines.append("  ⚠ 干预题缺答案键（intervention.answer_points 未定义）⇒ iv_key_missing=True")
     if res.get("ext_note"):
         lines.append(f"  ⚠ {res['ext_note']}")
     if (res.get("ext_src") or {}).get("soft"):
@@ -1026,7 +1113,7 @@ def run_calib(root: Path):
                 cite_restored += 1
                 sem_used += 1
         elif (name in sem_tab and routable and (got == "review" or got == "fail")
-              and not res.get("down_kind")):
+              and (not res.get("down_kind") or hedge_only_down(res))):
             # ★ 覆盖率判官只裁「语义轴不足」，不裁结构降级（issue #7）——
             #   L2 判 unfit 的「依据不契合」、注明不接受撤销的「站外文献」等降级是结构事实，
             #   此前这里不看 down_kind，覆盖率判官的 pass 会把它们翻回来。
@@ -1117,24 +1204,44 @@ def main():
             print('用法: python judge.py judge 回答.json [--card cards/q001.yaml]')
             return 2
         raw = json.loads(Path(sys.argv[2]).read_text(encoding="utf-8"))
-        outer_cond = raw.get("condition") if isinstance(raw, dict) else None
+        if not isinstance(raw, dict):
+            print("⛔ 答卷必须是 JSON 对象")
+            return 2
         resp = raw
-        if "response" in resp:                            # 标定文件外层包装
+        wrapped = "response" in resp                          # 标定文件外层包装
+        if wrapped:
             resp = resp["response"]
+        # ★ issue #42-四（#15／#8 在 CLI 入口未闭合）：**未包装**答卷一律按 `full` 判，
+        #   题号取 `--qid`，缺省＝文件名去扩展名（与 `score_sut.load_sut` 同口径）。
+        #   旧实现 `outer_cond = raw.get("condition")` 在未包装时读到的就是**被测系统自报**
+        #   的 condition（`raw` 即自报对象），自报一条退化条件即可让结论轴退出判决；
+        #   题号又取 `card.get("qid")`，而干预题按原卡加载 ⇒ 恒为 `q001`，
+        #   `judge()` 里 `qid.endswith("i")` 的干预分支（含 #8 的 iv_key_missing）永远进不去。
+        cond = (raw.get("condition") if wrapped else None) or "full"
+        if "--condition" in sys.argv:
+            cond = sys.argv[sys.argv.index("--condition") + 1]
+        # ★ 题号：`--qid` > 标定外层 > 文件名；卡片 `qid` 只在干预变体回退后仍可用时兜底。
+        #   卡片是按 `q001i → q001` 回退加载的，`card.qid` 恒为主轮号，不得再用它定路由。
+        if "--qid" in sys.argv:
+            qid = sys.argv[sys.argv.index("--qid") + 1]
+        elif wrapped:
+            qid = str(raw.get("qid") or "")
+        else:
+            qid = Path(sys.argv[2]).stem
+        if not qid:
+            print("⛔ 题号未知：未包装答卷须以文件名或 --qid 给出题号")
+            return 2
         card_path = None
         if "--card" in sys.argv:
             card_path = Path(sys.argv[sys.argv.index("--card") + 1])
         else:
-            _q = str(resp.get("qid") or "")
-            _base = _q[:-1] if _q.endswith("i") else _q   # ★ 干预变体回退到原卡
+            _base = qid[:-1] if qid.endswith("i") else qid   # ★ 干预变体回退到原卡
             card_path = CARDS / f"{_base}.yaml"
         card = load_card(card_path)
         if not card:
             return 2
         idx = chapter_index(load_units())
-        # ★ 题号以**卡片/外层**为准，条件以**外层**为准（issue #8／#15）
-        res = judge(card, resp, idx, qid=str(card.get("qid") or resp.get("qid") or ""),
-                    condition=outer_cond or "full")
+        res = judge(card, resp, idx, qid=qid, condition=cond)
         print(fmt(res))
         return 0 if res["verdict"] == "pass" else 1
     if cmd == "calib":
