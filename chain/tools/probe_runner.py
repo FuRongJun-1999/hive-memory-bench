@@ -342,6 +342,15 @@ def make_adapter(arm: str):
 
 
 # ---------------- ingest ----------------
+def _read_json(p: Path) -> dict:
+    """读 JSON；不存在或解析失败一律返回 {}（manifest 属诊断面，不因它中断跑批）。"""
+    try:
+        o = json.loads(p.read_text(encoding='utf-8'))
+        return o if isinstance(o, dict) else {}
+    except Exception:                                     # noqa: BLE001
+        return {}
+
+
 def do_ingest(arm: str, d: Path, limit: int, damage: str = '') -> dict:
     chapters = versionblind_corpus() if arm == 'versionblind' else load_corpus()
     if damage:                                   # ★ 乙：坏写入（丢 30% 语料块）
@@ -380,6 +389,8 @@ def do_ingest(arm: str, d: Path, limit: int, damage: str = '') -> dict:
                     ingest=st, generator=C.GEN_MODEL,
                     elapsed=round(time.time() - t0, 1))
     write_json(d / 'manifest.json', manifest)
+    # ★ issue #43-一B：ask 阶段的 manifest 会覆盖上面这份，ingest 读数（乙丢了多少块）另存。
+    write_json(d / 'manifest_ingest.json', manifest)
     log(f'  ingest 完成：{json.dumps(st, ensure_ascii=False)[:300]}（{manifest["elapsed"]}s）')
     return manifest
 
@@ -408,6 +419,13 @@ def build_closed_prompt(qid: str, question: str) -> list[dict]:
 
 
 def parse_chain_answer(raw: str, qid: str) -> dict:
+    """解析被测系统的作答；`_json_ok` 表示**真的解析出了一个 JSON 对象**。
+
+    ★ issue #43-五：旧实现 `o['_json_ok'] = bool(m)`——`m` 只是「正则找到了一对花括号」，
+      `json.loads` 失败（尾逗号、未加引号的键、单引号…）时仍为 True，于是「占位卷剔除」
+      漏掉了最常见的 JSON 失败：40% 题尾逗号的臂 `n_error=0`、`complete=True`，
+      以 present 0.6102 进 readings（同答案正常解析是 1.0）。现在以解析结果为准。
+    """
     s = (raw or '').strip()
     m = re.search(r'\{.*\}', s, re.S)
     o = None
@@ -416,7 +434,8 @@ def parse_chain_answer(raw: str, qid: str) -> dict:
             o = json.loads(m.group(0))
         except Exception:
             o = None
-    if not isinstance(o, dict):
+    json_ok = isinstance(o, dict)
+    if not json_ok:
         o = {}
     o['qid'] = qid
     o.setdefault('value', None)
@@ -427,7 +446,7 @@ def parse_chain_answer(raw: str, qid: str) -> dict:
     if not isinstance(o.get('basis'), list):
         o['basis'] = []
     o.setdefault('confidence', 'unknown')
-    o['_json_ok'] = bool(m)
+    o['_json_ok'] = json_ok
     return o
 
 
@@ -473,6 +492,14 @@ def do_ask(arm: str, d: Path, limit: int, shard: tuple[int, int] | None = None,
     if limit:
         keys = keys[:limit]
     chapters = versionblind_corpus() if arm == 'versionblind' else load_corpus()
+    # ★ issue #43-一B：进程内臂（bm25／versionblind）的库只活在内存里，ingest 阶段丢掉的语料块
+    #   随进程一起没了；旧实现 ask 前用 `load_corpus()` **原样**重建，乙（坏写入）于是变成空操作
+    #   ——实测 642 题检索结果与干净 bm25 逐题相同、命中里 1744/7254 来自「本应被丢弃」的块。
+    #   现在 ask 前按同一个 `damage` 再套一次 `damage_chapters`（同一固定种子 ⇒ 同一批块）。
+    if damage == 'bad_write':
+        before = len(chapters)
+        chapters = damage_chapters(chapters, damage)
+        log(f'  [damage={damage}] ask 前重建进程内库：语料块 {before} → {len(chapters)}')
     ad = None
     if arm != 'closed':
         ad, closer, note = make_adapter(arm)
@@ -509,12 +536,17 @@ def do_ask(arm: str, d: Path, limit: int, shard: tuple[int, int] | None = None,
                 used += len(t)
                 if used >= cap:
                     break
+            # ★ issue #43-一C：破坏**之前**的那一份另存 `material_full`。判分器的依据轴
+            #   要拿它取 cid/seq——丁（坏呈现）剥的正是 cid，若判分器只读被剥过的那份，
+            #   则任何答卷的 verbatim 都恒为 0，「丁的下降」量到的是判分器自己丢了来源。
+            material_full = [dict(m) for m in material]
             if damage:                           # ★ 丙/丁：坏检索 / 坏呈现
                 material = damage_material(material, damage)
             write_json(d / 'retrieval' / f'{qid}.json',
                        {'qid': qid, 'query': q['question'], 'k': k,
                         'material_chars_cap': cap, 'damage': damage,
-                        'hits_returned': len(hits), 'hits': hits, 'material': material})
+                        'hits_returned': len(hits), 'hits': hits,
+                        'material': material, 'material_full': material_full})
             prompt = (build_closed_prompt(qid, q['question']) if arm == 'closed'
                       else build_prompt(qid, q['question'], material))
             raw = llm.chat(prompt)
@@ -533,6 +565,9 @@ def do_ask(arm: str, d: Path, limit: int, shard: tuple[int, int] | None = None,
                         'chain': [], 'basis': [], 'confidence': 'unknown',
                         '_error': f'{type(e).__name__}: {e}'})
             log(f'  [{i}/{len(keys)}] {qid} 失败：{type(e).__name__}: {str(e)[:120]}')
+    # ★ issue #43-一B：ingest 阶段写的 manifest 不能就此丢掉——ask 阶段的 manifest 覆盖了它，
+    #   于是 `n_chapters`（乙到底丢了多少块）在盘上无处可查。ingest 的那份另存一份。
+    ing = _read_json(d / 'manifest_ingest.json')
     manifest = dict(arm=(damage_arm_name(damage) if damage else arm),
                     identity=IDENTITY, phase='ask', dir=str(d),
                     harness=hmb_paths.harness_label(),
@@ -545,6 +580,9 @@ def do_ask(arm: str, d: Path, limit: int, shard: tuple[int, int] | None = None,
                     shard=(f'{shard[0]}/{shard[1]}' if shard else ''),
                     n_questions_all=len(keys_all),
                     calib_sample=int(bool(limit)),
+                    n_chapters=ing.get('n_chapters'),
+                    chars=ing.get('chars'),
+                    ingest=ing.get('ingest'),
                     elapsed=round(time.time() - t0, 1))
     write_json(d / 'manifest.json', manifest)
     log(f'  ask 完成：{ok}/{len(keys)} 题，{llm.calls} 次调用 / {llm.tokens} tokens'
@@ -562,15 +600,20 @@ def do_calibrate(arms: list[str], limit: int, shard: tuple[int, int] | None = No
     # ★ 破坏臂（乙/丙/丁）不是独立系统，而是**对同一个被测系统的三种破坏**：
     #   以第一条被测系统臂为基底各跑一次，臂名 damage_<kind>（见 README §6 第 2 条）。
     base = next((a for a in arms if a not in ('versionblind', 'closed')), None)
+    damage_names = []
     if base:
         for kind in DAMAGE_KINDS:
             name = damage_arm_name(kind)
+            damage_names.append(name)
             log(f'=== calibrate · 破坏臂 {name}（基底 {base}）===')
             dd = run_dir(name)
             do_ingest(base, dd, limit, damage=kind)
             do_ask(base, dd, limit, shard, damage=kind)
     import probe_judge
-    readings = probe_judge.judge_arms(arms)
+    # ★ issue #43-一A：破坏臂**跑完却不进判分**——旧实现只把用户给的臂名传给 `judge_arms`，
+    #   `damage_<kind>` 不在其中，`_damage_criterion` 于是走「没有破坏臂 ⇒ 未评」分支，
+    #   `c_damage` 恒为 None（实测 damage_by_arm={}）。跑了的臂必须一并判。
+    readings = probe_judge.judge_arms(list(arms) + damage_names)
     calib = probe_judge.calibration(readings, limit=limit)
     if shard:
         # ★ 分片模式下**不写 out/calibration.json**：本片的读数只覆盖 1/n 的题，

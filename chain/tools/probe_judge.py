@@ -137,15 +137,29 @@ def _manifest(arm: str) -> dict:
 
 
 def _material_of(arm: str, qid: str):
-    """该题实际检索到的材料：返回 (归一化拼接文本, cid 集合, seq 集合)；无检索件返回 None。"""
+    """该题实际检索到的材料：返回 (归一化拼接文本, cid 集合, seq 集合)；无检索件返回 None。
+
+    ★ issue #43-一C：`material` 是**给被测系统看的**那一份（丙/丁 破坏臂会打乱、截断、剥 cid），
+      `material_full` 是同一批片段**未经破坏**的样子（含 cid/score）。依据轴要问的是
+      「答卷引的片段是否真在它拿到的那批里、且能回源到 cid」——故文本取自 `material`
+      （没看到的片段不能引），cid/seq 取自 `material_full` 里文本确实出现在 `material` 中的块。
+      旧实现直接读被剥过的 `material` ⇒ cids/seqs 皆空 ⇒ `verbatim_ok` 对**任何**答卷都
+      返回 False，丁量到的是「判分器丢了来源」，与答卷无关。
+    """
     o = _load(RUNS / f'chain_{arm}' / 'retrieval' / f'{qid}.json', None)
     if not isinstance(o, dict):
         return None
     mat = o.get('material') or []
     txt = ''.join((m.get('text') or '') for m in mat if isinstance(m, dict))
+    src = o.get('material_full')
+    src = src if isinstance(src, list) else mat
+    shown = {(m.get('text') or '') for m in mat
+             if isinstance(m, dict) and (m.get('text') or '')}
     cids, seqs = set(), set()
-    for m in mat:
+    for m in src:
         if not isinstance(m, dict) or m.get('cid') is None:
+            continue
+        if src is not mat and (m.get('text') or '') not in shown:
             continue
         cid = str(m['cid'])
         cids.add(cid)
@@ -202,6 +216,22 @@ def value_ok(a: dict, key: dict) -> bool:
     return value_correct(a, key)
 
 
+def at_seq_ok(a: dict, key: dict) -> bool:
+    """时点定位判对（issue #43-三）：答卷的 `at_seq` 须等于答案键的 `at_seq`。
+
+    答案键的 63 道时点题**全部**有非空 `at_seq`（25 道有值、38 道退役点），故判据
+    不含「键为空则放行」的兜底分支——那会给「一律答 null」的臂白送分。
+    """
+    want = key['answer'].get('at_seq')
+    got = a.get('at_seq')
+    if want is None:
+        return got is None or got == ''
+    try:
+        return int(got) == int(want)
+    except (TypeError, ValueError):
+        return False
+
+
 def want_changes(key: dict) -> list[dict]:
     """题面要的「每一次变更前后的值」＝**前后值都有值**的转移。
 
@@ -250,15 +280,33 @@ def _chain_seq_scope(key: dict) -> set:
             if isinstance(r, dict)}
 
 
+def _chain_row_scope(key: dict) -> set:
+    """本链的合法**行**集合＝`(seq, from, to)` 三元组（issue #43-四）。
+
+    只按 `seq` 判「是否属于本链」不够：同一 `seq` 下把**所有** (from, to) 组合枚举一遍，
+    每一行的 seq 都在本链里 ⇒ 旧口径一行都不算多列。实测（审计脚本 p1_2_4）：每题中位列
+    **6048** 行（应列 5），`chain`／`row_recall`／`precision` 却全是 1.0，与 oracle 相同。
+    """
+    out = set()
+    for r in (key['answer'].get('chain') or []):
+        if isinstance(r, dict):
+            out.add((str(r.get('seq')), norm(r.get('from')), norm(r.get('to'))))
+    return out
+
+
 def chain_extra_rows(a: dict, key: dict) -> int:
-    """答卷里**不属于本链**的变更行数（issue #24）。
+    """答卷里**不属于本链**的变更行数（issue #24／#43-四）。
 
     `seq` 在文档内唯一，故「别的主体／别的槽位」的行永远撞不上本题的 `want`——
     旧实现只查召回、不罚多列，于是一个不认主体、不认槽位的答卷把整篇文档所有
     「值→值」行一股脑列上也能判「链完整」（实测中位 115 行 vs 应列 5.5 行）。
+
+    ★ issue #43-四：多列判据从「seq 属不属于本链」收紧到「(seq, from, to) 是不是本链的行」——
+      同 `seq` 下枚举全部 (from, to) 组合属于多列（旧口径下每一行的 seq 都合法 ⇒ 一行都不罚）。
     """
-    allowed = _chain_seq_scope(key)
-    return sum(1 for g in _chain_items(a) if str(g.get('seq')) not in allowed)
+    allowed = _chain_row_scope(key)
+    return sum(1 for g in _chain_items(a)
+               if (str(g.get('seq')), norm(g.get('from')), norm(g.get('to'))) not in allowed)
 
 
 def chain_complete(a: dict, key: dict) -> bool:
@@ -488,10 +536,15 @@ def judge_arm(arm: str, keys: list[dict], doc_norms: dict, decoys: dict) -> dict
     # ★ 时点指标（issue #21）：预注册要求「时点定位误差（报绝对分布＋方向：答早/答晚）」，
     #   旧实现里 63 道时点问只进超前混淆的分母，答对答错都不计分。
     tp_pairs = [(k, a) for k, a in pairs if k['type'] == '时点']
+    # ★ issue #43-三：`timepoint` 必须同时判对 `at_seq`。旧实现只看 value+state，
+    #   于是一个「值/状态全对、时序号乱填」的臂拿到满分——预注册要的是**时点定位**，
+    #   常数臂（不读材料、一律答 null/retired）实测拿到 0.6129，正是这条漏判造的。
     timepoint = [value_correct(a, k) and eq(a.get('state'), k['answer']['state'])
-                 for k, a in tp_pairs]
+                 and at_seq_ok(a, k) for k, a in tp_pairs]
     # 方向只统计**答错时点**的题（答对时序号相同，不计入「答早/答晚」分母）
-    tp_early = tp_late = []
+    # ★ issue #43-三：`tp_early = tp_late = []` 是**同一个列表**——两个方向读数恒等，
+    #   「答早」与「答晚」分不开。必须各自新建。
+    tp_early, tp_late = [], []
     for k, a in tp_pairs:
         want, got = k['answer'].get('at_seq'), a.get('at_seq')
         if want is None or not isinstance(got, (int, float)) or got == want:
@@ -688,27 +741,53 @@ def _damage_criterion(by: dict, sut_arm: str | None,
         且三条臂的读数指纹两两 L∞ 距离 ≥ MIN_SEPARATION。
     """
     got = sorted(a for a in by if is_damage_arm(a))
-    base_name = sut_arm or (suts[0]['arm'] if suts else None)
     if not got:
         return (None,
                 '未评：本轮读数里没有破坏臂（乙/丙/丁）——预注册第 2 条无法评，'
                 'passed 不得为 True（须先跑 probe_runner --damage）', {})
     missing = [a for a in DAMAGE_ARMS if a not in by]
-    if base_name is None or base_name not in by:
-        return (False, f'不过：有破坏臂 {got} 但没有可比的正常臂读数', {})
-    base = by[base_name]
     detail: dict[str, dict] = {}
     all_ok = not missing
     for a in got:
         r = by[a]
         need = DAMAGE_MAP.get(a, ())
+        # ★ issue #43-二①：基底取自**该臂自己的** `manifest.base_arm`（运行器写的，破坏臂
+        #   就是以它破坏的那个系统），而不是 `SUT_ORDER` 排第一的臂。旧实现拿 lingshu 当
+        #   基底，实测三条「零破坏」的 bm25 副本被读出 0.29–0.32 的「下降」⇒ c_damage=True。
+        base_name = (_manifest(a).get('base_arm') or sut_arm
+                     or (suts[0]['arm'] if suts else None))
+        if base_name is None or base_name not in by:
+            detail[a] = dict(base=base_name, required=list(need), drops={}, ok=False,
+                             why=f'基底 {base_name!r} 不在本轮读数里')
+            all_ok = False
+            continue
+        base = by[base_name]
         drops = {f: round(float(base.get(f, 0.0) or 0.0) - float(r.get(f, 0.0) or 0.0), 4)
                  for f in need}
-        okc = bool(need) and all(d >= MIN_DAMAGE_DROP for d in drops.values())
-        detail[a] = dict(required=list(need), drops=drops, ok=okc)
+        # ★ issue #43-二②：还要查**不是「什么都打垮」**（方向特异性）。旧实现只要求映射
+        #   指标下降，于是一条把所有指标一起归零的臂满足任何映射——「方向与映射表一致」
+        #   形同虚设（审计脚本 p1_2_2 ②：三条全空答卷全部 c_damage=True）。
+        #   可机械检验的口径：破坏臂须在**至少一项非映射主指标**上仍与基底相当
+        #   （|Δ| < MIN_DAMAGE_DROP / 2）——即破坏是有指向的，不是整机失效。
+        #   诚实边界：这条只能否掉「整机归零」，不能证明下降**归因于**该机制；
+        #   机制归因仍须靠 runner 侧的破坏实现（见 README §6 与 issue #43-一）。
+        off = {f: round(abs(float(base.get(f, 0.0) or 0.0) - float(r.get(f, 0.0) or 0.0)), 4)
+               for f in METRIC_FIELDS if f not in need}
+        #   「本来有读数」＝基底该指标 ≥ MIN_DAMAGE_DROP（否则「0 保持 0」是空话）。
+        kept = [f for f, v in off.items()
+                if v < MIN_DAMAGE_DROP / 2 and float(base.get(f, 0.0) or 0.0) >= MIN_DAMAGE_DROP]
+        okc = (bool(need) and all(d >= MIN_DAMAGE_DROP for d in drops.values())
+               and bool(kept))
+        detail[a] = dict(base=base_name, required=list(need), drops=drops,
+                         unmapped_kept=kept,
+                         unmapped_off={f: v for f, v in off.items() if v}, ok=okc)
         all_ok = all_ok and okc
-    fps = {a: tuple(round(float(by[a].get(f, 0.0) or 0.0), 4) for f in METRIC_FIELDS)
-           for a in got}
+    # ★ issue #43-二③：可分度只在**三条破坏臂映射指标的并集**上算。旧实现在
+    #   `METRIC_FIELDS` 全部 18 个字段上取 L∞，任一与破坏无关、样本很小的字段（如
+    #   four_state_absent，n=12）差 0.05 即可「分开」——实测三条全空答卷靠它拿到
+    #   1.0 / 0.5 / 0.5 的「可分度」。
+    fields = sorted({f for a in got for f in DAMAGE_MAP.get(a, ())})
+    fps = {a: tuple(round(float(by[a].get(f, 0.0) or 0.0), 4) for f in fields) for a in got}
     names = sorted(fps)
     seps = {}
     for i in range(len(names)):
@@ -717,10 +796,13 @@ def _damage_criterion(by: dict, sut_arm: str | None,
                 max(abs(x - y) for x, y in zip(fps[names[i]], fps[names[j]])), 4)
     sep_ok = bool(seps) and all(v >= MIN_SEPARATION for v in seps.values())
     ok_all = bool(all_ok and sep_ok)
-    reason = ('；'.join(f'{a} 在 {detail[a]["required"]} 上下降 {detail[a]["drops"]}'
-                        f'（{"合格" if detail[a]["ok"] else "不合格"}）' for a in got)
+    reason = ('；'.join(f'{a}（基底 {detail[a].get("base")}）在 {detail[a]["required"]} 上下降 '
+                        f'{detail[a]["drops"]}、非映射未受影响 {detail[a].get("unmapped_kept")}'
+                        f'（{"合格" if detail[a]["ok"] else "不合格"}'
+                        + ('' if detail[a].get('ok') else f'：{detail[a].get("why") or "下降不足或整机一起塌"}')
+                        + '）' for a in got)
               + (f'；缺臂 {missing}' if missing else '')
-              + f'；两两可分 {seps}（要求 ≥ {MIN_SEPARATION}）'
+              + f'；两两可分（仅在映射指标 {fields} 上）{seps}（要求 ≥ {MIN_SEPARATION}）'
               + f' ⇒ {"过" if ok_all else "不过"}')
     return ok_all, reason, detail
 
@@ -938,6 +1020,14 @@ def selftest() -> None:
     正反例区分；③ 效度门 ③④ 可失败（坏系统不过、好系统过、读数被改写不过）。"""
     keys, doc_norms, decoys = _corpus_index()
     corpus = _load(OUT / 'corpus.json', [])
+    # ★ 新鲜 clone 里 `out/` 是空的（.gitignore）：旧实现会一路走到 `most_common(1)[0]`
+    #   抛 IndexError，读者看不出「缺的是题库」。给一句能照做的提示并非零退出。
+    if not keys or not corpus:
+        print(f'[error] {OUT}/keys.json 或 corpus.json 不存在/为空——自检需要题库与语料。')
+        print('        照 chain/README §8 把 chain/keys/keys.json、chain/keys/synth_log.json、')
+        print(f'        chain/corpus/corpus.json 复制到 {OUT}/ 后重跑；')
+        print('        或跑 chain/tools/tests/ 下的守卫套件（自带临时 out/，不写仓库）。')
+        raise SystemExit(2)
     fp = keys_fp(keys)
     by_seq = {(c['doc'], c['seq']): c['text'] for c in corpus}
 
@@ -1102,7 +1192,54 @@ def selftest() -> None:
                     rows.append({'seq': r['seq'], 'from': r['from'], 'to': r['to']})
         return dict(value=None, state=None, at_seq=None, chain=rows, basis=[])
 
-    def fake(name, fn):
+    # ★ issue #43-二：破坏臂的基底取自它自己的 `manifest.base_arm`。下面用「零破坏的副本」
+    #   与「整机全空的答卷」两组臂复现旧实现的两处放行（假基底 / 只查映射指标）。
+    _ABS = [k['qid'] for k in keys
+            if k.get('type') == '状态归属' and k['answer'].get('state') == 'absent']
+
+    def _tweak_absent(fn, frac):
+        """只动「状态归属·absent」这批小题的自报 state（与破坏机制无关的小样本字段）。"""
+        hit = set(_ABS[:round(len(_ABS) * frac)])
+
+        def g(k):
+            a = fn(k)
+            if k['qid'] in _ABS:
+                a = dict(a, state='absent' if k['qid'] in hit else 'retired')
+            return a
+        return g
+
+    # ★ issue #43-三：时点方向/定位三臂
+    def tp_early(k):
+        a = oracle(k)
+        if k['type'] == '时点' and isinstance(k['answer'].get('at_seq'), int):
+            a['at_seq'] = k['answer']['at_seq'] - 1
+        return a
+
+    def tp_late(k):
+        a = oracle(k)
+        if k['type'] == '时点' and isinstance(k['answer'].get('at_seq'), int):
+            a['at_seq'] = k['answer']['at_seq'] + 3
+        return a
+
+    def tp_noseq(k):
+        """值/状态全对、`at_seq` 一律 null ⇒ 时点定位全错（旧实现仍判满分）。"""
+        a = oracle(k)
+        if k['type'] == '时点':
+            a['at_seq'] = None
+        return a
+
+    # ★ issue #43-四：同一 seq 下枚举全部 (from, to) 组合
+    def enum_sut(k):
+        if k['type'] != '变更':
+            return empty(k)
+        rows_ = []
+        for r in (k['answer'].get('chain') or []):
+            for f in (None, r.get('from'), r.get('to'), 'x'):
+                for t in (None, r.get('from'), r.get('to'), 'y'):
+                    rows_.append({'seq': r['seq'], 'from': f, 'to': t})
+        return dict(value=None, state=None, at_seq=None, chain=rows_, basis=[])
+
+    def fake(name, fn, manifest=None):
         d = RUNS / f'chain_{name}' / 'sut' / 'out'
         d.mkdir(parents=True, exist_ok=True)
         (RUNS / f'chain_{name}' / 'retrieval').mkdir(parents=True, exist_ok=True)
@@ -1115,15 +1252,17 @@ def selftest() -> None:
             (RUNS / f'chain_{name}' / 'retrieval' / f'{k["qid"]}.json').write_text(
                 json.dumps({'qid': k['qid'], 'material': mat}, ensure_ascii=False),
                 encoding='utf-8')
+        m = {'arm': name, 'phase': 'ask', 'keys_fp': fp,
+             'n_questions': len(keys), 'limit': 0, 'calib_sample': 0}
+        m.update(manifest or {})
         (RUNS / f'chain_{name}' / 'manifest.json').write_text(
-            json.dumps({'arm': name, 'phase': 'ask', 'keys_fp': fp,
-                        'n_questions': len(keys), 'limit': 0, 'calib_sample': 0},
-                       ensure_ascii=False), encoding='utf-8')
+            json.dumps(m, ensure_ascii=False), encoding='utf-8')
 
     names = ['selftest_oracle', 'selftest_empty', 'selftest_vb', 'selftest_changes',
              'selftest_bad', 'selftest_good', 'selftest_const', 'selftest_rising',
-             'selftest_dump', 'damage_bad_write', 'damage_bad_retrieval',
-             'damage_bad_present']
+             'selftest_dump', 'selftest_tp_early', 'selftest_tp_late',
+             'selftest_tp_noseq', 'selftest_enum',
+             'damage_bad_write', 'damage_bad_retrieval', 'damage_bad_present']
     fake('selftest_oracle', oracle)
     fake('selftest_empty', empty)
     fake('selftest_vb', vb_fake)
@@ -1133,6 +1272,10 @@ def selftest() -> None:
     fake('selftest_const', const_sut)
     fake('selftest_rising', rising_sut)
     fake('selftest_dump', dump_sut)
+    fake('selftest_tp_early', tp_early)
+    fake('selftest_tp_late', tp_late)
+    fake('selftest_tp_noseq', tp_noseq)
+    fake('selftest_enum', enum_sut)
     fake('damage_bad_write', dmg_write)
     fake('damage_bad_retrieval', dmg_retrieval)
     fake('damage_bad_present', dmg_present)
@@ -1257,6 +1400,58 @@ def selftest() -> None:
                                sut_arm='selftest_good', control_arms=ctl)
         _check('② 可失败：破坏臂不齐（缺乙/丙）⇒ 不过（不按「跑了一条就算过」放行）',
                dmg_part['criteria']['c_damage'] is False and dmg_part['passed'] is False)
+        # ★ issue #43-三：时点方向——`tp_early = tp_late = []` 曾使两向读数恒等。
+        te, tl, tn = (rows['selftest_tp_early'], rows['selftest_tp_late'],
+                      rows['selftest_tp_noseq'])
+        _check('时点方向：全答早 ⇒ early=1.0/late=0.0；全答晚 ⇒ 0.0/1.0（旧实现两向恒等 0.5/0.5）',
+               te['timepoint_early'] == 1.0 and te['timepoint_late'] == 0.0
+               and tl['timepoint_early'] == 0.0 and tl['timepoint_late'] == 1.0,
+               f'(早臂 {te["timepoint_early"]}/{te["timepoint_late"]}，'
+               f'晚臂 {tl["timepoint_early"]}/{tl["timepoint_late"]})')
+        _check('时点定位：值/状态全对但 at_seq 全错 ⇒ timepoint=0.0（旧实现给满分）',
+               tn['timepoint'] == 0.0 and tn['counts']['timepoint'] > 0,
+               f'(timepoint={tn["timepoint"]}, n={tn["counts"]["timepoint"]})')
+        # ★ issue #43-四：多列判据从「seq 属不属于本链」收紧到「(seq, from, to) 是不是本链的行」
+        en = rows['selftest_enum']
+        _check('变更链：同 seq 下枚举全部 (from,to) ⇒ chain 判不过、精度低（旧口径一行都不算多列）',
+               en['chain'] == 0.0 and en['chain_precision'] < 0.6
+               and o['chain'] == 1.0 and o['chain_precision'] == 1.0,
+               f'(enum chain={en["chain"]}, precision={en["chain_precision"]})')
+        # ★ issue #43-二①：破坏臂的基底取自它自己的 manifest.base_arm（runner 写的），
+        #   而不是 SUT_ORDER 排第一的臂。三条臂＝ selftest_good 的**零破坏副本**，
+        #   只在「状态归属·absent」这批小题上答法不同（与破坏机制无关）。旧实现拿
+        #   sut_arm（selftest_oracle）当基底 ⇒ 读出 0.4+ 的假下降、又靠那个小样本字段
+        #   拿到「两两可分」⇒ c_damage=True。
+        fake('damage_bad_write', _tweak_absent(good_sut, 1.0), {'base_arm': 'selftest_good'})
+        fake('damage_bad_retrieval', _tweak_absent(good_sut, 0.5), {'base_arm': 'selftest_good'})
+        fake('damage_bad_present', good_sut, {'base_arm': 'selftest_good'})
+        r_copy = {r['arm']: r for r in judge_arms(names, write=False)}
+        d_copy = calibration([v, e, rows['selftest_oracle'], r_copy['damage_bad_write'],
+                              r_copy['damage_bad_retrieval'], r_copy['damage_bad_present']],
+                             sut_arm='selftest_oracle', control_arms=ctl)
+        _check('② 可失败：零破坏副本（基底写在各自 manifest 里）⇒ 不过',
+               d_copy['criteria']['c_damage'] is False and d_copy['passed'] is False
+               and all(d.get('base') == 'selftest_good'
+                       for d in d_copy['damage_by_arm'].values()),
+               f'(bases={ {a: d.get("base") for a, d in d_copy["damage_by_arm"].items()} })')
+        # ★ issue #43-二②③：三条**全空答卷**的破坏臂——映射指标全 0（相对任何基底都「下降」），
+        #   只在 absent 小题上答法不同。旧实现据此判 c_damage=True；新判据须否掉：
+        #   ① 特异性——破坏须有指向，不得整机一起塌；② 可分度只在映射指标并集上算。
+        fake('damage_bad_write', _tweak_absent(empty, 1.0), {'base_arm': 'selftest_good'})
+        fake('damage_bad_retrieval', _tweak_absent(empty, 0.0), {'base_arm': 'selftest_good'})
+        fake('damage_bad_present', _tweak_absent(empty, 0.5), {'base_arm': 'selftest_good'})
+        r_emp = {r['arm']: r for r in judge_arms(names, write=False)}
+        d_emp = calibration([v, e, rows['selftest_good'], r_emp['damage_bad_write'],
+                             r_emp['damage_bad_retrieval'], r_emp['damage_bad_present']],
+                            sut_arm='selftest_good', control_arms=ctl)
+        _check('② 可失败：三条全空答卷（只在小样本字段上「可分」）⇒ 不过',
+               d_emp['criteria']['c_damage'] is False and d_emp['passed'] is False,
+               f'(drops={ {a: d["drops"] for a, d in d_emp["damage_by_arm"].items()} }, '
+               f'kept={ {a: d.get("unmapped_kept") for a, d in d_emp["damage_by_arm"].items()} })')
+        # 复原三条破坏臂为「方向正确」的版本（供后续用例与清理口径一致）
+        fake('damage_bad_write', dmg_write)
+        fake('damage_bad_retrieval', dmg_retrieval)
+        fake('damage_bad_present', dmg_present)
         # ★ 甲-2：④ 独立于 judge_arm 复算——manifest 指纹不符（不同源）须让 ④ 失败
         mf = RUNS / 'chain_selftest_good' / 'manifest.json'
         bak = mf.read_text(encoding='utf-8')
