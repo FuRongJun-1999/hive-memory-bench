@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""压缩代价检查器守卫（issue #33 第六／七项 / P1-24、P1-25）。
+"""压缩代价检查器守卫（issue #33 第六／七项 / P1-24、P1-25；issue #45 第五项 / T5）。
 
 覆盖外部检查器必须实现文档的度量，且不得在缺料时静默给出虚高读数：
   #33-24a strict／loose 两套口径分开实现，默认 strict（保留标点逐字包含）；旧实现只有
@@ -14,6 +14,13 @@
           旧实现静默退化成「全部片段并集」。
   #33-25b 检索键存在但列表为空 ⇒ 空片段；旧实现回退 `collect_texts(obj)` 把 `query.text`
           （题面）当检索片段。
+  #45-5-R1 清单不带 qid 而检索目录里多于一个文件 ⇒ **exit 4**（旧实现拿全部片段并集比，
+          「两侧齐」虚高、exit 0）；`--union` 才显式放行。
+  #45-5-R3 依据轴口径是「剔除题面自带引文后」（文档 C 表／readings.json）——`--questions`
+          给了就剔出分母并单列；不给则在输出里注明未剔除。
+  #45-5-R2 strict 口径**没有长度门槛**（旧实现复用 `--n`，一条 7 字逐字真引文被记为不可定位，
+          却又不算「过短」，读数偏低）。
+  #45-5-R4 模块说明 ⑤ 称「B 指出列已在 README 与本文件写明」——README 与 doc §四 必须真的写了。
 
 用法：python -X utf8 tests/test_compress_cost_guards.py
 """
@@ -156,6 +163,78 @@ def main() -> int:
     v9, v2 = "材料写：「X不成立」（v9）", "第二段：材料写：「X不成立」（v2）。"
     ok(old_common_block(v9, v2, 8) == old_common_block(v9, v2, 999) is True,
        "#33-24a 旧算法下 --n 999 与 --n 8 同效（对照证据，非恒真）")
+
+    # ===== issue #45 第五项（T5）：R1／R2／R3／R4 =====
+    A = "甲方在第一章里明确说过反对一切权威。"
+    B = "乙方在第九章写着唯有强大的王者才是自由的前提。"
+    Q = "题面引文：风神像位于摘星崖之上。"
+    r2 = root / "t5"
+    (r2 / "mat").mkdir(parents=True)
+    (r2 / "mat" / "c.txt").write_text(A + "\n\n" + B + "\n\n" + Q + "\n\n"
+                                      "短句真引文七个字", encoding="utf-8")
+    (r2 / "ret").mkdir()
+    (r2 / "ret" / "q1.json").write_text(json.dumps({"hits": [{"text": A}]}, ensure_ascii=False),
+                                        encoding="utf-8")
+    (r2 / "ret" / "q2.json").write_text(json.dumps({"hits": [{"text": B}]}, ensure_ascii=False),
+                                        encoding="utf-8")
+    (r2 / "p_doc.json").write_text(json.dumps([{"a": A, "b": B}, {"a": A, "b": B}],
+                                              ensure_ascii=False), encoding="utf-8")
+    (r2 / "p_qid.json").write_text(json.dumps([{"qid": "q1", "a": A, "b": B},
+                                               {"qid": "q2", "a": A, "b": B}],
+                                              ensure_ascii=False), encoding="utf-8")
+    (r2 / "ans").mkdir()
+    (r2 / "ans" / "a.json").write_text(json.dumps({"evidence": [
+        {"quote": Q}, {"quote": "甲方曾经反对过所有的权威人士"},
+        {"quote": "乙方认为只有强者才配谈论自由"}]}, ensure_ascii=False), encoding="utf-8")
+    (r2 / "questions.json").write_text(json.dumps({"q1": Q}, ensure_ascii=False),
+                                       encoding="utf-8")
+    head = ["--material", str(r2 / "mat"), "--retrieval", str(r2 / "ret")]
+
+    # —— R1：文档 §四 的写法（不带 qid）＋ 2 个检索文件 ——
+    c_doc, o_doc = run(head + ["--pairs", str(r2 / "p_doc.json")])
+    ok(c_doc == 4 and "并集" in o_doc and "qid" in o_doc,
+       "#45-5-R1 不带 qid ＋ 2 个检索文件 ⇒ exit 4 且提示并集", f"exit={c_doc} {o_doc[-200:]}")
+    c_u, o_u = run(head + ["--pairs", str(r2 / "p_doc.json"), "--union"])
+    ok(c_u == 0 and "两侧齐 2/2" in o_u,
+       "#45-5-R1 --union 放行后正是虚高读数（两侧齐 2/2，对照证据）", f"exit={c_u}")
+    c_q, o_q = run(head + ["--pairs", str(r2 / "p_qid.json")])
+    ok(c_q == 0 and "两侧齐 0/2" in o_q and "只剩一侧 2/2" in o_q,
+       "#45-5-R1 同一数据带 qid ⇒ 两侧齐 0/2、只剩一侧 2/2（证明 R1 非恒真）",
+       f"exit={c_q} {[l for l in o_q.splitlines() if l.startswith(chr(0x2460))]}")
+
+    # —— R3：题面自带引文 ——
+    c_a, o_a = run(head + ["--pairs", str(r2 / "p_qid.json"), "--answers", str(r2 / "ans")])
+    ok("答卷引文 3 条" in o_a and "未给 --questions" in o_a,
+       "#45-5-R3 不给 --questions ⇒ 题面引文照算且输出注明",
+       [l for l in o_a.splitlines() if "②" in l or "未给" in l])
+    c_b, o_b = run(head + ["--pairs", str(r2 / "p_qid.json"), "--answers", str(r2 / "ans"),
+                           "--questions", str(r2 / "questions.json")])
+    ok("答卷引文 2 条" in o_b and "剔除题面自带引文 1 条" in o_b and "0 条 = 0.0%" in o_b,
+       "#45-5-R3 给 --questions ⇒ 剔出分母 1 条、定位 0/2 = 0.0%（＝文档 C 表口径）",
+       [l for l in o_b.splitlines() if "②" in l or "剔除" in l])
+
+    # —— R2：7 字逐字真引文（旧实现 strict 记 0/1，loose 记 1/1）——
+    (r2 / "ans2").mkdir()
+    (r2 / "ans2" / "a.json").write_text(json.dumps({"evidence": [{"quote": "句真引文七个字"}]},
+                                                   ensure_ascii=False), encoding="utf-8")
+    c_s, o_s = run(head + ["--pairs", str(r2 / "p_qid.json"), "--answers", str(r2 / "ans2")])
+    c_l, o_l = run(head + ["--pairs", str(r2 / "p_qid.json"), "--answers", str(r2 / "ans2"),
+                           "--mode", "loose"])
+    ok("定位 1 条 = 100.0%" in o_s and "定位 1 条 = 100.0%" in o_l,
+       "#45-5-R2 7 字逐字真引文在 strict 与 loose 下都算命中（旧实现 strict 0/1）",
+       [l for l in o_s.splitlines() if "②" in l])
+
+    # —— R4：README 与 doc §四 必须真的写明「不覆盖 B 列」 ——
+    rm = (REPO / "README.md").read_text(encoding="utf-8")
+    dc = (REPO / "docs" / "压缩的代价就是因果丢失_v1.0.md").read_text(encoding="utf-8")
+    sec = dc[dc.find("## 四"):dc.find("## 五")] if "## 四" in dc else ""
+    ok("B 表「指出」列不在它的输出里" in rm or ("指出" in rm and "不覆盖" in rm),
+       "#45-5-R4 README 写明脚本不覆盖 B「指出」列")
+    ok("不覆盖 B 表「指出」列" in sec,
+       "#45-5-R4 doc §四 写明脚本不覆盖 B「指出」列", sec[-160:])
+    ok("qid" in sec and "far" in sec and "--mode" in sec and "exit 3" in sec
+       and "--allow-missing" in sec and "exit 4" in sec,
+       "#45-5-R1/R3 doc §四 补齐 qid／far／--mode／exit 3／--allow-missing／exit 4")
 
     total = len(_PASS) + len(_FAIL)
     print("")

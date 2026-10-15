@@ -19,7 +19,13 @@
      非零读数里。现在 absent 题单列校验、越界只查**时点题**（题面「在第 X 次这个时间点」
      ／「在第 X 次时」），干净数据基线为 0。
 
-退出码：0＝干净；1＝有硬不符（①／②／⑥／⑦）。③④⑤⑧ 是信息项，不影响退出码。
+退出码：0＝干净；1＝有硬不符（①／②／⑥／⑦／⑧／⑨／⑩／⑪／⑫）。③④⑤⑬ 是信息项，
+不影响退出码。
+
+★ issue #45-2 补齐了「判分器会读、核验器不核」的键字段：`reconstructible`（主读数分母）、
+  `interference`（主体混淆率分桶）、`type`（分桶＋复算公式选择）、`sample_at_seq` 与题面
+  「第 N 次／章」的一致性、`question`／`subject`／`slot` 三者一致。此前这五种篡改后
+  本脚本 exit 0、硬不符 0。
 """
 import importlib.util
 import json
@@ -202,10 +208,109 @@ for b in amb_bad[:8]:
     print('     ', b)
 hard_fail += len(amb_bad)
 
-# ---- ⑧ 主读数分母（信息项）----
+# ---- ⑧ reconstructible 复算（issue #45-2）----
+# ★ 旧实现只在 ④ 打印分布、**不核**（`synth.reconstructible()` 在生成侧本来就能机械复算），
+#   而判分器用 `reconstructible` 决定一道题进不进主读数分母（probe_judge.py:550）。把 20 道
+#   非可推题改成 True，主读数分母 602→582，本脚本 exit 0、硬不符 0。现在逐题复算：输入取
+#   自日志（事件、别名、语料、doc）与键自身的取样点／题类——后两项由 ⑩／⑪ 独立核对。
+def _former_of():
+    """主体别名（同体异名用曾用名）——与 synth.main() 同一口径，取自生成侧的公开常量。"""
+    m = {}
+    for _doc, _subs, _formers, _did in SY.B_STORIES:
+        for _s, _f in zip(_subs, _formers):
+            m[(_doc, _s)] = _f
+    for _p in SY.A_PROJECTS:
+        m[(_p, _p)] = SY.A_FORMER[_p]
+    return m
+
+
+FORMER = _former_of()
+rec_bad = []
+for q in keys:
+    ch = main.get((q["doc"], q["subject"], q["slot"]))
+    if ch is None:
+        want = False                     # 设计内 absent 题：主链与影子链里都不该出现
+    else:
+        want = SY.reconstructible(q, ch["events"],
+                                  [q["subject"], FORMER.get((q["doc"], q["subject"]), "")],
+                                  corpus, q["doc"])
+    if bool(q.get("reconstructible")) != bool(want):
+        rec_bad.append((q["qid"], q.get("reconstructible"), want))
+print("⑧ reconstructible 逐题复算：%d 道不符" % len(rec_bad))
+for b in rec_bad[:8]:
+    print("     ", b)
+hard_fail += len(rec_bad)
+
+# ---- ⑨ 干扰档：键 vs 日志主链（issue #45-2）----
+# ★ 旧实现 ⑤ 打印的是**日志主链**的干扰档分布，从不读键里的 `interference`——而判分器用它
+#   给主体混淆率分桶（probe_judge.py:469-471）。把 10 道「同名异体」改成 `none` 后连信息行
+#   都不变。现在逐题比对；absent 题无主链，要求 `none`。
+intf_bad = []
+for q in keys:
+    ch = main.get((q["doc"], q["subject"], q["slot"]))
+    want = ch["interference"] if ch is not None else "none"
+    if q.get("interference") != want:
+        intf_bad.append((q["qid"], q.get("interference"), want))
+print("⑨ 干扰档与日志一致：%d 道不符（键分布 %s）"
+      % (len(intf_bad), dict(Counter(q.get("interference") for q in keys))))
+for b in intf_bad[:8]:
+    print("     ", b)
+hard_fail += len(intf_bad)
+
+# ---- ⑩ 题类 ↔ qid 类型段（issue #45-2）----
+# ★ 判分器按 `type` 分桶并选复算公式（probe_judge.py:416-490）。把 5 道历史题改成现值，
+#   因为历史与现值的复算公式相同，② 复算照样通过。现在按 qid 的类型段（生成侧 TYPE_CODE）
+#   独立核对，并顺带核对 qid 的文档段。
+CODE2TYPE = {v: k for k, v in SY.TYPE_CODE.items()}
+type_bad = []
+for q in keys:
+    parts = q["qid"].split("-") + ["", "", ""]
+    want = CODE2TYPE.get(parts[2])
+    if want != q["type"] or parts[0] != q["doc_id"]:
+        type_bad.append((q["qid"], q["type"], want, q["doc_id"]))
+print("⑩ 题类 ↔ qid 类型段一致：%d 道不符" % len(type_bad))
+for b in type_bad[:8]:
+    print("     ", b)
+hard_fail += len(type_bad)
+
+# ---- ⑪ 题面「第 N 次／章」↔ sample_at_seq（issue #45-2）----
+# ★ 旧实现 ⑥ 只要求 `sample_at_seq ∈ {事件 seq}`，不从题面解析「第 N 次」比对——把一道历史题
+#   的取样点换成链上另一事件、答案按新时点一致复算，**题面不动**，照样通过。现在逐题从题面
+#   解析「第 N 次／章」与 `sample_at_seq` 比对（变更题题面无 N，不适用）。
+SEQ_PAT = re.compile(r"第\s*(\d+)\s*[次章]")
+seq_bad = []
+seq_qs = 0
+for q in keys:
+    m = SEQ_PAT.search(q.get("question") or "")
+    if not m:
+        continue
+    seq_qs += 1
+    if int(m.group(1)) != q.get("sample_at_seq"):
+        seq_bad.append((q["qid"], m.group(1), q.get("sample_at_seq")))
+print("⑪ 题面「第 N 次／章」↔ sample_at_seq：%d/%d 通过，%d 道不符（%d 道题面无 N，不适用）"
+      % (seq_qs - len(seq_bad), seq_qs, len(seq_bad), len(keys) - seq_qs))
+for b in seq_bad[:8]:
+    print("     ", b)
+hard_fail += len(seq_bad)
+
+# ---- ⑫ 题面含键里的主体与槽位（issue #45-2）----
+# ★ 全文不核 `question`／`subject`／`slot`：把一道现值题的题面主体换成另一个文档的主体，
+#   答案键仍是原主体，照样通过。
+qtext_bad = []
+for q in keys:
+    txt = q.get("question") or ""
+    miss = [f for f in ("subject", "slot") if q.get(f) and q[f] not in txt]
+    if miss:
+        qtext_bad.append((q["qid"], ",".join(miss)))
+print("⑫ 题面含键里的主体与槽位：%d 道不符" % len(qtext_bad))
+for b in qtext_bad[:8]:
+    print("     ", b)
+hard_fail += len(qtext_bad)
+
+# ---- ⑬ 主读数分母（信息项）----
 n_rec = sum(1 for q in keys if q['reconstructible'])
 n_amb = len(amb_qs)
-print('⑧ 主读数分母：%d 题 − 可推 %d − 歧义 %d ＝ **%d**（判分器 _excluded 同口径）'
+print('⑬ 主读数分母：%d 题 − 可推 %d − 歧义 %d ＝ **%d**（判分器 _excluded 同口径）'
       % (len(keys), n_rec, n_amb, len(keys) - n_rec - n_amb))
 
 print('')

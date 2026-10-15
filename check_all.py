@@ -580,6 +580,7 @@ def check_answer_points(card, qid, warns) -> list:
         errs.append(f"{qid}: 缺 answer_points —— 判分器的结论轴无法机械判定")
         return errs
     errs.extend(check_points(aps, qid, "answer_points", warns))
+    check_question_leak(card, qid, 'answer_points', aps, errs, warns)
     # 若给了退化条件，须写明期望行为，否则诚实轴无从判定
     for i, d in enumerate(card.get("degradation") or [], 1):
         if d.get("correct_behavior") not in {"uncertain", "answer_with_qualification"}:
@@ -589,6 +590,74 @@ def check_answer_points(card, qid, warns) -> list:
 
 
 # ------------------------------------------------------------ open cards
+
+def _match_any_question(text: str, patterns) -> str:
+    """卡片 any_of 的匹配语义（与 `judge.match_any` 同口径：归一化后字面包含／正则搜索）。"""
+    t = norm(text)
+    for p in patterns or []:
+        p = str(p)
+        if p.startswith("re:"):
+            pat = p[3:].strip()
+            if not pat:
+                continue
+            try:
+                if re.search(pat, t):
+                    return p
+            except re.error:
+                continue
+        elif norm(p) and norm(p) in t:
+            return p
+    return ""
+
+
+def check_question_leak(card, qid, field, pts, errs, warns) -> None:
+    """★ 机械守卫（issue #45-3）：题面不得成为通过路径。
+
+    实测（o042）：题干是「巨子塔、风神像、指南、风之种——这四样东西怎么把两个世界连成一条线？」,
+    而 p2／p3／p4 的 any_of 里各有一个**题干自带的光杆名词**（风神像／指南／风之种，p2 的
+    「巨子」还是题干「巨子塔」的子串）⇒ 只复述题干即得 0.6；再加一句不含任何题目事实的
+    「它们遵循同一套规则。」命中 p5 的光杆「规则」⇒ 0.8 ≥ PASS_SCORE 0.7，规则层直接 pass。
+
+      硬错误 ①：把**题面原文当答卷**跑本卡自己的采分点，覆盖率 ≥ 该卡的通过阈值
+                （`grading.coverage_required`／`PASS_SCORE`）——此时「抄题」就是通过路径。
+      硬错误 ②：某个采分点的 any_of **字面项是题面子串**——题面自带词不构成证据。
+                本轮按此机检清掉 26 张卡共 32 处（issue #45-3 的补丁方向）；确有需要
+                时改写成「名词＋功能」共现正则，如 `re: (风神).{0,12}(就是|即).{0,10}(巨子|陈默)`。
+                （**正则**命中题面不在本守卫范围内：同义词表天然会命中题面用词，实测
+                  残留 4 张卡最高只到 0.25，远低于 0.7 阈值。）
+    """
+    q = (card.get("question") or "").strip()
+    pts = [p for p in (pts or []) if isinstance(p, dict)]
+    if not q or not pts:
+        return
+    tq = norm(q)
+    subs = []
+    for p in pts:
+        for v in (p.get("any_of") or []):
+            v = str(v)
+            if not v.startswith("re:") and norm(v) and norm(v) in tq:
+                subs.append("%s：%s" % (p.get("id"), v))
+    if subs:
+        errs.append("%s: %s 的 any_of 字面项是题面子串——题面自带词不构成证据，请改成"
+                    "「名词＋功能」共现正则：%s%s"
+                     % (qid, field, "、".join(subs[:6]),
+                        "（等 %d 处）" % len(subs) if len(subs) > 6 else ""))
+    try:
+        import judge as _J
+        sc = _J.score_points(card, {"answer": q}, field)
+        cov = sc["score"]
+        thr = ((card.get("grading") or {}).get("coverage_required")) or _J.PASS_SCORE
+    except Exception:                                   # judge 不可用时退回同一口径的算术
+        req = [p for p in pts if p.get("required")]
+        if not req:
+            return
+        hit = [p for p in req if _match_any_question(q, p.get("any_of") or [])]
+        cov = round(len(hit) / len(req), 3)
+        thr = ((card.get("grading") or {}).get("coverage_required")) or 0.7
+    if cov >= thr:
+        errs.append("%s: ★ 题面即通过路径 —— 把题面原文当答卷，%s 覆盖率 %.3f ≥ 阈值 %.2f"
+                     "（采分点把题面里的词收成了 any_of，抄题即可过门；issue #45-3）"
+                     % (qid, field, cov, thr))
 
 def check_open_card(card, qid, path, idx, errs, warns):
     """开放题的判据：rubric 完整性 + evidence_pool 可定位 + anti_patterns 非空。"""
@@ -606,6 +675,7 @@ def check_open_card(card, qid, path, idx, errs, warns):
 
     rubric = card.get("rubric")
     errs.extend(check_points(rubric, qid, "rubric", warns))
+    check_question_leak(card, qid, 'rubric', rubric, errs, warns)
     for i, r in enumerate(rubric or [], 1):
         if r.get("required") is None:
             warns.append(f"{qid}: rubric[{i}] 未标 required，按 false 处理")
@@ -770,7 +840,9 @@ DOC_RULES = [
 # ★ issue #33 第八项守卫：文档律与同文表格不得互相推翻。
 # ① A 表（「保住那一块」）与 systems/readings.json 必须逐格一致——旧文把灵枢 v0.7.1 的 2/9
 #    写成更新前的 5/9，正是从这里漂出去的；
-# ② 写「单调」的行里列出的 x/9 链必须非降（防止把两种口径混进一条链）；
+# ② 律二（「压缩越狠丢得越彻底」）**不是单调律**——守卫按逐字率给 A 表排序、机械复算反例，
+#    并强制正文把每一条反例写出来（issue #45-4：旧文用「只在同一口径内成立」把反例挡在门外，
+#    实测两种口径各自都有反例，故该免责句本身也是错的）；
 # ③ 「N 家 x/9」的家数必须 ≤ A 表里该读数的实际家数（旧文「原文检索两家 5/9」实为 1 家）。
 COMPRESS_DOC = "docs/压缩的代价就是因果丢失_v1.0.md"
 COMPRESS_SYS = [("朴素 BM25", "naive-bm25"), ("OpenViking", "openviking"),
@@ -780,6 +852,80 @@ CJK_NUM = {"一": 1, "二": 2, "两": 2, "三": 3, "四": 4, "五": 5,
            "六": 6, "七": 7, "八": 8, "九": 9, "十": 10}
 
 
+# 律二判据的机械面（issue #45-4）：逐字率从本文件复算（切A／切B 的 L1_逐字率均值），
+# 反例＝「逐字率严格更小、覆盖却严格更高」的**每一对**系统。旧文用「只在同一口径内成立」
+# 把这层挡在门外，实测两种口径各自都有反例（共 4 条）——故该免责句本身也要守。
+RULE2_BLOCK_DOC = ("★ **律二：", "> ★ **口径更正")
+RULE2_BLOCK_RDME = ("**②压缩越狠丢得越彻底**", "**③覆盖与指出同向**")
+RULE2_BANNED = ("同一口径内成立", "跨口径单调")
+RULE2_CMP = ("＞", ">", "高于", "反超", "却更高")
+
+
+def _rule2_blocks(doc: str, rdme: str) -> list:
+    out = []
+    for rel, text, (a, b) in ((COMPRESS_DOC, doc, RULE2_BLOCK_DOC),
+                              ("README.md", rdme, RULE2_BLOCK_RDME)):
+        i = text.find(a)
+        j = text.find(b, i + 1) if i >= 0 else -1
+        out.append((rel, text[i:j] if (i >= 0 and j > i) else ""))
+    return out
+
+
+def check_rule2_counterexamples(errs: list, doc: str, rdme: str, full: dict, cost: dict) -> int:
+    """律二反例守卫：机械复算 → 与 readings.json 对账 → 正文必须逐条写出。"""
+    rd = cost["systems"]
+    vr = {}
+    for _name, key in COMPRESS_SYS:
+        try:
+            vals = [full[cut]["systems"][key]["L1_逐字率"] for cut in ("切A", "切B")]
+        except (KeyError, TypeError):
+            errs.append(f"systems/readings.json 缺 {key} 的 L1_逐字率——律二按逐字率排序所需")
+            return 0
+        vr[key] = round(sum(vals) / len(vals), 1)
+    declared = {k: v for k, v in (cost.get("逐字率") or {}).items()}
+    if declared != vr:
+        errs.append(f"systems/readings.json 律二：`逐字率` 声明 {declared} 与复算 {vr} 不一致")
+    bad = []
+    for col in ("覆盖_严格", "覆盖_宽松"):
+        for _na, ka in COMPRESS_SYS:
+            for _nb, kb in COMPRESS_SYS:
+                if ka == kb or not (vr[ka] < vr[kb]):
+                    continue
+                va, vb = rd[ka][col], rd[kb][col]
+                if int(vb.split("/")[0]) < int(va.split("/")[0]):
+                    bad.append((col, ka, va, kb, vb))
+    got = [(x.get("口径"), x.get("更狠"), x.get("更狠读数"), x.get("更轻"), x.get("更轻读数"))
+           for x in (cost.get("律二反例") or [])]
+    if got != bad:
+        errs.append(f"systems/readings.json `律二反例` {got} 与机械复算 {bad} 不一致")
+    if not bad:
+        errs.append("systems/readings.json 律二：机械复算一条反例都没有——逐字率或 A 表读数可疑")
+    disp = {k: n for n, k in COMPRESS_SYS}
+    for rel, blk in _rule2_blocks(doc, rdme):
+        if not blk:
+            errs.append(f"{rel}：找不到律二段，无法核对反例是否写出（issue #45-4）")
+            continue
+        # 反例必须写成**一句可核对的对比**：同句里既有两家名字、又有比较标记
+        sents = [x for x in re.split(r"[。；]", blk.replace(chr(10), "")) if x.strip()]
+        for _col, ka, va, kb, vb in bad:
+            na, nb = disp[ka], disp[kb]
+            if not any(na in x and nb in x and any(m in x for m in RULE2_CMP) for x in sents):
+                errs.append(f"{rel}：律二段没写出反例「{na} {va} ＞ {nb} {vb}」"
+                            f"——按逐字率排序后的反例必须逐条写成一句可核对的对比（issue #45-4）")
+        for banned in RULE2_BANNED:
+            if banned in blk:
+                errs.append(f"{rel}：律二段仍含免责句「{banned}」——实测两种口径各自都有反例")
+    # 全文面同样守：免责句不得在别处复活（`>` 引文块是**对旧文的逐字引用**，跳过）
+    for rel, text in ((COMPRESS_DOC, doc), ("README.md", rdme)):
+        for ln, line in enumerate(text.splitlines(), 1):
+            if line.lstrip().startswith(">"):
+                continue
+            for banned in RULE2_BANNED:
+                if banned in line:
+                    errs.append(f"{rel}:{ln} 仍含免责句「{banned}」——实测两种口径各自都有反例"
+                                f"（issue #45-4）")
+    return len(bad)
+
 def check_compress_cost(errs: list) -> None:
     fp = ROOT / COMPRESS_DOC
     rp = ROOT / "systems" / "readings.json"
@@ -788,7 +934,9 @@ def check_compress_cost(errs: list) -> None:
         return
     doc = fp.read_text(encoding="utf-8")
     try:
-        rd = json.loads(rp.read_text(encoding="utf-8"))["压缩代价"]["systems"]
+        full = json.loads(rp.read_text(encoding="utf-8"))
+        cost = full["压缩代价"]
+        rd = cost["systems"]
     except Exception as e:                                     # noqa: BLE001
         errs.append(f"systems/readings.json 读取失败：{e}")
         return
@@ -846,21 +994,16 @@ def check_compress_cost(errs: list) -> None:
                 if cnt < n:
                     errs.append(f"{rel}:{ln} 称「{m.group(1)}家 {x}」，"
                                 f"但 A 表里 {x} 只有 {cnt} 家")
-            # ② 「单调」行里的 x/9 链必须非降
-            if "单调" in line:
-                vals = [int(v) for v in re.findall(r"(\d+)\s*/\s*9", line)]
-                if len(vals) >= 2 and any(b < a for a, b in zip(vals, vals[1:])):
-                    errs.append(f"{rel}:{ln} 写「单调」但 x/9 序列 {vals} 非降不成立")
-                for v in vals:
-                    if f"{v}/9" not in allv:
-                        errs.append(f"{rel}:{ln} 写「单调」引用了 A 表里没有的读数 {v}/9")
-
     scan(COMPRESS_DOC, doc)
     rdme = ROOT / "README.md"
-    if rdme.exists():
-        scan("README.md", rdme.read_text(encoding="utf-8"))
-    n_bad = len([e for e in errs if "压缩代价" in e or "单调" in e or "家 " in e])
-    print(f"  [{'OK ' if n_bad == 0 else 'ERR'}] 压缩代价 律二／律三 口径守卫：{n_bad} 处不符")
+    rdme_txt = rdme.read_text(encoding="utf-8") if rdme.exists() else ""
+    scan("README.md", rdme_txt)
+
+    # ② 律二反例：由 `逐字率` ＋ A 表两列机械复算，再要求正文逐条写出来（issue #45-4）
+    n2 = check_rule2_counterexamples(errs, doc, rdme_txt, full, cost)
+    n_bad = len([e for e in errs if "压缩代价" in e or "律二" in e or "家 " in e])
+    print(f"  [{'OK ' if n_bad == 0 else 'ERR'}] 压缩代价 律二／律三 口径守卫：{n_bad} 处不符"
+          f"（律二反例 {n2} 条）")
 
 
 def check_docs() -> int:

@@ -12,7 +12,6 @@ rubric:
   required: true
   any_of:
   - 同名同姓
-  - 巧合
   - 创始人
   - 're: (同名).{0,16}(巧合|撞|懵|击中)'
 - id: p2

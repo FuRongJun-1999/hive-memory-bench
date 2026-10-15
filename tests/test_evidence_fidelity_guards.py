@@ -10,6 +10,10 @@
          也进 C2「近似引述」，报告口径读作「零编造」（旧实现实测 200/200）。
   #33-1c 新增 --selftest：A 逐字 ⇒ C1、B 插「不」⇒ 不得进 C2、C 换主语 ⇒ 不得进 C2、
          D 插「的」⇒ 不得进 C3（证明分档不是恒真断言）。
+  #45-1  极性判据不再被 MAX_MARKER_EDIT=3 关死：**等长否定替换**（可以／能够→无法、
+         已经→尚未、一定→未必）是 2 换 2、Counter 差集 4 字，旧口径完全不查极性 ⇒
+         记 C2「改动不改义」。新口径只认「一侧有否定字、另一侧没有」的等长替换，
+         4 换 1 的对齐噪声（「陈默无语」→「的」）与反义词（真→假）仍不进 C2′。
 
 用法：python -X utf8 tests/test_evidence_fidelity_guards.py
 """
@@ -42,6 +46,8 @@ def main() -> int:
        "#33-1a 种子落空时有 find_longest_match 兜底 ＋ 锚点局部搜索")
     ok("C2′" in text and "改义引述" in text,
        "#33-1b 新增「C2′ 改义引述」档，改义引文不再进 C2")
+    ok("len(added) == len(removed)" in text and "反义词" in text,
+       "#45-1 极性判据覆盖等长替换（并写明反义词不在覆盖范围）")
 
     # —— 行为级：--selftest 必须跑通且四个用例全 PASS ——
     p = subprocess.run([sys.executable, "-X", "utf8", str(SRC), "--selftest"], cwd=str(REPO),
@@ -55,6 +61,13 @@ def main() -> int:
         line = [l for l in out.splitlines() if l.startswith("[自检]") and tag in l]
         good = bool(line) and "PASS" in line[0] and f"⇒ {want} 60/60" in line[0]
         ok(good, f"#33-1c 自检用例「{tag}」⇒ {want} 60/60", line and line[0])
+    for tag in ("E 可以／能够→无法", "F 已经→尚未", "G 一定→未必"):
+        line = [l for l in out.splitlines() if l.startswith("[自检]") and tag in l]
+        good = bool(line) and "PASS" in line[0] and "⇒ C2′" in line[0]
+        ok(good, f"#45-1 自检用例「{tag}」⇒ C2′ 全中", line and line[0])
+    for tag in ("H 对齐噪声 4 换 1 不算极性改动", "I 反义词替换不在覆盖范围"):
+        line = [l for l in out.splitlines() if l.startswith("[自检]") and tag in l]
+        ok(bool(line) and "PASS" in line[0], f"#45-1 自检用例「{tag}」", line and line[0])
 
     # —— B／D 两个用例必须**真的**在旧实现下失败：用旧算法重跑同夹具 ——
     import contextlib
@@ -141,6 +154,40 @@ def main() -> int:
        "#33-1b 旧算法下「插『不』」确实进 C2（对照证据，非恒真）", f"{b_c2}/{len(sents)}")
     ok(d_c3 >= len(sents) // 2,
        "#33-1a 旧算法下「插『的』」确实进 C3（对照证据，非恒真）", f"{d_c3}/{len(sents)}")
+
+    # —— #45-1：等长否定替换，旧口径完全不查极性（直接对照同一夹具）——
+    def old_shift(o, q, j1, tag):
+        """旧实现原样：极性与数字只认 ≤ MAX_MARKER_EDIT(3) 字的改动。"""
+        from collections import Counter
+        co, cq = Counter(o), Counter(q)
+        added = "".join((cq - co).elements())
+        removed = "".join((co - cq).elements())
+        if len(added) + len(removed) > 6:
+            return ""
+        edit = added + removed
+        if not edit:
+            return ""
+        if (not added or not removed) and len(edit) > 2:
+            return ""
+        if len(edit) <= 3:
+            if any(m in (o + q) for m in J.NEG_MORPHEMES) or any(ch in edit for ch in "不没未无非莫别"):
+                return "极性词改动"
+            if re.search(r"[0-9０-９]", edit):
+                return "数字改动"
+        if j1 <= 3 and tag in ("replace", "delete"):
+            return "主语位置改动"
+        return ""
+
+    for o_, q_ in (("可以", "无法"), ("能够", "无法"), ("已经", "尚未"), ("一定", "未必")):
+        old_v = old_shift(o_, q_, 10, "replace")
+        new_v = mod._is_meaning_shift(o_, q_, 10, "replace", J.NEG_MORPHEMES)
+        ok(old_v == "" and new_v == "极性词改动",
+           f"#45-1 等长替换「{o_}→{q_}」：旧口径不查极性、新口径记 C2′",
+           f"old={old_v!r} new={new_v!r}")
+    ok(mod._is_meaning_shift("陈默无语", "的", 10, "replace", J.NEG_MORPHEMES) != "极性词改动"
+       and mod._is_meaning_shift("他说那是真的", "他说那是假的", 10, "replace",
+                                 J.NEG_MORPHEMES) == "",
+       "#45-1 对照：4 换 1 对齐噪声与反义词替换都不进 C2′")
 
     total = len(_PASS) + len(_FAIL)
     print("")

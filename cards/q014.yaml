@@ -46,7 +46,6 @@ answer_points:
   required: true
   any_of:
   - 微调
-  - 修订
   - 调整
   - 反馈
   - 授权
