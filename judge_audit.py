@@ -127,20 +127,33 @@ def _all_qids(judges: dict) -> list:
     return seen
 
 
-def _pair_up(names: list, judges: dict, items: list) -> list:
-    """逐对判官在 `items` 上算同分率与 kappa。"""
+# ★ 一对判官至少要有这么多条**非锚**配对，才算「算在被测条目上」（issue #42-五 JA1／JA2）。
+MIN_NONANCHOR_PAIRS = 1
+
+
+def _pair_up(names: list, judges: dict, items: list, anchor_qids=None) -> list:
+    """逐对判官在 `items` 上算同分率与 kappa。
+
+    ★ issue #42-五（JA1／JA2）：逐对记 `n` 与 `n_nonanchor`。旧实现只记 `n`，而 `scope`
+      是按**并集**（`_all_qids`）算的——两判官各答了不同的非锚条目时，并集里有非锚条目
+      ⇒ 记 `scope="all"`、封顶失效，实际每一对都只在 40 个锚上配对，读数却写成「算在 140 条上」。
+    """
+    anchor_qids = anchor_qids or set()
     pairs = []
     for i in range(len(names)):
         for j in range(i + 1, len(names)):
-            xs, ys = [], []
+            xs, ys, n_non = [], [], 0
             for q in items:
                 va, vb = judges[names[i]].get(q), judges[names[j]].get(q)
                 if va is not None and vb is not None:
                     xs.append(_norm(va))
                     ys.append(_norm(vb))
+                    if q not in anchor_qids:
+                        n_non += 1
             if not xs:
                 continue
             pairs.append({"pair": [names[i], names[j]], "n": len(xs),
+                          "n_nonanchor": n_non,
                           "identical": sum(1 for x, y in zip(xs, ys) if x == y) / len(xs),
                           "kappa": cohen_kappa(xs, ys)})
     return pairs
@@ -168,13 +181,22 @@ def evaluate_agreement(anchors: list, judges: dict, items: list = None) -> dict:
         items = _all_qids(judges)
     items = list(items)
     anchor_qids = {a["qid"] for a in anchors}
-    out = _fold(_pair_up(names, judges, items))
-    out["scope"] = "all" if any(q not in anchor_qids for q in items) else "anchors-only"
+    out = _fold(_pair_up(names, judges, items, anchor_qids))
+    # ★ issue #42-五（JA1／JA2）：`scope` 按**配对交集**判，不按并集。任一对判官实际只在
+    #   锚上配对（`n_nonanchor` 低于门槛）⇒ 整批按「锚上-only」封顶，至多只报序。
+    #   旧实现按并集判：两判官各答了不同的非锚条目即记 `scope="all"`，封顶被绕过，
+    #   `_print_record` 还打印「算在 140 条上」，而实际配对数是 40。
+    if out["pairs"] and all(p["n_nonanchor"] >= MIN_NONANCHOR_PAIRS for p in out["pairs"]):
+        out["scope"] = "all"
+    else:
+        out["scope"] = "anchors-only"
     out["n_items"] = len(items)
     out["n_anchor_items"] = sum(1 for q in items if q in anchor_qids)
     out["n_nonanchor_items"] = out["n_items"] - out["n_anchor_items"]
+    out["n_paired_items"] = max((p["n"] for p in out["pairs"]), default=0)
+    out["n_paired_nonanchor"] = max((p["n_nonanchor"] for p in out["pairs"]), default=0)
     # 锚上一致率：仅作参考，**不得**作为「可报值」的依据（issue #33 第二项）
-    a_only = _fold(_pair_up(names, judges, [q for q in items if q in anchor_qids]))
+    a_only = _fold(_pair_up(names, judges, [q for q in items if q in anchor_qids], anchor_qids))
     out["anchor_agreement"] = {"mean_identical": a_only["mean_identical"],
                                "mean_kappa": a_only["mean_kappa"]}
     return out
@@ -262,11 +284,23 @@ def run_job(job: dict, *, min_delta: float, policy: str,
         #   写 panel_size: 2 即满足「合格判官 ≥ 2」，等于自报人数。要声明多判官，
         #   必须给出**逐判官**汇总。
         declared = int(job.get("panel_size", 1) or 1)
-        if declared > len(rec["judges"]):
+        # ★ issue #42-五（JA4）：**单条批汇总 + 声明人数**的旧格式另走契约——输入必须显式
+        #   写 `summary_kind: "panel_batch"`，人数才按声明记（并注明为自报）。此前该格式
+        #   一律被 `declared > 逐判官汇总数` 拒掉（仓内两份自带输入 exit 2），而归档里却
+        #   写着 `panel_size: 3 / status: pass`——归档无法由工具复现。
+        rec["panel_kind"] = "batch" if str(job.get("summary_kind") or "") == "panel_batch" \
+            else "per_judge"
+        if rec["panel_kind"] == "batch":
+            rec["panel_size"] = max(1, declared)
+            rec["note_panel"] = (f"批汇总格式（summary_kind=panel_batch）：人数 {rec['panel_size']}"
+                                 f" 由输入自报，无逐判官明细可核（issue #42-五）")
+        elif declared > len(rec["judges"]):
             raise InputError(
                 f"panel_size={declared} 与逐判官汇总数 {len(rec['judges'])} 不符——"
-                f"汇总模式要声明多判官必须给出逐判官汇总（issue #13）")
-        rec["panel_size"] = len(rec["judges"])
+                f"汇总模式要声明多判官必须给出逐判官汇总（issue #13）；"
+                f"单条批汇总请显式写 summary_kind=panel_batch（issue #42-五）")
+        else:
+            rec["panel_size"] = len(rec["judges"])
         arec = job.get("agreement_recorded") or {}
         mi, mk = arec.get("mean_identical"), arec.get("mean_kappa")
         if mi is None and mk is None:
@@ -290,6 +324,7 @@ def run_job(job: dict, *, min_delta: float, policy: str,
         # ★ 明细模式 panel_size 固定为 1（issue #33 第四项）：此前直接取输入的
         #   `panel_size`（模块说明只把它写在汇总模式下），于是一份合格判官 + 输入里写
         #   `panel_size: 2` 就绕过「合格判官 < 2 ⇒ 作废」，与「禁止单判官出结论」相反。
+        rec["panel_kind"] = "per_judge"
         if int(job.get("panel_size", 1) or 1) != 1:
             rec["panel_size_ignored"] = int(job.get("panel_size", 1) or 1)
             rec["note_panel"] = ("明细模式的 panel_size 取输入自报，不可信 ⇒ 固定按 1 计"
@@ -315,9 +350,15 @@ def run_job(job: dict, *, min_delta: float, policy: str,
         return rec
     survivors = {n: st for n, st in rec["judges"].items() if st["qualified"]}
     panel = rec["panel_size"]
-    if len(survivors) * panel < 2:
+    # ★ issue #42-五（JA3）：`panel_size` 现在**由判官数推出**（逐判官汇总 = 汇总条数，
+    #   明细模式固定 1），再乘一次等于同一个人被数两遍——2 名判官里 1 名合格即 1×2 = 2
+    #   过门（旧树 1×1 < 2 作废）。只有显式声明的**批汇总**格式才乘自报人数。
+    n_eff = len(survivors) * panel if rec.get("panel_kind") == "batch" else len(survivors)
+    if n_eff < 2:
         rec.update(status="void", report_mode="不可测",
-                   reason=f"合格判官（含 panel_size 折算）{len(survivors)}×{panel} < 2（作废）")
+                   reason=(f"合格判官 {len(survivors)}"
+                           + (f"×{panel}（批汇总自报人数）" if rec.get("panel_kind") == "batch" else "")
+                           + " < 2（作废）"))
         return rec
     if unqualified:
         rec["voided_judges"] = unqualified
@@ -377,10 +418,11 @@ def _print_record(rec: dict) -> None:
                   + f"  ⇒ {rec['report_mode']}")
         scope = ag.get("scope")
         if scope == "anchors-only":
-            print("     （★ 只算在锚上：无非锚条目 ⇒ 至多只报序，issue #33）")
+            print(f"     （★ 配对只在锚上：每对实际配对 {ag.get('n_paired_items')} 条、"
+                  f"其中非锚 {ag.get('n_paired_nonanchor')} 条 ⇒ 至多只报序，issue #33／#42-五）")
         elif scope == "all":
-            print(f"     （算在 {ag.get('n_items')} 条上：锚 {ag.get('n_anchor_items')} ＋ "
-                  f"被测 {ag.get('n_nonanchor_items')}）")
+            print(f"     （配对 {ag.get('n_paired_items')} 条／对：锚 {ag.get('n_anchor_items')} ＋ "
+                  f"被测 {ag.get('n_paired_nonanchor')}；并集 {ag.get('n_items')} 条）")
         if rec.get("agreement_recomputed"):
             print(f"     （{rec['agreement_recomputed']}）")
         if rec.get("voided_judges"):
@@ -659,6 +701,61 @@ def selftest() -> int:
     print(f"[自检13] pairs 为空不抛 traceback … {'PASS' if c13 else 'FAIL'}")
     ok &= c13
 
+
+    # 用例 14（issue #42-五 JA1／JA2）：两判官各答了**不同**的非锚条目 —— 并集里有非锚条目，
+    #   但每一对实际只在锚上配对 ⇒ 必须按「锚上-only」封顶，至多只报序。
+    _ax = {a["qid"]: a["expected"] for a in anchors}
+    jx, jy = dict(_ax), dict(_ax)
+    for q in n_items[:50]:
+        jx[q] = "correct"
+    for q in n_items[50:]:
+        jy[q] = "correct"
+    rec14 = run({"round": "自检·并集有非锚但配对全在锚上", "stratum": "均衡", "anchors": anchors,
+                 "judges": {"J1": jx, "J2": jy}})
+    a14 = rec14.get("agreement", {})
+    c14 = (rec14["status"] == "pass" and rec14["report_mode"] == "只报序"
+           and a14.get("scope") == "anchors-only"
+           and a14.get("n_nonanchor_items", 0) == 100
+           and a14.get("n_paired_nonanchor") == 0)
+    print(f"[自检14] 并集有非锚／配对全在锚上 ⇒ 至多只报序 … {'PASS' if c14 else 'FAIL'}"
+          f"（并集非锚 {a14.get('n_nonanchor_items')} 条／每对非锚配对 {a14.get('n_paired_nonanchor')} 条"
+          f" ⇒ {rec14.get('report_mode')}）")
+    ok &= c14
+
+    # 用例 15（issue #42-五 JA3）：逐判官汇总模式下，2 名判官里 1 名合格 —— 不得因 panel_size
+    #   被算两遍（1×2 = 2）而放行；旧树 `len(survivors) * panel` 正是这么过门的。
+    rec15 = run({"round": "自检·逐判官汇总一人合格", "stratum": "均衡",
+                 "summary": {"positives": 18, "negatives": 18,
+                             "judges": {"J1": {"pos_hit": 18, "neg_miss": 0},
+                                        "J2": {"pos_hit": 9, "neg_miss": 9}}}})
+    c15 = (rec15["status"] == "void" and rec15["report_mode"] == "不可测"
+           and rec15.get("panel_kind") == "per_judge")
+    print(f"[自检15] 逐判官汇总仅 1 名合格 ⇒ 作废（panel 不重复折算） … {'PASS' if c15 else 'FAIL'}"
+          f"（{rec15.get('reason')}）")
+    ok &= c15
+
+    # 用例 16（issue #42-五 JA4）：**单条批汇总 + 声明人数**的旧格式须显式写 summary_kind，
+    #   写了才按声明人数记（并注明为自报）；没写仍被拒（exit 2）。
+    batch = {"round": "自检·批汇总", "stratum": "均衡", "summary_kind": "panel_batch",
+             "panel_size": 3,
+             "summary": {"positives": 18, "negatives": 18,
+                         "judges": {"判官批（3 判官均值）": {"pos_hit": 18, "neg_miss": 0}}}}
+    try:
+        rec16 = run(batch)
+        c16a = (rec16["status"] == "pass" and rec16["panel_size"] == 3
+                and rec16.get("panel_kind") == "batch" and rec16.get("note_panel"))
+    except InputError:
+        c16a = False
+        rec16 = {}
+    try:
+        run({k: v for k, v in batch.items() if k != "summary_kind"})
+        c16b = False
+    except InputError:
+        c16b = True
+    c16 = bool(c16a) and c16b
+    print(f"[自检16] 批汇总须显式声明人数格式 … {'PASS' if c16 else 'FAIL'}"
+          f"（声明后 {rec16.get('status')}／人数 {rec16.get('panel_size')}；未声明被拒 {c16b}）")
+    ok &= c16
     print(f"\n自检结果：{'全部通过 ✅（硬闸对定点变异有效）' if ok else '存在失败 ❌'}")
     return 0 if ok else 1
 

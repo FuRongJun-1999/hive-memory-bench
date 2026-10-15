@@ -170,8 +170,12 @@ def cmd_report():
         # ★ 覆盖率判官不得撤销结构轴降级（issue #7）：L2 判 unfit 的「依据不契合」、
         #   注明不接受撤销的「站外文献」等降级是**结构事实**，覆盖率判官（只判要点覆盖）
         #   的 pass 不能把它翻回来。run_calib 对此早有单独分支，report 此前漏了。
+        # ★ issue #42-三：纯 `hedge`（对冲式作答）降级不是结构事实，覆盖率判官可以终裁——
+        #   旧实现「有任一降级就不采信」把这类题送进两路判官却谁也裁不了，永远停在 review。
+        #   其余来源（cite／layer／excl／ext）与 `ext_note` 继续排除。
+        _blocking_down = bool(res.get("downgrade")) and not J.hedge_only_down(res)
         if (got in ("review", "fail") and qid in sem and qid not in expired
-                and not (res.get("downgrade") or res.get("ext_note"))):
+                and not (_blocking_down or res.get("ext_note"))):
             # ★ 结构事实不进语义层（对齐 judge.py 的 routable 与 semantic.py:220）：
             #   结构违规（struct_bad）与空答（empty）是**结构事实**，分数救不了——
             #   judge.py 的注释已明说、semantic.py 的 prepare 也把这类排除在外，

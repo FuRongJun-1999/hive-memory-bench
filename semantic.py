@@ -173,12 +173,17 @@ def _cite_materials(card, obj, res):
 
 
 def cmd_prepare_cite(root: Path):
-    """选例：被 L2 依据契合轴标过（规则层降级为 review、且带 downgrade 原因）的例。"""
+    """选例：被 L2 依据契合轴标过（规则层降级为 review、且降级来源含 `cite`）的例。
+
+    ★ issue #42-三：L2 只对**依据轴**有裁判权，故只选带 `cite` 来源的降级。旧实现
+      「有任一 downgrade 就选」，把纯 `hedge`（对冲式作答）等语义疑问也送进 L2 请求，
+      而 L2 判词又撤销不了它们 ⇒ 白花判官成本且题目永远停在 review。
+    """
     _cite_req(root).mkdir(parents=True, exist_ok=True)
     rows = _rule_layer(root)
     manifest = []
     for path, obj, card, res in rows:
-        if not res.get("downgrade"):
+        if "cite" not in J.down_kinds(res):
             continue
         qid, case = obj["qid"], obj.get("case") or path.stem
         name = f"{qid}__{case}"

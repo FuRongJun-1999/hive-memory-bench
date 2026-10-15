@@ -15,5 +15,6 @@
  "agreement_recorded": {
   "note": "完全相同 60–90%／跨档 0–6.7%（见 docs/多语料复现_v1.0.md §四）"
  },
- "panel_size": 3
+ "panel_size": 3,
+ "summary_kind": "panel_batch"
 }

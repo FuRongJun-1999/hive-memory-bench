@@ -395,6 +395,24 @@ python -X utf8 三分数.py real --label "我的系统"   # B 覆盖 / C 引文�
 > 的旧 `fit` 判词静默生效。**口径已升版：升级前写下的 `semantic/final_*_cite.json` 全部作废**，
 > 须用当前 prompt 重判（`semantic.py prepare … → 判官 → finalize`）。
 
+> **答卷里的 `qid`／`condition` 不被采信（2026-10-15 起，issue #8／#15／#42）**：回答契约只有
+> `conclusion`／`answer`／`evidence`／`confidence`。题号由评测方给定——CLI 取**文件名**或 `--qid`，
+> 批量链取 `sut/out/<qid>.json` 的**文件名**；实验条件取 `--condition` 或标定文件的外层包装，
+> 未包装一律按 `full` 判。此前 CLI 入口读的是自报对象本身：自报 `condition: ["u01_c6"]` 可让结论轴
+> 退出判决（实测 38 张客观卡里 13 张能靠「不知道。」+ 自报退化条件判 PASS），自报 `qid: q001i` 又能
+> 让干预题按已公开的主轮答案键判。两个入口现在同判（`python -X utf8 judge.py judge q001i.json` ⇒
+> `REVIEW`／`iv_key_missing=True`／非零退出，与 `score_sut.py` 路由一致）。
+
+> **对冲降级（`down_kind=hedge`）由覆盖率判官终裁（issue #42）**：纯语气对冲的题只送覆盖率判官，
+> L2 依据契合判官不再选它（此前两路判官都调用、`score_sut.py report` 又都不采信 ⇒ 永远停在 review、
+> 白花判官成本）。带结构缺陷的降级（`cite`／`layer`／`excl`／`ext`）照旧不进覆盖率判官。
+
+> **判官协议机械件的三处口径（issue #42）**：① 一致率的 `scope` 按**逐对配对交集**判——并集里有非锚
+> 条目但每一对实际只在锚上配对时，报告模式至多「只报序」（旧实现按并集记 `scope=all`，封顶被绕过，
+> 打印还写「算在 140 条上」而实际配对 40 条）；② 合格判官门不再乘 `panel_size`（该值现已由判官数推出，
+> 再乘一次等于同一个人数两遍）；③ 单条批汇总要声明人数必须显式写 `summary_kind: "panel_batch"`，
+> 仓内两份自带输入已按此补齐，`systems/judge_audit.json` 可由 README 命令逐字复现。
+
 ## 两条必读声明
 
 **一、干预轮的答案键未公开（有意为之）。**
