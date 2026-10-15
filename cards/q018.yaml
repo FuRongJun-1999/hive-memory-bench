@@ -17,7 +17,6 @@ answer_points:
   required: true
   any_of:
   - 自由的灵魂
-  - 有自我意识
   - 并非简单的游戏程序
   - 智能人格
   - 不是程序

@@ -18,7 +18,6 @@ answer_points:
   required: true
   expect_layer: 明写事实
   any_of:
-  - 发现
   - 产生
   - 自己出现
   - 不是被创造

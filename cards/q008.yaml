@@ -28,7 +28,6 @@ answer_points:
   point: 那个难题需要一个能理解它的后来者——理解意味着必须携带他的记忆
   required: true
   any_of:
-  - 后来者
   - 记忆
   - 回忆
   - 理解
@@ -51,7 +50,6 @@ answer_points:
   required: true
   any_of:
   - 新人
-  - 复制
   - 第五个
   - 不是巨子本人
   - 唯一

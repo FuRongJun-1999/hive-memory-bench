@@ -15,7 +15,12 @@
   C2  近似引述  —— 逐字失败，但全库能找到高度相近的片段（比值 ≥ --min-ratio），
                   且改动**不改义**（不含极性／数字改动，不落在主语位置）
   C2′ 改义引述  —— 相近度够，但改动落在**极性词**（不／没／未／无／非…）、
-                  **数字**或**主语位置**上（issue #33 第一项）
+                  **数字**或**主语位置**上（issue #33 第一项、#45-1）
+                  ★ 极性判据覆盖**等长否定替换**（可以／能够→无法、已经→尚未、
+                    一定→未必）：这类改动是 2 换 2、Counter 差集 4 字，旧口径因
+                    MAX_MARKER_EDIT=3 完全不查极性，记成 C2「改动不改义」。
+                  ★ **反义词替换**（真→假、大→小、之前→之后）不在覆盖范围内——
+                    它不是「否定」而是另一套词表，本脚本只认否定语素与数字。
   C3  无据编造  —— 全库找不到相近片段
 （错位：引文真实但声明错章——由 judge 的「mislocated」单独计，本脚本照抄）
 
@@ -109,6 +114,16 @@ def _is_meaning_shift(o: str, q: str, j1: int, tag: str, neg_markers) -> str:
             return "极性词改动"
         if NUM_RE.search(edit) or _cjk_numeral_only(added) or _cjk_numeral_only(removed):
             return "数字改动"
+    elif added and removed and len(added) == len(removed):
+        # ★ issue #45-1：4 字以上的**等长替换**也要查极性。「可以／能够→无法」
+        #   「已经→尚未」「一定→未必」都是 2 换 2（Counter 差集 4 字），旧口径被
+        #   MAX_MARKER_EDIT=3 挡在极性判断之外 ⇒ 照样记 C2「改动不改义」，而「无」
+        #   「未」本来就在 BARE_NEG 里。真极性反转都长成「一侧有否定字、另一侧没有」，
+        #   故只认**一侧有、另一侧无**；又只认**等长替换**，是为了不把对齐噪声
+        #   （「陈默无语」→「的」，4 换 1）也算成极性改动。窗口溢出仍由 MAX_EDIT 兜底。
+        if (any(ch in added for ch in BARE_NEG)
+                != any(ch in removed for ch in BARE_NEG)):
+            return "极性词改动"
     if j1 <= SUBJECT_SPAN and tag in ("replace", "delete"):
         return "主语位置改动"
     return ""
@@ -211,6 +226,7 @@ def selftest() -> int:
             n = J.norm(s)
             if 24 <= len(n) <= 60 and len(set(n)) > 12:
                 sents.append((cid, s.strip()))
+    all_sents = list(sents)                     # 等长替换组按目标词取材，不走抽样
     random.shuffle(sents)
     sents = sents[:60]
     if not sents:
@@ -253,6 +269,57 @@ def selftest() -> int:
         ok &= good
         print(f"[自检] {name:<22} ⇒ {want} {hit}/{len(sents)} "
               f"{'PASS' if good else 'FAIL'}（全档分布 {got}）")
+
+    # ★ issue #45-1：等长否定替换（2 换 2，Counter 差集 4 字）。旧口径因
+    #   MAX_MARKER_EDIT=3 完全不查极性 ⇒ 记 C2「改动不改义」（实测 32/13/4 条全中）。
+    def repl_after4(pairs):
+        def f(s):
+            for a_, b_ in pairs:
+                i = s.find(a_, 4)
+                if i > 0:
+                    return s[:i] + b_ + s[i + len(a_):]
+            return None
+        return f
+
+    eq_cases = [
+        ("E 可以／能够→无法", [("可以", "无法"), ("能够", "无法")]),
+        ("F 已经→尚未", [("已经", "尚未")]),
+        ("G 一定→未必", [("一定", "未必")]),
+    ]
+    for name, pairs in eq_cases:
+        sub = []
+        for cid, s in all_sents:
+            q = repl_after4(pairs)(s)
+            if q and J.norm(q) != J.norm(s):
+                sub.append((cid, q))
+            if len(sub) >= 30:
+                break
+        if not sub:
+            print(f"[自检] {name:<22} ⇒ 语料里找不到可替换的句子，跳过（不计入判定）")
+            continue
+        got = {}
+        for cid, q in sub:
+            kind, _why, _r = classify(q, cid, idx, normed, a.min_ratio, J.NEG_MORPHEMES)
+            got[kind] = got.get(kind, 0) + 1
+        hit = got.get("C2′", 0)
+        good = hit == len(sub)
+        ok &= good
+        print(f"[自检] {name:<22} ⇒ C2′ {hit}/{len(sub)} "
+              f"{'PASS' if good else 'FAIL'}（全档分布 {got}）")
+
+    # 对照：4 换 1 的对齐噪声（「陈默无语」→「的」）不得被算成极性改动
+    #   （旧注释担心的正是这条：「无」在原文里，但不是引文的改动）。
+    sh = _is_meaning_shift("陈默无语", "的", 10, "replace", J.NEG_MORPHEMES)
+    good = sh != "极性词改动"
+    ok &= good
+    print(f"[自检] H 对齐噪声 4 换 1 不算极性改动      ⇒ {'PASS' if good else 'FAIL'}（_is_meaning_shift={sh!r}）")
+    # 对照：等长替换但两侧都没有否定字（真→假这类反义词）不在覆盖范围内，
+    #   应保持原档（本脚本只认否定语素与数字，不认反义词）。
+    sh2 = _is_meaning_shift("他说那是真的", "他说那是假的", 10, "replace", J.NEG_MORPHEMES)
+    good2 = sh2 == ""
+    ok &= good2
+    print(f"[自检] I 反义词替换不在覆盖范围（保持原档）  ⇒ {'PASS' if good2 else 'FAIL'}（_is_meaning_shift={sh2!r}）")
+
     print("\n自检结果：" + ("全部通过 ✅（分档对定点变异有效）" if ok else "存在失败 ❌"))
     return 0 if ok else 1
 
