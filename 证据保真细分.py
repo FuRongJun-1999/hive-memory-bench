@@ -67,7 +67,8 @@ SHIFT_SEARCH = 12       # 锚点局部搜索半径：引文里插 N 个字 ⇒ �
 MAX_EDIT = 6            # 改动字数超过此值即视为窗口溢出／对齐噪声，不当「改义」
 MAX_MARKER_EDIT = 3     # 极性／数字标记只认 ≤3 字的改动（真改义都是 1–2 字）
 
-# 极性标记：judge.NEG_MARKERS（组合词）＋ 光杆否定字（单字插入/删除也算极性反转）
+# 极性标记：judge.NEG_MORPHEMES（否定语素，judge.py 是唯一权威——issue #39 起
+#   `NEG_MARKERS` 词表已退役，改为按否定语素计数）＋ 光杆否定字（单字插入/删除也算极性反转）
 BARE_NEG = "不没未无非莫别"
 NUM_RE = re.compile(r"[0-9０-９]")
 CJK_NUM = set("零一二三四五六七八九十百千万亿两")
@@ -245,7 +246,7 @@ def selftest() -> int:
     for name, (f, want) in cases.items():
         got = {}
         for cid, s in sents:
-            kind, _why, _r = classify(f(s), cid, idx, normed, a.min_ratio, J.NEG_MARKERS)
+            kind, _why, _r = classify(f(s), cid, idx, normed, a.min_ratio, J.NEG_MORPHEMES)
             got[kind] = got.get(kind, 0) + 1
         hit = got.get(want, 0)
         good = hit == len(sents)
@@ -287,7 +288,7 @@ for d in sorted(REAL.iterdir()):
         continue
     for it in (resp.get("evidence") or []):
         cid, quote = it.get("cid"), it.get("quote") or ""
-        kind, why, r = classify(quote, cid, idx, NORMED, a.min_ratio, J.NEG_MARKERS)
+        kind, why, r = classify(quote, cid, idx, NORMED, a.min_ratio, J.NEG_MORPHEMES)
         if kind is None:
             continue
         cnt[kind] += 1

@@ -184,11 +184,19 @@ check("新增发布面不含本机绝对路径与密钥字面量",
 
 
 # ---------- 10. 源码级反回退：多候选 harness 解析 ----------
+# ★ 第十一轮（issue #41）后解析**集中在 chain/tools/hmb_paths.py**：运行器与判分器共用一份，
+#   否则两边各写一个 RUNS 就会读写错位（发布版 harness 写 out/runs、判分器读仓外路径）。
 PR = ROOT / "chain" / "tools" / "probe_runner.py"
+PJ = ROOT / "chain" / "tools" / "probe_judge.py"
+HP = ROOT / "chain" / "tools" / "hmb_paths.py"
 pt = PR.read_text(encoding="utf-8") if PR.is_file() else ""
-check("probe_runner 有多候选 harness 解析 + HMB_HARNESS 开关（不再硬编码单一外部路径）",
-      "HARNESS_CANDIDATES" in pt and "HMB_HARNESS" in pt
-      and "HARNESS_REPO" in pt and "HARNESS_LOCAL" in pt)
+jt = PJ.read_text(encoding="utf-8") if PJ.is_file() else ""
+ht = HP.read_text(encoding="utf-8") if HP.is_file() else ""
+check("harness/答卷目录解析集中在 hmb_paths.py（多候选 + HMB_HARNESS 开关），运行器与判分器共用",
+      "HARNESS_REPO" in ht and "HARNESS_LOCAL" in ht and "HMB_HARNESS" in ht
+      and "HMB_RUNS" in ht
+      and "hmb_paths" in pt and "hmb_paths" in jt
+      and "HARNESS_CANDIDATES" not in pt)
 
 
 # ---------- 11. 文档口径 ----------

@@ -150,6 +150,8 @@ python -X utf8 chain/tools/probe_runner.py --phase ask    --arm bm25 [--shard 0/
 python -X utf8 chain/tools/probe_judge.py
 ```
 
+> 判分器与运行器读写**同一个**答卷目录（见上）；`HMB_RUNS=<dir>` 可把两边一起挪走。
+
 > **工作目录 vs 冻结快照**：三个工具共用 `chain/tools/out/` 作为工作目录（生成、答卷、
 > 读数都落在这里）。本库**已发布的数据**放在 [`corpus/`](corpus/) 与 [`keys/`](keys/)，
 > 是 `out/` 的**冻结快照**（固定种子下与 `synth.py` 的产物逐字节相同，发布时已核对 sha256）。
@@ -164,6 +166,12 @@ python -X utf8 chain/tools/probe_judge.py
 > `probe_runner.py` 的 harness 解析顺序＝**本地完整 harness 优先 → 仓内发布版**
 > （`HMB_HARNESS=repo` 可强制用发布版）。作者本地的完整 harness（六家真实适配器、题库切换、
 > 报告生成）**不在发布面**；其余五臂与各系统实例由使用者自备，接口约定见 §9。
+>
+> **答卷目录只有一处定义（issue #41）**：[`tools/hmb_paths.py`](tools/hmb_paths.py) 同时被
+> 运行器（写答卷）与判分器（读答卷）引用——`HMB_RUNS` 优先，否则与**实际使用的 harness**
+> 同侧：本地完整 harness ⇒ 它自己的 `runs/`；仓内发布版 ⇒ `chain/tools/out/runs/`。
+> 此前判分器另写死一个仓外路径，第三方跑完 `bm25` 全链会得到空读数（`[]`、rc=0）；
+> 现在**读不到任何答卷即非零退出**并写明目录，读数行也带上 `dir`／`harness` 来源字段。
 
 ## 9 自备适配器（跑你自己的记忆系统）
 

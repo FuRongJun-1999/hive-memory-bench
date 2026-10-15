@@ -388,6 +388,13 @@ python -X utf8 三分数.py real --label "我的系统"   # B 覆盖 / C 引文�
 **③ 复现判分**：`python -X utf8 check_all.py check` 应输出 `0 错误`；
 `results/boards/` 里每次判定的 `qid → verdict` 可按同样流程逐题核对。
 
+> **判词绑定的答卷指纹（口径 `ans-v2`，2026-10-15 起）**：判官结论必须绑定它评的那份答卷，
+> 指纹 `answer_sha1_12` 覆盖**判官读到的全部字段**——`conclusion`、`answer`、每条 `evidence`
+> 的 `(cid, quote)`、`condition`、`confidence`，外加口径版本号。此前只哈希答案文本，
+> 「结论一字不改、只把引文换成与结论无关的句子」指纹不变，L2 依据契合判官（判的就是引文）
+> 的旧 `fit` 判词静默生效。**口径已升版：升级前写下的 `semantic/final_*_cite.json` 全部作废**，
+> 须用当前 prompt 重判（`semantic.py prepare … → 判官 → finalize`）。
+
 ## 两条必读声明
 
 **一、干预轮的答案键未公开（有意为之）。**
