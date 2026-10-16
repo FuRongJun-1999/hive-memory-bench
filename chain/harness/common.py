@@ -87,13 +87,17 @@ class LLM:
 
     ★ `max_tokens` 只是上限、不改变实际计费，故一律给足（推理模型的思考会吃额度）。
       `thinking=False` 用于抽取/翻译/格式化这类不需要思考的活。
+      ★ issue #51-D7：思考开关的**默认值已改为 False**——评测要可复现，而开思考
+      即引入一条非确定性推理路径（`temperature=0` 也压不住）。需要思考的调用点必须
+      **显式**写 `thinking=True`（如生成器 `probe_runner.py`），让「这一步开了思考」
+      是代码里看得见的决定，而不是签名里的默认值。
     凭据：只读环境变量 `DEEPSEEK_API_KEY`；缺失即报错，不回退、不猜测。
     """
 
     MAX_OUT = 384_000
 
     def __init__(self, model: str = GEN_MODEL, max_tokens: int = MAX_OUT,
-                 thinking: bool = True, effort: str | None = None):
+                 thinking: bool = False, effort: str | None = None):
         from openai import OpenAI
         self.model = model
         self.max_tokens = max_tokens

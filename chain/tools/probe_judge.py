@@ -568,8 +568,15 @@ def judge_arm(arm: str, keys: list[dict], doc_norms: dict, decoys: dict,
         pairs.append((k, a))
     n = len(pairs)
 
-    def rate(xs):
-        return round(sum(1 for x in xs if x) / len(xs), 4) if xs else 0.0
+    # issue #51-D4: empty denominators go into the na list.
+    na = []
+
+    def rate(xs, name=None):
+        if xs:
+            return round(sum(1 for x in xs if x) / len(xs), 4)
+        if name:
+            na.append(name)
+        return 0.0
 
     # ★ issue #28：现值/历史/滞后/超前的分母**不再剔除**答案为 null 的退役题——
     #   剔除等于让「退役后照报旧值」的臂与满分臂读数逐位相同。空答臂不会因此白拿分：
@@ -581,14 +588,20 @@ def judge_arm(arm: str, keys: list[dict], doc_norms: dict, decoys: dict,
                   if a.get('_error') or a.get('_json_ok') is False]
     present = [value_ok(a, k) for k, a in pairs if k['type'] == '现值']
     history = [value_ok(a, k) for k, a in pairs if k['type'] == '历史']
-    chain = [chain_complete(a, k) for k, a in pairs if k['type'] == '变更']
-    chain_rows = [chain_rows_hit(a, k) for k, a in pairs if k['type'] == '变更']
+    # ★ issue #51-D5／D6：chain 系读数与 `_main_ok`／bucket_main **同分母**——没有
+    #   「值→值」变更（`want_changes` 为空）的变更题不进分母。旧实现把它们全收进来，
+    #   而 `chain_complete` 对空 want 返回 False ⇒ 这类题**无论如何作答都记 0**，
+    #   与预注册口径「不进分母」相反（当前 642 键 / 63 变更题上 want_changes 为空者 0 题，
+    #   故本次对齐在现有数据上是 no-op，只堵住潜在分叉）。
+    chain_pairs = [(k, a) for k, a in pairs if k['type'] == '变更' and want_changes(k)]
+    chain = [chain_complete(a, k) for k, a in chain_pairs]
+    chain_rows = [chain_rows_hit(a, k) for k, a in chain_pairs]
     chain_row_recall = (round(sum(h for h, _ in chain_rows) / sum(t for _, t in chain_rows), 4)
                         if chain_rows and sum(t for _, t in chain_rows) else 0.0)
     # ★ issue #24：多列不罚会把「整篇列出、不认主体」的答卷读成满分——补精度读数：
     #   所列行中**属于本链**的占比（空答无行 ⇒ 0.0，与其余读数同口径）。
     chain_lists = [(chain_extra_rows(a, k), len(_chain_items(a)))
-                   for k, a in pairs if k['type'] == '变更']
+                   for k, a in chain_pairs]
     _rows = sum(t for _, t in chain_lists)
     chain_precision = (round(1.0 - sum(e for e, _ in chain_lists) / _rows, 4)
                        if _rows else 0.0)
@@ -646,23 +659,30 @@ def judge_arm(arm: str, keys: list[dict], doc_norms: dict, decoys: dict,
                   timepoint=len(timepoint),
                   timepoint_early=len(tp_early), timepoint_late=len(tp_late))
     # 四态多数类基线（诊断：合并数被它主导，见 issue #21）
+    for _nm, _xs in (('timepoint_early', tp_early), ('timepoint_late', tp_late)):
+        if not _xs and not (tp_early or tp_late):
+            na.append(_nm)
     n_st = len(st_pairs)
     four_majority = (round(max(len(four_by[s]) for s in FOUR_STATES) / n_st, 4)
                      if n_st else 0.0)
     return dict(arm=arm, n_error=len(error_qids), error_qids=error_qids[:5],
-                present=rate(present), history=rate(history), chain=rate(chain),
+                present=rate(present, 'present'), history=rate(history, 'history'),
+                chain=rate(chain, 'chain'),
                 chain_row_recall=chain_row_recall,
                 chain_precision=chain_precision,
-                stale=rate(stale), future=rate(future),
-                subject_confusion=rate(subj), four_state=rate(four),
+                stale=rate(stale, 'stale'), future=rate(future, 'future'),
+                subject_confusion=rate(subj, 'subject_confusion'),
+                four_state=rate(four, 'four_state'),
                 four_state_majority=four_majority,
-                **{f'four_state_{s}': rate(four_by[s]) for s in FOUR_STATES},
-                timepoint=rate(timepoint),
+                **{f'four_state_{s}': rate(four_by[s], f'four_state_{s}')
+                   for s in FOUR_STATES},
+                timepoint=rate(timepoint, 'timepoint'),
                 timepoint_early=(round(len(tp_early) / (len(tp_early) + len(tp_late)), 4)
                                  if (tp_early or tp_late) else 0.0),
                 timepoint_late=(round(len(tp_late) / (len(tp_early) + len(tp_late)), 4)
                                 if (tp_early or tp_late) else 0.0),
-                reason=rate(reason), verbatim=rate(verb), n=n,
+                reason=rate(reason, 'reason'), verbatim=rate(verb, 'verbatim'), n=n,
+                na=sorted(set(na)),
                 counts=counts, bucket_main=bucket_main, bucket_main_n=bmain_n,
                 n_skipped=n_skipped,
                 # ★ issue #44-三：单调性判据要做**单侧两比例检验**，需要各桶的命中数
@@ -759,6 +779,12 @@ def judge_arms(arms: list[str], write: bool = True) -> list[dict]:
             excluded.append(row)
         else:
             rows.append(row)
+    # issue #51-D4: name the empty-denominator readings instead of printing a bare 0.0.
+    for row in rows:
+        if row.get('na'):
+            print(f"  ★ {row['arm']}: {len(row['na'])} "
+                  f"项读数无样本（分母为空，值按 0.0 记）"
+                  f"——" + "、".join(row['na']))
     if write:
         (OUT / 'readings.json').write_text(
             json.dumps(rows, ensure_ascii=False, indent=1), encoding='utf-8')

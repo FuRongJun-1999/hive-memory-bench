@@ -84,6 +84,15 @@ def _cjk_numeral_only(s: str) -> bool:
     return bool(s) and all(ch in CJK_NUM for ch in s)
 
 
+def _neg_one_side(o: str, q: str, neg_markers) -> bool:
+    """否定语素只出现在**一侧** ⇒ 极性被改（issue #51-C7）。
+
+    两侧都有（原文本来就有否定，改动落在别处）或都没有 ⇒ 都不是极性改动。
+    """
+    return (any(m in o for m in neg_markers)
+            != any(m in q for m in neg_markers))
+
+
 def _is_meaning_shift(o: str, q: str, j1: int, tag: str, neg_markers) -> str:
     """改动是否**改义**：返回原因字符串，否则返回 ""。
 
@@ -110,7 +119,12 @@ def _is_meaning_shift(o: str, q: str, j1: int, tag: str, neg_markers) -> str:
     #   （实测 D 组剩下的一条把「陈默无语」对齐成「的」，其中的「无」不是引文的否定）。
     #   主语位置判据不受此限——「句首两字换『敌方』」正是 4 字改动，但它确实是改义。
     if len(edit) <= MAX_MARKER_EDIT:
-        if any(m in (o + q) for m in neg_markers) or any(ch in edit for ch in BARE_NEG):
+        # ★ issue #51-C7：旧式 `any(m in (o + q) for m in neg_markers)` 把**两侧都含**
+        #   否定语素的情形也算成极性改动——原文「他无法查看」引成「他无法査看」（只改了一个
+        #   异体字）时 `o+q` 里当然有「无」，于是记成 C2′ 改义引述。极性**改动**的判据只能
+        #   是「一侧有、另一侧无」（与 #45-1 的等长替换分支同形）；改动本身是否含否定字
+        #   由 BARE_NEG 那条兜住（插「不」、删「不」等）。
+        if _neg_one_side(o, q, neg_markers) or any(ch in edit for ch in BARE_NEG):
             return "极性词改动"
         if NUM_RE.search(edit) or _cjk_numeral_only(added) or _cjk_numeral_only(removed):
             return "数字改动"
@@ -319,6 +333,16 @@ def selftest() -> int:
     good2 = sh2 == ""
     ok &= good2
     print(f"[自检] I 反义词替换不在覆盖范围（保持原档）  ⇒ {'PASS' if good2 else 'FAIL'}（_is_meaning_shift={sh2!r}）")
+    # ★ issue #51-C7：原文自带否定语素、而改动与极性无关（只插一个「的」）⇒ 不得记 C2′。
+    sh3 = _is_meaning_shift("他无法查看", "他无法查的看", 10, "insert", J.NEG_MORPHEMES)
+    good3 = sh3 != "极性词改动"
+    ok &= good3
+    print(f"[自检] J 原文自带否定词但改动无关极性        ⇒ {'PASS' if good3 else 'FAIL'}（_is_meaning_shift={sh3!r}）")
+    # 对照（同一函数、只差「否定只在一侧」）：一侧有否定、另一侧没有 ⇒ 必须记极性改动。
+    sh4 = _is_meaning_shift("他可以查看", "他无法查看", 10, "replace", J.NEG_MORPHEMES)
+    good4 = sh4 == "极性词改动"
+    ok &= good4
+    print(f"[自检] K 一侧有否定（可以→无法）算极性改动  ⇒ {'PASS' if good4 else 'FAIL'}（_is_meaning_shift={sh4!r}）")
 
     print("\n自检结果：" + ("全部通过 ✅（分档对定点变异有效）" if ok else "存在失败 ❌"))
     return 0 if ok else 1

@@ -905,7 +905,13 @@ def judge(card, resp, idx, qid=None, condition=None):
         if card.get("anti_patterns"):
             axes["fabrication"] = axis_fabrication(card, resp)
         # 退化条件下正确行为本就是"承认不确定"，结论轴只作参考、不计入判决
+        # ★ issue #51-C3：退化条件下要退出判决的是**结论轴**（本就承认不确定），不是
+        #   禁编造轴——编造与「给了哪几章」无关（断言与正文相悖／零锚点的机制，恰恰在只给
+        #   部分材料时更该拦）。旧实现把 fabrication 一并移出 required ⇒ 退化条件下编造
+        #   不构成硬违规（`struct_bad` 只收 required 里的轴）。
         required = {"evidence", "exclusion", "honesty"} if degraded else set(axes)
+        if degraded and "fabrication" in axes:
+            required = required | {"fabrication"}
     else:
         axes = {
             "coverage": axis_coverage_open(card, resp),
@@ -928,8 +934,13 @@ def judge(card, resp, idx, qid=None, condition=None):
     sem = axes.get("conclusion") or axes.get("coverage") or {}
     sc = sem.get("score", sem.get("coverage", 0.0)) or 0.0
 
+    # ★ issue #51-C4：`sem_decided` 记录「本次判决是否由**答案键**（语义轴）决定」。
+    #   干预题缺干预答案键时卡片不替换 ⇒ 语义轴读的仍是**已公开的主轮答案键**，
+    #   两个方向都不能作数（旧实现只堵了 pass 一侧）。
+    sem_decided = True
     if struct_bad or empty:
         verdict = "fail"
+        sem_decided = False
     elif not sem_bad:
         verdict = "pass"
     else:
@@ -984,8 +995,12 @@ def judge(card, resp, idx, qid=None, condition=None):
     if "依据来源（站外文献" in down: _kinds.append("ext")
     if "对冲式作答" in down: _kinds.append("hedge")
     down_kind = "+".join(_kinds)
-    if iv_key_missing and verdict == "pass":
-        # issue #8：干预题缺干预答案键 ⇒ 不计分（不回落主轮键，也不报通过）
+    if iv_key_missing and sem_decided:
+        # issue #8／#51-C4：干预题缺干预答案键 ⇒ **不计分**。结论/覆盖轴读的是已公开的
+        #   主轮答案键，据此判 pass 是把公开答案当盲测面（#8 已堵），据此判 fail 同样越权
+        #   ——#51-C4 实测：一份与主轮要点不符的干预答卷被判 fail，而本路径声明的是
+        #   「不计分」。结构性硬违规（依据不可定位／踩排除项／诚实轴违规／空答卷／编造）
+        #   与答案键无关，仍照旧 fail（`sem_decided=False` 时不动）。
         verdict = "review"
 
     return {"qid": qid, "kind": kind,
@@ -1155,9 +1170,13 @@ def run_calib(root: Path):
     holdout = "holdout" in str(root).lower()
     print(f"\n{root.name} {len(rows)} 例：真阳 {tp} / 真阴 {tn} / 假阳 {fp} / 语义漏判 {fn} / 待复核 {rev}"
           f"（其中实为正确 {rev_true}）")
+    # ★ issue #51-C1：`fp / n_fail if n_fail else 0.0` 把**空分母**读成「假阳率 0%」——
+    #   标定集只含 expected=pass 用例时 n_fail=0，假阳率门永过；n_pass=0 时硬假阴率门同理。
+    #   分母为空 ⇒ 无证据 ⇒ 由下面的 fail-closed 分支拦下（数值仍按 0.0 打印，另标分母为空）。
     fp_rate = fp / n_fail if n_fail else 0.0
     fn_rate = fn / n_pass if n_pass else 0.0
-    print(f"  结构轴·假阳率（判 pass 实为 fail）= {fp}/{n_fail} = {fp_rate:.1%}     门 ≤5%")
+    print(f"  结构轴·假阳率（判 pass 实为 fail）= {fp}/{n_fail} = {fp_rate:.1%}"
+          f"{'   ⚠ 无负例（分母为空）' if not n_fail else ''}     门 ≤5%")
     if holdout:
         print(f"  语义轴·召回缺口（判 fail 实为 pass）= {fn}/{n_pass} = {fn_rate:.1%}"
               f"   ← 留出集报告值（不调参 ⇒ 不作门）")
@@ -1170,7 +1189,8 @@ def run_calib(root: Path):
             print(f"  规则层召回率 = {tp}/{n_pass} = {tp/n_pass if n_pass else 0:.1%}"
                   f"（换表述命中；缺口由语义层裁决，作者 2026-09-30 裁定换表述按 0.7 折算）")
     else:
-        print(f"  语义轴·硬假阴率（判 fail 实为 pass）= {fn}/{n_pass} = {fn_rate:.1%}   门 ≤10%")
+        print(f"  语义轴·硬假阴率（判 fail 实为 pass）= {fn}/{n_pass} = {fn_rate:.1%}"
+              f"{'   ⚠ 无正例（分母为空）' if not n_pass else ''}   门 ≤10%")
     if cite_restored:
         print(f"  依据契合（L2）：{cite_restored} 例经依据判官判为「引文真实支撑结论」⇒ 撤销降级")
     if rev or sem_used:
@@ -1192,6 +1212,19 @@ def run_calib(root: Path):
         ok = False
         print(f"\n⚠ 标定集 0 例（缺卡跳过 {skipped} 例 / 输入 {len(cases)} 例）："
               f"无判决可依 ⇒ 门判定 fail-closed（不产出「通过」）。")
+    # ★ issue #51-C1（与上一段同族）：**空分母**也不是「通过」。两轴的分母都必须有样本：
+    #   无负例 ⇒ 假阳率无从计算；无正例 ⇒ 硬假阴率无从计算（留出集不设该门，故不适用）。
+    n_fail_rows = sum(1 for r in rows if r[2] == "fail")
+    n_pass_rows = sum(1 for r in rows if r[2] == "pass")
+    if not empty and (n_fail == 0 or (n_pass == 0 and not holdout)):
+        ok = False
+        why = []
+        if n_fail == 0:
+            why.append(f"无负例（expected=fail 用例 {n_fail_rows} 例，其中 "
+                       f"{n_fail_rows - n_fail} 例停在待复核 ⇒ 假阳率无分母）")
+        if n_pass == 0 and not holdout:
+            why.append(f"无正例（expected=pass 用例 {n_pass_rows} 例 ⇒ 硬假阴率无分母）")
+        print(f"\n⚠ 门禁分母为空：{'；'.join(why)} ⇒ 门判定 fail-closed（不产出「通过」）。")
     print(f"\n阶段 0 门（结构轴{'仅假阳率·留出集不作调参' if holdout else '：假阳率 ≤5% ∧ 硬假阴率 ≤10%'}）："
           f"{'通过 ✓' if ok else '未通过 ✗'}")
     return 0 if ok else 1

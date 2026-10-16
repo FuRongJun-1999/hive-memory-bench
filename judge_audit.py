@@ -36,7 +36,9 @@
     `panel_size` 只能由逐判官汇总数推出；`pos_hit`／`neg_miss` 越界即拒绝（exit 2）。
 硬闸策略：
   · void-all（默认）：任一判官不合格 ⇒ 整批作废——**不写入读数记录、exit 1**；
-  · keep-qualified：剔除不合格判官后继续，但合格判官 < 2 ⇒ 仍作废。
+  · keep-qualified：剔除不合格判官后继续，但合格判官 < 2 ⇒ 仍作废
+    （合格判官数＝存活判官**所代表的判官数**：逐判官汇总/明细模式按汇总条数，
+     单条批汇总按自报人数——后者必须**只有一条**汇总，多行即拒，见 issue #51-C5）。
 自检（含定点变异用例，证明硬闸不是恒真断言）：
   python judge_audit.py selftest
 用法：
@@ -291,6 +293,15 @@ def run_job(job: dict, *, min_delta: float, policy: str,
         rec["panel_kind"] = "batch" if str(job.get("summary_kind") or "") == "panel_batch" \
             else "per_judge"
         if rec["panel_kind"] == "batch":
+            # ★ issue #51-C5：批汇总格式是**单条**（一行＝一批判官），人数由该行自报。
+            #   多行时自报人数无法摊到各行，而合格判官门会按「行数 × 人数」重复计入
+            #   （同一个人被数两遍）——与 #42-五 修掉的明细模式同一个乘法，故在此拒收。
+            if len(rec["judges"]) != 1:
+                raise InputError(
+                    f"summary_kind=panel_batch 是单条批汇总格式，但输入给了 "
+                    f"{len(rec['judges'])} 条判官汇总——自报人数 {declared} 无法摊到各行"
+                    f"（issue #51-C5）。多判官请改用**逐判官汇总**（去掉 summary_kind 与 "
+                    f"panel_size，人数由汇总条数推出）。")
             rec["panel_size"] = max(1, declared)
             rec["note_panel"] = (f"批汇总格式（summary_kind=panel_batch）：人数 {rec['panel_size']}"
                                  f" 由输入自报，无逐判官明细可核（issue #42-五）")
@@ -353,7 +364,14 @@ def run_job(job: dict, *, min_delta: float, policy: str,
     # ★ issue #42-五（JA3）：`panel_size` 现在**由判官数推出**（逐判官汇总 = 汇总条数，
     #   明细模式固定 1），再乘一次等于同一个人被数两遍——2 名判官里 1 名合格即 1×2 = 2
     #   过门（旧树 1×1 < 2 作废）。只有显式声明的**批汇总**格式才乘自报人数。
-    n_eff = len(survivors) * panel if rec.get("panel_kind") == "batch" else len(survivors)
+    # ★ issue #51-C5：`n_eff` 的定义统一为「存活判官**所代表的判官数**」——
+    #   逐判官汇总／明细模式＝行数（每行一名判官，人数由行数推出，见 #42-五，
+    #   故**不再乘** panel_size）；单条批汇总＝该行背后的自报人数（格式上恒为一行，
+    #   故也不会重复计入，单行契约见上面的 InputError）。
+    if rec.get("panel_kind") == "batch":
+        n_eff = panel if survivors else 0
+    else:
+        n_eff = len(survivors)
     if n_eff < 2:
         rec.update(status="void", report_mode="不可测",
                    reason=(f"合格判官 {len(survivors)}"

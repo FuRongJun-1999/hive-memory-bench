@@ -626,7 +626,9 @@ def do_ask(arm: str, d: Path, limit: int, shard: tuple[int, int] | None = None,
             ad.ingest(chapters)
         elif arm == 'lingshu':
             ad._cid_by_title = {ch['cid']: ch['cid'] for ch in chapters}
-    llm = C.LLM()
+    # issue #51-D7: the thinking switch is declared **at the call site** (the default
+    # is now False, see common.LLM). The generator arm does want thinking, so say so.
+    llm = C.LLM(thinking=True)
     (d / 'sut' / 'out').mkdir(parents=True, exist_ok=True)
     (d / 'retrieval').mkdir(parents=True, exist_ok=True)
     ok = err = 0
