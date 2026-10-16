@@ -116,6 +116,7 @@ def main():
 
     got, seen, problems, _swapped = {}, set(), [], set()
     _conf_defaulted = []          # ★ issue #19：缺 confidence 被补成 probable 的题（体检要看得见）
+    _contract_bad = []            # ★ issue #54：类型/形状不符契约的题（体检要看得见，且原样落盘）
     for f in files:
         p = Path(f)
         if not p.exists():
@@ -134,6 +135,11 @@ def main():
                 problems.append(f"{f}: 既不是 JSON，也没解析出 Markdown 作答段")
                 continue
         for a in cands:
+            # ★ issue #54：`answers` 是字符串列表（不是对象列表）时，旧实现
+            #   `a.get("qid")` 直接抛 AttributeError，把整个体检带走。
+            if not isinstance(a, dict):
+                problems.append(f"{f}: 有一条作答不是对象（实为 {type(a).__name__}），已跳过")
+                continue
             qid = str(a.get("qid") or "").strip()
             if not qid:
                 problems.append(f"{f}: 有一条作答没有 qid，已跳过")
@@ -153,21 +159,34 @@ def main():
             if not rec.get("confidence"):
                 rec["confidence"] = "probable"
                 _conf_defaulted.append(qid)
-            if len(rec.get("conclusion") or "") > len(rec.get("answer") or ""):
-                _swapped.add(qid)
-            if "--merge-fields" in sys.argv:
-                a_, c_ = (rec.get("answer") or "").strip(), (rec.get("conclusion") or "").strip()
-                if c_ and c_ not in a_:
-                    rec["answer"] = (a_ + chr(10) + c_).strip() if a_ else c_
-            rec["evidence"] = [e for e in (rec.get("evidence") or []) if (e or {}).get("quote")]
-            rec["claims"] = [c for c in (rec.get("claims") or []) if (c or {}).get("text")]
+            # ★ issue #54：类型不符的作答**不在这里洗**——旧实现 `(e or {}).get("quote")`
+            #   在 evidence 是字符串列表时直接抛 AttributeError（体检与落盘一起崩）；数字
+            #   confidence 又因为「真值」原样放行。契约形状改走判据单点 judge.contract_errors：
+            #   合规才做真值过滤（那是**内容**层面的整理），不合规则原样落盘并记「契约不符」，
+            #   由 score_sut build 计 fail 并单列题号。
+            _ce = J.contract_errors(rec)
+            if _ce:
+                _contract_bad.append((qid, _ce))
+            else:
+                if len(rec.get("conclusion") or "") > len(rec.get("answer") or ""):
+                    _swapped.add(qid)
+                if "--merge-fields" in sys.argv:
+                    a_, c_ = (rec.get("answer") or "").strip(), (rec.get("conclusion") or "").strip()
+                    if c_ and c_ not in a_:
+                        rec["answer"] = (a_ + chr(10) + c_).strip() if a_ else c_
+                rec["evidence"] = [e for e in (rec.get("evidence") or []) if (e or {}).get("quote")]
+                rec["claims"] = [c for c in (rec.get("claims") or []) if (c or {}).get("text")]
             got[qid] = rec
 
     # 体检
     empty = [q for q, r in got.items() if not (r.get("answer") or r.get("conclusion"))]
     bad_ev = []
     for q, r in got.items():
-        for e in r["evidence"]:
+        # ★ issue #54：契约不符的答卷原样保留（evidence 可能是字符串列表），此处不得假定
+        #   元素是对象——旧实现体检自己在这里抛 AttributeError。
+        for e in (r.get("evidence") or []):
+            if not isinstance(e, dict):
+                continue
             cid, quote = e.get("cid"), e.get("quote") or ""
             if cid in idx and norm(quote) in norm(idx[cid]["text"]):
                 continue
@@ -187,6 +206,13 @@ def main():
         print(f"  ★ 缺 confidence 已补 probable：{len(_conf_defaulted)} 题"
               f"（{'、'.join(_conf_defaulted[:6])}{' …' if len(_conf_defaulted) > 6 else ''}）"
               f" —— 旧版这行 setdefault 永不生效，这些题会落盘成 null 并被诚实轴判 fail（issue #19）")
+    if _contract_bad:
+        print(f"  ★ 契约不符（类型/形状不符合 questions/作答契约.md）：{len(_contract_bad)} 题"
+              f"（{'、'.join(q for q, _ in _contract_bad[:6])}"
+              f"{' …' if len(_contract_bad) > 6 else ''}） —— 这些题原样落盘，"
+              f"score_sut build 会计 fail 并单列题号（issue #54）")
+        for _q, _ce in _contract_bad[:6]:
+            print(f"    · {_q}: {'；'.join(_ce)}")
     n_cond = sum(1 for r in got.values() if r.get("condition"))
     if n_cond:
         print(f"  带 condition 的作答：{n_cond} 题（已随卷落盘；判分器不采信自报条件，"
@@ -199,6 +225,13 @@ def main():
 
     if dry:
         print("\n（--check：未落盘）")
+        # ★ issue #54：--check 是操作者唯一的「先查后判」手段，类型不符必须计入体检结论，
+        #   而不是让它抛异常（旧实现：字符串 evidence ⇒ 体检自己崩；数字 confidence ⇒ 放行，
+        #   然后 build 崩）。契约不符属硬不合规，故 --check 以非零退出。
+        if _contract_bad:
+            print(f"★ --check 未通过：{len(_contract_bad)} 题契约不符（类型/形状）——"
+                  f"落盘后 score_sut build 会把这些题计 fail（issue #54）")
+            return 1
         return 0
     OUT.mkdir(parents=True, exist_ok=True)
     for qid, rec in got.items():

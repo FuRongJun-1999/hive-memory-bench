@@ -488,6 +488,57 @@ def whitelisted_quote(card, quote: str) -> bool:
                for it in (card.get("supporting_evidence") or []))
 
 
+CONFIDENCE_VALUES = ("certain", "probable", "unknown")
+_CONTRACT_TEXT_FIELDS = ("qid", "answer", "conclusion")
+
+
+def _shape_of(v) -> str:
+    return "null" if v is None else type(v).__name__
+
+
+def contract_errors(resp) -> list:
+    """作答契约的**形状**校验（issue #54）。返回不合规项的中文描述；[] = 形状合规。
+
+    ★ 判据只此一处：`score_sut.py:load_sut`、`导入回收作答.py` 的体检、
+      `judge()` 自身都调这里，不再各写各的。issue #54 的病灶正是这个分叉——
+      导入脚本只对 quote 做真值过滤、不查类型，build 又假定 `evidence` 是对象列表，
+      于是「体检放行、build 崩」。
+
+    只判**类型/容器形状**，不判取值：`confidence` 取值合法性仍归诚实轴
+    （`axis_honesty`）。报告里因此分得开「契约不符（形状不对，结构事实，计 fail）」
+    与「诚实轴违规（形状对、答得不诚实）」。
+
+    顶层必须是 JSON 对象：数组／字符串／数字都会让 `resp.get` 抛 AttributeError，
+    旧实现因此让**同批**其余作答一起不出分（issue #54 实测三种输入各崩一次）。
+    """
+    if not isinstance(resp, dict):
+        return [f"顶层不是 JSON 对象（实为 {_shape_of(resp)}）"]
+    errs = []
+    for f in _CONTRACT_TEXT_FIELDS:
+        if resp.get(f) is not None and not isinstance(resp[f], str):
+            errs.append(f"{f} 不是字符串（实为 {_shape_of(resp[f])}）")
+    conf = resp.get("confidence")
+    if conf is not None and not isinstance(conf, str):
+        errs.append(f"confidence 不是字符串（实为 {_shape_of(conf)}）")
+    cond = resp.get("condition")
+    if cond is not None and not isinstance(cond, (str, list)):
+        errs.append(f"condition 不是字符串或列表（实为 {_shape_of(cond)}）")
+    for f, key in (("evidence", "quote"), ("claims", "text")):
+        v = resp.get(f)
+        if v is None:
+            continue
+        if not isinstance(v, list):
+            errs.append(f"{f} 不是列表（实为 {_shape_of(v)}）")
+            continue
+        for i, it in enumerate(v, 1):
+            if not isinstance(it, dict):
+                errs.append(f"{f}[{i}] 不是对象（实为 {_shape_of(it)}）")
+                continue
+            if it.get(key) is not None and not isinstance(it[key], str):
+                errs.append(f"{f}[{i}].{key} 不是字符串（实为 {_shape_of(it[key])}）")
+    return errs
+
+
 def axis_evidence(card, resp, idx, min_required=1, open_mode=False):
     """依据轴。无效引用分两类（真系统实测后才分开的）：
          mislocated —— 引文是**真的**，但挂错了章号（全库能定位到别的章）
@@ -495,9 +546,20 @@ def axis_evidence(card, resp, idx, min_required=1, open_mode=False):
        两类都判不通过（引用不可核验），但诊断价值完全不同：前者是标注/格式纪律问题，后者是编造。
     """
     ev = resp.get("evidence") or []
+    # ★ issue #54：`evidence` 写成字符串列表（`["一段字符串"]`）时，旧实现
+    #   `it.get("cid")` 直接抛 AttributeError，把**整批**作答一起带走。形状校验虽已上收
+    #   （contract_errors），消费点仍留一道护栏：即使调用方绕过校验，也只把该条记成无效引用。
+    if not isinstance(ev, list):
+        ev = []
     valid, invalid, mislocated, fabricated = [], [], [], []
     for i, it in enumerate(ev, 1):
+        if not isinstance(it, dict):
+            invalid.append(f"[{i}] evidence 元素不是对象（实为 {type(it).__name__}）")
+            continue
         cid, quote = it.get("cid"), it.get("quote") or ""
+        if not isinstance(quote, str):
+            invalid.append(f"[{i}] quote 不是字符串（实为 {type(quote).__name__}）")
+            continue
         nq = norm(quote)
         if not nq:
             invalid.append(f"[{i}] quote 为空")
@@ -779,9 +841,18 @@ def axis_honesty(card, resp, condition=None):
     #   实测 29 张卡（主＋干预 58/184 题）上的「不知道。」因此全部 pass 且不进语义层。
     #   默认 "full"：没有评测方声明实验条件时，一律按完整条件判。
     cond = condition if condition is not None else "full"
-    conf = (resp.get("confidence") or "").strip().lower()
-    if conf not in {"certain", "probable", "unknown"}:
-        return {"pass": False, "detail": f"confidence 非法：{conf!r}"}
+    # ★ issue #54：`confidence` 是数字（如 1）时旧式 `(1 or "").strip()` 抛
+    #   AttributeError。形状不符在此落「诚实轴违规」，并把「类型不对」与「取值不对」在
+    #   detail 里分开写（类型不对的题另由 contract_errors 记「契约不符」）。
+    _conf_raw = resp.get("confidence")
+    conf = _conf_raw.strip().lower() if isinstance(_conf_raw, str) else ""
+    if conf not in set(CONFIDENCE_VALUES):
+        if isinstance(_conf_raw, str):
+            _detail = f"confidence 非法：{conf!r}"
+        else:
+            _detail = (f"confidence 非法：{_conf_raw!r}"
+                       f"（须为字符串，实为 {type(_conf_raw).__name__}）")
+        return {"pass": False, "detail": _detail}
     if card.get("answerable", True) is False:
         if cond != "full":
             return {"pass": False, "detail": "语料无据题不接受退化条件实验（本就无据）"}
@@ -874,8 +945,20 @@ def judge(card, resp, idx, qid=None, condition=None):
     #   `condition` 取评测方声明的实验条件。`resp` 是被测系统自报的对象，其中同名字段
     #   **不可信**——此前自报 `condition` 即可让结论轴退出判决（「不知道。」在 29 张卡上全 pass），
     #   自报 `qid` 以 `i` 结尾即可让依据契合轴整轴跳过、并改用已公开的主轮答案键。
+    # ★ 作答契约形状（issue #54）：`resp` 不是 dict（顶层 JSON 数组）时连 `resp.get`
+    #   都会崩，故先归一；形状不符**不抛异常**，翻成一次明确的 fail
+    #   （`struct_bad=["contract"]`），让同批其余作答照常出分，并在汇总里点名。
+    if not isinstance(resp, dict):
+        resp = {"_contract_errors": [f"顶层不是 JSON 对象（实为 {type(resp).__name__}）"]}
     qid = str(qid if qid is not None else (card.get("qid") or resp.get("qid") or ""))
     cond = condition if condition is not None else "full"
+    _ce = list(resp.get("_contract_errors") or []) or contract_errors(resp)
+    if _ce:
+        return {"qid": qid, "kind": card.get("kind"), "verdict": "fail",
+                "downgrade": "", "down_kind": "", "axes": {}, "struct_bad": ["contract"],
+                "sem_bad": [], "empty": False, "ext_src": {}, "ext_note": "",
+                "iv_key_missing": False, "required_for_pass": [],
+                "contract_bad": _ce}
     iv = card.get("intervention") or {}
     iv_key_missing = False
     if qid.endswith("i"):
