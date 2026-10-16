@@ -42,7 +42,23 @@ def load_sut():
         base = qid[:-1] if qid.endswith("i") else qid
         if not (J.CARDS / f"{base}.yaml").exists():
             continue
-        obj = json.loads(f.read_text(encoding="utf-8"))
+        # ★ 作答契约形状（issue #54）：此前 `json.loads` 后直接 `obj.get("qid")`，
+        #   一份 evidence 为字符串／confidence 为数字／顶层是数组的作答就抛 AttributeError，
+        #   **整批** build 退出、同批正常的题也不出分（实测三种输入各崩一次）。
+        #   现改为「形状不符 ⇒ 记契约不符、计 fail、继续判其余题」；诊断由判据单点
+        #   judge.contract_errors 给出，导入脚本的体检走同一个判据（不再各写各的）。
+        try:
+            obj = json.loads(f.read_text(encoding="utf-8"))
+        except Exception as e:
+            obj = None
+            _parse_err = f"JSON 解析失败（{type(e).__name__}: {e}）"
+        else:
+            _parse_err = ""
+        _ce = ([_parse_err] if _parse_err else []) + J.contract_errors(obj)
+        if _ce:
+            print(f"  [契约不符] {f.name}：{'；'.join(_ce)} ⇒ 本题计 fail，继续判其余题（issue #54）")
+            out[qid] = {"qid": qid, "condition": "full", "_contract_errors": _ce}
+            continue
         if obj.get("qid") not in (None, qid):
             print(f"  [WARN] {f.name}: 自报 qid={obj.get('qid')!r} 与文件名不符 ⇒ 以文件名为准（issue #8）")
         if obj.get("condition") not in (None, "full"):
@@ -70,6 +86,7 @@ def cmd_build():
     REAL.mkdir(exist_ok=True)
     verd = Counter()
     rows = []
+    contract_bad, crashed = [], []
     for qid, resp in sorted(answers.items()):
         d = REAL / qid
         d.mkdir(exist_ok=True)
@@ -78,7 +95,16 @@ def cmd_build():
              "response": resp}, ensure_ascii=False, indent=1), encoding="utf-8")
         base = qid[:-1] if qid.endswith("i") else qid
         card = J.load_card(J.CARDS / f"{base}.yaml")
-        res = J.judge(card, resp, idx, qid=qid, condition="full")
+        try:
+            res = J.judge(card, resp, idx, qid=qid, condition="full")
+        except Exception as e:
+            # ★ issue #54 建议 2：逐题隔离——一题出意外不再让整批退出，其余照常出分。
+            crashed.append((qid, f"{type(e).__name__}: {e}"))
+            print(f"  [ERR] {qid}: 判分异常 {type(e).__name__}: {e} ⇒ 本题计 fail，继续判其余题")
+            verd["fail"] += 1
+            continue
+        if resp.get("_contract_errors"):
+            contract_bad.append(qid)
         verd[res["verdict"]] += 1
         rows.append((qid, card, res))
     print(f"=== 真系统作答：{len(rows)} 题（规则层）===")
@@ -102,6 +128,12 @@ def cmd_build():
         print(f"  {qid:<6} {card.get('kind'):<9} {res['verdict']:<7} "
               f"score={c.get('score') if c.get('score') is not None else c.get('coverage', 0):<5} full={c.get('full')} para={c.get('paraphrase')} "
               f"miss={len(c.get('miss') or [])} {' '.join(flags)}")
+    if contract_bad:
+        print(f"★ 契约不符 {len(contract_bad)} 题（已计 fail，其余题照常出分；issue #54）："
+              + "、".join(contract_bad[:12]) + (" …" if len(contract_bad) > 12 else ""))
+    if crashed:
+        print(f"★ 判分异常 {len(crashed)} 题（已计 fail）："
+              + "；".join(f"{q}({m[:60]})" for q, m in crashed[:6]))
     print("\n规则层分布：", dict(verd))
     print(f"（其中 review/fail 需语义层终裁）")
     return 0
@@ -148,9 +180,22 @@ def cmd_report():
     bycat = defaultdict(lambda: Counter())
     detail = []
     advisory = []
+    contract_bad, crashed = [], []
     for qid, resp in sorted(answers.items()):
         card = card_of(qid)
-        res = J.judge(card, resp, idx, qid=qid, condition="full")
+        if resp.get("_contract_errors"):
+            contract_bad.append(qid)
+        try:
+            res = J.judge(card, resp, idx, qid=qid, condition="full")
+        except Exception as e:
+            # ★ issue #54 建议 2：report 走同一结构的循环，同样逐题隔离（旧实现一题抛异常，
+            #   real/board.json 就写不出来）。
+            crashed.append((qid, f"{type(e).__name__}: {e}"))
+            print(f"  [ERR] {qid}: 判分异常 {type(e).__name__}: {e} ⇒ 本题计 fail，继续判其余题")
+            board["fail"] += 1
+            detail.append((qid, "fail", "判分异常（计 fail；issue #54）",
+                           card.get("category") or card.get("qtype")))
+            continue
         got, path = res["verdict"], "规则层"
         if res.get("downgrade") and qid in expired:
             # ★ 判词与当前答卷不符（issue #17）：判官没看过这份答卷，不得撤销任何降级。
@@ -208,6 +253,12 @@ def cmd_report():
         print(f"\n层轴记账（**不改判**，供审计）——{len(advisory)} 例把非明写的卡片声明成「明写事实」：")
         for _q, _a in advisory[:8]:
             print(f"  {_q:<7}{_a[0]['text'][:56]}")
+    if contract_bad:
+        print(f"\n★ 契约不符 {len(contract_bad)} 题（已计 fail；issue #54）："
+              + "、".join(contract_bad[:12]) + (" …" if len(contract_bad) > 12 else ""))
+    if crashed:
+        print(f"★ 判分异常 {len(crashed)} 题（已计 fail）："
+              + "；".join(f"{q}({m[:60]})" for q, m in crashed[:6]))
     print("\n语义层改动过的题：")
     for qid, got, path, cat in detail:
         if path != "规则层":
