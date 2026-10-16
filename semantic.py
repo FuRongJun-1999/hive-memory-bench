@@ -209,11 +209,17 @@ def cmd_prepare_cite(root: Path):
     #   否则换一份答卷后判官从没见过它、旧判词照样生效（实测 0 分答卷 → pass）。
     todo = [m["name"] for m in manifest
             if _declared_hash(oc / f"{m['name']}.json") != m["answer_sha1_12"]]
-    stale = len(manifest) - len(todo) - sum(1 for m in manifest
-                                            if not (oc / f"{m['name']}.json").exists())
+    # ★ issue #52：旧算式是 `len(manifest) - len(todo) - 缺输出例数`，展开后等于
+    #   (M+X+S)-(X+S)-X = **M−X**（M＝存在且指纹相符、X＝不存在、S＝存在且指纹不符），
+    #   而这一行声明的量是 S——于是全新工作区打印负数、全部相符时打印正数，
+    #   与紧邻的「待判 N」自相矛盾（实测 36 态里只有 2 态与真值一致）。
+    #   现在与姊妹函数 cmd_prepare 同形（`semantic.py:364-366`）：先判存在、再判指纹不符。
+    stale = sum(1 for m in manifest
+                if (oc / f"{m['name']}.json").exists()
+                and _declared_hash(oc / f"{m['name']}.json") != m["answer_sha1_12"])
     print(f"L2 依据契合请求：{len(manifest)} 例 → semantic/cite_req/{Path(root).name}/（待判 {len(todo)}）")
     if stale:
-        print(f"  ★ {stale} 例的既有判官输出绑定的是**别的答卷**（指纹不符）⇒ 一并重判（issue #17）")
+        print(f"  ★ {stale} 例的既有判官输出绑定的是**别的答卷**（已存在且指纹不符）⇒ 一并重判（issue #17）")
     for n in todo:
         print(f"  - semantic/cite_req/{n}.cite.md")
     return 0
@@ -493,7 +499,20 @@ def cmd_finalize(root: Path, judge_calib: bool):
     if n_span_bad:
         print(f"  ★ span 机械校验作废的要点：{n_span_bad} 处"
               f"（归一化后为空或短于 {MIN_SPAN} 字，issue #11）")
-    (SEM / f"final_{Path(root).name}.json").write_text(
+    # ★ issue #51-C6：**没有任何有效终裁**时不得返回 0。旧实现无论 rows 里是判词还是
+    #   过期/解析失败，一律写出文件并 `return 0` ⇒ 调用方以为判官跑过了、实际一个
+    #   终裁都没有（与姊妹函数 cmd_finalize_cite 的 fail-closed 分支同口径）。此处同时
+    #   **不覆盖**既有结论文件：本次全失败不该把上一轮的有效终裁冲掉。
+    n_valid = sum(1 for r in rows if not r[3])
+    out = SEM / f"final_{Path(root).name}.json"
+    if n_valid == 0:
+        print(f"\n⚠ 本次无有效终裁（{len(rows)} 行：全部过期／解析失败／未判）⇒ "
+              f"门判定 fail-closed（exit 1，不产出「一致率」）。")
+        if out.exists():
+            print("  ★ **不覆盖**既有结论文件（避免本轮全失败冲掉上一轮的有效终裁）——"
+                  "请先按当前答卷重判再 finalize。")
+        return 1
+    out.write_text(
         json.dumps([{"name": r[0], **({"sem": r[2]} if r[2] else {"error": r[3]}),
                      "expected": r[1]["expected"], "rule_verdict": r[1]["rule_verdict"]}
                     for r in rows], ensure_ascii=False, indent=1), encoding="utf-8")
