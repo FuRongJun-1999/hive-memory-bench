@@ -187,7 +187,8 @@ python -X utf8 chain/tools/probe_judge.py
 
 > **工作目录 vs 冻结快照**：三个工具共用 `chain/tools/out/` 作为工作目录（生成、答卷、
 > 读数都落在这里）。本库**已发布的数据**放在 [`corpus/`](corpus/) 与 [`keys/`](keys/)，
-> 是 `out/` 的**冻结快照**（固定种子下与 `synth.py` 的产物逐字节相同，发布时已核对 sha256）。
+> 是 `out/` 的**冻结快照**（固定种子下与 `synth.py` 的产物**逐字节相同**，发布时已核对 sha256；
+> 生成器写盘固定 LF、不受平台行尾影响——`synth.py` 的 `_write_json` 显式 `newline='\n'`，见 issue #58）。
 > 想直接用已发布数据、不重跑生成器，把 `chain/corpus/corpus.json`、
 > `chain/keys/keys.json`、`chain/keys/synth_log.json` 复制成 `chain/tools/out/` 下同名文件即可。
 

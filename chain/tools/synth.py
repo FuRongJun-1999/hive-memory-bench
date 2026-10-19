@@ -27,6 +27,24 @@ SEED = 20261010
 HERE = Path(__file__).resolve().parent
 OUT = HERE / 'out'
 
+
+def _write_json(name: str, obj) -> None:
+    """写盘：**跨平台恒为 LF**（issue #58）。
+
+    Path.write_text 走文本模式、默认 newline=None ⇒ 每个换行落盘时被翻译成 os.linesep：
+    Windows 上得到 CRLF，而本仓 .gitattributes 约定 * text=auto eol=lf（发布件一律 LF）。
+    于是「固定种子下与 synth.py 的产物逐字节相同」在 Windows 重跑路径上不成立：实测三份
+    各多 1621 / 88959 / 11381 字节，恰等于各自的 CRLF 个数，CRLF→LF 归一后 sha256 才与
+    发布件相同。这里显式 newline='\n' 把行尾钉死为 LF，使产物在任何平台都与
+    chain/corpus/ 、chain/keys/ 的发布件**逐字节**一致。用 open(..., newline=...)
+    而不是 Path.write_text(..., newline=...)：后者要 Python 3.10+，前者全版本可用。
+    """
+    path = OUT / name
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with open(path, "w", encoding="utf-8", newline="\n") as f:
+        f.write(json.dumps(obj, ensure_ascii=False, indent=1))
+
+
 # ================= 词池 =================
 A_PROJECTS = ['猎户项目', '流明项目', '织女项目']
 A_DOCID = {'猎户项目': 'A1', '流明项目': 'A2', '织女项目': 'A3'}
@@ -899,12 +917,9 @@ def main() -> None:
 
     # ---- 写盘 ----
     OUT.mkdir(parents=True, exist_ok=True)
-    (OUT / 'corpus.json').write_text(
-        json.dumps(corpus, ensure_ascii=False, indent=1), encoding='utf-8')
-    (OUT / 'keys.json').write_text(
-        json.dumps(keys, ensure_ascii=False, indent=1), encoding='utf-8')
-    (OUT / 'synth_log.json').write_text(
-        json.dumps(log, ensure_ascii=False, indent=1), encoding='utf-8')
+    _write_json('corpus.json', corpus)
+    _write_json('keys.json', keys)
+    _write_json('synth_log.json', log)
 
     n_chars = sum(len(c['text']) for c in corpus)
     n_prim = len(prim_built)
