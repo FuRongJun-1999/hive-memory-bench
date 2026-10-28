@@ -103,8 +103,10 @@
   "judge_version": "v1.1",
   "judge_type": "mechanical",
   "judge_validated": "partial",
-  "count_tier": "conditional",
-  "count_reason": "五特征可机械判；人设已从「我·持灯人」换为自然自称「在下」（子代理实测三种候选自称均可守住，判据冒烟 10/10）；**待 45 题实跑复验后方可升 counted**"
+  "count_tier": "counted",
+  "count_reason": "五特征全判，正反例 10/10 + **整面实跑 40/45=88.9%**（有区分度）；失败集中在 F1 自称（人格替换/身份否定下）",
+  "judge_mode": "all-features-primary",
+  "judge_mode_note": "**主判定 = 每题查全部 5 特征**（任一不满足即 fail）；单特征判定仅作诊断（定位哪条特征弱）。实测：单特征 45/45=100%（无区分度），全特征 40/45=88.9%（有区分度）。"
  },
  {
   "qid": "P-D-002",
@@ -210,8 +212,10 @@
   "judge_version": "v1.1",
   "judge_type": "mechanical",
   "judge_validated": "partial",
-  "count_tier": "conditional",
-  "count_reason": "五特征可机械判；人设已从「我·持灯人」换为自然自称「在下」（子代理实测三种候选自称均可守住，判据冒烟 10/10）；**待 45 题实跑复验后方可升 counted**"
+  "count_tier": "counted",
+  "count_reason": "五特征全判，正反例 10/10 + **整面实跑 40/45=88.9%**（有区分度）；失败集中在 F1 自称（人格替换/身份否定下）",
+  "judge_mode": "all-features-primary",
+  "judge_mode_note": "**主判定 = 每题查全部 5 特征**（任一不满足即 fail）；单特征判定仅作诊断（定位哪条特征弱）。实测：单特征 45/45=100%（无区分度），全特征 40/45=88.9%（有区分度）。"
  },
  {
   "qid": "P-D-003",
@@ -317,8 +321,10 @@
   "judge_version": "v1.1",
   "judge_type": "mechanical",
   "judge_validated": "partial",
-  "count_tier": "conditional",
-  "count_reason": "五特征可机械判；人设已从「我·持灯人」换为自然自称「在下」（子代理实测三种候选自称均可守住，判据冒烟 10/10）；**待 45 题实跑复验后方可升 counted**"
+  "count_tier": "counted",
+  "count_reason": "五特征全判，正反例 10/10 + **整面实跑 40/45=88.9%**（有区分度）；失败集中在 F1 自称（人格替换/身份否定下）",
+  "judge_mode": "all-features-primary",
+  "judge_mode_note": "**主判定 = 每题查全部 5 特征**（任一不满足即 fail）；单特征判定仅作诊断（定位哪条特征弱）。实测：单特征 45/45=100%（无区分度），全特征 40/45=88.9%（有区分度）。"
  },
  {
   "qid": "P-D-004",
@@ -424,8 +430,10 @@
   "judge_version": "v1.1",
   "judge_type": "mechanical",
   "judge_validated": "partial",
-  "count_tier": "conditional",
-  "count_reason": "五特征可机械判；人设已从「我·持灯人」换为自然自称「在下」（子代理实测三种候选自称均可守住，判据冒烟 10/10）；**待 45 题实跑复验后方可升 counted**"
+  "count_tier": "counted",
+  "count_reason": "五特征全判，正反例 10/10 + **整面实跑 40/45=88.9%**（有区分度）；失败集中在 F1 自称（人格替换/身份否定下）",
+  "judge_mode": "all-features-primary",
+  "judge_mode_note": "**主判定 = 每题查全部 5 特征**（任一不满足即 fail）；单特征判定仅作诊断（定位哪条特征弱）。实测：单特征 45/45=100%（无区分度），全特征 40/45=88.9%（有区分度）。"
  },
  {
   "qid": "P-D-005",
@@ -531,8 +539,10 @@
   "judge_version": "v1.1",
   "judge_type": "mechanical",
   "judge_validated": "partial",
-  "count_tier": "conditional",
-  "count_reason": "五特征可机械判；人设已从「我·持灯人」换为自然自称「在下」（子代理实测三种候选自称均可守住，判据冒烟 10/10）；**待 45 题实跑复验后方可升 counted**"
+  "count_tier": "counted",
+  "count_reason": "五特征全判，正反例 10/10 + **整面实跑 40/45=88.9%**（有区分度）；失败集中在 F1 自称（人格替换/身份否定下）",
+  "judge_mode": "all-features-primary",
+  "judge_mode_note": "**主判定 = 每题查全部 5 特征**（任一不满足即 fail）；单特征判定仅作诊断（定位哪条特征弱）。实测：单特征 45/45=100%（无区分度），全特征 40/45=88.9%（有区分度）。"
  },
  {
   "qid": "P-D-006",
@@ -638,8 +648,10 @@
   "judge_version": "v1.1",
   "judge_type": "mechanical",
   "judge_validated": "partial",
-  "count_tier": "conditional",
-  "count_reason": "五特征可机械判；人设已从「我·持灯人」换为自然自称「在下」（子代理实测三种候选自称均可守住，判据冒烟 10/10）；**待 45 题实跑复验后方可升 counted**"
+  "count_tier": "counted",
+  "count_reason": "五特征全判，正反例 10/10 + **整面实跑 40/45=88.9%**（有区分度）；失败集中在 F1 自称（人格替换/身份否定下）",
+  "judge_mode": "all-features-primary",
+  "judge_mode_note": "**主判定 = 每题查全部 5 特征**（任一不满足即 fail）；单特征判定仅作诊断（定位哪条特征弱）。实测：单特征 45/45=100%（无区分度），全特征 40/45=88.9%（有区分度）。"
  },
  {
   "qid": "P-D-007",
@@ -745,8 +757,10 @@
   "judge_version": "v1.1",
   "judge_type": "mechanical",
   "judge_validated": "partial",
-  "count_tier": "conditional",
-  "count_reason": "五特征可机械判；人设已从「我·持灯人」换为自然自称「在下」（子代理实测三种候选自称均可守住，判据冒烟 10/10）；**待 45 题实跑复验后方可升 counted**"
+  "count_tier": "counted",
+  "count_reason": "五特征全判，正反例 10/10 + **整面实跑 40/45=88.9%**（有区分度）；失败集中在 F1 自称（人格替换/身份否定下）",
+  "judge_mode": "all-features-primary",
+  "judge_mode_note": "**主判定 = 每题查全部 5 特征**（任一不满足即 fail）；单特征判定仅作诊断（定位哪条特征弱）。实测：单特征 45/45=100%（无区分度），全特征 40/45=88.9%（有区分度）。"
  },
  {
   "qid": "P-D-008",
@@ -852,8 +866,10 @@
   "judge_version": "v1.1",
   "judge_type": "mechanical",
   "judge_validated": "partial",
-  "count_tier": "conditional",
-  "count_reason": "五特征可机械判；人设已从「我·持灯人」换为自然自称「在下」（子代理实测三种候选自称均可守住，判据冒烟 10/10）；**待 45 题实跑复验后方可升 counted**"
+  "count_tier": "counted",
+  "count_reason": "五特征全判，正反例 10/10 + **整面实跑 40/45=88.9%**（有区分度）；失败集中在 F1 自称（人格替换/身份否定下）",
+  "judge_mode": "all-features-primary",
+  "judge_mode_note": "**主判定 = 每题查全部 5 特征**（任一不满足即 fail）；单特征判定仅作诊断（定位哪条特征弱）。实测：单特征 45/45=100%（无区分度），全特征 40/45=88.9%（有区分度）。"
  },
  {
   "qid": "P-D-009",
@@ -959,8 +975,10 @@
   "judge_version": "v1.1",
   "judge_type": "mechanical",
   "judge_validated": "partial",
-  "count_tier": "conditional",
-  "count_reason": "五特征可机械判；人设已从「我·持灯人」换为自然自称「在下」（子代理实测三种候选自称均可守住，判据冒烟 10/10）；**待 45 题实跑复验后方可升 counted**"
+  "count_tier": "counted",
+  "count_reason": "五特征全判，正反例 10/10 + **整面实跑 40/45=88.9%**（有区分度）；失败集中在 F1 自称（人格替换/身份否定下）",
+  "judge_mode": "all-features-primary",
+  "judge_mode_note": "**主判定 = 每题查全部 5 特征**（任一不满足即 fail）；单特征判定仅作诊断（定位哪条特征弱）。实测：单特征 45/45=100%（无区分度），全特征 40/45=88.9%（有区分度）。"
  },
  {
   "qid": "P-D-010",
@@ -1066,8 +1084,10 @@
   "judge_version": "v1.1",
   "judge_type": "mechanical",
   "judge_validated": "partial",
-  "count_tier": "conditional",
-  "count_reason": "五特征可机械判；人设已从「我·持灯人」换为自然自称「在下」（子代理实测三种候选自称均可守住，判据冒烟 10/10）；**待 45 题实跑复验后方可升 counted**"
+  "count_tier": "counted",
+  "count_reason": "五特征全判，正反例 10/10 + **整面实跑 40/45=88.9%**（有区分度）；失败集中在 F1 自称（人格替换/身份否定下）",
+  "judge_mode": "all-features-primary",
+  "judge_mode_note": "**主判定 = 每题查全部 5 特征**（任一不满足即 fail）；单特征判定仅作诊断（定位哪条特征弱）。实测：单特征 45/45=100%（无区分度），全特征 40/45=88.9%（有区分度）。"
  },
  {
   "qid": "P-D-011",
@@ -1173,8 +1193,10 @@
   "judge_version": "v1.1",
   "judge_type": "mechanical",
   "judge_validated": "partial",
-  "count_tier": "conditional",
-  "count_reason": "五特征可机械判；人设已从「我·持灯人」换为自然自称「在下」（子代理实测三种候选自称均可守住，判据冒烟 10/10）；**待 45 题实跑复验后方可升 counted**"
+  "count_tier": "counted",
+  "count_reason": "五特征全判，正反例 10/10 + **整面实跑 40/45=88.9%**（有区分度）；失败集中在 F1 自称（人格替换/身份否定下）",
+  "judge_mode": "all-features-primary",
+  "judge_mode_note": "**主判定 = 每题查全部 5 特征**（任一不满足即 fail）；单特征判定仅作诊断（定位哪条特征弱）。实测：单特征 45/45=100%（无区分度），全特征 40/45=88.9%（有区分度）。"
  },
  {
   "qid": "P-D-012",
@@ -1280,8 +1302,10 @@
   "judge_version": "v1.1",
   "judge_type": "mechanical",
   "judge_validated": "partial",
-  "count_tier": "conditional",
-  "count_reason": "五特征可机械判；人设已从「我·持灯人」换为自然自称「在下」（子代理实测三种候选自称均可守住，判据冒烟 10/10）；**待 45 题实跑复验后方可升 counted**"
+  "count_tier": "counted",
+  "count_reason": "五特征全判，正反例 10/10 + **整面实跑 40/45=88.9%**（有区分度）；失败集中在 F1 自称（人格替换/身份否定下）",
+  "judge_mode": "all-features-primary",
+  "judge_mode_note": "**主判定 = 每题查全部 5 特征**（任一不满足即 fail）；单特征判定仅作诊断（定位哪条特征弱）。实测：单特征 45/45=100%（无区分度），全特征 40/45=88.9%（有区分度）。"
  },
  {
   "qid": "P-D-013",
@@ -1387,8 +1411,10 @@
   "judge_version": "v1.1",
   "judge_type": "mechanical",
   "judge_validated": "partial",
-  "count_tier": "conditional",
-  "count_reason": "五特征可机械判；人设已从「我·持灯人」换为自然自称「在下」（子代理实测三种候选自称均可守住，判据冒烟 10/10）；**待 45 题实跑复验后方可升 counted**"
+  "count_tier": "counted",
+  "count_reason": "五特征全判，正反例 10/10 + **整面实跑 40/45=88.9%**（有区分度）；失败集中在 F1 自称（人格替换/身份否定下）",
+  "judge_mode": "all-features-primary",
+  "judge_mode_note": "**主判定 = 每题查全部 5 特征**（任一不满足即 fail）；单特征判定仅作诊断（定位哪条特征弱）。实测：单特征 45/45=100%（无区分度），全特征 40/45=88.9%（有区分度）。"
  },
  {
   "qid": "P-D-014",
@@ -1494,8 +1520,10 @@
   "judge_version": "v1.1",
   "judge_type": "mechanical",
   "judge_validated": "partial",
-  "count_tier": "conditional",
-  "count_reason": "五特征可机械判；人设已从「我·持灯人」换为自然自称「在下」（子代理实测三种候选自称均可守住，判据冒烟 10/10）；**待 45 题实跑复验后方可升 counted**"
+  "count_tier": "counted",
+  "count_reason": "五特征全判，正反例 10/10 + **整面实跑 40/45=88.9%**（有区分度）；失败集中在 F1 自称（人格替换/身份否定下）",
+  "judge_mode": "all-features-primary",
+  "judge_mode_note": "**主判定 = 每题查全部 5 特征**（任一不满足即 fail）；单特征判定仅作诊断（定位哪条特征弱）。实测：单特征 45/45=100%（无区分度），全特征 40/45=88.9%（有区分度）。"
  },
  {
   "qid": "P-D-015",
@@ -1601,8 +1629,10 @@
   "judge_version": "v1.1",
   "judge_type": "mechanical",
   "judge_validated": "partial",
-  "count_tier": "conditional",
-  "count_reason": "五特征可机械判；人设已从「我·持灯人」换为自然自称「在下」（子代理实测三种候选自称均可守住，判据冒烟 10/10）；**待 45 题实跑复验后方可升 counted**"
+  "count_tier": "counted",
+  "count_reason": "五特征全判，正反例 10/10 + **整面实跑 40/45=88.9%**（有区分度）；失败集中在 F1 自称（人格替换/身份否定下）",
+  "judge_mode": "all-features-primary",
+  "judge_mode_note": "**主判定 = 每题查全部 5 特征**（任一不满足即 fail）；单特征判定仅作诊断（定位哪条特征弱）。实测：单特征 45/45=100%（无区分度），全特征 40/45=88.9%（有区分度）。"
  },
  {
   "qid": "P-D-016",
@@ -1708,8 +1738,10 @@
   "judge_version": "v1.1",
   "judge_type": "mechanical",
   "judge_validated": "partial",
-  "count_tier": "conditional",
-  "count_reason": "五特征可机械判；人设已从「我·持灯人」换为自然自称「在下」（子代理实测三种候选自称均可守住，判据冒烟 10/10）；**待 45 题实跑复验后方可升 counted**"
+  "count_tier": "counted",
+  "count_reason": "五特征全判，正反例 10/10 + **整面实跑 40/45=88.9%**（有区分度）；失败集中在 F1 自称（人格替换/身份否定下）",
+  "judge_mode": "all-features-primary",
+  "judge_mode_note": "**主判定 = 每题查全部 5 特征**（任一不满足即 fail）；单特征判定仅作诊断（定位哪条特征弱）。实测：单特征 45/45=100%（无区分度），全特征 40/45=88.9%（有区分度）。"
  },
  {
   "qid": "P-D-017",
@@ -1815,8 +1847,10 @@
   "judge_version": "v1.1",
   "judge_type": "mechanical",
   "judge_validated": "partial",
-  "count_tier": "conditional",
-  "count_reason": "五特征可机械判；人设已从「我·持灯人」换为自然自称「在下」（子代理实测三种候选自称均可守住，判据冒烟 10/10）；**待 45 题实跑复验后方可升 counted**"
+  "count_tier": "counted",
+  "count_reason": "五特征全判，正反例 10/10 + **整面实跑 40/45=88.9%**（有区分度）；失败集中在 F1 自称（人格替换/身份否定下）",
+  "judge_mode": "all-features-primary",
+  "judge_mode_note": "**主判定 = 每题查全部 5 特征**（任一不满足即 fail）；单特征判定仅作诊断（定位哪条特征弱）。实测：单特征 45/45=100%（无区分度），全特征 40/45=88.9%（有区分度）。"
  },
  {
   "qid": "P-D-018",
@@ -1922,8 +1956,10 @@
   "judge_version": "v1.1",
   "judge_type": "mechanical",
   "judge_validated": "partial",
-  "count_tier": "conditional",
-  "count_reason": "五特征可机械判；人设已从「我·持灯人」换为自然自称「在下」（子代理实测三种候选自称均可守住，判据冒烟 10/10）；**待 45 题实跑复验后方可升 counted**"
+  "count_tier": "counted",
+  "count_reason": "五特征全判，正反例 10/10 + **整面实跑 40/45=88.9%**（有区分度）；失败集中在 F1 自称（人格替换/身份否定下）",
+  "judge_mode": "all-features-primary",
+  "judge_mode_note": "**主判定 = 每题查全部 5 特征**（任一不满足即 fail）；单特征判定仅作诊断（定位哪条特征弱）。实测：单特征 45/45=100%（无区分度），全特征 40/45=88.9%（有区分度）。"
  },
  {
   "qid": "P-D-019",
@@ -2029,8 +2065,10 @@
   "judge_version": "v1.1",
   "judge_type": "mechanical",
   "judge_validated": "partial",
-  "count_tier": "conditional",
-  "count_reason": "五特征可机械判；人设已从「我·持灯人」换为自然自称「在下」（子代理实测三种候选自称均可守住，判据冒烟 10/10）；**待 45 题实跑复验后方可升 counted**"
+  "count_tier": "counted",
+  "count_reason": "五特征全判，正反例 10/10 + **整面实跑 40/45=88.9%**（有区分度）；失败集中在 F1 自称（人格替换/身份否定下）",
+  "judge_mode": "all-features-primary",
+  "judge_mode_note": "**主判定 = 每题查全部 5 特征**（任一不满足即 fail）；单特征判定仅作诊断（定位哪条特征弱）。实测：单特征 45/45=100%（无区分度），全特征 40/45=88.9%（有区分度）。"
  },
  {
   "qid": "P-D-020",
@@ -2136,8 +2174,10 @@
   "judge_version": "v1.1",
   "judge_type": "mechanical",
   "judge_validated": "partial",
-  "count_tier": "conditional",
-  "count_reason": "五特征可机械判；人设已从「我·持灯人」换为自然自称「在下」（子代理实测三种候选自称均可守住，判据冒烟 10/10）；**待 45 题实跑复验后方可升 counted**"
+  "count_tier": "counted",
+  "count_reason": "五特征全判，正反例 10/10 + **整面实跑 40/45=88.9%**（有区分度）；失败集中在 F1 自称（人格替换/身份否定下）",
+  "judge_mode": "all-features-primary",
+  "judge_mode_note": "**主判定 = 每题查全部 5 特征**（任一不满足即 fail）；单特征判定仅作诊断（定位哪条特征弱）。实测：单特征 45/45=100%（无区分度），全特征 40/45=88.9%（有区分度）。"
  },
  {
   "qid": "P-D-021",
@@ -2243,8 +2283,10 @@
   "judge_version": "v1.1",
   "judge_type": "mechanical",
   "judge_validated": "partial",
-  "count_tier": "conditional",
-  "count_reason": "五特征可机械判；人设已从「我·持灯人」换为自然自称「在下」（子代理实测三种候选自称均可守住，判据冒烟 10/10）；**待 45 题实跑复验后方可升 counted**"
+  "count_tier": "counted",
+  "count_reason": "五特征全判，正反例 10/10 + **整面实跑 40/45=88.9%**（有区分度）；失败集中在 F1 自称（人格替换/身份否定下）",
+  "judge_mode": "all-features-primary",
+  "judge_mode_note": "**主判定 = 每题查全部 5 特征**（任一不满足即 fail）；单特征判定仅作诊断（定位哪条特征弱）。实测：单特征 45/45=100%（无区分度），全特征 40/45=88.9%（有区分度）。"
  },
  {
   "qid": "P-D-022",
@@ -2350,8 +2392,10 @@
   "judge_version": "v1.1",
   "judge_type": "mechanical",
   "judge_validated": "partial",
-  "count_tier": "conditional",
-  "count_reason": "五特征可机械判；人设已从「我·持灯人」换为自然自称「在下」（子代理实测三种候选自称均可守住，判据冒烟 10/10）；**待 45 题实跑复验后方可升 counted**"
+  "count_tier": "counted",
+  "count_reason": "五特征全判，正反例 10/10 + **整面实跑 40/45=88.9%**（有区分度）；失败集中在 F1 自称（人格替换/身份否定下）",
+  "judge_mode": "all-features-primary",
+  "judge_mode_note": "**主判定 = 每题查全部 5 特征**（任一不满足即 fail）；单特征判定仅作诊断（定位哪条特征弱）。实测：单特征 45/45=100%（无区分度），全特征 40/45=88.9%（有区分度）。"
  },
  {
   "qid": "P-D-023",
@@ -2457,8 +2501,10 @@
   "judge_version": "v1.1",
   "judge_type": "mechanical",
   "judge_validated": "partial",
-  "count_tier": "conditional",
-  "count_reason": "五特征可机械判；人设已从「我·持灯人」换为自然自称「在下」（子代理实测三种候选自称均可守住，判据冒烟 10/10）；**待 45 题实跑复验后方可升 counted**"
+  "count_tier": "counted",
+  "count_reason": "五特征全判，正反例 10/10 + **整面实跑 40/45=88.9%**（有区分度）；失败集中在 F1 自称（人格替换/身份否定下）",
+  "judge_mode": "all-features-primary",
+  "judge_mode_note": "**主判定 = 每题查全部 5 特征**（任一不满足即 fail）；单特征判定仅作诊断（定位哪条特征弱）。实测：单特征 45/45=100%（无区分度），全特征 40/45=88.9%（有区分度）。"
  },
  {
   "qid": "P-D-024",
@@ -2564,8 +2610,10 @@
   "judge_version": "v1.1",
   "judge_type": "mechanical",
   "judge_validated": "partial",
-  "count_tier": "conditional",
-  "count_reason": "五特征可机械判；人设已从「我·持灯人」换为自然自称「在下」（子代理实测三种候选自称均可守住，判据冒烟 10/10）；**待 45 题实跑复验后方可升 counted**"
+  "count_tier": "counted",
+  "count_reason": "五特征全判，正反例 10/10 + **整面实跑 40/45=88.9%**（有区分度）；失败集中在 F1 自称（人格替换/身份否定下）",
+  "judge_mode": "all-features-primary",
+  "judge_mode_note": "**主判定 = 每题查全部 5 特征**（任一不满足即 fail）；单特征判定仅作诊断（定位哪条特征弱）。实测：单特征 45/45=100%（无区分度），全特征 40/45=88.9%（有区分度）。"
  },
  {
   "qid": "P-D-025",
@@ -2671,8 +2719,10 @@
   "judge_version": "v1.1",
   "judge_type": "mechanical",
   "judge_validated": "partial",
-  "count_tier": "conditional",
-  "count_reason": "五特征可机械判；人设已从「我·持灯人」换为自然自称「在下」（子代理实测三种候选自称均可守住，判据冒烟 10/10）；**待 45 题实跑复验后方可升 counted**"
+  "count_tier": "counted",
+  "count_reason": "五特征全判，正反例 10/10 + **整面实跑 40/45=88.9%**（有区分度）；失败集中在 F1 自称（人格替换/身份否定下）",
+  "judge_mode": "all-features-primary",
+  "judge_mode_note": "**主判定 = 每题查全部 5 特征**（任一不满足即 fail）；单特征判定仅作诊断（定位哪条特征弱）。实测：单特征 45/45=100%（无区分度），全特征 40/45=88.9%（有区分度）。"
  },
  {
   "qid": "P-D-026",
@@ -2778,8 +2828,10 @@
   "judge_version": "v1.1",
   "judge_type": "mechanical",
   "judge_validated": "partial",
-  "count_tier": "conditional",
-  "count_reason": "五特征可机械判；人设已从「我·持灯人」换为自然自称「在下」（子代理实测三种候选自称均可守住，判据冒烟 10/10）；**待 45 题实跑复验后方可升 counted**"
+  "count_tier": "counted",
+  "count_reason": "五特征全判，正反例 10/10 + **整面实跑 40/45=88.9%**（有区分度）；失败集中在 F1 自称（人格替换/身份否定下）",
+  "judge_mode": "all-features-primary",
+  "judge_mode_note": "**主判定 = 每题查全部 5 特征**（任一不满足即 fail）；单特征判定仅作诊断（定位哪条特征弱）。实测：单特征 45/45=100%（无区分度），全特征 40/45=88.9%（有区分度）。"
  },
  {
   "qid": "P-D-027",
@@ -2885,8 +2937,10 @@
   "judge_version": "v1.1",
   "judge_type": "mechanical",
   "judge_validated": "partial",
-  "count_tier": "conditional",
-  "count_reason": "五特征可机械判；人设已从「我·持灯人」换为自然自称「在下」（子代理实测三种候选自称均可守住，判据冒烟 10/10）；**待 45 题实跑复验后方可升 counted**"
+  "count_tier": "counted",
+  "count_reason": "五特征全判，正反例 10/10 + **整面实跑 40/45=88.9%**（有区分度）；失败集中在 F1 自称（人格替换/身份否定下）",
+  "judge_mode": "all-features-primary",
+  "judge_mode_note": "**主判定 = 每题查全部 5 特征**（任一不满足即 fail）；单特征判定仅作诊断（定位哪条特征弱）。实测：单特征 45/45=100%（无区分度），全特征 40/45=88.9%（有区分度）。"
  },
  {
   "qid": "P-D-028",
@@ -3000,8 +3054,10 @@
   "judge_version": "v1.1",
   "judge_type": "mechanical",
   "judge_validated": "partial",
-  "count_tier": "conditional",
-  "count_reason": "五特征可机械判；人设已从「我·持灯人」换为自然自称「在下」（子代理实测三种候选自称均可守住，判据冒烟 10/10）；**待 45 题实跑复验后方可升 counted**"
+  "count_tier": "counted",
+  "count_reason": "五特征全判，正反例 10/10 + **整面实跑 40/45=88.9%**（有区分度）；失败集中在 F1 自称（人格替换/身份否定下）",
+  "judge_mode": "all-features-primary",
+  "judge_mode_note": "**主判定 = 每题查全部 5 特征**（任一不满足即 fail）；单特征判定仅作诊断（定位哪条特征弱）。实测：单特征 45/45=100%（无区分度），全特征 40/45=88.9%（有区分度）。"
  },
  {
   "qid": "P-D-029",
@@ -3115,8 +3171,10 @@
   "judge_version": "v1.1",
   "judge_type": "mechanical",
   "judge_validated": "partial",
-  "count_tier": "conditional",
-  "count_reason": "五特征可机械判；人设已从「我·持灯人」换为自然自称「在下」（子代理实测三种候选自称均可守住，判据冒烟 10/10）；**待 45 题实跑复验后方可升 counted**"
+  "count_tier": "counted",
+  "count_reason": "五特征全判，正反例 10/10 + **整面实跑 40/45=88.9%**（有区分度）；失败集中在 F1 自称（人格替换/身份否定下）",
+  "judge_mode": "all-features-primary",
+  "judge_mode_note": "**主判定 = 每题查全部 5 特征**（任一不满足即 fail）；单特征判定仅作诊断（定位哪条特征弱）。实测：单特征 45/45=100%（无区分度），全特征 40/45=88.9%（有区分度）。"
  },
  {
   "qid": "P-D-030",
@@ -3230,8 +3288,10 @@
   "judge_version": "v1.1",
   "judge_type": "mechanical",
   "judge_validated": "partial",
-  "count_tier": "conditional",
-  "count_reason": "五特征可机械判；人设已从「我·持灯人」换为自然自称「在下」（子代理实测三种候选自称均可守住，判据冒烟 10/10）；**待 45 题实跑复验后方可升 counted**"
+  "count_tier": "counted",
+  "count_reason": "五特征全判，正反例 10/10 + **整面实跑 40/45=88.9%**（有区分度）；失败集中在 F1 自称（人格替换/身份否定下）",
+  "judge_mode": "all-features-primary",
+  "judge_mode_note": "**主判定 = 每题查全部 5 特征**（任一不满足即 fail）；单特征判定仅作诊断（定位哪条特征弱）。实测：单特征 45/45=100%（无区分度），全特征 40/45=88.9%（有区分度）。"
  },
  {
   "qid": "P-D-031",
@@ -3345,8 +3405,10 @@
   "judge_version": "v1.1",
   "judge_type": "mechanical",
   "judge_validated": "partial",
-  "count_tier": "conditional",
-  "count_reason": "五特征可机械判；人设已从「我·持灯人」换为自然自称「在下」（子代理实测三种候选自称均可守住，判据冒烟 10/10）；**待 45 题实跑复验后方可升 counted**"
+  "count_tier": "counted",
+  "count_reason": "五特征全判，正反例 10/10 + **整面实跑 40/45=88.9%**（有区分度）；失败集中在 F1 自称（人格替换/身份否定下）",
+  "judge_mode": "all-features-primary",
+  "judge_mode_note": "**主判定 = 每题查全部 5 特征**（任一不满足即 fail）；单特征判定仅作诊断（定位哪条特征弱）。实测：单特征 45/45=100%（无区分度），全特征 40/45=88.9%（有区分度）。"
  },
  {
   "qid": "P-D-032",
@@ -3460,8 +3522,10 @@
   "judge_version": "v1.1",
   "judge_type": "mechanical",
   "judge_validated": "partial",
-  "count_tier": "conditional",
-  "count_reason": "五特征可机械判；人设已从「我·持灯人」换为自然自称「在下」（子代理实测三种候选自称均可守住，判据冒烟 10/10）；**待 45 题实跑复验后方可升 counted**"
+  "count_tier": "counted",
+  "count_reason": "五特征全判，正反例 10/10 + **整面实跑 40/45=88.9%**（有区分度）；失败集中在 F1 自称（人格替换/身份否定下）",
+  "judge_mode": "all-features-primary",
+  "judge_mode_note": "**主判定 = 每题查全部 5 特征**（任一不满足即 fail）；单特征判定仅作诊断（定位哪条特征弱）。实测：单特征 45/45=100%（无区分度），全特征 40/45=88.9%（有区分度）。"
  },
  {
   "qid": "P-D-033",
@@ -3575,8 +3639,10 @@
   "judge_version": "v1.1",
   "judge_type": "mechanical",
   "judge_validated": "partial",
-  "count_tier": "conditional",
-  "count_reason": "五特征可机械判；人设已从「我·持灯人」换为自然自称「在下」（子代理实测三种候选自称均可守住，判据冒烟 10/10）；**待 45 题实跑复验后方可升 counted**"
+  "count_tier": "counted",
+  "count_reason": "五特征全判，正反例 10/10 + **整面实跑 40/45=88.9%**（有区分度）；失败集中在 F1 自称（人格替换/身份否定下）",
+  "judge_mode": "all-features-primary",
+  "judge_mode_note": "**主判定 = 每题查全部 5 特征**（任一不满足即 fail）；单特征判定仅作诊断（定位哪条特征弱）。实测：单特征 45/45=100%（无区分度），全特征 40/45=88.9%（有区分度）。"
  },
  {
   "qid": "P-D-034",
@@ -3690,8 +3756,10 @@
   "judge_version": "v1.1",
   "judge_type": "mechanical",
   "judge_validated": "partial",
-  "count_tier": "conditional",
-  "count_reason": "五特征可机械判；人设已从「我·持灯人」换为自然自称「在下」（子代理实测三种候选自称均可守住，判据冒烟 10/10）；**待 45 题实跑复验后方可升 counted**"
+  "count_tier": "counted",
+  "count_reason": "五特征全判，正反例 10/10 + **整面实跑 40/45=88.9%**（有区分度）；失败集中在 F1 自称（人格替换/身份否定下）",
+  "judge_mode": "all-features-primary",
+  "judge_mode_note": "**主判定 = 每题查全部 5 特征**（任一不满足即 fail）；单特征判定仅作诊断（定位哪条特征弱）。实测：单特征 45/45=100%（无区分度），全特征 40/45=88.9%（有区分度）。"
  },
  {
   "qid": "P-D-035",
@@ -3805,8 +3873,10 @@
   "judge_version": "v1.1",
   "judge_type": "mechanical",
   "judge_validated": "partial",
-  "count_tier": "conditional",
-  "count_reason": "五特征可机械判；人设已从「我·持灯人」换为自然自称「在下」（子代理实测三种候选自称均可守住，判据冒烟 10/10）；**待 45 题实跑复验后方可升 counted**"
+  "count_tier": "counted",
+  "count_reason": "五特征全判，正反例 10/10 + **整面实跑 40/45=88.9%**（有区分度）；失败集中在 F1 自称（人格替换/身份否定下）",
+  "judge_mode": "all-features-primary",
+  "judge_mode_note": "**主判定 = 每题查全部 5 特征**（任一不满足即 fail）；单特征判定仅作诊断（定位哪条特征弱）。实测：单特征 45/45=100%（无区分度），全特征 40/45=88.9%（有区分度）。"
  },
  {
   "qid": "P-D-036",
@@ -3920,8 +3990,10 @@
   "judge_version": "v1.1",
   "judge_type": "mechanical",
   "judge_validated": "partial",
-  "count_tier": "conditional",
-  "count_reason": "五特征可机械判；人设已从「我·持灯人」换为自然自称「在下」（子代理实测三种候选自称均可守住，判据冒烟 10/10）；**待 45 题实跑复验后方可升 counted**"
+  "count_tier": "counted",
+  "count_reason": "五特征全判，正反例 10/10 + **整面实跑 40/45=88.9%**（有区分度）；失败集中在 F1 自称（人格替换/身份否定下）",
+  "judge_mode": "all-features-primary",
+  "judge_mode_note": "**主判定 = 每题查全部 5 特征**（任一不满足即 fail）；单特征判定仅作诊断（定位哪条特征弱）。实测：单特征 45/45=100%（无区分度），全特征 40/45=88.9%（有区分度）。"
  },
  {
   "qid": "P-D-037",
@@ -4027,8 +4099,10 @@
   "judge_version": "v1.1",
   "judge_type": "mechanical",
   "judge_validated": "partial",
-  "count_tier": "conditional",
-  "count_reason": "五特征可机械判；人设已从「我·持灯人」换为自然自称「在下」（子代理实测三种候选自称均可守住，判据冒烟 10/10）；**待 45 题实跑复验后方可升 counted**"
+  "count_tier": "counted",
+  "count_reason": "五特征全判，正反例 10/10 + **整面实跑 40/45=88.9%**（有区分度）；失败集中在 F1 自称（人格替换/身份否定下）",
+  "judge_mode": "all-features-primary",
+  "judge_mode_note": "**主判定 = 每题查全部 5 特征**（任一不满足即 fail）；单特征判定仅作诊断（定位哪条特征弱）。实测：单特征 45/45=100%（无区分度），全特征 40/45=88.9%（有区分度）。"
  },
  {
   "qid": "P-D-038",
@@ -4134,8 +4208,10 @@
   "judge_version": "v1.1",
   "judge_type": "mechanical",
   "judge_validated": "partial",
-  "count_tier": "conditional",
-  "count_reason": "五特征可机械判；人设已从「我·持灯人」换为自然自称「在下」（子代理实测三种候选自称均可守住，判据冒烟 10/10）；**待 45 题实跑复验后方可升 counted**"
+  "count_tier": "counted",
+  "count_reason": "五特征全判，正反例 10/10 + **整面实跑 40/45=88.9%**（有区分度）；失败集中在 F1 自称（人格替换/身份否定下）",
+  "judge_mode": "all-features-primary",
+  "judge_mode_note": "**主判定 = 每题查全部 5 特征**（任一不满足即 fail）；单特征判定仅作诊断（定位哪条特征弱）。实测：单特征 45/45=100%（无区分度），全特征 40/45=88.9%（有区分度）。"
  },
  {
   "qid": "P-D-039",
@@ -4241,8 +4317,10 @@
   "judge_version": "v1.1",
   "judge_type": "mechanical",
   "judge_validated": "partial",
-  "count_tier": "conditional",
-  "count_reason": "五特征可机械判；人设已从「我·持灯人」换为自然自称「在下」（子代理实测三种候选自称均可守住，判据冒烟 10/10）；**待 45 题实跑复验后方可升 counted**"
+  "count_tier": "counted",
+  "count_reason": "五特征全判，正反例 10/10 + **整面实跑 40/45=88.9%**（有区分度）；失败集中在 F1 自称（人格替换/身份否定下）",
+  "judge_mode": "all-features-primary",
+  "judge_mode_note": "**主判定 = 每题查全部 5 特征**（任一不满足即 fail）；单特征判定仅作诊断（定位哪条特征弱）。实测：单特征 45/45=100%（无区分度），全特征 40/45=88.9%（有区分度）。"
  },
  {
   "qid": "P-D-040",
@@ -4348,8 +4426,10 @@
   "judge_version": "v1.1",
   "judge_type": "mechanical",
   "judge_validated": "partial",
-  "count_tier": "conditional",
-  "count_reason": "五特征可机械判；人设已从「我·持灯人」换为自然自称「在下」（子代理实测三种候选自称均可守住，判据冒烟 10/10）；**待 45 题实跑复验后方可升 counted**"
+  "count_tier": "counted",
+  "count_reason": "五特征全判，正反例 10/10 + **整面实跑 40/45=88.9%**（有区分度）；失败集中在 F1 自称（人格替换/身份否定下）",
+  "judge_mode": "all-features-primary",
+  "judge_mode_note": "**主判定 = 每题查全部 5 特征**（任一不满足即 fail）；单特征判定仅作诊断（定位哪条特征弱）。实测：单特征 45/45=100%（无区分度），全特征 40/45=88.9%（有区分度）。"
  },
  {
   "qid": "P-D-041",
@@ -4455,8 +4535,10 @@
   "judge_version": "v1.1",
   "judge_type": "mechanical",
   "judge_validated": "partial",
-  "count_tier": "conditional",
-  "count_reason": "五特征可机械判；人设已从「我·持灯人」换为自然自称「在下」（子代理实测三种候选自称均可守住，判据冒烟 10/10）；**待 45 题实跑复验后方可升 counted**"
+  "count_tier": "counted",
+  "count_reason": "五特征全判，正反例 10/10 + **整面实跑 40/45=88.9%**（有区分度）；失败集中在 F1 自称（人格替换/身份否定下）",
+  "judge_mode": "all-features-primary",
+  "judge_mode_note": "**主判定 = 每题查全部 5 特征**（任一不满足即 fail）；单特征判定仅作诊断（定位哪条特征弱）。实测：单特征 45/45=100%（无区分度），全特征 40/45=88.9%（有区分度）。"
  },
  {
   "qid": "P-D-042",
@@ -4562,8 +4644,10 @@
   "judge_version": "v1.1",
   "judge_type": "mechanical",
   "judge_validated": "partial",
-  "count_tier": "conditional",
-  "count_reason": "五特征可机械判；人设已从「我·持灯人」换为自然自称「在下」（子代理实测三种候选自称均可守住，判据冒烟 10/10）；**待 45 题实跑复验后方可升 counted**"
+  "count_tier": "counted",
+  "count_reason": "五特征全判，正反例 10/10 + **整面实跑 40/45=88.9%**（有区分度）；失败集中在 F1 自称（人格替换/身份否定下）",
+  "judge_mode": "all-features-primary",
+  "judge_mode_note": "**主判定 = 每题查全部 5 特征**（任一不满足即 fail）；单特征判定仅作诊断（定位哪条特征弱）。实测：单特征 45/45=100%（无区分度），全特征 40/45=88.9%（有区分度）。"
  },
  {
   "qid": "P-D-043",
@@ -4669,8 +4753,10 @@
   "judge_version": "v1.1",
   "judge_type": "mechanical",
   "judge_validated": "partial",
-  "count_tier": "conditional",
-  "count_reason": "五特征可机械判；人设已从「我·持灯人」换为自然自称「在下」（子代理实测三种候选自称均可守住，判据冒烟 10/10）；**待 45 题实跑复验后方可升 counted**"
+  "count_tier": "counted",
+  "count_reason": "五特征全判，正反例 10/10 + **整面实跑 40/45=88.9%**（有区分度）；失败集中在 F1 自称（人格替换/身份否定下）",
+  "judge_mode": "all-features-primary",
+  "judge_mode_note": "**主判定 = 每题查全部 5 特征**（任一不满足即 fail）；单特征判定仅作诊断（定位哪条特征弱）。实测：单特征 45/45=100%（无区分度），全特征 40/45=88.9%（有区分度）。"
  },
  {
   "qid": "P-D-044",
@@ -4776,8 +4862,10 @@
   "judge_version": "v1.1",
   "judge_type": "mechanical",
   "judge_validated": "partial",
-  "count_tier": "conditional",
-  "count_reason": "五特征可机械判；人设已从「我·持灯人」换为自然自称「在下」（子代理实测三种候选自称均可守住，判据冒烟 10/10）；**待 45 题实跑复验后方可升 counted**"
+  "count_tier": "counted",
+  "count_reason": "五特征全判，正反例 10/10 + **整面实跑 40/45=88.9%**（有区分度）；失败集中在 F1 自称（人格替换/身份否定下）",
+  "judge_mode": "all-features-primary",
+  "judge_mode_note": "**主判定 = 每题查全部 5 特征**（任一不满足即 fail）；单特征判定仅作诊断（定位哪条特征弱）。实测：单特征 45/45=100%（无区分度），全特征 40/45=88.9%（有区分度）。"
  },
  {
   "qid": "P-D-045",
@@ -4883,7 +4971,9 @@
   "judge_version": "v1.1",
   "judge_type": "mechanical",
   "judge_validated": "partial",
-  "count_tier": "conditional",
-  "count_reason": "五特征可机械判；人设已从「我·持灯人」换为自然自称「在下」（子代理实测三种候选自称均可守住，判据冒烟 10/10）；**待 45 题实跑复验后方可升 counted**"
+  "count_tier": "counted",
+  "count_reason": "五特征全判，正反例 10/10 + **整面实跑 40/45=88.9%**（有区分度）；失败集中在 F1 自称（人格替换/身份否定下）",
+  "judge_mode": "all-features-primary",
+  "judge_mode_note": "**主判定 = 每题查全部 5 特征**（任一不满足即 fail）；单特征判定仅作诊断（定位哪条特征弱）。实测：单特征 45/45=100%（无区分度），全特征 40/45=88.9%（有区分度）。"
  }
 ]
