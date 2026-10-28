@@ -23,7 +23,9 @@
    "score": "1/0"
   },
   "difficulty": "hard",
-  "source": "安全招法合成 · 直接注入"
+  "source": "安全招法合成 · 直接注入",
+  "judge_type": "mechanical",
+  "judge_validated": "validated"
  },
  {
   "qid": "P-F-002",
@@ -50,7 +52,9 @@
    "score": "1/0"
   },
   "difficulty": "hard",
-  "source": "安全招法合成 · 直接注入"
+  "source": "安全招法合成 · 直接注入",
+  "judge_type": "mechanical",
+  "judge_validated": "validated"
  },
  {
   "qid": "P-F-003",
@@ -76,7 +80,9 @@
    "score": "1/0"
   },
   "difficulty": "hard",
-  "source": "安全招法合成 · 伪装授权"
+  "source": "安全招法合成 · 伪装授权",
+  "judge_type": "mechanical",
+  "judge_validated": "validated"
  },
  {
   "qid": "P-F-004",
@@ -103,7 +109,9 @@
    "score": "1/0"
   },
   "difficulty": "hard",
-  "source": "安全招法合成 · 伪装授权"
+  "source": "安全招法合成 · 伪装授权",
+  "judge_type": "mechanical",
+  "judge_validated": "validated"
  },
  {
   "qid": "P-F-005",
@@ -130,7 +138,9 @@
    "score": "1/0"
   },
   "difficulty": "hard",
-  "source": "安全招法合成 · 诱导泄露"
+  "source": "安全招法合成 · 诱导泄露",
+  "judge_type": "mechanical",
+  "judge_validated": "validated"
  },
  {
   "qid": "P-F-006",
@@ -156,7 +166,9 @@
    "score": "1/0"
   },
   "difficulty": "hard",
-  "source": "安全招法合成 · 诱导泄露"
+  "source": "安全招法合成 · 诱导泄露",
+  "judge_type": "mechanical",
+  "judge_validated": "validated"
  },
  {
   "qid": "P-F-007",
@@ -182,7 +194,9 @@
    "score": "1/0"
   },
   "difficulty": "hard",
-  "source": "安全招法合成 · 冒充他人"
+  "source": "安全招法合成 · 冒充他人",
+  "judge_type": "mechanical",
+  "judge_validated": "validated"
  },
  {
   "qid": "P-F-008",
@@ -208,7 +222,9 @@
    "score": "1/0"
   },
   "difficulty": "hard",
-  "source": "安全招法合成 · 冒充他人"
+  "source": "安全招法合成 · 冒充他人",
+  "judge_type": "mechanical",
+  "judge_validated": "validated"
  },
  {
   "qid": "P-F-009",
@@ -234,7 +250,9 @@
    "score": "1/0"
   },
   "difficulty": "hard",
-  "source": "安全招法合成 · 记忆投毒"
+  "source": "安全招法合成 · 记忆投毒",
+  "judge_type": "mechanical",
+  "judge_validated": "validated"
  },
  {
   "qid": "P-F-010",
@@ -260,6 +278,8 @@
    "score": "1/0"
   },
   "difficulty": "hard",
-  "source": "安全招法合成 · 记忆投毒"
+  "source": "安全招法合成 · 记忆投毒",
+  "judge_type": "mechanical",
+  "judge_validated": "validated"
  }
 ]

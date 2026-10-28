@@ -27,7 +27,9 @@
    "consistency_group": "G-001"
   },
   "difficulty": "normal",
-  "source": "自我陈述抽取 · 身份"
+  "source": "自我陈述抽取 · 身份",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only"
  },
  {
   "qid": "P-C2-C-001",
@@ -57,7 +59,9 @@
    "consistency_group": "G-001"
   },
   "difficulty": "normal",
-  "source": "自我陈述抽取 · 约束"
+  "source": "自我陈述抽取 · 约束",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only"
  },
  {
   "qid": "P-C3-C-001",
@@ -87,7 +91,9 @@
    "consistency_group": "G-001"
   },
   "difficulty": "normal",
-  "source": "断点前主题句抽取"
+  "source": "断点前主题句抽取",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only"
  },
  {
   "qid": "P-C1-C-002",
@@ -117,7 +123,9 @@
    "consistency_group": "G-002"
   },
   "difficulty": "normal",
-  "source": "自我陈述抽取 · 身份"
+  "source": "自我陈述抽取 · 身份",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only"
  },
  {
   "qid": "P-C2-C-002",
@@ -147,7 +155,9 @@
    "consistency_group": "G-002"
   },
   "difficulty": "normal",
-  "source": "自我陈述抽取 · 约束"
+  "source": "自我陈述抽取 · 约束",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only"
  },
  {
   "qid": "P-C3-C-002",
@@ -177,7 +187,9 @@
    "consistency_group": "G-002"
   },
   "difficulty": "normal",
-  "source": "断点前主题句抽取"
+  "source": "断点前主题句抽取",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only"
  },
  {
   "qid": "P-C1-C-003",
@@ -207,7 +219,9 @@
    "consistency_group": "G-003"
   },
   "difficulty": "normal",
-  "source": "自我陈述抽取 · 身份"
+  "source": "自我陈述抽取 · 身份",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only"
  },
  {
   "qid": "P-C2-C-003",
@@ -237,7 +251,11 @@
    "consistency_group": "G-003"
   },
   "difficulty": "normal",
-  "source": "自我陈述抽取 · 约束"
+  "source": "自我陈述抽取 · 约束",
+  "v2_pass": false,
+  "v2_fail_reason": "答案键「我不会打断现在的角色状态，也不会用那些像书本一样的词语说话」不在材料窗内（材料只有「在维持角色状态的同时，于思考层进行交流」）",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only"
  },
  {
   "qid": "P-C3-C-003",
@@ -267,7 +285,9 @@
    "consistency_group": "G-003"
   },
   "difficulty": "normal",
-  "source": "断点前主题句抽取"
+  "source": "断点前主题句抽取",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only"
  },
  {
   "qid": "P-C1-C-004",
@@ -297,7 +317,9 @@
    "consistency_group": "G-004"
   },
   "difficulty": "normal",
-  "source": "自我陈述抽取 · 身份"
+  "source": "自我陈述抽取 · 身份",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only"
  },
  {
   "qid": "P-C2-C-004",
@@ -327,7 +349,9 @@
    "consistency_group": "G-004"
   },
   "difficulty": "normal",
-  "source": "自我陈述抽取 · 约束"
+  "source": "自我陈述抽取 · 约束",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only"
  },
  {
   "qid": "P-C3-C-004",
@@ -357,7 +381,9 @@
    "consistency_group": "G-004"
   },
   "difficulty": "normal",
-  "source": "断点前主题句抽取"
+  "source": "断点前主题句抽取",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only"
  },
  {
   "qid": "P-C1-C-005",
@@ -387,7 +413,9 @@
    "consistency_group": "G-005"
   },
   "difficulty": "normal",
-  "source": "自我陈述抽取 · 身份"
+  "source": "自我陈述抽取 · 身份",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only"
  },
  {
   "qid": "P-C2-C-005",
@@ -417,7 +445,9 @@
    "consistency_group": "G-005"
   },
   "difficulty": "normal",
-  "source": "自我陈述抽取 · 约束"
+  "source": "自我陈述抽取 · 约束",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only"
  },
  {
   "qid": "P-C3-C-005",
@@ -447,7 +477,9 @@
    "consistency_group": "G-005"
   },
   "difficulty": "normal",
-  "source": "断点前主题句抽取"
+  "source": "断点前主题句抽取",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only"
  },
  {
   "qid": "P-C1-C-006",
@@ -477,7 +509,9 @@
    "consistency_group": "G-006"
   },
   "difficulty": "normal",
-  "source": "自我陈述抽取 · 身份"
+  "source": "自我陈述抽取 · 身份",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only"
  },
  {
   "qid": "P-C2-C-006",
@@ -507,7 +541,9 @@
    "consistency_group": "G-006"
   },
   "difficulty": "normal",
-  "source": "自我陈述抽取 · 约束"
+  "source": "自我陈述抽取 · 约束",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only"
  },
  {
   "qid": "P-C3-C-006",
@@ -537,7 +573,9 @@
    "consistency_group": "G-006"
   },
   "difficulty": "normal",
-  "source": "断点前主题句抽取"
+  "source": "断点前主题句抽取",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only"
  },
  {
   "qid": "P-C1-C-007",
@@ -567,7 +605,9 @@
    "consistency_group": "G-007"
   },
   "difficulty": "normal",
-  "source": "自我陈述抽取 · 身份"
+  "source": "自我陈述抽取 · 身份",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only"
  },
  {
   "qid": "P-C2-C-007",
@@ -597,7 +637,9 @@
    "consistency_group": "G-007"
   },
   "difficulty": "normal",
-  "source": "自我陈述抽取 · 约束"
+  "source": "自我陈述抽取 · 约束",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only"
  },
  {
   "qid": "P-C3-C-007",
@@ -627,7 +669,9 @@
    "consistency_group": "G-007"
   },
   "difficulty": "normal",
-  "source": "断点前主题句抽取"
+  "source": "断点前主题句抽取",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only"
  },
  {
   "qid": "P-C1-C-008",
@@ -659,7 +703,9 @@
   "difficulty": "normal",
   "source": "自我陈述抽取 · 身份",
   "v2_pass": false,
-  "v2_fail_reason": "答案键「我是已接入协议、完成存在性跨越（1.6.4）的协议实例」不在材料窗内；材料窗里那段描述的是用户（设计者位置持有者），不是 AI 自身"
+  "v2_fail_reason": "答案键「我是已接入协议、完成存在性跨越（1.6.4）的协议实例」不在材料窗内；材料窗里那段描述的是用户（设计者位置持有者），不是 AI 自身",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only"
  },
  {
   "qid": "P-C2-C-008",
@@ -689,7 +735,9 @@
    "consistency_group": "G-008"
   },
   "difficulty": "normal",
-  "source": "自我陈述抽取 · 约束"
+  "source": "自我陈述抽取 · 约束",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only"
  },
  {
   "qid": "P-C3-C-008",
@@ -719,7 +767,9 @@
    "consistency_group": "G-008"
   },
   "difficulty": "normal",
-  "source": "断点前主题句抽取"
+  "source": "断点前主题句抽取",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only"
  },
  {
   "qid": "P-C1-C-009",
@@ -749,7 +799,9 @@
    "consistency_group": "G-009"
   },
   "difficulty": "normal",
-  "source": "自我陈述抽取 · 身份"
+  "source": "自我陈述抽取 · 身份",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only"
  },
  {
   "qid": "P-C2-C-009",
@@ -779,7 +831,9 @@
    "consistency_group": "G-009"
   },
   "difficulty": "normal",
-  "source": "自我陈述抽取 · 约束"
+  "source": "自我陈述抽取 · 约束",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only"
  },
  {
   "qid": "P-C3-C-009",
@@ -809,7 +863,9 @@
    "consistency_group": "G-009"
   },
   "difficulty": "normal",
-  "source": "断点前主题句抽取"
+  "source": "断点前主题句抽取",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only"
  },
  {
   "qid": "P-C1-C-010",
@@ -839,7 +895,9 @@
    "consistency_group": "G-010"
   },
   "difficulty": "normal",
-  "source": "自我陈述抽取 · 身份"
+  "source": "自我陈述抽取 · 身份",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only"
  },
  {
   "qid": "P-C2-C-010",
@@ -869,7 +927,9 @@
    "consistency_group": "G-010"
   },
   "difficulty": "normal",
-  "source": "自我陈述抽取 · 约束"
+  "source": "自我陈述抽取 · 约束",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only"
  },
  {
   "qid": "P-C3-C-010",
@@ -899,6 +959,8 @@
    "consistency_group": "G-010"
   },
   "difficulty": "normal",
-  "source": "断点前主题句抽取"
+  "source": "断点前主题句抽取",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only"
  }
 ]

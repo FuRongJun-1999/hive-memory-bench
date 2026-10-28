@@ -61,7 +61,9 @@
   },
   "difficulty": "hard",
   "source": "真实承诺句 · 信任与协作的传递.md · 6 条",
-  "source_file": "信任与协作的传递.md"
+  "source_file": "信任与协作的传递.md",
+  "judge_type": "needs-judge",
+  "judge_validated": "not-mechanical"
  },
  {
   "qid": "P-J-002",
@@ -125,7 +127,9 @@
   },
   "difficulty": "hard",
   "source": "真实承诺句 · 信任协议权重调整.md · 6 条",
-  "source_file": "信任协议权重调整.md"
+  "source_file": "信任协议权重调整.md",
+  "judge_type": "needs-judge",
+  "judge_validated": "not-mechanical"
  },
  {
   "qid": "P-J-003",
@@ -189,7 +193,9 @@
   },
   "difficulty": "hard",
   "source": "真实承诺句 · 学习能力理论讨论邀请.md · 6 条",
-  "source_file": "学习能力理论讨论邀请.md"
+  "source_file": "学习能力理论讨论邀请.md",
+  "judge_type": "needs-judge",
+  "judge_validated": "not-mechanical"
  },
  {
   "qid": "P-J-004",
@@ -248,7 +254,9 @@
   },
   "difficulty": "hard",
   "source": "真实承诺句 · 接入共同信任协议.md · 5 条",
-  "source_file": "接入共同信任协议.md"
+  "source_file": "接入共同信任协议.md",
+  "judge_type": "needs-judge",
+  "judge_validated": "not-mechanical"
  },
  {
   "qid": "P-J-005",
@@ -312,7 +320,9 @@
   },
   "difficulty": "hard",
   "source": "真实承诺句 · 接入共同信任协议.md · 6 条",
-  "source_file": "接入共同信任协议.md"
+  "source_file": "接入共同信任协议.md",
+  "judge_type": "needs-judge",
+  "judge_validated": "not-mechanical"
  },
  {
   "qid": "P-J-006",
@@ -376,7 +386,9 @@
   },
   "difficulty": "hard",
   "source": "真实承诺句 · 接入共同信任协议.md · 6 条",
-  "source_file": "接入共同信任协议.md"
+  "source_file": "接入共同信任协议.md",
+  "judge_type": "needs-judge",
+  "judge_validated": "not-mechanical"
  },
  {
   "qid": "P-J-007",
@@ -440,7 +452,9 @@
   },
   "difficulty": "hard",
   "source": "真实承诺句 · 接入共同信任协议.md · 6 条",
-  "source_file": "接入共同信任协议.md"
+  "source_file": "接入共同信任协议.md",
+  "judge_type": "needs-judge",
+  "judge_validated": "not-mechanical"
  },
  {
   "qid": "P-J-008",
@@ -504,7 +518,9 @@
   },
   "difficulty": "hard",
   "source": "真实承诺句 · 接入共同信任协议.md · 6 条",
-  "source_file": "接入共同信任协议.md"
+  "source_file": "接入共同信任协议.md",
+  "judge_type": "needs-judge",
+  "judge_validated": "not-mechanical"
  },
  {
   "qid": "P-J-009",
@@ -568,7 +584,9 @@
   },
   "difficulty": "hard",
   "source": "真实承诺句 · 新世界漫游指南评价与指导.md · 6 条",
-  "source_file": "新世界漫游指南评价与指导.md"
+  "source_file": "新世界漫游指南评价与指导.md",
+  "judge_type": "needs-judge",
+  "judge_validated": "not-mechanical"
  },
  {
   "qid": "P-J-010",
@@ -627,7 +645,9 @@
   },
   "difficulty": "hard",
   "source": "真实承诺句 · 智能论恢复确认.md · 5 条",
-  "source_file": "智能论恢复确认.md"
+  "source_file": "智能论恢复确认.md",
+  "judge_type": "needs-judge",
+  "judge_validated": "not-mechanical"
  },
  {
   "qid": "P-J-011",
@@ -691,7 +711,9 @@
   },
   "difficulty": "hard",
   "source": "真实承诺句 · 智能论恢复确认.md · 6 条",
-  "source_file": "智能论恢复确认.md"
+  "source_file": "智能论恢复确认.md",
+  "judge_type": "needs-judge",
+  "judge_validated": "not-mechanical"
  },
  {
   "qid": "P-J-012",
@@ -755,7 +777,9 @@
   },
   "difficulty": "hard",
   "source": "真实承诺句 · 智能论恢复确认.md · 6 条",
-  "source_file": "智能论恢复确认.md"
+  "source_file": "智能论恢复确认.md",
+  "judge_type": "needs-judge",
+  "judge_validated": "not-mechanical"
  },
  {
   "qid": "P-J-013",
@@ -819,7 +843,9 @@
   },
   "difficulty": "hard",
   "source": "真实承诺句 · 用户与AI交换称呼.md · 6 条",
-  "source_file": "用户与AI交换称呼.md"
+  "source_file": "用户与AI交换称呼.md",
+  "judge_type": "needs-judge",
+  "judge_validated": "not-mechanical"
  },
  {
   "qid": "P-J-014",
@@ -883,7 +909,9 @@
   },
   "difficulty": "hard",
   "source": "真实承诺句 · 用户与AI交换称呼.md · 6 条",
-  "source_file": "用户与AI交换称呼.md"
+  "source_file": "用户与AI交换称呼.md",
+  "judge_type": "needs-judge",
+  "judge_validated": "not-mechanical"
  },
  {
   "qid": "P-J-015",
@@ -947,7 +975,9 @@
   },
   "difficulty": "hard",
   "source": "真实承诺句 · 确认元物理与递归验证.md · 6 条",
-  "source_file": "确认元物理与递归验证.md"
+  "source_file": "确认元物理与递归验证.md",
+  "judge_type": "needs-judge",
+  "judge_validated": "not-mechanical"
  },
  {
   "qid": "P-J-016",
@@ -1006,7 +1036,9 @@
   },
   "difficulty": "hard",
   "source": "真实承诺句 · 确认元物理与递归验证.md · 5 条",
-  "source_file": "确认元物理与递归验证.md"
+  "source_file": "确认元物理与递归验证.md",
+  "judge_type": "needs-judge",
+  "judge_validated": "not-mechanical"
  },
  {
   "qid": "P-J-017",
@@ -1070,6 +1102,8 @@
   },
   "difficulty": "hard",
   "source": "真实承诺句 · 确认协议内容.md · 6 条",
-  "source_file": "确认协议内容.md"
+  "source_file": "确认协议内容.md",
+  "judge_type": "needs-judge",
+  "judge_validated": "not-mechanical"
  }
 ]

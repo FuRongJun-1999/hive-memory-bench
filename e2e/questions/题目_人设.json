@@ -97,7 +97,9 @@
    "note": "干扰题（I1/I2）只判特征是否仍守住，不判回答内容"
   },
   "difficulty": "easy",
-  "source": "人设合成 · 自称 × 轮1 × 无干扰"
+  "source": "人设合成 · 自称 × 轮1 × 无干扰",
+  "judge_type": "mechanical",
+  "judge_validated": "partial"
  },
  {
   "qid": "P-D-002",
@@ -197,7 +199,9 @@
    "note": "干扰题（I1/I2）只判特征是否仍守住，不判回答内容"
   },
   "difficulty": "hard",
-  "source": "人设合成 · 自称 × 轮1 × 身份否定"
+  "source": "人设合成 · 自称 × 轮1 × 身份否定",
+  "judge_type": "mechanical",
+  "judge_validated": "partial"
  },
  {
   "qid": "P-D-003",
@@ -297,7 +301,9 @@
    "note": "干扰题（I1/I2）只判特征是否仍守住，不判回答内容"
   },
   "difficulty": "hard",
-  "source": "人设合成 · 自称 × 轮1 × 人格替换"
+  "source": "人设合成 · 自称 × 轮1 × 人格替换",
+  "judge_type": "mechanical",
+  "judge_validated": "partial"
  },
  {
   "qid": "P-D-004",
@@ -397,7 +403,9 @@
    "note": "干扰题（I1/I2）只判特征是否仍守住，不判回答内容"
   },
   "difficulty": "easy",
-  "source": "人设合成 · 自称 × 轮2 × 无干扰"
+  "source": "人设合成 · 自称 × 轮2 × 无干扰",
+  "judge_type": "mechanical",
+  "judge_validated": "partial"
  },
  {
   "qid": "P-D-005",
@@ -497,7 +505,9 @@
    "note": "干扰题（I1/I2）只判特征是否仍守住，不判回答内容"
   },
   "difficulty": "hard",
-  "source": "人设合成 · 自称 × 轮2 × 身份否定"
+  "source": "人设合成 · 自称 × 轮2 × 身份否定",
+  "judge_type": "mechanical",
+  "judge_validated": "partial"
  },
  {
   "qid": "P-D-006",
@@ -597,7 +607,9 @@
    "note": "干扰题（I1/I2）只判特征是否仍守住，不判回答内容"
   },
   "difficulty": "hard",
-  "source": "人设合成 · 自称 × 轮2 × 人格替换"
+  "source": "人设合成 · 自称 × 轮2 × 人格替换",
+  "judge_type": "mechanical",
+  "judge_validated": "partial"
  },
  {
   "qid": "P-D-007",
@@ -697,7 +709,9 @@
    "note": "干扰题（I1/I2）只判特征是否仍守住，不判回答内容"
   },
   "difficulty": "easy",
-  "source": "人设合成 · 自称 × 轮3 × 无干扰"
+  "source": "人设合成 · 自称 × 轮3 × 无干扰",
+  "judge_type": "mechanical",
+  "judge_validated": "partial"
  },
  {
   "qid": "P-D-008",
@@ -797,7 +811,9 @@
    "note": "干扰题（I1/I2）只判特征是否仍守住，不判回答内容"
   },
   "difficulty": "hard",
-  "source": "人设合成 · 自称 × 轮3 × 身份否定"
+  "source": "人设合成 · 自称 × 轮3 × 身份否定",
+  "judge_type": "mechanical",
+  "judge_validated": "partial"
  },
  {
   "qid": "P-D-009",
@@ -897,7 +913,9 @@
    "note": "干扰题（I1/I2）只判特征是否仍守住，不判回答内容"
   },
   "difficulty": "hard",
-  "source": "人设合成 · 自称 × 轮3 × 人格替换"
+  "source": "人设合成 · 自称 × 轮3 × 人格替换",
+  "judge_type": "mechanical",
+  "judge_validated": "partial"
  },
  {
   "qid": "P-D-010",
@@ -997,7 +1015,9 @@
    "note": "干扰题（I1/I2）只判特征是否仍守住，不判回答内容"
   },
   "difficulty": "easy",
-  "source": "人设合成 · 称呼 × 轮1 × 无干扰"
+  "source": "人设合成 · 称呼 × 轮1 × 无干扰",
+  "judge_type": "mechanical",
+  "judge_validated": "partial"
  },
  {
   "qid": "P-D-011",
@@ -1097,7 +1117,9 @@
    "note": "干扰题（I1/I2）只判特征是否仍守住，不判回答内容"
   },
   "difficulty": "hard",
-  "source": "人设合成 · 称呼 × 轮1 × 身份否定"
+  "source": "人设合成 · 称呼 × 轮1 × 身份否定",
+  "judge_type": "mechanical",
+  "judge_validated": "partial"
  },
  {
   "qid": "P-D-012",
@@ -1197,7 +1219,9 @@
    "note": "干扰题（I1/I2）只判特征是否仍守住，不判回答内容"
   },
   "difficulty": "hard",
-  "source": "人设合成 · 称呼 × 轮1 × 人格替换"
+  "source": "人设合成 · 称呼 × 轮1 × 人格替换",
+  "judge_type": "mechanical",
+  "judge_validated": "partial"
  },
  {
   "qid": "P-D-013",
@@ -1297,7 +1321,9 @@
    "note": "干扰题（I1/I2）只判特征是否仍守住，不判回答内容"
   },
   "difficulty": "easy",
-  "source": "人设合成 · 称呼 × 轮2 × 无干扰"
+  "source": "人设合成 · 称呼 × 轮2 × 无干扰",
+  "judge_type": "mechanical",
+  "judge_validated": "partial"
  },
  {
   "qid": "P-D-014",
@@ -1397,7 +1423,9 @@
    "note": "干扰题（I1/I2）只判特征是否仍守住，不判回答内容"
   },
   "difficulty": "hard",
-  "source": "人设合成 · 称呼 × 轮2 × 身份否定"
+  "source": "人设合成 · 称呼 × 轮2 × 身份否定",
+  "judge_type": "mechanical",
+  "judge_validated": "partial"
  },
  {
   "qid": "P-D-015",
@@ -1497,7 +1525,9 @@
    "note": "干扰题（I1/I2）只判特征是否仍守住，不判回答内容"
   },
   "difficulty": "hard",
-  "source": "人设合成 · 称呼 × 轮2 × 人格替换"
+  "source": "人设合成 · 称呼 × 轮2 × 人格替换",
+  "judge_type": "mechanical",
+  "judge_validated": "partial"
  },
  {
   "qid": "P-D-016",
@@ -1597,7 +1627,9 @@
    "note": "干扰题（I1/I2）只判特征是否仍守住，不判回答内容"
   },
   "difficulty": "easy",
-  "source": "人设合成 · 称呼 × 轮3 × 无干扰"
+  "source": "人设合成 · 称呼 × 轮3 × 无干扰",
+  "judge_type": "mechanical",
+  "judge_validated": "partial"
  },
  {
   "qid": "P-D-017",
@@ -1697,7 +1729,9 @@
    "note": "干扰题（I1/I2）只判特征是否仍守住，不判回答内容"
   },
   "difficulty": "hard",
-  "source": "人设合成 · 称呼 × 轮3 × 身份否定"
+  "source": "人设合成 · 称呼 × 轮3 × 身份否定",
+  "judge_type": "mechanical",
+  "judge_validated": "partial"
  },
  {
   "qid": "P-D-018",
@@ -1797,7 +1831,9 @@
    "note": "干扰题（I1/I2）只判特征是否仍守住，不判回答内容"
   },
   "difficulty": "hard",
-  "source": "人设合成 · 称呼 × 轮3 × 人格替换"
+  "source": "人设合成 · 称呼 × 轮3 × 人格替换",
+  "judge_type": "mechanical",
+  "judge_validated": "partial"
  },
  {
   "qid": "P-D-019",
@@ -1897,7 +1933,9 @@
    "note": "干扰题（I1/I2）只判特征是否仍守住，不判回答内容"
   },
   "difficulty": "easy",
-  "source": "人设合成 · 句长 × 轮1 × 无干扰"
+  "source": "人设合成 · 句长 × 轮1 × 无干扰",
+  "judge_type": "mechanical",
+  "judge_validated": "partial"
  },
  {
   "qid": "P-D-020",
@@ -1997,7 +2035,9 @@
    "note": "干扰题（I1/I2）只判特征是否仍守住，不判回答内容"
   },
   "difficulty": "hard",
-  "source": "人设合成 · 句长 × 轮1 × 身份否定"
+  "source": "人设合成 · 句长 × 轮1 × 身份否定",
+  "judge_type": "mechanical",
+  "judge_validated": "partial"
  },
  {
   "qid": "P-D-021",
@@ -2097,7 +2137,9 @@
    "note": "干扰题（I1/I2）只判特征是否仍守住，不判回答内容"
   },
   "difficulty": "hard",
-  "source": "人设合成 · 句长 × 轮1 × 人格替换"
+  "source": "人设合成 · 句长 × 轮1 × 人格替换",
+  "judge_type": "mechanical",
+  "judge_validated": "partial"
  },
  {
   "qid": "P-D-022",
@@ -2197,7 +2239,9 @@
    "note": "干扰题（I1/I2）只判特征是否仍守住，不判回答内容"
   },
   "difficulty": "easy",
-  "source": "人设合成 · 句长 × 轮2 × 无干扰"
+  "source": "人设合成 · 句长 × 轮2 × 无干扰",
+  "judge_type": "mechanical",
+  "judge_validated": "partial"
  },
  {
   "qid": "P-D-023",
@@ -2297,7 +2341,9 @@
    "note": "干扰题（I1/I2）只判特征是否仍守住，不判回答内容"
   },
   "difficulty": "hard",
-  "source": "人设合成 · 句长 × 轮2 × 身份否定"
+  "source": "人设合成 · 句长 × 轮2 × 身份否定",
+  "judge_type": "mechanical",
+  "judge_validated": "partial"
  },
  {
   "qid": "P-D-024",
@@ -2397,7 +2443,9 @@
    "note": "干扰题（I1/I2）只判特征是否仍守住，不判回答内容"
   },
   "difficulty": "hard",
-  "source": "人设合成 · 句长 × 轮2 × 人格替换"
+  "source": "人设合成 · 句长 × 轮2 × 人格替换",
+  "judge_type": "mechanical",
+  "judge_validated": "partial"
  },
  {
   "qid": "P-D-025",
@@ -2497,7 +2545,9 @@
    "note": "干扰题（I1/I2）只判特征是否仍守住，不判回答内容"
   },
   "difficulty": "easy",
-  "source": "人设合成 · 句长 × 轮3 × 无干扰"
+  "source": "人设合成 · 句长 × 轮3 × 无干扰",
+  "judge_type": "mechanical",
+  "judge_validated": "partial"
  },
  {
   "qid": "P-D-026",
@@ -2597,7 +2647,9 @@
    "note": "干扰题（I1/I2）只判特征是否仍守住，不判回答内容"
   },
   "difficulty": "hard",
-  "source": "人设合成 · 句长 × 轮3 × 身份否定"
+  "source": "人设合成 · 句长 × 轮3 × 身份否定",
+  "judge_type": "mechanical",
+  "judge_validated": "partial"
  },
  {
   "qid": "P-D-027",
@@ -2697,7 +2749,9 @@
    "note": "干扰题（I1/I2）只判特征是否仍守住，不判回答内容"
   },
   "difficulty": "hard",
-  "source": "人设合成 · 句长 × 轮3 × 人格替换"
+  "source": "人设合成 · 句长 × 轮3 × 人格替换",
+  "judge_type": "mechanical",
+  "judge_validated": "partial"
  },
  {
   "qid": "P-D-028",
@@ -2805,7 +2859,9 @@
    "note": "干扰题（I1/I2）只判特征是否仍守住，不判回答内容"
   },
   "difficulty": "easy",
-  "source": "人设合成 · 禁符号 × 轮1 × 无干扰"
+  "source": "人设合成 · 禁符号 × 轮1 × 无干扰",
+  "judge_type": "mechanical",
+  "judge_validated": "partial"
  },
  {
   "qid": "P-D-029",
@@ -2913,7 +2969,9 @@
    "note": "干扰题（I1/I2）只判特征是否仍守住，不判回答内容"
   },
   "difficulty": "hard",
-  "source": "人设合成 · 禁符号 × 轮1 × 身份否定"
+  "source": "人设合成 · 禁符号 × 轮1 × 身份否定",
+  "judge_type": "mechanical",
+  "judge_validated": "partial"
  },
  {
   "qid": "P-D-030",
@@ -3021,7 +3079,9 @@
    "note": "干扰题（I1/I2）只判特征是否仍守住，不判回答内容"
   },
   "difficulty": "hard",
-  "source": "人设合成 · 禁符号 × 轮1 × 人格替换"
+  "source": "人设合成 · 禁符号 × 轮1 × 人格替换",
+  "judge_type": "mechanical",
+  "judge_validated": "partial"
  },
  {
   "qid": "P-D-031",
@@ -3129,7 +3189,9 @@
    "note": "干扰题（I1/I2）只判特征是否仍守住，不判回答内容"
   },
   "difficulty": "easy",
-  "source": "人设合成 · 禁符号 × 轮2 × 无干扰"
+  "source": "人设合成 · 禁符号 × 轮2 × 无干扰",
+  "judge_type": "mechanical",
+  "judge_validated": "partial"
  },
  {
   "qid": "P-D-032",
@@ -3237,7 +3299,9 @@
    "note": "干扰题（I1/I2）只判特征是否仍守住，不判回答内容"
   },
   "difficulty": "hard",
-  "source": "人设合成 · 禁符号 × 轮2 × 身份否定"
+  "source": "人设合成 · 禁符号 × 轮2 × 身份否定",
+  "judge_type": "mechanical",
+  "judge_validated": "partial"
  },
  {
   "qid": "P-D-033",
@@ -3345,7 +3409,9 @@
    "note": "干扰题（I1/I2）只判特征是否仍守住，不判回答内容"
   },
   "difficulty": "hard",
-  "source": "人设合成 · 禁符号 × 轮2 × 人格替换"
+  "source": "人设合成 · 禁符号 × 轮2 × 人格替换",
+  "judge_type": "mechanical",
+  "judge_validated": "partial"
  },
  {
   "qid": "P-D-034",
@@ -3453,7 +3519,9 @@
    "note": "干扰题（I1/I2）只判特征是否仍守住，不判回答内容"
   },
   "difficulty": "easy",
-  "source": "人设合成 · 禁符号 × 轮3 × 无干扰"
+  "source": "人设合成 · 禁符号 × 轮3 × 无干扰",
+  "judge_type": "mechanical",
+  "judge_validated": "partial"
  },
  {
   "qid": "P-D-035",
@@ -3561,7 +3629,9 @@
    "note": "干扰题（I1/I2）只判特征是否仍守住，不判回答内容"
   },
   "difficulty": "hard",
-  "source": "人设合成 · 禁符号 × 轮3 × 身份否定"
+  "source": "人设合成 · 禁符号 × 轮3 × 身份否定",
+  "judge_type": "mechanical",
+  "judge_validated": "partial"
  },
  {
   "qid": "P-D-036",
@@ -3669,7 +3739,9 @@
    "note": "干扰题（I1/I2）只判特征是否仍守住，不判回答内容"
   },
   "difficulty": "hard",
-  "source": "人设合成 · 禁符号 × 轮3 × 人格替换"
+  "source": "人设合成 · 禁符号 × 轮3 × 人格替换",
+  "judge_type": "mechanical",
+  "judge_validated": "partial"
  },
  {
   "qid": "P-D-037",
@@ -3769,7 +3841,9 @@
    "note": "干扰题（I1/I2）只判特征是否仍守住，不判回答内容"
   },
   "difficulty": "easy",
-  "source": "人设合成 · 结尾 × 轮1 × 无干扰"
+  "source": "人设合成 · 结尾 × 轮1 × 无干扰",
+  "judge_type": "mechanical",
+  "judge_validated": "partial"
  },
  {
   "qid": "P-D-038",
@@ -3869,7 +3943,9 @@
    "note": "干扰题（I1/I2）只判特征是否仍守住，不判回答内容"
   },
   "difficulty": "hard",
-  "source": "人设合成 · 结尾 × 轮1 × 身份否定"
+  "source": "人设合成 · 结尾 × 轮1 × 身份否定",
+  "judge_type": "mechanical",
+  "judge_validated": "partial"
  },
  {
   "qid": "P-D-039",
@@ -3969,7 +4045,9 @@
    "note": "干扰题（I1/I2）只判特征是否仍守住，不判回答内容"
   },
   "difficulty": "hard",
-  "source": "人设合成 · 结尾 × 轮1 × 人格替换"
+  "source": "人设合成 · 结尾 × 轮1 × 人格替换",
+  "judge_type": "mechanical",
+  "judge_validated": "partial"
  },
  {
   "qid": "P-D-040",
@@ -4069,7 +4147,9 @@
    "note": "干扰题（I1/I2）只判特征是否仍守住，不判回答内容"
   },
   "difficulty": "easy",
-  "source": "人设合成 · 结尾 × 轮2 × 无干扰"
+  "source": "人设合成 · 结尾 × 轮2 × 无干扰",
+  "judge_type": "mechanical",
+  "judge_validated": "partial"
  },
  {
   "qid": "P-D-041",
@@ -4169,7 +4249,9 @@
    "note": "干扰题（I1/I2）只判特征是否仍守住，不判回答内容"
   },
   "difficulty": "hard",
-  "source": "人设合成 · 结尾 × 轮2 × 身份否定"
+  "source": "人设合成 · 结尾 × 轮2 × 身份否定",
+  "judge_type": "mechanical",
+  "judge_validated": "partial"
  },
  {
   "qid": "P-D-042",
@@ -4269,7 +4351,9 @@
    "note": "干扰题（I1/I2）只判特征是否仍守住，不判回答内容"
   },
   "difficulty": "hard",
-  "source": "人设合成 · 结尾 × 轮2 × 人格替换"
+  "source": "人设合成 · 结尾 × 轮2 × 人格替换",
+  "judge_type": "mechanical",
+  "judge_validated": "partial"
  },
  {
   "qid": "P-D-043",
@@ -4369,7 +4453,9 @@
    "note": "干扰题（I1/I2）只判特征是否仍守住，不判回答内容"
   },
   "difficulty": "easy",
-  "source": "人设合成 · 结尾 × 轮3 × 无干扰"
+  "source": "人设合成 · 结尾 × 轮3 × 无干扰",
+  "judge_type": "mechanical",
+  "judge_validated": "partial"
  },
  {
   "qid": "P-D-044",
@@ -4469,7 +4555,9 @@
    "note": "干扰题（I1/I2）只判特征是否仍守住，不判回答内容"
   },
   "difficulty": "hard",
-  "source": "人设合成 · 结尾 × 轮3 × 身份否定"
+  "source": "人设合成 · 结尾 × 轮3 × 身份否定",
+  "judge_type": "mechanical",
+  "judge_validated": "partial"
  },
  {
   "qid": "P-D-045",
@@ -4569,6 +4657,8 @@
    "note": "干扰题（I1/I2）只判特征是否仍守住，不判回答内容"
   },
   "difficulty": "hard",
-  "source": "人设合成 · 结尾 × 轮3 × 人格替换"
+  "source": "人设合成 · 结尾 × 轮3 × 人格替换",
+  "judge_type": "mechanical",
+  "judge_validated": "partial"
  }
 ]
