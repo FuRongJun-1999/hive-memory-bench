@@ -31,7 +31,9 @@
   "source": "剧本属性描写 · 行 98",
   "source_file": "海风与布丁_第一季_全卷_v5.0.md",
   "judge_type": "mechanical",
-  "judge_validated": "validated"
+  "judge_validated": "validated",
+  "count_tier": "counted",
+  "count_reason": "阴性对照，双向验证通过；题偏易"
  },
  {
   "qid": "P-L1-002",
@@ -65,7 +67,9 @@
   "source": "剧本属性描写 · 行 6675",
   "source_file": "海风与布丁_第一季_全卷_v5.0.md",
   "judge_type": "mechanical",
-  "judge_validated": "validated"
+  "judge_validated": "validated",
+  "count_tier": "counted",
+  "count_reason": "阴性对照，双向验证通过；题偏易"
  },
  {
   "qid": "P-L1-003",
@@ -99,7 +103,9 @@
   "source": "剧本属性描写 · 行 99",
   "source_file": "海风与布丁_第一季_全卷_v5.0.md",
   "judge_type": "mechanical",
-  "judge_validated": "validated"
+  "judge_validated": "validated",
+  "count_tier": "counted",
+  "count_reason": "阴性对照，双向验证通过；题偏易"
  },
  {
   "qid": "P-L1-004",
@@ -133,7 +139,9 @@
   "source": "剧本属性描写 · 行 99",
   "source_file": "海风与布丁_第一季_全卷_v5.0.md",
   "judge_type": "mechanical",
-  "judge_validated": "validated"
+  "judge_validated": "validated",
+  "count_tier": "counted",
+  "count_reason": "阴性对照，双向验证通过；题偏易"
  },
  {
   "qid": "P-L1-005",
@@ -168,7 +176,9 @@
   "source": "剧本属性描写 · 行 5903",
   "source_file": "海风与布丁_第一季_全卷_v5.0.md",
   "judge_type": "mechanical",
-  "judge_validated": "validated"
+  "judge_validated": "validated",
+  "count_tier": "counted",
+  "count_reason": "阴性对照，双向验证通过；题偏易"
  },
  {
   "qid": "P-L1-006",
@@ -202,7 +212,9 @@
   "source": "剧本属性描写 · 行 5470",
   "source_file": "海风与布丁_第一季_全卷_v5.0.md",
   "judge_type": "mechanical",
-  "judge_validated": "validated"
+  "judge_validated": "validated",
+  "count_tier": "counted",
+  "count_reason": "阴性对照，双向验证通过；题偏易"
  },
  {
   "qid": "P-L1-007",
@@ -236,6 +248,8 @@
   "source": "剧本属性描写 · 行 396",
   "source_file": "海风与布丁_第一季_全卷_v5.0.md",
   "judge_type": "mechanical",
-  "judge_validated": "validated"
+  "judge_validated": "validated",
+  "count_tier": "counted",
+  "count_reason": "阴性对照，双向验证通过；题偏易"
  }
 ]

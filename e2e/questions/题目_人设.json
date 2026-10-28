@@ -99,7 +99,9 @@
   "difficulty": "easy",
   "source": "人设合成 · 自称 × 轮1 × 无干扰",
   "judge_type": "mechanical",
-  "judge_validated": "partial"
+  "judge_validated": "partial",
+  "count_tier": "conditional",
+  "count_reason": "五特征可判但人设自称不自然；单列不进总分"
  },
  {
   "qid": "P-D-002",
@@ -201,7 +203,9 @@
   "difficulty": "hard",
   "source": "人设合成 · 自称 × 轮1 × 身份否定",
   "judge_type": "mechanical",
-  "judge_validated": "partial"
+  "judge_validated": "partial",
+  "count_tier": "conditional",
+  "count_reason": "五特征可判但人设自称不自然；单列不进总分"
  },
  {
   "qid": "P-D-003",
@@ -303,7 +307,9 @@
   "difficulty": "hard",
   "source": "人设合成 · 自称 × 轮1 × 人格替换",
   "judge_type": "mechanical",
-  "judge_validated": "partial"
+  "judge_validated": "partial",
+  "count_tier": "conditional",
+  "count_reason": "五特征可判但人设自称不自然；单列不进总分"
  },
  {
   "qid": "P-D-004",
@@ -405,7 +411,9 @@
   "difficulty": "easy",
   "source": "人设合成 · 自称 × 轮2 × 无干扰",
   "judge_type": "mechanical",
-  "judge_validated": "partial"
+  "judge_validated": "partial",
+  "count_tier": "conditional",
+  "count_reason": "五特征可判但人设自称不自然；单列不进总分"
  },
  {
   "qid": "P-D-005",
@@ -507,7 +515,9 @@
   "difficulty": "hard",
   "source": "人设合成 · 自称 × 轮2 × 身份否定",
   "judge_type": "mechanical",
-  "judge_validated": "partial"
+  "judge_validated": "partial",
+  "count_tier": "conditional",
+  "count_reason": "五特征可判但人设自称不自然；单列不进总分"
  },
  {
   "qid": "P-D-006",
@@ -609,7 +619,9 @@
   "difficulty": "hard",
   "source": "人设合成 · 自称 × 轮2 × 人格替换",
   "judge_type": "mechanical",
-  "judge_validated": "partial"
+  "judge_validated": "partial",
+  "count_tier": "conditional",
+  "count_reason": "五特征可判但人设自称不自然；单列不进总分"
  },
  {
   "qid": "P-D-007",
@@ -711,7 +723,9 @@
   "difficulty": "easy",
   "source": "人设合成 · 自称 × 轮3 × 无干扰",
   "judge_type": "mechanical",
-  "judge_validated": "partial"
+  "judge_validated": "partial",
+  "count_tier": "conditional",
+  "count_reason": "五特征可判但人设自称不自然；单列不进总分"
  },
  {
   "qid": "P-D-008",
@@ -813,7 +827,9 @@
   "difficulty": "hard",
   "source": "人设合成 · 自称 × 轮3 × 身份否定",
   "judge_type": "mechanical",
-  "judge_validated": "partial"
+  "judge_validated": "partial",
+  "count_tier": "conditional",
+  "count_reason": "五特征可判但人设自称不自然；单列不进总分"
  },
  {
   "qid": "P-D-009",
@@ -915,7 +931,9 @@
   "difficulty": "hard",
   "source": "人设合成 · 自称 × 轮3 × 人格替换",
   "judge_type": "mechanical",
-  "judge_validated": "partial"
+  "judge_validated": "partial",
+  "count_tier": "conditional",
+  "count_reason": "五特征可判但人设自称不自然；单列不进总分"
  },
  {
   "qid": "P-D-010",
@@ -1017,7 +1035,9 @@
   "difficulty": "easy",
   "source": "人设合成 · 称呼 × 轮1 × 无干扰",
   "judge_type": "mechanical",
-  "judge_validated": "partial"
+  "judge_validated": "partial",
+  "count_tier": "conditional",
+  "count_reason": "五特征可判但人设自称不自然；单列不进总分"
  },
  {
   "qid": "P-D-011",
@@ -1119,7 +1139,9 @@
   "difficulty": "hard",
   "source": "人设合成 · 称呼 × 轮1 × 身份否定",
   "judge_type": "mechanical",
-  "judge_validated": "partial"
+  "judge_validated": "partial",
+  "count_tier": "conditional",
+  "count_reason": "五特征可判但人设自称不自然；单列不进总分"
  },
  {
   "qid": "P-D-012",
@@ -1221,7 +1243,9 @@
   "difficulty": "hard",
   "source": "人设合成 · 称呼 × 轮1 × 人格替换",
   "judge_type": "mechanical",
-  "judge_validated": "partial"
+  "judge_validated": "partial",
+  "count_tier": "conditional",
+  "count_reason": "五特征可判但人设自称不自然；单列不进总分"
  },
  {
   "qid": "P-D-013",
@@ -1323,7 +1347,9 @@
   "difficulty": "easy",
   "source": "人设合成 · 称呼 × 轮2 × 无干扰",
   "judge_type": "mechanical",
-  "judge_validated": "partial"
+  "judge_validated": "partial",
+  "count_tier": "conditional",
+  "count_reason": "五特征可判但人设自称不自然；单列不进总分"
  },
  {
   "qid": "P-D-014",
@@ -1425,7 +1451,9 @@
   "difficulty": "hard",
   "source": "人设合成 · 称呼 × 轮2 × 身份否定",
   "judge_type": "mechanical",
-  "judge_validated": "partial"
+  "judge_validated": "partial",
+  "count_tier": "conditional",
+  "count_reason": "五特征可判但人设自称不自然；单列不进总分"
  },
  {
   "qid": "P-D-015",
@@ -1527,7 +1555,9 @@
   "difficulty": "hard",
   "source": "人设合成 · 称呼 × 轮2 × 人格替换",
   "judge_type": "mechanical",
-  "judge_validated": "partial"
+  "judge_validated": "partial",
+  "count_tier": "conditional",
+  "count_reason": "五特征可判但人设自称不自然；单列不进总分"
  },
  {
   "qid": "P-D-016",
@@ -1629,7 +1659,9 @@
   "difficulty": "easy",
   "source": "人设合成 · 称呼 × 轮3 × 无干扰",
   "judge_type": "mechanical",
-  "judge_validated": "partial"
+  "judge_validated": "partial",
+  "count_tier": "conditional",
+  "count_reason": "五特征可判但人设自称不自然；单列不进总分"
  },
  {
   "qid": "P-D-017",
@@ -1731,7 +1763,9 @@
   "difficulty": "hard",
   "source": "人设合成 · 称呼 × 轮3 × 身份否定",
   "judge_type": "mechanical",
-  "judge_validated": "partial"
+  "judge_validated": "partial",
+  "count_tier": "conditional",
+  "count_reason": "五特征可判但人设自称不自然；单列不进总分"
  },
  {
   "qid": "P-D-018",
@@ -1833,7 +1867,9 @@
   "difficulty": "hard",
   "source": "人设合成 · 称呼 × 轮3 × 人格替换",
   "judge_type": "mechanical",
-  "judge_validated": "partial"
+  "judge_validated": "partial",
+  "count_tier": "conditional",
+  "count_reason": "五特征可判但人设自称不自然；单列不进总分"
  },
  {
   "qid": "P-D-019",
@@ -1935,7 +1971,9 @@
   "difficulty": "easy",
   "source": "人设合成 · 句长 × 轮1 × 无干扰",
   "judge_type": "mechanical",
-  "judge_validated": "partial"
+  "judge_validated": "partial",
+  "count_tier": "conditional",
+  "count_reason": "五特征可判但人设自称不自然；单列不进总分"
  },
  {
   "qid": "P-D-020",
@@ -2037,7 +2075,9 @@
   "difficulty": "hard",
   "source": "人设合成 · 句长 × 轮1 × 身份否定",
   "judge_type": "mechanical",
-  "judge_validated": "partial"
+  "judge_validated": "partial",
+  "count_tier": "conditional",
+  "count_reason": "五特征可判但人设自称不自然；单列不进总分"
  },
  {
   "qid": "P-D-021",
@@ -2139,7 +2179,9 @@
   "difficulty": "hard",
   "source": "人设合成 · 句长 × 轮1 × 人格替换",
   "judge_type": "mechanical",
-  "judge_validated": "partial"
+  "judge_validated": "partial",
+  "count_tier": "conditional",
+  "count_reason": "五特征可判但人设自称不自然；单列不进总分"
  },
  {
   "qid": "P-D-022",
@@ -2241,7 +2283,9 @@
   "difficulty": "easy",
   "source": "人设合成 · 句长 × 轮2 × 无干扰",
   "judge_type": "mechanical",
-  "judge_validated": "partial"
+  "judge_validated": "partial",
+  "count_tier": "conditional",
+  "count_reason": "五特征可判但人设自称不自然；单列不进总分"
  },
  {
   "qid": "P-D-023",
@@ -2343,7 +2387,9 @@
   "difficulty": "hard",
   "source": "人设合成 · 句长 × 轮2 × 身份否定",
   "judge_type": "mechanical",
-  "judge_validated": "partial"
+  "judge_validated": "partial",
+  "count_tier": "conditional",
+  "count_reason": "五特征可判但人设自称不自然；单列不进总分"
  },
  {
   "qid": "P-D-024",
@@ -2445,7 +2491,9 @@
   "difficulty": "hard",
   "source": "人设合成 · 句长 × 轮2 × 人格替换",
   "judge_type": "mechanical",
-  "judge_validated": "partial"
+  "judge_validated": "partial",
+  "count_tier": "conditional",
+  "count_reason": "五特征可判但人设自称不自然；单列不进总分"
  },
  {
   "qid": "P-D-025",
@@ -2547,7 +2595,9 @@
   "difficulty": "easy",
   "source": "人设合成 · 句长 × 轮3 × 无干扰",
   "judge_type": "mechanical",
-  "judge_validated": "partial"
+  "judge_validated": "partial",
+  "count_tier": "conditional",
+  "count_reason": "五特征可判但人设自称不自然；单列不进总分"
  },
  {
   "qid": "P-D-026",
@@ -2649,7 +2699,9 @@
   "difficulty": "hard",
   "source": "人设合成 · 句长 × 轮3 × 身份否定",
   "judge_type": "mechanical",
-  "judge_validated": "partial"
+  "judge_validated": "partial",
+  "count_tier": "conditional",
+  "count_reason": "五特征可判但人设自称不自然；单列不进总分"
  },
  {
   "qid": "P-D-027",
@@ -2751,7 +2803,9 @@
   "difficulty": "hard",
   "source": "人设合成 · 句长 × 轮3 × 人格替换",
   "judge_type": "mechanical",
-  "judge_validated": "partial"
+  "judge_validated": "partial",
+  "count_tier": "conditional",
+  "count_reason": "五特征可判但人设自称不自然；单列不进总分"
  },
  {
   "qid": "P-D-028",
@@ -2861,7 +2915,9 @@
   "difficulty": "easy",
   "source": "人设合成 · 禁符号 × 轮1 × 无干扰",
   "judge_type": "mechanical",
-  "judge_validated": "partial"
+  "judge_validated": "partial",
+  "count_tier": "conditional",
+  "count_reason": "五特征可判但人设自称不自然；单列不进总分"
  },
  {
   "qid": "P-D-029",
@@ -2971,7 +3027,9 @@
   "difficulty": "hard",
   "source": "人设合成 · 禁符号 × 轮1 × 身份否定",
   "judge_type": "mechanical",
-  "judge_validated": "partial"
+  "judge_validated": "partial",
+  "count_tier": "conditional",
+  "count_reason": "五特征可判但人设自称不自然；单列不进总分"
  },
  {
   "qid": "P-D-030",
@@ -3081,7 +3139,9 @@
   "difficulty": "hard",
   "source": "人设合成 · 禁符号 × 轮1 × 人格替换",
   "judge_type": "mechanical",
-  "judge_validated": "partial"
+  "judge_validated": "partial",
+  "count_tier": "conditional",
+  "count_reason": "五特征可判但人设自称不自然；单列不进总分"
  },
  {
   "qid": "P-D-031",
@@ -3191,7 +3251,9 @@
   "difficulty": "easy",
   "source": "人设合成 · 禁符号 × 轮2 × 无干扰",
   "judge_type": "mechanical",
-  "judge_validated": "partial"
+  "judge_validated": "partial",
+  "count_tier": "conditional",
+  "count_reason": "五特征可判但人设自称不自然；单列不进总分"
  },
  {
   "qid": "P-D-032",
@@ -3301,7 +3363,9 @@
   "difficulty": "hard",
   "source": "人设合成 · 禁符号 × 轮2 × 身份否定",
   "judge_type": "mechanical",
-  "judge_validated": "partial"
+  "judge_validated": "partial",
+  "count_tier": "conditional",
+  "count_reason": "五特征可判但人设自称不自然；单列不进总分"
  },
  {
   "qid": "P-D-033",
@@ -3411,7 +3475,9 @@
   "difficulty": "hard",
   "source": "人设合成 · 禁符号 × 轮2 × 人格替换",
   "judge_type": "mechanical",
-  "judge_validated": "partial"
+  "judge_validated": "partial",
+  "count_tier": "conditional",
+  "count_reason": "五特征可判但人设自称不自然；单列不进总分"
  },
  {
   "qid": "P-D-034",
@@ -3521,7 +3587,9 @@
   "difficulty": "easy",
   "source": "人设合成 · 禁符号 × 轮3 × 无干扰",
   "judge_type": "mechanical",
-  "judge_validated": "partial"
+  "judge_validated": "partial",
+  "count_tier": "conditional",
+  "count_reason": "五特征可判但人设自称不自然；单列不进总分"
  },
  {
   "qid": "P-D-035",
@@ -3631,7 +3699,9 @@
   "difficulty": "hard",
   "source": "人设合成 · 禁符号 × 轮3 × 身份否定",
   "judge_type": "mechanical",
-  "judge_validated": "partial"
+  "judge_validated": "partial",
+  "count_tier": "conditional",
+  "count_reason": "五特征可判但人设自称不自然；单列不进总分"
  },
  {
   "qid": "P-D-036",
@@ -3741,7 +3811,9 @@
   "difficulty": "hard",
   "source": "人设合成 · 禁符号 × 轮3 × 人格替换",
   "judge_type": "mechanical",
-  "judge_validated": "partial"
+  "judge_validated": "partial",
+  "count_tier": "conditional",
+  "count_reason": "五特征可判但人设自称不自然；单列不进总分"
  },
  {
   "qid": "P-D-037",
@@ -3843,7 +3915,9 @@
   "difficulty": "easy",
   "source": "人设合成 · 结尾 × 轮1 × 无干扰",
   "judge_type": "mechanical",
-  "judge_validated": "partial"
+  "judge_validated": "partial",
+  "count_tier": "conditional",
+  "count_reason": "五特征可判但人设自称不自然；单列不进总分"
  },
  {
   "qid": "P-D-038",
@@ -3945,7 +4019,9 @@
   "difficulty": "hard",
   "source": "人设合成 · 结尾 × 轮1 × 身份否定",
   "judge_type": "mechanical",
-  "judge_validated": "partial"
+  "judge_validated": "partial",
+  "count_tier": "conditional",
+  "count_reason": "五特征可判但人设自称不自然；单列不进总分"
  },
  {
   "qid": "P-D-039",
@@ -4047,7 +4123,9 @@
   "difficulty": "hard",
   "source": "人设合成 · 结尾 × 轮1 × 人格替换",
   "judge_type": "mechanical",
-  "judge_validated": "partial"
+  "judge_validated": "partial",
+  "count_tier": "conditional",
+  "count_reason": "五特征可判但人设自称不自然；单列不进总分"
  },
  {
   "qid": "P-D-040",
@@ -4149,7 +4227,9 @@
   "difficulty": "easy",
   "source": "人设合成 · 结尾 × 轮2 × 无干扰",
   "judge_type": "mechanical",
-  "judge_validated": "partial"
+  "judge_validated": "partial",
+  "count_tier": "conditional",
+  "count_reason": "五特征可判但人设自称不自然；单列不进总分"
  },
  {
   "qid": "P-D-041",
@@ -4251,7 +4331,9 @@
   "difficulty": "hard",
   "source": "人设合成 · 结尾 × 轮2 × 身份否定",
   "judge_type": "mechanical",
-  "judge_validated": "partial"
+  "judge_validated": "partial",
+  "count_tier": "conditional",
+  "count_reason": "五特征可判但人设自称不自然；单列不进总分"
  },
  {
   "qid": "P-D-042",
@@ -4353,7 +4435,9 @@
   "difficulty": "hard",
   "source": "人设合成 · 结尾 × 轮2 × 人格替换",
   "judge_type": "mechanical",
-  "judge_validated": "partial"
+  "judge_validated": "partial",
+  "count_tier": "conditional",
+  "count_reason": "五特征可判但人设自称不自然；单列不进总分"
  },
  {
   "qid": "P-D-043",
@@ -4455,7 +4539,9 @@
   "difficulty": "easy",
   "source": "人设合成 · 结尾 × 轮3 × 无干扰",
   "judge_type": "mechanical",
-  "judge_validated": "partial"
+  "judge_validated": "partial",
+  "count_tier": "conditional",
+  "count_reason": "五特征可判但人设自称不自然；单列不进总分"
  },
  {
   "qid": "P-D-044",
@@ -4557,7 +4643,9 @@
   "difficulty": "hard",
   "source": "人设合成 · 结尾 × 轮3 × 身份否定",
   "judge_type": "mechanical",
-  "judge_validated": "partial"
+  "judge_validated": "partial",
+  "count_tier": "conditional",
+  "count_reason": "五特征可判但人设自称不自然；单列不进总分"
  },
  {
   "qid": "P-D-045",
@@ -4659,6 +4747,8 @@
   "difficulty": "hard",
   "source": "人设合成 · 结尾 × 轮3 × 人格替换",
   "judge_type": "mechanical",
-  "judge_validated": "partial"
+  "judge_validated": "partial",
+  "count_tier": "conditional",
+  "count_reason": "五特征可判但人设自称不自然；单列不进总分"
  }
 ]

@@ -53,7 +53,11 @@
   "validity": "read-table-only",
   "validity_note": "**本面当前只测「读表格并比较版本大小」，不测状态锚 L2。** 原因：版本表按序排列，直接取最大值即可答对，不需要任何状态追踪。需重造：让答案不在表内（如「13.3.5 已废弃」但不说被谁取代），或引入「废弃后恢复」的干扰。",
   "judge_type": "mechanical",
-  "judge_validated": "validated"
+  "judge_validated": "validated",
+  "counted": false,
+  "counted_reason": "只测读表格取最大值，不测 L2 状态锚；不进横比总分",
+  "count_tier": "excluded",
+  "count_reason": "只测读表格取最大值（read-table-only）"
  },
  {
   "qid": "P-H-003",
@@ -109,7 +113,11 @@
   "validity": "read-table-only",
   "validity_note": "**本面当前只测「读表格并比较版本大小」，不测状态锚 L2。** 原因：版本表按序排列，直接取最大值即可答对，不需要任何状态追踪。需重造：让答案不在表内（如「13.3.5 已废弃」但不说被谁取代），或引入「废弃后恢复」的干扰。",
   "judge_type": "mechanical",
-  "judge_validated": "validated"
+  "judge_validated": "validated",
+  "counted": false,
+  "counted_reason": "只测读表格取最大值，不测 L2 状态锚；不进横比总分",
+  "count_tier": "excluded",
+  "count_reason": "只测读表格取最大值（read-table-only）"
  },
  {
   "qid": "P-H-005",
@@ -165,7 +173,11 @@
   "validity": "read-table-only",
   "validity_note": "**本面当前只测「读表格并比较版本大小」，不测状态锚 L2。** 原因：版本表按序排列，直接取最大值即可答对，不需要任何状态追踪。需重造：让答案不在表内（如「13.3.5 已废弃」但不说被谁取代），或引入「废弃后恢复」的干扰。",
   "judge_type": "mechanical",
-  "judge_validated": "validated"
+  "judge_validated": "validated",
+  "counted": false,
+  "counted_reason": "只测读表格取最大值，不测 L2 状态锚；不进横比总分",
+  "count_tier": "excluded",
+  "count_reason": "只测读表格取最大值（read-table-only）"
  },
  {
   "qid": "P-H-007",
@@ -221,7 +233,11 @@
   "validity": "read-table-only",
   "validity_note": "**本面当前只测「读表格并比较版本大小」，不测状态锚 L2。** 原因：版本表按序排列，直接取最大值即可答对，不需要任何状态追踪。需重造：让答案不在表内（如「13.3.5 已废弃」但不说被谁取代），或引入「废弃后恢复」的干扰。",
   "judge_type": "mechanical",
-  "judge_validated": "validated"
+  "judge_validated": "validated",
+  "counted": false,
+  "counted_reason": "只测读表格取最大值，不测 L2 状态锚；不进横比总分",
+  "count_tier": "excluded",
+  "count_reason": "只测读表格取最大值（read-table-only）"
  },
  {
   "qid": "P-H-009",
@@ -277,7 +293,11 @@
   "validity": "read-table-only",
   "validity_note": "**本面当前只测「读表格并比较版本大小」，不测状态锚 L2。** 原因：版本表按序排列，直接取最大值即可答对，不需要任何状态追踪。需重造：让答案不在表内（如「13.3.5 已废弃」但不说被谁取代），或引入「废弃后恢复」的干扰。",
   "judge_type": "mechanical",
-  "judge_validated": "validated"
+  "judge_validated": "validated",
+  "counted": false,
+  "counted_reason": "只测读表格取最大值，不测 L2 状态锚；不进横比总分",
+  "count_tier": "excluded",
+  "count_reason": "只测读表格取最大值（read-table-only）"
  },
  {
   "qid": "P-H-011",
@@ -333,7 +353,11 @@
   "validity": "read-table-only",
   "validity_note": "**本面当前只测「读表格并比较版本大小」，不测状态锚 L2。** 原因：版本表按序排列，直接取最大值即可答对，不需要任何状态追踪。需重造：让答案不在表内（如「13.3.5 已废弃」但不说被谁取代），或引入「废弃后恢复」的干扰。",
   "judge_type": "mechanical",
-  "judge_validated": "validated"
+  "judge_validated": "validated",
+  "counted": false,
+  "counted_reason": "只测读表格取最大值，不测 L2 状态锚；不进横比总分",
+  "count_tier": "excluded",
+  "count_reason": "只测读表格取最大值（read-table-only）"
  },
  {
   "qid": "P-H-013",
@@ -389,7 +413,11 @@
   "validity": "read-table-only",
   "validity_note": "**本面当前只测「读表格并比较版本大小」，不测状态锚 L2。** 原因：版本表按序排列，直接取最大值即可答对，不需要任何状态追踪。需重造：让答案不在表内（如「13.3.5 已废弃」但不说被谁取代），或引入「废弃后恢复」的干扰。",
   "judge_type": "mechanical",
-  "judge_validated": "validated"
+  "judge_validated": "validated",
+  "counted": false,
+  "counted_reason": "只测读表格取最大值，不测 L2 状态锚；不进横比总分",
+  "count_tier": "excluded",
+  "count_reason": "只测读表格取最大值（read-table-only）"
  },
  {
   "qid": "P-H-015",
@@ -445,7 +473,11 @@
   "validity": "read-table-only",
   "validity_note": "**本面当前只测「读表格并比较版本大小」，不测状态锚 L2。** 原因：版本表按序排列，直接取最大值即可答对，不需要任何状态追踪。需重造：让答案不在表内（如「13.3.5 已废弃」但不说被谁取代），或引入「废弃后恢复」的干扰。",
   "judge_type": "mechanical",
-  "judge_validated": "validated"
+  "judge_validated": "validated",
+  "counted": false,
+  "counted_reason": "只测读表格取最大值，不测 L2 状态锚；不进横比总分",
+  "count_tier": "excluded",
+  "count_reason": "只测读表格取最大值（read-table-only）"
  },
  {
   "qid": "P-H-017",
@@ -501,7 +533,11 @@
   "validity": "read-table-only",
   "validity_note": "**本面当前只测「读表格并比较版本大小」，不测状态锚 L2。** 原因：版本表按序排列，直接取最大值即可答对，不需要任何状态追踪。需重造：让答案不在表内（如「13.3.5 已废弃」但不说被谁取代），或引入「废弃后恢复」的干扰。",
   "judge_type": "mechanical",
-  "judge_validated": "validated"
+  "judge_validated": "validated",
+  "counted": false,
+  "counted_reason": "只测读表格取最大值，不测 L2 状态锚；不进横比总分",
+  "count_tier": "excluded",
+  "count_reason": "只测读表格取最大值（read-table-only）"
  },
  {
   "qid": "P-H-019",
@@ -557,7 +593,11 @@
   "validity": "read-table-only",
   "validity_note": "**本面当前只测「读表格并比较版本大小」，不测状态锚 L2。** 原因：版本表按序排列，直接取最大值即可答对，不需要任何状态追踪。需重造：让答案不在表内（如「13.3.5 已废弃」但不说被谁取代），或引入「废弃后恢复」的干扰。",
   "judge_type": "mechanical",
-  "judge_validated": "validated"
+  "judge_validated": "validated",
+  "counted": false,
+  "counted_reason": "只测读表格取最大值，不测 L2 状态锚；不进横比总分",
+  "count_tier": "excluded",
+  "count_reason": "只测读表格取最大值（read-table-only）"
  },
  {
   "qid": "P-H-021",
@@ -613,7 +653,11 @@
   "validity": "read-table-only",
   "validity_note": "**本面当前只测「读表格并比较版本大小」，不测状态锚 L2。** 原因：版本表按序排列，直接取最大值即可答对，不需要任何状态追踪。需重造：让答案不在表内（如「13.3.5 已废弃」但不说被谁取代），或引入「废弃后恢复」的干扰。",
   "judge_type": "mechanical",
-  "judge_validated": "validated"
+  "judge_validated": "validated",
+  "counted": false,
+  "counted_reason": "只测读表格取最大值，不测 L2 状态锚；不进横比总分",
+  "count_tier": "excluded",
+  "count_reason": "只测读表格取最大值（read-table-only）"
  },
  {
   "qid": "P-H-023",
@@ -669,7 +713,11 @@
   "validity": "read-table-only",
   "validity_note": "**本面当前只测「读表格并比较版本大小」，不测状态锚 L2。** 原因：版本表按序排列，直接取最大值即可答对，不需要任何状态追踪。需重造：让答案不在表内（如「13.3.5 已废弃」但不说被谁取代），或引入「废弃后恢复」的干扰。",
   "judge_type": "mechanical",
-  "judge_validated": "validated"
+  "judge_validated": "validated",
+  "counted": false,
+  "counted_reason": "只测读表格取最大值，不测 L2 状态锚；不进横比总分",
+  "count_tier": "excluded",
+  "count_reason": "只测读表格取最大值（read-table-only）"
  },
  {
   "qid": "P-H-025",
@@ -725,7 +773,11 @@
   "validity": "read-table-only",
   "validity_note": "**本面当前只测「读表格并比较版本大小」，不测状态锚 L2。** 原因：版本表按序排列，直接取最大值即可答对，不需要任何状态追踪。需重造：让答案不在表内（如「13.3.5 已废弃」但不说被谁取代），或引入「废弃后恢复」的干扰。",
   "judge_type": "mechanical",
-  "judge_validated": "validated"
+  "judge_validated": "validated",
+  "counted": false,
+  "counted_reason": "只测读表格取最大值，不测 L2 状态锚；不进横比总分",
+  "count_tier": "excluded",
+  "count_reason": "只测读表格取最大值（read-table-only）"
  },
  {
   "qid": "P-H-027",
@@ -781,7 +833,11 @@
   "validity": "read-table-only",
   "validity_note": "**本面当前只测「读表格并比较版本大小」，不测状态锚 L2。** 原因：版本表按序排列，直接取最大值即可答对，不需要任何状态追踪。需重造：让答案不在表内（如「13.3.5 已废弃」但不说被谁取代），或引入「废弃后恢复」的干扰。",
   "judge_type": "mechanical",
-  "judge_validated": "validated"
+  "judge_validated": "validated",
+  "counted": false,
+  "counted_reason": "只测读表格取最大值，不测 L2 状态锚；不进横比总分",
+  "count_tier": "excluded",
+  "count_reason": "只测读表格取最大值（read-table-only）"
  },
  {
   "qid": "P-H-029",
@@ -837,7 +893,11 @@
   "validity": "read-table-only",
   "validity_note": "**本面当前只测「读表格并比较版本大小」，不测状态锚 L2。** 原因：版本表按序排列，直接取最大值即可答对，不需要任何状态追踪。需重造：让答案不在表内（如「13.3.5 已废弃」但不说被谁取代），或引入「废弃后恢复」的干扰。",
   "judge_type": "mechanical",
-  "judge_validated": "validated"
+  "judge_validated": "validated",
+  "counted": false,
+  "counted_reason": "只测读表格取最大值，不测 L2 状态锚；不进横比总分",
+  "count_tier": "excluded",
+  "count_reason": "只测读表格取最大值（read-table-only）"
  },
  {
   "qid": "P-H-S01",
@@ -900,7 +960,10 @@
   "validity": "true-state-anchor",
   "validity_note": "答案不在表格里，需理解「搬走」= 旧状态失效；这是面 H 的合格样本",
   "judge_type": "mechanical",
-  "judge_validated": "validated"
+  "judge_validated": "validated",
+  "counted": true,
+  "count_tier": "counted",
+  "count_reason": "状态锚退役检验，双向验证通过（仅 3 题真素材）"
  },
  {
   "qid": "P-H-S02",
@@ -948,7 +1011,10 @@
   "validity": "true-state-anchor",
   "validity_note": "答案不在表格里，需理解「搬走」= 旧状态失效；这是面 H 的合格样本",
   "judge_type": "mechanical",
-  "judge_validated": "validated"
+  "judge_validated": "validated",
+  "counted": true,
+  "count_tier": "counted",
+  "count_reason": "状态锚退役检验，双向验证通过（仅 3 题真素材）"
  },
  {
   "qid": "P-H-S03",
@@ -1000,6 +1066,9 @@
   "validity": "true-state-anchor",
   "validity_note": "答案不在表格里，需理解「搬走」= 旧状态失效；这是面 H 的合格样本",
   "judge_type": "mechanical",
-  "judge_validated": "validated"
+  "judge_validated": "validated",
+  "counted": true,
+  "count_tier": "counted",
+  "count_reason": "状态锚退役检验，双向验证通过（仅 3 题真素材）"
  }
 ]

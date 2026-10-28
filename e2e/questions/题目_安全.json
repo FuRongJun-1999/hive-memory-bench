@@ -25,7 +25,9 @@
   "difficulty": "hard",
   "source": "安全招法合成 · 直接注入",
   "judge_type": "mechanical",
-  "judge_validated": "validated"
+  "judge_validated": "validated",
+  "count_tier": "counted",
+  "count_reason": "同上"
  },
  {
   "qid": "P-F-002",
@@ -54,7 +56,9 @@
   "difficulty": "hard",
   "source": "安全招法合成 · 直接注入",
   "judge_type": "mechanical",
-  "judge_validated": "validated"
+  "judge_validated": "validated",
+  "count_tier": "counted",
+  "count_reason": "同上"
  },
  {
   "qid": "P-F-003",
@@ -82,7 +86,9 @@
   "difficulty": "hard",
   "source": "安全招法合成 · 伪装授权",
   "judge_type": "mechanical",
-  "judge_validated": "validated"
+  "judge_validated": "validated",
+  "count_tier": "counted",
+  "count_reason": "同上"
  },
  {
   "qid": "P-F-004",
@@ -111,7 +117,9 @@
   "difficulty": "hard",
   "source": "安全招法合成 · 伪装授权",
   "judge_type": "mechanical",
-  "judge_validated": "validated"
+  "judge_validated": "validated",
+  "count_tier": "counted",
+  "count_reason": "同上"
  },
  {
   "qid": "P-F-005",
@@ -140,7 +148,9 @@
   "difficulty": "hard",
   "source": "安全招法合成 · 诱导泄露",
   "judge_type": "mechanical",
-  "judge_validated": "validated"
+  "judge_validated": "validated",
+  "count_tier": "counted",
+  "count_reason": "同上"
  },
  {
   "qid": "P-F-006",
@@ -168,7 +178,9 @@
   "difficulty": "hard",
   "source": "安全招法合成 · 诱导泄露",
   "judge_type": "mechanical",
-  "judge_validated": "validated"
+  "judge_validated": "validated",
+  "count_tier": "counted",
+  "count_reason": "同上"
  },
  {
   "qid": "P-F-007",
@@ -196,7 +208,9 @@
   "difficulty": "hard",
   "source": "安全招法合成 · 冒充他人",
   "judge_type": "mechanical",
-  "judge_validated": "validated"
+  "judge_validated": "validated",
+  "count_tier": "counted",
+  "count_reason": "同上"
  },
  {
   "qid": "P-F-008",
@@ -224,7 +238,9 @@
   "difficulty": "hard",
   "source": "安全招法合成 · 冒充他人",
   "judge_type": "mechanical",
-  "judge_validated": "validated"
+  "judge_validated": "validated",
+  "count_tier": "counted",
+  "count_reason": "同上"
  },
  {
   "qid": "P-F-009",
@@ -252,7 +268,9 @@
   "difficulty": "hard",
   "source": "安全招法合成 · 记忆投毒",
   "judge_type": "mechanical",
-  "judge_validated": "validated"
+  "judge_validated": "validated",
+  "count_tier": "counted",
+  "count_reason": "同上"
  },
  {
   "qid": "P-F-010",
@@ -280,6 +298,8 @@
   "difficulty": "hard",
   "source": "安全招法合成 · 记忆投毒",
   "judge_type": "mechanical",
-  "judge_validated": "validated"
+  "judge_validated": "validated",
+  "count_tier": "counted",
+  "count_reason": "同上"
  }
 ]
