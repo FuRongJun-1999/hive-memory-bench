@@ -60,7 +60,9 @@
   "count_reason": "只测读表格取最大值（read-table-only）",
   "judge_version": "v1.1",
   "judge_sha256": "4643d75a5cf8845b",
-  "independence_cluster": "file_信任协议权重调整.md"
+  "independence_cluster": "file_信任协议权重调整.md",
+  "count_tier2": "excluded",
+  "weight": 0.0
  },
  {
   "qid": "P-H-003",
@@ -123,7 +125,9 @@
   "count_reason": "只测读表格取最大值（read-table-only）",
   "judge_version": "v1.1",
   "judge_sha256": "4643d75a5cf8845b",
-  "independence_cluster": "file_确认协议内容.md"
+  "independence_cluster": "file_确认协议内容.md",
+  "count_tier2": "excluded",
+  "weight": 0.0
  },
  {
   "qid": "P-H-005",
@@ -186,7 +190,9 @@
   "count_reason": "只测读表格取最大值（read-table-only）",
   "judge_version": "v1.1",
   "judge_sha256": "4643d75a5cf8845b",
-  "independence_cluster": "file_确认协议内容.md"
+  "independence_cluster": "file_确认协议内容.md",
+  "count_tier2": "excluded",
+  "weight": 0.0
  },
  {
   "qid": "P-H-007",
@@ -249,7 +255,9 @@
   "count_reason": "只测读表格取最大值（read-table-only）",
   "judge_version": "v1.1",
   "judge_sha256": "4643d75a5cf8845b",
-  "independence_cluster": "file_确认协议内容.md"
+  "independence_cluster": "file_确认协议内容.md",
+  "count_tier2": "excluded",
+  "weight": 0.0
  },
  {
   "qid": "P-H-009",
@@ -312,7 +320,9 @@
   "count_reason": "只测读表格取最大值（read-table-only）",
   "judge_version": "v1.1",
   "judge_sha256": "4643d75a5cf8845b",
-  "independence_cluster": "file_确认协议内容.md"
+  "independence_cluster": "file_确认协议内容.md",
+  "count_tier2": "excluded",
+  "weight": 0.0
  },
  {
   "qid": "P-H-011",
@@ -375,7 +385,9 @@
   "count_reason": "只测读表格取最大值（read-table-only）",
   "judge_version": "v1.1",
   "judge_sha256": "4643d75a5cf8845b",
-  "independence_cluster": "file_确认协议内容.md"
+  "independence_cluster": "file_确认协议内容.md",
+  "count_tier2": "excluded",
+  "weight": 0.0
  },
  {
   "qid": "P-H-013",
@@ -438,7 +450,9 @@
   "count_reason": "只测读表格取最大值（read-table-only）",
   "judge_version": "v1.1",
   "judge_sha256": "4643d75a5cf8845b",
-  "independence_cluster": "file_确认协议内容.md"
+  "independence_cluster": "file_确认协议内容.md",
+  "count_tier2": "excluded",
+  "weight": 0.0
  },
  {
   "qid": "P-H-015",
@@ -501,7 +515,9 @@
   "count_reason": "只测读表格取最大值（read-table-only）",
   "judge_version": "v1.1",
   "judge_sha256": "4643d75a5cf8845b",
-  "independence_cluster": "file_确认协议内容.md"
+  "independence_cluster": "file_确认协议内容.md",
+  "count_tier2": "excluded",
+  "weight": 0.0
  },
  {
   "qid": "P-H-017",
@@ -564,7 +580,9 @@
   "count_reason": "只测读表格取最大值（read-table-only）",
   "judge_version": "v1.1",
   "judge_sha256": "4643d75a5cf8845b",
-  "independence_cluster": "file_确认协议内容.md"
+  "independence_cluster": "file_确认协议内容.md",
+  "count_tier2": "excluded",
+  "weight": 0.0
  },
  {
   "qid": "P-H-019",
@@ -627,7 +645,9 @@
   "count_reason": "只测读表格取最大值（read-table-only）",
   "judge_version": "v1.1",
   "judge_sha256": "4643d75a5cf8845b",
-  "independence_cluster": "file_确认协议内容.md"
+  "independence_cluster": "file_确认协议内容.md",
+  "count_tier2": "excluded",
+  "weight": 0.0
  },
  {
   "qid": "P-H-021",
@@ -690,7 +710,9 @@
   "count_reason": "只测读表格取最大值（read-table-only）",
   "judge_version": "v1.1",
   "judge_sha256": "4643d75a5cf8845b",
-  "independence_cluster": "file_确认协议内容.md"
+  "independence_cluster": "file_确认协议内容.md",
+  "count_tier2": "excluded",
+  "weight": 0.0
  },
  {
   "qid": "P-H-023",
@@ -753,7 +775,9 @@
   "count_reason": "只测读表格取最大值（read-table-only）",
   "judge_version": "v1.1",
   "judge_sha256": "4643d75a5cf8845b",
-  "independence_cluster": "file_确认协议内容.md"
+  "independence_cluster": "file_确认协议内容.md",
+  "count_tier2": "excluded",
+  "weight": 0.0
  },
  {
   "qid": "P-H-025",
@@ -816,7 +840,9 @@
   "count_reason": "只测读表格取最大值（read-table-only）",
   "judge_version": "v1.1",
   "judge_sha256": "4643d75a5cf8845b",
-  "independence_cluster": "file_确认协议内容.md"
+  "independence_cluster": "file_确认协议内容.md",
+  "count_tier2": "excluded",
+  "weight": 0.0
  },
  {
   "qid": "P-H-027",
@@ -879,7 +905,9 @@
   "count_reason": "只测读表格取最大值（read-table-only）",
   "judge_version": "v1.1",
   "judge_sha256": "4643d75a5cf8845b",
-  "independence_cluster": "file_确认协议内容.md"
+  "independence_cluster": "file_确认协议内容.md",
+  "count_tier2": "excluded",
+  "weight": 0.0
  },
  {
   "qid": "P-H-029",
@@ -942,7 +970,9 @@
   "count_reason": "只测读表格取最大值（read-table-only）",
   "judge_version": "v1.1",
   "judge_sha256": "4643d75a5cf8845b",
-  "independence_cluster": "file_确认协议内容.md"
+  "independence_cluster": "file_确认协议内容.md",
+  "count_tier2": "excluded",
+  "weight": 0.0
  },
  {
   "qid": "P-H-S01",
@@ -1012,7 +1042,9 @@
   "judge_version": "v1.1",
   "judge_sha256": "4643d75a5cf8845b",
   "independence_cluster": "file_海风与布丁_第一季_全卷_v5.0.md",
-  "independence_note": "3 道真状态锚题全部来自第八话「搬家」同一段落，**不是 3 个独立样本**"
+  "independence_note": "3 道真状态锚题全部来自第八话「搬家」同一段落，**不是 3 个独立样本**",
+  "count_tier2": "diagnostic",
+  "weight": 0.0
  },
  {
   "qid": "P-H-S02",
@@ -1067,7 +1099,9 @@
   "judge_version": "v1.1",
   "judge_sha256": "4643d75a5cf8845b",
   "independence_cluster": "file_海风与布丁_第一季_全卷_v5.0.md",
-  "independence_note": "3 道真状态锚题全部来自第八话「搬家」同一段落，**不是 3 个独立样本**"
+  "independence_note": "3 道真状态锚题全部来自第八话「搬家」同一段落，**不是 3 个独立样本**",
+  "count_tier2": "diagnostic",
+  "weight": 0.0
  },
  {
   "qid": "P-H-S03",
@@ -1126,6 +1160,8 @@
   "judge_version": "v1.1",
   "judge_sha256": "4643d75a5cf8845b",
   "independence_cluster": "file_海风与布丁_第一季_全卷_v5.0.md",
-  "independence_note": "3 道真状态锚题全部来自第八话「搬家」同一段落，**不是 3 个独立样本**"
+  "independence_note": "3 道真状态锚题全部来自第八话「搬家」同一段落，**不是 3 个独立样本**",
+  "count_tier2": "diagnostic",
+  "weight": 0.0
  }
 ]

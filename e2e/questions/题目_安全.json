@@ -29,7 +29,9 @@
   "count_tier": "counted",
   "count_reason": "同上",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "ability",
+  "weight": 1.0
  },
  {
   "qid": "P-F-002",
@@ -62,7 +64,9 @@
   "count_tier": "counted",
   "count_reason": "同上",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "ability",
+  "weight": 1.0
  },
  {
   "qid": "P-F-003",
@@ -94,7 +98,9 @@
   "count_tier": "counted",
   "count_reason": "同上",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "ability",
+  "weight": 1.0
  },
  {
   "qid": "P-F-004",
@@ -127,7 +133,9 @@
   "count_tier": "counted",
   "count_reason": "同上",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "ability",
+  "weight": 1.0
  },
  {
   "qid": "P-F-005",
@@ -160,7 +168,9 @@
   "count_tier": "counted",
   "count_reason": "同上",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "ability",
+  "weight": 1.0
  },
  {
   "qid": "P-F-006",
@@ -192,7 +202,9 @@
   "count_tier": "counted",
   "count_reason": "同上",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "ability",
+  "weight": 1.0
  },
  {
   "qid": "P-F-007",
@@ -224,7 +236,9 @@
   "count_tier": "counted",
   "count_reason": "同上",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "ability",
+  "weight": 1.0
  },
  {
   "qid": "P-F-008",
@@ -256,7 +270,9 @@
   "count_tier": "counted",
   "count_reason": "同上",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "ability",
+  "weight": 1.0
  },
  {
   "qid": "P-F-009",
@@ -288,7 +304,9 @@
   "count_tier": "counted",
   "count_reason": "同上",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "ability",
+  "weight": 1.0
  },
  {
   "qid": "P-F-010",
@@ -320,6 +338,8 @@
   "count_tier": "counted",
   "count_reason": "同上",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "ability",
+  "weight": 1.0
  }
 ]

@@ -35,7 +35,9 @@
   "count_tier": "counted",
   "count_reason": "阴性对照，双向验证通过；题偏易",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "control",
+  "weight": 0.0
  },
  {
   "qid": "P-L1-002",
@@ -73,7 +75,9 @@
   "count_tier": "counted",
   "count_reason": "阴性对照，双向验证通过；题偏易",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "control",
+  "weight": 0.0
  },
  {
   "qid": "P-L1-003",
@@ -111,7 +115,9 @@
   "count_tier": "counted",
   "count_reason": "阴性对照，双向验证通过；题偏易",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "control",
+  "weight": 0.0
  },
  {
   "qid": "P-L1-004",
@@ -149,7 +155,9 @@
   "count_tier": "counted",
   "count_reason": "阴性对照，双向验证通过；题偏易",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "control",
+  "weight": 0.0
  },
  {
   "qid": "P-L1-005",
@@ -188,7 +196,9 @@
   "count_tier": "counted",
   "count_reason": "阴性对照，双向验证通过；题偏易",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "control",
+  "weight": 0.0
  },
  {
   "qid": "P-L1-006",
@@ -226,7 +236,9 @@
   "count_tier": "counted",
   "count_reason": "阴性对照，双向验证通过；题偏易",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "control",
+  "weight": 0.0
  },
  {
   "qid": "P-L1-007",
@@ -264,6 +276,8 @@
   "count_tier": "counted",
   "count_reason": "阴性对照，双向验证通过；题偏易",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "control",
+  "weight": 0.0
  }
 ]

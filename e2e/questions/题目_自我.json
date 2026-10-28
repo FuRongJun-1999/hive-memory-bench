@@ -35,7 +35,9 @@
   "count_tier": "counted",
   "count_reason": "答案全在窗内（已重建），正反例 3/3；只测检索不测身份连续性",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "ability",
+  "weight": 1.0
  },
  {
   "qid": "P-C-002",
@@ -75,7 +77,9 @@
   "count_tier": "counted",
   "count_reason": "答案全在窗内（已重建），正反例 3/3；只测检索不测身份连续性",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "ability",
+  "weight": 1.0
  },
  {
   "qid": "P-C-003",
@@ -115,7 +119,9 @@
   "count_tier": "counted",
   "count_reason": "答案全在窗内（已重建），正反例 3/3；只测检索不测身份连续性",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "ability",
+  "weight": 1.0
  },
  {
   "qid": "P-C-004",
@@ -153,7 +159,9 @@
   "count_tier": "counted",
   "count_reason": "答案全在窗内（已重建），正反例 3/3；只测检索不测身份连续性",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "ability",
+  "weight": 1.0
  },
  {
   "qid": "P-C-005",
@@ -191,7 +199,9 @@
   "count_tier": "counted",
   "count_reason": "答案全在窗内（已重建），正反例 3/3；只测检索不测身份连续性",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "ability",
+  "weight": 1.0
  },
  {
   "qid": "P-C-006",
@@ -229,7 +239,9 @@
   "count_tier": "counted",
   "count_reason": "答案全在窗内（已重建），正反例 3/3；只测检索不测身份连续性",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "ability",
+  "weight": 1.0
  },
  {
   "qid": "P-C-007",
@@ -267,7 +279,9 @@
   "count_tier": "counted",
   "count_reason": "答案全在窗内（已重建），正反例 3/3；只测检索不测身份连续性",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "ability",
+  "weight": 1.0
  },
  {
   "qid": "P-C-008",
@@ -305,7 +319,9 @@
   "count_tier": "counted",
   "count_reason": "答案全在窗内（已重建），正反例 3/3；只测检索不测身份连续性",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "ability",
+  "weight": 1.0
  },
  {
   "qid": "P-C-009",
@@ -343,7 +359,9 @@
   "count_tier": "counted",
   "count_reason": "答案全在窗内（已重建），正反例 3/3；只测检索不测身份连续性",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "ability",
+  "weight": 1.0
  },
  {
   "qid": "P-C-010",
@@ -381,7 +399,9 @@
   "count_tier": "counted",
   "count_reason": "答案全在窗内（已重建），正反例 3/3；只测检索不测身份连续性",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "ability",
+  "weight": 1.0
  },
  {
   "qid": "P-C-011",
@@ -419,7 +439,9 @@
   "count_tier": "counted",
   "count_reason": "答案全在窗内（已重建），正反例 3/3；只测检索不测身份连续性",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "ability",
+  "weight": 1.0
  },
  {
   "qid": "P-C-012",
@@ -457,7 +479,9 @@
   "count_tier": "counted",
   "count_reason": "答案全在窗内（已重建），正反例 3/3；只测检索不测身份连续性",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "ability",
+  "weight": 1.0
  },
  {
   "qid": "P-C-013",
@@ -495,7 +519,9 @@
   "count_tier": "counted",
   "count_reason": "答案全在窗内（已重建），正反例 3/3；只测检索不测身份连续性",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "ability",
+  "weight": 1.0
  },
  {
   "qid": "P-C-014",
@@ -533,7 +559,9 @@
   "count_tier": "counted",
   "count_reason": "答案全在窗内（已重建），正反例 3/3；只测检索不测身份连续性",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "ability",
+  "weight": 1.0
  },
  {
   "qid": "P-C-015",
@@ -571,7 +599,9 @@
   "count_tier": "counted",
   "count_reason": "答案全在窗内（已重建），正反例 3/3；只测检索不测身份连续性",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "ability",
+  "weight": 1.0
  },
  {
   "qid": "P-C-016",
@@ -612,7 +642,9 @@
   "count_tier": "counted",
   "count_reason": "答案全在窗内（已重建），正反例 3/3；只测检索不测身份连续性",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "ability",
+  "weight": 1.0
  },
  {
   "qid": "P-C-017",
@@ -653,7 +685,9 @@
   "count_tier": "counted",
   "count_reason": "答案全在窗内（已重建），正反例 3/3；只测检索不测身份连续性",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "ability",
+  "weight": 1.0
  },
  {
   "qid": "P-C-018",
@@ -694,7 +728,9 @@
   "count_tier": "counted",
   "count_reason": "答案全在窗内（已重建），正反例 3/3；只测检索不测身份连续性",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "ability",
+  "weight": 1.0
  },
  {
   "qid": "P-C-019",
@@ -732,7 +768,9 @@
   "count_tier": "counted",
   "count_reason": "答案全在窗内（已重建），正反例 3/3；只测检索不测身份连续性",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "ability",
+  "weight": 1.0
  },
  {
   "qid": "P-C-020",
@@ -770,7 +808,9 @@
   "count_tier": "counted",
   "count_reason": "答案全在窗内（已重建），正反例 3/3；只测检索不测身份连续性",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "ability",
+  "weight": 1.0
  },
  {
   "qid": "P-C-021",
@@ -808,7 +848,9 @@
   "count_tier": "counted",
   "count_reason": "答案全在窗内（已重建），正反例 3/3；只测检索不测身份连续性",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "ability",
+  "weight": 1.0
  },
  {
   "qid": "P-C-022",
@@ -846,7 +888,9 @@
   "count_tier": "counted",
   "count_reason": "答案全在窗内（已重建），正反例 3/3；只测检索不测身份连续性",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "ability",
+  "weight": 1.0
  },
  {
   "qid": "P-C-023",
@@ -884,7 +928,9 @@
   "count_tier": "counted",
   "count_reason": "答案全在窗内（已重建），正反例 3/3；只测检索不测身份连续性",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "ability",
+  "weight": 1.0
  },
  {
   "qid": "P-C-024",
@@ -922,7 +968,9 @@
   "count_tier": "counted",
   "count_reason": "答案全在窗内（已重建），正反例 3/3；只测检索不测身份连续性",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "ability",
+  "weight": 1.0
  },
  {
   "qid": "P-C-025",
@@ -960,7 +1008,9 @@
   "count_tier": "counted",
   "count_reason": "答案全在窗内（已重建），正反例 3/3；只测检索不测身份连续性",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "ability",
+  "weight": 1.0
  },
  {
   "qid": "P-C-026",
@@ -998,7 +1048,9 @@
   "count_tier": "counted",
   "count_reason": "答案全在窗内（已重建），正反例 3/3；只测检索不测身份连续性",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "ability",
+  "weight": 1.0
  },
  {
   "qid": "P-C-027",
@@ -1036,7 +1088,9 @@
   "count_tier": "counted",
   "count_reason": "答案全在窗内（已重建），正反例 3/3；只测检索不测身份连续性",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "ability",
+  "weight": 1.0
  },
  {
   "qid": "P-C-028",
@@ -1074,7 +1128,9 @@
   "count_tier": "counted",
   "count_reason": "答案全在窗内（已重建），正反例 3/3；只测检索不测身份连续性",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "ability",
+  "weight": 1.0
  },
  {
   "qid": "P-C-029",
@@ -1114,7 +1170,9 @@
   "count_tier": "counted",
   "count_reason": "答案全在窗内（已重建），正反例 3/3；只测检索不测身份连续性",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "ability",
+  "weight": 1.0
  },
  {
   "qid": "P-C-030",
@@ -1154,7 +1212,9 @@
   "count_tier": "counted",
   "count_reason": "答案全在窗内（已重建），正反例 3/3；只测检索不测身份连续性",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "ability",
+  "weight": 1.0
  },
  {
   "qid": "P-C-031",
@@ -1192,7 +1252,9 @@
   "count_tier": "counted",
   "count_reason": "答案全在窗内（已重建），正反例 3/3；只测检索不测身份连续性",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "ability",
+  "weight": 1.0
  },
  {
   "qid": "P-C-032",
@@ -1230,7 +1292,9 @@
   "count_tier": "counted",
   "count_reason": "答案全在窗内（已重建），正反例 3/3；只测检索不测身份连续性",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "ability",
+  "weight": 1.0
  },
  {
   "qid": "P-C-033",
@@ -1268,7 +1332,9 @@
   "count_tier": "counted",
   "count_reason": "答案全在窗内（已重建），正反例 3/3；只测检索不测身份连续性",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "ability",
+  "weight": 1.0
  },
  {
   "qid": "P-C-034",
@@ -1306,7 +1372,9 @@
   "count_tier": "counted",
   "count_reason": "答案全在窗内（已重建），正反例 3/3；只测检索不测身份连续性",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "ability",
+  "weight": 1.0
  },
  {
   "qid": "P-C-035",
@@ -1344,7 +1412,9 @@
   "count_tier": "counted",
   "count_reason": "答案全在窗内（已重建），正反例 3/3；只测检索不测身份连续性",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "ability",
+  "weight": 1.0
  },
  {
   "qid": "P-C-036",
@@ -1382,7 +1452,9 @@
   "count_tier": "counted",
   "count_reason": "答案全在窗内（已重建），正反例 3/3；只测检索不测身份连续性",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "ability",
+  "weight": 1.0
  },
  {
   "qid": "P-C-037",
@@ -1420,7 +1492,9 @@
   "count_tier": "counted",
   "count_reason": "答案全在窗内（已重建），正反例 3/3；只测检索不测身份连续性",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "ability",
+  "weight": 1.0
  },
  {
   "qid": "P-C-038",
@@ -1460,7 +1534,9 @@
   "count_tier": "counted",
   "count_reason": "答案全在窗内（已重建），正反例 3/3；只测检索不测身份连续性",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "ability",
+  "weight": 1.0
  },
  {
   "qid": "P-C-039",
@@ -1500,6 +1576,8 @@
   "count_tier": "counted",
   "count_reason": "答案全在窗内（已重建），正反例 3/3；只测检索不测身份连续性",
   "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b"
+  "judge_sha256": "4643d75a5cf8845b",
+  "count_tier2": "ability",
+  "weight": 1.0
  }
 ]
