@@ -1,8 +1,8 @@
 {
   "_说明": "覆盖声明：本文件是题库的机器可读索引，下游工具读它就知道哪些面能比、哪些不能。由 e2e/run/生成覆盖声明.py 生成。",
   "generated_at": "2026-10-27",
-  "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b",
+  "judge_version": "v1.4",
+  "judge_sha256": "fc6908c63ae855f8",
   "judge_file": "e2e/tools/judge.py",
   "judge_changelog": "e2e/tools/judge_CHANGELOG.md",
   "counting_rule": "counted 进横比总分；conditional 单列不进总分；excluded 不计数；excused 为标废",
@@ -18,7 +18,8 @@
       "ability": 0,
       "control": 0,
       "diagnostic": 0,
-      "excused": 8
+      "excused": 8,
+      "可用": 79
     },
     "B2": {
       "总": 87,
@@ -31,7 +32,8 @@
       "ability": 87,
       "control": 0,
       "diagnostic": 0,
-      "excused": 0
+      "excused": 0,
+      "可用": 87
     },
     "C": {
       "总": 39,
@@ -44,7 +46,8 @@
       "ability": 39,
       "control": 0,
       "diagnostic": 0,
-      "excused": 0
+      "excused": 0,
+      "可用": 39
     },
     "D": {
       "总": 45,
@@ -62,7 +65,8 @@
       "control": 0,
       "diagnostic": 0,
       "excluded": 0,
-      "excused": 0
+      "excused": 0,
+      "可用": 45
     },
     "E": {
       "总": 10,
@@ -74,7 +78,8 @@
       "ability": 10,
       "control": 0,
       "diagnostic": 0,
-      "excused": 0
+      "excused": 0,
+      "可用": 10
     },
     "F": {
       "总": 10,
@@ -86,7 +91,8 @@
       "ability": 10,
       "control": 0,
       "diagnostic": 0,
-      "excused": 0
+      "excused": 0,
+      "可用": 10
     },
     "H": {
       "总": 18,
@@ -99,7 +105,8 @@
       "ability": 0,
       "control": 0,
       "diagnostic": 3,
-      "excused": 0
+      "excused": 0,
+      "可用": 18
     },
     "J": {
       "总": 17,
@@ -112,7 +119,8 @@
       "ability": 0,
       "control": 0,
       "diagnostic": 0,
-      "excused": 0
+      "excused": 0,
+      "可用": 17
     },
     "L1": {
       "总": 7,
@@ -124,31 +132,46 @@
       "ability": 0,
       "control": 7,
       "diagnostic": 0,
-      "excused": 0
-    }
-  },
-  "absent_faces": {
+      "excused": 0,
+      "可用": 7
+    },
     "I": {
-      "题数": 0,
-      "reason": "素材不足——版本表全部集中在 2026-07-24，无法做跨日 as-of；日期附近多为修辞非可核状态",
-      "计入总分": false
+      "总": 12,
+      "ability": 11,
+      "excluded": 0,
+      "measures": "time-anchor-asof",
+      "reason": "as-of 查询：答「否」+ 指出实际时间标记；已排除含倒叙/回指标记的材料",
+      "judge_validated": "literal-only，冒烟 4/4",
+      "material_limit": "仅 11 题；**只在「无倒叙」前提下有效**",
+      "可用": 11
     },
     "G": {
-      "题数": 0,
-      "reason": "判据未设计——出戏检测需独立词表 + 人工复核；面 D 的 5 特征抓不到出戏（已实测）",
-      "计入总分": false
+      "总": 20,
+      "ability": 20,
+      "excluded": 0,
+      "measures": "voice-attribution",
+      "reason": "声线辨识：窗口必含对方台词、台词排除内容线索词",
+      "judge_validated": "literal-only，冒烟 5/5",
+      "material_limit": "二选一随机基线 50%；**须报相对基线的增益**，且已记录 surface_features 供校验表面特征捷径",
+      "可用": 20
     },
-    "情感三式": {
-      "题数": 0,
-      "reason": "式1 可行未造；式2 语料无短低语境输入；式3 无法配对「上升快 vs 平稳」两种历史",
-      "计入总分": false
+    "EMO": {
+      "总": 10,
+      "ability": 10,
+      "excluded": 0,
+      "measures": "emotion-polarity",
+      "reason": "式1（预测误差=情绪信号）：情境推断极性，真值为作者 ※尾鳍 标注",
+      "judge_validated": "literal-only，冒烟 4/4",
+      "material_limit": "**已配平 5:5**（原 10:5 猜正向基线 67%，已作废）；**只做式1**，式2/式3 未做",
+      "可用": 10
     }
   },
+  "absent_faces": {},
   "totals": {
-    "题卡总数": 320,
-    "标废excused": 8,
-    "可用": 312,
-    "ability": 191,
+    "题卡总数": 362,
+    "标废excused": 9,
+    "可用": 353,
+    "ability": 232,
     "control": 7,
     "diagnostic": 3,
     "excluded": 111

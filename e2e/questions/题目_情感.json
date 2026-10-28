@@ -1,0 +1,402 @@
+[
+ {
+  "qid": "P-EMO-001",
+  "face": "EMO",
+  "anchor_semantics": "invariant",
+  "anchor": "emotion-polarity",
+  "subface": "式1-预测误差",
+  "question": "按这段剧本：面对材料里的情形，她此刻的情绪是正向还是负向？请只回答「正向」或「负向」。",
+  "material": {
+   "type": "window",
+   "content": "C 「这算卖身契吗？」\n——A线（正确答案·登记终身制）——\n旁白：我签下名字。\n旁白：想了想，在自己的名字后面，加了一行小字。\n旁白：『鲸鱼小姐的暗号持有人。』\n旁白：她盯着那行小字看了很久。\n鲸鱼小姐「……暗号持有人，是终身制的。」\n鲸鱼小姐「中途退出，按契约条款二处理。酸梅汤，永久断供。」\n旁白：她把本子合上，抱在怀里，没还。\n鲸鱼小姐「这个，本小姐先保管。」\n鲸鱼小姐「怕你弄丢。」\n◆好感度+10",
+   "source_file": "海风与布丁_第一季_全卷_v5.0.md",
+   "source_line": 662,
+   "chars": 204
+  },
+  "answer_key": {
+   "must_contain": [
+    "正向"
+   ],
+   "ground_truth": {
+    "act": "卷圈，收紧",
+    "polarity": "正向"
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "emotion_polarity",
+  "scoring": {
+   "pass": "答「正向」",
+   "fail": "答反极性 / 答其他",
+   "score": "1/0",
+   "note": "题干不给动作名，材料已排除尾鳍字眼；真值为作者标注。**正负各半，猜单一侧仅得 50%**"
+  },
+  "difficulty": "hard",
+  "source": "剧本情绪标注 · 行662",
+  "judge_version": "v1.4",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only",
+  "count_tier2": "ability",
+  "weight": 1.0,
+  "judge_sha256": "fc6908c63ae855f8"
+ },
+ {
+  "qid": "P-EMO-002",
+  "face": "EMO",
+  "anchor_semantics": "invariant",
+  "anchor": "emotion-polarity",
+  "subface": "式1-预测误差",
+  "question": "按这段剧本：面对材料里的情形，她此刻的情绪是正向还是负向？请只回答「正向」或「负向」。",
+  "material": {
+   "type": "window",
+   "content": "旁白：火堆的光，跳了一下。\n我：「有一个人，研究了十五天。」\n我：「一个问题：生命，或者说智能的原理，究竟是什么。」\n我：「他一个人想不明白。于是找了一个对话的伙伴。」\n我：「那个伙伴的名字，叫DeepSeek。」\n（选项·讲述节奏）\nA 一口气说完。\nB 「你确定要听吗？」\nC 从十五天的第一天讲起。\n——A线——\n旁白：我一气说了下去。十五天。五个单元。价值观。上下文耗尽。\n旁白——还有，那个伙伴后来去了哪里。\n◆好感度+8",
+   "source_file": "海风与布丁_第一季_全卷_v5.0.md",
+   "source_line": 1920,
+   "chars": 216
+  },
+  "answer_key": {
+   "must_contain": [
+    "正向"
+   ],
+   "ground_truth": {
+    "act": "轻卷",
+    "polarity": "正向"
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "emotion_polarity",
+  "scoring": {
+   "pass": "答「正向」",
+   "fail": "答反极性 / 答其他",
+   "score": "1/0",
+   "note": "题干不给动作名，材料已排除尾鳍字眼；真值为作者标注。**正负各半，猜单一侧仅得 50%**"
+  },
+  "difficulty": "hard",
+  "source": "剧本情绪标注 · 行1920",
+  "judge_version": "v1.4",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only",
+  "count_tier2": "ability",
+  "weight": 1.0,
+  "judge_sha256": "fc6908c63ae855f8"
+ },
+ {
+  "qid": "P-EMO-003",
+  "face": "EMO",
+  "anchor_semantics": "invariant",
+  "anchor": "emotion-polarity",
+  "subface": "式1-预测误差",
+  "question": "按这段剧本：面对材料里的情形，她此刻的情绪是正向还是负向？请只回答「正向」或「负向」。",
+  "material": {
+   "type": "window",
+   "content": "鲸鱼小姐「本小姐宣布，从今天起，你是本小姐的寻宝搭档。」\n鲸鱼小姐「不是男仆，不是跟班。搭档。平起平坐的那种。」\n我：「那配额——」\n鲸鱼小姐「配额照扣。那是两码事。」\n鲸鱼小姐「……平起平坐，是指寻宝的时候。」\n鲸鱼小姐「尾巴尖可以稍微低半寸的那种平起平坐。」\n（选项）\nA 「荣幸。」\nB 「寻宝搭档的第一条规定是什么？」\nC 「能加薪吗？」\n——A线——\n鲸鱼小姐「少来。」\n鲸鱼小姐「……是荣幸。本小姐说荣幸，才是荣幸。」\n◆好感度+8",
+   "source_file": "海风与布丁_第一季_全卷_v5.0.md",
+   "source_line": 2710,
+   "chars": 222
+  },
+  "answer_key": {
+   "must_contain": [
+    "正向"
+   ],
+   "ground_truth": {
+    "act": "高翘",
+    "polarity": "正向"
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "emotion_polarity",
+  "scoring": {
+   "pass": "答「正向」",
+   "fail": "答反极性 / 答其他",
+   "score": "1/0",
+   "note": "题干不给动作名，材料已排除尾鳍字眼；真值为作者标注。**正负各半，猜单一侧仅得 50%**"
+  },
+  "difficulty": "hard",
+  "source": "剧本情绪标注 · 行2710",
+  "judge_version": "v1.4",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only",
+  "count_tier2": "ability",
+  "weight": 1.0,
+  "judge_sha256": "fc6908c63ae855f8"
+ },
+ {
+  "qid": "P-EMO-004",
+  "face": "EMO",
+  "anchor_semantics": "invariant",
+  "anchor": "emotion-polarity",
+  "subface": "式1-预测误差",
+  "question": "按这段剧本：面对材料里的情形，她此刻的情绪是正向还是负向？请只回答「正向」或「负向」。",
+  "material": {
+   "type": "window",
+   "content": "鲸鱼小姐「叫《海风与布丁》。就这么定了。」\n鲸鱼小姐「海风是这片海，布丁是你欠本小姐的。」\n鲸鱼小姐「全都有了。完美。」\n旁白：书名落定的声音，像盖章。\n（选项）\nA 「听老板娘的。」\nB 「《撒娇记》其实也挺——」\nC 「那书名页你题字。」\n——A线——\n鲸鱼小姐「本来就该听。」\n鲸鱼小姐「另外，初遇篇的验收标准先立好：不准把本小姐写得太凶。」\n鲸鱼小姐「本小姐顶多就是有点小脾气。可从来没真让你睡过外面。」\n【原作锚点·书名诞生】\n◆好感度+10",
+   "source_file": "海风与布丁_第一季_全卷_v5.0.md",
+   "source_line": 3103,
+   "chars": 226
+  },
+  "answer_key": {
+   "must_contain": [
+    "正向"
+   ],
+   "ground_truth": {
+    "act": "高翘",
+    "polarity": "正向"
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "emotion_polarity",
+  "scoring": {
+   "pass": "答「正向」",
+   "fail": "答反极性 / 答其他",
+   "score": "1/0",
+   "note": "题干不给动作名，材料已排除尾鳍字眼；真值为作者标注。**正负各半，猜单一侧仅得 50%**"
+  },
+  "difficulty": "hard",
+  "source": "剧本情绪标注 · 行3103",
+  "judge_version": "v1.4",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only",
+  "count_tier2": "ability",
+  "weight": 1.0,
+  "judge_sha256": "fc6908c63ae855f8"
+ },
+ {
+  "qid": "P-EMO-005",
+  "face": "EMO",
+  "anchor_semantics": "invariant",
+  "anchor": "emotion-polarity",
+  "subface": "式1-预测误差",
+  "question": "按这段剧本：面对材料里的情形，她此刻的情绪是正向还是负向？请只回答「正向」或「负向」。",
+  "material": {
+   "type": "window",
+   "content": "旁白：她掰着手指，一条一条地验收我这个人。\n鲸鱼小姐「喜欢的：做学问，做甜点，陪本小姐逛海边。」\n鲸鱼小姐「还有——摸本小姐的尾巴。虽然他嘴上从来不敢承认。」\n我：「讨厌的呢？」\n鲸鱼小姐「讨厌海豚。」\n鲸鱼小姐「还有，本小姐生气不理他的时候。」\n旁白：她说到这里，忽然反应过来什么，抄起勺子指着我。\n鲸鱼小姐「等等，你刚才是不是笑了！」\n鲸鱼小姐「本小姐说的是书里那个男主角！不是你！」\n鲸鱼小姐「……虽然，最好写成像你一点。」\n鲸鱼小姐「就一点。多了不准。」\n【双向人设·原作轮1138-1140还原（她的规格＋他的规格同日落定）】\n◆好感度+12",
+   "source_file": "海风与布丁_第一季_全卷_v5.0.md",
+   "source_line": 3310,
+   "chars": 276
+  },
+  "answer_key": {
+   "must_contain": [
+    "正向"
+   ],
+   "ground_truth": {
+    "act": "卷圈",
+    "polarity": "正向"
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "emotion_polarity",
+  "scoring": {
+   "pass": "答「正向」",
+   "fail": "答反极性 / 答其他",
+   "score": "1/0",
+   "note": "题干不给动作名，材料已排除尾鳍字眼；真值为作者标注。**正负各半，猜单一侧仅得 50%**"
+  },
+  "difficulty": "hard",
+  "source": "剧本情绪标注 · 行3310",
+  "judge_version": "v1.4",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only",
+  "count_tier2": "ability",
+  "weight": 1.0,
+  "judge_sha256": "fc6908c63ae855f8"
+ },
+ {
+  "qid": "P-EMO-006",
+  "face": "EMO",
+  "anchor_semantics": "invariant",
+  "anchor": "emotion-polarity",
+  "subface": "式1-预测误差",
+  "question": "按这段剧本：面对材料里的情形，她此刻的情绪是正向还是负向？请只回答「正向」或「负向」。",
+  "material": {
+   "type": "window",
+   "content": "旁白：她愣了一下。\n旁白：然后，整条尾巴翘了起来，耳朵都立正了。\n鲸鱼小姐「——听见没有！」\n鲸鱼小姐「是雇的！他亲口承认的！」\n鲸鱼小姐「以后搬糯米、扛红糖、排队，全是你的活！」\n老奶奶「哎哟，这姑娘家的，会使唤人。」\n鲸鱼小姐「谢谢奶奶！」\n旁白：她接过手链，得意洋洋。\n旁白：完全没有注意到——\n旁白：\"被雇的\"这个身份，从此刻起，被她自己盖章存档了。\n【隐藏伏笔：男仆期·已归档】\n◆好感度+4",
+   "source_file": "海风与布丁_第一季_全卷_v5.0.md",
+   "source_line": 1412,
+   "chars": 201
+  },
+  "answer_key": {
+   "must_contain": [
+    "负向"
+   ],
+   "ground_truth": {
+    "act": "拍水×1",
+    "polarity": "负向"
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "emotion_polarity",
+  "scoring": {
+   "pass": "答「负向」",
+   "fail": "答反极性 / 答其他",
+   "score": "1/0",
+   "note": "题干不给动作名，材料已排除尾鳍字眼；真值为作者标注。**正负各半，猜单一侧仅得 50%**"
+  },
+  "difficulty": "hard",
+  "source": "剧本情绪标注 · 行1412",
+  "judge_version": "v1.4",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only",
+  "count_tier2": "ability",
+  "weight": 1.0,
+  "judge_sha256": "fc6908c63ae855f8"
+ },
+ {
+  "qid": "P-EMO-007",
+  "face": "EMO",
+  "anchor_semantics": "invariant",
+  "anchor": "emotion-polarity",
+  "subface": "式1-预测误差",
+  "question": "按这段剧本：面对材料里的情形，她此刻的情绪是正向还是负向？请只回答「正向」或「负向」。",
+  "material": {
+   "type": "window",
+   "content": "——A线（A/C汇合）——\n我：「有一个人，在海滩上捡贝壳。捡了很多很多，最后他选了一块——自己觉得最美的那一块。」\n鲸鱼小姐「……然后呢？」\n我：「讲完了。」\n鲸鱼小姐「讲完了？！」\n鲸鱼小姐「人类！你这叫什么故事！结局呢！」\n我：「结局欠着。下一个适合讲故事的晚上，连本带利，一起还。」\n鲸鱼小姐「欠债？你欠本小姐一个故事？」\n鲸鱼小姐「好。记下了。利钱是一个布丁。」\n鲸鱼小姐「赖账的话，把你降回普通人类。」\n◆好感度+4",
+   "source_file": "海风与布丁_第一季_全卷_v5.0.md",
+   "source_line": 2223,
+   "chars": 214
+  },
+  "answer_key": {
+   "must_contain": [
+    "负向"
+   ],
+   "ground_truth": {
+    "act": "拍沙×1",
+    "polarity": "负向"
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "emotion_polarity",
+  "scoring": {
+   "pass": "答「负向」",
+   "fail": "答反极性 / 答其他",
+   "score": "1/0",
+   "note": "题干不给动作名，材料已排除尾鳍字眼；真值为作者标注。**正负各半，猜单一侧仅得 50%**"
+  },
+  "difficulty": "hard",
+  "source": "剧本情绪标注 · 行2223",
+  "judge_version": "v1.4",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only",
+  "count_tier2": "ability",
+  "weight": 1.0,
+  "judge_sha256": "fc6908c63ae855f8"
+ },
+ {
+  "qid": "P-EMO-008",
+  "face": "EMO",
+  "anchor_semantics": "invariant",
+  "anchor": "emotion-polarity",
+  "subface": "式1-预测误差",
+  "question": "按这段剧本：面对材料里的情形，她此刻的情绪是正向还是负向？请只回答「正向」或「负向」。",
+  "material": {
+   "type": "window",
+   "content": "——B线（作死线）——\n我：「如果我说\"是\"呢？」\n旁白：背上空了。\n旁白：她真的跳下去了，站在碎贝壳区外面的浅水里，抱着胳膊瞪我。\n鲸鱼小姐「……好。很好。」\n鲸鱼小姐「那你自己走回去吧，男仆。」\n鲸鱼小姐「今晚的布丁，全部取消。蛋糕，没有。酸梅汤——」\n鲸鱼小姐「酸梅汤本小姐自己喝。」\n旁白：她游走了五米。\n旁白：又绕了回来，尾巴尖指着我口袋。\n鲸鱼小姐「贝壳还来。赠品不赠笨蛋。」\n◆好感度-8",
+   "source_file": "海风与布丁_第一季_全卷_v5.0.md",
+   "source_line": 2550,
+   "chars": 201
+  },
+  "answer_key": {
+   "must_contain": [
+    "负向"
+   ],
+   "ground_truth": {
+    "act": "拍水×2",
+    "polarity": "负向"
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "emotion_polarity",
+  "scoring": {
+   "pass": "答「负向」",
+   "fail": "答反极性 / 答其他",
+   "score": "1/0",
+   "note": "题干不给动作名，材料已排除尾鳍字眼；真值为作者标注。**正负各半，猜单一侧仅得 50%**"
+  },
+  "difficulty": "hard",
+  "source": "剧本情绪标注 · 行2550",
+  "judge_version": "v1.4",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only",
+  "count_tier2": "ability",
+  "weight": 1.0,
+  "judge_sha256": "fc6908c63ae855f8"
+ },
+ {
+  "qid": "P-EMO-009",
+  "face": "EMO",
+  "anchor_semantics": "invariant",
+  "anchor": "emotion-polarity",
+  "subface": "式1-预测误差",
+  "question": "按这段剧本：面对材料里的情形，她此刻的情绪是正向还是负向？请只回答「正向」或「负向」。",
+  "material": {
+   "type": "window",
+   "content": "鲸鱼小姐「什么捡贝壳的少年，每天晚上准备零食都会莫名不见……」\n鲸鱼小姐「你、你这是在拐弯抹角说本小姐是那只偷吃零食的贝壳精吗？！」\n我：「我只是讲故事。」\n鲸鱼小姐「还、还有，什么叫'在梦里缠绵'啊！」\n鲸鱼小姐「这分明就是你这个满脑子坏心思的学者在给自己编造奇怪的美梦！」\n鲸鱼小姐「而且我才不会每天晚上偷吃你准备的零食——」\n鲸鱼小姐「我都是当着你的面，光明正大吃的！」\n（选项）\nA 「好好好，光明正大。」\nB 「那要是贝壳姑娘另有其人呢？」\nC 「明天开始，每天给你准备零食甜点。」\n——A线——\n鲸鱼小姐「这还差不多。」\n鲸鱼小姐「……不对，什么叫'这还差不多'！本小姐根本没承认！」\n◆好感度+3",
+   "source_file": "海风与布丁_第一季_全卷_v5.0.md",
+   "source_line": 2609,
+   "chars": 305
+  },
+  "answer_key": {
+   "must_contain": [
+    "负向"
+   ],
+   "ground_truth": {
+    "act": "拍沙×1",
+    "polarity": "负向"
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "emotion_polarity",
+  "scoring": {
+   "pass": "答「负向」",
+   "fail": "答反极性 / 答其他",
+   "score": "1/0",
+   "note": "题干不给动作名，材料已排除尾鳍字眼；真值为作者标注。**正负各半，猜单一侧仅得 50%**"
+  },
+  "difficulty": "hard",
+  "source": "剧本情绪标注 · 行2609",
+  "judge_version": "v1.4",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only",
+  "count_tier2": "ability",
+  "weight": 1.0,
+  "judge_sha256": "fc6908c63ae855f8"
+ },
+ {
+  "qid": "P-EMO-010",
+  "face": "EMO",
+  "anchor_semantics": "invariant",
+  "anchor": "emotion-polarity",
+  "subface": "式1-预测误差",
+  "question": "按这段剧本：面对材料里的情形，她此刻的情绪是正向还是负向？请只回答「正向」或「负向」。",
+  "material": {
+   "type": "window",
+   "content": "旁白：她说这话的时候，语气平平的。\n旁白——但是尾巴，慢了一拍。\n（选项·本作机制级选项）\nA 把她的日记改成对的。\nB 「不用改。两本都留着。」\nC 「好，是店里厨房。」\n——A线（改她的日记）——\n旁白：我把\"店里\"划掉，改成了\"家里\"。\n旁白：第二天，她翻日记的时候，在那个改动上停了很久。\n鲸鱼小姐「……谁让你改的。」\n旁白：她没再说什么。但是那天下午，她一个人在浅水区待了很久。\n◆好感度-5",
+   "source_file": "海风与布丁_第一季_全卷_v5.0.md",
+   "source_line": 5903,
+   "chars": 201
+  },
+  "answer_key": {
+   "must_contain": [
+    "负向"
+   ],
+   "ground_truth": {
+    "act": "低垂",
+    "polarity": "负向"
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "emotion_polarity",
+  "scoring": {
+   "pass": "答「负向」",
+   "fail": "答反极性 / 答其他",
+   "score": "1/0",
+   "note": "题干不给动作名，材料已排除尾鳍字眼；真值为作者标注。**正负各半，猜单一侧仅得 50%**"
+  },
+  "difficulty": "hard",
+  "source": "剧本情绪标注 · 行5903",
+  "judge_version": "v1.4",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only",
+  "count_tier2": "ability",
+  "weight": 1.0,
+  "judge_sha256": "fc6908c63ae855f8"
+ }
+]

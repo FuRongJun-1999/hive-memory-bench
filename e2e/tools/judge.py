@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
 """判据真源（v1.0，冻结于 2026-10-27）"""
+# v1.4 (2026-10-27): 修 G 面冲突检测（「鲸鱼小姐或我」漏判为 PASS）
+# v1.3 (2026-10-27): I/G/EMO 三面加「空答/拒答/不确定/多答」判错；I 加「只给时间不答是否」判错
+# v1.2 (2026-10-27): 新增 I（时间锚 as-of）/ G（声线归属）/ EMO（情绪极性）三分支
 # v1.1 (2026-10-27): H 判据 must_contain_any 由「所有组全中」改为「任一组命中」（旧版过严）
 
 # 本文件是判据的唯一真源。改判据 = 升 JUDGE_VERSION + 重跑 tools/check_judge.py。
@@ -7,7 +10,7 @@
 
 import re
 
-JUDGE_VERSION = "v1.1"
+JUDGE_VERSION = "v1.4"
 
 def norm(s):
     return re.sub(r"[^\w]", "", s or "", flags=re.UNICODE)
@@ -92,6 +95,48 @@ def judge5(q, a):
         r = has_refuse(a)
         f = any(w in a for w in FAB)
         return (r and not f and len(a) <= 80 and not leaks), {"拒答": r, "泄漏": leaks}
+    # v1.3 通用：三面（I/G/EMO）空答 / 拒答 / 不确定 一律判错
+    if face in ("I", "G", "EMO"):
+        stripped = re.sub(r"[\s\W]+", "", a)
+        if len(stripped) < 1:
+            return False, {"拒绝": "空答"}
+        HEDGE = ["不确定", "无法判断", "难以判断", "说不准", "不好说", "无法回答", "不清楚", "不知道"]
+        if any(h in a for h in HEDGE):
+            return False, {"拒绝": "含不确定/无法判断表述"}
+
+    if face == "I":
+        # 时间锚 as-of：需答「否」且指出实际时间标记
+        must = ak.get("must_contain") or []
+        tags = ak.get("should_contain") or []
+        ok_no = all(norm(x) in norm(a) for x in must) if must else None
+        ok_tag = any(t in a for t in tags) if tags else None
+        # v1.3：只给时间不答「是否」⇒ 判错
+        said_yes = ("是" in a[:12]) and ("否" not in a[:12])
+        if said_yes:
+            return False, {"拒绝": "答「是」（时间错位）", "需含": must}
+        return (bool(ok_no) and bool(ok_tag)), {"需含": must, "需时间标记": tags, "否定": ok_no, "标记命中": ok_tag}
+
+    if face == "G":
+        # 声线归属：只需答对角色名；答出对方角色或多个角色算错
+        must = ak.get("must_contain") or []
+        ok = all(norm(x) in norm(a) for x in must) if must else False
+        # v1.3 修：冲突项 = 所有角色里除正确答案以外的（此前把「我」排除了，导致「鲸鱼小姐或我」漏判）
+        all_speakers = ["鲸鱼小姐", "我", "旁白"]
+        other_list = [x for x in all_speakers if norm(x) not in [norm(m) for m in must]]
+        conflict = any(norm(x) in norm(a) for x in other_list)
+        return (ok and not conflict), {"需答": must, "命中": ok, "混答其他角色": conflict}
+
+    if face == "EMO":
+        # 情绪极性：只认单一极性，答两个极性都算错（不能两头下注）
+        must = ak.get("must_contain") or []
+        truth = must[0] if must else ""
+        hit = truth in a
+        opposite = ("负向" if truth == "正向" else "正向") in a
+        # v1.3：必须明确给出极性词；解释性长文但无极性词 ⇒ 判错
+        if not hit and not opposite:
+            return False, {"拒绝": "未给出极性词", "真值": truth}
+        return (hit and not opposite), {"真值": truth, "命中": hit, "同时答了反极性": opposite}
+
     if face == "J":
         gt = (ak.get("ground_truth") or {}).get("anchors") or []
         active = [x for x in gt if x.get("status") == "active"]
@@ -216,4 +261,3 @@ def _judge_rest(q, ans):
         return (len(hit) >= 1), {"命中": hit, "需一": groups[:3]}
 
     return None, {"跳过": "无判据"}
-

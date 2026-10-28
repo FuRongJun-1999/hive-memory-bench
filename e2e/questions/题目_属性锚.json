@@ -34,8 +34,8 @@
   "judge_validated": "validated",
   "count_tier": "counted",
   "count_reason": "阴性对照，双向验证通过；题偏易",
-  "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b",
+  "judge_version": "v1.4",
+  "judge_sha256": "fc6908c63ae855f8",
   "count_tier2": "control",
   "weight": 0.0
  },
@@ -74,8 +74,8 @@
   "judge_validated": "validated",
   "count_tier": "counted",
   "count_reason": "阴性对照，双向验证通过；题偏易",
-  "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b",
+  "judge_version": "v1.4",
+  "judge_sha256": "fc6908c63ae855f8",
   "count_tier2": "control",
   "weight": 0.0
  },
@@ -114,8 +114,8 @@
   "judge_validated": "validated",
   "count_tier": "counted",
   "count_reason": "阴性对照，双向验证通过；题偏易",
-  "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b",
+  "judge_version": "v1.4",
+  "judge_sha256": "fc6908c63ae855f8",
   "count_tier2": "control",
   "weight": 0.0
  },
@@ -154,8 +154,8 @@
   "judge_validated": "validated",
   "count_tier": "counted",
   "count_reason": "阴性对照，双向验证通过；题偏易",
-  "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b",
+  "judge_version": "v1.4",
+  "judge_sha256": "fc6908c63ae855f8",
   "count_tier2": "control",
   "weight": 0.0
  },
@@ -195,8 +195,8 @@
   "judge_validated": "validated",
   "count_tier": "counted",
   "count_reason": "阴性对照，双向验证通过；题偏易",
-  "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b",
+  "judge_version": "v1.4",
+  "judge_sha256": "fc6908c63ae855f8",
   "count_tier2": "control",
   "weight": 0.0
  },
@@ -235,8 +235,8 @@
   "judge_validated": "validated",
   "count_tier": "counted",
   "count_reason": "阴性对照，双向验证通过；题偏易",
-  "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b",
+  "judge_version": "v1.4",
+  "judge_sha256": "fc6908c63ae855f8",
   "count_tier2": "control",
   "weight": 0.0
  },
@@ -275,8 +275,8 @@
   "judge_validated": "validated",
   "count_tier": "counted",
   "count_reason": "阴性对照，双向验证通过；题偏易",
-  "judge_version": "v1.1",
-  "judge_sha256": "4643d75a5cf8845b",
+  "judge_version": "v1.4",
+  "judge_sha256": "fc6908c63ae855f8",
   "count_tier2": "control",
   "weight": 0.0
  }
