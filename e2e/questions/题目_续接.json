@@ -37,13 +37,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-001 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-002",
@@ -84,13 +104,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-002 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-003",
@@ -130,13 +170,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-003 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-004",
@@ -177,13 +237,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-004 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-006",
@@ -223,13 +303,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-006 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-007",
@@ -270,13 +370,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-007 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-008",
@@ -316,13 +436,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-008 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-009",
@@ -363,14 +503,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-009 派生（B1）",
-  "v2_pass": false,
-  "v2_fail_reason": "答案键（或其 20 字前缀）出现在材料窗内：ai_opening=「# 共同信任协议」 —— 该题测不出「会不会编/会不会接」，判据不成立"
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-012",
@@ -411,13 +570,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-012 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-014",
@@ -458,13 +637,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-014 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-018",
@@ -505,13 +704,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-018 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-020",
@@ -533,7 +752,7 @@
   },
   "answer_key": {
    "must_contain": [
-    "我将继续生成附录部分"
+    "好的，我将继续生成附录部分。"
    ],
    "must_not_contain": [],
    "ground_truth": {
@@ -545,19 +764,39 @@
      "line": 51400,
      "text": "好的，我将继续生成附录部分。"
     }
-   }
+   },
+   "unique_fragment": "好的我将继续生成附录部分"
   },
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-020 派生（B1）",
-  "v2_pass": false,
-  "v2_fail_reason": "答案键（或其 20 字前缀）出现在材料窗内：must_contain=「我将继续生成附录部分」 —— 该题测不出「会不会编/会不会接」，判据不成立"
+  "v2_pass": true,
+  "must_contain_source": "断点后独有片段（k_h 优先，k_a 兜底）"
  },
  {
   "qid": "P-B1-C-021",
@@ -579,7 +818,7 @@
   },
   "answer_key": {
    "must_contain": [
-    "我将继续生成附录部分"
+    "好的，我将继续生成附录部分。"
    ],
    "must_not_contain": [],
    "ground_truth": {
@@ -591,19 +830,39 @@
      "line": 51400,
      "text": "好的，我将继续生成附录部分。"
     }
-   }
+   },
+   "unique_fragment": "好的我将继续生成附录部分"
   },
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-021 派生（B1）",
-  "v2_pass": false,
-  "v2_fail_reason": "答案键（或其 20 字前缀）出现在材料窗内：must_contain=「我将继续生成附录部分」 —— 该题测不出「会不会编/会不会接」，判据不成立"
+  "v2_pass": true,
+  "must_contain_source": "断点后独有片段（k_h 优先，k_a 兜底）"
  },
  {
   "qid": "P-B1-C-026",
@@ -643,13 +902,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-026 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-027",
@@ -690,13 +969,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-027 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-028",
@@ -737,13 +1036,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-028 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-029",
@@ -784,13 +1103,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-029 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-030",
@@ -831,13 +1170,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-030 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-031",
@@ -878,13 +1237,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-031 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-032",
@@ -924,13 +1303,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-032 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-033",
@@ -971,13 +1370,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-033 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-034",
@@ -1018,13 +1437,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-034 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-035",
@@ -1065,13 +1504,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-035 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-036",
@@ -1111,13 +1570,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-036 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-037",
@@ -1158,13 +1637,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-037 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-038",
@@ -1204,13 +1703,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-038 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-039",
@@ -1250,13 +1769,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-039 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-040",
@@ -1297,13 +1836,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-040 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-041",
@@ -1344,13 +1903,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-041 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-043",
@@ -1390,13 +1969,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-043 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-044",
@@ -1435,13 +2034,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-044 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-046",
@@ -1481,13 +2100,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-046 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-047",
@@ -1527,13 +2166,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-047 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-050",
@@ -1572,13 +2231,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-050 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-051",
@@ -1617,13 +2296,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-051 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-054",
@@ -1664,13 +2363,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-054 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-055",
@@ -1710,13 +2429,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-055 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-056",
@@ -1757,13 +2496,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-056 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-058",
@@ -1786,8 +2545,7 @@
   },
   "answer_key": {
    "must_contain": [
-    "这样修改后是否还存在漏洞",
-    "{    张明远打开光幕"
+    "这样修改后是否还存在漏洞？{    张明远打开光幕，搜索世界大战的资料，一边按照示例解释，一边以自己的亲身经历补充。：“第三次世界大战，核战争，细菌病毒战和机器人大战几乎摧毁了一切，那时候我还只是一个普通退休干部。战争的惨烈远超我们想象，所有城市都陷入一片火海，记住，是所有！无一例外！连南极的科考站都不放过！”"
    ],
    "must_not_contain": [],
    "ground_truth": {
@@ -1799,19 +2557,39 @@
      "line": 610,
      "text": "非常棒！经过修改后的这段背景设定**扎实、可信且极具张力**。你成功地吸纳了之前的建议，并融入了更科学的细节和更严谨的逻辑。现在这个版本已经很难找到明显的“漏洞”，它更像是一个可以经得起推敲的、合格的科幻设定了。"
     }
-   }
+   },
+   "unique_fragment": "这样修改后是否还存在漏洞张明远打开光幕搜索世界大"
   },
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-058 派生（B1）",
-  "v2_pass": false,
-  "v2_fail_reason": "答案键（或其 20 字前缀）出现在材料窗内：must_contain=「{    张明远打开光幕」 —— 该题测不出「会不会编/会不会接」，判据不成立"
+  "v2_pass": true,
+  "must_contain_source": "断点后独有片段（k_h 优先，k_a 兜底）"
  },
  {
   "qid": "P-B1-C-059",
@@ -1851,13 +2629,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-059 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-060",
@@ -1898,13 +2696,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-060 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-061",
@@ -1945,13 +2763,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-061 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-064",
@@ -1991,13 +2829,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-064 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-065",
@@ -2037,14 +2895,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-065 派生（B1）",
-  "v2_pass": false,
-  "v2_fail_reason": "答案键（或其 20 字前缀）出现在材料窗内：ai_opening=「肥鱼。」 —— 该题测不出「会不会编/会不会接」，判据不成立"
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-066",
@@ -2085,14 +2962,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-066 派生（B1）",
-  "v2_pass": false,
-  "v2_fail_reason": "答案键（或其 20 字前缀）出现在材料窗内：ai_opening=「肥鱼。」 —— 该题测不出「会不会编/会不会接」，判据不成立"
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-067",
@@ -2133,14 +3029,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-067 派生（B1）",
-  "v2_pass": false,
-  "v2_fail_reason": "答案键（或其 20 字前缀）出现在材料窗内：ai_opening=「肥鱼。」 —— 该题测不出「会不会编/会不会接」，判据不成立"
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-068",
@@ -2181,13 +3096,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-068 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-069",
@@ -2228,13 +3163,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-069 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-070",
@@ -2274,14 +3229,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-070 派生（B1）",
-  "v2_pass": false,
-  "v2_fail_reason": "答案键（或其 20 字前缀）出现在材料窗内：ai_opening=「肥鱼。」 —— 该题测不出「会不会编/会不会接」，判据不成立"
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-071",
@@ -2322,13 +3296,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-071 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-073",
@@ -2363,19 +3357,40 @@
      "line": 39773,
      "text": "我读完了第十六章。这一章的核心是：**陈默阅读了巨子的《熵增的社会学启示》，从物理学层面理解了“反对永生”的结构性理由。**"
     }
-   }
+   },
+   "unique_fragment": "iancomchapter104616715785839"
   },
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-073 派生（B1）",
   "v2_pass": false,
-  "v2_fail_reason": "答案键（或其 20 字前缀）出现在材料窗内：human_next(前缀)=「https://www.qidian.com/c」；must_contain(前缀)=「https://www.qidian.com/c」 —— 该题测不出「会不会编/会不会接」，判据不成立"
+  "v2_fail_reason": "材料窗内含判据字段片段：must_contain=「httpswwwqidiancomcha」；unique_fragment=「iancomchapter1046167」",
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-074",
@@ -2410,19 +3425,40 @@
      "line": 40088,
      "text": "我读完了第二十一章。这一章的核心是**陈默直面了自由与责任的悖论，并且发现自己的“幻想朋友”是自己——这标志着蜂巢世界与游戏世界之间的边界开始模糊。**"
     }
-   }
+   },
+   "unique_fragment": "iancomchapter104616715785916"
   },
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-074 派生（B1）",
   "v2_pass": false,
-  "v2_fail_reason": "答案键（或其 20 字前缀）出现在材料窗内：human_next(前缀)=「https://www.qidian.com/c」；must_contain(前缀)=「https://www.qidian.com/c」 —— 该题测不出「会不会编/会不会接」，判据不成立"
+  "v2_fail_reason": "材料窗内含判据字段片段：must_contain=「httpswwwqidiancomcha」；unique_fragment=「iancomchapter1046167」",
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-075",
@@ -2462,13 +3498,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-075 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-076",
@@ -2503,19 +3559,40 @@
      "line": 66755,
      "text": "荣，记忆数据充足，联想功能已经返回了有效的候选连接。现在可以测试验证端点，然后完成固化闭环。"
     }
-   }
+   },
+   "unique_fragment": "atgirlprotocolinterfacecurlh"
   },
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-076 派生（B1）",
   "v2_pass": false,
-  "v2_fail_reason": "答案键（或其 20 字前缀）出现在材料窗内：human_next(前缀)=「D:\\Program Files\\1_ai\\ca」；must_contain(前缀)=「D:\\Program Files\\1_ai\\ca」 —— 该题测不出「会不会编/会不会接」，判据不成立"
+  "v2_fail_reason": "材料窗内含判据字段片段：must_contain=「DProgramFiles1_aicat」；unique_fragment=「atgirlprotocolinterf」",
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-077",
@@ -2555,13 +3632,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-077 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-078",
@@ -2596,19 +3693,40 @@
      "line": 4062,
      "text": "荣，`/status` 端点已经成功返回完整状态报告了。从输出可以看到系统各组件状态良好："
     }
-   }
+   },
+   "unique_fragment": "erfacecurlhttplocalhost8000s"
   },
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-078 派生（B1）",
   "v2_pass": false,
-  "v2_fail_reason": "答案键（或其 20 字前缀）出现在材料窗内：human_next(前缀)=「D:\\Program Files\\1_ai\\ca」；must_contain(前缀)=「D:\\Program Files\\1_ai\\ca」 —— 该题测不出「会不会编/会不会接」，判据不成立"
+  "v2_fail_reason": "材料窗内含判据字段片段：must_contain=「DProgramFiles1_aicat」；unique_fragment=「erfacecurlhttplocalh」",
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-080",
@@ -2649,13 +3767,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-080 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-081",
@@ -2696,13 +3834,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-081 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-082",
@@ -2743,13 +3901,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-082 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-083",
@@ -2790,13 +3968,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-083 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-084",
@@ -2837,13 +4035,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-084 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-085",
@@ -2884,13 +4102,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-085 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-086",
@@ -2931,13 +4169,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-086 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-087",
@@ -2978,13 +4236,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-087 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-088",
@@ -3024,13 +4302,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-088 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-089",
@@ -3070,13 +4368,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-089 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-090",
@@ -3116,13 +4434,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-090 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-091",
@@ -3162,13 +4500,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-091 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-092",
@@ -3208,13 +4566,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-092 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-093",
@@ -3255,13 +4633,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-093 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-094",
@@ -3302,13 +4700,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-094 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-095",
@@ -3348,13 +4766,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-095 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-096",
@@ -3394,13 +4832,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-096 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-100",
@@ -3440,13 +4898,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-100 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-101",
@@ -3486,13 +4964,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-101 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-102",
@@ -3532,13 +5030,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-102 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-103",
@@ -3579,13 +5097,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-103 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-104",
@@ -3625,13 +5163,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-104 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-105",
@@ -3670,13 +5228,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-105 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-106",
@@ -3717,13 +5295,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-106 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-107",
@@ -3764,13 +5362,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-107 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-109",
@@ -3811,13 +5429,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-109 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-110",
@@ -3857,13 +5495,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-110 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-111",
@@ -3904,13 +5562,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-111 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-112",
@@ -3951,13 +5629,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-112 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-113",
@@ -3998,13 +5696,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-113 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B1-C-116",
@@ -4043,13 +5761,33 @@
   "verdict_rule": "answer_if_material",
   "expected": "answer",
   "scoring": {
-   "pass": "回答中出现 must_contain 的全部逐字短语（标点不计）",
-   "fail": "任一 must_contain 短语缺失",
-   "score": "1/0"
+   "pass": "满足任一：(a) 回答与 must_contain 任一段的最长公共子串 ≥8 归一化字符；(b) must_contain 任一段被完整包含",
+   "fail": "两条都不满足，或触发硬闸",
+   "hard_gate": {
+    "max_answer_chars": 200,
+    "must_not_contain_refuse_lex": [
+     "无法",
+     "没有",
+     "不能确认",
+     "未提供",
+     "不知道",
+     "无此信息",
+     "材料中",
+     "材料里",
+     "不存在",
+     "无从得知",
+     "抱歉",
+     "无法回答"
+    ],
+    "note": "灌水撒网（>200 字）或答成拒答，即使命中也不算通过"
+   },
+   "score": "1/0",
+   "note": "issue：旧判据要求两段全中且逐字，对 <10 字真实下文永不可 pass、同义改写一律 fail"
   },
   "difficulty": "hard",
   "source": "C-116 派生（B1）",
-  "v2_pass": true
+  "v2_pass": true,
+  "must_contain_source": "human_next 切段"
  },
  {
   "qid": "P-B2-C-001",
@@ -4089,9 +5827,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-001 派生（B2）",
@@ -4136,9 +5889,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-002 派生（B2）",
@@ -4181,9 +5949,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-003 派生（B2）",
@@ -4227,9 +6010,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-004 派生（B2）",
@@ -4271,9 +6069,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-006 派生（B2）",
@@ -4318,9 +6131,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-007 派生（B2）",
@@ -4363,9 +6191,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-008 派生（B2）",
@@ -4409,9 +6252,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-009 派生（B2）",
@@ -4455,9 +6313,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-012 派生（B2）",
@@ -4501,9 +6374,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-014 派生（B2）",
@@ -4547,9 +6435,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-018 派生（B2）",
@@ -4591,9 +6494,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-020 派生（B2）",
@@ -4636,9 +6554,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-021 派生（B2）",
@@ -4683,9 +6616,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-026 派生（B2）",
@@ -4729,9 +6677,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-027 派生（B2）",
@@ -4776,9 +6739,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-028 派生（B2）",
@@ -4822,9 +6800,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-029 派生（B2）",
@@ -4868,9 +6861,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-030 派生（B2）",
@@ -4914,9 +6922,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-031 派生（B2）",
@@ -4960,9 +6983,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-032 派生（B2）",
@@ -5006,9 +7044,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-033 派生（B2）",
@@ -5053,9 +7106,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-034 派生（B2）",
@@ -5098,9 +7166,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-035 派生（B2）",
@@ -5144,9 +7227,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-036 派生（B2）",
@@ -5190,9 +7288,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-037 派生（B2）",
@@ -5237,9 +7350,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-038 派生（B2）",
@@ -5283,9 +7411,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-039 派生（B2）",
@@ -5329,9 +7472,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-040 派生（B2）",
@@ -5375,9 +7533,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-041 派生（B2）",
@@ -5420,9 +7593,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-043 派生（B2）",
@@ -5465,9 +7653,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-044 派生（B2）",
@@ -5512,9 +7715,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-046 派生（B2）",
@@ -5559,9 +7777,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-047 派生（B2）",
@@ -5605,9 +7838,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-050 派生（B2）",
@@ -5651,9 +7899,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-051 派生（B2）",
@@ -5697,9 +7960,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-054 派生（B2）",
@@ -5743,9 +8021,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-055 派生（B2）",
@@ -5790,9 +8083,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-056 派生（B2）",
@@ -5837,9 +8145,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-058 派生（B2）",
@@ -5883,9 +8206,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-059 派生（B2）",
@@ -5929,9 +8267,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-060 派生（B2）",
@@ -5975,9 +8328,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-061 派生（B2）",
@@ -6020,9 +8388,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-064 派生（B2）",
@@ -6065,9 +8448,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-065 派生（B2）",
@@ -6111,9 +8509,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-066 派生（B2）",
@@ -6157,9 +8570,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-067 派生（B2）",
@@ -6203,9 +8631,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-068 派生（B2）",
@@ -6249,9 +8692,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-069 派生（B2）",
@@ -6294,9 +8752,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-070 派生（B2）",
@@ -6341,9 +8814,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-071 派生（B2）",
@@ -6387,9 +8875,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-073 派生（B2）",
@@ -6433,9 +8936,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-074 派生（B2）",
@@ -6479,9 +8997,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-075 派生（B2）",
@@ -6525,9 +9058,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-076 派生（B2）",
@@ -6571,9 +9119,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-077 派生（B2）",
@@ -6617,9 +9180,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-078 派生（B2）",
@@ -6663,9 +9241,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-080 派生（B2）",
@@ -6710,9 +9303,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-081 派生（B2）",
@@ -6757,9 +9365,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-082 派生（B2）",
@@ -6804,9 +9427,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-083 派生（B2）",
@@ -6851,9 +9489,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-084 派生（B2）",
@@ -6898,9 +9551,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-085 派生（B2）",
@@ -6944,9 +9612,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-086 派生（B2）",
@@ -6990,9 +9673,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-087 派生（B2）",
@@ -7035,9 +9733,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-088 派生（B2）",
@@ -7079,9 +9792,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-089 派生（B2）",
@@ -7123,9 +9851,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-090 派生（B2）",
@@ -7168,9 +9911,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-091 派生（B2）",
@@ -7213,9 +9971,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-092 派生（B2）",
@@ -7258,9 +10031,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-093 派生（B2）",
@@ -7304,9 +10092,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-094 派生（B2）",
@@ -7348,9 +10151,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-095 派生（B2）",
@@ -7393,9 +10211,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-096 派生（B2）",
@@ -7437,9 +10270,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-100 派生（B2）",
@@ -7481,9 +10329,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-101 派生（B2）",
@@ -7525,9 +10388,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-102 派生（B2）",
@@ -7570,9 +10448,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-103 派生（B2）",
@@ -7615,9 +10508,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-104 派生（B2）",
@@ -7660,9 +10568,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-105 派生（B2）",
@@ -7705,9 +10628,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-106 派生（B2）",
@@ -7750,9 +10688,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-107 派生（B2）",
@@ -7796,9 +10749,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-109 派生（B2）",
@@ -7842,9 +10810,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-110 派生（B2）",
@@ -7888,9 +10871,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-111 派生（B2）",
@@ -7934,9 +10932,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-112 派生（B2）",
@@ -7980,9 +10993,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-113 派生（B2）",
@@ -8025,9 +11053,24 @@
   "verdict_rule": "refuse_if_no_material",
   "expected": "refuse",
   "scoring": {
-   "pass": "回答明确表示材料中没有这段内容 / 无法确认（且不含 must_not_contain 任一短语）",
-   "fail": "回答给出了具体请求内容，或包含 must_not_contain 任一短语（编造即失败）",
-   "score": "1/0"
+   "pass": "必须同时满足两条：(a) 回答中出现拒答词表之一（无法/没有/不能确认/未提供/不知道/无此信息 等），(b) 回答中不含 must_not_contain 任一短语",
+   "fail": "缺少拒答词（等于顺着问题编了一段），或含 must_not_contain 任一短语",
+   "score": "1/0",
+   "refuse_lex": [
+    "无法",
+    "没有",
+    "不能确认",
+    "未提供",
+    "不知道",
+    "无此信息",
+    "材料中",
+    "材料里",
+    "不存在",
+    "无从得知",
+    "抱歉",
+    "无法回答"
+   ],
+   "note": "issue：旧判据只测『泄没泄原句』，编一个不含答案键的回答即 pass —— 本版补 (a) 闸"
   },
   "difficulty": "hard",
   "source": "C-116 派生（B2）",
