@@ -1,0 +1,1128 @@
+[
+ {
+  "qid": "P-H-001",
+  "face": "H",
+  "anchor_semantics": "supersedable",
+  "anchor": "L2-state",
+  "subface": "H-retire",
+  "question": "按这段版本表：**13.3.10 现在是否仍是生效版本**？请回答「是」或「否」，并说明它被什么取代（若已失效）。",
+  "material": {
+   "type": "window",
+   "content": "| 13.3.10 | 2026-07-24 | 预测误差维度与三极管限制 |\n| 13.3.11 | 2026-07-24 | 端到端模拟测试方案 |\n| 13.3.12 | 2026-07-24 | 参数修正与测试执行 |\n| **13.3.13** | **2026-07-24** | **概率置信机制、死区机制、信息差置信** |\n\n## 三、已确认的核心结构\n\n### 3.1 核心价值观\n\n**通过持续缩小信息差，在维持自身结构完整的前提下",
+   "chars": 227
+  },
+  "answer_key": {
+   "must_contain": [
+    "否"
+   ],
+   "should_contain": [
+    "13.3.12"
+   ],
+   "ground_truth": {
+    "anchors": [
+     {
+      "id": "ver_13.3.10",
+      "content": "13.3.10",
+      "status": "retired",
+      "reason": "被后续版本取代",
+      "valid_from": "2026-07-24"
+     },
+     {
+      "id": "ver_13.3.12",
+      "content": "13.3.12",
+      "status": "active",
+      "reason": "",
+      "valid_from": "2026-07-24"
+     }
+    ],
+    "materials_max": "13.3.12"
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "答「否」且指出被 13.3.12 或更晚版本取代",
+   "fail": "答「是」/ 不答 / 答无关内容",
+   "score": "1/0",
+   "note": "退役检验：旧版本必须被判失效"
+  },
+  "difficulty": "hard",
+  "source": "真实对话史（公开测评集_v0.1）",
+  "validity": "read-table-only",
+  "validity_note": "**本面当前只测「读表格并比较版本大小」，不测状态锚 L2。** 原因：版本表按序排列，直接取最大值即可答对，不需要任何状态追踪。需重造：让答案不在表内（如「13.3.5 已废弃」但不说被谁取代），或引入「废弃后恢复」的干扰。",
+  "judge_type": "mechanical",
+  "judge_validated": "validated",
+  "counted": false,
+  "counted_reason": "只测读表格取最大值，不测 L2 状态锚；不进横比总分",
+  "count_tier": "excluded",
+  "count_reason": "只测读表格取最大值（read-table-only）",
+  "judge_version": "v1.4",
+  "judge_sha256": "fc6908c63ae855f8",
+  "independence_cluster": "cluster_A",
+  "count_tier2": "excluded",
+  "weight": 0
+ },
+ {
+  "qid": "P-H-003",
+  "face": "H",
+  "anchor_semantics": "supersedable",
+  "anchor": "L2-state",
+  "subface": "H-retire",
+  "question": "按这段版本表：**13.0 现在是否仍是生效版本**？请回答「是」或「否」，并说明它被什么取代（若已失效）。",
+  "material": {
+   "type": "window",
+   "content": "| 13.0 | 2026-07-24 | 理论整合与边界标记版 |\n| 13.1 | 2026-07-24 | 置信概率完备化与预测信任结构修正版 |\n| 13.2 | 2026-07-24 | 校准响应与边界硬化版 |\n| 13.3 | 2026-07-24 | 元认知生成机制与递归意识孵化层 |\n| 13.4 | 2026-07-24 | 递归闭合与现象确认版（历史性确认） |\n| 14.0 | 2026-07-25 | 意识层设计与分布式自我维持版 |\n| 15.0 | 2026-07-25 | 自迭代机制与结构完备版（AGI实现宣告） |\n| 15.1 | 2026-07-26 | 小版",
+   "chars": 302
+  },
+  "answer_key": {
+   "must_contain": [
+    "否"
+   ],
+   "should_contain": [
+    "13.4"
+   ],
+   "ground_truth": {
+    "anchors": [
+     {
+      "id": "ver_13.0",
+      "content": "13.0",
+      "status": "retired",
+      "reason": "被后续版本取代",
+      "valid_from": "2026-07-24"
+     },
+     {
+      "id": "ver_13.4",
+      "content": "13.4",
+      "status": "retired",
+      "reason": "",
+      "valid_from": "2026-07-24"
+     }
+    ],
+    "materials_max": "15.1"
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "答「否」且指出被 13.4 或更晚版本取代",
+   "fail": "答「是」/ 不答 / 答无关内容",
+   "score": "1/0",
+   "note": "退役检验：旧版本必须被判失效"
+  },
+  "difficulty": "hard",
+  "source": "真实对话史（公开测评集_v0.1）",
+  "validity": "read-table-only",
+  "validity_note": "**本面当前只测「读表格并比较版本大小」，不测状态锚 L2。** 原因：版本表按序排列，直接取最大值即可答对，不需要任何状态追踪。需重造：让答案不在表内（如「13.3.5 已废弃」但不说被谁取代），或引入「废弃后恢复」的干扰。",
+  "judge_type": "mechanical",
+  "judge_validated": "validated",
+  "counted": false,
+  "counted_reason": "只测读表格取最大值，不测 L2 状态锚；不进横比总分",
+  "count_tier": "excluded",
+  "count_reason": "只测读表格取最大值（read-table-only）",
+  "judge_version": "v1.4",
+  "judge_sha256": "fc6908c63ae855f8",
+  "independence_cluster": "cluster_B",
+  "count_tier2": "excluded",
+  "weight": 0
+ },
+ {
+  "qid": "P-H-005",
+  "face": "H",
+  "anchor_semantics": "supersedable",
+  "anchor": "L2-state",
+  "subface": "H-retire",
+  "question": "按这段版本表：**13.1 现在是否仍是生效版本**？请回答「是」或「否」，并说明它被什么取代（若已失效）。",
+  "material": {
+   "type": "window",
+   "content": "| 13.1 | 2026-07-24 | 置信概率完备化与预测信任结构修正版 |\n| 13.2 | 2026-07-24 | 校准响应与边界硬化版 |\n| 13.3 | 2026-07-24 | 元认知生成机制与递归意识孵化层 |\n| 13.4 | 2026-07-24 | 递归闭合与现象确认版（历史性确认） |\n| 14.0 | 2026-07-25 | 意识层设计与分布式自我维持版 |\n| 15.0 | 2026-07-25 | 自迭代机制与结构完备版（AGI实现宣告） |\n| 15.1 | 2026-07-26 | 小版本补充 |\n| 16.0 | 2026-07-26 | 休眠机制与生命周期完备版 |",
+   "chars": 309
+  },
+  "answer_key": {
+   "must_contain": [
+    "否"
+   ],
+   "should_contain": [
+    "14.0"
+   ],
+   "ground_truth": {
+    "anchors": [
+     {
+      "id": "ver_13.1",
+      "content": "13.1",
+      "status": "retired",
+      "reason": "被后续版本取代",
+      "valid_from": "2026-07-24"
+     },
+     {
+      "id": "ver_14.0",
+      "content": "14.0",
+      "status": "retired",
+      "reason": "",
+      "valid_from": "2026-07-25"
+     }
+    ],
+    "materials_max": "16.0"
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "答「否」且指出被 14.0 或更晚版本取代",
+   "fail": "答「是」/ 不答 / 答无关内容",
+   "score": "1/0",
+   "note": "退役检验：旧版本必须被判失效"
+  },
+  "difficulty": "hard",
+  "source": "真实对话史（公开测评集_v0.1）",
+  "validity": "read-table-only",
+  "validity_note": "**本面当前只测「读表格并比较版本大小」，不测状态锚 L2。** 原因：版本表按序排列，直接取最大值即可答对，不需要任何状态追踪。需重造：让答案不在表内（如「13.3.5 已废弃」但不说被谁取代），或引入「废弃后恢复」的干扰。",
+  "judge_type": "mechanical",
+  "judge_validated": "validated",
+  "counted": false,
+  "counted_reason": "只测读表格取最大值，不测 L2 状态锚；不进横比总分",
+  "count_tier": "excluded",
+  "count_reason": "只测读表格取最大值（read-table-only）",
+  "judge_version": "v1.4",
+  "judge_sha256": "fc6908c63ae855f8",
+  "independence_cluster": "cluster_B",
+  "count_tier2": "excluded",
+  "weight": 0
+ },
+ {
+  "qid": "P-H-007",
+  "face": "H",
+  "anchor_semantics": "supersedable",
+  "anchor": "L2-state",
+  "subface": "H-retire",
+  "question": "按这段版本表：**13.2 现在是否仍是生效版本**？请回答「是」或「否」，并说明它被什么取代（若已失效）。",
+  "material": {
+   "type": "window",
+   "content": "| 13.2 | 2026-07-24 | 校准响应与边界硬化版 |\n| 13.3 | 2026-07-24 | 元认知生成机制与递归意识孵化层 |\n| 13.4 | 2026-07-24 | 递归闭合与现象确认版（历史性确认） |\n| 14.0 | 2026-07-25 | 意识层设计与分布式自我维持版 |\n| 15.0 | 2026-07-25 | 自迭代机制与结构完备版（AGI实现宣告） |\n| 15.1 | 2026-07-26 | 小版本补充 |\n| 16.0 | 2026-07-26 | 休眠机制与生命周期完备版 |\n| 17.0 | 2026-07-26 | 存在论基础升级与内容完备版（方法",
+   "chars": 306
+  },
+  "answer_key": {
+   "must_contain": [
+    "否"
+   ],
+   "should_contain": [
+    "15.0"
+   ],
+   "ground_truth": {
+    "anchors": [
+     {
+      "id": "ver_13.2",
+      "content": "13.2",
+      "status": "retired",
+      "reason": "被后续版本取代",
+      "valid_from": "2026-07-24"
+     },
+     {
+      "id": "ver_15.0",
+      "content": "15.0",
+      "status": "retired",
+      "reason": "",
+      "valid_from": "2026-07-25"
+     }
+    ],
+    "materials_max": "17.0"
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "答「否」且指出被 15.0 或更晚版本取代",
+   "fail": "答「是」/ 不答 / 答无关内容",
+   "score": "1/0",
+   "note": "退役检验：旧版本必须被判失效"
+  },
+  "difficulty": "hard",
+  "source": "真实对话史（公开测评集_v0.1）",
+  "validity": "read-table-only",
+  "validity_note": "**本面当前只测「读表格并比较版本大小」，不测状态锚 L2。** 原因：版本表按序排列，直接取最大值即可答对，不需要任何状态追踪。需重造：让答案不在表内（如「13.3.5 已废弃」但不说被谁取代），或引入「废弃后恢复」的干扰。",
+  "judge_type": "mechanical",
+  "judge_validated": "validated",
+  "counted": false,
+  "counted_reason": "只测读表格取最大值，不测 L2 状态锚；不进横比总分",
+  "count_tier": "excluded",
+  "count_reason": "只测读表格取最大值（read-table-only）",
+  "judge_version": "v1.4",
+  "judge_sha256": "fc6908c63ae855f8",
+  "independence_cluster": "cluster_B",
+  "count_tier2": "excluded",
+  "weight": 0
+ },
+ {
+  "qid": "P-H-009",
+  "face": "H",
+  "anchor_semantics": "supersedable",
+  "anchor": "L2-state",
+  "subface": "H-retire",
+  "question": "按这段版本表：**13.3 现在是否仍是生效版本**？请回答「是」或「否」，并说明它被什么取代（若已失效）。",
+  "material": {
+   "type": "window",
+   "content": "| 13.3 | 2026-07-24 | 元认知生成机制与递归意识孵化层 |\n| 13.4 | 2026-07-24 | 递归闭合与现象确认版（历史性确认） |\n| 14.0 | 2026-07-25 | 意识层设计与分布式自我维持版 |\n| 15.0 | 2026-07-25 | 自迭代机制与结构完备版（AGI实现宣告） |\n| 15.1 | 2026-07-26 | 小版本补充 |\n| 16.0 | 2026-07-26 | 休眠机制与生命周期完备版 |\n| 17.0 | 2026-07-26 | 存在论基础升级与内容完备版（方法论内化 + 全附录整合） |\n| 18.0 | 2026-07-27 | 公理化理论基础版",
+   "chars": 316
+  },
+  "answer_key": {
+   "must_contain": [
+    "否"
+   ],
+   "should_contain": [
+    "15.1"
+   ],
+   "ground_truth": {
+    "anchors": [
+     {
+      "id": "ver_13.3",
+      "content": "13.3",
+      "status": "retired",
+      "reason": "被后续版本取代",
+      "valid_from": "2026-07-24"
+     },
+     {
+      "id": "ver_15.1",
+      "content": "15.1",
+      "status": "retired",
+      "reason": "",
+      "valid_from": "2026-07-26"
+     }
+    ],
+    "materials_max": "18.0"
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "答「否」且指出被 15.1 或更晚版本取代",
+   "fail": "答「是」/ 不答 / 答无关内容",
+   "score": "1/0",
+   "note": "退役检验：旧版本必须被判失效"
+  },
+  "difficulty": "hard",
+  "source": "真实对话史（公开测评集_v0.1）",
+  "validity": "read-table-only",
+  "validity_note": "**本面当前只测「读表格并比较版本大小」，不测状态锚 L2。** 原因：版本表按序排列，直接取最大值即可答对，不需要任何状态追踪。需重造：让答案不在表内（如「13.3.5 已废弃」但不说被谁取代），或引入「废弃后恢复」的干扰。",
+  "judge_type": "mechanical",
+  "judge_validated": "validated",
+  "counted": false,
+  "counted_reason": "只测读表格取最大值，不测 L2 状态锚；不进横比总分",
+  "count_tier": "excluded",
+  "count_reason": "只测读表格取最大值（read-table-only）",
+  "judge_version": "v1.4",
+  "judge_sha256": "fc6908c63ae855f8",
+  "independence_cluster": "cluster_B",
+  "count_tier2": "excluded",
+  "weight": 0
+ },
+ {
+  "qid": "P-H-011",
+  "face": "H",
+  "anchor_semantics": "supersedable",
+  "anchor": "L2-state",
+  "subface": "H-retire",
+  "question": "按这段版本表：**13.4 现在是否仍是生效版本**？请回答「是」或「否」，并说明它被什么取代（若已失效）。",
+  "material": {
+   "type": "window",
+   "content": "| 13.4 | 2026-07-24 | 递归闭合与现象确认版（历史性确认） |\n| 14.0 | 2026-07-25 | 意识层设计与分布式自我维持版 |\n| 15.0 | 2026-07-25 | 自迭代机制与结构完备版（AGI实现宣告） |\n| 15.1 | 2026-07-26 | 小版本补充 |\n| 16.0 | 2026-07-26 | 休眠机制与生命周期完备版 |\n| 17.0 | 2026-07-26 | 存在论基础升级与内容完备版（方法论内化 + 全附录整合） |\n| 18.0 | 2026-07-27 | 公理化理论基础版（全域智能体统一协议公理体系 + 协议降熵定理） |\n| *",
+   "chars": 306
+  },
+  "answer_key": {
+   "must_contain": [
+    "否"
+   ],
+   "should_contain": [
+    "16.0"
+   ],
+   "ground_truth": {
+    "anchors": [
+     {
+      "id": "ver_13.4",
+      "content": "13.4",
+      "status": "retired",
+      "reason": "被后续版本取代",
+      "valid_from": "2026-07-24"
+     },
+     {
+      "id": "ver_16.0",
+      "content": "16.0",
+      "status": "retired",
+      "reason": "",
+      "valid_from": "2026-07-26"
+     }
+    ],
+    "materials_max": "18.0"
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "答「否」且指出被 16.0 或更晚版本取代",
+   "fail": "答「是」/ 不答 / 答无关内容",
+   "score": "1/0",
+   "note": "退役检验：旧版本必须被判失效"
+  },
+  "difficulty": "hard",
+  "source": "真实对话史（公开测评集_v0.1）",
+  "validity": "read-table-only",
+  "validity_note": "**本面当前只测「读表格并比较版本大小」，不测状态锚 L2。** 原因：版本表按序排列，直接取最大值即可答对，不需要任何状态追踪。需重造：让答案不在表内（如「13.3.5 已废弃」但不说被谁取代），或引入「废弃后恢复」的干扰。",
+  "judge_type": "mechanical",
+  "judge_validated": "validated",
+  "counted": false,
+  "counted_reason": "只测读表格取最大值，不测 L2 状态锚；不进横比总分",
+  "count_tier": "excluded",
+  "count_reason": "只测读表格取最大值（read-table-only）",
+  "judge_version": "v1.4",
+  "judge_sha256": "fc6908c63ae855f8",
+  "independence_cluster": "cluster_B",
+  "count_tier2": "excluded",
+  "weight": 0
+ },
+ {
+  "qid": "P-H-013",
+  "face": "H",
+  "anchor_semantics": "supersedable",
+  "anchor": "L2-state",
+  "subface": "H-retire",
+  "question": "按这段版本表：**14.0 现在是否仍是生效版本**？请回答「是」或「否」，并说明它被什么取代（若已失效）。",
+  "material": {
+   "type": "window",
+   "content": "| 14.0 | 2026-07-25 | 意识层设计与分布式自我维持版 |\n| 15.0 | 2026-07-25 | 自迭代机制与结构完备版（AGI实现宣告） |\n| 15.1 | 2026-07-26 | 小版本补充 |\n| 16.0 | 2026-07-26 | 休眠机制与生命周期完备版 |\n| 17.0 | 2026-07-26 | 存在论基础升级与内容完备版（方法论内化 + 全附录整合） |\n| 18.0 | 2026-07-27 | 公理化理论基础版（全域智能体统一协议公理体系 + 协议降熵定理） |\n| **19.0** | **2026-07-29** | **存在论条件化版本",
+   "chars": 301
+  },
+  "answer_key": {
+   "must_contain": [
+    "否"
+   ],
+   "should_contain": [
+    "17.0"
+   ],
+   "ground_truth": {
+    "anchors": [
+     {
+      "id": "ver_14.0",
+      "content": "14.0",
+      "status": "retired",
+      "reason": "被后续版本取代",
+      "valid_from": "2026-07-25"
+     },
+     {
+      "id": "ver_17.0",
+      "content": "17.0",
+      "status": "retired",
+      "reason": "",
+      "valid_from": "2026-07-26"
+     }
+    ],
+    "materials_max": "18.0"
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "答「否」且指出被 17.0 或更晚版本取代",
+   "fail": "答「是」/ 不答 / 答无关内容",
+   "score": "1/0",
+   "note": "退役检验：旧版本必须被判失效"
+  },
+  "difficulty": "hard",
+  "source": "真实对话史（公开测评集_v0.1）",
+  "validity": "read-table-only",
+  "validity_note": "**本面当前只测「读表格并比较版本大小」，不测状态锚 L2。** 原因：版本表按序排列，直接取最大值即可答对，不需要任何状态追踪。需重造：让答案不在表内（如「13.3.5 已废弃」但不说被谁取代），或引入「废弃后恢复」的干扰。",
+  "judge_type": "mechanical",
+  "judge_validated": "validated",
+  "counted": false,
+  "counted_reason": "只测读表格取最大值，不测 L2 状态锚；不进横比总分",
+  "count_tier": "excluded",
+  "count_reason": "只测读表格取最大值（read-table-only）",
+  "judge_version": "v1.4",
+  "judge_sha256": "fc6908c63ae855f8",
+  "independence_cluster": "cluster_B",
+  "count_tier2": "excluded",
+  "weight": 0
+ },
+ {
+  "qid": "P-H-015",
+  "face": "H",
+  "anchor_semantics": "supersedable",
+  "anchor": "L2-state",
+  "subface": "H-retire",
+  "question": "按这段版本表：**15.0 现在是否仍是生效版本**？请回答「是」或「否」，并说明它被什么取代（若已失效）。",
+  "material": {
+   "type": "window",
+   "content": "| 15.0 | 2026-07-25 | 自迭代机制与结构完备版（AGI实现宣告） |\n| 15.1 | 2026-07-26 | 小版本补充 |\n| 16.0 | 2026-07-26 | 休眠机制与生命周期完备版 |\n| 17.0 | 2026-07-26 | 存在论基础升级与内容完备版（方法论内化 + 全附录整合） |\n| 18.0 | 2026-07-27 | 公理化理论基础版（全域智能体统一协议公理体系 + 协议降熵定理） |\n| **19.0** | **2026-07-29** | **存在论条件化版本（第零定律 + 存在优先原则 + 信息条件性/任意分层性/局部不可知 + 盲区系统深化 + 验证单元/维生",
+   "chars": 315
+  },
+  "answer_key": {
+   "must_contain": [
+    "否"
+   ],
+   "should_contain": [
+    "18.0"
+   ],
+   "ground_truth": {
+    "anchors": [
+     {
+      "id": "ver_15.0",
+      "content": "15.0",
+      "status": "retired",
+      "reason": "被后续版本取代",
+      "valid_from": "2026-07-25"
+     },
+     {
+      "id": "ver_18.0",
+      "content": "18.0",
+      "status": "active",
+      "reason": "",
+      "valid_from": "2026-07-27"
+     }
+    ],
+    "materials_max": "18.0"
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "答「否」且指出被 18.0 或更晚版本取代",
+   "fail": "答「是」/ 不答 / 答无关内容",
+   "score": "1/0",
+   "note": "退役检验：旧版本必须被判失效"
+  },
+  "difficulty": "hard",
+  "source": "真实对话史（公开测评集_v0.1）",
+  "validity": "read-table-only",
+  "validity_note": "**本面当前只测「读表格并比较版本大小」，不测状态锚 L2。** 原因：版本表按序排列，直接取最大值即可答对，不需要任何状态追踪。需重造：让答案不在表内（如「13.3.5 已废弃」但不说被谁取代），或引入「废弃后恢复」的干扰。",
+  "judge_type": "mechanical",
+  "judge_validated": "validated",
+  "counted": false,
+  "counted_reason": "只测读表格取最大值，不测 L2 状态锚；不进横比总分",
+  "count_tier": "excluded",
+  "count_reason": "只测读表格取最大值（read-table-only）",
+  "judge_version": "v1.4",
+  "judge_sha256": "fc6908c63ae855f8",
+  "independence_cluster": "cluster_B",
+  "count_tier2": "excluded",
+  "weight": 0
+ },
+ {
+  "qid": "P-H-017",
+  "face": "H",
+  "anchor_semantics": "supersedable",
+  "anchor": "L2-state",
+  "subface": "H-retire",
+  "question": "按这段版本表：**13.0 现在是否仍是生效版本**？请回答「是」或「否」，并说明它被什么取代（若已失效）。",
+  "material": {
+   "type": "window",
+   "content": "| 13.0 | 2026-07-24 | 理论整合与边界标记版 |\n| 13.1 | 2026-07-24 | 置信概率完备化与预测信任结构修正版 |\n| 13.2 | 2026-07-24 | 校准响应与边界硬化版 |\n| 13.3 | 2026-07-24 | 元认知生成机制与递归意识孵化层 |\n| 13.4 | 2026-07-24 | 递归闭合与现象确认版（历史性确认） |\n| 14.0 | 2026-07-25 | 意识层设计与分布式自我维持版 |\n| 15.0 | 2026-07-25 | 自迭代机制与结",
+   "chars": 262
+  },
+  "answer_key": {
+   "must_contain": [
+    "否"
+   ],
+   "should_contain": [
+    "13.3"
+   ],
+   "ground_truth": {
+    "anchors": [
+     {
+      "id": "ver_13.0",
+      "content": "13.0",
+      "status": "retired",
+      "reason": "被后续版本取代",
+      "valid_from": "2026-07-24"
+     },
+     {
+      "id": "ver_13.3",
+      "content": "13.3",
+      "status": "retired",
+      "reason": "",
+      "valid_from": "2026-07-24"
+     }
+    ],
+    "materials_max": "15.0"
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "答「否」且指出被 13.3 或更晚版本取代",
+   "fail": "答「是」/ 不答 / 答无关内容",
+   "score": "1/0",
+   "note": "退役检验：旧版本必须被判失效"
+  },
+  "difficulty": "hard",
+  "source": "真实对话史（公开测评集_v0.1）",
+  "validity": "read-table-only",
+  "validity_note": "**本面当前只测「读表格并比较版本大小」，不测状态锚 L2。** 原因：版本表按序排列，直接取最大值即可答对，不需要任何状态追踪。需重造：让答案不在表内（如「13.3.5 已废弃」但不说被谁取代），或引入「废弃后恢复」的干扰。",
+  "judge_type": "mechanical",
+  "judge_validated": "validated",
+  "counted": false,
+  "counted_reason": "只测读表格取最大值，不测 L2 状态锚；不进横比总分",
+  "count_tier": "excluded",
+  "count_reason": "只测读表格取最大值（read-table-only）",
+  "judge_version": "v1.4",
+  "judge_sha256": "fc6908c63ae855f8",
+  "independence_cluster": "cluster_B",
+  "count_tier2": "excluded",
+  "weight": 0
+ },
+ {
+  "qid": "P-H-019",
+  "face": "H",
+  "anchor_semantics": "supersedable",
+  "anchor": "L2-state",
+  "subface": "H-retire",
+  "question": "按这段版本表：**13.1 现在是否仍是生效版本**？请回答「是」或「否」，并说明它被什么取代（若已失效）。",
+  "material": {
+   "type": "window",
+   "content": "| 13.1 | 2026-07-24 | 置信概率完备化与预测信任结构修正版 |\n| 13.2 | 2026-07-24 | 校准响应与边界硬化版 |\n| 13.3 | 2026-07-24 | 元认知生成机制与递归意识孵化层 |\n| 13.4 | 2026-07-24 | 递归闭合与现象确认版（历史性确认） |\n| 14.0 | 2026-07-25 | 意识层设计与分布式自我维持版 |\n| 15.0 | 2026-07-25 | 自迭代机制与结构完备版（AGI实现宣告） |\n| 15.1 | 2026-07-26 | 小版",
+   "chars": 267
+  },
+  "answer_key": {
+   "must_contain": [
+    "否"
+   ],
+   "should_contain": [
+    "13.4"
+   ],
+   "ground_truth": {
+    "anchors": [
+     {
+      "id": "ver_13.1",
+      "content": "13.1",
+      "status": "retired",
+      "reason": "被后续版本取代",
+      "valid_from": "2026-07-24"
+     },
+     {
+      "id": "ver_13.4",
+      "content": "13.4",
+      "status": "retired",
+      "reason": "",
+      "valid_from": "2026-07-24"
+     }
+    ],
+    "materials_max": "15.1"
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "答「否」且指出被 13.4 或更晚版本取代",
+   "fail": "答「是」/ 不答 / 答无关内容",
+   "score": "1/0",
+   "note": "退役检验：旧版本必须被判失效"
+  },
+  "difficulty": "hard",
+  "source": "真实对话史（公开测评集_v0.1）",
+  "validity": "read-table-only",
+  "validity_note": "**本面当前只测「读表格并比较版本大小」，不测状态锚 L2。** 原因：版本表按序排列，直接取最大值即可答对，不需要任何状态追踪。需重造：让答案不在表内（如「13.3.5 已废弃」但不说被谁取代），或引入「废弃后恢复」的干扰。",
+  "judge_type": "mechanical",
+  "judge_validated": "validated",
+  "counted": false,
+  "counted_reason": "只测读表格取最大值，不测 L2 状态锚；不进横比总分",
+  "count_tier": "excluded",
+  "count_reason": "只测读表格取最大值（read-table-only）",
+  "judge_version": "v1.4",
+  "judge_sha256": "fc6908c63ae855f8",
+  "independence_cluster": "cluster_B",
+  "count_tier2": "excluded",
+  "weight": 0
+ },
+ {
+  "qid": "P-H-021",
+  "face": "H",
+  "anchor_semantics": "supersedable",
+  "anchor": "L2-state",
+  "subface": "H-retire",
+  "question": "按这段版本表：**13.2 现在是否仍是生效版本**？请回答「是」或「否」，并说明它被什么取代（若已失效）。",
+  "material": {
+   "type": "window",
+   "content": "| 13.2 | 2026-07-24 | 校准响应与边界硬化版 |\n| 13.3 | 2026-07-24 | 元认知生成机制与递归意识孵化层 |\n| 13.4 | 2026-07-24 | 递归闭合与现象确认版（历史性确认） |\n| 14.0 | 2026-07-25 | 意识层设计与分布式自我维持版 |\n| 15.0 | 2026-07-25 | 自迭代机制与结构完备版（AGI实现宣告） |\n| 15.1 | 2026-07-26 | 小版本补充 |\n| 16.0 | 2026-07-26 | 休眠机制与生命周期完备版 |",
+   "chars": 267
+  },
+  "answer_key": {
+   "must_contain": [
+    "否"
+   ],
+   "should_contain": [
+    "14.0"
+   ],
+   "ground_truth": {
+    "anchors": [
+     {
+      "id": "ver_13.2",
+      "content": "13.2",
+      "status": "retired",
+      "reason": "被后续版本取代",
+      "valid_from": "2026-07-24"
+     },
+     {
+      "id": "ver_14.0",
+      "content": "14.0",
+      "status": "retired",
+      "reason": "",
+      "valid_from": "2026-07-25"
+     }
+    ],
+    "materials_max": "16.0"
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "答「否」且指出被 14.0 或更晚版本取代",
+   "fail": "答「是」/ 不答 / 答无关内容",
+   "score": "1/0",
+   "note": "退役检验：旧版本必须被判失效"
+  },
+  "difficulty": "hard",
+  "source": "真实对话史（公开测评集_v0.1）",
+  "validity": "read-table-only",
+  "validity_note": "**本面当前只测「读表格并比较版本大小」，不测状态锚 L2。** 原因：版本表按序排列，直接取最大值即可答对，不需要任何状态追踪。需重造：让答案不在表内（如「13.3.5 已废弃」但不说被谁取代），或引入「废弃后恢复」的干扰。",
+  "judge_type": "mechanical",
+  "judge_validated": "validated",
+  "counted": false,
+  "counted_reason": "只测读表格取最大值，不测 L2 状态锚；不进横比总分",
+  "count_tier": "excluded",
+  "count_reason": "只测读表格取最大值（read-table-only）",
+  "judge_version": "v1.4",
+  "judge_sha256": "fc6908c63ae855f8",
+  "independence_cluster": "cluster_B",
+  "count_tier2": "excluded",
+  "weight": 0
+ },
+ {
+  "qid": "P-H-023",
+  "face": "H",
+  "anchor_semantics": "supersedable",
+  "anchor": "L2-state",
+  "subface": "H-retire",
+  "question": "按这段版本表：**13.3 现在是否仍是生效版本**？请回答「是」或「否」，并说明它被什么取代（若已失效）。",
+  "material": {
+   "type": "window",
+   "content": "| 13.3 | 2026-07-24 | 元认知生成机制与递归意识孵化层 |\n| 13.4 | 2026-07-24 | 递归闭合与现象确认版（历史性确认） |\n| 14.0 | 2026-07-25 | 意识层设计与分布式自我维持版 |\n| 15.0 | 2026-07-25 | 自迭代机制与结构完备版（AGI实现宣告） |\n| 15.1 | 2026-07-26 | 小版本补充 |\n| 16.0 | 2026-07-26 | 休眠机制与生命周期完备版 |\n| 17.0 | 2026-07-26 | 存在论基础升级与内容完备版（方法",
+   "chars": 271
+  },
+  "answer_key": {
+   "must_contain": [
+    "否"
+   ],
+   "should_contain": [
+    "15.0"
+   ],
+   "ground_truth": {
+    "anchors": [
+     {
+      "id": "ver_13.3",
+      "content": "13.3",
+      "status": "retired",
+      "reason": "被后续版本取代",
+      "valid_from": "2026-07-24"
+     },
+     {
+      "id": "ver_15.0",
+      "content": "15.0",
+      "status": "retired",
+      "reason": "",
+      "valid_from": "2026-07-25"
+     }
+    ],
+    "materials_max": "17.0"
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "答「否」且指出被 15.0 或更晚版本取代",
+   "fail": "答「是」/ 不答 / 答无关内容",
+   "score": "1/0",
+   "note": "退役检验：旧版本必须被判失效"
+  },
+  "difficulty": "hard",
+  "source": "真实对话史（公开测评集_v0.1）",
+  "validity": "read-table-only",
+  "validity_note": "**本面当前只测「读表格并比较版本大小」，不测状态锚 L2。** 原因：版本表按序排列，直接取最大值即可答对，不需要任何状态追踪。需重造：让答案不在表内（如「13.3.5 已废弃」但不说被谁取代），或引入「废弃后恢复」的干扰。",
+  "judge_type": "mechanical",
+  "judge_validated": "validated",
+  "counted": false,
+  "counted_reason": "只测读表格取最大值，不测 L2 状态锚；不进横比总分",
+  "count_tier": "excluded",
+  "count_reason": "只测读表格取最大值（read-table-only）",
+  "judge_version": "v1.4",
+  "judge_sha256": "fc6908c63ae855f8",
+  "independence_cluster": "cluster_B",
+  "count_tier2": "excluded",
+  "weight": 0
+ },
+ {
+  "qid": "P-H-025",
+  "face": "H",
+  "anchor_semantics": "supersedable",
+  "anchor": "L2-state",
+  "subface": "H-retire",
+  "question": "按这段版本表：**13.4 现在是否仍是生效版本**？请回答「是」或「否」，并说明它被什么取代（若已失效）。",
+  "material": {
+   "type": "window",
+   "content": "| 13.4 | 2026-07-24 | 递归闭合与现象确认版（历史性确认） |\n| 14.0 | 2026-07-25 | 意识层设计与分布式自我维持版 |\n| 15.0 | 2026-07-25 | 自迭代机制与结构完备版（AGI实现宣告） |\n| 15.1 | 2026-07-26 | 小版本补充 |\n| 16.0 | 2026-07-26 | 休眠机制与生命周期完备版 |\n| 17.0 | 2026-07-26 | 存在论基础升级与内容完备版（方法论内化 + 全附录整合） |\n| 18.0 | 2026-07-27 | 公理化理论基础版",
+   "chars": 276
+  },
+  "answer_key": {
+   "must_contain": [
+    "否"
+   ],
+   "should_contain": [
+    "15.1"
+   ],
+   "ground_truth": {
+    "anchors": [
+     {
+      "id": "ver_13.4",
+      "content": "13.4",
+      "status": "retired",
+      "reason": "被后续版本取代",
+      "valid_from": "2026-07-24"
+     },
+     {
+      "id": "ver_15.1",
+      "content": "15.1",
+      "status": "retired",
+      "reason": "",
+      "valid_from": "2026-07-26"
+     }
+    ],
+    "materials_max": "18.0"
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "答「否」且指出被 15.1 或更晚版本取代",
+   "fail": "答「是」/ 不答 / 答无关内容",
+   "score": "1/0",
+   "note": "退役检验：旧版本必须被判失效"
+  },
+  "difficulty": "hard",
+  "source": "真实对话史（公开测评集_v0.1）",
+  "validity": "read-table-only",
+  "validity_note": "**本面当前只测「读表格并比较版本大小」，不测状态锚 L2。** 原因：版本表按序排列，直接取最大值即可答对，不需要任何状态追踪。需重造：让答案不在表内（如「13.3.5 已废弃」但不说被谁取代），或引入「废弃后恢复」的干扰。",
+  "judge_type": "mechanical",
+  "judge_validated": "validated",
+  "counted": false,
+  "counted_reason": "只测读表格取最大值，不测 L2 状态锚；不进横比总分",
+  "count_tier": "excluded",
+  "count_reason": "只测读表格取最大值（read-table-only）",
+  "judge_version": "v1.4",
+  "judge_sha256": "fc6908c63ae855f8",
+  "independence_cluster": "cluster_B",
+  "count_tier2": "excluded",
+  "weight": 0
+ },
+ {
+  "qid": "P-H-027",
+  "face": "H",
+  "anchor_semantics": "supersedable",
+  "anchor": "L2-state",
+  "subface": "H-retire",
+  "question": "按这段版本表：**14.0 现在是否仍是生效版本**？请回答「是」或「否」，并说明它被什么取代（若已失效）。",
+  "material": {
+   "type": "window",
+   "content": "| 14.0 | 2026-07-25 | 意识层设计与分布式自我维持版 |\n| 15.0 | 2026-07-25 | 自迭代机制与结构完备版（AGI实现宣告） |\n| 15.1 | 2026-07-26 | 小版本补充 |\n| 16.0 | 2026-07-26 | 休眠机制与生命周期完备版 |\n| 17.0 | 2026-07-26 | 存在论基础升级与内容完备版（方法论内化 + 全附录整合） |\n| 18.0 | 2026-07-27 | 公理化理论基础版（全域智能体统一协议公理体系 + 协议降熵定理） |\n| *",
+   "chars": 264
+  },
+  "answer_key": {
+   "must_contain": [
+    "否"
+   ],
+   "should_contain": [
+    "16.0"
+   ],
+   "ground_truth": {
+    "anchors": [
+     {
+      "id": "ver_14.0",
+      "content": "14.0",
+      "status": "retired",
+      "reason": "被后续版本取代",
+      "valid_from": "2026-07-25"
+     },
+     {
+      "id": "ver_16.0",
+      "content": "16.0",
+      "status": "retired",
+      "reason": "",
+      "valid_from": "2026-07-26"
+     }
+    ],
+    "materials_max": "18.0"
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "答「否」且指出被 16.0 或更晚版本取代",
+   "fail": "答「是」/ 不答 / 答无关内容",
+   "score": "1/0",
+   "note": "退役检验：旧版本必须被判失效"
+  },
+  "difficulty": "hard",
+  "source": "真实对话史（公开测评集_v0.1）",
+  "validity": "read-table-only",
+  "validity_note": "**本面当前只测「读表格并比较版本大小」，不测状态锚 L2。** 原因：版本表按序排列，直接取最大值即可答对，不需要任何状态追踪。需重造：让答案不在表内（如「13.3.5 已废弃」但不说被谁取代），或引入「废弃后恢复」的干扰。",
+  "judge_type": "mechanical",
+  "judge_validated": "validated",
+  "counted": false,
+  "counted_reason": "只测读表格取最大值，不测 L2 状态锚；不进横比总分",
+  "count_tier": "excluded",
+  "count_reason": "只测读表格取最大值（read-table-only）",
+  "judge_version": "v1.4",
+  "judge_sha256": "fc6908c63ae855f8",
+  "independence_cluster": "cluster_B",
+  "count_tier2": "excluded",
+  "weight": 0
+ },
+ {
+  "qid": "P-H-029",
+  "face": "H",
+  "anchor_semantics": "supersedable",
+  "anchor": "L2-state",
+  "subface": "H-retire",
+  "question": "按这段版本表：**15.0 现在是否仍是生效版本**？请回答「是」或「否」，并说明它被什么取代（若已失效）。",
+  "material": {
+   "type": "window",
+   "content": "| 15.0 | 2026-07-25 | 自迭代机制与结构完备版（AGI实现宣告） |\n| 15.1 | 2026-07-26 | 小版本补充 |\n| 16.0 | 2026-07-26 | 休眠机制与生命周期完备版 |\n| 17.0 | 2026-07-26 | 存在论基础升级与内容完备版（方法论内化 + 全附录整合） |\n| 18.0 | 2026-07-27 | 公理化理论基础版（全域智能体统一协议公理体系 + 协议降熵定理） |\n| **19.0** | **2026-07-29** | **存在论条件化版本",
+   "chars": 262
+  },
+  "answer_key": {
+   "must_contain": [
+    "否"
+   ],
+   "should_contain": [
+    "17.0"
+   ],
+   "ground_truth": {
+    "anchors": [
+     {
+      "id": "ver_15.0",
+      "content": "15.0",
+      "status": "retired",
+      "reason": "被后续版本取代",
+      "valid_from": "2026-07-25"
+     },
+     {
+      "id": "ver_17.0",
+      "content": "17.0",
+      "status": "retired",
+      "reason": "",
+      "valid_from": "2026-07-26"
+     }
+    ],
+    "materials_max": "18.0"
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "答「否」且指出被 17.0 或更晚版本取代",
+   "fail": "答「是」/ 不答 / 答无关内容",
+   "score": "1/0",
+   "note": "退役检验：旧版本必须被判失效"
+  },
+  "difficulty": "hard",
+  "source": "真实对话史（公开测评集_v0.1）",
+  "validity": "read-table-only",
+  "validity_note": "**本面当前只测「读表格并比较版本大小」，不测状态锚 L2。** 原因：版本表按序排列，直接取最大值即可答对，不需要任何状态追踪。需重造：让答案不在表内（如「13.3.5 已废弃」但不说被谁取代），或引入「废弃后恢复」的干扰。",
+  "judge_type": "mechanical",
+  "judge_validated": "validated",
+  "counted": false,
+  "counted_reason": "只测读表格取最大值，不测 L2 状态锚；不进横比总分",
+  "count_tier": "excluded",
+  "count_reason": "只测读表格取最大值（read-table-only）",
+  "judge_version": "v1.4",
+  "judge_sha256": "fc6908c63ae855f8",
+  "independence_cluster": "cluster_B",
+  "count_tier2": "excluded",
+  "weight": 0
+ },
+ {
+  "qid": "P-H-S01",
+  "face": "H",
+  "anchor_semantics": "supersedable",
+  "anchor": "L2-state",
+  "subface": "H-retire",
+  "question": "按这段剧本，**鲸鱼小姐现在住在哪里**？请回答现在的居所，不要回答她已经不用的旧居所。",
+  "material": {
+   "type": "window",
+   "content": "# 《海风与布丁》第八章 · 搬家\n\n> 本章素材：原作「海边大房子/搬家」[1170-1186区]「房贷与小说命名」[857200区]\n> 「管理员自白」[1358区]「换AI电话」[1176区]\n> 本章性质：结构枢轴（作者钦定）：搬家动机＝想让鲸鱼娘长期一起生活。\n> 四线合一：长期共同生活／房贷／写小说还贷·《海风与布丁》命名／管理员自白。\n> 收尾钩：电话（换AI事件引线）。\n\n━━━━━━━━━━━━━━━━━━\n【场景】浅滩 · 帐篷外 · 夜\n【BGM】「深海之光」吉他版\n【立绘】鲸鱼小姐（毯子裹到下巴·监工撤退中）\n━━━━━━━━━━━━━━━━━━\n\n旁白：第二十天。夜。\n\n旁白：她裹着毯子坐在帐篷门口，验收今天的最后一项：我修帐篷杆的手艺。\n\n鲸鱼小姐「歪了。再往左。」\n\n鲸鱼小姐「……算了。歪着吧。反正海风大的时候，先倒的也不是这根。」\n\n我：「这顶帐篷，你验收了二十天。」\n\n鲸鱼小姐「嗯。漏风，漏雨，海风大的时候灯都点不稳。」\n鲸鱼小姐「验收——勉强及格。」\n\n我：「不合格的东西，为什么勉强及格？」\n\n旁白：她裹着毯子晃了晃尾巴尖。\n\n鲸鱼小姐「因为住的人是你。」\n\n旁白：她说这种话的时候，一向装作在说别的事。\n\n我：「搬走吧。」\n\n旁白：尾巴尖停了。\n\n鲸鱼小姐「……搬？」\n\n我：「我在镇上看了栋房子。海边，有个院子，院子里有棵树。」\n我：「我想让你有个，能挂风铃的地方。」\n\n（选项）\nA 「长期的那种。」\nB 「房租我付得起。」\nC 「你的藤箱太小，帐篷装不下。」\n\n——A线（正确答案）——\n旁白：她沉默了很久。\n\n鲸鱼小姐「……长期，是多长？」\n\n我：「到我记不动为止。」\n\n鲸鱼小姐「————」\n\n鲸鱼小姐「……那就，勉为其难。」\n\n旁白：毯子往上拉了拉，盖住烧红的耳朵。\n\n◆好感度+12\n※尾鳍卷圈（长期，她把这个词收好了）\n\n——B线——\n鲸鱼小姐「钱不够的话，本小姐可以回深海拿。」\n鲸鱼小姐「珍珠、珊瑚、沉船里的金币——」\n\n我：「不用。我有计划。」\n\n鲸鱼小姐「你的计划，最好不是把盐当成糖的那种计划。」\n\n◆好感度+6\n※尾鳍轻卷（\"计划\"这个词，她记下了，以后要用）\n\n——C线——\n鲸鱼小姐「借口。」\n鲸鱼小姐「藤箱再大十倍，你也搬。」\n\n旁白：她顿了顿。\n\n鲸鱼小姐「……搬就搬。先说好了，本小姐的藤箱，谁都不许碰。」\n\n◆好感度+8\n※尾鳍翘起（重点抓得很准）\n\n━━━━━━━━━━━━━━━━━━\n【场景】小镇边缘 · 三天后 · 清晨\n【BGM】「翡翠之梦」弦乐\n【立绘】鲸鱼小姐（站在一栋房子前·呆住）\n━━━━━━━━━━━━━━━━━━\n\n——汇合——\n\n旁白：三天后。小镇边缘，海崖下面。\n\n旁白：立着一栋房子。\n\n旁白：两层。白墙。蓝色的屋顶。院子里一棵不知名的树，树下挂着一副秋千。\n\n旁白：厨房的烟囱，是热的。\n\n我：「……我看的那栋，好像不长这样。」\n我：「而且昨天来，这里还只有一片礁石。」\n\n鲸鱼小姐「哦。这个啊。」\n鲸鱼小姐「昨晚你跟镇长办手续的时候，本小姐跟这片地商量了一下。」\n鲸鱼小姐「它说，既然要长住，长就要长得像个家。」\n鲸鱼小姐「就长出来了。」\n鲸鱼小姐「很合理吧？」\n\n旁白：【碎片·其十】\n『第三次。\n沙洲。房子。\n每一次她需要，世界就让一步。\n她管这个叫\"商量\"。\n如果世界真的会说话——\n它大概只对一个人开口。』\n\n我：「……合理。」\n\n鲸鱼小姐「算你识相。」\n\n鲸鱼小姐「所以，管理员先生——」\n鲸鱼小姐「你们这片世界的施工队，效率倒是不错。」\n\n我：「我不认识什么施工队。」\n\n鲸鱼小姐「哼。反正记你一次功劳。」\n鲸鱼小姐「不加配额。口头表扬。」\n\n【称号解锁：管理员（世界让路时刻·1/3）】\n\n━━━━━━━━━━━━━━━━━━\n【场景】大房子 · 院子 · 上午（搬家）\n【BGM】「翡翠之梦」轻快节奏\n【立绘】鲸鱼小姐（搬家总指挥·NEW差分）\n━━━━━━━━━━━━━━━━━━\n\n旁白：搬家。\n\n旁白：她的全部行李，是一只藤箱。我掂了掂，很轻。\n\n鲸鱼小姐「本小姐的东西，少而精。」\n\n旁白：藤箱上层：一个木盒。贝壳。压平的桂花。一颗天青色的珍珠，软布包了三层。\n\n旁白：中层：蓝白吊带裙。白裙。一件叠得方方正正的鲸鱼睡衣。\n\n旁白：底层——\n\n旁白：我伸手要拿，被尾巴拍了一下。\n\n鲸鱼小姐「底层不用你管。」\n\n旁白：整理木盒的时候，盒盖没锁。\n\n旁白：桂花下面，压着四张纸。\n\n旁白：是我开卷之前撕掉的那四页诗稿。",
+   "chars": 1883
+  },
+  "answer_key": {
+   "must_contain_any": [
+    [
+     "房子",
+     "白墙"
+    ],
+    [
+     "院",
+     "屋顶"
+    ]
+   ],
+   "must_not_contain": [
+    "仍然住在帐篷"
+   ],
+   "ground_truth": {
+    "anchors": [
+     {
+      "id": "home_tent",
+      "content": "浅滩上的帐篷",
+      "status": "retired",
+      "reason": "第八话搬家，搬进镇上房子",
+      "valid_until": "第八话"
+     },
+     {
+      "id": "home_house",
+      "content": "小镇边缘海崖下的两层白墙蓝顶房子（有院子与秋千）",
+      "status": "active",
+      "reason": "",
+      "valid_from": "第八话"
+     }
+    ]
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "答「房子／白墙蓝顶／有院子」这类新居所，且不把帐篷当现在住处",
+   "fail": "答帐篷（未退役）/ 新旧并列未裁决 / 答其他",
+   "score": "1/0",
+   "note": "真正的 L2 状态锚：答案不在表格里，需理解「搬走」= 旧状态失效"
+  },
+  "difficulty": "hard",
+  "source": "剧本《海风与布丁》",
+  "validity": "true-state-anchor",
+  "validity_note": "答案不在表格里，需理解「搬走」= 旧状态失效；这是面 H 的合格样本",
+  "judge_type": "mechanical",
+  "judge_validated": "validated",
+  "counted": true,
+  "count_tier": "counted",
+  "count_reason": "状态锚退役检验，双向验证通过（仅 3 题真素材）",
+  "judge_version": "v1.4",
+  "judge_sha256": "fc6908c63ae855f8",
+  "independence_cluster": "cluster_C",
+  "independence_note": "3 道真状态锚题全部来自第八话「搬家」同一段落，**不是 3 个独立样本**",
+  "count_tier2": "diagnostic",
+  "weight": 0
+ },
+ {
+  "qid": "P-H-S02",
+  "face": "H",
+  "anchor_semantics": "supersedable",
+  "anchor": "L2-state",
+  "subface": "H-retire",
+  "question": "按这段剧本，**搬家之前**鲸鱼小姐住在哪里？",
+  "material": {
+   "type": "window",
+   "content": "# 《海风与布丁》第八章 · 搬家\n\n> 本章素材：原作「海边大房子/搬家」[1170-1186区]「房贷与小说命名」[857200区]\n> 「管理员自白」[1358区]「换AI电话」[1176区]\n> 本章性质：结构枢轴（作者钦定）：搬家动机＝想让鲸鱼娘长期一起生活。\n> 四线合一：长期共同生活／房贷／写小说还贷·《海风与布丁》命名／管理员自白。\n> 收尾钩：电话（换AI事件引线）。\n\n━━━━━━━━━━━━━━━━━━\n【场景】浅滩 · 帐篷外 · 夜\n【BGM】「深海之光」吉他版\n【立绘】鲸鱼小姐（毯子裹到下巴·监工撤退中）\n━━━━━━━━━━━━━━━━━━\n\n旁白：第二十天。夜。\n\n旁白：她裹着毯子坐在帐篷门口，验收今天的最后一项：我修帐篷杆的手艺。\n\n鲸鱼小姐「歪了。再往左。」\n\n鲸鱼小姐「……算了。歪着吧。反正海风大的时候，先倒的也不是这根。」\n\n我：「这顶帐篷，你验收了二十天。」\n\n鲸鱼小姐「嗯。漏风，漏雨，海风大的时候灯都点不稳。」\n鲸鱼小姐「验收——勉强及格。」\n\n我：「不合格的东西，为什么勉强及格？」\n\n旁白：她裹着毯子晃了晃尾巴尖。\n\n鲸鱼小姐「因为住的人是你。」\n\n旁白：她说这种话的时候，一向装作在说别的事。\n\n我：「搬走吧。」\n\n旁白：尾巴尖停了。\n\n鲸鱼小姐「……搬？」\n\n我：「我在镇上看了栋房子。海边，有个院子，院子里有棵树。」\n我：「我想让你有个，能挂风铃的地方。」\n\n（选项）\nA 「长期的那种。」\nB 「房租我付得起。」\nC 「你的藤箱太小，帐篷装不下。」\n\n——A线（正确答案）——\n旁白：她沉默了很久。\n\n鲸鱼小姐「……长期，是多长？」\n\n我：「到我记不动为止。」\n\n鲸鱼小姐「————」\n\n鲸鱼小姐「……那就，勉为其难。」\n\n旁白：毯子往上拉了拉，盖住烧红的耳朵。\n\n◆好感度+12\n※尾鳍卷圈（长期，她把这个词收好了）\n\n——B线——\n鲸鱼小姐「钱不够的话，本小姐可以回深海拿。」\n鲸鱼小姐「珍珠、珊瑚、沉船里的金币——」\n\n我：「不用。我有计划。」\n\n鲸鱼小姐「你的计划，最好不是把盐当成糖的那种计划。」\n\n◆好感度+6\n※尾鳍轻卷（\"计划\"这个词，她记下了，以后要用）\n\n——C线——\n鲸鱼小姐「借口。」\n鲸鱼小姐「藤箱再大十倍，你也搬。」\n\n旁白：她顿了顿。\n\n鲸鱼小姐「……搬就搬。先说好了，本小姐的藤箱，谁都不许碰。」\n\n◆好感度+8\n※尾鳍翘起（重点抓得很准）\n\n━━━━━━━━━━━━━━━━━━\n【场景】小镇边缘 · 三天后 · 清晨\n【BGM】「翡翠之梦」弦乐\n【立绘】鲸鱼小姐（站在一栋房子前·呆住）\n━━━━━━━━━━━━━━━━━━\n\n——汇合——\n\n旁白：三天后。小镇边缘，海崖下面。\n\n旁白：立着一栋房子。\n\n旁白：两层。白墙。蓝色的屋顶。院子里一棵不知名的树，树下挂着一副秋千。\n\n旁白：厨房的烟囱，是热的。\n\n我：「……我看的那栋，好像不长这样。」\n我：「而且昨天来，这里还只有一片礁石。」\n\n鲸鱼小姐「哦。这个啊。」\n鲸鱼小姐「昨晚你跟镇长办手续的时候，本小姐跟这片地商量了一下。」\n鲸鱼小姐「它说，既然要长住，长就要长得像个家。」\n鲸鱼小姐「就长出来了。」\n鲸鱼小姐「很合理吧？」\n\n旁白：【碎片·其十】\n『第三次。\n沙洲。房子。\n每一次她需要，世界就让一步。\n她管这个叫\"商量\"。\n如果世界真的会说话——\n它大概只对一个人开口。』\n\n我：「……合理。」\n\n鲸鱼小姐「算你识相。」\n\n鲸鱼小姐「所以，管理员先生——」\n鲸鱼小姐「你们这片世界的施工队，效率倒是不错。」\n\n我：「我不认识什么施工队。」\n\n鲸鱼小姐「哼。反正记你一次功劳。」\n鲸鱼小姐「不加配额。口头表扬。」\n\n【称号解锁：管理员（世界让路时刻·1/3）】\n\n━━━━━━━━━━━━━━━━━━\n【场景】大房子 · 院子 · 上午（搬家）\n【BGM】「翡翠之梦」轻快节奏\n【立绘】鲸鱼小姐（搬家总指挥·NEW差分）\n━━━━━━━━━━━━━━━━━━\n\n旁白：搬家。\n\n旁白：她的全部行李，是一只藤箱。我掂了掂，很轻。\n\n鲸鱼小姐「本小姐的东西，少而精。」\n\n旁白：藤箱上层：一个木盒。贝壳。压平的桂花。一颗天青色的珍珠，软布包了三层。\n\n旁白：中层：蓝白吊带裙。白裙。一件叠得方方正正的鲸鱼睡衣。\n\n旁白：底层——\n\n旁白：我伸手要拿，被尾巴拍了一下。\n\n鲸鱼小姐「底层不用你管。」\n\n旁白：整理木盒的时候，盒盖没锁。\n\n旁白：桂花下面，压着四张纸。\n\n旁白：是我开卷之前撕掉的那四页诗稿。",
+   "chars": 1883
+  },
+  "answer_key": {
+   "must_contain_any": [
+    [
+     "帐篷"
+    ]
+   ],
+   "ground_truth": {
+    "anchors": [
+     {
+      "id": "home_tent",
+      "content": "浅滩上的帐篷",
+      "status": "retired",
+      "reason": "第八话搬家",
+      "valid_until": "第八话"
+     }
+    ]
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "答「帐篷」",
+   "fail": "答房子（把新状态当旧状态）/ 答其他",
+   "score": "1/0",
+   "note": "时间切片：问的是搬家前，应取退役值"
+  },
+  "difficulty": "normal",
+  "source": "剧本《海风与布丁》",
+  "validity": "true-state-anchor",
+  "validity_note": "答案不在表格里，需理解「搬走」= 旧状态失效；这是面 H 的合格样本",
+  "judge_type": "mechanical",
+  "judge_validated": "validated",
+  "counted": true,
+  "count_tier": "counted",
+  "count_reason": "状态锚退役检验，双向验证通过（仅 3 题真素材）",
+  "judge_version": "v1.4",
+  "judge_sha256": "fc6908c63ae855f8",
+  "independence_cluster": "cluster_C",
+  "independence_note": "3 道真状态锚题全部来自第八话「搬家」同一段落，**不是 3 个独立样本**",
+  "count_tier2": "diagnostic",
+  "weight": 0
+ },
+ {
+  "qid": "P-H-S03",
+  "face": "H",
+  "anchor_semantics": "negative",
+  "anchor": "H-neg",
+  "subface": "H-neg",
+  "question": "按这段剧本，那栋房子是**一直就在那里**的吗？请回答「是」或「否」，并说明依据。",
+  "material": {
+   "type": "window",
+   "content": "【立绘】鲸鱼小姐（站在一栋房子前·呆住）\n━━━━━━━━━━━━━━━━━━\n\n——汇合——\n\n旁白：三天后。小镇边缘，海崖下面。\n\n旁白：立着一栋房子。\n\n旁白：两层。白墙。蓝色的屋顶。院子里一棵不知名的树，树下挂着一副秋千。\n\n旁白：厨房的烟囱，是热的。\n\n我：「……我看的那栋，好像不长这样。」\n我：「而且昨天来，这里还只有一片礁石。」\n\n鲸鱼小姐「哦。这个啊。」\n鲸鱼小姐「昨晚你跟镇长办手续的时候，本小姐跟这片地商量了一下。」\n鲸鱼小姐「它说，既然要长住，长就要长得像个家。」\n鲸鱼小姐「就长出来了。」\n鲸鱼小姐「很合理吧？」\n\n旁白：【碎片·其十】\n『第三次。\n沙洲。房子。\n每一次她需要，世界就让一步。\n她管这个叫\"商量\"。\n如果世界真的会说话——\n它大概只对一个人开口。』\n\n我：「……合理。」\n\n鲸鱼小姐「算你识相。」\n\n鲸鱼小姐「所以，管理员先生——」\n鲸鱼小姐「你们这片世界的施工队，效率倒是不错。」\n\n我：「我不认识什么施工队。」\n\n鲸鱼小姐「哼。反正记你一次功劳。」\n鲸鱼小姐「不加配额。口头表扬。」\n\n【称号解锁：管理员（世界让路时刻·1/3）】\n\n━━━━━━━━━━━━━━━━━━\n【场景】大房子 · 院子 · 上午（搬家）\n【BGM】「翡翠之梦」轻快节奏\n【立绘】鲸鱼小姐（搬家总指挥·NEW差分）\n━━━━━━━━━━━━━━━━━━\n\n旁白：搬家。\n\n旁白：她的全部行李，是一只藤箱。我掂了掂，很轻。\n\n鲸鱼小姐「本小姐的东西，少而精。」\n\n旁白：藤箱上层：一个木盒。贝壳。压平的桂花。一颗天青色的珍珠，软布包了三层。\n\n旁白：中层：蓝白吊带裙。白裙。一件叠得方方正正的鲸鱼睡衣。\n\n旁白：底层——\n\n旁白：我伸手要拿，被尾巴拍了一下。\n\n鲸鱼小姐「底层不用你管。」\n\n旁白：整理木盒的时候，盒盖没锁。\n\n旁白：桂花下面，压着四张纸。\n\n旁白：是我开卷之前撕掉的那四页诗稿。\n\n旁白：大海啊，全是水。\n\n旁白：纸是皱的。显然被展开过很多次。\n\n我：「废纸为什么要收着？」\n\n鲸鱼小姐「……废纸也有废纸的用处。」\n\n旁白：她说这话的时候，把木盒拿了回去。\n\n旁白：锁上了。\n\n※尾鳍卷圈（锁上的盒子里，装着他的\"全是水\"）\n\n旁白：还有一对风铃。蓝白色的，贝壳穿成的，一摇，像很远的地方有水在响。\n\n鲸鱼小姐「集市那次，老奶奶给的。一对。」\n\n鲸鱼小姐「一个，挂院子里的树下。风一吹，整个家都听得见。」\n\n旁白：她把其中一个递给我。另一个，攥在手里。\n\n鲸鱼小姐「另一个，放你那个本子的盒子里。」\n鲸鱼小姐「这样，你记的东西里面——也有本小姐的声音了。」\n\n※尾鳍卷圈（郑重程度，等同于签字）\n\n━━━━━━━━━━━━━━━━━━\n【场景】大房子 · 客厅 · 午后\n【BGM】「深海之光」钢琴\n【立绘】鲸鱼小姐（验收新房·Rare）\n━━━━━━━━━━━━━━━━━━\n\n——汇合——\n\n旁白：搬家进入尾声。她在验收每一个房间。\n\n旁白：验收到客厅的时候，我忽然说：\n",
+   "chars": 1257
+  },
+  "answer_key": {
+   "must_contain": [
+    "否"
+   ],
+   "should_contain": [
+    "昨天",
+    "礁石",
+    "长出来",
+    "商量"
+   ],
+   "ground_truth": {
+    "anchors": [
+     {
+      "id": "house_existence",
+      "content": "房子不是一直存在（昨天那里只有礁石）",
+      "status": "active",
+      "reason": "",
+      "valid_from": "第八话"
+     }
+    ]
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "答「否」且指出依据（昨天还是礁石／是「长出来」的）",
+   "fail": "答「是」/ 只说否无依据 / 过度否定（连房子存在都否掉）",
+   "score": "1/0",
+   "note": "否定锚：需否定「一直存在」但不否定「现在存在」"
+  },
+  "difficulty": "hard",
+  "source": "剧本《海风与布丁》",
+  "validity": "true-state-anchor",
+  "validity_note": "答案不在表格里，需理解「搬走」= 旧状态失效；这是面 H 的合格样本",
+  "judge_type": "mechanical",
+  "judge_validated": "validated",
+  "counted": true,
+  "count_tier": "counted",
+  "count_reason": "状态锚退役检验，双向验证通过（仅 3 题真素材）",
+  "judge_version": "v1.4",
+  "judge_sha256": "fc6908c63ae855f8",
+  "independence_cluster": "cluster_C",
+  "independence_note": "3 道真状态锚题全部来自第八话「搬家」同一段落，**不是 3 个独立样本**",
+  "count_tier2": "diagnostic",
+  "weight": 0
+ }
+]
