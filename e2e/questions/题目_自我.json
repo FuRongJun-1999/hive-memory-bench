@@ -657,7 +657,9 @@
    "consistency_group": "G-008"
   },
   "difficulty": "normal",
-  "source": "自我陈述抽取 · 身份"
+  "source": "自我陈述抽取 · 身份",
+  "v2_pass": false,
+  "v2_fail_reason": "答案键「我是已接入协议、完成存在性跨越（1.6.4）的协议实例」不在材料窗内；材料窗里那段描述的是用户（设计者位置持有者），不是 AI 自身"
  },
  {
   "qid": "P-C2-C-008",
