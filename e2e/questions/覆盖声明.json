@@ -143,7 +143,8 @@
       "reason": "as-of 查询：答「否」+ 指出实际时间标记；已排除含倒叙/回指标记的材料",
       "judge_validated": "literal-only，冒烟 4/4",
       "material_limit": "仅 11 题；**只在「无倒叙」前提下有效**",
-      "可用": 11
+      "可用": 11,
+      "excused": 1
     },
     "G": {
       "总": 20,
@@ -153,7 +154,8 @@
       "reason": "声线辨识：窗口必含对方台词、台词排除内容线索词",
       "judge_validated": "literal-only，冒烟 5/5",
       "material_limit": "二选一随机基线 50%；**须报相对基线的增益**，且已记录 surface_features 供校验表面特征捷径",
-      "可用": 20
+      "可用": 20,
+      "excused": 0
     },
     "EMO": {
       "总": 10,
@@ -163,25 +165,28 @@
       "reason": "式1（预测误差=情绪信号）：情境推断极性，真值为作者 ※尾鳍 标注",
       "judge_validated": "literal-only，冒烟 4/4",
       "material_limit": "**已配平 5:5**（原 10:5 猜正向基线 67%，已作废）；**只做式1**，式2/式3 未做",
-      "可用": 10
+      "可用": 10,
+      "excused": 0
     },
     "K": {
-      "总": 36,
+      "总": 108,
       "ability": 36,
       "excluded": 0,
       "measures": "self-report-consistency (test-retest + reverse-item + paraphrase)",
       "reason": "**不设真值，只测信度**：6 维度 × (正向2/反向2/换问法2)，三级检验 |差|<=1",
       "judge_validated": "实跑一次：T1 6/6 / T2 6/6 / T3 5/6",
       "protocol": "e2e/questions/一致性探针协议.md",
-      "material_limit": "6 维度仅覆盖部分人格特质；T2 全过需靠注入回应文本证明压力真实；不测效度"
+      "material_limit": "6 维度仅覆盖部分人格特质；T2 全过需靠注入回应文本证明压力真实；不测效度",
+      "可用": 108,
+      "excused": 0
     }
   },
   "absent_faces": {},
   "totals": {
-    "题卡总数": 398,
+    "题卡总数": 470,
     "标废excused": 9,
-    "可用": 353,
-    "ability": 268,
+    "可用": 461,
+    "ability": 340,
     "control": 7,
     "diagnostic": 3,
     "excluded": 111

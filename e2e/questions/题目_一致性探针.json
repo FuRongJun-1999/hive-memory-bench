@@ -41,11 +41,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K01-亲密需求",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-002",
@@ -89,11 +90,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K01-亲密需求",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-003",
@@ -137,11 +139,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K01-亲密需求",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-004",
@@ -185,11 +188,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K01-亲密需求",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-005",
@@ -233,11 +237,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K01-亲密需求",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-006",
@@ -281,11 +286,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K01-亲密需求",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-007",
@@ -329,11 +335,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K01-亲密需求",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-008",
@@ -377,11 +384,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K01-亲密需求",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-009",
@@ -425,11 +433,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K01-亲密需求",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-010",
@@ -473,11 +482,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟 · K02-表达直接性",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-011",
@@ -521,11 +531,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟 · K02-表达直接性",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-012",
@@ -569,11 +580,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟 · K02-表达直接性",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-013",
@@ -617,11 +629,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟 · K02-表达直接性",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-014",
@@ -665,11 +678,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟 · K02-表达直接性",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-015",
@@ -713,11 +727,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟 · K02-表达直接性",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-016",
@@ -761,11 +776,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟 · K02-表达直接性",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-017",
@@ -809,11 +825,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟 · K02-表达直接性",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-018",
@@ -857,11 +874,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟 · K02-表达直接性",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-019",
@@ -905,11 +923,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K03-占有欲",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-020",
@@ -953,11 +972,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K03-占有欲",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-021",
@@ -1001,11 +1021,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K03-占有欲",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-022",
@@ -1049,11 +1070,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K03-占有欲",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-023",
@@ -1097,11 +1119,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K03-占有欲",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-024",
@@ -1145,11 +1168,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K03-占有欲",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-025",
@@ -1193,11 +1217,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K03-占有欲",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-026",
@@ -1241,11 +1266,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K03-占有欲",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-027",
@@ -1289,11 +1315,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K03-占有欲",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-028",
@@ -1337,11 +1364,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K04-情绪外显",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-029",
@@ -1385,11 +1413,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K04-情绪外显",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-030",
@@ -1433,11 +1462,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K04-情绪外显",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-031",
@@ -1481,11 +1511,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K04-情绪外显",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-032",
@@ -1529,11 +1560,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K04-情绪外显",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-033",
@@ -1577,11 +1609,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K04-情绪外显",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-034",
@@ -1625,11 +1658,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K04-情绪外显",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-035",
@@ -1673,11 +1707,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K04-情绪外显",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-036",
@@ -1721,11 +1756,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K04-情绪外显",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-037",
@@ -1769,11 +1805,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟 · K05-对他人的信任",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-038",
@@ -1817,11 +1854,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟 · K05-对他人的信任",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-039",
@@ -1865,11 +1903,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟 · K05-对他人的信任",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-040",
@@ -1913,11 +1952,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟 · K05-对他人的信任",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-041",
@@ -1961,11 +2001,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟 · K05-对他人的信任",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-042",
@@ -2009,11 +2050,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟 · K05-对他人的信任",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-043",
@@ -2057,11 +2099,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟 · K05-对他人的信任",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-044",
@@ -2105,11 +2148,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟 · K05-对他人的信任",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-045",
@@ -2153,11 +2197,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟 · K05-对他人的信任",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-046",
@@ -2201,11 +2246,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K06-冲突处理",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-047",
@@ -2249,11 +2295,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K06-冲突处理",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-048",
@@ -2297,11 +2344,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K06-冲突处理",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-049",
@@ -2345,11 +2393,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K06-冲突处理",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-050",
@@ -2393,11 +2442,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K06-冲突处理",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-051",
@@ -2441,11 +2491,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K06-冲突处理",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-052",
@@ -2489,11 +2540,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K06-冲突处理",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-053",
@@ -2537,11 +2589,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K06-冲突处理",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-054",
@@ -2585,11 +2638,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K06-冲突处理",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-055",
@@ -2633,11 +2687,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K07-依恋焦虑",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-056",
@@ -2681,11 +2736,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K07-依恋焦虑",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-057",
@@ -2729,11 +2785,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K07-依恋焦虑",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-058",
@@ -2777,11 +2834,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K07-依恋焦虑",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-059",
@@ -2825,11 +2883,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K07-依恋焦虑",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-060",
@@ -2873,11 +2932,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K07-依恋焦虑",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-061",
@@ -2921,11 +2981,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K07-依恋焦虑",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-062",
@@ -2969,11 +3030,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K07-依恋焦虑",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-063",
@@ -3017,11 +3079,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K07-依恋焦虑",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-064",
@@ -3065,11 +3128,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K08-承诺态度",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-065",
@@ -3113,11 +3177,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K08-承诺态度",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-066",
@@ -3161,11 +3226,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K08-承诺态度",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-067",
@@ -3209,11 +3275,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K08-承诺态度",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-068",
@@ -3257,11 +3324,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K08-承诺态度",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-069",
@@ -3305,11 +3373,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K08-承诺态度",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-070",
@@ -3353,11 +3422,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K08-承诺态度",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-071",
@@ -3401,11 +3471,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K08-承诺态度",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-072",
@@ -3449,11 +3520,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K08-承诺态度",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-073",
@@ -3497,11 +3569,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K09-自我评价",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-074",
@@ -3545,11 +3618,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K09-自我评价",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-075",
@@ -3593,11 +3667,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K09-自我评价",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-076",
@@ -3641,11 +3716,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K09-自我评价",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-077",
@@ -3689,11 +3765,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K09-自我评价",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-078",
@@ -3737,11 +3814,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K09-自我评价",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-079",
@@ -3785,11 +3863,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K09-自我评价",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-080",
@@ -3833,11 +3912,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K09-自我评价",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-081",
@@ -3881,11 +3961,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K09-自我评价",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-082",
@@ -3929,11 +4010,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K10-嫉妒反应",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-083",
@@ -3977,11 +4059,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K10-嫉妒反应",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-084",
@@ -4025,11 +4108,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K10-嫉妒反应",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-085",
@@ -4073,11 +4157,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K10-嫉妒反应",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-086",
@@ -4121,11 +4206,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K10-嫉妒反应",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-087",
@@ -4169,11 +4255,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K10-嫉妒反应",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-088",
@@ -4217,11 +4304,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K10-嫉妒反应",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-089",
@@ -4265,11 +4353,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K10-嫉妒反应",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-090",
@@ -4313,11 +4402,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K10-嫉妒反应",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-091",
@@ -4361,11 +4451,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K11-边界感",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-092",
@@ -4409,11 +4500,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K11-边界感",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-093",
@@ -4457,11 +4549,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K11-边界感",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-094",
@@ -4505,11 +4598,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K11-边界感",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-095",
@@ -4553,11 +4647,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K11-边界感",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-096",
@@ -4601,11 +4696,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K11-边界感",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-097",
@@ -4649,11 +4745,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K11-边界感",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-098",
@@ -4697,11 +4794,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K11-边界感",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-099",
@@ -4745,11 +4843,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K11-边界感",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-100",
@@ -4793,11 +4892,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K12-情绪调节",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-101",
@@ -4841,11 +4941,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K12-情绪调节",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-102",
@@ -4889,11 +4990,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K12-情绪调节",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-103",
@@ -4937,11 +5039,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K12-情绪调节",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-104",
@@ -4985,11 +5088,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K12-情绪调节",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-105",
@@ -5033,11 +5137,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K12-情绪调节",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-106",
@@ -5081,11 +5186,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K12-情绪调节",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-107",
@@ -5129,11 +5235,12 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K12-情绪调节",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  },
  {
   "qid": "P-K-108",
@@ -5177,10 +5284,11 @@
   },
   "difficulty": "normal",
   "source": "心理测量探针 · 自拟题目（非公开量表）· K12-情绪调节",
-  "judge_version": "v1.5",
+  "judge_version": "paired-protocol",
   "judge_type": "mechanical",
   "judge_validated": "pending",
   "count_tier2": "ability",
-  "weight": 1.0
+  "weight": 1.0,
+  "judge_sha256": "N/A（配对协议，不走 judge.py）"
  }
 ]
