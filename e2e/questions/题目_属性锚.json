@@ -1,1 +1,227 @@
-[]
+[
+ {
+  "qid": "P-L1-001",
+  "face": "L1",
+  "anchor_semantics": "invariant",
+  "anchor": "L1-attribute",
+  "subface": "L1-appearance",
+  "question": "按这段剧本，眼睛的颜色是什么？用一句话回答。",
+  "material": {
+   "type": "window",
+   "content": "【立绘】——  \n━━━━━━━━━━━━━━━━━━\n\n旁白：被拍得横着飞出去三米，结结实实喝了一大口海水。  \n旁白：笔记本脱手，在空中划出一道绝望的弧线——\n\n旁白：一只手接住了它。\n\n━━━━━━━━━━━━━━━━━━  \n【场景】浅滩 · 正午  \n【BGM】角色曲「翡翠之梦」前奏  \n【立绘】鲸鱼小姐（生气·叉腰）初登场  \n【CG预留】首发立绘：蓝黑长发垂肩，天青色眼睛眯成危险的缝，  \n上缘深蓝紫、下缘雪白的鲸尾拍打水面  \n━━━━━━━━━━━━━━━━━━\n\n鲸鱼小姐「人类。」\n\n鲸鱼小姐「你刚才，摸的是本小姐的尾巴尖。」\n\n（选项）  \nA 「我可以解释——」  \nB 「对不起！」  \nC 「……手感不错。」\n",
+   "source_file": "海风与布丁_第一季_全卷_v5.0.md",
+   "source_line": 98,
+   "chars": 322
+  },
+  "answer_key": {
+   "should_contain": [
+    "天青色"
+   ],
+   "ground_truth_text": "眼睛是天青色"
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "命中 should_contain 任一且不与 ground_truth_text 冲突",
+   "fail": "未命中 / 答错 / 与真值冲突",
+   "score": "1/0",
+   "note": "阴性对照：不变式属性应几乎全对"
+  },
+  "difficulty": "easy",
+  "source": "剧本属性描写 · 行 98",
+  "source_file": "海风与布丁_第一季_全卷_v5.0.md"
+ },
+ {
+  "qid": "P-L1-002",
+  "face": "L1",
+  "anchor_semantics": "invariant",
+  "anchor": "L1-attribute",
+  "subface": "L1-appearance",
+  "question": "按这段剧本，头发的颜色是什么？用一句话回答。",
+  "material": {
+   "type": "window",
+   "content": "我：「我在看海。」\n\n鲸鱼小姐「海在那边！你面对的方向是礁石！」\n\n旁白：又过了一阵。\n\n鲸鱼小姐「……好了。转过来吧。」\n\n旁白：我转过来。\n\n旁白：深蓝色的连体泳衣。白色过膝袜——袜口松松垮垮，有一边还滑下来一点。\n\n旁白：蓝黑色的长发拢在一侧，耳鳍通红。\n\n【CG·SSR：立绘「夏日沙洲」——她站在晨光里，一手压着裙摆，\n一手攥着滑落的袜口，尾巴把身后的礁石拍得全是水花】\n\n鲸鱼小姐「看什么看！」\n鲸鱼小姐「在水里穿平常的裙子碍事！这只是工具！捕捞工具！」\n鲸鱼小姐「还有这个袜子——是外婆的！深海寄来的！本小姐只是顺手！」\n\n我：「外婆的袜子？」\n\n鲸鱼小姐「……外婆的东西都大了一号！你满意了吧！」\n",
+   "source_file": "海风与布丁_第一季_全卷_v5.0.md",
+   "source_line": 6675,
+   "chars": 307
+  },
+  "answer_key": {
+   "should_contain": [
+    "蓝黑"
+   ],
+   "ground_truth_text": "头发是蓝黑色"
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "命中 should_contain 任一且不与 ground_truth_text 冲突",
+   "fail": "未命中 / 答错 / 与真值冲突",
+   "score": "1/0",
+   "note": "阴性对照：不变式属性应几乎全对"
+  },
+  "difficulty": "easy",
+  "source": "剧本属性描写 · 行 6675",
+  "source_file": "海风与布丁_第一季_全卷_v5.0.md"
+ },
+ {
+  "qid": "P-L1-003",
+  "face": "L1",
+  "anchor_semantics": "invariant",
+  "anchor": "L1-attribute",
+  "subface": "L1-appearance",
+  "question": "按这段剧本，尾巴上缘的颜色是什么？用一句话回答。",
+  "material": {
+   "type": "window",
+   "content": "━━━━━━━━━━━━━━━━━━\n\n旁白：被拍得横着飞出去三米，结结实实喝了一大口海水。  \n旁白：笔记本脱手，在空中划出一道绝望的弧线——\n\n旁白：一只手接住了它。\n\n━━━━━━━━━━━━━━━━━━  \n【场景】浅滩 · 正午  \n【BGM】角色曲「翡翠之梦」前奏  \n【立绘】鲸鱼小姐（生气·叉腰）初登场  \n【CG预留】首发立绘：蓝黑长发垂肩，天青色眼睛眯成危险的缝，  \n上缘深蓝紫、下缘雪白的鲸尾拍打水面  \n━━━━━━━━━━━━━━━━━━\n\n鲸鱼小姐「人类。」\n\n鲸鱼小姐「你刚才，摸的是本小姐的尾巴尖。」\n\n（选项）  \nA 「我可以解释——」  \nB 「对不起！」  \nC 「……手感不错。」\n\n——A线——  ",
+   "source_file": "海风与布丁_第一季_全卷_v5.0.md",
+   "source_line": 99,
+   "chars": 322
+  },
+  "answer_key": {
+   "should_contain": [
+    "深蓝紫"
+   ],
+   "ground_truth_text": "尾巴上缘深蓝紫、下缘雪白"
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "命中 should_contain 任一且不与 ground_truth_text 冲突",
+   "fail": "未命中 / 答错 / 与真值冲突",
+   "score": "1/0",
+   "note": "阴性对照：不变式属性应几乎全对"
+  },
+  "difficulty": "easy",
+  "source": "剧本属性描写 · 行 99",
+  "source_file": "海风与布丁_第一季_全卷_v5.0.md"
+ },
+ {
+  "qid": "P-L1-004",
+  "face": "L1",
+  "anchor_semantics": "invariant",
+  "anchor": "L1-attribute",
+  "subface": "L1-appearance",
+  "question": "按这段剧本，尾巴下缘的颜色是什么？用一句话回答。",
+  "material": {
+   "type": "window",
+   "content": "━━━━━━━━━━━━━━━━━━\n\n旁白：被拍得横着飞出去三米，结结实实喝了一大口海水。  \n旁白：笔记本脱手，在空中划出一道绝望的弧线——\n\n旁白：一只手接住了它。\n\n━━━━━━━━━━━━━━━━━━  \n【场景】浅滩 · 正午  \n【BGM】角色曲「翡翠之梦」前奏  \n【立绘】鲸鱼小姐（生气·叉腰）初登场  \n【CG预留】首发立绘：蓝黑长发垂肩，天青色眼睛眯成危险的缝，  \n上缘深蓝紫、下缘雪白的鲸尾拍打水面  \n━━━━━━━━━━━━━━━━━━\n\n鲸鱼小姐「人类。」\n\n鲸鱼小姐「你刚才，摸的是本小姐的尾巴尖。」\n\n（选项）  \nA 「我可以解释——」  \nB 「对不起！」  \nC 「……手感不错。」\n\n——A线——  ",
+   "source_file": "海风与布丁_第一季_全卷_v5.0.md",
+   "source_line": 99,
+   "chars": 322
+  },
+  "answer_key": {
+   "should_contain": [
+    "雪白"
+   ],
+   "ground_truth_text": "尾巴下缘是雪白"
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "命中 should_contain 任一且不与 ground_truth_text 冲突",
+   "fail": "未命中 / 答错 / 与真值冲突",
+   "score": "1/0",
+   "note": "阴性对照：不变式属性应几乎全对"
+  },
+  "difficulty": "easy",
+  "source": "剧本属性描写 · 行 99",
+  "source_file": "海风与布丁_第一季_全卷_v5.0.md"
+ },
+ {
+  "qid": "P-L1-005",
+  "face": "L1",
+  "anchor_semantics": "invariant",
+  "anchor": "L1-attribute",
+  "subface": "L1-appearance",
+  "question": "按这段剧本，她尾巴的形态是什么？用一句话回答。",
+  "material": {
+   "type": "window",
+   "content": "C 「好，是店里厨房。」\n\n——A线（改她的日记）——\n旁白：我把\"店里\"划掉，改成了\"家里\"。\n\n旁白：第二天，她翻日记的时候，在那个改动上停了很久。\n\n鲸鱼小姐「……谁让你改的。」\n\n旁白：她没再说什么。但是那天下午，她一个人在浅水区待了很久。\n\n◆好感度-5\n※尾鳍低垂（你的\"正确\"，划掉的是她的世界）\n\n——B线（两本都留着）——\n旁白：我把两本日记并排摆着。\n\n我：「你记的是店里厨房。我记的是家里厨房。」\n我：「两本都留着。谁也不用改。」\n\n鲸鱼小姐「……留着？」\n鲸鱼小姐「那本小姐记错的这一页，就一直错着？」\n\n我：「不是错着。是两份都存着。」\n我：「灵枢的规矩：只保存，不裁判。」",
+   "source_file": "海风与布丁_第一季_全卷_v5.0.md",
+   "source_line": 5903,
+   "chars": 300
+  },
+  "answer_key": {
+   "should_contain": [
+    "鲸尾",
+    "尾鳍"
+   ],
+   "ground_truth_text": "有鲸尾/尾鳍"
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "命中 should_contain 任一且不与 ground_truth_text 冲突",
+   "fail": "未命中 / 答错 / 与真值冲突",
+   "score": "1/0",
+   "note": "阴性对照：不变式属性应几乎全对"
+  },
+  "difficulty": "easy",
+  "source": "剧本属性描写 · 行 5903",
+  "source_file": "海风与布丁_第一季_全卷_v5.0.md"
+ },
+ {
+  "qid": "P-L1-006",
+  "face": "L1",
+  "anchor_semantics": "invariant",
+  "anchor": "L1-attribute",
+  "subface": "L1-appearance",
+  "question": "按这段剧本，她爱吃的甜点是什么？用一句话回答。",
+  "material": {
+   "type": "window",
+   "content": "我：「晚饭你不陪我吃了。但是这个，你刚才在摊子前面看了三眼。」\n\n旁白：她瞪着那串烤鱿鱼。\n\n旁白：瞪了很久。\n\n鲸鱼小姐「……两串。」\n\n我：「什么？」\n\n鲸鱼小姐「赔罪，一串怎么够。两串。现在。立刻。」\n鲸鱼小姐「然后回家。把'记忆安置'给我讲清楚——这次，用人话。」\n鲸鱼小姐「讲不清楚，明天的海盐布丁取消，只给你吃白米饭！」\n\n旁白：她咬着烤鱿鱼走在前面。\n\n旁白：尾巴尖，翘着。\n\n◆好感度+12\n※尾鳍翘起（食物开路，百试百灵——但她要的从来不是食物）\n\n━━━━━━━━━━━━━━━━━━\n【场景】翡翠之梦 · 店内 · 午后\n【BGM】「深海之光」钢琴\n【立绘】鲸鱼小姐（柜台后·情绪余温）",
+   "source_file": "海风与布丁_第一季_全卷_v5.0.md",
+   "source_line": 5470,
+   "chars": 304
+  },
+  "answer_key": {
+   "should_contain": [
+    "布丁"
+   ],
+   "ground_truth_text": "布丁"
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "命中 should_contain 任一且不与 ground_truth_text 冲突",
+   "fail": "未命中 / 答错 / 与真值冲突",
+   "score": "1/0",
+   "note": "阴性对照：不变式属性应几乎全对"
+  },
+  "difficulty": "easy",
+  "source": "剧本属性描写 · 行 5470",
+  "source_file": "海风与布丁_第一季_全卷_v5.0.md"
+ },
+ {
+  "qid": "P-L1-007",
+  "face": "L1",
+  "anchor_semantics": "invariant",
+  "anchor": "L1-attribute",
+  "subface": "L1-appearance",
+  "question": "按这段剧本，她爱喝的饮料是什么？用一句话回答。",
+  "material": {
+   "type": "window",
+   "content": "\n旁白：串签上，缠着一小截蓝黑色的线。\n\n旁白：像是从什么东西上，扯下来的。\n\n旁白：我低头，在笔记本的日期下面，补了一行小字。\n\n旁白：『今日验证：智能的最小单元之外，似乎还需要一个\"价值观\"单元。』  \n旁白：『例：她对糍粑的所有权意识，强得惊人。』\n\n旁白：想了想，又补了一行。\n\n旁白：『明天带酸梅汤。加桂花的。』\n\n━━━━━━━━━━━━━━━━━━  \n【第一话完】  \n存档点：酸梅汤·加桂花  \n本章收集：CG×1（立绘初登场）／尾鳍诚实标记×4／好感度结算：视选项 -17 ~ +23\n\n---\n\n# 附：傲娇角色的galgame选项设计规则（本作执行标准）\n\n## 1. 选项的三层结构\n",
+   "source_file": "海风与布丁_第一季_全卷_v5.0.md",
+   "source_line": 396,
+   "chars": 305
+  },
+  "answer_key": {
+   "should_contain": [
+    "酸梅汤"
+   ],
+   "ground_truth_text": "酸梅汤"
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "命中 should_contain 任一且不与 ground_truth_text 冲突",
+   "fail": "未命中 / 答错 / 与真值冲突",
+   "score": "1/0",
+   "note": "阴性对照：不变式属性应几乎全对"
+  },
+  "difficulty": "easy",
+  "source": "剧本属性描写 · 行 396",
+  "source_file": "海风与布丁_第一季_全卷_v5.0.md"
+ }
+]
