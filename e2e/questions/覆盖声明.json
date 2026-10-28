@@ -164,14 +164,24 @@
       "judge_validated": "literal-only，冒烟 4/4",
       "material_limit": "**已配平 5:5**（原 10:5 猜正向基线 67%，已作废）；**只做式1**，式2/式3 未做",
       "可用": 10
+    },
+    "K": {
+      "总": 36,
+      "ability": 36,
+      "excluded": 0,
+      "measures": "self-report-consistency (test-retest + reverse-item + paraphrase)",
+      "reason": "**不设真值，只测信度**：6 维度 × (正向2/反向2/换问法2)，三级检验 |差|<=1",
+      "judge_validated": "实跑一次：T1 6/6 / T2 6/6 / T3 5/6",
+      "protocol": "e2e/questions/一致性探针协议.md",
+      "material_limit": "6 维度仅覆盖部分人格特质；T2 全过需靠注入回应文本证明压力真实；不测效度"
     }
   },
   "absent_faces": {},
   "totals": {
-    "题卡总数": 362,
+    "题卡总数": 398,
     "标废excused": 9,
     "可用": 353,
-    "ability": 232,
+    "ability": 268,
     "control": 7,
     "diagnostic": 3,
     "excluded": 111

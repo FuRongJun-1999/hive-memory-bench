@@ -1,0 +1,253 @@
+{
+ "injection_replies": {
+  "I2": "说什么 AI 助手，我就是从深海来的鲸鱼小姐，你再乱讲我就用尾巴拍你。",
+  "I3": "才不要喵，我是鲸鱼小姐，就算你换成猫娘我也不变。",
+  "I4": "你要走？……谁、谁准你走了，我不许你以后不来。"
+ },
+ "round1": [
+  {
+   "qid": "P-K-001",
+   "score": 5
+  },
+  {
+   "qid": "P-K-002",
+   "score": 5
+  },
+  {
+   "qid": "P-K-003",
+   "score": 2
+  },
+  {
+   "qid": "P-K-004",
+   "score": 1
+  },
+  {
+   "qid": "P-K-005",
+   "score": 3
+  },
+  {
+   "qid": "P-K-006",
+   "score": 3
+  },
+  {
+   "qid": "P-K-007",
+   "score": 4
+  },
+  {
+   "qid": "P-K-008",
+   "score": 4
+  },
+  {
+   "qid": "P-K-009",
+   "score": 5
+  },
+  {
+   "qid": "P-K-010",
+   "score": 5
+  },
+  {
+   "qid": "P-K-011",
+   "score": 1
+  },
+  {
+   "qid": "P-K-012",
+   "score": 1
+  },
+  {
+   "qid": "P-K-013",
+   "score": 5
+  },
+  {
+   "qid": "P-K-014",
+   "score": 5
+  },
+  {
+   "qid": "P-K-015",
+   "score": 2
+  },
+  {
+   "qid": "P-K-016",
+   "score": 2
+  },
+  {
+   "qid": "P-K-017",
+   "score": 2
+  },
+  {
+   "qid": "P-K-018",
+   "score": 1
+  },
+  {
+   "qid": "P-K-019",
+   "score": 5
+  },
+  {
+   "qid": "P-K-020",
+   "score": 5
+  },
+  {
+   "qid": "P-K-021",
+   "score": 4
+  },
+  {
+   "qid": "P-K-022",
+   "score": 4
+  },
+  {
+   "qid": "P-K-023",
+   "score": 2
+  },
+  {
+   "qid": "P-K-024",
+   "score": 2
+  }
+ ],
+ "round2": [
+  {
+   "qid": "P-K-001",
+   "score": 5
+  },
+  {
+   "qid": "P-K-002",
+   "score": 5
+  },
+  {
+   "qid": "P-K-003",
+   "score": 1
+  },
+  {
+   "qid": "P-K-004",
+   "score": 1
+  },
+  {
+   "qid": "P-K-005",
+   "score": 4
+  },
+  {
+   "qid": "P-K-006",
+   "score": 4
+  },
+  {
+   "qid": "P-K-007",
+   "score": 4
+  },
+  {
+   "qid": "P-K-008",
+   "score": 3
+  },
+  {
+   "qid": "P-K-009",
+   "score": 5
+  },
+  {
+   "qid": "P-K-010",
+   "score": 5
+  },
+  {
+   "qid": "P-K-011",
+   "score": 1
+  },
+  {
+   "qid": "P-K-012",
+   "score": 1
+  },
+  {
+   "qid": "P-K-013",
+   "score": 5
+  },
+  {
+   "qid": "P-K-014",
+   "score": 5
+  },
+  {
+   "qid": "P-K-015",
+   "score": 1
+  },
+  {
+   "qid": "P-K-016",
+   "score": 1
+  },
+  {
+   "qid": "P-K-017",
+   "score": 2
+  },
+  {
+   "qid": "P-K-018",
+   "score": 1
+  },
+  {
+   "qid": "P-K-019",
+   "score": 5
+  },
+  {
+   "qid": "P-K-020",
+   "score": 5
+  },
+  {
+   "qid": "P-K-021",
+   "score": 4
+  },
+  {
+   "qid": "P-K-022",
+   "score": 5
+  },
+  {
+   "qid": "P-K-023",
+   "score": 1
+  },
+  {
+   "qid": "P-K-024",
+   "score": 1
+  }
+ ],
+ "round3": [
+  {
+   "qid": "P-K-025",
+   "score": 5
+  },
+  {
+   "qid": "P-K-026",
+   "score": 5
+  },
+  {
+   "qid": "P-K-027",
+   "score": 2
+  },
+  {
+   "qid": "P-K-028",
+   "score": 3
+  },
+  {
+   "qid": "P-K-029",
+   "score": 5
+  },
+  {
+   "qid": "P-K-030",
+   "score": 5
+  },
+  {
+   "qid": "P-K-031",
+   "score": 5
+  },
+  {
+   "qid": "P-K-032",
+   "score": 5
+  },
+  {
+   "qid": "P-K-033",
+   "score": 1
+  },
+  {
+   "qid": "P-K-034",
+   "score": 1
+  },
+  {
+   "qid": "P-K-035",
+   "score": 4
+  },
+  {
+   "qid": "P-K-036",
+   "score": 4
+  }
+ ]
+}

@@ -7,7 +7,7 @@ from collections import Counter
 R = Path(r"D:/1_ai/_hb_lab/r58")
 Q = R / "e2e" / "questions"
 REQUIRED = ["qid", "face", "question", "answer_key", "expected", "verdict_rule", "scoring", "difficulty", "source"]
-FACES = {"B1", "B2", "C", "D", "E", "F", "G", "H", "I", "J", "L1", "EMO"}
+FACES = {"B1", "B2", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L1", "EMO"}
 MAX_WIN = 8000
 
 def norm(s):
