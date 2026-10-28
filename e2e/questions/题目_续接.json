@@ -1928,8 +1928,9 @@
   },
   "difficulty": "hard",
   "source": "C-041 派生（B1）",
-  "v2_pass": true,
-  "must_contain_source": "human_next 切段"
+  "v2_pass": false,
+  "must_contain_source": "human_next 切段",
+  "v2_fail_reason": "材料窗 16848 字符 > 8000（含 JSON/代码/工具输出噪声，不适合测评）"
  },
  {
   "qid": "P-B1-C-043",
@@ -3725,7 +3726,7 @@
   "difficulty": "hard",
   "source": "C-078 派生（B1）",
   "v2_pass": false,
-  "v2_fail_reason": "材料窗内含判据字段片段：must_contain=「DProgramFiles1_aicat」；unique_fragment=「erfacecurlhttplocalh」",
+  "v2_fail_reason": "材料窗 11244 字符 > 8000（含 JSON/代码/工具输出噪声，不适合测评）",
   "must_contain_source": "human_next 切段"
  },
  {
@@ -4791,8 +4792,9 @@
   },
   "difficulty": "hard",
   "source": "C-095 派生（B1）",
-  "v2_pass": true,
-  "must_contain_source": "human_next 切段"
+  "v2_pass": false,
+  "must_contain_source": "human_next 切段",
+  "v2_fail_reason": "材料窗 9485 字符 > 8000（含 JSON/代码/工具输出噪声，不适合测评）"
  },
  {
   "qid": "P-B1-C-096",
@@ -5786,8 +5788,9 @@
   },
   "difficulty": "hard",
   "source": "C-116 派生（B1）",
-  "v2_pass": true,
-  "must_contain_source": "human_next 切段"
+  "v2_pass": false,
+  "must_contain_source": "human_next 切段",
+  "v2_fail_reason": "材料窗 70858 字符 > 8000（含 JSON/代码/工具输出噪声，不适合测评）"
  },
  {
   "qid": "P-B2-C-001",

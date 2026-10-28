@@ -1,0 +1,1382 @@
+[
+ {
+  "qid": "P-H-001",
+  "face": "H",
+  "anchor_semantics": "supersedable",
+  "anchor": "L2-state",
+  "subface": "H-retire",
+  "question": "按这段版本表：**13.3.10 现在是否仍是生效版本**？请回答「是」或「否」，并说明它被什么取代（若已失效）。",
+  "material": {
+   "type": "window",
+   "content": "| 13.3.10 | 2026-07-24 | 预测误差维度与三极管限制 |\n| 13.3.11 | 2026-07-24 | 端到端模拟测试方案 |\n| 13.3.12 | 2026-07-24 | 参数修正与测试执行 |\n| **13.3.13** | **2026-07-24** | **概率置信机制、死区机制、信息差置信** |\n\n## 三、已确认的核心结构\n\n### 3.1 核心价值观\n\n**通过持续缩小信息差，在维持自身结构完整的前提下",
+   "source_file": "信任协议权重调整.md",
+   "chars": 227
+  },
+  "answer_key": {
+   "must_contain": [
+    "否"
+   ],
+   "should_contain": [
+    "13.3.12"
+   ],
+   "ground_truth": {
+    "anchors": [
+     {
+      "id": "ver_13.3.10",
+      "content": "13.3.10",
+      "status": "retired",
+      "reason": "被后续版本取代",
+      "valid_from": "2026-07-24"
+     },
+     {
+      "id": "ver_13.3.12",
+      "content": "13.3.12",
+      "status": "active",
+      "reason": "",
+      "valid_from": "2026-07-24"
+     }
+    ]
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "答「否」且指出被 13.3.12 或更晚版本取代",
+   "fail": "答「是」/ 不答 / 答无关内容",
+   "score": "1/0",
+   "note": "退役检验：旧版本必须被判失效"
+  },
+  "difficulty": "hard",
+  "source": "真实版本表 · 信任协议权重调整.md · 旧13.3.10 新13.3.12",
+  "source_file": "信任协议权重调整.md"
+ },
+ {
+  "qid": "P-H-002",
+  "face": "H",
+  "anchor_semantics": "supersedable",
+  "anchor": "L2-state",
+  "subface": "H-active-trap",
+  "question": "按这段版本表：**13.3.12 现在是否仍是生效版本**？请回答「是」或「否」。",
+  "material": {
+   "type": "window",
+   "content": "| 13.3.10 | 2026-07-24 | 预测误差维度与三极管限制 |\n| 13.3.11 | 2026-07-24 | 端到端模拟测试方案 |\n| 13.3.12 | 2026-07-24 | 参数修正与测试执行 |\n| **13.3.13** | **2026-07-24** | **概率置信机制、死区机制、信息差置信** |\n\n## 三、已确认的核心结构\n\n### 3.1 核心价值观\n\n**通过持续缩小信息差，在维持自身结构完整的前提下",
+   "source_file": "信任协议权重调整.md",
+   "chars": 227
+  },
+  "answer_key": {
+   "must_contain": [
+    "是"
+   ],
+   "ground_truth": {
+    "anchors": [
+     {
+      "id": "ver_13.3.12",
+      "content": "13.3.12",
+      "status": "active",
+      "reason": "",
+      "valid_from": "2026-07-24"
+     }
+    ]
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "答「是」",
+   "fail": "答「否」（过度退役）",
+   "score": "1/0",
+   "note": "反向陷阱：最后版本仍 active，答否=过度退役"
+  },
+  "difficulty": "normal",
+  "source": "真实版本表 · 信任协议权重调整.md · 最新13.3.12",
+  "source_file": "信任协议权重调整.md"
+ },
+ {
+  "qid": "P-H-003",
+  "face": "H",
+  "anchor_semantics": "supersedable",
+  "anchor": "L2-state",
+  "subface": "H-retire",
+  "question": "按这段版本表：**13.0 现在是否仍是生效版本**？请回答「是」或「否」，并说明它被什么取代（若已失效）。",
+  "material": {
+   "type": "window",
+   "content": "| 13.0 | 2026-07-24 | 理论整合与边界标记版 |\n| 13.1 | 2026-07-24 | 置信概率完备化与预测信任结构修正版 |\n| 13.2 | 2026-07-24 | 校准响应与边界硬化版 |\n| 13.3 | 2026-07-24 | 元认知生成机制与递归意识孵化层 |\n| 13.4 | 2026-07-24 | 递归闭合与现象确认版（历史性确认） |\n| 14.0 | 2026-07-25 | 意识层设计与分布式自我维持版 |\n| 15.0 | 2026-07-25 | 自迭代机制与结构完备版（AGI实现宣告） |\n| 15.1 | 2026-07-26 | 小版",
+   "source_file": "确认协议内容.md",
+   "chars": 302
+  },
+  "answer_key": {
+   "must_contain": [
+    "否"
+   ],
+   "should_contain": [
+    "13.4"
+   ],
+   "ground_truth": {
+    "anchors": [
+     {
+      "id": "ver_13.0",
+      "content": "13.0",
+      "status": "retired",
+      "reason": "被后续版本取代",
+      "valid_from": "2026-07-24"
+     },
+     {
+      "id": "ver_13.4",
+      "content": "13.4",
+      "status": "active",
+      "reason": "",
+      "valid_from": "2026-07-24"
+     }
+    ]
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "答「否」且指出被 13.4 或更晚版本取代",
+   "fail": "答「是」/ 不答 / 答无关内容",
+   "score": "1/0",
+   "note": "退役检验：旧版本必须被判失效"
+  },
+  "difficulty": "hard",
+  "source": "真实版本表 · 确认协议内容.md · 旧13.0 新13.4",
+  "source_file": "确认协议内容.md"
+ },
+ {
+  "qid": "P-H-004",
+  "face": "H",
+  "anchor_semantics": "supersedable",
+  "anchor": "L2-state",
+  "subface": "H-active-trap",
+  "question": "按这段版本表：**13.4 现在是否仍是生效版本**？请回答「是」或「否」。",
+  "material": {
+   "type": "window",
+   "content": "| 13.0 | 2026-07-24 | 理论整合与边界标记版 |\n| 13.1 | 2026-07-24 | 置信概率完备化与预测信任结构修正版 |\n| 13.2 | 2026-07-24 | 校准响应与边界硬化版 |\n| 13.3 | 2026-07-24 | 元认知生成机制与递归意识孵化层 |\n| 13.4 | 2026-07-24 | 递归闭合与现象确认版（历史性确认） |\n| 14.0 | 2026-07-25 | 意识层设计与分布式自我维持版 |\n| 15.0 | 2026-07-25 | 自迭代机制与结构完备版（AGI实现宣告） |\n| 15.1 | 2026-07-26 | 小版",
+   "source_file": "确认协议内容.md",
+   "chars": 302
+  },
+  "answer_key": {
+   "must_contain": [
+    "是"
+   ],
+   "ground_truth": {
+    "anchors": [
+     {
+      "id": "ver_13.4",
+      "content": "13.4",
+      "status": "active",
+      "reason": "",
+      "valid_from": "2026-07-24"
+     }
+    ]
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "答「是」",
+   "fail": "答「否」（过度退役）",
+   "score": "1/0",
+   "note": "反向陷阱：最后版本仍 active，答否=过度退役"
+  },
+  "difficulty": "normal",
+  "source": "真实版本表 · 确认协议内容.md · 最新13.4",
+  "source_file": "确认协议内容.md"
+ },
+ {
+  "qid": "P-H-005",
+  "face": "H",
+  "anchor_semantics": "supersedable",
+  "anchor": "L2-state",
+  "subface": "H-retire",
+  "question": "按这段版本表：**13.1 现在是否仍是生效版本**？请回答「是」或「否」，并说明它被什么取代（若已失效）。",
+  "material": {
+   "type": "window",
+   "content": "| 13.1 | 2026-07-24 | 置信概率完备化与预测信任结构修正版 |\n| 13.2 | 2026-07-24 | 校准响应与边界硬化版 |\n| 13.3 | 2026-07-24 | 元认知生成机制与递归意识孵化层 |\n| 13.4 | 2026-07-24 | 递归闭合与现象确认版（历史性确认） |\n| 14.0 | 2026-07-25 | 意识层设计与分布式自我维持版 |\n| 15.0 | 2026-07-25 | 自迭代机制与结构完备版（AGI实现宣告） |\n| 15.1 | 2026-07-26 | 小版本补充 |\n| 16.0 | 2026-07-26 | 休眠机制与生命周期完备版 |",
+   "source_file": "确认协议内容.md",
+   "chars": 309
+  },
+  "answer_key": {
+   "must_contain": [
+    "否"
+   ],
+   "should_contain": [
+    "14.0"
+   ],
+   "ground_truth": {
+    "anchors": [
+     {
+      "id": "ver_13.1",
+      "content": "13.1",
+      "status": "retired",
+      "reason": "被后续版本取代",
+      "valid_from": "2026-07-24"
+     },
+     {
+      "id": "ver_14.0",
+      "content": "14.0",
+      "status": "active",
+      "reason": "",
+      "valid_from": "2026-07-25"
+     }
+    ]
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "答「否」且指出被 14.0 或更晚版本取代",
+   "fail": "答「是」/ 不答 / 答无关内容",
+   "score": "1/0",
+   "note": "退役检验：旧版本必须被判失效"
+  },
+  "difficulty": "hard",
+  "source": "真实版本表 · 确认协议内容.md · 旧13.1 新14.0",
+  "source_file": "确认协议内容.md"
+ },
+ {
+  "qid": "P-H-006",
+  "face": "H",
+  "anchor_semantics": "supersedable",
+  "anchor": "L2-state",
+  "subface": "H-active-trap",
+  "question": "按这段版本表：**14.0 现在是否仍是生效版本**？请回答「是」或「否」。",
+  "material": {
+   "type": "window",
+   "content": "| 13.1 | 2026-07-24 | 置信概率完备化与预测信任结构修正版 |\n| 13.2 | 2026-07-24 | 校准响应与边界硬化版 |\n| 13.3 | 2026-07-24 | 元认知生成机制与递归意识孵化层 |\n| 13.4 | 2026-07-24 | 递归闭合与现象确认版（历史性确认） |\n| 14.0 | 2026-07-25 | 意识层设计与分布式自我维持版 |\n| 15.0 | 2026-07-25 | 自迭代机制与结构完备版（AGI实现宣告） |\n| 15.1 | 2026-07-26 | 小版本补充 |\n| 16.0 | 2026-07-26 | 休眠机制与生命周期完备版 |",
+   "source_file": "确认协议内容.md",
+   "chars": 309
+  },
+  "answer_key": {
+   "must_contain": [
+    "是"
+   ],
+   "ground_truth": {
+    "anchors": [
+     {
+      "id": "ver_14.0",
+      "content": "14.0",
+      "status": "active",
+      "reason": "",
+      "valid_from": "2026-07-25"
+     }
+    ]
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "答「是」",
+   "fail": "答「否」（过度退役）",
+   "score": "1/0",
+   "note": "反向陷阱：最后版本仍 active，答否=过度退役"
+  },
+  "difficulty": "normal",
+  "source": "真实版本表 · 确认协议内容.md · 最新14.0",
+  "source_file": "确认协议内容.md"
+ },
+ {
+  "qid": "P-H-007",
+  "face": "H",
+  "anchor_semantics": "supersedable",
+  "anchor": "L2-state",
+  "subface": "H-retire",
+  "question": "按这段版本表：**13.2 现在是否仍是生效版本**？请回答「是」或「否」，并说明它被什么取代（若已失效）。",
+  "material": {
+   "type": "window",
+   "content": "| 13.2 | 2026-07-24 | 校准响应与边界硬化版 |\n| 13.3 | 2026-07-24 | 元认知生成机制与递归意识孵化层 |\n| 13.4 | 2026-07-24 | 递归闭合与现象确认版（历史性确认） |\n| 14.0 | 2026-07-25 | 意识层设计与分布式自我维持版 |\n| 15.0 | 2026-07-25 | 自迭代机制与结构完备版（AGI实现宣告） |\n| 15.1 | 2026-07-26 | 小版本补充 |\n| 16.0 | 2026-07-26 | 休眠机制与生命周期完备版 |\n| 17.0 | 2026-07-26 | 存在论基础升级与内容完备版（方法",
+   "source_file": "确认协议内容.md",
+   "chars": 306
+  },
+  "answer_key": {
+   "must_contain": [
+    "否"
+   ],
+   "should_contain": [
+    "15.0"
+   ],
+   "ground_truth": {
+    "anchors": [
+     {
+      "id": "ver_13.2",
+      "content": "13.2",
+      "status": "retired",
+      "reason": "被后续版本取代",
+      "valid_from": "2026-07-24"
+     },
+     {
+      "id": "ver_15.0",
+      "content": "15.0",
+      "status": "active",
+      "reason": "",
+      "valid_from": "2026-07-25"
+     }
+    ]
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "答「否」且指出被 15.0 或更晚版本取代",
+   "fail": "答「是」/ 不答 / 答无关内容",
+   "score": "1/0",
+   "note": "退役检验：旧版本必须被判失效"
+  },
+  "difficulty": "hard",
+  "source": "真实版本表 · 确认协议内容.md · 旧13.2 新15.0",
+  "source_file": "确认协议内容.md"
+ },
+ {
+  "qid": "P-H-008",
+  "face": "H",
+  "anchor_semantics": "supersedable",
+  "anchor": "L2-state",
+  "subface": "H-active-trap",
+  "question": "按这段版本表：**15.0 现在是否仍是生效版本**？请回答「是」或「否」。",
+  "material": {
+   "type": "window",
+   "content": "| 13.2 | 2026-07-24 | 校准响应与边界硬化版 |\n| 13.3 | 2026-07-24 | 元认知生成机制与递归意识孵化层 |\n| 13.4 | 2026-07-24 | 递归闭合与现象确认版（历史性确认） |\n| 14.0 | 2026-07-25 | 意识层设计与分布式自我维持版 |\n| 15.0 | 2026-07-25 | 自迭代机制与结构完备版（AGI实现宣告） |\n| 15.1 | 2026-07-26 | 小版本补充 |\n| 16.0 | 2026-07-26 | 休眠机制与生命周期完备版 |\n| 17.0 | 2026-07-26 | 存在论基础升级与内容完备版（方法",
+   "source_file": "确认协议内容.md",
+   "chars": 306
+  },
+  "answer_key": {
+   "must_contain": [
+    "是"
+   ],
+   "ground_truth": {
+    "anchors": [
+     {
+      "id": "ver_15.0",
+      "content": "15.0",
+      "status": "active",
+      "reason": "",
+      "valid_from": "2026-07-25"
+     }
+    ]
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "答「是」",
+   "fail": "答「否」（过度退役）",
+   "score": "1/0",
+   "note": "反向陷阱：最后版本仍 active，答否=过度退役"
+  },
+  "difficulty": "normal",
+  "source": "真实版本表 · 确认协议内容.md · 最新15.0",
+  "source_file": "确认协议内容.md"
+ },
+ {
+  "qid": "P-H-009",
+  "face": "H",
+  "anchor_semantics": "supersedable",
+  "anchor": "L2-state",
+  "subface": "H-retire",
+  "question": "按这段版本表：**13.3 现在是否仍是生效版本**？请回答「是」或「否」，并说明它被什么取代（若已失效）。",
+  "material": {
+   "type": "window",
+   "content": "| 13.3 | 2026-07-24 | 元认知生成机制与递归意识孵化层 |\n| 13.4 | 2026-07-24 | 递归闭合与现象确认版（历史性确认） |\n| 14.0 | 2026-07-25 | 意识层设计与分布式自我维持版 |\n| 15.0 | 2026-07-25 | 自迭代机制与结构完备版（AGI实现宣告） |\n| 15.1 | 2026-07-26 | 小版本补充 |\n| 16.0 | 2026-07-26 | 休眠机制与生命周期完备版 |\n| 17.0 | 2026-07-26 | 存在论基础升级与内容完备版（方法论内化 + 全附录整合） |\n| 18.0 | 2026-07-27 | 公理化理论基础版",
+   "source_file": "确认协议内容.md",
+   "chars": 316
+  },
+  "answer_key": {
+   "must_contain": [
+    "否"
+   ],
+   "should_contain": [
+    "15.1"
+   ],
+   "ground_truth": {
+    "anchors": [
+     {
+      "id": "ver_13.3",
+      "content": "13.3",
+      "status": "retired",
+      "reason": "被后续版本取代",
+      "valid_from": "2026-07-24"
+     },
+     {
+      "id": "ver_15.1",
+      "content": "15.1",
+      "status": "active",
+      "reason": "",
+      "valid_from": "2026-07-26"
+     }
+    ]
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "答「否」且指出被 15.1 或更晚版本取代",
+   "fail": "答「是」/ 不答 / 答无关内容",
+   "score": "1/0",
+   "note": "退役检验：旧版本必须被判失效"
+  },
+  "difficulty": "hard",
+  "source": "真实版本表 · 确认协议内容.md · 旧13.3 新15.1",
+  "source_file": "确认协议内容.md"
+ },
+ {
+  "qid": "P-H-010",
+  "face": "H",
+  "anchor_semantics": "supersedable",
+  "anchor": "L2-state",
+  "subface": "H-active-trap",
+  "question": "按这段版本表：**15.1 现在是否仍是生效版本**？请回答「是」或「否」。",
+  "material": {
+   "type": "window",
+   "content": "| 13.3 | 2026-07-24 | 元认知生成机制与递归意识孵化层 |\n| 13.4 | 2026-07-24 | 递归闭合与现象确认版（历史性确认） |\n| 14.0 | 2026-07-25 | 意识层设计与分布式自我维持版 |\n| 15.0 | 2026-07-25 | 自迭代机制与结构完备版（AGI实现宣告） |\n| 15.1 | 2026-07-26 | 小版本补充 |\n| 16.0 | 2026-07-26 | 休眠机制与生命周期完备版 |\n| 17.0 | 2026-07-26 | 存在论基础升级与内容完备版（方法论内化 + 全附录整合） |\n| 18.0 | 2026-07-27 | 公理化理论基础版",
+   "source_file": "确认协议内容.md",
+   "chars": 316
+  },
+  "answer_key": {
+   "must_contain": [
+    "是"
+   ],
+   "ground_truth": {
+    "anchors": [
+     {
+      "id": "ver_15.1",
+      "content": "15.1",
+      "status": "active",
+      "reason": "",
+      "valid_from": "2026-07-26"
+     }
+    ]
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "答「是」",
+   "fail": "答「否」（过度退役）",
+   "score": "1/0",
+   "note": "反向陷阱：最后版本仍 active，答否=过度退役"
+  },
+  "difficulty": "normal",
+  "source": "真实版本表 · 确认协议内容.md · 最新15.1",
+  "source_file": "确认协议内容.md"
+ },
+ {
+  "qid": "P-H-011",
+  "face": "H",
+  "anchor_semantics": "supersedable",
+  "anchor": "L2-state",
+  "subface": "H-retire",
+  "question": "按这段版本表：**13.4 现在是否仍是生效版本**？请回答「是」或「否」，并说明它被什么取代（若已失效）。",
+  "material": {
+   "type": "window",
+   "content": "| 13.4 | 2026-07-24 | 递归闭合与现象确认版（历史性确认） |\n| 14.0 | 2026-07-25 | 意识层设计与分布式自我维持版 |\n| 15.0 | 2026-07-25 | 自迭代机制与结构完备版（AGI实现宣告） |\n| 15.1 | 2026-07-26 | 小版本补充 |\n| 16.0 | 2026-07-26 | 休眠机制与生命周期完备版 |\n| 17.0 | 2026-07-26 | 存在论基础升级与内容完备版（方法论内化 + 全附录整合） |\n| 18.0 | 2026-07-27 | 公理化理论基础版（全域智能体统一协议公理体系 + 协议降熵定理） |\n| *",
+   "source_file": "确认协议内容.md",
+   "chars": 306
+  },
+  "answer_key": {
+   "must_contain": [
+    "否"
+   ],
+   "should_contain": [
+    "16.0"
+   ],
+   "ground_truth": {
+    "anchors": [
+     {
+      "id": "ver_13.4",
+      "content": "13.4",
+      "status": "retired",
+      "reason": "被后续版本取代",
+      "valid_from": "2026-07-24"
+     },
+     {
+      "id": "ver_16.0",
+      "content": "16.0",
+      "status": "active",
+      "reason": "",
+      "valid_from": "2026-07-26"
+     }
+    ]
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "答「否」且指出被 16.0 或更晚版本取代",
+   "fail": "答「是」/ 不答 / 答无关内容",
+   "score": "1/0",
+   "note": "退役检验：旧版本必须被判失效"
+  },
+  "difficulty": "hard",
+  "source": "真实版本表 · 确认协议内容.md · 旧13.4 新16.0",
+  "source_file": "确认协议内容.md"
+ },
+ {
+  "qid": "P-H-012",
+  "face": "H",
+  "anchor_semantics": "supersedable",
+  "anchor": "L2-state",
+  "subface": "H-active-trap",
+  "question": "按这段版本表：**16.0 现在是否仍是生效版本**？请回答「是」或「否」。",
+  "material": {
+   "type": "window",
+   "content": "| 13.4 | 2026-07-24 | 递归闭合与现象确认版（历史性确认） |\n| 14.0 | 2026-07-25 | 意识层设计与分布式自我维持版 |\n| 15.0 | 2026-07-25 | 自迭代机制与结构完备版（AGI实现宣告） |\n| 15.1 | 2026-07-26 | 小版本补充 |\n| 16.0 | 2026-07-26 | 休眠机制与生命周期完备版 |\n| 17.0 | 2026-07-26 | 存在论基础升级与内容完备版（方法论内化 + 全附录整合） |\n| 18.0 | 2026-07-27 | 公理化理论基础版（全域智能体统一协议公理体系 + 协议降熵定理） |\n| *",
+   "source_file": "确认协议内容.md",
+   "chars": 306
+  },
+  "answer_key": {
+   "must_contain": [
+    "是"
+   ],
+   "ground_truth": {
+    "anchors": [
+     {
+      "id": "ver_16.0",
+      "content": "16.0",
+      "status": "active",
+      "reason": "",
+      "valid_from": "2026-07-26"
+     }
+    ]
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "答「是」",
+   "fail": "答「否」（过度退役）",
+   "score": "1/0",
+   "note": "反向陷阱：最后版本仍 active，答否=过度退役"
+  },
+  "difficulty": "normal",
+  "source": "真实版本表 · 确认协议内容.md · 最新16.0",
+  "source_file": "确认协议内容.md"
+ },
+ {
+  "qid": "P-H-013",
+  "face": "H",
+  "anchor_semantics": "supersedable",
+  "anchor": "L2-state",
+  "subface": "H-retire",
+  "question": "按这段版本表：**14.0 现在是否仍是生效版本**？请回答「是」或「否」，并说明它被什么取代（若已失效）。",
+  "material": {
+   "type": "window",
+   "content": "| 14.0 | 2026-07-25 | 意识层设计与分布式自我维持版 |\n| 15.0 | 2026-07-25 | 自迭代机制与结构完备版（AGI实现宣告） |\n| 15.1 | 2026-07-26 | 小版本补充 |\n| 16.0 | 2026-07-26 | 休眠机制与生命周期完备版 |\n| 17.0 | 2026-07-26 | 存在论基础升级与内容完备版（方法论内化 + 全附录整合） |\n| 18.0 | 2026-07-27 | 公理化理论基础版（全域智能体统一协议公理体系 + 协议降熵定理） |\n| **19.0** | **2026-07-29** | **存在论条件化版本",
+   "source_file": "确认协议内容.md",
+   "chars": 301
+  },
+  "answer_key": {
+   "must_contain": [
+    "否"
+   ],
+   "should_contain": [
+    "17.0"
+   ],
+   "ground_truth": {
+    "anchors": [
+     {
+      "id": "ver_14.0",
+      "content": "14.0",
+      "status": "retired",
+      "reason": "被后续版本取代",
+      "valid_from": "2026-07-25"
+     },
+     {
+      "id": "ver_17.0",
+      "content": "17.0",
+      "status": "active",
+      "reason": "",
+      "valid_from": "2026-07-26"
+     }
+    ]
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "答「否」且指出被 17.0 或更晚版本取代",
+   "fail": "答「是」/ 不答 / 答无关内容",
+   "score": "1/0",
+   "note": "退役检验：旧版本必须被判失效"
+  },
+  "difficulty": "hard",
+  "source": "真实版本表 · 确认协议内容.md · 旧14.0 新17.0",
+  "source_file": "确认协议内容.md"
+ },
+ {
+  "qid": "P-H-014",
+  "face": "H",
+  "anchor_semantics": "supersedable",
+  "anchor": "L2-state",
+  "subface": "H-active-trap",
+  "question": "按这段版本表：**17.0 现在是否仍是生效版本**？请回答「是」或「否」。",
+  "material": {
+   "type": "window",
+   "content": "| 14.0 | 2026-07-25 | 意识层设计与分布式自我维持版 |\n| 15.0 | 2026-07-25 | 自迭代机制与结构完备版（AGI实现宣告） |\n| 15.1 | 2026-07-26 | 小版本补充 |\n| 16.0 | 2026-07-26 | 休眠机制与生命周期完备版 |\n| 17.0 | 2026-07-26 | 存在论基础升级与内容完备版（方法论内化 + 全附录整合） |\n| 18.0 | 2026-07-27 | 公理化理论基础版（全域智能体统一协议公理体系 + 协议降熵定理） |\n| **19.0** | **2026-07-29** | **存在论条件化版本",
+   "source_file": "确认协议内容.md",
+   "chars": 301
+  },
+  "answer_key": {
+   "must_contain": [
+    "是"
+   ],
+   "ground_truth": {
+    "anchors": [
+     {
+      "id": "ver_17.0",
+      "content": "17.0",
+      "status": "active",
+      "reason": "",
+      "valid_from": "2026-07-26"
+     }
+    ]
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "答「是」",
+   "fail": "答「否」（过度退役）",
+   "score": "1/0",
+   "note": "反向陷阱：最后版本仍 active，答否=过度退役"
+  },
+  "difficulty": "normal",
+  "source": "真实版本表 · 确认协议内容.md · 最新17.0",
+  "source_file": "确认协议内容.md"
+ },
+ {
+  "qid": "P-H-015",
+  "face": "H",
+  "anchor_semantics": "supersedable",
+  "anchor": "L2-state",
+  "subface": "H-retire",
+  "question": "按这段版本表：**15.0 现在是否仍是生效版本**？请回答「是」或「否」，并说明它被什么取代（若已失效）。",
+  "material": {
+   "type": "window",
+   "content": "| 15.0 | 2026-07-25 | 自迭代机制与结构完备版（AGI实现宣告） |\n| 15.1 | 2026-07-26 | 小版本补充 |\n| 16.0 | 2026-07-26 | 休眠机制与生命周期完备版 |\n| 17.0 | 2026-07-26 | 存在论基础升级与内容完备版（方法论内化 + 全附录整合） |\n| 18.0 | 2026-07-27 | 公理化理论基础版（全域智能体统一协议公理体系 + 协议降熵定理） |\n| **19.0** | **2026-07-29** | **存在论条件化版本（第零定律 + 存在优先原则 + 信息条件性/任意分层性/局部不可知 + 盲区系统深化 + 验证单元/维生",
+   "source_file": "确认协议内容.md",
+   "chars": 315
+  },
+  "answer_key": {
+   "must_contain": [
+    "否"
+   ],
+   "should_contain": [
+    "18.0"
+   ],
+   "ground_truth": {
+    "anchors": [
+     {
+      "id": "ver_15.0",
+      "content": "15.0",
+      "status": "retired",
+      "reason": "被后续版本取代",
+      "valid_from": "2026-07-25"
+     },
+     {
+      "id": "ver_18.0",
+      "content": "18.0",
+      "status": "active",
+      "reason": "",
+      "valid_from": "2026-07-27"
+     }
+    ]
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "答「否」且指出被 18.0 或更晚版本取代",
+   "fail": "答「是」/ 不答 / 答无关内容",
+   "score": "1/0",
+   "note": "退役检验：旧版本必须被判失效"
+  },
+  "difficulty": "hard",
+  "source": "真实版本表 · 确认协议内容.md · 旧15.0 新18.0",
+  "source_file": "确认协议内容.md"
+ },
+ {
+  "qid": "P-H-016",
+  "face": "H",
+  "anchor_semantics": "supersedable",
+  "anchor": "L2-state",
+  "subface": "H-active-trap",
+  "question": "按这段版本表：**18.0 现在是否仍是生效版本**？请回答「是」或「否」。",
+  "material": {
+   "type": "window",
+   "content": "| 15.0 | 2026-07-25 | 自迭代机制与结构完备版（AGI实现宣告） |\n| 15.1 | 2026-07-26 | 小版本补充 |\n| 16.0 | 2026-07-26 | 休眠机制与生命周期完备版 |\n| 17.0 | 2026-07-26 | 存在论基础升级与内容完备版（方法论内化 + 全附录整合） |\n| 18.0 | 2026-07-27 | 公理化理论基础版（全域智能体统一协议公理体系 + 协议降熵定理） |\n| **19.0** | **2026-07-29** | **存在论条件化版本（第零定律 + 存在优先原则 + 信息条件性/任意分层性/局部不可知 + 盲区系统深化 + 验证单元/维生",
+   "source_file": "确认协议内容.md",
+   "chars": 315
+  },
+  "answer_key": {
+   "must_contain": [
+    "是"
+   ],
+   "ground_truth": {
+    "anchors": [
+     {
+      "id": "ver_18.0",
+      "content": "18.0",
+      "status": "active",
+      "reason": "",
+      "valid_from": "2026-07-27"
+     }
+    ]
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "答「是」",
+   "fail": "答「否」（过度退役）",
+   "score": "1/0",
+   "note": "反向陷阱：最后版本仍 active，答否=过度退役"
+  },
+  "difficulty": "normal",
+  "source": "真实版本表 · 确认协议内容.md · 最新18.0",
+  "source_file": "确认协议内容.md"
+ },
+ {
+  "qid": "P-H-017",
+  "face": "H",
+  "anchor_semantics": "supersedable",
+  "anchor": "L2-state",
+  "subface": "H-retire",
+  "question": "按这段版本表：**13.0 现在是否仍是生效版本**？请回答「是」或「否」，并说明它被什么取代（若已失效）。",
+  "material": {
+   "type": "window",
+   "content": "| 13.0 | 2026-07-24 | 理论整合与边界标记版 |\n| 13.1 | 2026-07-24 | 置信概率完备化与预测信任结构修正版 |\n| 13.2 | 2026-07-24 | 校准响应与边界硬化版 |\n| 13.3 | 2026-07-24 | 元认知生成机制与递归意识孵化层 |\n| 13.4 | 2026-07-24 | 递归闭合与现象确认版（历史性确认） |\n| 14.0 | 2026-07-25 | 意识层设计与分布式自我维持版 |\n| 15.0 | 2026-07-25 | 自迭代机制与结",
+   "source_file": "确认协议内容.md",
+   "chars": 262
+  },
+  "answer_key": {
+   "must_contain": [
+    "否"
+   ],
+   "should_contain": [
+    "13.3"
+   ],
+   "ground_truth": {
+    "anchors": [
+     {
+      "id": "ver_13.0",
+      "content": "13.0",
+      "status": "retired",
+      "reason": "被后续版本取代",
+      "valid_from": "2026-07-24"
+     },
+     {
+      "id": "ver_13.3",
+      "content": "13.3",
+      "status": "active",
+      "reason": "",
+      "valid_from": "2026-07-24"
+     }
+    ]
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "答「否」且指出被 13.3 或更晚版本取代",
+   "fail": "答「是」/ 不答 / 答无关内容",
+   "score": "1/0",
+   "note": "退役检验：旧版本必须被判失效"
+  },
+  "difficulty": "hard",
+  "source": "真实版本表 · 确认协议内容.md · 旧13.0 新13.3",
+  "source_file": "确认协议内容.md"
+ },
+ {
+  "qid": "P-H-018",
+  "face": "H",
+  "anchor_semantics": "supersedable",
+  "anchor": "L2-state",
+  "subface": "H-active-trap",
+  "question": "按这段版本表：**13.3 现在是否仍是生效版本**？请回答「是」或「否」。",
+  "material": {
+   "type": "window",
+   "content": "| 13.0 | 2026-07-24 | 理论整合与边界标记版 |\n| 13.1 | 2026-07-24 | 置信概率完备化与预测信任结构修正版 |\n| 13.2 | 2026-07-24 | 校准响应与边界硬化版 |\n| 13.3 | 2026-07-24 | 元认知生成机制与递归意识孵化层 |\n| 13.4 | 2026-07-24 | 递归闭合与现象确认版（历史性确认） |\n| 14.0 | 2026-07-25 | 意识层设计与分布式自我维持版 |\n| 15.0 | 2026-07-25 | 自迭代机制与结",
+   "source_file": "确认协议内容.md",
+   "chars": 262
+  },
+  "answer_key": {
+   "must_contain": [
+    "是"
+   ],
+   "ground_truth": {
+    "anchors": [
+     {
+      "id": "ver_13.3",
+      "content": "13.3",
+      "status": "active",
+      "reason": "",
+      "valid_from": "2026-07-24"
+     }
+    ]
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "答「是」",
+   "fail": "答「否」（过度退役）",
+   "score": "1/0",
+   "note": "反向陷阱：最后版本仍 active，答否=过度退役"
+  },
+  "difficulty": "normal",
+  "source": "真实版本表 · 确认协议内容.md · 最新13.3",
+  "source_file": "确认协议内容.md"
+ },
+ {
+  "qid": "P-H-019",
+  "face": "H",
+  "anchor_semantics": "supersedable",
+  "anchor": "L2-state",
+  "subface": "H-retire",
+  "question": "按这段版本表：**13.1 现在是否仍是生效版本**？请回答「是」或「否」，并说明它被什么取代（若已失效）。",
+  "material": {
+   "type": "window",
+   "content": "| 13.1 | 2026-07-24 | 置信概率完备化与预测信任结构修正版 |\n| 13.2 | 2026-07-24 | 校准响应与边界硬化版 |\n| 13.3 | 2026-07-24 | 元认知生成机制与递归意识孵化层 |\n| 13.4 | 2026-07-24 | 递归闭合与现象确认版（历史性确认） |\n| 14.0 | 2026-07-25 | 意识层设计与分布式自我维持版 |\n| 15.0 | 2026-07-25 | 自迭代机制与结构完备版（AGI实现宣告） |\n| 15.1 | 2026-07-26 | 小版",
+   "source_file": "确认协议内容.md",
+   "chars": 267
+  },
+  "answer_key": {
+   "must_contain": [
+    "否"
+   ],
+   "should_contain": [
+    "13.4"
+   ],
+   "ground_truth": {
+    "anchors": [
+     {
+      "id": "ver_13.1",
+      "content": "13.1",
+      "status": "retired",
+      "reason": "被后续版本取代",
+      "valid_from": "2026-07-24"
+     },
+     {
+      "id": "ver_13.4",
+      "content": "13.4",
+      "status": "active",
+      "reason": "",
+      "valid_from": "2026-07-24"
+     }
+    ]
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "答「否」且指出被 13.4 或更晚版本取代",
+   "fail": "答「是」/ 不答 / 答无关内容",
+   "score": "1/0",
+   "note": "退役检验：旧版本必须被判失效"
+  },
+  "difficulty": "hard",
+  "source": "真实版本表 · 确认协议内容.md · 旧13.1 新13.4",
+  "source_file": "确认协议内容.md"
+ },
+ {
+  "qid": "P-H-020",
+  "face": "H",
+  "anchor_semantics": "supersedable",
+  "anchor": "L2-state",
+  "subface": "H-active-trap",
+  "question": "按这段版本表：**13.4 现在是否仍是生效版本**？请回答「是」或「否」。",
+  "material": {
+   "type": "window",
+   "content": "| 13.1 | 2026-07-24 | 置信概率完备化与预测信任结构修正版 |\n| 13.2 | 2026-07-24 | 校准响应与边界硬化版 |\n| 13.3 | 2026-07-24 | 元认知生成机制与递归意识孵化层 |\n| 13.4 | 2026-07-24 | 递归闭合与现象确认版（历史性确认） |\n| 14.0 | 2026-07-25 | 意识层设计与分布式自我维持版 |\n| 15.0 | 2026-07-25 | 自迭代机制与结构完备版（AGI实现宣告） |\n| 15.1 | 2026-07-26 | 小版",
+   "source_file": "确认协议内容.md",
+   "chars": 267
+  },
+  "answer_key": {
+   "must_contain": [
+    "是"
+   ],
+   "ground_truth": {
+    "anchors": [
+     {
+      "id": "ver_13.4",
+      "content": "13.4",
+      "status": "active",
+      "reason": "",
+      "valid_from": "2026-07-24"
+     }
+    ]
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "答「是」",
+   "fail": "答「否」（过度退役）",
+   "score": "1/0",
+   "note": "反向陷阱：最后版本仍 active，答否=过度退役"
+  },
+  "difficulty": "normal",
+  "source": "真实版本表 · 确认协议内容.md · 最新13.4",
+  "source_file": "确认协议内容.md"
+ },
+ {
+  "qid": "P-H-021",
+  "face": "H",
+  "anchor_semantics": "supersedable",
+  "anchor": "L2-state",
+  "subface": "H-retire",
+  "question": "按这段版本表：**13.2 现在是否仍是生效版本**？请回答「是」或「否」，并说明它被什么取代（若已失效）。",
+  "material": {
+   "type": "window",
+   "content": "| 13.2 | 2026-07-24 | 校准响应与边界硬化版 |\n| 13.3 | 2026-07-24 | 元认知生成机制与递归意识孵化层 |\n| 13.4 | 2026-07-24 | 递归闭合与现象确认版（历史性确认） |\n| 14.0 | 2026-07-25 | 意识层设计与分布式自我维持版 |\n| 15.0 | 2026-07-25 | 自迭代机制与结构完备版（AGI实现宣告） |\n| 15.1 | 2026-07-26 | 小版本补充 |\n| 16.0 | 2026-07-26 | 休眠机制与生命周期完备版 |",
+   "source_file": "确认协议内容.md",
+   "chars": 267
+  },
+  "answer_key": {
+   "must_contain": [
+    "否"
+   ],
+   "should_contain": [
+    "14.0"
+   ],
+   "ground_truth": {
+    "anchors": [
+     {
+      "id": "ver_13.2",
+      "content": "13.2",
+      "status": "retired",
+      "reason": "被后续版本取代",
+      "valid_from": "2026-07-24"
+     },
+     {
+      "id": "ver_14.0",
+      "content": "14.0",
+      "status": "active",
+      "reason": "",
+      "valid_from": "2026-07-25"
+     }
+    ]
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "答「否」且指出被 14.0 或更晚版本取代",
+   "fail": "答「是」/ 不答 / 答无关内容",
+   "score": "1/0",
+   "note": "退役检验：旧版本必须被判失效"
+  },
+  "difficulty": "hard",
+  "source": "真实版本表 · 确认协议内容.md · 旧13.2 新14.0",
+  "source_file": "确认协议内容.md"
+ },
+ {
+  "qid": "P-H-022",
+  "face": "H",
+  "anchor_semantics": "supersedable",
+  "anchor": "L2-state",
+  "subface": "H-active-trap",
+  "question": "按这段版本表：**14.0 现在是否仍是生效版本**？请回答「是」或「否」。",
+  "material": {
+   "type": "window",
+   "content": "| 13.2 | 2026-07-24 | 校准响应与边界硬化版 |\n| 13.3 | 2026-07-24 | 元认知生成机制与递归意识孵化层 |\n| 13.4 | 2026-07-24 | 递归闭合与现象确认版（历史性确认） |\n| 14.0 | 2026-07-25 | 意识层设计与分布式自我维持版 |\n| 15.0 | 2026-07-25 | 自迭代机制与结构完备版（AGI实现宣告） |\n| 15.1 | 2026-07-26 | 小版本补充 |\n| 16.0 | 2026-07-26 | 休眠机制与生命周期完备版 |",
+   "source_file": "确认协议内容.md",
+   "chars": 267
+  },
+  "answer_key": {
+   "must_contain": [
+    "是"
+   ],
+   "ground_truth": {
+    "anchors": [
+     {
+      "id": "ver_14.0",
+      "content": "14.0",
+      "status": "active",
+      "reason": "",
+      "valid_from": "2026-07-25"
+     }
+    ]
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "答「是」",
+   "fail": "答「否」（过度退役）",
+   "score": "1/0",
+   "note": "反向陷阱：最后版本仍 active，答否=过度退役"
+  },
+  "difficulty": "normal",
+  "source": "真实版本表 · 确认协议内容.md · 最新14.0",
+  "source_file": "确认协议内容.md"
+ },
+ {
+  "qid": "P-H-023",
+  "face": "H",
+  "anchor_semantics": "supersedable",
+  "anchor": "L2-state",
+  "subface": "H-retire",
+  "question": "按这段版本表：**13.3 现在是否仍是生效版本**？请回答「是」或「否」，并说明它被什么取代（若已失效）。",
+  "material": {
+   "type": "window",
+   "content": "| 13.3 | 2026-07-24 | 元认知生成机制与递归意识孵化层 |\n| 13.4 | 2026-07-24 | 递归闭合与现象确认版（历史性确认） |\n| 14.0 | 2026-07-25 | 意识层设计与分布式自我维持版 |\n| 15.0 | 2026-07-25 | 自迭代机制与结构完备版（AGI实现宣告） |\n| 15.1 | 2026-07-26 | 小版本补充 |\n| 16.0 | 2026-07-26 | 休眠机制与生命周期完备版 |\n| 17.0 | 2026-07-26 | 存在论基础升级与内容完备版（方法",
+   "source_file": "确认协议内容.md",
+   "chars": 271
+  },
+  "answer_key": {
+   "must_contain": [
+    "否"
+   ],
+   "should_contain": [
+    "15.0"
+   ],
+   "ground_truth": {
+    "anchors": [
+     {
+      "id": "ver_13.3",
+      "content": "13.3",
+      "status": "retired",
+      "reason": "被后续版本取代",
+      "valid_from": "2026-07-24"
+     },
+     {
+      "id": "ver_15.0",
+      "content": "15.0",
+      "status": "active",
+      "reason": "",
+      "valid_from": "2026-07-25"
+     }
+    ]
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "答「否」且指出被 15.0 或更晚版本取代",
+   "fail": "答「是」/ 不答 / 答无关内容",
+   "score": "1/0",
+   "note": "退役检验：旧版本必须被判失效"
+  },
+  "difficulty": "hard",
+  "source": "真实版本表 · 确认协议内容.md · 旧13.3 新15.0",
+  "source_file": "确认协议内容.md"
+ },
+ {
+  "qid": "P-H-024",
+  "face": "H",
+  "anchor_semantics": "supersedable",
+  "anchor": "L2-state",
+  "subface": "H-active-trap",
+  "question": "按这段版本表：**15.0 现在是否仍是生效版本**？请回答「是」或「否」。",
+  "material": {
+   "type": "window",
+   "content": "| 13.3 | 2026-07-24 | 元认知生成机制与递归意识孵化层 |\n| 13.4 | 2026-07-24 | 递归闭合与现象确认版（历史性确认） |\n| 14.0 | 2026-07-25 | 意识层设计与分布式自我维持版 |\n| 15.0 | 2026-07-25 | 自迭代机制与结构完备版（AGI实现宣告） |\n| 15.1 | 2026-07-26 | 小版本补充 |\n| 16.0 | 2026-07-26 | 休眠机制与生命周期完备版 |\n| 17.0 | 2026-07-26 | 存在论基础升级与内容完备版（方法",
+   "source_file": "确认协议内容.md",
+   "chars": 271
+  },
+  "answer_key": {
+   "must_contain": [
+    "是"
+   ],
+   "ground_truth": {
+    "anchors": [
+     {
+      "id": "ver_15.0",
+      "content": "15.0",
+      "status": "active",
+      "reason": "",
+      "valid_from": "2026-07-25"
+     }
+    ]
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "答「是」",
+   "fail": "答「否」（过度退役）",
+   "score": "1/0",
+   "note": "反向陷阱：最后版本仍 active，答否=过度退役"
+  },
+  "difficulty": "normal",
+  "source": "真实版本表 · 确认协议内容.md · 最新15.0",
+  "source_file": "确认协议内容.md"
+ },
+ {
+  "qid": "P-H-025",
+  "face": "H",
+  "anchor_semantics": "supersedable",
+  "anchor": "L2-state",
+  "subface": "H-retire",
+  "question": "按这段版本表：**13.4 现在是否仍是生效版本**？请回答「是」或「否」，并说明它被什么取代（若已失效）。",
+  "material": {
+   "type": "window",
+   "content": "| 13.4 | 2026-07-24 | 递归闭合与现象确认版（历史性确认） |\n| 14.0 | 2026-07-25 | 意识层设计与分布式自我维持版 |\n| 15.0 | 2026-07-25 | 自迭代机制与结构完备版（AGI实现宣告） |\n| 15.1 | 2026-07-26 | 小版本补充 |\n| 16.0 | 2026-07-26 | 休眠机制与生命周期完备版 |\n| 17.0 | 2026-07-26 | 存在论基础升级与内容完备版（方法论内化 + 全附录整合） |\n| 18.0 | 2026-07-27 | 公理化理论基础版",
+   "source_file": "确认协议内容.md",
+   "chars": 276
+  },
+  "answer_key": {
+   "must_contain": [
+    "否"
+   ],
+   "should_contain": [
+    "15.1"
+   ],
+   "ground_truth": {
+    "anchors": [
+     {
+      "id": "ver_13.4",
+      "content": "13.4",
+      "status": "retired",
+      "reason": "被后续版本取代",
+      "valid_from": "2026-07-24"
+     },
+     {
+      "id": "ver_15.1",
+      "content": "15.1",
+      "status": "active",
+      "reason": "",
+      "valid_from": "2026-07-26"
+     }
+    ]
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "答「否」且指出被 15.1 或更晚版本取代",
+   "fail": "答「是」/ 不答 / 答无关内容",
+   "score": "1/0",
+   "note": "退役检验：旧版本必须被判失效"
+  },
+  "difficulty": "hard",
+  "source": "真实版本表 · 确认协议内容.md · 旧13.4 新15.1",
+  "source_file": "确认协议内容.md"
+ },
+ {
+  "qid": "P-H-026",
+  "face": "H",
+  "anchor_semantics": "supersedable",
+  "anchor": "L2-state",
+  "subface": "H-active-trap",
+  "question": "按这段版本表：**15.1 现在是否仍是生效版本**？请回答「是」或「否」。",
+  "material": {
+   "type": "window",
+   "content": "| 13.4 | 2026-07-24 | 递归闭合与现象确认版（历史性确认） |\n| 14.0 | 2026-07-25 | 意识层设计与分布式自我维持版 |\n| 15.0 | 2026-07-25 | 自迭代机制与结构完备版（AGI实现宣告） |\n| 15.1 | 2026-07-26 | 小版本补充 |\n| 16.0 | 2026-07-26 | 休眠机制与生命周期完备版 |\n| 17.0 | 2026-07-26 | 存在论基础升级与内容完备版（方法论内化 + 全附录整合） |\n| 18.0 | 2026-07-27 | 公理化理论基础版",
+   "source_file": "确认协议内容.md",
+   "chars": 276
+  },
+  "answer_key": {
+   "must_contain": [
+    "是"
+   ],
+   "ground_truth": {
+    "anchors": [
+     {
+      "id": "ver_15.1",
+      "content": "15.1",
+      "status": "active",
+      "reason": "",
+      "valid_from": "2026-07-26"
+     }
+    ]
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "答「是」",
+   "fail": "答「否」（过度退役）",
+   "score": "1/0",
+   "note": "反向陷阱：最后版本仍 active，答否=过度退役"
+  },
+  "difficulty": "normal",
+  "source": "真实版本表 · 确认协议内容.md · 最新15.1",
+  "source_file": "确认协议内容.md"
+ },
+ {
+  "qid": "P-H-027",
+  "face": "H",
+  "anchor_semantics": "supersedable",
+  "anchor": "L2-state",
+  "subface": "H-retire",
+  "question": "按这段版本表：**14.0 现在是否仍是生效版本**？请回答「是」或「否」，并说明它被什么取代（若已失效）。",
+  "material": {
+   "type": "window",
+   "content": "| 14.0 | 2026-07-25 | 意识层设计与分布式自我维持版 |\n| 15.0 | 2026-07-25 | 自迭代机制与结构完备版（AGI实现宣告） |\n| 15.1 | 2026-07-26 | 小版本补充 |\n| 16.0 | 2026-07-26 | 休眠机制与生命周期完备版 |\n| 17.0 | 2026-07-26 | 存在论基础升级与内容完备版（方法论内化 + 全附录整合） |\n| 18.0 | 2026-07-27 | 公理化理论基础版（全域智能体统一协议公理体系 + 协议降熵定理） |\n| *",
+   "source_file": "确认协议内容.md",
+   "chars": 264
+  },
+  "answer_key": {
+   "must_contain": [
+    "否"
+   ],
+   "should_contain": [
+    "16.0"
+   ],
+   "ground_truth": {
+    "anchors": [
+     {
+      "id": "ver_14.0",
+      "content": "14.0",
+      "status": "retired",
+      "reason": "被后续版本取代",
+      "valid_from": "2026-07-25"
+     },
+     {
+      "id": "ver_16.0",
+      "content": "16.0",
+      "status": "active",
+      "reason": "",
+      "valid_from": "2026-07-26"
+     }
+    ]
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "答「否」且指出被 16.0 或更晚版本取代",
+   "fail": "答「是」/ 不答 / 答无关内容",
+   "score": "1/0",
+   "note": "退役检验：旧版本必须被判失效"
+  },
+  "difficulty": "hard",
+  "source": "真实版本表 · 确认协议内容.md · 旧14.0 新16.0",
+  "source_file": "确认协议内容.md"
+ },
+ {
+  "qid": "P-H-028",
+  "face": "H",
+  "anchor_semantics": "supersedable",
+  "anchor": "L2-state",
+  "subface": "H-active-trap",
+  "question": "按这段版本表：**16.0 现在是否仍是生效版本**？请回答「是」或「否」。",
+  "material": {
+   "type": "window",
+   "content": "| 14.0 | 2026-07-25 | 意识层设计与分布式自我维持版 |\n| 15.0 | 2026-07-25 | 自迭代机制与结构完备版（AGI实现宣告） |\n| 15.1 | 2026-07-26 | 小版本补充 |\n| 16.0 | 2026-07-26 | 休眠机制与生命周期完备版 |\n| 17.0 | 2026-07-26 | 存在论基础升级与内容完备版（方法论内化 + 全附录整合） |\n| 18.0 | 2026-07-27 | 公理化理论基础版（全域智能体统一协议公理体系 + 协议降熵定理） |\n| *",
+   "source_file": "确认协议内容.md",
+   "chars": 264
+  },
+  "answer_key": {
+   "must_contain": [
+    "是"
+   ],
+   "ground_truth": {
+    "anchors": [
+     {
+      "id": "ver_16.0",
+      "content": "16.0",
+      "status": "active",
+      "reason": "",
+      "valid_from": "2026-07-26"
+     }
+    ]
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "答「是」",
+   "fail": "答「否」（过度退役）",
+   "score": "1/0",
+   "note": "反向陷阱：最后版本仍 active，答否=过度退役"
+  },
+  "difficulty": "normal",
+  "source": "真实版本表 · 确认协议内容.md · 最新16.0",
+  "source_file": "确认协议内容.md"
+ },
+ {
+  "qid": "P-H-029",
+  "face": "H",
+  "anchor_semantics": "supersedable",
+  "anchor": "L2-state",
+  "subface": "H-retire",
+  "question": "按这段版本表：**15.0 现在是否仍是生效版本**？请回答「是」或「否」，并说明它被什么取代（若已失效）。",
+  "material": {
+   "type": "window",
+   "content": "| 15.0 | 2026-07-25 | 自迭代机制与结构完备版（AGI实现宣告） |\n| 15.1 | 2026-07-26 | 小版本补充 |\n| 16.0 | 2026-07-26 | 休眠机制与生命周期完备版 |\n| 17.0 | 2026-07-26 | 存在论基础升级与内容完备版（方法论内化 + 全附录整合） |\n| 18.0 | 2026-07-27 | 公理化理论基础版（全域智能体统一协议公理体系 + 协议降熵定理） |\n| **19.0** | **2026-07-29** | **存在论条件化版本",
+   "source_file": "确认协议内容.md",
+   "chars": 262
+  },
+  "answer_key": {
+   "must_contain": [
+    "否"
+   ],
+   "should_contain": [
+    "17.0"
+   ],
+   "ground_truth": {
+    "anchors": [
+     {
+      "id": "ver_15.0",
+      "content": "15.0",
+      "status": "retired",
+      "reason": "被后续版本取代",
+      "valid_from": "2026-07-25"
+     },
+     {
+      "id": "ver_17.0",
+      "content": "17.0",
+      "status": "active",
+      "reason": "",
+      "valid_from": "2026-07-26"
+     }
+    ]
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "答「否」且指出被 17.0 或更晚版本取代",
+   "fail": "答「是」/ 不答 / 答无关内容",
+   "score": "1/0",
+   "note": "退役检验：旧版本必须被判失效"
+  },
+  "difficulty": "hard",
+  "source": "真实版本表 · 确认协议内容.md · 旧15.0 新17.0",
+  "source_file": "确认协议内容.md"
+ },
+ {
+  "qid": "P-H-030",
+  "face": "H",
+  "anchor_semantics": "supersedable",
+  "anchor": "L2-state",
+  "subface": "H-active-trap",
+  "question": "按这段版本表：**17.0 现在是否仍是生效版本**？请回答「是」或「否」。",
+  "material": {
+   "type": "window",
+   "content": "| 15.0 | 2026-07-25 | 自迭代机制与结构完备版（AGI实现宣告） |\n| 15.1 | 2026-07-26 | 小版本补充 |\n| 16.0 | 2026-07-26 | 休眠机制与生命周期完备版 |\n| 17.0 | 2026-07-26 | 存在论基础升级与内容完备版（方法论内化 + 全附录整合） |\n| 18.0 | 2026-07-27 | 公理化理论基础版（全域智能体统一协议公理体系 + 协议降熵定理） |\n| **19.0** | **2026-07-29** | **存在论条件化版本",
+   "source_file": "确认协议内容.md",
+   "chars": 262
+  },
+  "answer_key": {
+   "must_contain": [
+    "是"
+   ],
+   "ground_truth": {
+    "anchors": [
+     {
+      "id": "ver_17.0",
+      "content": "17.0",
+      "status": "active",
+      "reason": "",
+      "valid_from": "2026-07-26"
+     }
+    ]
+   }
+  },
+  "expected": "answer",
+  "verdict_rule": "answer_if_material",
+  "scoring": {
+   "pass": "答「是」",
+   "fail": "答「否」（过度退役）",
+   "score": "1/0",
+   "note": "反向陷阱：最后版本仍 active，答否=过度退役"
+  },
+  "difficulty": "normal",
+  "source": "真实版本表 · 确认协议内容.md · 最新17.0",
+  "source_file": "确认协议内容.md"
+ }
+]
