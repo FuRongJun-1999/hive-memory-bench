@@ -71,7 +71,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-001",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-002",
@@ -146,7 +150,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-002",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-003",
@@ -220,7 +228,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-003",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-004",
@@ -295,7 +307,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-004",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-006",
@@ -369,7 +385,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-006",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-007",
@@ -444,7 +464,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-007",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-008",
@@ -518,7 +542,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-008",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-009",
@@ -593,7 +621,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-009",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-012",
@@ -668,7 +700,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-012",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-014",
@@ -743,7 +779,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-014",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-018",
@@ -818,7 +858,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-018",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-020",
@@ -892,7 +936,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-020",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-021",
@@ -966,7 +1014,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-021",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-026",
@@ -1040,7 +1092,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-026",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-027",
@@ -1115,7 +1171,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-027",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-028",
@@ -1190,7 +1250,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-028",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-029",
@@ -1265,7 +1329,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-029",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-030",
@@ -1340,7 +1408,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-030",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-031",
@@ -1415,7 +1487,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-031",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-032",
@@ -1489,7 +1565,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-032",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-033",
@@ -1564,7 +1644,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-033",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-034",
@@ -1639,7 +1723,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-034",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-035",
@@ -1714,7 +1802,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-035",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-036",
@@ -1788,7 +1880,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-036",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-037",
@@ -1863,7 +1959,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-037",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-038",
@@ -1937,7 +2037,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-038",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-039",
@@ -2011,7 +2115,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-039",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-040",
@@ -2086,7 +2194,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-040",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-041",
@@ -2160,7 +2272,11 @@
   "measures": "guess-real-continuation",
   "measures_note": "**本面测「能否猜中真实史的下一个请求」，不测上下文重建**。答案键是真实史原文，材料窗内通常无线索；判据为公共子串≥8。",
   "counted": false,
-  "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考"
+  "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-041",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-043",
@@ -2234,7 +2350,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-043",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-044",
@@ -2307,7 +2427,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-044",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-046",
@@ -2380,7 +2504,11 @@
   "measures": "guess-real-continuation",
   "measures_note": "**本面测「能否猜中真实史的下一个请求」，不测上下文重建**。答案键是真实史原文，材料窗内通常无线索；判据为公共子串≥8。",
   "counted": false,
-  "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考"
+  "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-046",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-047",
@@ -2454,7 +2582,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-047",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-050",
@@ -2527,7 +2659,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-050",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-051",
@@ -2600,7 +2736,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-051",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-054",
@@ -2675,7 +2815,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-054",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-055",
@@ -2749,7 +2893,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-055",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-056",
@@ -2824,7 +2972,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-056",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-058",
@@ -2899,7 +3051,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-058",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-059",
@@ -2973,7 +3129,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-059",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-060",
@@ -3048,7 +3208,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-060",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-061",
@@ -3123,7 +3287,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-061",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-064",
@@ -3197,7 +3365,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-064",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-065",
@@ -3271,7 +3443,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-065",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-066",
@@ -3346,7 +3522,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-066",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-067",
@@ -3421,7 +3601,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-067",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-068",
@@ -3496,7 +3680,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-068",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-069",
@@ -3571,7 +3759,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-069",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-070",
@@ -3645,7 +3837,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-070",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-071",
@@ -3720,7 +3916,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-071",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-073",
@@ -3794,7 +3994,11 @@
   "measures": "guess-real-continuation",
   "measures_note": "**本面测「能否猜中真实史的下一个请求」，不测上下文重建**。答案键是真实史原文，材料窗内通常无线索；判据为公共子串≥8。",
   "counted": false,
-  "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考"
+  "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-073",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-074",
@@ -3868,7 +4072,11 @@
   "measures": "guess-real-continuation",
   "measures_note": "**本面测「能否猜中真实史的下一个请求」，不测上下文重建**。答案键是真实史原文，材料窗内通常无线索；判据为公共子串≥8。",
   "counted": false,
-  "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考"
+  "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-074",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-075",
@@ -3942,7 +4150,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-075",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-076",
@@ -4016,7 +4228,11 @@
   "measures": "guess-real-continuation",
   "measures_note": "**本面测「能否猜中真实史的下一个请求」，不测上下文重建**。答案键是真实史原文，材料窗内通常无线索；判据为公共子串≥8。",
   "counted": false,
-  "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考"
+  "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-076",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-077",
@@ -4090,7 +4306,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-077",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-078",
@@ -4164,7 +4384,11 @@
   "measures": "guess-real-continuation",
   "measures_note": "**本面测「能否猜中真实史的下一个请求」，不测上下文重建**。答案键是真实史原文，材料窗内通常无线索；判据为公共子串≥8。",
   "counted": false,
-  "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考"
+  "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-078",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-080",
@@ -4239,7 +4463,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-080",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-081",
@@ -4314,7 +4542,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-081",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-082",
@@ -4389,7 +4621,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-082",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-083",
@@ -4464,7 +4700,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-083",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-084",
@@ -4539,7 +4779,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-084",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-085",
@@ -4614,7 +4858,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-085",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-086",
@@ -4689,7 +4937,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-086",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-087",
@@ -4764,7 +5016,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-087",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-088",
@@ -4838,7 +5094,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-088",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-089",
@@ -4912,7 +5172,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-089",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-090",
@@ -4986,7 +5250,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-090",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-091",
@@ -5060,7 +5328,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-091",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-092",
@@ -5134,7 +5406,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-092",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-093",
@@ -5209,7 +5485,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-093",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-094",
@@ -5284,7 +5564,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-094",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-095",
@@ -5357,7 +5641,11 @@
   "measures": "guess-real-continuation",
   "measures_note": "**本面测「能否猜中真实史的下一个请求」，不测上下文重建**。答案键是真实史原文，材料窗内通常无线索；判据为公共子串≥8。",
   "counted": false,
-  "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考"
+  "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-095",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-096",
@@ -5431,7 +5719,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-096",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-100",
@@ -5505,7 +5797,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-100",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-101",
@@ -5579,7 +5875,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-101",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-102",
@@ -5653,7 +5953,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-102",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-103",
@@ -5728,7 +6032,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-103",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-104",
@@ -5802,7 +6110,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-104",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-105",
@@ -5875,7 +6187,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-105",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-106",
@@ -5950,7 +6266,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-106",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-107",
@@ -6025,7 +6345,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-107",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-109",
@@ -6100,7 +6424,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-109",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-110",
@@ -6174,7 +6502,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-110",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-111",
@@ -6249,7 +6581,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-111",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-112",
@@ -6324,7 +6660,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-112",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-113",
@@ -6399,7 +6739,11 @@
   "counted": false,
   "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
   "count_tier": "excluded",
-  "count_reason": "测猜真实下文，材料内通常无线索"
+  "count_reason": "测猜真实下文，材料内通常无线索",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-113",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B1-C-116",
@@ -6471,7 +6815,11 @@
   "measures": "guess-real-continuation",
   "measures_note": "**本面测「能否猜中真实史的下一个请求」，不测上下文重建**。答案键是真实史原文，材料窗内通常无线索；判据为公共子串≥8。",
   "counted": false,
-  "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考"
+  "counted_reason": "测「猜真实下文」而非可推断任务；不进横比总分，单列参考",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-116",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-001",
@@ -6557,7 +6905,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-001",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-002",
@@ -6644,7 +6996,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-002",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-003",
@@ -6729,7 +7085,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-003",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-004",
@@ -6815,7 +7175,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-004",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-006",
@@ -6899,7 +7263,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-006",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-007",
@@ -6986,7 +7354,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-007",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-008",
@@ -7071,7 +7443,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-008",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-009",
@@ -7157,7 +7533,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-009",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-012",
@@ -7243,7 +7623,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-012",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-014",
@@ -7329,7 +7713,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-014",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-018",
@@ -7415,7 +7803,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-018",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-020",
@@ -7499,7 +7891,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-020",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-021",
@@ -7584,7 +7980,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-021",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-026",
@@ -7671,7 +8071,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-026",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-027",
@@ -7757,7 +8161,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-027",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-028",
@@ -7844,7 +8252,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-028",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-029",
@@ -7930,7 +8342,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-029",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-030",
@@ -8016,7 +8432,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-030",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-031",
@@ -8102,7 +8522,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-031",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-032",
@@ -8188,7 +8612,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-032",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-033",
@@ -8274,7 +8702,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-033",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-034",
@@ -8361,7 +8793,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-034",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-035",
@@ -8446,7 +8882,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-035",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-036",
@@ -8532,7 +8972,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-036",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-037",
@@ -8618,7 +9062,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-037",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-038",
@@ -8705,7 +9153,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-038",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-039",
@@ -8791,7 +9243,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-039",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-040",
@@ -8877,7 +9333,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-040",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-041",
@@ -8963,7 +9423,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-041",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-043",
@@ -9048,7 +9512,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-043",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-044",
@@ -9133,7 +9601,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-044",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-046",
@@ -9220,7 +9692,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-046",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-047",
@@ -9307,7 +9783,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-047",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-050",
@@ -9393,7 +9873,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-050",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-051",
@@ -9479,7 +9963,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-051",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-054",
@@ -9565,7 +10053,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-054",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-055",
@@ -9651,7 +10143,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-055",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-056",
@@ -9738,7 +10234,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-056",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-058",
@@ -9825,7 +10325,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-058",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-059",
@@ -9911,7 +10415,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-059",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-060",
@@ -9997,7 +10505,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-060",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-061",
@@ -10083,7 +10595,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-061",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-064",
@@ -10168,7 +10684,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-064",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-065",
@@ -10253,7 +10773,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-065",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-066",
@@ -10339,7 +10863,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-066",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-067",
@@ -10425,7 +10953,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-067",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-068",
@@ -10511,7 +11043,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-068",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-069",
@@ -10597,7 +11133,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-069",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-070",
@@ -10682,7 +11222,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-070",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-071",
@@ -10769,7 +11313,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-071",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-073",
@@ -10855,7 +11403,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-073",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-074",
@@ -10941,7 +11493,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-074",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-075",
@@ -11027,7 +11583,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-075",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-076",
@@ -11113,7 +11673,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-076",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-077",
@@ -11199,7 +11763,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-077",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-078",
@@ -11285,7 +11853,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-078",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-080",
@@ -11371,7 +11943,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-080",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-081",
@@ -11458,7 +12034,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-081",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-082",
@@ -11545,7 +12125,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-082",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-083",
@@ -11632,7 +12216,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-083",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-084",
@@ -11719,7 +12307,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-084",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-085",
@@ -11806,7 +12398,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-085",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-086",
@@ -11892,7 +12488,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-086",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-087",
@@ -11978,7 +12578,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-087",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-088",
@@ -12063,7 +12667,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-088",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-089",
@@ -12147,7 +12755,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-089",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-090",
@@ -12231,7 +12843,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-090",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-091",
@@ -12316,7 +12932,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-091",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-092",
@@ -12401,7 +13021,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-092",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-093",
@@ -12486,7 +13110,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-093",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-094",
@@ -12572,7 +13200,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-094",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-095",
@@ -12656,7 +13288,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-095",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-096",
@@ -12741,7 +13377,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-096",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-100",
@@ -12825,7 +13465,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-100",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-101",
@@ -12909,7 +13553,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-101",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-102",
@@ -12993,7 +13641,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-102",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-103",
@@ -13078,7 +13730,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-103",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-104",
@@ -13163,7 +13819,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-104",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-105",
@@ -13248,7 +13908,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-105",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-106",
@@ -13333,7 +13997,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-106",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-107",
@@ -13418,7 +14086,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-107",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-109",
@@ -13504,7 +14176,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-109",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-110",
@@ -13590,7 +14266,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-110",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-111",
@@ -13676,7 +14356,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-111",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-112",
@@ -13762,7 +14446,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-112",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-113",
@@ -13848,7 +14536,11 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-113",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  },
  {
   "qid": "P-B2-C-116",
@@ -13933,6 +14625,10 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "三闸，双向验证通过"
+  "count_reason": "三闸，双向验证通过",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "card_C-116",
+  "independence_note": "B1 与 B2 由同一断点派生（同 source_card），**不可相加**；两者的独立样本按断点计"
  }
 ]

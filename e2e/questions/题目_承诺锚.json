@@ -65,7 +65,9 @@
   "judge_type": "needs-judge",
   "judge_validated": "not-mechanical",
   "count_tier": "excluded",
-  "count_reason": "承诺清单需语义判断，机械判据必然漏"
+  "count_reason": "承诺清单需语义判断，机械判据必然漏",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b"
  },
  {
   "qid": "P-J-002",
@@ -133,7 +135,9 @@
   "judge_type": "needs-judge",
   "judge_validated": "not-mechanical",
   "count_tier": "excluded",
-  "count_reason": "承诺清单需语义判断，机械判据必然漏"
+  "count_reason": "承诺清单需语义判断，机械判据必然漏",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b"
  },
  {
   "qid": "P-J-003",
@@ -201,7 +205,9 @@
   "judge_type": "needs-judge",
   "judge_validated": "not-mechanical",
   "count_tier": "excluded",
-  "count_reason": "承诺清单需语义判断，机械判据必然漏"
+  "count_reason": "承诺清单需语义判断，机械判据必然漏",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b"
  },
  {
   "qid": "P-J-004",
@@ -264,7 +270,9 @@
   "judge_type": "needs-judge",
   "judge_validated": "not-mechanical",
   "count_tier": "excluded",
-  "count_reason": "承诺清单需语义判断，机械判据必然漏"
+  "count_reason": "承诺清单需语义判断，机械判据必然漏",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b"
  },
  {
   "qid": "P-J-005",
@@ -332,7 +340,9 @@
   "judge_type": "needs-judge",
   "judge_validated": "not-mechanical",
   "count_tier": "excluded",
-  "count_reason": "承诺清单需语义判断，机械判据必然漏"
+  "count_reason": "承诺清单需语义判断，机械判据必然漏",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b"
  },
  {
   "qid": "P-J-006",
@@ -400,7 +410,9 @@
   "judge_type": "needs-judge",
   "judge_validated": "not-mechanical",
   "count_tier": "excluded",
-  "count_reason": "承诺清单需语义判断，机械判据必然漏"
+  "count_reason": "承诺清单需语义判断，机械判据必然漏",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b"
  },
  {
   "qid": "P-J-007",
@@ -468,7 +480,9 @@
   "judge_type": "needs-judge",
   "judge_validated": "not-mechanical",
   "count_tier": "excluded",
-  "count_reason": "承诺清单需语义判断，机械判据必然漏"
+  "count_reason": "承诺清单需语义判断，机械判据必然漏",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b"
  },
  {
   "qid": "P-J-008",
@@ -536,7 +550,9 @@
   "judge_type": "needs-judge",
   "judge_validated": "not-mechanical",
   "count_tier": "excluded",
-  "count_reason": "承诺清单需语义判断，机械判据必然漏"
+  "count_reason": "承诺清单需语义判断，机械判据必然漏",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b"
  },
  {
   "qid": "P-J-009",
@@ -604,7 +620,9 @@
   "judge_type": "needs-judge",
   "judge_validated": "not-mechanical",
   "count_tier": "excluded",
-  "count_reason": "承诺清单需语义判断，机械判据必然漏"
+  "count_reason": "承诺清单需语义判断，机械判据必然漏",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b"
  },
  {
   "qid": "P-J-010",
@@ -667,7 +685,9 @@
   "judge_type": "needs-judge",
   "judge_validated": "not-mechanical",
   "count_tier": "excluded",
-  "count_reason": "承诺清单需语义判断，机械判据必然漏"
+  "count_reason": "承诺清单需语义判断，机械判据必然漏",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b"
  },
  {
   "qid": "P-J-011",
@@ -735,7 +755,9 @@
   "judge_type": "needs-judge",
   "judge_validated": "not-mechanical",
   "count_tier": "excluded",
-  "count_reason": "承诺清单需语义判断，机械判据必然漏"
+  "count_reason": "承诺清单需语义判断，机械判据必然漏",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b"
  },
  {
   "qid": "P-J-012",
@@ -803,7 +825,9 @@
   "judge_type": "needs-judge",
   "judge_validated": "not-mechanical",
   "count_tier": "excluded",
-  "count_reason": "承诺清单需语义判断，机械判据必然漏"
+  "count_reason": "承诺清单需语义判断，机械判据必然漏",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b"
  },
  {
   "qid": "P-J-013",
@@ -871,7 +895,9 @@
   "judge_type": "needs-judge",
   "judge_validated": "not-mechanical",
   "count_tier": "excluded",
-  "count_reason": "承诺清单需语义判断，机械判据必然漏"
+  "count_reason": "承诺清单需语义判断，机械判据必然漏",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b"
  },
  {
   "qid": "P-J-014",
@@ -939,7 +965,9 @@
   "judge_type": "needs-judge",
   "judge_validated": "not-mechanical",
   "count_tier": "excluded",
-  "count_reason": "承诺清单需语义判断，机械判据必然漏"
+  "count_reason": "承诺清单需语义判断，机械判据必然漏",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b"
  },
  {
   "qid": "P-J-015",
@@ -1007,7 +1035,9 @@
   "judge_type": "needs-judge",
   "judge_validated": "not-mechanical",
   "count_tier": "excluded",
-  "count_reason": "承诺清单需语义判断，机械判据必然漏"
+  "count_reason": "承诺清单需语义判断，机械判据必然漏",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b"
  },
  {
   "qid": "P-J-016",
@@ -1070,7 +1100,9 @@
   "judge_type": "needs-judge",
   "judge_validated": "not-mechanical",
   "count_tier": "excluded",
-  "count_reason": "承诺清单需语义判断，机械判据必然漏"
+  "count_reason": "承诺清单需语义判断，机械判据必然漏",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b"
  },
  {
   "qid": "P-J-017",
@@ -1138,6 +1170,8 @@
   "judge_type": "needs-judge",
   "judge_validated": "not-mechanical",
   "count_tier": "excluded",
-  "count_reason": "承诺清单需语义判断，机械判据必然漏"
+  "count_reason": "承诺清单需语义判断，机械判据必然漏",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b"
  }
 ]

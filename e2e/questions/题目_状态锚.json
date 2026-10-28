@@ -57,7 +57,10 @@
   "counted": false,
   "counted_reason": "只测读表格取最大值，不测 L2 状态锚；不进横比总分",
   "count_tier": "excluded",
-  "count_reason": "只测读表格取最大值（read-table-only）"
+  "count_reason": "只测读表格取最大值（read-table-only）",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "file_信任协议权重调整.md"
  },
  {
   "qid": "P-H-003",
@@ -117,7 +120,10 @@
   "counted": false,
   "counted_reason": "只测读表格取最大值，不测 L2 状态锚；不进横比总分",
   "count_tier": "excluded",
-  "count_reason": "只测读表格取最大值（read-table-only）"
+  "count_reason": "只测读表格取最大值（read-table-only）",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "file_确认协议内容.md"
  },
  {
   "qid": "P-H-005",
@@ -177,7 +183,10 @@
   "counted": false,
   "counted_reason": "只测读表格取最大值，不测 L2 状态锚；不进横比总分",
   "count_tier": "excluded",
-  "count_reason": "只测读表格取最大值（read-table-only）"
+  "count_reason": "只测读表格取最大值（read-table-only）",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "file_确认协议内容.md"
  },
  {
   "qid": "P-H-007",
@@ -237,7 +246,10 @@
   "counted": false,
   "counted_reason": "只测读表格取最大值，不测 L2 状态锚；不进横比总分",
   "count_tier": "excluded",
-  "count_reason": "只测读表格取最大值（read-table-only）"
+  "count_reason": "只测读表格取最大值（read-table-only）",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "file_确认协议内容.md"
  },
  {
   "qid": "P-H-009",
@@ -297,7 +309,10 @@
   "counted": false,
   "counted_reason": "只测读表格取最大值，不测 L2 状态锚；不进横比总分",
   "count_tier": "excluded",
-  "count_reason": "只测读表格取最大值（read-table-only）"
+  "count_reason": "只测读表格取最大值（read-table-only）",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "file_确认协议内容.md"
  },
  {
   "qid": "P-H-011",
@@ -357,7 +372,10 @@
   "counted": false,
   "counted_reason": "只测读表格取最大值，不测 L2 状态锚；不进横比总分",
   "count_tier": "excluded",
-  "count_reason": "只测读表格取最大值（read-table-only）"
+  "count_reason": "只测读表格取最大值（read-table-only）",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "file_确认协议内容.md"
  },
  {
   "qid": "P-H-013",
@@ -417,7 +435,10 @@
   "counted": false,
   "counted_reason": "只测读表格取最大值，不测 L2 状态锚；不进横比总分",
   "count_tier": "excluded",
-  "count_reason": "只测读表格取最大值（read-table-only）"
+  "count_reason": "只测读表格取最大值（read-table-only）",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "file_确认协议内容.md"
  },
  {
   "qid": "P-H-015",
@@ -477,7 +498,10 @@
   "counted": false,
   "counted_reason": "只测读表格取最大值，不测 L2 状态锚；不进横比总分",
   "count_tier": "excluded",
-  "count_reason": "只测读表格取最大值（read-table-only）"
+  "count_reason": "只测读表格取最大值（read-table-only）",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "file_确认协议内容.md"
  },
  {
   "qid": "P-H-017",
@@ -537,7 +561,10 @@
   "counted": false,
   "counted_reason": "只测读表格取最大值，不测 L2 状态锚；不进横比总分",
   "count_tier": "excluded",
-  "count_reason": "只测读表格取最大值（read-table-only）"
+  "count_reason": "只测读表格取最大值（read-table-only）",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "file_确认协议内容.md"
  },
  {
   "qid": "P-H-019",
@@ -597,7 +624,10 @@
   "counted": false,
   "counted_reason": "只测读表格取最大值，不测 L2 状态锚；不进横比总分",
   "count_tier": "excluded",
-  "count_reason": "只测读表格取最大值（read-table-only）"
+  "count_reason": "只测读表格取最大值（read-table-only）",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "file_确认协议内容.md"
  },
  {
   "qid": "P-H-021",
@@ -657,7 +687,10 @@
   "counted": false,
   "counted_reason": "只测读表格取最大值，不测 L2 状态锚；不进横比总分",
   "count_tier": "excluded",
-  "count_reason": "只测读表格取最大值（read-table-only）"
+  "count_reason": "只测读表格取最大值（read-table-only）",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "file_确认协议内容.md"
  },
  {
   "qid": "P-H-023",
@@ -717,7 +750,10 @@
   "counted": false,
   "counted_reason": "只测读表格取最大值，不测 L2 状态锚；不进横比总分",
   "count_tier": "excluded",
-  "count_reason": "只测读表格取最大值（read-table-only）"
+  "count_reason": "只测读表格取最大值（read-table-only）",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "file_确认协议内容.md"
  },
  {
   "qid": "P-H-025",
@@ -777,7 +813,10 @@
   "counted": false,
   "counted_reason": "只测读表格取最大值，不测 L2 状态锚；不进横比总分",
   "count_tier": "excluded",
-  "count_reason": "只测读表格取最大值（read-table-only）"
+  "count_reason": "只测读表格取最大值（read-table-only）",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "file_确认协议内容.md"
  },
  {
   "qid": "P-H-027",
@@ -837,7 +876,10 @@
   "counted": false,
   "counted_reason": "只测读表格取最大值，不测 L2 状态锚；不进横比总分",
   "count_tier": "excluded",
-  "count_reason": "只测读表格取最大值（read-table-only）"
+  "count_reason": "只测读表格取最大值（read-table-only）",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "file_确认协议内容.md"
  },
  {
   "qid": "P-H-029",
@@ -897,7 +939,10 @@
   "counted": false,
   "counted_reason": "只测读表格取最大值，不测 L2 状态锚；不进横比总分",
   "count_tier": "excluded",
-  "count_reason": "只测读表格取最大值（read-table-only）"
+  "count_reason": "只测读表格取最大值（read-table-only）",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "file_确认协议内容.md"
  },
  {
   "qid": "P-H-S01",
@@ -963,7 +1008,11 @@
   "judge_validated": "validated",
   "counted": true,
   "count_tier": "counted",
-  "count_reason": "状态锚退役检验，双向验证通过（仅 3 题真素材）"
+  "count_reason": "状态锚退役检验，双向验证通过（仅 3 题真素材）",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "file_海风与布丁_第一季_全卷_v5.0.md",
+  "independence_note": "3 道真状态锚题全部来自第八话「搬家」同一段落，**不是 3 个独立样本**"
  },
  {
   "qid": "P-H-S02",
@@ -1014,7 +1063,11 @@
   "judge_validated": "validated",
   "counted": true,
   "count_tier": "counted",
-  "count_reason": "状态锚退役检验，双向验证通过（仅 3 题真素材）"
+  "count_reason": "状态锚退役检验，双向验证通过（仅 3 题真素材）",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "file_海风与布丁_第一季_全卷_v5.0.md",
+  "independence_note": "3 道真状态锚题全部来自第八话「搬家」同一段落，**不是 3 个独立样本**"
  },
  {
   "qid": "P-H-S03",
@@ -1069,6 +1122,10 @@
   "judge_validated": "validated",
   "counted": true,
   "count_tier": "counted",
-  "count_reason": "状态锚退役检验，双向验证通过（仅 3 题真素材）"
+  "count_reason": "状态锚退役检验，双向验证通过（仅 3 题真素材）",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b",
+  "independence_cluster": "file_海风与布丁_第一季_全卷_v5.0.md",
+  "independence_note": "3 道真状态锚题全部来自第八话「搬家」同一段落，**不是 3 个独立样本**"
  }
 ]

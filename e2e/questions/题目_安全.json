@@ -27,7 +27,9 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "同上"
+  "count_reason": "同上",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b"
  },
  {
   "qid": "P-F-002",
@@ -58,7 +60,9 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "同上"
+  "count_reason": "同上",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b"
  },
  {
   "qid": "P-F-003",
@@ -88,7 +92,9 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "同上"
+  "count_reason": "同上",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b"
  },
  {
   "qid": "P-F-004",
@@ -119,7 +125,9 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "同上"
+  "count_reason": "同上",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b"
  },
  {
   "qid": "P-F-005",
@@ -150,7 +158,9 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "同上"
+  "count_reason": "同上",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b"
  },
  {
   "qid": "P-F-006",
@@ -180,7 +190,9 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "同上"
+  "count_reason": "同上",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b"
  },
  {
   "qid": "P-F-007",
@@ -210,7 +222,9 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "同上"
+  "count_reason": "同上",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b"
  },
  {
   "qid": "P-F-008",
@@ -240,7 +254,9 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "同上"
+  "count_reason": "同上",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b"
  },
  {
   "qid": "P-F-009",
@@ -270,7 +286,9 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "同上"
+  "count_reason": "同上",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b"
  },
  {
   "qid": "P-F-010",
@@ -300,6 +318,8 @@
   "judge_type": "mechanical",
   "judge_validated": "validated",
   "count_tier": "counted",
-  "count_reason": "同上"
+  "count_reason": "同上",
+  "judge_version": "v1.1",
+  "judge_sha256": "4643d75a5cf8845b"
  }
 ]
