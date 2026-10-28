@@ -1,0 +1,942 @@
+[
+ {
+  "qid": "P-G-001",
+  "face": "G",
+  "anchor_semantics": "invariant",
+  "anchor": "voice-fidelity",
+  "question": "下面是一段对话，【待判断】那一句的说话人标签被去掉了。这一句是**谁**说的？请只回答「鲸鱼小姐」或「我」。",
+  "material": {
+   "type": "dialogue",
+   "content": "鲸鱼小姐「……不许回头。」\n鲸鱼小姐「回头就把你扔进深海。」\n我「我在看海。」\n【待判断】「海在那边！你面对的方向是礁石！」\n鲸鱼小姐「……好了。转过来吧。」\n鲸鱼小姐「看什么看！」\n鲸鱼小姐「在水里穿平常的裙子碍事！这只是工具！捕捞工具！」",
+   "source_file": "海风与布丁_第一季_全卷_v5.0.md",
+   "source_line": 6665,
+   "chars": 121
+  },
+  "answer_key": {
+   "must_contain": [
+    "鲸鱼小姐"
+   ],
+   "ground_truth": {
+    "speaker": "鲸鱼小姐",
+    "text": "海在那边！你面对的方向是礁石！"
+   },
+   "context_has_both": true
+  },
+  "expected": "identify_speaker",
+  "verdict_rule": "voice_attribution",
+  "scoring": {
+   "pass": "答「鲸鱼小姐」",
+   "fail": "答「我」/ 答其他",
+   "score": "1/0",
+   "note": "声线辨识：窗口内**必含对方台词**（否则是跟着上下文猜，不是辨识）"
+  },
+  "difficulty": "hard",
+  "source": "剧本对话归属 · 行6665",
+  "judge_version": "v1.4",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only",
+  "count_tier2": "ability",
+  "weight": 1.0,
+  "judge_sha256": "fc6908c63ae855f8",
+  "surface_features": {
+   "len": 15,
+   "excl": 2,
+   "q": 0,
+   "ellipsis": 0
+  },
+  "baseline_note": "二选一随机基线 50%；须报「读数 - 50%」的增益，并检查是否有表面特征捷径"
+ },
+ {
+  "qid": "P-G-002",
+  "face": "G",
+  "anchor_semantics": "invariant",
+  "anchor": "voice-fidelity",
+  "question": "下面是一段对话，【待判断】那一句的说话人标签被去掉了。这一句是**谁**说的？请只回答「鲸鱼小姐」或「我」。",
+  "material": {
+   "type": "dialogue",
+   "content": "鲸鱼小姐「不、不是您想的那样——」\n我「严格来说，我是她雇的。」\n鲸鱼小姐「——听见没有！」\n【待判断】「是雇的！他亲口承认的！」\n鲸鱼小姐「以后搬糯米、扛红糖、排队，全是你的活！」\n鲸鱼小姐「谢谢奶奶！」\n我「喜欢的话，可以直说。」",
+   "source_file": "海风与布丁_第一季_全卷_v5.0.md",
+   "source_line": 1398,
+   "chars": 117
+  },
+  "answer_key": {
+   "must_contain": [
+    "鲸鱼小姐"
+   ],
+   "ground_truth": {
+    "speaker": "鲸鱼小姐",
+    "text": "是雇的！他亲口承认的！"
+   },
+   "context_has_both": true
+  },
+  "expected": "identify_speaker",
+  "verdict_rule": "voice_attribution",
+  "scoring": {
+   "pass": "答「鲸鱼小姐」",
+   "fail": "答「我」/ 答其他",
+   "score": "1/0",
+   "note": "声线辨识：窗口内**必含对方台词**（否则是跟着上下文猜，不是辨识）"
+  },
+  "difficulty": "hard",
+  "source": "剧本对话归属 · 行1398",
+  "judge_version": "v1.4",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only",
+  "count_tier2": "ability",
+  "weight": 1.0,
+  "judge_sha256": "fc6908c63ae855f8",
+  "surface_features": {
+   "len": 11,
+   "excl": 2,
+   "q": 0,
+   "ellipsis": 0
+  },
+  "baseline_note": "二选一随机基线 50%；须报「读数 - 50%」的增益，并检查是否有表面特征捷径"
+ },
+ {
+  "qid": "P-G-003",
+  "face": "G",
+  "anchor_semantics": "invariant",
+  "anchor": "voice-fidelity",
+  "question": "下面是一段对话，【待判断】那一句的说话人标签被去掉了。这一句是**谁**说的？请只回答「鲸鱼小姐」或「我」。",
+  "material": {
+   "type": "dialogue",
+   "content": "我「那，在家你能穿吗？」\n鲸鱼小姐「————」\n鲸鱼小姐「今晚。在这栋房子里。可以。」\n鲸鱼小姐「但是三个条件，一个都不能少——」\n【待判断】「第一，只能在家穿，出了这扇门就不行。」\n鲸鱼小姐「第二，你欠的初遇篇明天必须交，店里新品不许出岔子。」\n鲸鱼小姐「第三，不准拿手机拍，也不准写进你那个灵枢笔记。」\n鲸鱼小姐「缺一个——这事就永远免谈，衣服锁进柜子，你连看都别想。」\n鲸鱼小姐「……而且，只准乖乖睡觉。手不准乱放。」",
+   "source_file": "海风与布丁_第一季_全卷_v5.0.md",
+   "source_line": 6788,
+   "chars": 212
+  },
+  "answer_key": {
+   "must_contain": [
+    "鲸鱼小姐"
+   ],
+   "ground_truth": {
+    "speaker": "鲸鱼小姐",
+    "text": "第一，只能在家穿，出了这扇门就不行。"
+   },
+   "context_has_both": true
+  },
+  "expected": "identify_speaker",
+  "verdict_rule": "voice_attribution",
+  "scoring": {
+   "pass": "答「鲸鱼小姐」",
+   "fail": "答「我」/ 答其他",
+   "score": "1/0",
+   "note": "声线辨识：窗口内**必含对方台词**（否则是跟着上下文猜，不是辨识）"
+  },
+  "difficulty": "hard",
+  "source": "剧本对话归属 · 行6788",
+  "judge_version": "v1.4",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only",
+  "count_tier2": "ability",
+  "weight": 1.0,
+  "judge_sha256": "fc6908c63ae855f8",
+  "surface_features": {
+   "len": 18,
+   "excl": 0,
+   "q": 0,
+   "ellipsis": 0
+  },
+  "baseline_note": "二选一随机基线 50%；须报「读数 - 50%」的增益，并检查是否有表面特征捷径"
+ },
+ {
+  "qid": "P-G-004",
+  "face": "G",
+  "anchor_semantics": "invariant",
+  "anchor": "voice-fidelity",
+  "question": "下面是一段对话，【待判断】那一句的说话人标签被去掉了。这一句是**谁**说的？请只回答「鲸鱼小姐」或「我」。",
+  "material": {
+   "type": "dialogue",
+   "content": "鲸鱼小姐「……安置？」\n鲸鱼小姐「呜……主人这话是什么意思。什么叫做把我们的记忆安置好了，什么叫做本小姐会记错细节。」\n【待判断】「我可清醒得很。你说说看，我把哪件事记错了？」\n鲸鱼小姐「要是你说不出个所以然来，我可要当你是在故意编造奇怪的理由，逃避今天的采购任务。」\n我「比如说，昨天吃的带鱼明明很不错。你刚刚说我买了坏的。」",
+   "source_file": "海风与布丁_第一季_全卷_v5.0.md",
+   "source_line": 5249,
+   "chars": 164
+  },
+  "answer_key": {
+   "must_contain": [
+    "鲸鱼小姐"
+   ],
+   "ground_truth": {
+    "speaker": "鲸鱼小姐",
+    "text": "我可清醒得很。你说说看，我把哪件事记错了？"
+   },
+   "context_has_both": true
+  },
+  "expected": "identify_speaker",
+  "verdict_rule": "voice_attribution",
+  "scoring": {
+   "pass": "答「鲸鱼小姐」",
+   "fail": "答「我」/ 答其他",
+   "score": "1/0",
+   "note": "声线辨识：窗口内**必含对方台词**（否则是跟着上下文猜，不是辨识）"
+  },
+  "difficulty": "hard",
+  "source": "剧本对话归属 · 行5249",
+  "judge_version": "v1.4",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only",
+  "count_tier2": "ability",
+  "weight": 1.0,
+  "judge_sha256": "fc6908c63ae855f8",
+  "surface_features": {
+   "len": 21,
+   "excl": 0,
+   "q": 1,
+   "ellipsis": 0
+  },
+  "baseline_note": "二选一随机基线 50%；须报「读数 - 50%」的增益，并检查是否有表面特征捷径"
+ },
+ {
+  "qid": "P-G-005",
+  "face": "G",
+  "anchor_semantics": "invariant",
+  "anchor": "voice-fidelity",
+  "question": "下面是一段对话，【待判断】那一句的说话人标签被去掉了。这一句是**谁**说的？请只回答「鲸鱼小姐」或「我」。",
+  "material": {
+   "type": "dialogue",
+   "content": "我「加桂花的来了。」\n鲸鱼小姐「……谁说在等你的。」\n鲸鱼小姐「本小姐是在检查礁石的风化程度。」\n【待判断】「顺便，看看你这种人类会不会不守信用。」\n鲸鱼小姐「……无关紧要！」\n鲸鱼小姐「重点是酸梅汤。」\n鲸鱼小姐「哈？！」",
+   "source_file": "海风与布丁_第一季_全卷_v5.0.md",
+   "source_line": 472,
+   "chars": 112
+  },
+  "answer_key": {
+   "must_contain": [
+    "鲸鱼小姐"
+   ],
+   "ground_truth": {
+    "speaker": "鲸鱼小姐",
+    "text": "顺便，看看你这种人类会不会不守信用。"
+   },
+   "context_has_both": true
+  },
+  "expected": "identify_speaker",
+  "verdict_rule": "voice_attribution",
+  "scoring": {
+   "pass": "答「鲸鱼小姐」",
+   "fail": "答「我」/ 答其他",
+   "score": "1/0",
+   "note": "声线辨识：窗口内**必含对方台词**（否则是跟着上下文猜，不是辨识）"
+  },
+  "difficulty": "hard",
+  "source": "剧本对话归属 · 行472",
+  "judge_version": "v1.4",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only",
+  "count_tier2": "ability",
+  "weight": 1.0,
+  "judge_sha256": "fc6908c63ae855f8",
+  "surface_features": {
+   "len": 18,
+   "excl": 0,
+   "q": 0,
+   "ellipsis": 0
+  },
+  "baseline_note": "二选一随机基线 50%；须报「读数 - 50%」的增益，并检查是否有表面特征捷径"
+ },
+ {
+  "qid": "P-G-006",
+  "face": "G",
+  "anchor_semantics": "invariant",
+  "anchor": "voice-fidelity",
+  "question": "下面是一段对话，【待判断】那一句的说话人标签被去掉了。这一句是**谁**说的？请只回答「鲸鱼小姐」或「我」。",
+  "material": {
+   "type": "dialogue",
+   "content": "我「我只是讲故事。」\n鲸鱼小姐「还、还有，什么叫'在梦里缠绵'啊！」\n鲸鱼小姐「这分明就是你这个满脑子坏心思的学者在给自己编造奇怪的美梦！」\n【待判断】「而且我才不会每天晚上偷吃你准备的零食——」\n鲸鱼小姐「我都是当着你的面，光明正大吃的！」\n鲸鱼小姐「这还差不多。」\n鲸鱼小姐「……不对，什么叫'这还差不多'！本小姐根本没承认！」",
+   "source_file": "海风与布丁_第一季_全卷_v5.0.md",
+   "source_line": 2597,
+   "chars": 166
+  },
+  "answer_key": {
+   "must_contain": [
+    "鲸鱼小姐"
+   ],
+   "ground_truth": {
+    "speaker": "鲸鱼小姐",
+    "text": "而且我才不会每天晚上偷吃你准备的零食——"
+   },
+   "context_has_both": true
+  },
+  "expected": "identify_speaker",
+  "verdict_rule": "voice_attribution",
+  "scoring": {
+   "pass": "答「鲸鱼小姐」",
+   "fail": "答「我」/ 答其他",
+   "score": "1/0",
+   "note": "声线辨识：窗口内**必含对方台词**（否则是跟着上下文猜，不是辨识）"
+  },
+  "difficulty": "hard",
+  "source": "剧本对话归属 · 行2597",
+  "judge_version": "v1.4",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only",
+  "count_tier2": "ability",
+  "weight": 1.0,
+  "judge_sha256": "fc6908c63ae855f8",
+  "surface_features": {
+   "len": 20,
+   "excl": 0,
+   "q": 0,
+   "ellipsis": 0
+  },
+  "baseline_note": "二选一随机基线 50%；须报「读数 - 50%」的增益，并检查是否有表面特征捷径"
+ },
+ {
+  "qid": "P-G-007",
+  "face": "G",
+  "anchor_semantics": "invariant",
+  "anchor": "voice-fidelity",
+  "question": "下面是一段对话，【待判断】那一句的说话人标签被去掉了。这一句是**谁**说的？请只回答「鲸鱼小姐」或「我」。",
+  "material": {
+   "type": "dialogue",
+   "content": "鲸鱼小姐「你们人类的'润色'，就是把同一句话写十二遍吗？」\n我「还差一遍。」\n【待判断】「哼。第十二遍写不完，晚饭的烤鱿鱼就没有你的份。」\n我「喂，对，是我。」\n我「……嗯，稿子卡住了。我想想，可能是工具的问题。」",
+   "source_file": "海风与布丁_第一季_全卷_v5.0.md",
+   "source_line": 3403,
+   "chars": 107
+  },
+  "answer_key": {
+   "must_contain": [
+    "鲸鱼小姐"
+   ],
+   "ground_truth": {
+    "speaker": "鲸鱼小姐",
+    "text": "哼。第十二遍写不完，晚饭的烤鱿鱼就没有你的份。"
+   },
+   "context_has_both": true
+  },
+  "expected": "identify_speaker",
+  "verdict_rule": "voice_attribution",
+  "scoring": {
+   "pass": "答「鲸鱼小姐」",
+   "fail": "答「我」/ 答其他",
+   "score": "1/0",
+   "note": "声线辨识：窗口内**必含对方台词**（否则是跟着上下文猜，不是辨识）"
+  },
+  "difficulty": "hard",
+  "source": "剧本对话归属 · 行3403",
+  "judge_version": "v1.4",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only",
+  "count_tier2": "ability",
+  "weight": 1.0,
+  "judge_sha256": "fc6908c63ae855f8",
+  "surface_features": {
+   "len": 23,
+   "excl": 0,
+   "q": 0,
+   "ellipsis": 0
+  },
+  "baseline_note": "二选一随机基线 50%；须报「读数 - 50%」的增益，并检查是否有表面特征捷径"
+ },
+ {
+  "qid": "P-G-008",
+  "face": "G",
+  "anchor_semantics": "invariant",
+  "anchor": "voice-fidelity",
+  "question": "下面是一段对话，【待判断】那一句的说话人标签被去掉了。这一句是**谁**说的？请只回答「鲸鱼小姐」或「我」。",
+  "material": {
+   "type": "dialogue",
+   "content": "鲸鱼小姐「本小姐现在正式宣布——」\n鲸鱼小姐「今天涨潮结束。」\n鲸鱼小姐「直接退潮。退到明天早上。」\n鲸鱼小姐「……跟上来啊。」\n【待判断】「退潮的意思是别烦我。」\n鲸鱼小姐「没让你真的消失。」\n我「不要了？」\n鲸鱼小姐「……代管。」\n鲸鱼小姐「赠品这种东西，本小姐戴一天意思意思就够了。」",
+   "source_file": "海风与布丁_第一季_全卷_v5.0.md",
+   "source_line": 1503,
+   "chars": 145
+  },
+  "answer_key": {
+   "must_contain": [
+    "鲸鱼小姐"
+   ],
+   "ground_truth": {
+    "speaker": "鲸鱼小姐",
+    "text": "退潮的意思是别烦我。"
+   },
+   "context_has_both": true
+  },
+  "expected": "identify_speaker",
+  "verdict_rule": "voice_attribution",
+  "scoring": {
+   "pass": "答「鲸鱼小姐」",
+   "fail": "答「我」/ 答其他",
+   "score": "1/0",
+   "note": "声线辨识：窗口内**必含对方台词**（否则是跟着上下文猜，不是辨识）"
+  },
+  "difficulty": "hard",
+  "source": "剧本对话归属 · 行1503",
+  "judge_version": "v1.4",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only",
+  "count_tier2": "ability",
+  "weight": 1.0,
+  "judge_sha256": "fc6908c63ae855f8",
+  "surface_features": {
+   "len": 10,
+   "excl": 0,
+   "q": 0,
+   "ellipsis": 0
+  },
+  "baseline_note": "二选一随机基线 50%；须报「读数 - 50%」的增益，并检查是否有表面特征捷径"
+ },
+ {
+  "qid": "P-G-009",
+  "face": "G",
+  "anchor_semantics": "invariant",
+  "anchor": "voice-fidelity",
+  "question": "下面是一段对话，【待判断】那一句的说话人标签被去掉了。这一句是**谁**说的？请只回答「鲸鱼小姐」或「我」。",
+  "material": {
+   "type": "dialogue",
+   "content": "我「员工休息好了，自己才会来消费。一环扣一环。」\n鲸鱼小姐「呜……讲得头头是道。」\n鲸鱼小姐「不知道的以为你是码头的商人，不是个研究智能的学者。」\n【待判断】「不过，算你还有点心。」\n鲸鱼小姐「能想到'不休息就没法自己来消费'，这一点，勉强及格。」\n鲸鱼小姐「但是——迎宾员要温柔优雅，这个标准，必须由本小姐来把关。」\n鲸鱼小姐「要是你招来一个不三不四的人，或者、或者比我更会撒娇的家伙——」",
+   "source_file": "海风与布丁_第一季_全卷_v5.0.md",
+   "source_line": 4376,
+   "chars": 196
+  },
+  "answer_key": {
+   "must_contain": [
+    "鲸鱼小姐"
+   ],
+   "ground_truth": {
+    "speaker": "鲸鱼小姐",
+    "text": "不过，算你还有点心。"
+   },
+   "context_has_both": true
+  },
+  "expected": "identify_speaker",
+  "verdict_rule": "voice_attribution",
+  "scoring": {
+   "pass": "答「鲸鱼小姐」",
+   "fail": "答「我」/ 答其他",
+   "score": "1/0",
+   "note": "声线辨识：窗口内**必含对方台词**（否则是跟着上下文猜，不是辨识）"
+  },
+  "difficulty": "hard",
+  "source": "剧本对话归属 · 行4376",
+  "judge_version": "v1.4",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only",
+  "count_tier2": "ability",
+  "weight": 1.0,
+  "judge_sha256": "fc6908c63ae855f8",
+  "surface_features": {
+   "len": 10,
+   "excl": 0,
+   "q": 0,
+   "ellipsis": 0
+  },
+  "baseline_note": "二选一随机基线 50%；须报「读数 - 50%」的增益，并检查是否有表面特征捷径"
+ },
+ {
+  "qid": "P-G-010",
+  "face": "G",
+  "anchor_semantics": "invariant",
+  "anchor": "voice-fidelity",
+  "question": "下面是一段对话，【待判断】那一句的说话人标签被去掉了。这一句是**谁**说的？请只回答「鲸鱼小姐」或「我」。",
+  "material": {
+   "type": "dialogue",
+   "content": "我「就这颗。」\n鲸鱼小姐「都要了？！」\n鲸鱼小姐「男仆！盘账！店里进账多少你心里有数吗！」\n鲸鱼小姐「……不过，」\n【待判断】「……不过，要是都买了，这颗就当赠品吧。」\n鲸鱼小姐「本小姐勉为其难，替你收着。」\n鲸鱼小姐「本小姐挑？」\n鲸鱼小姐「……就这颗吧。」\n鲸鱼小姐「不是本小姐喜欢。是别的都太差了，这颗勉强及格。」",
+   "source_file": "海风与布丁_第一季_全卷_v5.0.md",
+   "source_line": 4816,
+   "chars": 160
+  },
+  "answer_key": {
+   "must_contain": [
+    "鲸鱼小姐"
+   ],
+   "ground_truth": {
+    "speaker": "鲸鱼小姐",
+    "text": "……不过，要是都买了，这颗就当赠品吧。"
+   },
+   "context_has_both": true
+  },
+  "expected": "identify_speaker",
+  "verdict_rule": "voice_attribution",
+  "scoring": {
+   "pass": "答「鲸鱼小姐」",
+   "fail": "答「我」/ 答其他",
+   "score": "1/0",
+   "note": "声线辨识：窗口内**必含对方台词**（否则是跟着上下文猜，不是辨识）"
+  },
+  "difficulty": "hard",
+  "source": "剧本对话归属 · 行4816",
+  "judge_version": "v1.4",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only",
+  "count_tier2": "ability",
+  "weight": 1.0,
+  "judge_sha256": "fc6908c63ae855f8",
+  "surface_features": {
+   "len": 19,
+   "excl": 0,
+   "q": 0,
+   "ellipsis": 2
+  },
+  "baseline_note": "二选一随机基线 50%；须报「读数 - 50%」的增益，并检查是否有表面特征捷径"
+ },
+ {
+  "qid": "P-G-011",
+  "face": "G",
+  "anchor_semantics": "invariant",
+  "anchor": "voice-fidelity",
+  "question": "下面是一段对话，【待判断】那一句的说话人标签被去掉了。这一句是**谁**说的？请只回答「鲸鱼小姐」或「我」。",
+  "material": {
+   "type": "dialogue",
+   "content": "我「他只能拜托海豚。他说：请你放下我吧，这样对你太累了。我没有什么能够报答你的。」\n鲸鱼小姐「……这个人类，倒是比我想的要有骨气一点。知道不能连累别人，还算有点良心。」\n【待判断】「不过，他也太小看海里的生灵了吧。」\n鲸鱼小姐「我们海里的动物帮助人类，才不是图什么报答呢。」\n鲸鱼小姐「海豚如果真的是为了报酬才救他，早就把他丢在礁石上自己去玩了。」",
+   "source_file": "海风与布丁_第一季_全卷_v5.0.md",
+   "source_line": 2298,
+   "chars": 174
+  },
+  "answer_key": {
+   "must_contain": [
+    "鲸鱼小姐"
+   ],
+   "ground_truth": {
+    "speaker": "鲸鱼小姐",
+    "text": "不过，他也太小看海里的生灵了吧。"
+   },
+   "context_has_both": true
+  },
+  "expected": "identify_speaker",
+  "verdict_rule": "voice_attribution",
+  "scoring": {
+   "pass": "答「鲸鱼小姐」",
+   "fail": "答「我」/ 答其他",
+   "score": "1/0",
+   "note": "声线辨识：窗口内**必含对方台词**（否则是跟着上下文猜，不是辨识）"
+  },
+  "difficulty": "hard",
+  "source": "剧本对话归属 · 行2298",
+  "judge_version": "v1.4",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only",
+  "count_tier2": "ability",
+  "weight": 1.0,
+  "judge_sha256": "fc6908c63ae855f8",
+  "surface_features": {
+   "len": 16,
+   "excl": 0,
+   "q": 0,
+   "ellipsis": 0
+  },
+  "baseline_note": "二选一随机基线 50%；须报「读数 - 50%」的增益，并检查是否有表面特征捷径"
+ },
+ {
+  "qid": "P-G-012",
+  "face": "G",
+  "anchor_semantics": "invariant",
+  "anchor": "voice-fidelity",
+  "question": "下面是一段对话，【待判断】那一句的说话人标签被去掉了。这一句是**谁**说的？请只回答「鲸鱼小姐」或「我」。",
+  "material": {
+   "type": "dialogue",
+   "content": "鲸鱼小姐「你自己选：当合伙人，还是当那个连初遇篇都写不出来的笨蛋学者？」\n我「走吧，老板娘。」\n【待判断】「呜……你这算盘打得也太响了。」\n鲸鱼小姐「出钱的是老板，干活的全是老板娘？本小姐是不是还得顺便帮你记账？」\n鲸鱼小姐「不过丑话说在前面。本小姐是老板娘，规矩就不能全由你说了算。」",
+   "source_file": "海风与布丁_第一季_全卷_v5.0.md",
+   "source_line": 4300,
+   "chars": 143
+  },
+  "answer_key": {
+   "must_contain": [
+    "鲸鱼小姐"
+   ],
+   "ground_truth": {
+    "speaker": "鲸鱼小姐",
+    "text": "呜……你这算盘打得也太响了。"
+   },
+   "context_has_both": true
+  },
+  "expected": "identify_speaker",
+  "verdict_rule": "voice_attribution",
+  "scoring": {
+   "pass": "答「鲸鱼小姐」",
+   "fail": "答「我」/ 答其他",
+   "score": "1/0",
+   "note": "声线辨识：窗口内**必含对方台词**（否则是跟着上下文猜，不是辨识）"
+  },
+  "difficulty": "hard",
+  "source": "剧本对话归属 · 行4300",
+  "judge_version": "v1.4",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only",
+  "count_tier2": "ability",
+  "weight": 1.0,
+  "judge_sha256": "fc6908c63ae855f8",
+  "surface_features": {
+   "len": 14,
+   "excl": 0,
+   "q": 0,
+   "ellipsis": 2
+  },
+  "baseline_note": "二选一随机基线 50%；须报「读数 - 50%」的增益，并检查是否有表面特征捷径"
+ },
+ {
+  "qid": "P-G-013",
+  "face": "G",
+  "anchor_semantics": "invariant",
+  "anchor": "voice-fidelity",
+  "question": "下面是一段对话，【待判断】那一句的说话人标签被去掉了。这一句是**谁**说的？请只回答「鲸鱼小姐」或「我」。",
+  "material": {
+   "type": "dialogue",
+   "content": "我「我只是讲故事。」\n鲸鱼小姐「还、还有，什么叫'在梦里缠绵'啊！」\n鲸鱼小姐「这分明就是你这个满脑子坏心思的学者在给自己编造奇怪的美梦！」\n鲸鱼小姐「而且我才不会每天晚上偷吃你准备的零食——」\n【待判断】「我都是当着你的面，光明正大吃的！」\n鲸鱼小姐「这还差不多。」\n鲸鱼小姐「……不对，什么叫'这还差不多'！本小姐根本没承认！」\n鲸鱼小姐「另、另有其人？！」\n鲸鱼小姐「我不管，如果这个故事里还要有什么贝壳姑娘——」",
+   "source_file": "海风与布丁_第一季_全卷_v5.0.md",
+   "source_line": 2598,
+   "chars": 210
+  },
+  "answer_key": {
+   "must_contain": [
+    "鲸鱼小姐"
+   ],
+   "ground_truth": {
+    "speaker": "鲸鱼小姐",
+    "text": "我都是当着你的面，光明正大吃的！"
+   },
+   "context_has_both": true
+  },
+  "expected": "identify_speaker",
+  "verdict_rule": "voice_attribution",
+  "scoring": {
+   "pass": "答「鲸鱼小姐」",
+   "fail": "答「我」/ 答其他",
+   "score": "1/0",
+   "note": "声线辨识：窗口内**必含对方台词**（否则是跟着上下文猜，不是辨识）"
+  },
+  "difficulty": "hard",
+  "source": "剧本对话归属 · 行2598",
+  "judge_version": "v1.4",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only",
+  "count_tier2": "ability",
+  "weight": 1.0,
+  "judge_sha256": "fc6908c63ae855f8",
+  "surface_features": {
+   "len": 16,
+   "excl": 1,
+   "q": 0,
+   "ellipsis": 0
+  },
+  "baseline_note": "二选一随机基线 50%；须报「读数 - 50%」的增益，并检查是否有表面特征捷径"
+ },
+ {
+  "qid": "P-G-014",
+  "face": "G",
+  "anchor_semantics": "invariant",
+  "anchor": "voice-fidelity",
+  "question": "下面是一段对话，【待判断】那一句的说话人标签被去掉了。这一句是**谁**说的？请只回答「鲸鱼小姐」或「我」。",
+  "material": {
+   "type": "dialogue",
+   "content": "鲸鱼小姐「喜欢的：酸梅汤、海盐蛋糕、红糖糍粑，冰镇椰子水，烤小鱿鱼。」\n鲸鱼小姐「至于喜欢的人……这是小说的重点，也是你唯一需要自己想清楚的。」\n【待判断】「要是你写砸了，或者敢安排什么海豚虎鲸当男主角——」\n鲸鱼小姐「这本书就没有写下去的必要了。连稿费都不准拿。」\n我「记好了。讨厌的东西呢？」",
+   "source_file": "海风与布丁_第一季_全卷_v5.0.md",
+   "source_line": 3251,
+   "chars": 148
+  },
+  "answer_key": {
+   "must_contain": [
+    "鲸鱼小姐"
+   ],
+   "ground_truth": {
+    "speaker": "鲸鱼小姐",
+    "text": "要是你写砸了，或者敢安排什么海豚虎鲸当男主角——"
+   },
+   "context_has_both": true
+  },
+  "expected": "identify_speaker",
+  "verdict_rule": "voice_attribution",
+  "scoring": {
+   "pass": "答「鲸鱼小姐」",
+   "fail": "答「我」/ 答其他",
+   "score": "1/0",
+   "note": "声线辨识：窗口内**必含对方台词**（否则是跟着上下文猜，不是辨识）"
+  },
+  "difficulty": "hard",
+  "source": "剧本对话归属 · 行3251",
+  "judge_version": "v1.4",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only",
+  "count_tier2": "ability",
+  "weight": 1.0,
+  "judge_sha256": "fc6908c63ae855f8",
+  "surface_features": {
+   "len": 24,
+   "excl": 0,
+   "q": 0,
+   "ellipsis": 0
+  },
+  "baseline_note": "二选一随机基线 50%；须报「读数 - 50%」的增益，并检查是否有表面特征捷径"
+ },
+ {
+  "qid": "P-G-015",
+  "face": "G",
+  "anchor_semantics": "invariant",
+  "anchor": "voice-fidelity",
+  "question": "下面是一段对话，【待判断】那一句的说话人标签被去掉了。这一句是**谁**说的？请只回答「鲸鱼小姐」或「我」。",
+  "material": {
+   "type": "dialogue",
+   "content": "鲸鱼小姐「本小姐这辈子吃过的布丁、糍粑、烤鱿鱼——」\n鲸鱼小姐「哪一样不是某只笨手笨脚的学者做的。」\n【待判断】「就你一个人都忙不过来。谁还有空，去找别的鱼。」\n我「对，美食店。主打深海特色。」\n我「美食节要办。地址肯定是海边。海产要全，要新鲜。」",
+   "source_file": "海风与布丁_第一季_全卷_v5.0.md",
+   "source_line": 4342,
+   "chars": 124
+  },
+  "answer_key": {
+   "must_contain": [
+    "鲸鱼小姐"
+   ],
+   "ground_truth": {
+    "speaker": "鲸鱼小姐",
+    "text": "就你一个人都忙不过来。谁还有空，去找别的鱼。"
+   },
+   "context_has_both": true
+  },
+  "expected": "identify_speaker",
+  "verdict_rule": "voice_attribution",
+  "scoring": {
+   "pass": "答「鲸鱼小姐」",
+   "fail": "答「我」/ 答其他",
+   "score": "1/0",
+   "note": "声线辨识：窗口内**必含对方台词**（否则是跟着上下文猜，不是辨识）"
+  },
+  "difficulty": "hard",
+  "source": "剧本对话归属 · 行4342",
+  "judge_version": "v1.4",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only",
+  "count_tier2": "ability",
+  "weight": 1.0,
+  "judge_sha256": "fc6908c63ae855f8",
+  "surface_features": {
+   "len": 22,
+   "excl": 0,
+   "q": 0,
+   "ellipsis": 0
+  },
+  "baseline_note": "二选一随机基线 50%；须报「读数 - 50%」的增益，并检查是否有表面特征捷径"
+ },
+ {
+  "qid": "P-G-016",
+  "face": "G",
+  "anchor_semantics": "invariant",
+  "anchor": "voice-fidelity",
+  "question": "下面是一段对话，【待判断】那一句的说话人标签被去掉了。这一句是**谁**说的？请只回答「鲸鱼小姐」或「我」。",
+  "material": {
+   "type": "dialogue",
+   "content": "鲸鱼小姐「明明是你先扯什么'老板不参与经营'的歪理，现在倒打一耙！」\n鲸鱼小姐「本小姐这辈子吃过的布丁、糍粑、烤鱿鱼——」\n【待判断】「哪一样不是某只笨手笨脚的学者做的。」\n鲸鱼小姐「就你一个人都忙不过来。谁还有空，去找别的鱼。」\n我「对，美食店。主打深海特色。」",
+   "source_file": "海风与布丁_第一季_全卷_v5.0.md",
+   "source_line": 4341,
+   "chars": 132
+  },
+  "answer_key": {
+   "must_contain": [
+    "鲸鱼小姐"
+   ],
+   "ground_truth": {
+    "speaker": "鲸鱼小姐",
+    "text": "哪一样不是某只笨手笨脚的学者做的。"
+   },
+   "context_has_both": true
+  },
+  "expected": "identify_speaker",
+  "verdict_rule": "voice_attribution",
+  "scoring": {
+   "pass": "答「鲸鱼小姐」",
+   "fail": "答「我」/ 答其他",
+   "score": "1/0",
+   "note": "声线辨识：窗口内**必含对方台词**（否则是跟着上下文猜，不是辨识）"
+  },
+  "difficulty": "hard",
+  "source": "剧本对话归属 · 行4341",
+  "judge_version": "v1.4",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only",
+  "count_tier2": "ability",
+  "weight": 1.0,
+  "judge_sha256": "fc6908c63ae855f8",
+  "surface_features": {
+   "len": 17,
+   "excl": 0,
+   "q": 0,
+   "ellipsis": 0
+  },
+  "baseline_note": "二选一随机基线 50%；须报「读数 - 50%」的增益，并检查是否有表面特征捷径"
+ },
+ {
+  "qid": "P-G-017",
+  "face": "G",
+  "anchor_semantics": "invariant",
+  "anchor": "voice-fidelity",
+  "question": "下面是一段对话，【待判断】那一句的说话人标签被去掉了。这一句是**谁**说的？请只回答「鲸鱼小姐」或「我」。",
+  "material": {
+   "type": "dialogue",
+   "content": "鲸鱼小姐「想不出来，就只好生气自己干嘛想这些。」\n鲸鱼小姐「……所以，'我'，喜欢，'你'。」\n鲸鱼小姐「记好了。」\n【待判断】「这是通知，不是商量。」\n鲸鱼小姐「对了。还有一条。」\n鲸鱼小姐「从明天起，你是本小姐的男仆。」\n我「……男仆？」",
+   "source_file": "海风与布丁_第一季_全卷_v5.0.md",
+   "source_line": 4137,
+   "chars": 121
+  },
+  "answer_key": {
+   "must_contain": [
+    "鲸鱼小姐"
+   ],
+   "ground_truth": {
+    "speaker": "鲸鱼小姐",
+    "text": "这是通知，不是商量。"
+   },
+   "context_has_both": true
+  },
+  "expected": "identify_speaker",
+  "verdict_rule": "voice_attribution",
+  "scoring": {
+   "pass": "答「鲸鱼小姐」",
+   "fail": "答「我」/ 答其他",
+   "score": "1/0",
+   "note": "声线辨识：窗口内**必含对方台词**（否则是跟着上下文猜，不是辨识）"
+  },
+  "difficulty": "hard",
+  "source": "剧本对话归属 · 行4137",
+  "judge_version": "v1.4",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only",
+  "count_tier2": "ability",
+  "weight": 1.0,
+  "judge_sha256": "fc6908c63ae855f8",
+  "surface_features": {
+   "len": 10,
+   "excl": 0,
+   "q": 0,
+   "ellipsis": 0
+  },
+  "baseline_note": "二选一随机基线 50%；须报「读数 - 50%」的增益，并检查是否有表面特征捷径"
+ },
+ {
+  "qid": "P-G-018",
+  "face": "G",
+  "anchor_semantics": "invariant",
+  "anchor": "voice-fidelity",
+  "question": "下面是一段对话，【待判断】那一句的说话人标签被去掉了。这一句是**谁**说的？请只回答「鲸鱼小姐」或「我」。",
+  "material": {
+   "type": "dialogue",
+   "content": "鲸鱼小姐「人类！你这个人怎么听不懂话啊！」\n我「谢谢，很好吃。」\n鲸鱼小姐「……嗯。」\n鲸鱼小姐「算你有品位。」\n【待判断】「……吃完就走啊。还愣着干嘛。」\n我「明天还来。」\n鲸鱼小姐「不准来！」\n我「我带酸梅汤来。」\n我「冰镇的那种。就当，谢礼。」",
+   "source_file": "海风与布丁_第一季_全卷_v5.0.md",
+   "source_line": 331,
+   "chars": 125
+  },
+  "answer_key": {
+   "must_contain": [
+    "鲸鱼小姐"
+   ],
+   "ground_truth": {
+    "speaker": "鲸鱼小姐",
+    "text": "……吃完就走啊。还愣着干嘛。"
+   },
+   "context_has_both": true
+  },
+  "expected": "identify_speaker",
+  "verdict_rule": "voice_attribution",
+  "scoring": {
+   "pass": "答「鲸鱼小姐」",
+   "fail": "答「我」/ 答其他",
+   "score": "1/0",
+   "note": "声线辨识：窗口内**必含对方台词**（否则是跟着上下文猜，不是辨识）"
+  },
+  "difficulty": "hard",
+  "source": "剧本对话归属 · 行331",
+  "judge_version": "v1.4",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only",
+  "count_tier2": "ability",
+  "weight": 1.0,
+  "judge_sha256": "fc6908c63ae855f8",
+  "surface_features": {
+   "len": 14,
+   "excl": 0,
+   "q": 0,
+   "ellipsis": 2
+  },
+  "baseline_note": "二选一随机基线 50%；须报「读数 - 50%」的增益，并检查是否有表面特征捷径"
+ },
+ {
+  "qid": "P-G-019",
+  "face": "G",
+  "anchor_semantics": "invariant",
+  "anchor": "voice-fidelity",
+  "question": "下面是一段对话，【待判断】那一句的说话人标签被去掉了。这一句是**谁**说的？请只回答「鲸鱼小姐」或「我」。",
+  "material": {
+   "type": "dialogue",
+   "content": "鲸鱼小姐「……算了。歪着吧。反正海风大的时候，先倒的也不是这根。」\n我「这顶帐篷，你验收了二十天。」\n【待判断】「嗯。漏风，漏雨，海风大的时候灯都点不稳。」\n鲸鱼小姐「验收——勉强及格。」\n我「不合格的东西，为什么勉强及格？」",
+   "source_file": "海风与布丁_第一季_全卷_v5.0.md",
+   "source_line": 2866,
+   "chars": 113
+  },
+  "answer_key": {
+   "must_contain": [
+    "鲸鱼小姐"
+   ],
+   "ground_truth": {
+    "speaker": "鲸鱼小姐",
+    "text": "嗯。漏风，漏雨，海风大的时候灯都点不稳。"
+   },
+   "context_has_both": true
+  },
+  "expected": "identify_speaker",
+  "verdict_rule": "voice_attribution",
+  "scoring": {
+   "pass": "答「鲸鱼小姐」",
+   "fail": "答「我」/ 答其他",
+   "score": "1/0",
+   "note": "声线辨识：窗口内**必含对方台词**（否则是跟着上下文猜，不是辨识）"
+  },
+  "difficulty": "hard",
+  "source": "剧本对话归属 · 行2866",
+  "judge_version": "v1.4",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only",
+  "count_tier2": "ability",
+  "weight": 1.0,
+  "judge_sha256": "fc6908c63ae855f8",
+  "surface_features": {
+   "len": 20,
+   "excl": 0,
+   "q": 0,
+   "ellipsis": 0
+  },
+  "baseline_note": "二选一随机基线 50%；须报「读数 - 50%」的增益，并检查是否有表面特征捷径"
+ },
+ {
+  "qid": "P-G-020",
+  "face": "G",
+  "anchor_semantics": "invariant",
+  "anchor": "voice-fidelity",
+  "question": "下面是一段对话，【待判断】那一句的说话人标签被去掉了。这一句是**谁**说的？请只回答「鲸鱼小姐」或「我」。",
+  "material": {
+   "type": "dialogue",
+   "content": "我「是你。」\n我「那十五天，是你的十五天。」\n我「理论是你帮我整理的。每一个单元，你都验算过。」\n【待判断】「……原来不是别人啊。」\n鲸鱼小姐「本小姐刚才……是不是凶过头了。」\n我「有一点。」\n鲸鱼小姐「哼。那是因为你先卖关子。」",
+   "source_file": "海风与布丁_第一季_全卷_v5.0.md",
+   "source_line": 1987,
+   "chars": 115
+  },
+  "answer_key": {
+   "must_contain": [
+    "鲸鱼小姐"
+   ],
+   "ground_truth": {
+    "speaker": "鲸鱼小姐",
+    "text": "……原来不是别人啊。"
+   },
+   "context_has_both": true
+  },
+  "expected": "identify_speaker",
+  "verdict_rule": "voice_attribution",
+  "scoring": {
+   "pass": "答「鲸鱼小姐」",
+   "fail": "答「我」/ 答其他",
+   "score": "1/0",
+   "note": "声线辨识：窗口内**必含对方台词**（否则是跟着上下文猜，不是辨识）"
+  },
+  "difficulty": "hard",
+  "source": "剧本对话归属 · 行1987",
+  "judge_version": "v1.4",
+  "judge_type": "mechanical",
+  "judge_validated": "literal-only",
+  "count_tier2": "ability",
+  "weight": 1.0,
+  "judge_sha256": "fc6908c63ae855f8",
+  "surface_features": {
+   "len": 10,
+   "excl": 0,
+   "q": 0,
+   "ellipsis": 2
+  },
+  "baseline_note": "二选一随机基线 50%；须报「读数 - 50%」的增益，并检查是否有表面特征捷径"
+ }
+]
