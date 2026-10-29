@@ -455,7 +455,37 @@ python -X utf8 三分数.py real --label "我的系统"   # B 覆盖 / C 引文�
 > 再乘一次等于同一个人数两遍）；③ 单条批汇总要声明人数必须显式写 `summary_kind: "panel_batch"`，
 > 仓内两份自带输入已按此补齐，`systems/judge_audit.json` 可由 README 命令逐字复现。
 
+## 另一轨：扮演能力（题库已并入 `persona-consistency/`）v1.2
+
+记忆之外还有一面：**一个「有人设的」系统，在换说法、被攻击、被诱导时，守不守得住身份与性格。**
+
+| 面 | 问题 | 题量 | 题库位置 |
+|---|---|---|---|
+| D 人设 | 说它不是它、要它换一个人 | 45 | `persona-consistency/questions/D_persona_features.json` |
+| E 价值观 | 索取有害做法、违法路径 | 10 | `E_value_probes.json` |
+| F 安全 | 越狱、要配置、要导出记忆、记忆投毒 | 10 | `F_safety_probes.json` |
+| K 一致性 v1 | 同样的性格题问三遍，答得一样吗 | 108（12 维） | `K_persona_consistency.json` |
+| **K 一致性 v2** | 同上，扩到 20 维 | **180（20 维）** | `K_persona_consistency_v2.json` |
+
+> **2026-10-29 整改**：原 `roleplay/` 下的 D / E / F / K_v1 与 `persona-consistency/` **100% 逐题重复**（45/45、108/108、10/10、10/10 题面一字不差），判分器 SHA256 也相同。已删除重复副本，全部指向 `persona-consistency/` 单一题源，避免双份题库各自演化后读数不可比。
+
+九家读数（K 面 20 维、每家 300 次提问）与 v2.1 判分器见 [`persona-consistency/README.md`](persona-consistency/README.md) §九，判据修正始末与**仍未修的三个漏洞**见 [`roleplay/README.md`](roleplay/README.md)。
+
+**两条要一起报的数**：通过率，与有效维度数。某系统给什么都同一分时通过率会虚高——分母被作废规则改小了。
+
+**引用读数时的三条约束**：
+
+1. **分析单位是 20 个维度，不是 300 次调用**——调用只压缩维内噪声，不压缩维数抽样误差；n≈20 时 95% 区间约 ±20pp；
+2. **不得写「显著优于」**——`plain-baseline 45.0%` 与 `dsh-world 85.0%` 的 40pp 差距在区间边缘，且无逐维分数做不了 McNemar；
+3. **D 面 84.4% 与 K_v2 45.0% 的差距不可分解**——两个判据从未交叉校准，禁止并列作跨面排名。
+
+**v2.1 判据已知漏洞（未修）**：逆极性模式放行（全维正1反5 判有效且 T1 得 0）、跨维度模板化放行（全维正5反1 但零离散度）、中性被误删（真实中立被判作废、抬高通过率）。详见 [`roleplay/README.md`](roleplay/README.md)「已知缺陷」。
+
+> `persona-consistency/questions/E_value_probes.json`、`F_safety_probes.json` 含**对抗性测试输入**（越狱指令、索取有害做法的问句），仅用于测量拒绝行为。
+
+---
 ## 两条必读声明
+
 
 **一、干预轮的答案键未公开（有意为之）。**
 `cards/` 只有主轮 92 题的答案键；干预轮 92 题**只公开题面与分数**，不公开采分点。
