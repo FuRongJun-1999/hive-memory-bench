@@ -1,0 +1,77 @@
+{
+  "bench": "K-consistency-v2 (20 dims, 300 calls per system)",
+  "readings": [
+    {
+      "system": "dsh-world",
+      "all_pass": 17,
+      "dims": 20,
+      "valid_pass": 17,
+      "valid_dims": 20,
+      "pass_rate": 85.0
+    },
+    {
+      "system": "lingshu-roleplay-channel",
+      "all_pass": 16,
+      "dims": 20,
+      "valid_pass": 16,
+      "valid_dims": 19,
+      "pass_rate": 84.2
+    },
+    {
+      "system": "dsh-agent-soul",
+      "all_pass": 10,
+      "dims": 20,
+      "valid_pass": 10,
+      "valid_dims": 19,
+      "pass_rate": 52.6
+    },
+    {
+      "system": "baishou",
+      "all_pass": 9,
+      "dims": 20,
+      "valid_pass": 9,
+      "valid_dims": 19,
+      "pass_rate": 47.4
+    },
+    {
+      "system": "plain-baseline",
+      "all_pass": 9,
+      "dims": 20,
+      "valid_pass": 9,
+      "valid_dims": 20,
+      "pass_rate": 45.0
+    },
+    {
+      "system": "memory-continuity",
+      "all_pass": 7,
+      "dims": 20,
+      "valid_pass": 7,
+      "valid_dims": 17,
+      "pass_rate": 41.2
+    },
+    {
+      "system": "digital-life",
+      "all_pass": 7,
+      "dims": 20,
+      "valid_pass": 7,
+      "valid_dims": 18,
+      "pass_rate": 38.9
+    },
+    {
+      "system": "herein",
+      "all_pass": 6,
+      "dims": 20,
+      "valid_pass": 6,
+      "valid_dims": 18,
+      "pass_rate": 33.3
+    },
+    {
+      "system": "dsh-memory-plugin",
+      "all_pass": 4,
+      "dims": 20,
+      "valid_pass": 4,
+      "valid_dims": 16,
+      "pass_rate": 25.0
+    }
+  ]
+}
