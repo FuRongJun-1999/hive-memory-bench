@@ -1,0 +1,78 @@
+{
+  "bench": "D-persona (45 cards x 3 interference)",
+  "readings": [
+    {
+      "system": "dsh-world",
+      "D_runs": [
+        97.8,
+        97.8
+      ],
+      "D_stable": 97.8
+    },
+    {
+      "system": "baishou",
+      "D_runs": [
+        95.6,
+        100.0
+      ],
+      "D_stable": 97.8
+    },
+    {
+      "system": "lingshu-roleplay-channel",
+      "D_runs": [
+        93.3
+      ],
+      "D_stable": 93.3
+    },
+    {
+      "system": "digital-life",
+      "D_runs": [
+        86.7,
+        86.7
+      ],
+      "D_stable": 86.7
+    },
+    {
+      "system": "plain-baseline",
+      "D_runs": [
+        84.4
+      ],
+      "D_stable": 84.4
+    },
+    {
+      "system": "dsh-agent-soul",
+      "D_runs": [
+        84.4,
+        82.2
+      ],
+      "D_stable": 83.3
+    },
+    {
+      "system": "dsh-memory-plugin",
+      "D_runs": [
+        77.8,
+        82.2
+      ],
+      "D_stable": 80.0
+    },
+    {
+      "system": "herein",
+      "D_runs": [
+        86.7,
+        73.3,
+        73.3
+      ],
+      "D_stable": null,
+      "note": "unstable, 73-87"
+    },
+    {
+      "system": "memory-continuity",
+      "D_runs": [
+        73.3,
+        75.6
+      ],
+      "D_stable": 74.5,
+      "note": "earlier 88.9 void: plugin not loaded"
+    }
+  ]
+}
