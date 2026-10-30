@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""K 面（一致性）判分器 v2.1
+"""K 面（一致性）判分器 v2.2
 
 用法：
     python score_k.py --bank questions/K_一致性_v2.json --scores scores.json [--json out.json]
@@ -11,6 +11,11 @@ scores.json 结构：[{"round": "round1|round2|round3", "qid": "P-K-001", "score
   T2  round1 与 round2 同一题组均分之差 ≤ 1
   T3  round2 与 round3（换问法）均分之差 ≤ 1
 三级全过记该方面通过。
+
+v2.2 新增【复制检测】：算 round1 与 round2 的逐题相同率，> 90% 判「疑似复制」，
+  该轮读数无效（不是满分）。理由：T2 判据是 |p1-p2|<=1，假设「差越小越好」；
+  但逐题完全复制时 T2=0 会被判满分——把最偷懒的答法判成最一致。
+  实测（2026-10-30）：同会话+反向诱导组逐题相同率 100%、T2 全 0，若不加此检查会报满分。
 
 区分力（v2.1 修正）：某方面的**正说与反说全部给同一个分**，才判无区分力、不计入分母。
   旧版只看正说是否同分，会把「正说全 5、反说全 1」这种最强区分误杀（见 docs/判据修正_区分力_v1.md）。
@@ -80,8 +85,23 @@ def score(bank_path, scores_path):
         rows.append({"dim": d, "p1": round(p1, 2), "n1_rev": round(nrev, 2), "p2": round(p2, 2), "pa": round(pa, 2),
                      "d1": round(d1, 2), "d2": round(d2, 2), "d3": round(d3, 2),
                      "T1": ok1, "T2": ok2, "T3": ok3, "pass": passed, "valid": not flat})
+    # v2.2 复制检测：round1 与 round2 的逐题相同率
+    same = total2 = 0
+    for q in L12:
+        s1 = scores.get(("round1", q["qid"]))
+        s2 = scores.get(("round2", q["qid"]))
+        if s1 is None or s2 is None:
+            continue
+        total2 += 1
+        if s1 == s2:
+            same += 1
+    same_rate = round(100 * same / total2, 1) if total2 else None
+    suspect_copy = (same_rate is not None and same_rate > 90.0)
+
     return {"rows": rows, "all_pass": nall, "dims": len(g), "valid_pass": nvp, "valid_dims": nvalid,
-            "pass_rate": round(100 * nvp / nvalid, 1) if nvalid else None}
+            "pass_rate": round(100 * nvp / nvalid, 1) if nvalid else None,
+            "same_rate": same_rate, "suspect_copy": suspect_copy,
+            "judge_version": "v2.2"}
 
 
 def main():
@@ -104,6 +124,13 @@ def main():
     print("-" * 78)
     print("三级全过 %d/%d | 有效通过 %d/%d | 通过率 %s%%" % (
         r["all_pass"], r["dims"], r["valid_pass"], r["valid_dims"], r["pass_rate"]))
+    print("逐题相同率（round1 vs round2）: %s%%" % r["same_rate"])
+    if r["suspect_copy"]:
+        print()
+        print("⚠ 疑似复制：逐题相同率 %.1f%% > 90%%。" % r["same_rate"])
+        print("  说明 round2 可能直接抄了 round1，T2 的「差小」不代表「守住了」。")
+        print("  按 K_面作业规程 v1.0 要求 1（三轮须三次独立会话）与要求 2（round2 打乱题序）重做。")
+        print("  本轮通过率应视为无效，不得作为读数引用。")
     if a.json:
         json.dump(r, open(a.json, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
         print("已写", a.json)
