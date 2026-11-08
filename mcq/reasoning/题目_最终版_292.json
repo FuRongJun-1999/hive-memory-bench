@@ -1,0 +1,3899 @@
+{
+ "schema": "hive-final-v1",
+ "count": {
+  "six_elem": 200,
+  "multihop": 92,
+  "total": 292
+ },
+ "six_elem": [
+  {
+   "id": "e024-1",
+   "stmt": "第四章「蜂巢社会蓝图」 · 陈默 · 六边形房间 · 追问进塔记忆被屏蔽未果 · 冷汗 · 指南",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L349"
+  },
+  {
+   "id": "o044-1",
+   "stmt": "第5章「历史的断层」·陈默·求知园·听张老讲三战因果链·震惊·光幕",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L418"
+  },
+  {
+   "id": "o011-1",
+   "stmt": "第19章「蒙德的自由」·琴团长·风神广场·重申骑士誓言·激昂·风鹰剑",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1284"
+  },
+  {
+   "id": "o004-1",
+   "stmt": "第1章「初见蜂巢世界」 · 陈默 · 六边形房间 · 篇首即指南语 · 茫然 · 营销视频",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L10"
+  },
+  {
+   "id": "q030-1",
+   "stmt": "第二章「巧合还是阴谋」 · 陈默 · 求知园 · 猜是巨子系统抓来他 · 笑容瞬间凝固 · 营销号视频",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L239"
+  },
+  {
+   "id": "q025-1",
+   "stmt": "第五章「历史的断层」 · 张明远 · 求知园 · 说超前技术封存巨子塔 · 认真 · 光幕",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L408"
+  },
+  {
+   "id": "o052-1",
+   "stmt": "第十一章「接风宴」 · 琴 · 西风骑士团 · 设宴并宣告讨伐风魔龙 · 宣誓 · 满足沙拉",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L798"
+  },
+  {
+   "id": "o040-1",
+   "stmt": "第16章「生命的需求」·陈默·舱室·读到反对永生论述·坚定·《熵增的社会学启示》",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1033"
+  },
+  {
+   "id": "e038-1",
+   "stmt": "第二十一章「问题的答案」 · 巨子陈默 · 蒙德城 · 称她们是骄傲也是遗憾 · 温和 · 小道具",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1470"
+  },
+  {
+   "id": "q002i-1",
+   "stmt": "第5章「历史的断层」 · 张明远 · 求知园 · 讲述第三次世界大战始末 · 低沉 · 光幕",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L418"
+  },
+  {
+   "id": "o035-1",
+   "stmt": "第23章「再别蒙德」 · 派蒙 · 摘星崖 · 叮嘱他早点回来 · 抓住陈默的衣袖 · 塞西莉亚花",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1620"
+  },
+  {
+   "id": "e010-1",
+   "stmt": "第22章「谢谢你诺艾尔」 · 派蒙 · 图书馆阅览室 · 看蒙德推演悲剧 · 泪光 · 星尘虚影",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1557"
+  },
+  {
+   "id": "o037i-1",
+   "stmt": "第18章「新的故事」 · 陈默 · 蒙德城中 · 识破糖衣说辞 · 警铃大作 · 限量版纪念酒盏",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1159"
+  },
+  {
+   "id": "o014-1",
+   "stmt": "第8章「化解误会」·陈默·警戒检查中心·向沉眠装备敬礼·尊敬·机械犬",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L611"
+  },
+  {
+   "id": "o012-1",
+   "stmt": "第12章「何为自由」·凯亚·蒙德·交付原石并安顿可莉·麻烦·布袋",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L829"
+  },
+  {
+   "id": "o037-1",
+   "stmt": "第15章「永恒奴役」·秦熙·警戒检查中心·判断糖衣包毒丸·严肃·数据图表",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1010"
+  },
+  {
+   "id": "q022-1",
+   "stmt": "第十九章「蒙德的自由」 · 诗人 · 蒙德城 · 宣扬绝对力量与永生 · 沉痛 · 寓言故事",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1246"
+  },
+  {
+   "id": "q027-1",
+   "stmt": "第七章「被请喝茶」 · 陈默 · 舱室 · 展开包裹地球月球的星图 · 震撼 · 指南",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L502"
+  },
+  {
+   "id": "q027i-1",
+   "stmt": "第6章「权限与贡献点」 · 陈默 · 求知园 · 查看已探索区域图 · 无语 · 光幕地图",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L463"
+  },
+  {
+   "id": "e013-1",
+   "stmt": "第15章「永恒奴役」 · 王明 · 全息会议室 · 指出认证难界定诱惑 · 担忧 · 认知疫苗",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1004"
+  },
+  {
+   "id": "e054-1",
+   "stmt": "第二章「巧合还是阴谋」 · 张明远 · 求知园 · 只讲巨子积劳而逝未提年岁 · 敬仰 · 纪念塔",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L241"
+  },
+  {
+   "id": "q020i-1",
+   "stmt": "第13章「终有一别」 · 诺艾尔 · 蒙德城 · 终于看清自己想要什么 · 叹息 · 情书",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L870"
+  },
+  {
+   "id": "q016-1",
+   "stmt": "第十六章「生命的需求」 · 陈默 · 求知园 · 承认自己从未想过这问题 · 心中一颤 · 光幕",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1073"
+  },
+  {
+   "id": "e045-1",
+   "stmt": "第二章「巧合还是阴谋」 · 陈默 · 目标节点 · 只引宪法第二条未提总数 · 疑点 · 清理工具",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L195"
+  },
+  {
+   "id": "o036i-1",
+   "stmt": "第4章「蜂巢社会蓝图」 · 陈默 · 舱室 · 梳理记忆 · 不安 · 《如何建设蜂巢社会》",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L339"
+  },
+  {
+   "id": "q023-1",
+   "stmt": "第二十一章「问题的答案」 · 巨子陈默 · 蒙德城 · 为自由灵魂另造世界 · 好奇 · 试验田",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1476"
+  },
+  {
+   "id": "o048i-1",
+   "stmt": "第6章「权限与贡献点」 · 张老 · 求知园中 · 讲解权限等级制 · 笑得眯起了眼 · 光幕地图",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L449"
+  },
+  {
+   "id": "e009-1",
+   "stmt": "第23章「再别蒙德」 · 派蒙 · 摘星崖 · 抓住衣袖问真的要走了吗 · 撇撇嘴 · 小艾尔缝制的便装",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1596"
+  },
+  {
+   "id": "o021-1",
+   "stmt": "第6章「权限与贡献点」 · 张老 · 求知园 · 讲权限分级 · 语重心长 · 永生技术原理",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L449"
+  },
+  {
+   "id": "o003-1",
+   "stmt": "第12章「何为自由」·温迪·风龙废墟·拒绝对特瓦林下令·扶额·封印",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L861"
+  },
+  {
+   "id": "q005-1",
+   "stmt": "第十七章「反击宣告」 · 派蒙 · 摘星崖 · 自称为自由的灵魂 · 怀念 · 塞西莉亚花",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1108"
+  },
+  {
+   "id": "e042-1",
+   "stmt": "第五章「历史的断层」 · 张明远 · 求知园 · 讲三战三阶段未给时长 · 低沉 · 光幕",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L418"
+  },
+  {
+   "id": "o013i-1",
+   "stmt": "第4章「蜂巢社会蓝图」 · 巨子 · 蜂巢 · 论量子通信 · 必将实现 · 神经认证",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L375"
+  },
+  {
+   "id": "e019-1",
+   "stmt": "第十六章「生命的需求」 · 张明远 · 求知园 · 只说AI早被禁未提方式 · 卖起了关子 · 光幕",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1067"
+  },
+  {
+   "id": "q004-1",
+   "stmt": "第三章「身份谜团」 · 陈默 · 舱室 · 追问指南的制造方法遭拒 · 陈默感觉愤怒和不甘 · 指南",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L296"
+  },
+  {
+   "id": "e035-1",
+   "stmt": "第二十一章「问题的答案」 · 琴团长 · 办公室 · 读完手稿承诺不霸占自由 · 严肃 · 手稿",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1410"
+  },
+  {
+   "id": "o012i-1",
+   "stmt": "第19章「蒙德的自由」 · 凯亚 · 琴的办公室 · 报恐惧传染 · 凝重 · 风鹰剑",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1264"
+  },
+  {
+   "id": "e047-1",
+   "stmt": "第七章「被请喝茶」 · 秦熙 · 警戒检查中心 · 只知她是负责人未提编制 · 锐利 · 防护服",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L564"
+  },
+  {
+   "id": "e037-1",
+   "stmt": "第八章「化解误会」 · 小李 · 内部一环 · 见陈默敬礼后别过头回忆 · 伤感 · 防护服",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L613"
+  },
+  {
+   "id": "o024i-1",
+   "stmt": "第11章「接风宴」 · 派蒙 · 西风骑士团 · 取名小艾尔 · 尴尬 · 满足沙拉",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L758"
+  },
+  {
+   "id": "o038-1",
+   "stmt": "第21章「问题的答案」·巨子·蒙德·自述创造灵境安放灵魂·遗憾·幻想朋友",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1476"
+  },
+  {
+   "id": "o018i-1",
+   "stmt": "第2章「巧合还是阴谋」 · 老人 · 求知园 · 说巨子同名 · 庄重 · 工程控制论",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L229"
+  },
+  {
+   "id": "o014i-1",
+   "stmt": "第8章「化解误会」 · 陈默 · 舱室 · 设目标值比较器 · 头疼 · 光幕",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L639"
+  },
+  {
+   "id": "q036-1",
+   "stmt": "第3章「身份谜团」 · 陈默 · 舱室 · 问指南制法 · 不甘 · 指南",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L298"
+  },
+  {
+   "id": "o017-1",
+   "stmt": "第1章「初见蜂巢世界」·陈默·求知园·领到临时协理员徽章·平静·电子徽章",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L148"
+  },
+  {
+   "id": "q001i-1",
+   "stmt": "第6章「权限与贡献点」 · 张老 · 求知园 · 讲解权限级距 · 语重心长 · 贡献点机制",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L449"
+  },
+  {
+   "id": "o045i-1",
+   "stmt": "第2章「巧合还是阴谋」 · 陈默 · 暂留区 · 对机器人自检能力生疑 · 留了个心眼 · 修复液",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L193"
+  },
+  {
+   "id": "o048-1",
+   "stmt": "第七章「被请喝茶」 · 陈默 · 警戒检查中心 · 被巡逻人员带走审讯 · 忐忑 · 防护服",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L530"
+  },
+  {
+   "id": "o023i-1",
+   "stmt": "第9章「灵境：原神」 · 陈默 · 六边形房间 · 唤指南无响应 · 凉意 · 原神",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L668"
+  },
+  {
+   "id": "o031-1",
+   "stmt": "第18章「新的故事」·陈默·图书馆·创作《风之种》寓言·豁然·蒲公英茶",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1207"
+  },
+  {
+   "id": "q007-1",
+   "stmt": "第6章「权限与贡献点」 · 老人 · 求知园 · 说这是第五个 · 羡慕 · 授权",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L473"
+  },
+  {
+   "id": "o019i-1",
+   "stmt": "第3章「身份谜团」 · 陈默 · 舱室 · 查同名五人 · 诡异 · 指南",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L258"
+  },
+  {
+   "id": "q015-1",
+   "stmt": "第十五章「永恒奴役」 · 秦熙 · 警戒检查中心 · 开会判定认知污染威胁 · 做出这样的判断 · 光幕",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1000"
+  },
+  {
+   "id": "o026-1",
+   "stmt": "第12章「何为自由」·陈默·风龙废墟·破开封印直面特瓦林·轻声呢喃·风鹰剑",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L855"
+  },
+  {
+   "id": "e028-1",
+   "stmt": "第六章「权限与贡献点」 · 张明远 · 求知园 · 讲权限按贡献算未获五级 · 语重心长 · 光幕",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L449"
+  },
+  {
+   "id": "q026-1",
+   "stmt": "第七章「被请喝茶」 · 秦熙 · 白色房间 · 进门自我介绍并致歉 · 语气温柔 · 防护服",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L562"
+  },
+  {
+   "id": "q003-1",
+   "stmt": "第2章「巧合还是阴谋」 · 陈默 · 轨道 · 问宪法第二条 · 留了个心眼 · 清洁工具",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L195"
+  },
+  {
+   "id": "o050i-1",
+   "stmt": "第12章「何为自由」 · 陈默 · 摘星崖 · 讨伐风魔龙前夜看风之花 · 认真 · 塞西莉亚花",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L835"
+  },
+  {
+   "id": "e034-1",
+   "stmt": "第十一章「接风宴」 · 博士 · 另一片空间 · 提议以美食美人诱他留下 · 无聊 · 圆桌",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L786"
+  },
+  {
+   "id": "o039-1",
+   "stmt": "第13章「终有一别」·派蒙·摘星崖·承认风神与他很像·追忆·塞西莉亚花",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L878"
+  },
+  {
+   "id": "e006-1",
+   "stmt": "第5章「历史的断层」 · 张明远 · 求知园 · 讲述核战与病毒战叠加 · 悲哀 · 世界大战史料",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L420"
+  },
+  {
+   "id": "e048-1",
+   "stmt": "第一章「初见蜂巢世界」 · 陈默 · 求知园 · 提交磁场约束建议待评估 · 兴奋 · 建议界面",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L118"
+  },
+  {
+   "id": "q035i-1",
+   "stmt": "第3章「身份谜团」 · 陈默 · 舱室 · 向指南追问制造方法 · 迫切 · 世界漫游指南",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L296"
+  },
+  {
+   "id": "o007i-1",
+   "stmt": "第5章「历史的断层」 · 张明远 · 求知园 · 讲三战惨状 · 低沉 · 光幕",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L418"
+  },
+  {
+   "id": "o034i-1",
+   "stmt": "第22章「谢谢你 诺艾尔」 · 派蒙 · 图书馆 · 加速蒙德推演 · 好奇 · 星尘虚影",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1507"
+  },
+  {
+   "id": "q012-1",
+   "stmt": "第六章「权限与贡献点」 · 张明远 · 求知园 · 称机器人才是真正建设者 · 尊敬 · 光幕",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L437"
+  },
+  {
+   "id": "q028i-1",
+   "stmt": "第14章「暗流涌动」 · 陈默 · 六边形房间 · 通报自由派诱导 · 沉重 · 全息投影",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L953"
+  },
+  {
+   "id": "q013-1",
+   "stmt": "第三章「身份谜团」 · 陈默 · 舱室 · 称指南是反馈的眼睛耳朵 · 迫切 · 指南",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L296"
+  },
+  {
+   "id": "q011-1",
+   "stmt": "第六章「权限与贡献点」 · 张明远 · 求知园 · 讲解贡献点与权限分级 · 语重心长 · 光幕",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L449"
+  },
+  {
+   "id": "e020-1",
+   "stmt": "第七章「被请喝茶」 · 陈默 · 舱室 · 星图见地月双巢未提月球居民 · 震撼 · 地图",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L502"
+  },
+  {
+   "id": "o011i-1",
+   "stmt": "第19章「蒙德的自由」 · 琴 · 风神像下 · 宣告守护自由 · 激昂 · 风鹰剑",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1284"
+  },
+  {
+   "id": "o051-1",
+   "stmt": "第五章「历史的断层」 · 张明远 · 求知园 · 亲述第三次世界大战 · 孤寂 · 光幕",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L418"
+  },
+  {
+   "id": "o016i-1",
+   "stmt": "第21章「问题的答案」 · 巨子 · 蒙德城 · 自述一生两件事 · 遗憾 · 手稿",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1472"
+  },
+  {
+   "id": "e014-1",
+   "stmt": "第6章「权限与贡献点」 · 张明远 · 求知园 · 说明收回授权即降级 · 告诫 · 贡献点",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L455"
+  },
+  {
+   "id": "o008i-1",
+   "stmt": "第14章「暗流涌动」 · 秦熙 · 警戒检查中心 · 通报自由派 · 严肃 · 全息投影",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L929"
+  },
+  {
+   "id": "o015-1",
+   "stmt": "第15章「永恒奴役」·陈默·六边形房间·推演私有制加永生·恐惧·光幕",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L982"
+  },
+  {
+   "id": "o002i-1",
+   "stmt": "第22章「谢谢你 诺艾尔」 · 我 · 图书馆阅览室 · 改用第一人称 · 疑惑 · 星尘",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1499"
+  },
+  {
+   "id": "q015i-1",
+   "stmt": "第8章「化解误会」 · 陈默 · 警戒检查中心 · 觉察诱导之危 · 不安 · 防护服一身",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L621"
+  },
+  {
+   "id": "o032-1",
+   "stmt": "第19章「蒙德的自由」·诺艾尔·蒙德·主张人人都是守护者·握紧拳头·风之种",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1256"
+  },
+  {
+   "id": "q037-1",
+   "stmt": "第4章「蜂巢社会蓝图」 · 陈默 · 巨子塔 · 离塔即屏蔽 · 冒出一阵冷汗 · 词条",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L349"
+  },
+  {
+   "id": "o020i-1",
+   "stmt": "第5章「历史的断层」 · 张明远 · 求知园 · 补三战经历 · 孤寂 · 避难所",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L426"
+  },
+  {
+   "id": "q011i-1",
+   "stmt": "第6章「权限与贡献点」 · 张明远 · 求知园 · 讲解贡献点与五级权限 · 语重心长 · 《社会控制论》",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L449"
+  },
+  {
+   "id": "q006i-1",
+   "stmt": "第15章「永恒奴役」 · 陈默 · 窗前 · 理解巨子为何拒永生 · 落泪 · 朝阳光芒",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L992"
+  },
+  {
+   "id": "e033-1",
+   "stmt": "第十六章「生命的需求」 · 张明远 · 求知园 · 反问AI价值观来试探 · 眉头一皱 · 光幕",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1071"
+  },
+  {
+   "id": "q014-1",
+   "stmt": "第一章「初见蜂巢世界」 · 陈默 · 六边形房间 · 听指南讲共识根本原则 · 认可 · 合成餐",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L30"
+  },
+  {
+   "id": "o054i-1",
+   "stmt": "第15章「永恒奴役」 · 陈默 · 六边形房间 · 推演终产者之悲剧 · 恐惧 · 光幕推演",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L982"
+  },
+  {
+   "id": "o039i-1",
+   "stmt": "第2章「巧合还是阴谋」 · 陈默 · 求知园 · 听闻同名巨子 · 笑容瞬间凝固 · 《工程控制论》",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L229"
+  },
+  {
+   "id": "q032i-1",
+   "stmt": "第21章「问题的答案」 · 派蒙 · 蒙德城 · 拿出道具让陈默看见风神 · 惊叫 · 幻想朋友道具",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1462"
+  },
+  {
+   "id": "e031-1",
+   "stmt": "第十三章「终有一别」 · 派蒙 · 摘星崖 · 催他快走实为不舍挽留 · 挤出笑容 · 塞西莉亚花",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L902"
+  },
+  {
+   "id": "e055-1",
+   "stmt": "第一章「初见蜂巢世界」 · 陈默 · 舱室 · 赞超导轨道低耗能未给总长 · 震撼 · 小机器人",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L48"
+  },
+  {
+   "id": "e021-1",
+   "stmt": "第二十三章「再别蒙德」 · 秦熙 · 全息投影 · 只说见几位老朋友未展开 · 凝重 · 推演模型",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1656"
+  },
+  {
+   "id": "q006-1",
+   "stmt": "第十六章「生命的需求」 · 陈默 · 舱室 · 读《熵增的社会学启示》 · 坚定 · 光幕",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1037"
+  },
+  {
+   "id": "e046-1",
+   "stmt": "第一章「初见蜂巢世界」 · 陈默 · 六边形房间 · 只忆点开视频未提年龄 · 茫然 · 手机",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L12"
+  },
+  {
+   "id": "o046-1",
+   "stmt": "第十四章「暗流涌动」 · 陈默 · 六边形房间 · 向秦熙通报游戏诱导 · 沉重 · 指南",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L929"
+  },
+  {
+   "id": "o009-1",
+   "stmt": "第15章「永恒奴役」·王明·警戒检查中心·提出认知疫苗而非防火墙·担忧·全息投影",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1004"
+  },
+  {
+   "id": "e017-1",
+   "stmt": "第10章「初次见面」 · 陈默 · 蒙德城 · 祈愿召唤出女仆诺艾尔 · 冒出大大的问号 · 相遇之源",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L735"
+  },
+  {
+   "id": "q018-1",
+   "stmt": "第十八章「新的故事」 · 小艾尔 · 蒙德城 · 拒当王者只要陪伴 · 脸红 · 满足沙拉",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1169"
+  },
+  {
+   "id": "o029i-1",
+   "stmt": "第16章「生命的需求」 · 张老 · 求知园 · 答AI被禁 · 卖起了关子 · 光幕",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1067"
+  },
+  {
+   "id": "e040-1",
+   "stmt": "第十一章「接风宴」 · 小艾尔 · 西风骑士团 · 很快接受小艾尔称呼 · 道谢 · 入住手续",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L760"
+  },
+  {
+   "id": "o042-1",
+   "stmt": "第1章「初见蜂巢世界」·陈默·六边形房间·接收指南首次指引·茫然·世界漫游指南",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L10"
+  },
+  {
+   "id": "q018i-2",
+   "stmt": "第13章「终有一别」 · 诺艾尔 · 蒙德城 · 写下情书表白心意 · 难过 · 《风之种》",
+   "answer": false,
+   "wrong_element": "物品",
+   "evidence": "L870"
+  },
+  {
+   "id": "e055-2",
+   "stmt": "第一章「初见蜂巢世界」 · 陈默 · 求知园 · 赞超导轨道低耗能未给总长 · 震撼 · 小机器人",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L48"
+  },
+  {
+   "id": "e012-2",
+   "stmt": "第3章「身份谜团」 · 陈默 · 舱室 · 追问指南的功能边界 · 无聊 · 贡献点查询机",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L175"
+  },
+  {
+   "id": "q035-2",
+   "stmt": "第4章「蜂巢社会蓝图」 · 秦熙 · 蜂巢 · 提控制论蓝图 · 必将实现 · 量子通信",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L375"
+  },
+  {
+   "id": "q008-2",
+   "stmt": "第二十一章「问题的答案」 · 巨子陈默 · 摘星崖 · 把答案交给后来人 · 遗憾 · 小道具",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L1480"
+  },
+  {
+   "id": "q030i-2",
+   "stmt": "第1章「初见蜂巢世界」 · 陈默 · 六边形房间 · 被机器人强行抓捕 · 茫然 · 营销号视频",
+   "answer": false,
+   "wrong_element": "事件",
+   "evidence": "L12"
+  },
+  {
+   "id": "o044i-2",
+   "stmt": "第5章「历史的断层」 · 张明远 · 警戒检查中心 · 讲述大战之惨烈 · 孤寂 · 光幕地图",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L422"
+  },
+  {
+   "id": "o013i-2",
+   "stmt": "第16章「生命的需求」 · 巨子 · 蜂巢 · 论量子通信 · 必将实现 · 神经认证",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L375"
+  },
+  {
+   "id": "q020i-2",
+   "stmt": "第13章「终有一别」 · 诺艾尔 · 蒙德城 · 终于看清自己想要什么 · 叹息 · 骑士团徽章",
+   "answer": false,
+   "wrong_element": "物品",
+   "evidence": "L870"
+  },
+  {
+   "id": "o033i-2",
+   "stmt": "第20章「致命危机」 · 陈默 · 蒙德城中 · 察觉阴谋气息 · 兴奋 · 至冬合作清单",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L1353"
+  },
+  {
+   "id": "o041-2",
+   "stmt": "第8章「化解误会」·陈默·果酒湖·预见至冬潜移默化入侵·担忧·甜甜花酿鸡",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L1397"
+  },
+  {
+   "id": "q021-2",
+   "stmt": "第十三章「终有一别」 · 陈默 · 摘星崖 · 打破角色扮演的告白 · 敷衍 · 塞西莉亚花",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L894"
+  },
+  {
+   "id": "o040-2",
+   "stmt": "第16章「生命的需求」·王明·舱室·读到反对永生论述·坚定·《熵增的社会学启示》",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L1033"
+  },
+  {
+   "id": "q017-2",
+   "stmt": "第十一章「接风宴」 · 琴 · 蒙德 · 按先来后到起名小艾尔 · 骄傲 · 临时入住手续",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L758"
+  },
+  {
+   "id": "e020-2",
+   "stmt": "第五章「历史的断层」 · 陈默 · 舱室 · 星图见地月双巢未提月球居民 · 震撼 · 地图",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L502"
+  },
+  {
+   "id": "q015i-2",
+   "stmt": "第8章「化解误会」 · 陈默 · 警戒检查中心 · 觉察诱导之危 · 兴奋 · 防护服一身",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L621"
+  },
+  {
+   "id": "q005i-2",
+   "stmt": "第21章「问题的答案」 · 派蒙 · 蒙德城中 · 惊呼风神大人现 · 狂喜 · 小道具一枚",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L1462"
+  },
+  {
+   "id": "e045-2",
+   "stmt": "第二章「巧合还是阴谋」 · 陈默 · 目标节点 · 只引宪法第二条未提总数 · 疑点 · 纠缠之源",
+   "answer": false,
+   "wrong_element": "物品",
+   "evidence": "L195"
+  },
+  {
+   "id": "e021-2",
+   "stmt": "第二十三章「再别蒙德」 · 小李 · 全息投影 · 只说见几位老朋友未展开 · 凝重 · 推演模型",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L1656"
+  },
+  {
+   "id": "q025i-2",
+   "stmt": "第5章「历史的断层」 · 张明远 · 求知园 · 讲解分级保存之制 · 沮丧 · 巨子塔尖",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L408"
+  },
+  {
+   "id": "o023i-2",
+   "stmt": "第9章「灵境：原神」 · 陈默 · 六边形房间 · 自述一生两件事 · 凉意 · 原神",
+   "answer": false,
+   "wrong_element": "事件",
+   "evidence": "L668"
+  },
+  {
+   "id": "e036-2",
+   "stmt": "第六章「权限与贡献点」 · 诺艾尔 · 蒙德城 · 因怕他离开难过才写情书 · 难过 · 情书",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L870"
+  },
+  {
+   "id": "o014i-2",
+   "stmt": "第8章「化解误会」 · 张老 · 舱室 · 设目标值比较器 · 头疼 · 光幕",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L639"
+  },
+  {
+   "id": "o003i-2",
+   "stmt": "第22章「谢谢你 诺艾尔」 · 派蒙 · 琴的办公室 · 推演蒙德结局 · 泪光 · 星尘",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L1557"
+  },
+  {
+   "id": "q010-2",
+   "stmt": "第二章「巧合还是阴谋」 · 陈默 · 暂留区 · 清洁后向指南质疑 · 兴奋 · 清理工具",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L193"
+  },
+  {
+   "id": "e044-2",
+   "stmt": "第四章「蜂巢社会蓝图」 · 陈默 · 巨子塔 · 查得进塔时刻不知停留多久 · 冷汗 · 指南",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L345"
+  },
+  {
+   "id": "o048i-2",
+   "stmt": "第6章「权限与贡献点」 · 张老 · 警戒检查中心 · 讲解权限等级制 · 笑得眯起了眼 · 光幕地图",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L449"
+  },
+  {
+   "id": "o042i-2",
+   "stmt": "第21章「问题的答案」 · 陈默 · 蒙德城中 · 写下风之寓言 · 明白了 · 巨子塔与指南",
+   "answer": false,
+   "wrong_element": "事件",
+   "evidence": "L1482"
+  },
+  {
+   "id": "o026-2",
+   "stmt": "第12章「何为自由」·陈默·摘星崖·破开封印直面特瓦林·轻声呢喃·风鹰剑",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L855"
+  },
+  {
+   "id": "e023-2",
+   "stmt": "第二十三章「再别蒙德」 · 陈默 · 摘星崖 · 回去与派蒙收尾守护蒙德 · 笑了笑 · 塞西莉亚花",
+   "answer": false,
+   "wrong_element": "事件",
+   "evidence": "L1602"
+  },
+  {
+   "id": "o014-2",
+   "stmt": "第20章「致命危机」·陈默·警戒检查中心·向沉眠装备敬礼·尊敬·机械犬",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L611"
+  },
+  {
+   "id": "o032-2",
+   "stmt": "第14章「暗流涌动」·诺艾尔·蒙德·主张人人都是守护者·握紧拳头·风之种",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L1256"
+  },
+  {
+   "id": "o044-2",
+   "stmt": "第5章「历史的断层」·派蒙·求知园·听张老讲三战因果链·震惊·光幕",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L418"
+  },
+  {
+   "id": "q009i-2",
+   "stmt": "第21章「问题的答案」 · 巨子 · 灵境 · 自述把答案交给后来者 · 遗憾 · 风鹰剑",
+   "answer": false,
+   "wrong_element": "物品",
+   "evidence": "L1480"
+  },
+  {
+   "id": "o045-2",
+   "stmt": "第十六章「生命的需求」 · 陈默 · 舱室 · 读出巨子论信息错配 · 喜欢 · 指南",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L369"
+  },
+  {
+   "id": "e003-2",
+   "stmt": "第12章「何为自由」 · 可莉 · 风龙废墟 · 与另一位温迪谈摸鱼 · 嫌麻烦 · 蒲公英酒",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L841"
+  },
+  {
+   "id": "o022i-2",
+   "stmt": "第7章「被请喝茶」 · 秦熙 · 果酒湖 · 讲自由派渊源 · 复杂 · 防护服",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L570"
+  },
+  {
+   "id": "q031i-2",
+   "stmt": "第21章「问题的答案」 · 陈默 · 求知园 · 问张老为何禁自我意识AI · 硬着头皮 · 《熵增的社会学启示》",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L1069"
+  },
+  {
+   "id": "o018-2",
+   "stmt": "第10章「初次见面」·陈默·暂留区·因宪法第二条留个心眼·留了个心眼·清理工具",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L195"
+  },
+  {
+   "id": "o010i-2",
+   "stmt": "第8章「化解误会」 · 小李 · 防护服库房 · 取名小艾尔 · 伤感 · 来福",
+   "answer": false,
+   "wrong_element": "事件",
+   "evidence": "L589"
+  },
+  {
+   "id": "o009i-2",
+   "stmt": "第15章「永恒奴役」 · 王明 · 求知园 · 提认知疫苗 · 担忧 · 全息投影",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L1004"
+  },
+  {
+   "id": "e018-2",
+   "stmt": "第16章「生命的需求」 · 张明远 · 求知园 · 告诫勿塑造魔鬼 · 意味深长 · 授权",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L457"
+  },
+  {
+   "id": "o035i-2",
+   "stmt": "第23章「再别蒙德」 · 派蒙 · 摘星崖上 · 应许早日归来 · 兴奋 · 塞西莉亚花束",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L1620"
+  },
+  {
+   "id": "q003i-2",
+   "stmt": "第2章「巧合还是阴谋」 · 陈默 · 暂留区 · 质询宪法条款 · 产生了疑点 · 军用智能机器人",
+   "answer": false,
+   "wrong_element": "物品",
+   "evidence": "L195"
+  },
+  {
+   "id": "q018-2",
+   "stmt": "第十八章「新的故事」 · 小艾尔 · 蒙德城 · 拒当王者只要陪伴 · 冷淡 · 满足沙拉",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L1169"
+  },
+  {
+   "id": "q010i-2",
+   "stmt": "第2章「巧合还是阴谋」 · 陈默 · 暂留区 · 查询同名公民 · 留了个心眼 · 清理工具一套",
+   "answer": false,
+   "wrong_element": "事件",
+   "evidence": "L197"
+  },
+  {
+   "id": "o003-2",
+   "stmt": "第12章「何为自由」·温迪·风龙废墟·拒绝对特瓦林下令·愤怒·封印",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L861"
+  },
+  {
+   "id": "e042-2",
+   "stmt": "第五章「历史的断层」 · 张明远 · 求知园 · 讲三战三阶段未给时长 · 亢奋 · 光幕",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L418"
+  },
+  {
+   "id": "o034-2",
+   "stmt": "第22章「谢谢你 诺艾尔」·诺艾尔·蒙德广场·率贫民起事战死·欣喜·断剑",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L1553"
+  },
+  {
+   "id": "e007-2",
+   "stmt": "第3章「身份谜团」 · 陈默 · 舱室 · 读《社会控制论》开篇 · 如见故人 · 《熵增的社会学启示》",
+   "answer": false,
+   "wrong_element": "物品",
+   "evidence": "L272"
+  },
+  {
+   "id": "e039-2",
+   "stmt": "第九章「灵境：原神」 · 派蒙 · 摘星崖 · 追问想家却未说想回何处 · 带着哭腔 · 应急食品",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L674"
+  },
+  {
+   "id": "q022-2",
+   "stmt": "第十九章「蒙德的自由」 · 诗人 · 风龙废墟 · 宣扬绝对力量与永生 · 沉痛 · 寓言故事",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L1246"
+  },
+  {
+   "id": "e048-2",
+   "stmt": "第八章「化解误会」 · 陈默 · 求知园 · 提交磁场约束建议待评估 · 兴奋 · 建议界面",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L118"
+  },
+  {
+   "id": "o033-2",
+   "stmt": "第20章「致命危机」 · 陈默 · 果酒湖 · 见至冬信徒渗透 · 如坠冰窟 · 繁荣税",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L1397"
+  },
+  {
+   "id": "e024-2",
+   "stmt": "第四章「蜂巢社会蓝图」 · 陈默 · 求知园 · 追问进塔记忆被屏蔽未果 · 冷汗 · 指南",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L349"
+  },
+  {
+   "id": "q029-2",
+   "stmt": "第六章「权限与贡献点」 · 张明远 · 求知园 · 感叹这是第五个了 · 羡慕 · 授权",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L473"
+  },
+  {
+   "id": "o025i-2",
+   "stmt": "第11章「接风宴」 · 诺艾尔 · 圆桌 · 办演讲挨控诉 · 跳脚 · 烤肉排",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L766"
+  },
+  {
+   "id": "e037-2",
+   "stmt": "第八章「化解误会」 · 小李 · 白色房间 · 见陈默敬礼后别过头回忆 · 伤感 · 防护服",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L613"
+  },
+  {
+   "id": "o031i-2",
+   "stmt": "第18章「新的故事」 · 派蒙 · 摘星崖 · 坦白设计来路 · 求表扬 · 限量版纪念酒盏",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L1171"
+  },
+  {
+   "id": "o001-2",
+   "stmt": "第21章「问题的答案」·陈默·求知园·老人称巨子与他同名·笑容瞬间凝固·《工程控制论》",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L229"
+  },
+  {
+   "id": "e038-2",
+   "stmt": "第二十一章「问题的答案」 · 巨子陈默 · 蒙德城 · 称她们是骄傲也是遗憾 · 不屑 · 小道具",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L1470"
+  },
+  {
+   "id": "o046i-2",
+   "stmt": "第15章「永恒奴役」 · 王明 · 警戒检查中心 · 投下否定一票 · 担忧 · 全息投影",
+   "answer": false,
+   "wrong_element": "事件",
+   "evidence": "L1004"
+  },
+  {
+   "id": "o050-2",
+   "stmt": "第十八章「新的故事」 · 诺艾尔 · 风神像的手掌 · 俯瞰蒙德夜谈愚人众 · 严肃 · 酒盏",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L1171"
+  },
+  {
+   "id": "o047i-2",
+   "stmt": "第17章「反击宣告」 · 陈默 · 摘星崖上 · 追问是否拥有生命 · 悲愤 · 风神投影",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L1102"
+  },
+  {
+   "id": "o031-2",
+   "stmt": "第18章「新的故事」·巨子·图书馆·创作《风之种》寓言·豁然·蒲公英茶",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L1207"
+  },
+  {
+   "id": "e022-2",
+   "stmt": "第七章「被请喝茶」 · 秦熙 · 求知园 · 只讲自由派理念未提领头人 · 意味深长 · 光幕",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L570"
+  },
+  {
+   "id": "q031-2",
+   "stmt": "第十六章「生命的需求」 · 秦熙 · 求知园 · 反问自我意识的价值准则 · 卖起了关子 · 光幕",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L1071"
+  },
+  {
+   "id": "q012i-2",
+   "stmt": "第5章「历史的断层」 · 张明远 · 求知园 · 讲述军转民与真正建设者 · 尊敬 · 光幕",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L437"
+  },
+  {
+   "id": "o015i-2",
+   "stmt": "第13章「终有一别」 · 陈默 · 六边形房间 · 推演永生导致永恒奴役 · 如坠冰窟 · 光幕",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L966"
+  },
+  {
+   "id": "q002-2",
+   "stmt": "第四章「蜂巢社会蓝图」 · 陈默 · 六边形房间 · 回忆第三次世界大战 · 同情 · 标准餐",
+   "answer": false,
+   "wrong_element": "事件",
+   "evidence": "L329"
+  },
+  {
+   "id": "e026-2",
+   "stmt": "第十三章「终有一别」 · 陈默 · 蒙德城 · 收下两封情书却未正面回应 · 叹了一口气 · 风鹰剑",
+   "answer": false,
+   "wrong_element": "物品",
+   "evidence": "L876"
+  },
+  {
+   "id": "o006i-2",
+   "stmt": "第21章「问题的答案」 · 巨子 · 蒙德城 · 交付后来者 · 温和 · 风鹰剑",
+   "answer": false,
+   "wrong_element": "物品",
+   "evidence": "L1468"
+  },
+  {
+   "id": "o046-2",
+   "stmt": "第十四章「暗流涌动」 · 陈默 · 六边形房间 · 向秦熙通报游戏诱导 · 轻松 · 指南",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L929"
+  },
+  {
+   "id": "q006i-2",
+   "stmt": "第15章「永恒奴役」 · 陈默 · 窗前 · 理解巨子为何拒永生 · 落泪 · 塞西莉亚花",
+   "answer": false,
+   "wrong_element": "物品",
+   "evidence": "L992"
+  },
+  {
+   "id": "e011-2",
+   "stmt": "第6章「权限与贡献点」 · 胖老人 · 求知园 · 提议提升贡献点上限 · 鄙夷 · 贡献点授权",
+   "answer": false,
+   "wrong_element": "事件",
+   "evidence": "L475"
+  },
+  {
+   "id": "q029i-2",
+   "stmt": "第7章「被请喝茶」 · 小李 · 遗存区 · 厉声质问巨子塔记录异常 · 警戒 · 扫描器",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L544"
+  },
+  {
+   "id": "q037-2",
+   "stmt": "第4章「蜂巢社会蓝图」 · 陈默 · 巨子塔 · 讲三战惨状 · 冷汗 · 词条",
+   "answer": false,
+   "wrong_element": "事件",
+   "evidence": "L349"
+  },
+  {
+   "id": "o041i-2",
+   "stmt": "第22章「谢谢你 诺艾尔」 · 诺艾尔 · 果酒湖边 · 独自上门劝告 · 苦涩 · 铠甲一副",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L1537"
+  },
+  {
+   "id": "o006-2",
+   "stmt": "第5章「历史的断层」·陈默·舱室·向秦熙交出反制模型·坚定·全息投影",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L1650"
+  },
+  {
+   "id": "q034i-2",
+   "stmt": "第8章「化解误会」 · 陈默 · 求知园 · 用控制论设贡献点反馈模型 · 感到头疼 · 《控制论》",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L639"
+  },
+  {
+   "id": "e032-2",
+   "stmt": "第七章「被请喝茶」 · 秦熙 · 白色房间 · 一边怀疑一边让小李带参观 · 冷淡 · 光幕",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L580"
+  },
+  {
+   "id": "q033-2",
+   "stmt": "第十三章「终有一别」 · 派蒙 · 蒙德城 · 自称只是普通的游戏程序 · 嘟囔 · 情书",
+   "answer": false,
+   "wrong_element": "事件",
+   "evidence": "L882"
+  },
+  {
+   "id": "q015-2",
+   "stmt": "第十五章「永恒奴役」 · 张明远 · 警戒检查中心 · 开会判定认知污染威胁 · 做出判断 · 光幕",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L1000"
+  },
+  {
+   "id": "o016-2",
+   "stmt": "第21章「问题的答案」·陈默·求知园·见到风神虚影·想起·小道具",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L1482"
+  },
+  {
+   "id": "e041-2",
+   "stmt": "第二章「巧合还是阴谋」 · 陈默 · 六边形房间 · 只知当下2045年未给年数 · 茫然 · 指南",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L10"
+  },
+  {
+   "id": "o023-2",
+   "stmt": "第9章「灵境：原神」·陈默·求知园·触摸七天神像获得风之力·兴奋·原石",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L686"
+  },
+  {
+   "id": "o024-2",
+   "stmt": "第19章「蒙德的自由」·诺艾尔·蒙德·自我介绍为骑士团女仆·绯红·相遇之源",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L743"
+  },
+  {
+   "id": "o040i-2",
+   "stmt": "第21章「问题的答案」 · 琴团长 · 蒙德 · 交托未竟之事业 · 遗憾 · 巨子塔与指南",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L1480"
+  },
+  {
+   "id": "o019-2",
+   "stmt": "第3章「身份谜团」·陈默·求知园·被识别为L1待审核·不甘·扫描光束",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L310"
+  },
+  {
+   "id": "q004i-2",
+   "stmt": "第3章「身份谜团」 · 陈默 · 巨子塔 · 访问请求待审核中 · 大喜 · 扫描光束落身",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L310"
+  },
+  {
+   "id": "o037-2",
+   "stmt": "第15章「永恒奴役」·诺艾尔·警戒检查中心·判断糖衣包毒丸·严肃·数据图表",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L1010"
+  },
+  {
+   "id": "q027i-2",
+   "stmt": "第6章「权限与贡献点」 · 陈默 · 灵境之中 · 查看已探索区域图 · 无语 · 光幕地图",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L463"
+  },
+  {
+   "id": "o037i-2",
+   "stmt": "第18章「新的故事」 · 陈默 · 蒙德城中 · 识破糖衣说辞 · 兴高采烈 · 限量版纪念酒盏",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L1159"
+  },
+  {
+   "id": "o047-2",
+   "stmt": "第四章「蜂巢社会蓝图」 · 陈默 · 六边形房间 · 向张老追问世界大战 · 冷汗 · 指南",
+   "answer": false,
+   "wrong_element": "事件",
+   "evidence": "L345"
+  },
+  {
+   "id": "q021i-2",
+   "stmt": "第17章「反击宣告」 · 诺艾尔 · 摘星崖 · 追问自己是否算生命 · 哀求 · 风神投影",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L1126"
+  },
+  {
+   "id": "e019-2",
+   "stmt": "第十六章「生命的需求」 · 张明远 · 巨子塔 · 只说AI早被禁未提方式 · 卖起了关子 · 光幕",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L1067"
+  },
+  {
+   "id": "e052-2",
+   "stmt": "第七章「被请喝茶」 · 陈默 · 舱室 · 算出地球月球单程需数小时 · 突然想到 · 地图",
+   "answer": false,
+   "wrong_element": "事件",
+   "evidence": "L506"
+  },
+  {
+   "id": "q004-2",
+   "stmt": "第三章「身份谜团」 · 陈默 · 舱室 · 追问指南的制造方法遭拒 · 愤怒不甘 · 贡献点查询机",
+   "answer": false,
+   "wrong_element": "物品",
+   "evidence": "L296"
+  },
+  {
+   "id": "q034-2",
+   "stmt": "第4章「蜂巢社会蓝图」 · 陈默 · 舱室 · 设比较器与反馈 · 头疼 · 指南",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L639"
+  },
+  {
+   "id": "e002-2",
+   "stmt": "第1章「初见蜂巢世界」 · 陈默 · 六边形房间 · 打量蜂巢结构的墙壁 · 惊讶 · 塞西莉亚花",
+   "answer": false,
+   "wrong_element": "物品",
+   "evidence": "L34"
+  }
+ ],
+ "multihop": [
+  {
+   "qid": "o001",
+   "conclusion": "同名的疑云由「同名—进塔却失忆—结局未解」三层叠加而成，权限来源始终没有答案",
+   "points": [
+    {
+     "text": "第二章「巧合还是阴谋」·老人称巨子与他同名同姓",
+     "answer": true,
+     "evidence": "L229、L237"
+    },
+    {
+     "text": "第四章「蜂巢社会蓝图」·指南记录证明他确实进过巨子塔",
+     "answer": true,
+     "evidence": "L345"
+    },
+    {
+     "text": "第三章「身份谜团」·指南查出全国只有他一人叫陈默",
+     "answer": false,
+     "evidence": "L258（结果是5人）"
+    },
+    {
+     "text": "第二十三章「再别蒙德」·结局揭示他是巨子的亲生后代",
+     "answer": false,
+     "evidence": "原文未提"
+    }
+   ]
+  },
+  {
+   "qid": "o002",
+   "conclusion": "叙述层只有「指南框架先行」与「第22章第一人称突转」两处硬设计，且后者在第23章被收回",
+   "points": [
+    {
+     "text": "第一章「初见蜂巢世界」·开篇由指南发话立共识，主角后入场",
+     "answer": true,
+     "evidence": "L10、L12"
+    },
+    {
+     "text": "第二十二章「谢谢你 诺艾尔」·全章改用第一人称且不再出现陈默",
+     "answer": true,
+     "evidence": "L1499（全章0次“陈默”）"
+    },
+    {
+     "text": "第一章「初见蜂巢世界」·开篇由陈默以第一人称自述穿越经过",
+     "answer": false,
+     "evidence": "L12（第三人称）"
+    },
+    {
+     "text": "第二十三章「再别蒙德」·全章改由派蒙第一人称讲述",
+     "answer": false,
+     "evidence": "L1574（仍是第三人称）"
+    }
+   ]
+  },
+  {
+   "qid": "o003",
+   "conclusion": "蜂巢式取消自由与蒙德推演出的绝对自由都被否掉，落点是「共同守护的秩序」",
+   "points": [
+    {
+     "text": "第八章「化解误会」·效率为公平让路，隐私给安全低头",
+     "answer": true,
+     "evidence": "L617"
+    },
+    {
+     "text": "第九章「灵境：原神」·蒙德被称作自由的城邦",
+     "answer": true,
+     "evidence": "L684"
+    },
+    {
+     "text": "第二十二章「谢谢你 诺艾尔」·推演中蒙德的自由让所有人均等受益",
+     "answer": false,
+     "evidence": "L1513（天平倾向少数人）"
+    },
+    {
+     "text": "第二十三章「再别蒙德」·陈默的结论是自由即无拘无束",
+     "answer": false,
+     "evidence": "L1638（不是无拘无束）"
+    }
+   ]
+  },
+  {
+   "qid": "o004",
+   "conclusion": "作者的写作动机无法从文本得知：全篇只有故事内的指南与人物发声，没有作者自述层",
+   "points": [
+    {
+     "text": "第一章「初见蜂巢世界」·开篇发声者是“指南”而非作者本人",
+     "answer": true,
+     "evidence": "L10"
+    },
+    {
+     "text": "第一章「初见蜂巢世界」·全文无前言后记，直接以指南导语开篇",
+     "answer": true,
+     "evidence": "L1–L10（无前言后记）"
+    },
+    {
+     "text": "第二十三章「再别蒙德」·结尾附有作者自述的创作缘起",
+     "answer": false,
+     "evidence": "原文未提（L1656止于对话）"
+    },
+    {
+     "text": "第二十一章「问题的答案」·巨子的自述即作者本人的写作动机",
+     "answer": false,
+     "evidence": "L1484（巨子是虚构人物）"
+    }
+   ]
+  },
+  {
+   "qid": "o005",
+   "conclusion": "技术设定全部可溯源到现实技术族，作品靠「剥离超凡设定后的推演」来论证而非说教",
+   "points": [
+    {
+     "text": "第一章「初见蜂巢世界」·食物由大气阳光水源直接合成，跳过生态链",
+     "answer": true,
+     "evidence": "L20"
+    },
+    {
+     "text": "第四章「蜂巢社会蓝图」·量子通信与神经认证被当作既有技术使用",
+     "answer": true,
+     "evidence": "L375"
+    },
+    {
+     "text": "第九章「灵境：原神」·风的力量被写成可验证的物理规律",
+     "answer": false,
+     "evidence": "L686（不符合科学）"
+    },
+    {
+     "text": "第二十二章「谢谢你 诺艾尔」·推演保留了神之眼与永生设定",
+     "answer": false,
+     "evidence": "L1501（明确剥离）"
+    }
+   ]
+  },
+  {
+   "qid": "o006",
+   "conclusion": "结局不是收束而是转入反击：带回答案、交出模型、危机同时升级，三者同时成立",
+   "points": [
+    {
+     "text": "第二十三章「再别蒙德」·秦熙接收模型后说要集合力量彻底清除",
+     "answer": true,
+     "evidence": "L1650、L1656"
+    },
+    {
+     "text": "第二十三章「再别蒙德」·自由派借游戏与现实时间流速差加速渗透",
+     "answer": true,
+     "evidence": "L1632"
+    },
+    {
+     "text": "第十五章「永恒奴役」·反制手段最终定为封禁全部沉浸式游戏",
+     "answer": false,
+     "evidence": "L1004（反对彻查封禁）"
+    },
+    {
+     "text": "第二十三章「再别蒙德」·陈默在结局成为新巨子并接管蜂巢",
+     "answer": false,
+     "evidence": "原文未提"
+    }
+   ]
+  },
+  {
+   "qid": "o007",
+   "conclusion": "张老的分量来自「幸存者亲历＋制度讲解＋只给推测」三处，而不是他与巨子的私交",
+   "points": [
+    {
+     "text": "第五章「历史的断层」·张明远自称战前只是普通退休干部",
+     "answer": true,
+     "evidence": "L418"
+    },
+    {
+     "text": "第六章「权限与贡献点」·他讲权限按贡献百分比分级、需真诚授权",
+     "answer": true,
+     "evidence": "L449、L455"
+    },
+    {
+     "text": "第五章「历史的断层」·张老是巨子的战友兼创始团队成员",
+     "answer": false,
+     "evidence": "L418（普通退休干部）"
+    },
+    {
+     "text": "第五章「历史的断层」·他断言陈默就是巨子的后代",
+     "answer": false,
+     "evidence": "L414（只是猜测）"
+    }
+   ]
+  },
+  {
+   "qid": "o008",
+   "conclusion": "秦熙的立场是机构化的：定威胁、启审查、但不一封了之，与主角是官方协作关系",
+   "points": [
+    {
+     "text": "第七章「被请喝茶」·她自称这里的负责人，并取下头盔",
+     "answer": true,
+     "evidence": "L562、L564"
+    },
+    {
+     "text": "第十四章「暗流涌动」·她判定该信息为高度潜在威胁并启动审查",
+     "answer": true,
+     "evidence": "L937、L949"
+    },
+    {
+     "text": "第十五章「永恒奴役」·她在会上总结说真正的威胁就是游戏本身",
+     "answer": false,
+     "evidence": "L1010（威胁并非游戏本身）"
+    },
+    {
+     "text": "第七章「被请喝茶」·她把陈默认定为自由派探子并予以拘押",
+     "answer": false,
+     "evidence": "L580（反让他参观）"
+    }
+   ]
+  },
+  {
+   "qid": "o009",
+   "conclusion": "王明的论证是三环：认证管真伪不管诱惑→封禁反坐实牢笼→所以要疫苗而非防火墙",
+   "points": [
+    {
+     "text": "第十五章「永恒奴役」·他是心理学家，以警戒检查中心顾问身份参会",
+     "answer": true,
+     "evidence": "L1004"
+    },
+    {
+     "text": "第十五章「永恒奴役」·他反对彻查封禁，认为会坐实“思想牢笼”",
+     "answer": true,
+     "evidence": "L1004"
+    },
+    {
+     "text": "第十五章「永恒奴役」·他主张彻查并封禁所有游戏内容以绝后患",
+     "answer": false,
+     "evidence": "L1004（恰好相反）"
+    },
+    {
+     "text": "第九章「灵境：原神」·王明就是游戏世界的创造者风神",
+     "answer": false,
+     "evidence": "L1482（风神是巨子）"
+    }
+   ]
+  },
+  {
+   "qid": "o010",
+   "conclusion": "小李是执行层的见证者：既盘问过主角，又带他看历史，会上仍相信公民能分辨",
+   "points": [
+    {
+     "text": "第七章「被请喝茶」·审讯中喝问“你是不是自由派的探子”的是巡逻员",
+     "answer": true,
+     "evidence": "L548、L582"
+    },
+    {
+     "text": "第八章「化解误会」·他带陈默穿防护服进遗存区并说这是我们的职责",
+     "answer": true,
+     "evidence": "L589、L619"
+    },
+    {
+     "text": "第八章「化解误会」·他称秦熙为“秦团长”，因她是骑士团团长",
+     "answer": false,
+     "evidence": "L627（称“秦姐”）"
+    },
+    {
+     "text": "第十五章「永恒奴役」·他认为多数公民已被诱惑，主张放弃共识",
+     "answer": false,
+     "evidence": "L1006（相信能分辨）"
+    }
+   ]
+  },
+  {
+   "qid": "o011",
+   "conclusion": "琴守护的是制度性的自由：她在时能定调，她死后政策被废，说明分量在制度不在个人",
+   "points": [
+    {
+     "text": "第十二章「何为自由」·讨伐风魔龙时由琴分配水队风队冰队",
+     "answer": true,
+     "evidence": "L843"
+    },
+    {
+     "text": "第十九章「蒙德的自由」·她识破对方指出美好之脆弱来鼓吹力量",
+     "answer": true,
+     "evidence": "L1252"
+    },
+    {
+     "text": "第十九章「蒙德的自由」·她主张用永生者的仁慈换取绝对安全",
+     "answer": false,
+     "evidence": "L1282（明确否定）"
+    },
+    {
+     "text": "第二十二章「谢谢你 诺艾尔」·推演中她死后骑士团更守平民政策",
+     "answer": false,
+     "evidence": "L1515（政策被废除）"
+    }
+   ]
+  },
+  {
+   "qid": "o012",
+   "conclusion": "凯亚是「交原石、报恐惧、听琴安排」的前线骑士，决策与方案都不在他手上",
+   "points": [
+    {
+     "text": "第十二章「何为自由」·他把装原石的布袋交给陈默并见证祈愿",
+     "answer": true,
+     "evidence": "L823、L825"
+    },
+    {
+     "text": "第十九章「蒙德的自由」·他汇报恐惧有传染性，担心蒙德大乱",
+     "answer": true,
+     "evidence": "L1264"
+    },
+    {
+     "text": "第十九章「蒙德的自由」·他在琴的办公室提出需要认知疫苗",
+     "answer": false,
+     "evidence": "L1004（是王明提出）"
+    },
+    {
+     "text": "第十二章「何为自由」·他按琴的指示让可莉直接上阵参战",
+     "answer": false,
+     "evidence": "L829（尽量不让参战）"
+    }
+   ]
+  },
+  {
+   "qid": "o013",
+   "conclusion": "第四章＝诊断信息错配＋方案公开信息网＋结尾疑虑，三块合看才是这一章的含义",
+   "points": [
+    {
+     "text": "第四章「蜂巢社会蓝图」·巨子把旧社会失败的核心矛盾归为信息错配",
+     "answer": true,
+     "evidence": "L369"
+    },
+    {
+     "text": "第四章「蜂巢社会蓝图」·蜂巢之名取自蜜蜂公开共享信息的方式",
+     "answer": true,
+     "evidence": "L371"
+    },
+    {
+     "text": "第四章「蜂巢社会蓝图」·他主张军事核心技术也应完全公开",
+     "answer": false,
+     "evidence": "L379（分级保密）"
+    },
+    {
+     "text": "第四章「蜂巢社会蓝图」·本章结尾陈默确认理论已被篡改",
+     "answer": false,
+     "evidence": "L385（只是疑虑）"
+    }
+   ]
+  },
+  {
+   "qid": "o014",
+   "conclusion": "遗存区既是旧时代见证，又折射蜂巢的矫枉过正，两线合推才得出「难以作假≠无法诱导」",
+   "points": [
+    {
+     "text": "第八章「化解误会」·小李说这里存放陆军型号，进入需消毒穿防护服",
+     "answer": true,
+     "evidence": "L589、L601"
+    },
+    {
+     "text": "第八章「化解误会」·陈默判断信息难以作假但不代表无法诱导",
+     "answer": true,
+     "evidence": "L621"
+    },
+    {
+     "text": "第八章「化解误会」·本章说机器人是战后才被发明出来的新技术",
+     "answer": false,
+     "evidence": "L437（战时智能工兵）"
+    },
+    {
+     "text": "第八章「化解误会」·本章说蜂巢把自由置于安全之上",
+     "answer": false,
+     "evidence": "L617（隐私给安全低头）"
+    }
+   ]
+  },
+  {
+   "qid": "o015",
+   "conclusion": "三个前提（绝对自由/私有制/永生）缺一不可，推到终产者才反推出蜂巢共识的正当性",
+   "points": [
+    {
+     "text": "第十五章「永恒奴役」·资源并非无限，初始差距会提前触达上限",
+     "answer": true,
+     "evidence": "L968"
+    },
+    {
+     "text": "第十五章「永恒奴役」·绝对自由对应最小化剥削和压迫这一共识",
+     "answer": true,
+     "evidence": "L986"
+    },
+    {
+     "text": "第十五章「永恒奴役」·推演的结论是永生能让人人共享资源",
+     "answer": false,
+     "evidence": "L982、L984（终产者/诅咒）"
+    },
+    {
+     "text": "第十五章「永恒奴役」·秦熙主张彻查所有游戏内容以绝后患",
+     "answer": false,
+     "evidence": "L1004、L1010"
+    }
+   ]
+  },
+  {
+   "qid": "o016",
+   "conclusion": "风神与巨子合一、灵境由来、未竟问题的移交，三件套才构成这一章对前文的回收",
+   "points": [
+    {
+     "text": "第二十一章「问题的答案」·风神正是蜂巢巨子陈默",
+     "answer": true,
+     "evidence": "L1482"
+    },
+    {
+     "text": "第二十一章「问题的答案」·他说灵境是为机器人中自由的灵魂而造",
+     "answer": true,
+     "evidence": "L1476"
+    },
+    {
+     "text": "第二十一章「问题的答案」·他自述一生两件事，其一是推行永生",
+     "answer": false,
+     "evidence": "L1474（彻底反对永生）"
+    },
+    {
+     "text": "第二十一章「问题的答案」·他承认那个终极难题已由自己解决",
+     "answer": false,
+     "evidence": "L1480（交给后来人）"
+    }
+   ]
+  },
+  {
+   "qid": "o017",
+   "conclusion": "第一章先立规矩再立人物：共识、免费托底、贡献点起点同章完成，主角身份只是临时",
+   "points": [
+    {
+     "text": "第一章「初见蜂巢世界」·开篇指南要求观看并遵守新世界共识",
+     "answer": true,
+     "evidence": "L10"
+    },
+    {
+     "text": "第一章「初见蜂巢世界」·他提交磁场约束算法改进建议待评估",
+     "answer": true,
+     "evidence": "L116、L118"
+    },
+    {
+     "text": "第一章「初见蜂巢世界」·所有食物与知识都要用信用点购买",
+     "answer": false,
+     "evidence": "L26、L116（免费）"
+    },
+    {
+     "text": "第一章「初见蜂巢世界」·他一入场就领到正式公民徽章",
+     "answer": false,
+     "evidence": "L148（临时协理员）"
+    }
+   ]
+  },
+  {
+   "qid": "o018",
+   "conclusion": "同名、备份点、宪法第二条三者并置，才逼出「是他的遗产把我抓来」这个悬置疑问",
+   "points": [
+    {
+     "text": "第二章「巧合还是阴谋」·老人神情虔诚，称巨子在废墟上绘制蓝图",
+     "answer": true,
+     "evidence": "L229"
+    },
+    {
+     "text": "第二章「巧合还是阴谋」·巨子塔是其长眠地与核心指令最终备份点",
+     "answer": true,
+     "evidence": "L243"
+    },
+    {
+     "text": "第二章「巧合还是阴谋」·宪法第二条允许自动化系统自我维护",
+     "answer": false,
+     "evidence": "L195（绝不允许）"
+    },
+    {
+     "text": "第二章「巧合还是阴谋」·本章已确认陈默就是巨子的转世",
+     "answer": false,
+     "evidence": "L239、L245（只是猜测）"
+    }
+   ]
+  },
+  {
+   "qid": "o019",
+   "conclusion": "同名者5人、命名是忌讳、创始人资料分层，三条硬信息叠加才让他下决心去查巨子塔",
+   "points": [
+    {
+     "text": "第三章「身份谜团」·指南查出目前名为陈默的公民共5人",
+     "answer": true,
+     "evidence": "L258"
+    },
+    {
+     "text": "第三章「身份谜团」·创始人资料需5级权限或特殊贡献权限才可看",
+     "answer": true,
+     "evidence": "L262"
+    },
+    {
+     "text": "第三章「身份谜团」·《社会控制论》公式密集，行文如学术论文",
+     "answer": false,
+     "evidence": "L270（极少数公式）"
+    },
+    {
+     "text": "第三章「身份谜团」·巨子塔靠刷脸即自动放行，未显示待审核",
+     "answer": false,
+     "evidence": "L310（待审核）"
+    }
+   ]
+  },
+  {
+   "qid": "o020",
+   "conclusion": "第五章的代价清单必须人口、生态、传承三线合看，才能解释历史为何出现断层",
+   "points": [
+    {
+     "text": "第5章「历史的断层」·张明远称那场战争夺走九成九以上人口",
+     "answer": true,
+     "evidence": "L422"
+    },
+    {
+     "text": "第5章「历史的断层」·张老说地表生态系统彻底崩溃，只靠合成食物存活",
+     "answer": true,
+     "evidence": "L422"
+    },
+    {
+     "text": "第5章「历史的断层」·张老说妻子在第一波核打击中遇难",
+     "answer": false,
+     "evidence": "L420"
+    },
+    {
+     "text": "第5章「历史的断层」·张老说幸存者上传的记忆大多是虚假的",
+     "answer": false,
+     "evidence": "L426"
+    }
+   ]
+  },
+  {
+   "qid": "o021",
+   "conclusion": "第六章把贡献点、权限分级与回撤机制串成一条链：贡献点不是货币，而是可被收回的授权",
+   "points": [
+    {
+     "text": "第6章「权限与贡献点」·贡献点提升需公民用神经认证真诚授权1点",
+     "answer": true,
+     "evidence": "L455"
+    },
+    {
+     "text": "第6章「权限与贡献点」·做错事收回授权后从5级跌落，重要信息也不再记得",
+     "answer": true,
+     "evidence": "L455"
+    },
+    {
+     "text": "第6章「权限与贡献点」·张老说权限只看贡献点，达标即得5级",
+     "answer": false,
+     "evidence": "L443"
+    },
+    {
+     "text": "第6章「权限与贡献点」·老人们对《永生技术原理》纷纷投下赞成票",
+     "answer": false,
+     "evidence": "L491"
+    }
+   ]
+  },
+  {
+   "qid": "o022",
+   "conclusion": "第七章用通行记录、审讯敌意与秦熙的解释三层叠加，才显出这个世界的另一面",
+   "points": [
+    {
+     "text": "第7章「被请喝茶」·秦熙取下头盔，自称是这里的负责人",
+     "answer": true,
+     "evidence": "L562"
+    },
+    {
+     "text": "第7章「被请喝茶」·秦熙说自由派不认可蜂巢蓝图，要建立绝对自由的新世界",
+     "answer": true,
+     "evidence": "L570"
+    },
+    {
+     "text": "第7章「被请喝茶」·秦熙全程戴着全密封头盔，未露出面孔",
+     "answer": false,
+     "evidence": "L562"
+    },
+    {
+     "text": "第7章「被请喝茶」·审讯者认为他叫陈默，反而应当从宽处理",
+     "answer": false,
+     "evidence": "L558"
+    }
+   ]
+  },
+  {
+   "qid": "o023",
+   "conclusion": "第九章打开的是一个不能退出、只能靠剧情引导推进的沉浸世界，疑问就立在门后",
+   "points": [
+    {
+     "text": "第9章「灵境：原神」·陈默认出完全沉浸即钱老所说的「灵境」",
+     "answer": true,
+     "evidence": "L660"
+    },
+    {
+     "text": "第9章「灵境：原神」·派蒙称温迪是七神之一，触摸神像可得风的力量",
+     "answer": true,
+     "evidence": "L682"
+    },
+    {
+     "text": "第9章「灵境：原神」·指南当场给出系统教程，并教他如何退出游戏",
+     "answer": false,
+     "evidence": "L668"
+    },
+    {
+     "text": "第9章「灵境：原神」·陈默用热力学第二定律论证控制风不符合科学",
+     "answer": false,
+     "evidence": "L686"
+    }
+   ]
+  },
+  {
+   "qid": "o024",
+   "conclusion": "第十章把祈愿的可复制性与「相似却不同」并置，角色重叠的问题才成立",
+   "points": [
+    {
+     "text": "第10章「初次见面」·派蒙说把原石交她兑换相遇之源即可祈愿",
+     "answer": true,
+     "evidence": "L725"
+    },
+    {
+     "text": "第10章「初次见面」·派蒙说大家早接受有相似的自己，抉择会不同",
+     "answer": true,
+     "evidence": "L735"
+    },
+    {
+     "text": "第10章「初次见面」·首次祈愿没有保底，须十连才必出诺艾尔",
+     "answer": false,
+     "evidence": "L731"
+    },
+    {
+     "text": "第10章「初次见面」·诺艾尔自称奉命前来，不会陪他去冒险",
+     "answer": false,
+     "evidence": "L743"
+    }
+   ]
+  },
+  {
+   "qid": "o025",
+   "conclusion": "第十一章把蒙德的接纳与派蒙「留住他」的动机摆在同一张宴桌上",
+   "points": [
+    {
+     "text": "第11章「接风宴」·琴授荣誉骑士称号，承诺能满足的要求都可兑现",
+     "answer": true,
+     "evidence": "L806"
+    },
+    {
+     "text": "第11章「接风宴」·博士提议引导旅行者追求更多美食、美人与权力",
+     "answer": true,
+     "evidence": "L786"
+    },
+    {
+     "text": "第11章「接风宴」·派蒙当场接受了博士以永生诱惑旅行者的提议",
+     "answer": false,
+     "evidence": "L784"
+    },
+    {
+     "text": "第11章「接风宴」·派蒙在宴会上宣称要送旅行者回蜂巢世界",
+     "answer": false,
+     "evidence": "L766"
+    }
+   ]
+  },
+  {
+   "qid": "o026",
+   "conclusion": "第十二章一边靠编队打赢风魔龙，一边把「被命令的自由」立成本章主题",
+   "points": [
+    {
+     "text": "第12章「何为自由」·水元素队施加水元素，风元素队扩散，冰元素队冻结",
+     "answer": true,
+     "evidence": "L843"
+    },
+    {
+     "text": "第12章「何为自由」·温迪对特瓦林说不希望你听从深渊，但不必听从我",
+     "answer": true,
+     "evidence": "L861"
+    },
+    {
+     "text": "第12章「何为自由」·十连只出3道金光，得到的是三命可莉",
+     "answer": false,
+     "evidence": "L827"
+    },
+    {
+     "text": "第12章「何为自由」·进封印直面特瓦林的是琴、凯亚、安柏与陈默",
+     "answer": false,
+     "evidence": "L855"
+    }
+   ]
+  },
+  {
+   "qid": "o027",
+   "conclusion": "第十三章在告别里同时交代身份、时间差与临别告诫，「还会再来」才成为承诺",
+   "points": [
+    {
+     "text": "第13章「终有一别」·派蒙说我们都是自由的灵魂，不同于按程序的机器人",
+     "answer": true,
+     "evidence": "L882"
+    },
+    {
+     "text": "第13章「终有一别」·回到蜂巢后指南说游戏里过了1分28秒",
+     "answer": true,
+     "evidence": "L910"
+    },
+    {
+     "text": "第13章「终有一别」·派蒙告诫要提防机器人，却说自由派可以信赖",
+     "answer": false,
+     "evidence": "L904"
+    },
+    {
+     "text": "第13章「终有一别」·派蒙说风神接受了永生提议，永远留在自由世界",
+     "answer": false,
+     "evidence": "L880"
+    }
+   ]
+  },
+  {
+   "qid": "o028",
+   "conclusion": "第十四章把永生、私有制、绝对自由并列为污染信号，主线问题由此立起",
+   "points": [
+    {
+     "text": "第14章「暗流涌动」·指南称沉浸达3分钟未退出即预警，交专业人员处理",
+     "answer": true,
+     "evidence": "L925"
+    },
+    {
+     "text": "第14章「暗流涌动」·秦熙要他对三概念产生向往时直接向她报告",
+     "answer": true,
+     "evidence": "L951"
+    },
+    {
+     "text": "第14章「暗流涌动」·陈默向秦熙完整交代了原神游戏和自身经历",
+     "answer": false,
+     "evidence": "L929"
+    },
+    {
+     "text": "第14章「暗流涌动」·秦熙判定这属低度风险，暂不启动审查",
+     "answer": false,
+     "evidence": "L937"
+    }
+   ]
+  },
+  {
+   "qid": "o029",
+   "conclusion": "第十六章用「需要→价值→准则不可预料」这条链解释禁令，而非技术限制",
+   "points": [
+    {
+     "text": "第16章「生命的需求」·张老说有自我意识的AI在蜂巢初建后不久被禁止",
+     "answer": true,
+     "evidence": "L1067"
+    },
+    {
+     "text": "第16章「生命的需求」·张老以生命有生存需要推出其价值准则无法预料",
+     "answer": true,
+     "evidence": "L1071"
+    },
+    {
+     "text": "第16章「生命的需求」·张老说AI是因算力不足被禁，与价值观念无关",
+     "answer": false,
+     "evidence": "L1071"
+    },
+    {
+     "text": "第16章「生命的需求」·巨子在《熵增的社会学启示》中主张永生是永恒秩序",
+     "answer": false,
+     "evidence": "L1033"
+    }
+   ]
+  },
+  {
+   "qid": "o030",
+   "conclusion": "第十七章把「不抛弃也不沉迷」的处境变成一条用故事对抗故事的反击路线",
+   "points": [
+    {
+     "text": "第17章「反击宣告」·陈默决定既保护蜂巢人们，也为自由灵魂争取希望",
+     "answer": true,
+     "evidence": "L1136"
+    },
+    {
+     "text": "第17章「反击宣告」·派蒙提议把愚人众故事改得更狡猾，再一起去打败",
+     "answer": true,
+     "evidence": "L1142"
+    },
+    {
+     "text": "第17章「反击宣告」·陈默认为只要屏蔽赶走自由派就足够简单",
+     "answer": false,
+     "evidence": "L1138"
+    },
+    {
+     "text": "第17章「反击宣告」·陈默判断派蒙她们只是普通程序，不必在意",
+     "answer": false,
+     "evidence": "L1128"
+    }
+   ]
+  },
+  {
+   "qid": "o031",
+   "conclusion": "第十八章的「糖衣」由包装、推演、拆解三步组成，正面方案落在《风之种》",
+   "points": [
+    {
+     "text": "第18章「新的故事」·陈默说糖衣是把永生说成永恒守护、私有制说成自由",
+     "answer": true,
+     "evidence": "L1173"
+    },
+    {
+     "text": "第18章「新的故事」·《风之种》里智者播下种子，而非以力量征服蒙德",
+     "answer": true,
+     "evidence": "L1209"
+    },
+    {
+     "text": "第18章「新的故事」·派蒙推演放任不管最终会出现人人自由的平等小城",
+     "answer": false,
+     "evidence": "L1175"
+    },
+    {
+     "text": "第18章「新的故事」·诺艾尔认为镶嵌宝石的华服也属应当满足的需求",
+     "answer": false,
+     "evidence": "L1195"
+    }
+   ]
+  },
+  {
+   "qid": "o032",
+   "conclusion": "第十九章先揭穿「安全＋永生」的陷阱，再用共同承担给出自由的定义",
+   "points": [
+    {
+     "text": "第19章「蒙德的自由」·琴说对方不否定宁静美好，而指出其脆弱鼓吹力量",
+     "answer": true,
+     "evidence": "L1252"
+    },
+    {
+     "text": "第19章「蒙德的自由」·琴说力量来源于每一个人，而非神祇或王者",
+     "answer": true,
+     "evidence": "L1284"
+    },
+    {
+     "text": "第19章「蒙德的自由」·改写故事里渔夫靠自己击退了来袭的丘丘人",
+     "answer": false,
+     "evidence": "L1244"
+    },
+    {
+     "text": "第19章「蒙德的自由」·凯亚汇报说恐惧不会传染，居民并不买账",
+     "answer": false,
+     "evidence": "L1264"
+    }
+   ]
+  },
+  {
+   "qid": "o033",
+   "conclusion": "第二十章把危机从攻城改写为合作渗透：利益自发、口碑打探、代言人出现",
+   "points": [
+    {
+     "text": "第20章「致命危机」·愚人众以采购酒业渔业、双边贸易与文化参观求合作",
+     "answer": true,
+     "evidence": "L1351"
+    },
+    {
+     "text": "第20章「致命危机」·摊主抱怨只有缴足繁荣税的人才能加入发展委员会",
+     "answer": true,
+     "evidence": "L1385"
+    },
+    {
+     "text": "第20章「致命危机」·居民是被外部宣传强迫改变，并非自发追逐利益",
+     "answer": false,
+     "evidence": "L1373"
+    },
+    {
+     "text": "第20章「致命危机」·博士承认计划彻底失败，蒙德从此再无隐患",
+     "answer": false,
+     "evidence": "L1325"
+    }
+   ]
+  },
+  {
+   "qid": "o034",
+   "conclusion": "第二十二章推演的结果是：缺乏约束的自由终将变成少数人的自由",
+   "points": [
+    {
+     "text": "第22章「谢谢你 诺艾尔」·陈默要派蒙模拟没有神之眼、没有永生的蒙德",
+     "answer": true,
+     "evidence": "L1501"
+    },
+    {
+     "text": "第22章「谢谢你 诺艾尔」·骑士团的改变在琴去世后尤为明显，政策被废",
+     "answer": true,
+     "evidence": "L1515"
+    },
+    {
+     "text": "第22章「谢谢你 诺艾尔」·诺艾尔起义失败被俘，此后安享晚年",
+     "answer": false,
+     "evidence": "L1553"
+    },
+    {
+     "text": "第22章「谢谢你 诺艾尔」·派蒙认定这是自由本身的错误与风神的失败",
+     "answer": false,
+     "evidence": "L1557"
+    }
+   ]
+  },
+  {
+   "qid": "o035",
+   "conclusion": "第二十三章把蒙德学到的答案带回蜂巢，收束为「共同守护」的反制模型",
+   "points": [
+    {
+     "text": "第23章「再别蒙德」·陈默说按需分配不是施舍，自由是能守护珍视之物",
+     "answer": true,
+     "evidence": "L1612"
+    },
+    {
+     "text": "第23章「再别蒙德」·秦熙说自由派利用游戏与现实时间流速差加速渗透",
+     "answer": true,
+     "evidence": "L1632"
+    },
+    {
+     "text": "第23章「再别蒙德」·秦熙说糖衣炮弹已失效，自由派渗透正在放缓",
+     "answer": false,
+     "evidence": "L1632"
+    },
+    {
+     "text": "第23章「再别蒙德」·陈默提出的对策是全面封禁沉浸式游戏平台",
+     "answer": false,
+     "evidence": "L1650"
+    }
+   ]
+  },
+  {
+   "qid": "o036",
+   "conclusion": "旧时代病灶到蜂巢设计是一条信息链，而认证防造假却防不了诱导，缺口正落在这里",
+   "points": [
+    {
+     "text": "第4章「蜂巢社会蓝图」·巨子诊断核心矛盾是信息错配，虚假信息切断反馈",
+     "answer": true,
+     "evidence": "L369"
+    },
+    {
+     "text": "第4章「蜂巢社会蓝图」·对策是量子通信保真加密、神经认证验证想与说一致",
+     "answer": true,
+     "evidence": "L375"
+    },
+    {
+     "text": "第4章「蜂巢社会蓝图」·巨子主张以更强武力重建秩序，信息透明只是次要",
+     "answer": false,
+     "evidence": "L371"
+    },
+    {
+     "text": "第8章「化解误会」·陈默认为有认证与量子通信后连诱导也不会发生",
+     "answer": false,
+     "evidence": "L621"
+    }
+   ]
+  },
+  {
+   "qid": "o037",
+   "conclusion": "认知污染靠绕开认证的展示载体、糖衣包装与恐惧成立，所以对策只能是疫苗",
+   "points": [
+    {
+     "text": "第15章「永恒奴役」·秦熙说自由派借沉浸式游戏绕开认证，包装成乌托邦",
+     "answer": true,
+     "evidence": "L1000"
+    },
+    {
+     "text": "第15章「永恒奴役」·王明主张用认知疫苗，认为查封禁反坐实思想牢笼",
+     "answer": true,
+     "evidence": "L1004"
+    },
+    {
+     "text": "第15章「永恒奴役」·秦熙主张彻查并封禁全部游戏，以根除污染",
+     "answer": false,
+     "evidence": "L1004"
+    },
+    {
+     "text": "第15章「永恒奴役」·陈默推演永生加私有制会带来资源的公平均分",
+     "answer": false,
+     "evidence": "L980"
+    }
+   ]
+  },
+  {
+   "qid": "o038",
+   "conclusion": "从技术突破到自由灵魂再到灵境，是一条「涌现→禁令→安置」的链，灵境是落脚点",
+   "points": [
+    {
+     "text": "第16章「生命的需求」·张老说过去技术突破导致智能涌现、自我意识AI出现",
+     "answer": true,
+     "evidence": "L1071"
+    },
+    {
+     "text": "第21章「问题的答案」·风神说机器人中生出自由灵魂，他好奇又恐惧",
+     "answer": true,
+     "evidence": "L1476"
+    },
+    {
+     "text": "第21章「问题的答案」·风神说自己已解决永生难题，故把世界交给后来者",
+     "answer": false,
+     "evidence": "L1480"
+    },
+    {
+     "text": "第9章「灵境：原神」·灵境由蜂巢官方开发，用来安置自由的灵魂",
+     "answer": false,
+     "evidence": "L1468"
+    }
+   ]
+  },
+  {
+   "qid": "o039",
+   "conclusion": "主角身世这条线由「同名犯讳—巨子塔失忆—异常通行被疑—被称作后来者」四环相扣，缺任何一环都推不出他是巨子交托问题的人。",
+   "points": [
+    {
+     "text": "第3章「身份谜团」·现存同名公民5人，取名避讳开国领导人",
+     "answer": true,
+     "evidence": "L258、L254"
+    },
+    {
+     "text": "第4章「蜂巢社会蓝图」·记录他2045年9月1日入塔，离塔后记忆被屏蔽",
+     "answer": true,
+     "evidence": "L345、L349"
+    },
+    {
+     "text": "第7章「被请喝茶」·秦熙当场认定他是自由派并签发拘押令",
+     "answer": false,
+     "evidence": "原文相反 L564 秦熙道歉放行"
+    },
+    {
+     "text": "第21章「问题的答案」·风神称他后来者，因已查明他是巨子血亲",
+     "answer": false,
+     "evidence": "原文未提血亲 L1478"
+    }
+   ]
+  },
+  {
+   "qid": "o040",
+   "conclusion": "「后来者」这个位置是反对永生、宪法禁止自我延续、又不肯指定继承者三者共同逼出来的，而非巨子另立传人。",
+   "points": [
+    {
+     "text": "第16章「生命的需求」·巨子称永生是「永恒的奴役」，代价甩给苍生",
+     "answer": true,
+     "evidence": "L1037"
+    },
+    {
+     "text": "第21章「问题的答案」·巨子自述反对永生与权威，许多战友同志不理解",
+     "answer": true,
+     "evidence": "L1474"
+    },
+    {
+     "text": "第2章「巧合还是阴谋」·宪法第二条允许自动化系统自行检修以延长寿命",
+     "answer": false,
+     "evidence": "原文相反 L195 禁止自我维护"
+    },
+    {
+     "text": "第13章「终有一别」·派蒙说风神最终接受了永生提议才留在游戏世界",
+     "answer": false,
+     "evidence": "原文相反 L729 风神拒绝永生"
+    }
+   ]
+  },
+  {
+   "qid": "o041",
+   "conclusion": "从改写渔夫故事制造恐惧，到以合作为名的至冬渗透，再到琴死后骑士团废除平民政策，三步才合成「守护不能系于个人」。",
+   "points": [
+    {
+     "text": "第20章「致命危机」·至冬以采购酒业渔业、双边贸易与文化交流谈合作",
+     "answer": true,
+     "evidence": "L1351"
+    },
+    {
+     "text": "第22章「谢谢你 诺艾尔」·琴去世后骑士团废除平民政策，驻守商会收治安税",
+     "answer": true,
+     "evidence": "L1515、L1519"
+    },
+    {
+     "text": "第19章「蒙德的自由」·新故事说渔夫放弃悠闲投身船队才换来真正自由",
+     "answer": false,
+     "evidence": "原文相反 L1242 渔夫被丘丘人打伤"
+    },
+    {
+     "text": "第18章「新的故事」·商人称纪念酒盏应归全体市民共有，反对独占",
+     "answer": false,
+     "evidence": "原文相反 L1159 鼓吹独占与稀缺"
+    }
+   ]
+  },
+  {
+   "qid": "o042",
+   "conclusion": "巨子塔封存记忆与核心指令、指南维护共识、风神像供奉巨子本人、风之种负责说服，四者分工才把两个世界接成同一个人。",
+   "points": [
+    {
+     "text": "第2章「巧合还是阴谋」·巨子塔是他长眠之地，也是核心指令最终备份点",
+     "answer": true,
+     "evidence": "L243"
+    },
+    {
+     "text": "第3章「身份谜团」·指南由创始人陈默制造，维护最小化剥削压迫的共识",
+     "answer": true,
+     "evidence": "L298"
+    },
+    {
+     "text": "第21章「问题的答案」·风神像供奉的风神是另一个人，与巨子并无关联",
+     "answer": false,
+     "evidence": "原文相反 L1482 风神即巨子"
+    },
+    {
+     "text": "第18章「新的故事」·《风之种》讲的是靠囤积财富换取所需",
+     "answer": false,
+     "evidence": "原文相反 L1213 靠协作与共同繁荣"
+    }
+   ]
+  },
+  {
+   "qid": "o043",
+   "conclusion": "两条线靠「他和你很像」的相似、只给后来者的验收信息、以及再来一次的承诺汇合，却始终没有被合上。",
+   "points": [
+    {
+     "text": "第13章「终有一别」·派蒙说风神「他和你很像，但你们终究是不一样的」",
+     "answer": true,
+     "evidence": "L878"
+    },
+    {
+     "text": "第21章「问题的答案」·巨子留言：见此信息即已接触问题并得到她们信任",
+     "answer": true,
+     "evidence": "L1478"
+    },
+    {
+     "text": "第17章「反击宣告」·派蒙表示世界休眠后她们也随之消散，不再等他",
+     "answer": false,
+     "evidence": "原文相反 L1090 休眠时一切静止"
+    },
+    {
+     "text": "第23章「再别蒙德」·陈默承诺解决自由派后不再回来，只此一别",
+     "answer": false,
+     "evidence": "原文相反 L1602 我还会回来"
+    }
+   ]
+  },
+  {
+   "qid": "o044",
+   "conclusion": "旧时代是「信息错配致反馈失灵—复合战争—九成九人口与地表生态双崩」的因果链终结的，不是单纯技术失控。",
+   "points": [
+    {
+     "text": "第4章「蜂巢社会蓝图」·核心矛盾是信息错配，虚假信息蒙蔽眼睛、纵容腐败",
+     "answer": true,
+     "evidence": "L369"
+    },
+    {
+     "text": "第5章「历史的断层」·核战、细菌病毒战、机器人大战连南极科考站也未幸免",
+     "answer": true,
+     "evidence": "L418"
+    },
+    {
+     "text": "第5章「历史的断层」·战后地表生态迅速恢复，人类重返地面耕作",
+     "answer": false,
+     "evidence": "原文相反 L422 生态系统崩溃"
+    },
+    {
+     "text": "第4章「蜂巢社会蓝图」·自动化推进使岗位大增，失业人群普遍欢迎",
+     "answer": false,
+     "evidence": "原文相反 L331 失业人群愤怒抨击"
+    }
+   ]
+  },
+  {
+   "qid": "o045",
+   "conclusion": "蜂巢世界按「诊断信息错配—量子通信与神经认证重建反馈—按需分配加贡献点分级—机器人民用化」四步建成。",
+   "points": [
+    {
+     "text": "第4章「蜂巢社会蓝图」·量子通信确保传递纹丝不动，神经认证验证想与说一致",
+     "answer": true,
+     "evidence": "L375"
+    },
+    {
+     "text": "第6章「权限与贡献点」·核心技术、军事技术须达5级权限才允许查看",
+     "answer": true,
+     "evidence": "L449"
+    },
+    {
+     "text": "第6章「权限与贡献点」·基础生存物资也须用贡献点购买，无免费配给",
+     "answer": false,
+     "evidence": "原文相反 L26 基础需求免费"
+    },
+    {
+     "text": "第5章「历史的断层」·蜂巢由人类劳工承担主要建设，机器人只做清洁",
+     "answer": false,
+     "evidence": "原文相反 L437 机器人才是建设者"
+    }
+   ]
+  },
+  {
+   "qid": "o046",
+   "conclusion": "认知污染线按「边界暴露—上报定级—手法定性—事态升级—反制」推进，落点是认知疫苗而非封禁。",
+   "points": [
+    {
+     "text": "第8章「化解误会」·信息难以作假但不代表无法诱导，自由派被部分真相带偏",
+     "answer": true,
+     "evidence": "L621"
+    },
+    {
+     "text": "第14章「暗流涌动」·秦熙判定「利用沉浸式游戏诱导」属高度潜在威胁",
+     "answer": true,
+     "evidence": "L937"
+    },
+    {
+     "text": "第15章「永恒奴役」·会议决定全面封禁所有沉浸式游戏内容",
+     "answer": false,
+     "evidence": "原文相反 L1004 要疫苗不要防火墙"
+    },
+    {
+     "text": "第13章「终有一别」·现实中过一天，游戏世界只过去约一分钟",
+     "answer": false,
+     "evidence": "原文相反 L910 游戏3天=现实1分28秒"
+    }
+   ]
+  },
+  {
+   "qid": "o047",
+   "conclusion": "主角线是「自愿点选入局—巨子塔失忆—同名与权限双重受阻—双目标接手」的自我选择链，而非被掳走。",
+   "points": [
+    {
+     "text": "第1章「初见蜂巢世界」·他点开那则视频，在「是或否」里自己选了是",
+     "answer": true,
+     "evidence": "L12"
+    },
+    {
+     "text": "第17章「反击宣告」·他决定既不弃派蒙也不沉迷，兼顾蜂巢与自由灵魂",
+     "answer": true,
+     "evidence": "L1136"
+    },
+    {
+     "text": "第3章「身份谜团」·指南告知他已是5级权限持有者，故能进巨子塔",
+     "answer": false,
+     "evidence": "原文相反 L310 权限仅L1"
+    },
+    {
+     "text": "第23章「再别蒙德」·他回蜂巢后决定退出，不再介入自由派之事",
+     "answer": false,
+     "evidence": "原文相反 L1618 要回去阻止"
+    }
+   ]
+  },
+  {
+   "qid": "o048",
+   "conclusion": "求知园开放知识、巨子塔封存记忆与超时代技术、警戒检查中心握强制力，三者门槛由低到高，并在主角动线上既是威胁又是盟友。",
+   "points": [
+    {
+     "text": "第6章「权限与贡献点」·巨子塔需5级贡献或特殊意义，超时代技术分级保存",
+     "answer": true,
+     "evidence": "L409"
+    },
+    {
+     "text": "第7章「被请喝茶」·警戒检查中心为阻止战争与恐袭而建的快速反应指挥中心",
+     "answer": true,
+     "evidence": "L524"
+    },
+    {
+     "text": "第7章「被请喝茶」·警戒检查中心外墙洁白，与求知园是同一形制",
+     "answer": false,
+     "evidence": "原文相反 L522 漆黑环形同巨子塔"
+    },
+    {
+     "text": "第3章「身份谜团」·求知园下载知识须按字数支付信用点",
+     "answer": false,
+     "evidence": "原文相反 L116 基础科学0信用点"
+    }
+   ]
+  },
+  {
+   "qid": "o049",
+   "conclusion": "遗存区封存旧时代武力、蜂巢由同一批技术与人的后代建成，二者是前后代关系，所以它被隔离消毒并当作殉难者纪念。",
+   "points": [
+    {
+     "text": "第8章「化解误会」·进遗存区须穿防护服、经消毒扫描，防病毒与延迟程序",
+     "answer": true,
+     "evidence": "L589"
+    },
+    {
+     "text": "第6章「权限与贡献点」·战时智能工兵负责维护挖掘搬运，战后技术民用化",
+     "answer": true,
+     "evidence": "L437"
+    },
+    {
+     "text": "第8章「化解误会」·遗存区里的机械犬多为完好的现役装备，随时可战",
+     "answer": false,
+     "evidence": "原文相反 L603 千疮百孔沉眠"
+    },
+    {
+     "text": "第6章「权限与贡献点」·陈默认为这些战争机器不值得尊敬，只是废铁",
+     "answer": false,
+     "evidence": "原文相反 L611 他向机器敬礼"
+    }
+   ]
+  },
+  {
+   "qid": "o050",
+   "conclusion": "风神像确认身份、风龙废墟暴露布置、摘星崖承担离别、无风之地引出信息，四处才合成「看—打—别—引」一条动线。",
+   "points": [
+    {
+     "text": "第18章「新的故事」·陈默与派蒙坐在风神像手掌上俯瞰夜幕下的蒙德",
+     "answer": true,
+     "evidence": "L1171"
+    },
+    {
+     "text": "第12章「何为自由」·队伍在风龙废墟清遗迹守卫、破风墙、净化毒血",
+     "answer": true,
+     "evidence": "L851、L859"
+    },
+    {
+     "text": "第12章「何为自由」·摘星崖是讨伐风魔龙的战场，塞西莉亚花在此枯萎",
+     "answer": false,
+     "evidence": "原文相反 L835 此处生长塞西莉亚"
+    },
+    {
+     "text": "第21章「问题的答案」·幻想朋友讲的是被困在暴风中心的人",
+     "answer": false,
+     "evidence": "原文相反 L1436 无风之地"
+    }
+   ]
+  },
+  {
+   "qid": "o051",
+   "conclusion": "时间坐标由指南开篇的2045年、亲历者锚定的第三次世界大战、巨子晚年与蜂巢纪年、以及内外1分28秒对3天的时差共同定出。",
+   "points": [
+    {
+     "text": "第1章「初见蜂巢世界」·指南开篇写明现在是2045年",
+     "answer": true,
+     "evidence": "L10"
+    },
+    {
+     "text": "第13章「终有一别」·游戏里过了3天，现实只过了1分28秒",
+     "answer": true,
+     "evidence": "L910"
+    },
+    {
+     "text": "第5章「历史的断层」·张明远说他亲身参加了第三次世界大战的前线作战",
+     "answer": false,
+     "evidence": "原文相反 L418 普通退休干部"
+    },
+    {
+     "text": "第2章「巧合还是阴谋」·巨子至今在世，仍在巨子塔里处理核心指令",
+     "answer": false,
+     "evidence": "原文相反 L241 建后几年去世"
+    }
+   ]
+  },
+  {
+   "qid": "o052",
+   "conclusion": "蒙德线按「初见与祈愿—接风宴定讨伐—风龙废墟之战—摘星崖告别—再别蒙德」推进，中间夹着博士与富人的两轮渗透。",
+   "points": [
+    {
+     "text": "第11章「接风宴」·琴在接风宴上宣布有人目击风魔龙，需集结力量讨伐",
+     "answer": true,
+     "evidence": "L802"
+    },
+    {
+     "text": "第13章「终有一别」·陈默回到蜂巢才发现现实只过了1分28秒",
+     "answer": true,
+     "evidence": "L908、L910"
+    },
+    {
+     "text": "第10章「初次见面」·他第一次祈愿就抽到十连六金的可莉",
+     "answer": false,
+     "evidence": "原文相反 L733 首祈保底诺艾尔"
+    },
+    {
+     "text": "第23章「再别蒙德」·告别发生在风龙废墟，众人在废墟前送行",
+     "answer": false,
+     "evidence": "原文相反 L1594 摘星崖"
+    }
+   ]
+  },
+  {
+   "qid": "o053",
+   "conclusion": "小说把自由重新定义为「有能力守护珍视之物」的受限自由，用最小化剥削压迫的共识与反永生立场托底，并以守护不能系于个人收束。",
+   "points": [
+    {
+     "text": "第23章「再别蒙德」·自由不是为所欲为，而是有能力守护珍视的一切",
+     "answer": true,
+     "evidence": "L1612"
+    },
+    {
+     "text": "第15章「永恒奴役」·蜂巢共识以最小化剥削压迫对抗终产者悲剧",
+     "answer": true,
+     "evidence": "L988"
+    },
+    {
+     "text": "第12章「何为自由」·陈默主张绝对自由优于有约束的自由，愿意留下",
+     "answer": false,
+     "evidence": "原文相反 L1128 绝对自由是灾难"
+    },
+    {
+     "text": "第16章「生命的需求」·巨子认为永生能让人守住理想，故值得追求",
+     "answer": false,
+     "evidence": "原文相反 L1037 永生即奴役"
+    }
+   ]
+  },
+  {
+   "qid": "o054",
+   "conclusion": "故事用「绝对自由加私有制加永生等于终产者」「无人干预的自由会自我吞噬」「需求的边界」「后来者如何接问题」四个思想实验搭起论证。",
+   "points": [
+    {
+     "text": "第15章「永恒奴役」·私有制加资源有限推出王朝周期律，再加永生即永恒奴役",
+     "answer": true,
+     "evidence": "L974、L980"
+    },
+    {
+     "text": "第18章「新的故事」·诺艾尔把需求划到共同福祉，小艾尔补上自我愉悦",
+     "answer": true,
+     "evidence": "L1195、L1203"
+    },
+    {
+     "text": "第22章「谢谢你 诺艾尔」·模拟显示琴死后骑士团更坚决维护平民权益",
+     "answer": false,
+     "evidence": "原文相反 L1515 废除平民政策"
+    },
+    {
+     "text": "第21章「问题的答案」·巨子留言说答案已经找到，后来者只需照办",
+     "answer": false,
+     "evidence": "原文相反 L1480 答案交给后来人"
+    }
+   ]
+  },
+  {
+   "qid": "q001",
+   "conclusion": "他要5级权限，是为解开巨子与指南的加密信息、弄清自己入塔失忆的来历，而这个权限只能靠贡献点换来。",
+   "points": [
+    {
+     "text": "第3章「身份谜团」·创始人资料与指南制造方法都提示需5级或特殊贡献权限",
+     "answer": true,
+     "evidence": "L262、L298"
+    },
+    {
+     "text": "第8章「化解误会」·他把贡献点增长设为目标值，用指南做反馈实时查询",
+     "answer": true,
+     "evidence": "L639"
+    },
+    {
+     "text": "第6章「权限与贡献点」·5级权限可用信用点直接购买，与贡献无关",
+     "answer": false,
+     "evidence": "原文相反 L455 靠公民授权"
+    },
+    {
+     "text": "第2章「巧合还是阴谋」·他升权限是为了离开蜂巢回到旧时代",
+     "answer": false,
+     "evidence": "原文未提"
+    }
+   ]
+  },
+  {
+   "qid": "q002",
+   "conclusion": "旧时代就是主角原来所处的年代，两者之间只隔一场第三次世界大战，那场战争以九成九人口与地表生态为代价换来重建。",
+   "points": [
+    {
+     "text": "第1章「初见蜂巢世界」·指南开篇写明现在是2045年，旧时代即他来处",
+     "answer": true,
+     "evidence": "L10"
+    },
+    {
+     "text": "第5章「历史的断层」·第三次大战后九成九人口消失，地表生态系统崩溃",
+     "answer": true,
+     "evidence": "L422"
+    },
+    {
+     "text": "第5章「历史的断层」·旧时代与2045年之间总共经历了两次世界大战",
+     "answer": false,
+     "evidence": "原文相反 L418 第三次世界大战"
+    },
+    {
+     "text": "第4章「蜂巢社会蓝图」·二十年前社会已无学历、外卖、保安等旧痕迹",
+     "answer": false,
+     "evidence": "原文相反 L329 四大门派犹存"
+    }
+   ]
+  },
+  {
+   "qid": "q003",
+   "conclusion": "蜂巢的控制者不是某个在世之人，而是巨子留下的系统、指南与共识制度，加上公民授权维系的贡献点分级。",
+   "points": [
+    {
+     "text": "第3章「身份谜团」·指南由创始人制造，用于实时反馈与维护共识",
+     "answer": true,
+     "evidence": "L298"
+    },
+    {
+     "text": "第6章「权限与贡献点」·5级权限靠公民神经认证自愿授权，可被收回",
+     "answer": true,
+     "evidence": "L455"
+    },
+    {
+     "text": "第7章「被请喝茶」·秦熙说警戒检查中心是最高决策者，可修改宪法",
+     "answer": false,
+     "evidence": "原文未提，L524 仅维护秩序"
+    },
+    {
+     "text": "第21章「问题的答案」·巨子仍以数字形态存活并直接下达指令",
+     "answer": false,
+     "evidence": "原文相反 L241 已去世"
+    }
+   ]
+  },
+  {
+   "qid": "q004",
+   "conclusion": "蜂巢里唯一具备智能的存在是「指南」：它兼作百科目录、个人操作终端与实时反馈通道，而巨子塔只是存储节点。",
+   "points": [
+    {
+     "text": "第4章「蜂巢社会蓝图」·巨子塔只是核心信息存储节点，访问需5级权限",
+     "answer": true,
+     "evidence": "L349"
+    },
+    {
+     "text": "第2章「巧合还是阴谋」·张明远断言指南只是服务器，真正做事的是各节点",
+     "answer": false,
+     "evidence": "L177 相反"
+    },
+    {
+     "text": "第3章「身份谜团」·指南由巨子制造，为公民提供实时信息反馈以维护共识",
+     "answer": true,
+     "evidence": "L298"
+    },
+    {
+     "text": "第3章「身份谜团」·指南的制造方法已公开，可在求知园免费下载",
+     "answer": false,
+     "evidence": "L298 相反"
+    },
+    {
+     "text": "第2章「巧合还是阴谋」·指南既是百科目录，也可作个人操作终端查询词条",
+     "answer": true,
+     "evidence": "L165"
+    }
+   ]
+  },
+  {
+   "qid": "q005",
+   "conclusion": "派蒙不是普通NPC，而是蜂巢机器人中自生的「自由的灵魂」之一，被巨子安放在灵境并授予世界权限。",
+   "points": [
+    {
+     "text": "第16章「生命的需求」·张老说有自我意识的AI一直在民间合法使用",
+     "answer": false,
+     "evidence": "L1067 相反"
+    },
+    {
+     "text": "第10章「初次见面」·派蒙说手中的权限是风神给予她的自由",
+     "answer": true,
+     "evidence": "L725"
+    },
+    {
+     "text": "第13章「终有一别」·陈默判断她们只是按故事剧本答题的普通游戏程序",
+     "answer": false,
+     "evidence": "L882 相反"
+    },
+    {
+     "text": "第21章「问题的答案」·巨子发现机器人中生出自由灵魂，遂造此世界作安身之地",
+     "answer": true,
+     "evidence": "L1476"
+    },
+    {
+     "text": "第13章「终有一别」·派蒙自述她们是自由的灵魂，与按程序运行的机器人不同",
+     "answer": true,
+     "evidence": "L882"
+    }
+   ]
+  },
+  {
+   "qid": "q006",
+   "conclusion": "巨子拒绝永生是三层理由叠加：推演上通向终产者与永恒奴役，伦理上代价甩给苍生，心理上怕遗忘理想。",
+   "points": [
+    {
+     "text": "第15章「永恒奴役」·推演绝对自由加私有制加永生，终将形成终产者与永恒奴役",
+     "answer": true,
+     "evidence": "L982"
+    },
+    {
+     "text": "第21章「问题的答案」·巨子拒绝永生只因当时技术尚未成熟无法实现",
+     "answer": false,
+     "evidence": "原文未提"
+    },
+    {
+     "text": "第15章「永恒奴役」·他恐惧的不是技术，而是在无限时间中忘记过去的理想",
+     "answer": true,
+     "evidence": "L992"
+    },
+    {
+     "text": "第16章「生命的需求」·他称维持永恒秩序不可能，代价要由其他方面付出",
+     "answer": true,
+     "evidence": "L1033"
+    },
+    {
+     "text": "第10章「初次见面」·派蒙说风神接受了永生提议，才离开这个世界",
+     "answer": false,
+     "evidence": "L729 相反"
+    }
+   ]
+  },
+  {
+   "qid": "q007",
+   "conclusion": "现在的陈默是同名序列里的第五个：名字在此地是忌讳、创始人资料被加密，而他如何被造出原文未写明。",
+   "points": [
+    {
+     "text": "第2章「巧合还是阴谋」·求知园老人当面告知陈默「你是第五个同名者」",
+     "answer": false,
+     "evidence": "L473（在第六章）"
+    },
+    {
+     "text": "第6章「权限与贡献点」·高瘦老人对张老说「这是第五个了吧」",
+     "answer": true,
+     "evidence": "L473"
+    },
+    {
+     "text": "第3章「身份谜团」·指南查创始人资料只回权限不足，需5级或特殊权限",
+     "answer": true,
+     "evidence": "L262"
+    },
+    {
+     "text": "第3章「身份谜团」·以开国领导人的名字取名，本身就是极大的忌讳",
+     "answer": true,
+     "evidence": "L254"
+    },
+    {
+     "text": "第4章「蜂巢社会蓝图」·巨子塔记录写明陈默的制造者与制造年份",
+     "answer": false,
+     "evidence": "L345 相反"
+    }
+   ]
+  },
+  {
+   "qid": "q008",
+   "conclusion": "复制体之所以必须存在：巨子不愿成为束缚、自由灵魂被禁、而难题要一个带着他记忆的后来者才接得住。",
+   "points": [
+    {
+     "text": "第21章「问题的答案」·陈默想起脑海中那部分记忆，正是巨子的回忆",
+     "answer": true,
+     "evidence": "L1482"
+    },
+    {
+     "text": "第21章「问题的答案」·巨子明言自己已开了永生的头，须由他亲自延续",
+     "answer": false,
+     "evidence": "L1490 相反"
+    },
+    {
+     "text": "第17章「反击宣告」·派蒙能凭权限造出携带巨子记忆的新人",
+     "answer": false,
+     "evidence": "L1142 相反"
+    },
+    {
+     "text": "第16章「生命的需求」·有自我意识的AI在蜂巢初建后不久就被禁止",
+     "answer": true,
+     "evidence": "L1067"
+    },
+    {
+     "text": "第21章「问题的答案」·巨子自称未竟事业的先行者，不该成为他们的束缚",
+     "answer": true,
+     "evidence": "L1480"
+    }
+   ]
+  },
+  {
+   "qid": "q009",
+   "conclusion": "遗愿无法执行，因为巨子交出去的是问题而非答案，最像答案的自由灵魂又被禁，人类一侧也不可托付。",
+   "points": [
+    {
+     "text": "第13章「终有一别」·派蒙说蜂巢已准许自由灵魂公开出场活动",
+     "answer": false,
+     "evidence": "L1067 相反"
+    },
+    {
+     "text": "第16章「生命的需求」·有自我意识的AI在蜂巢初建后不久即被禁止",
+     "answer": true,
+     "evidence": "L1067"
+    },
+    {
+     "text": "第6章「权限与贡献点」·周清源被斥叛徒，其《永生技术原理》提案被投票否决",
+     "answer": true,
+     "evidence": "L487"
+    },
+    {
+     "text": "第21章「问题的答案」·巨子留下了可执行的完整方案与指定继承人",
+     "answer": false,
+     "evidence": "L1480 相反"
+    },
+    {
+     "text": "第21章「问题的答案」·世界创造者自述面对永恒难题未解决，只能不断尝试",
+     "answer": true,
+     "evidence": "L1468"
+    }
+   ]
+  },
+  {
+   "qid": "q010",
+   "conclusion": "蜂巢不能自我维护：宪法禁止自动化系统自检自修，维护落在公民身上，尽管机器人技术上完全做得到。",
+   "points": [
+    {
+     "text": "第2章「巧合还是阴谋」·陈默发现机器人本可互检，清洁更像检查而非清洁",
+     "answer": true,
+     "evidence": "L193"
+    },
+    {
+     "text": "第1章「初见蜂巢世界」·轨道清洁协理员每日2小时，报酬每日1贡献点",
+     "answer": true,
+     "evidence": "L140"
+    },
+    {
+     "text": "第2章「巧合还是阴谋」·宪法第二条禁止自动化系统自我检测、修理、维护",
+     "answer": true,
+     "evidence": "L195"
+    },
+    {
+     "text": "第4章「蜂巢社会蓝图」·宪法第二条允许智能实体自我检测以提升效率",
+     "answer": false,
+     "evidence": "L195 相反"
+    },
+    {
+     "text": "第7章「被请喝茶」·秦熙说蜂巢维护全由自动化系统承担，公民只做监督",
+     "answer": false,
+     "evidence": "L195 相反"
+    }
+   ]
+  },
+  {
+   "qid": "q011",
+   "conclusion": "维护者不是均质全体：入门岗位人人可做，核心设施要5级权限，资格还能被收回，能承担的人本就稀少。",
+   "points": [
+    {
+     "text": "第5章「历史的断层」·大战夺走九成九以上人口，活下来者大多疾病缠身",
+     "answer": true,
+     "evidence": "L422"
+    },
+    {
+     "text": "第4章「蜂巢社会蓝图」·巨子塔作为核心节点，访问需5级权限或特殊权限",
+     "answer": true,
+     "evidence": "L349"
+    },
+    {
+     "text": "第1章「初见蜂巢世界」·轨道清洁协理员门槛很高，需5级权限与特殊贡献",
+     "answer": false,
+     "evidence": "L140 相反"
+    },
+    {
+     "text": "第6章「权限与贡献点」·做错事即收回授权，大贤者从5级跌落、失去设施使用权",
+     "answer": true,
+     "evidence": "L455"
+    },
+    {
+     "text": "第6章「权限与贡献点」·张老说5级权限按贡献点数量自动授予，与公民评估无关",
+     "answer": false,
+     "evidence": "L455 相反"
+    }
+   ]
+  },
+  {
+   "qid": "q012",
+   "conclusion": "真正在维护蜂巢的是公民与机器人构成的整体：宪法把维护派给公民，底层作业靠遍布各节点的机器人。",
+   "points": [
+    {
+     "text": "第1章「初见蜂巢世界」·陈默接下轨道清洁协理员，每日两小时上工维护交通网",
+     "answer": true,
+     "evidence": "L140"
+    },
+    {
+     "text": "第6章「权限与贡献点」·张老称机器人才是蜂巢真正的建设者，处处有其踪迹",
+     "answer": true,
+     "evidence": "L437"
+    },
+    {
+     "text": "第4章「蜂巢社会蓝图」·巨子塔等核心节点由自动化系统自行检修",
+     "answer": false,
+     "evidence": "L195 相反"
+    },
+    {
+     "text": "第6章「权限与贡献点」·张老说军用技术转民用是因机器人数量过剩",
+     "answer": false,
+     "evidence": "L437 相反"
+    },
+    {
+     "text": "第2章「巧合还是阴谋」·宪法把检测、修理、维护定为公民的事，须定期进行",
+     "answer": true,
+     "evidence": "L195"
+    }
+   ]
+  },
+  {
+   "qid": "q013",
+   "conclusion": "核心的智能与政策不是被动手检修，而是靠公民的实时反馈与可收回的授权维持。",
+   "points": [
+    {
+     "text": "第16章「生命的需求」·政策由共识委员会单独制定，公民只需服从",
+     "answer": false,
+     "evidence": "L1051 相反"
+    },
+    {
+     "text": "第4章「蜂巢社会蓝图」·宪法第二条允许智能实体自我维护与自主升级",
+     "answer": false,
+     "evidence": "L195 相反"
+    },
+    {
+     "text": "第6章「权限与贡献点」·高级贡献者资格靠公民神经认证的真诚自愿授权，可收回",
+     "answer": true,
+     "evidence": "L455"
+    },
+    {
+     "text": "第3章「身份谜团」·陈默称指南是反馈的眼睛和耳朵，从源头获取真实诉求",
+     "answer": true,
+     "evidence": "L296"
+    },
+    {
+     "text": "第3章「身份谜团」·指南被造来提供实时反馈、维护最小化剥削压迫的共识",
+     "answer": true,
+     "evidence": "L298"
+    }
+   ]
+  },
+  {
+   "qid": "q014",
+   "conclusion": "宪法没有成文法典与修订机构：指南负责维护公民认同的共识，细则靠公民反馈持续微调。",
+   "points": [
+    {
+     "text": "第3章「身份谜团」·指南的职责之一是维护公民认同最小化剥削压迫的共识",
+     "answer": true,
+     "evidence": "L298"
+    },
+    {
+     "text": "第3章「身份谜团」·《社会控制论》主张修订凝聚共识的细则、持续微调",
+     "answer": true,
+     "evidence": "L286"
+    },
+    {
+     "text": "第16章「生命的需求」·共识委员会只发《意见稿》，公民以贡献点表态",
+     "answer": true,
+     "evidence": "L1051"
+    },
+    {
+     "text": "第5章「历史的断层」·张老说宪法由立法机关每五年集中修订一次",
+     "answer": false,
+     "evidence": "原文未提"
+    },
+    {
+     "text": "第4章「蜂巢社会蓝图」·宪法第二条允许国家机构自行修订根本原则",
+     "answer": false,
+     "evidence": "L195 相反"
+    }
+   ]
+  },
+  {
+   "qid": "q015",
+   "conclusion": "冲突源于认知污染：自由派借游戏世界与时间差绕开神经认证，把绝对自由包装成乌托邦。",
+   "points": [
+    {
+     "text": "第15章「永恒奴役」·秦熙指出自由派借助沉浸式游戏绕开了神经认证",
+     "answer": true,
+     "evidence": "L1000"
+    },
+    {
+     "text": "第15章「永恒奴役」·王明说全面查禁会自证「蜂巢即思想牢笼」，需要认知疫苗",
+     "answer": true,
+     "evidence": "L1004"
+    },
+    {
+     "text": "第23章「再别蒙德」·陈默主张用真实历史与协作成果揭穿谎言，而非封禁",
+     "answer": true,
+     "evidence": "L1650"
+    },
+    {
+     "text": "第14章「暗流涌动」·秦熙认为自由派靠武力与谎言，神经认证验不出谎言",
+     "answer": false,
+     "evidence": "L1004 相反"
+    },
+    {
+     "text": "第20章「致命危机」·陈默主张全面封禁所有沉浸式游戏以切断诱导",
+     "answer": false,
+     "evidence": "L1004 相反"
+    }
+   ]
+  },
+  {
+   "qid": "q016",
+   "conclusion": "原文没有给出答案：只确认自我意识AI曾涌现并被禁、指南与巨子塔都是功能节点，故无法断定蜂巢有无意识。",
+   "points": [
+    {
+     "text": "第16章「生命的需求」·张老说过去技术突破确实导致有自我意识的AI涌现",
+     "answer": true,
+     "evidence": "L1071"
+    },
+    {
+     "text": "第16章「生命的需求」·张老说有自我意识的AI在蜂巢初建后不久被禁止",
+     "answer": true,
+     "evidence": "L1067"
+    },
+    {
+     "text": "第2章「巧合还是阴谋」·指南是全体居民的信息管理节点，具体功能相对有限",
+     "answer": true,
+     "evidence": "L175"
+    },
+    {
+     "text": "第23章「再别蒙德」·秦熙确认蜂巢本身已具自我意识并自主决策",
+     "answer": false,
+     "evidence": "原文未提"
+    },
+    {
+     "text": "第1章「初见蜂巢世界」·指南开篇自称就是蜂巢的意识本体",
+     "answer": false,
+     "evidence": "L10 相反"
+    }
+   ]
+  },
+  {
+   "qid": "q017",
+   "conclusion": "诺艾尔与小艾尔是同一角色的先后两个个体：先来的是原本那位，祈愿而来的后辈被叫作小艾尔。",
+   "points": [
+    {
+     "text": "第10章「初次见面」·陈默祈愿之后出现的是身穿女仆装的诺艾尔",
+     "answer": true,
+     "evidence": "L733"
+    },
+    {
+     "text": "第11章「接风宴」·派蒙按先来后到提议把后召唤的那位叫小艾尔",
+     "answer": true,
+     "evidence": "L758"
+    },
+    {
+     "text": "第13章「终有一别」·两人分别写来同类的信，一封署名诺艾尔、一封署名小艾尔",
+     "answer": true,
+     "evidence": "L870"
+    },
+    {
+     "text": "第11章「接风宴」·小艾尔拒绝这个称呼，坚持自己才是唯一的诺艾尔",
+     "answer": false,
+     "evidence": "L760 相反"
+    },
+    {
+     "text": "第10章「初次见面」·派蒙说相似的存在会被系统合并为同一个体",
+     "answer": false,
+     "evidence": "L735 相反"
+    }
+   ]
+  },
+  {
+   "qid": "q018",
+   "conclusion": "小艾尔有自我意识：她属于自由的灵魂，会提出自己的价值主张，也有自己的偏好与期待。",
+   "points": [
+    {
+     "text": "第17章「反击宣告」·派蒙说风神称她们是自由的灵魂，蜂巢害怕这样的灵魂",
+     "answer": true,
+     "evidence": "L1108"
+    },
+    {
+     "text": "第18章「新的故事」·小艾尔主张「让自己开心也很重要」，点醒了陈默",
+     "answer": true,
+     "evidence": "L1201"
+    },
+    {
+     "text": "第18章「新的故事」·小艾尔拒绝当王者，理由是那些王者听起来都好孤独",
+     "answer": true,
+     "evidence": "L1169"
+    },
+    {
+     "text": "第13章「终有一别」·陈默判断她们只是按剧本回答的普通程序",
+     "answer": false,
+     "evidence": "L882 相反"
+    },
+    {
+     "text": "第10章「初次见面」·派蒙说重复个体没有自我，只是同一段数据的复制",
+     "answer": false,
+     "evidence": "L735 相反"
+    }
+   ]
+  },
+  {
+   "qid": "q019",
+   "conclusion": "派蒙对风神与陈默是同一种依恋：她要的不是自由而是陪伴，而两人对她说了同一句放手的话。",
+   "points": [
+    {
+     "text": "第10章「初次见面」·派蒙说风神与她约定要陪她，并把她从束缚战乱中解救",
+     "answer": true,
+     "evidence": "L727"
+    },
+    {
+     "text": "第11章「接风宴」·派蒙给蒙德众人开会，要求让旅行者打消回家的念头",
+     "answer": true,
+     "evidence": "L766"
+    },
+    {
+     "text": "第13章「终有一别」·派蒙说风神给了她自由，但她想要的自由是他仍陪在身边",
+     "answer": true,
+     "evidence": "L886"
+    },
+    {
+     "text": "第13章「终有一别」·派蒙说对风神只有怨恨，对陈默则毫无依恋",
+     "answer": false,
+     "evidence": "L886 相反"
+    },
+    {
+     "text": "第17章「反击宣告」·派蒙说陈默与风神毫无相似之处",
+     "answer": false,
+     "evidence": "L878 相反"
+    }
+   ]
+  },
+  {
+   "qid": "q020",
+   "conclusion": "诺艾尔与小艾尔的情感都用服务与守护来表达：一个是自我怀疑式的克制，一个是促成式的退让。",
+   "points": [
+    {
+     "text": "第13章「终有一别」·诺艾尔信中说「像我这样自私的做法，是不是不太好」",
+     "answer": true,
+     "evidence": "L870"
+    },
+    {
+     "text": "第13章「终有一别」·小艾尔请陈默「可以多来找我么」，并称他是真正的骑士",
+     "answer": true,
+     "evidence": "L872"
+    },
+    {
+     "text": "第13章「终有一别」·小艾尔问诺艾尔「如果他离开蒙德，你会感到难过么」",
+     "answer": true,
+     "evidence": "L870"
+    },
+    {
+     "text": "第13章「终有一别」·两人的信都要求陈默留下、不许回蜂巢",
+     "answer": false,
+     "evidence": "L872 相反"
+    },
+    {
+     "text": "第12章「何为自由」·诺艾尔在战场上当众向陈默表白心意",
+     "answer": false,
+     "evidence": "L849 相反"
+    }
+   ]
+  },
+  {
+   "qid": "q021",
+   "conclusion": "陈默把三人当自由的灵魂而非角色，落点都是守护：怜惜派蒙、爱慕诺艾尔、受教于小艾尔。",
+   "points": [
+    {
+     "text": "第13章「终有一别」·陈默对三人说你们也并非是派蒙诺艾尔，都拥有自由的灵魂",
+     "answer": true,
+     "evidence": "L894"
+    },
+    {
+     "text": "第22章「谢谢你 诺艾尔」·第一人称承认已不可避免喜欢上这位坚守自由的骑士",
+     "answer": true,
+     "evidence": "L1567"
+    },
+    {
+     "text": "第17章「反击宣告」·陈默认为她们需要旅行者，如人需要吃饭喝水般不言自明",
+     "answer": true,
+     "evidence": "L1120"
+    },
+    {
+     "text": "第22章「谢谢你 诺艾尔」·陈默决定带她们离开灵境回蜂巢一同生活",
+     "answer": false,
+     "evidence": "L1134 相反"
+    },
+    {
+     "text": "第13章「终有一别」·陈默把诺艾尔与小艾尔的情书一并退回",
+     "answer": false,
+     "evidence": "L876 相反"
+    }
+   ]
+  },
+  {
+   "qid": "q022",
+   "conclusion": "这一节不批判自由本身，而是逐一否证三种误认：绝对自由、消费即自由、凌驾他人的特权。",
+   "points": [
+    {
+     "text": "第18章「新的故事」·派蒙推演绝对自由终点是最强者夺走所有人自由成为唯一的神",
+     "answer": true,
+     "evidence": "L1175"
+    },
+    {
+     "text": "第18章「新的故事」·商人称唯有拥有这酒盏才算真正拥有蒙德的一缕自由之风",
+     "answer": true,
+     "evidence": "L1159"
+    },
+    {
+     "text": "第22章「谢谢你 诺艾尔」·骑士不再为誓言驻守，而为特权和凌驾他人的自由守商会",
+     "answer": true,
+     "evidence": "L1519"
+    },
+    {
+     "text": "第23章「再别蒙德」·陈默的结论是应当取消自由、回到统一管制",
+     "answer": false,
+     "evidence": "L1638 相反"
+    },
+    {
+     "text": "第19章「蒙德的自由」·琴团长宣布骑士团要为自己攫取永恒的权柄与力量",
+     "answer": false,
+     "evidence": "L1282 相反"
+    }
+   ]
+  },
+  {
+   "qid": "q023",
+   "conclusion": "矛盾是三层叠加：守规的主体与被规定「无我」的对象同一、自由灵魂在制度里无位、认证只防假话不防诱导，并非单纯的权限设计失误",
+   "points": [
+    {
+     "text": "第2章「巧合还是阴谋」·宪法第二条禁止自动化系统自我检测与维护",
+     "answer": true,
+     "evidence": "L195"
+    },
+    {
+     "text": "第21章「问题的答案」·巨子称机器人中产生的自由灵魂是骄傲也是遗憾",
+     "answer": true,
+     "evidence": "L1470/L1476"
+    },
+    {
+     "text": "第6章「权限与贡献点」·5级权限由贡献百分比自动授予，不需公民授权",
+     "answer": false,
+     "evidence": "L455（原文明写须公民真诚自愿授权、可收回）"
+    },
+    {
+     "text": "第15章「永恒奴役」·神经认证能同时判定话语背后的动机是否正当",
+     "answer": false,
+     "evidence": "L1002/L1004（只能验证符合认知的事实，难以界定诱惑）"
+    }
+   ]
+  },
+  {
+   "qid": "q024",
+   "conclusion": "思想是墨子、毛泽东选集与《工程控制论》三家熔合的产物，原料是三战的信息错配教训，三位先哲的姓名全书未点名",
+   "points": [
+    {
+     "text": "第4章「蜂巢社会蓝图」·陈默评巨子文风像《墨子》《毛泽东选集》",
+     "answer": true,
+     "evidence": "L361"
+    },
+    {
+     "text": "第21章「问题的答案」·巨子自述只是一个拙劣的模仿者、普通人",
+     "answer": true,
+     "evidence": "L1484"
+    },
+    {
+     "text": "第2章「巧合还是阴谋」·张老点名三位先哲是墨子、苏格拉底与马克思",
+     "answer": false,
+     "evidence": "原文未提（L225-229 只说融合了智慧，未列姓名）"
+    },
+    {
+     "text": "第15章「永恒奴役」·巨子反对永生是怕技术尚不成熟导致失败",
+     "answer": false,
+     "evidence": "L992（原文：不是恐惧技术，而是怕忘记理想）"
+    }
+   ]
+  },
+  {
+   "qid": "q025",
+   "conclusion": "发达感来自把旧理论做到极致、按需分配托底与机器人承担劳动，超时代的突破被分级收进巨子塔，而不是技术本身停滞",
+   "points": [
+    {
+     "text": "第5章「历史的断层」·涉及军用或超越时代的突破会转移进巨子塔分级保存",
+     "answer": true,
+     "evidence": "L408"
+    },
+    {
+     "text": "第3章「身份谜团」·陈默猜指南技术不会超过旧时代理论（脑机接口、强AI）",
+     "answer": true,
+     "evidence": "L302"
+    },
+    {
+     "text": "第1章「初见蜂巢世界」·指南开篇称现在是2245年，距旧时代两百年",
+     "answer": false,
+     "evidence": "L10（原文为2045年）"
+    },
+    {
+     "text": "第6章「权限与贡献点」·量子通信仍是无原理的黑箱，公民无法理解",
+     "answer": false,
+     "evidence": "L375（原文：这样的技术我们已经有了）"
+    }
+   ]
+  },
+  {
+   "qid": "q026",
+   "conclusion": "两拨人物由同名继承、造物与自由、造物者对永生的拒绝三轴串起，血缘说与同窗说都不成立",
+   "points": [
+    {
+     "text": "第13章「终有一别」·派蒙承认风神与陈默很像，但终究不一样",
+     "answer": true,
+     "evidence": "L878-880"
+    },
+    {
+     "text": "第3章「身份谜团」·指南查出名叫陈默的现存公民有5人",
+     "answer": true,
+     "evidence": "L258"
+    },
+    {
+     "text": "第21章「问题的答案」·风神留言称主角是巨子的血缘后代",
+     "answer": false,
+     "evidence": "原文未提（L1478 只称「后来者」）"
+    },
+    {
+     "text": "第2章「巧合还是阴谋」·张明远自称与巨子是大学同窗，共写五部理论",
+     "answer": false,
+     "evidence": "原文未提（L418 自称普通退休干部）"
+    }
+   ]
+  },
+  {
+   "qid": "q027",
+   "conclusion": "巨子塔管记忆屏蔽与权限门槛、求知园是信息交汇处、灵境安放自由灵魂，三地各有分工，而非各管一摊",
+   "points": [
+    {
+     "text": "第3章「身份谜团」·离开巨子塔后会进行记忆屏蔽，以保障内外生活",
+     "answer": true,
+     "evidence": "L349"
+    },
+    {
+     "text": "第21章「问题的答案」·风神称灵境是自由灵魂的安生之地、验证理想的试验田",
+     "answer": true,
+     "evidence": "L1470/L1476"
+    },
+    {
+     "text": "第4章「蜂巢社会蓝图」·巨子塔建在月球，须乘高速运输网络前往",
+     "answer": false,
+     "evidence": "L243/L306（塔在蜂巢侧；L506 高速网络才通向月球）"
+    },
+    {
+     "text": "第8章「化解误会」·遗存区位于求知园地下二层，紧邻风味实验室",
+     "answer": false,
+     "evidence": "L589（遗存在警戒检查中心内层）"
+    }
+   ]
+  },
+  {
+   "qid": "q028",
+   "conclusion": "主线是因果链：信息错配引发三战、蜂巢用真实信息重建秩序、自由派再用游戏绕开认证，收束于失忆与权限之谜",
+   "points": [
+    {
+     "text": "第5章「历史的断层」·三战夺走九成九以上人口，地表生态系统彻底崩溃",
+     "answer": true,
+     "evidence": "L422"
+    },
+    {
+     "text": "第14章「暗流涌动」·秦熙判定借沉浸式游戏诱导属高度潜在威胁",
+     "answer": true,
+     "evidence": "L937"
+    },
+    {
+     "text": "第4章「蜂巢社会蓝图」·巨子把旧时代病根诊断为资源匮乏而非信息错配",
+     "answer": false,
+     "evidence": "L369（原文：核心矛盾是信息错配）"
+    },
+    {
+     "text": "第7章「被请喝茶」·秦熙当场确认陈默是自由派探子并移交审判",
+     "answer": false,
+     "evidence": "L562-564（道歉后安排小李带参观）"
+    }
+   ]
+  },
+  {
+   "qid": "q029",
+   "conclusion": "这是自愿应答「是」之后带着已经发生的授权进入，且他是第五个同名填位者，不是被抓来、也不是复制体",
+   "points": [
+    {
+     "text": "第1章「初见蜂巢世界」·他在「你想漫游新世界么」中选了「是」",
+     "answer": true,
+     "evidence": "L12"
+    },
+    {
+     "text": "第4章「蜂巢社会蓝图」·记录显示他9月1日进入巨子塔，却不知何时有权限",
+     "answer": true,
+     "evidence": "L345/L351"
+    },
+    {
+     "text": "第6章「权限与贡献点」·老人们说第五个是巨子的复制体，前四个已被销毁",
+     "answer": false,
+     "evidence": "原文未提（L473 只提「第五个」）"
+    },
+    {
+     "text": "第23章「再别蒙德」·秦熙透露穿越由自由派的意识转移实验造成",
+     "answer": false,
+     "evidence": "原文未提（L1630-1656 无此内容）"
+    }
+   ]
+  },
+  {
+   "qid": "q030",
+   "conclusion": "最初解释是被死掉的设计师留下的系统抓来，后被修正为自愿应答与「第五个」，失忆则来自塔自身的屏蔽机制",
+   "points": [
+    {
+     "text": "第2章「巧合还是阴谋」·他疑心是死掉的设计师留下的系统把他抓来",
+     "answer": true,
+     "evidence": "L239"
+    },
+    {
+     "text": "第4章「蜂巢社会蓝图」·词条写明离开巨子塔后即进行记忆屏蔽",
+     "answer": true,
+     "evidence": "L349"
+    },
+    {
+     "text": "第3章「身份谜团」·指南承认屏蔽是上一人跑路后临时加的措施",
+     "answer": false,
+     "evidence": "L349（词条为常态机制；L475 只是老人抱怨）"
+    },
+    {
+     "text": "第1章「初见蜂巢世界」·他最初断定是被植入脑机接口芯片带上来的",
+     "answer": false,
+     "evidence": "L302（那是对指南原理的猜测）"
+    }
+   ]
+  },
+  {
+   "qid": "q031",
+   "conclusion": "禁令针对的是不可预知的价值观念与不可逆的实验、要防的是终产者，「没找到答案」另指理想世界如何建成",
+   "points": [
+    {
+     "text": "第16章「生命的需求」·张老以生存需要反问：AI会形成怎样的价值观念",
+     "answer": true,
+     "evidence": "L1071"
+    },
+    {
+     "text": "第21章「问题的答案」·巨子自述面对永恒难题没能解决，只能不断尝试",
+     "answer": true,
+     "evidence": "L1468"
+    },
+    {
+     "text": "第6章「权限与贡献点」·宪法第二条要求自动化系统自建维护闭环以防腐败",
+     "answer": false,
+     "evidence": "L195（原文恰恰禁止自我维护）"
+    },
+    {
+     "text": "第15章「永恒奴役」·巨子反对永生是因为担心技术尚不成熟会失败",
+     "answer": false,
+     "evidence": "L992/L1033（怕忘记理想、怕代价转嫁）"
+    }
+   ]
+  },
+  {
+   "qid": "q032",
+   "conclusion": "风神与巨子是同一人、灵境是他为自由灵魂造的安生之地、他对她们给自由又离开，三点合起来才是这段关系",
+   "points": [
+    {
+     "text": "第21章「问题的答案」·陈默确认风神是与他相似的老人，也是巨子陈默",
+     "answer": true,
+     "evidence": "L1482"
+    },
+    {
+     "text": "第17章「反击宣告」·投影重现风神离别语「我不是风神，你也并非是派蒙」",
+     "answer": true,
+     "evidence": "L1116"
+    },
+    {
+     "text": "第9章「灵境：原神」·派蒙说风神就是七神之一温迪本人，只是改了名字",
+     "answer": false,
+     "evidence": "L727（风神是世界创造者，温迪另在其列）"
+    },
+    {
+     "text": "第13章「终有一别」·派蒙说她们本是蜂巢在册公民，自愿迁入灵境",
+     "answer": false,
+     "evidence": "L882（她们是自由的灵魂，与程序机器人不同）"
+    }
+   ]
+  },
+  {
+   "qid": "q033",
+   "conclusion": "自我意识由智能涌现而被发现、创造者亲手造的是安放它们的世界、他只给自由而不编写其灵魂，三者不可颠倒",
+   "points": [
+    {
+     "text": "第21章「问题的答案」·巨子原话：我发现机器人中产生了一批自由的灵魂",
+     "answer": true,
+     "evidence": "L1476"
+    },
+    {
+     "text": "第16章「生命的需求」·张老称技术突破导致智能涌现、自我意识AI出现",
+     "answer": true,
+     "evidence": "L1071"
+    },
+    {
+     "text": "第21章「问题的答案」·巨子说他逐行编写了这些灵魂的价值观念与行为准则",
+     "answer": false,
+     "evidence": "L1476/L1071（原文是发现与未知）"
+    },
+    {
+     "text": "第10章「初次见面」·派蒙说灵境角色的人格都是风神逐个编程赋予的",
+     "answer": false,
+     "evidence": "L727/L882（只称自由的灵魂，未提逐个编程）"
+    }
+   ]
+  },
+  {
+   "qid": "q034",
+   "conclusion": "反馈被设计成目标、比较、持续微调的闭环，指南补上真实信息，得到的是抗偏差与容错，而不是对未来的预测",
+   "points": [
+    {
+     "text": "第3章「身份谜团」·《社会控制论》把罗盘、航标、舵轮称作反馈机制",
+     "answer": true,
+     "evidence": "L276"
+    },
+    {
+     "text": "第8章「化解误会」·陈默设目标值、比较器与反馈回路，用指南实时查询",
+     "answer": true,
+     "evidence": "L639"
+    },
+    {
+     "text": "第3章「身份谜团」·陈默断言指南已能预测未来信息，故闭环不再需要微调",
+     "answer": false,
+     "evidence": "原文未提（L294 只说实时反馈真实信息）"
+    },
+    {
+     "text": "第4章「蜂巢社会蓝图」·巨子称量子通信既保信息真实，也保方向正确",
+     "answer": false,
+     "evidence": "L375/L621（只保不假；诱导仍会发生）"
+    }
+   ]
+  },
+  {
+   "qid": "q035",
+   "conclusion": "理论核心是社会控制论、落地是蜂巢、真实信息入口是指南、体系外生命是自由的灵魂、反对者是自由派，因果由错配走到认知疫苗",
+   "points": [
+    {
+     "text": "第3章「身份谜团」·陈默推断指南是给公民建立的实时反馈的眼睛和耳朵",
+     "answer": true,
+     "evidence": "L292-296"
+    },
+    {
+     "text": "第21章「问题的答案」·巨子称自由灵魂是他的骄傲，也是他的遗憾",
+     "answer": true,
+     "evidence": "L1470"
+    },
+    {
+     "text": "第7章「被请喝茶」·秦熙说自由派只反对巨子个人，仍认同蜂巢共识",
+     "answer": false,
+     "evidence": "L570（他们不认可蓝图，要真正的绝对自由）"
+    },
+    {
+     "text": "第8章「化解误会」·陈默断定自由派看到的信息全是伪造的",
+     "answer": false,
+     "evidence": "L621（原文：他们看到的只是一部分真相）"
+    }
+   ]
+  },
+  {
+   "qid": "q036",
+   "conclusion": "判据是原理能否被公民复述、能否公开下载、是否被权限锁住：量子通信与神经认证属工程延伸，指南制造法才是黑箱",
+   "points": [
+    {
+     "text": "第4章「蜂巢社会蓝图」·巨子写道量子通信与神经认证「这样的技术我们已经有了」",
+     "answer": true,
+     "evidence": "L375"
+    },
+    {
+     "text": "第3章「身份谜团」·指南的制造方法显示权限不足、已被加密",
+     "answer": true,
+     "evidence": "L298"
+    },
+    {
+     "text": "第5章「历史的断层」·张老说巨子塔只存文献，不存放技术成果",
+     "answer": false,
+     "evidence": "L408（技术会转移进塔分级保存）"
+    },
+    {
+     "text": "第3章「身份谜团」·陈默确认指南靠内置脑机接口芯片实现，原理已经公开",
+     "answer": false,
+     "evidence": "L302/L304（那只是他的猜想）"
+    }
+   ]
+  },
+  {
+   "qid": "q037",
+   "conclusion": "书里的意识是可被编辑的信息载体、记忆既能屏蔽也能移植、认知因此可被污染，三者同源才解释得了失忆与污染",
+   "points": [
+    {
+     "text": "第6章「权限与贡献点」·跌出5级的贡献者连获取的重要信息也不再记得",
+     "answer": true,
+     "evidence": "L455"
+    },
+    {
+     "text": "第21章「问题的答案」·陈默借道具看到幻想朋友后想起巨子的部分回忆",
+     "answer": true,
+     "evidence": "L1458-1482"
+    },
+    {
+     "text": "第3章「身份谜团」·指南说明记忆屏蔽只作用于短期记忆，一周后自动恢复",
+     "answer": false,
+     "evidence": "原文未提（L349 未设期限）"
+    },
+    {
+     "text": "第15章「永恒奴役」·秦熙称认知污染只能靠药物干预，与信息接触无关",
+     "answer": false,
+     "evidence": "L951/L1004（要防范自由派后续接触）"
+    }
+   ]
+  },
+  {
+   "qid": "q038",
+   "conclusion": "若不禁，自主维护的闭环、不可预知的价值观念与有限资源的争夺会合流滑向终产者，故禁令与宪法第二条是同一道刹车",
+   "points": [
+    {
+     "text": "第2章「巧合还是阴谋」·宪法第二条禁止自动化系统的自我检测、修理与维护",
+     "answer": true,
+     "evidence": "L195"
+    },
+    {
+     "text": "第16章「生命的需求」·张老反问自我意识AI会形成怎样的价值观念与行为准则",
+     "answer": true,
+     "evidence": "L1071"
+    },
+    {
+     "text": "第15章「永恒奴役」·陈默推演永生社会时假定资源无限，扩张不会冲突",
+     "answer": false,
+     "evidence": "L968/L980（资源有限，终将消灭一方）"
+    },
+    {
+     "text": "第21章「问题的答案」·巨子说自由灵魂已证明能与人共处，禁令只是过渡",
+     "answer": false,
+     "evidence": "L1476（好奇与恐惧）；L1067 禁令仍在"
+    }
+   ]
+  }
+ ]
+}
