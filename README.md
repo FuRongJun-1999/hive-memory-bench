@@ -76,7 +76,7 @@
 | 看复杂推理题（六元素 + 多跳）| [mcq/reasoning/](mcq/reasoning/) |
 | 看多跳 rubric_92 怎么验的、读数怎么读 | [验证报告 v1.0](docs/多跳六元素rubric92_验证报告_v1.0.md) |
 | 给自己的作答判分（六元素/多跳 rubric）| [grade_rubric.py](grade_rubric.py)｜作答器 [run_rubric.py](run_rubric.py) |
-| 看无泄漏硬指标怎么定 | [设计说明 §七](mcq/reasoning/最终版292_设计说明_v1.0.md) |
+| 看现行题库是哪两套 | [mcq/reasoning/README.md](mcq/reasoning/README.md) |
 | 看多跳题的验证报告与双 φ 口径 | [验证报告 §10](docs/多跳六元素rubric92_验证报告_v1.0.md) |
 | 看人格一致性的作业规程（四条硬要求）| [mcq/persona/K_面作业规程_v1.0.md](mcq/persona/K_面作业规程_v1.0.md) |
 | 给自己的答卷判分 | [grade_mcq.py](grade_mcq.py) |
@@ -96,7 +96,7 @@ cd hive-memory-bench
 
 # 2. 把 sut/out/*.json 汇总成 JSONL（每行 {"qid": "...", "pick": "B"}）
 # 3. 判分：pick == answer 即通过
-python grade_mcq.py --questions mcq/reasoning/题目_最终版_292.json --answers answers.jsonl --out report.json
+python grade_mcq.py --questions mcq/reasoning/题目_六元素判断题_476.json --answers answers.jsonl --out report.json
 ```
 
 > `--answers` 需要 **JSONL 文件**，不是目录。
