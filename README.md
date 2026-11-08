@@ -72,8 +72,9 @@ cd hive-memory-bench
 # 1. 系统读题（只给 question + options，不给 answer）
 #    输出 sut/out/<qid>.json：{"qid": "S-001", "pick": "B"}
 
-# 2. 判分：pick == answer 即通过
-python grade_mcq.py --questions mcq/reasoning/题目_选择题_238.json --answers sut/out/ --out report.json
+# 2. 先把 sut/out/*.json 汇总成 JSONL（每行 {"qid": "...", "pick": "B"}）
+# 3. 判分：pick == answer 即通过
+python grade_mcq.py --questions mcq/reasoning/题目_最终版_292.json --answers answers.jsonl --out report.json
 ```
 
 ## 判分口径（引用读数前必读）

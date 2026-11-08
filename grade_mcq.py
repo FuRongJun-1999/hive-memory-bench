@@ -112,6 +112,12 @@ def grade(questions, answers, baseline=None, verbose=False):
     errors = Counter()
     confusion = defaultdict(Counter)
     abstain = 0
+    # v2.3：格式非法（pick 不是 A/B/C/D/E/?）——必须单独统计，
+    # 否则「是」「1是」这类输出会被静默判错，读数看起来像「模型答错」而不是「解析失败」。
+    # 实例：某次闭卷测试因解析要求 '1是 2否' 而模型输出别的格式，66/92 题被误判为全错，
+    #       报出 25.0% 的「正确率」——实为解析失败率。
+    VALID_PICK = set("ABCDE?")
+    invalid_ids = []
     rows = []
 
     for qid in valid:
@@ -121,6 +127,8 @@ def grade(questions, answers, baseline=None, verbose=False):
         ok = (pick == q["answer"])
         if ok: groups[g]["pass"] += 1
         if pick == "": abstain += 1
+        elif pick not in VALID_PICK:
+            invalid_ids.append(qid)
         confusion[q["answer"]][pick or "(空)"] += 1
         if not ok:
             if pick == "": errors["abstain"] += 1
@@ -148,6 +156,8 @@ def grade(questions, answers, baseline=None, verbose=False):
                      for k, v in groups.items()},
         "errors": dict(errors),
         "abstain": abstain,
+        "invalid_count": len(invalid_ids), "invalid_ids": invalid_ids[:20],
+        "invalid_rate": round(len(invalid_ids) / n, 4) if n else 0.0,
         "missing_ids": missing[:20], "missing_count": len(missing),
         "extra_ids": extra[:20], "extra_count": len(extra),
         "confusion": {a: dict(c) for a, c in confusion.items()},
@@ -179,6 +189,14 @@ def render(r):
     L.append("  过度谨慎(有答案选E)   : %d" % e.get("over_cautious", 0))
     L.append("  选错实质项            : %d" % e.get("wrong_substantive", 0))
     L.append("  弃答(空)              : %d" % e.get("abstain", 0))
+    n_invalid = r.get("invalid_count", 0)
+    inv_rate = r.get("invalid_rate", 0.0)
+    L.append("  格式非法(非ABCDE?)     : %d (%.1f%%)" % (n_invalid, 100.0*inv_rate))
+    if inv_rate > 0.05:
+        L.append("")
+        L.append("⚠ 格式非法率 > 5% —— 读数可能被解析问题污染，不要当成「模型答错」。")
+        L.append("  首先检查作答方的输出格式是否与契约一致；示例题号：%s"
+                 % ", ".join(r.get("invalid_ids", [])[:3]))
     L.append("")
     L.append("-- 混淆(答案→选择) --")
     for a in sorted(r["confusion"]):
