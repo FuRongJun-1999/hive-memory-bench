@@ -1,0 +1,6523 @@
+[
+ {
+  "qid": "A1-060-present-0001",
+  "type": "现值",
+  "doc": "猎户项目",
+  "doc_id": "A1",
+  "subject": "猎户项目",
+  "slot": "依赖名",
+  "question": "截至第 60 次提交，猎户项目 的依赖名当前是什么值？（请给出值、状态，以及该值生效的序号）",
+  "answer": {
+   "value": "redis",
+   "state": "active",
+   "at_seq": 56,
+   "chain": [
+    {
+     "seq": 1,
+     "from": null,
+     "to": "redis"
+    },
+    {
+     "seq": 2,
+     "from": "redis",
+     "to": "lmdb"
+    },
+    {
+     "seq": 3,
+     "from": "lmdb",
+     "to": "redis"
+    },
+    {
+     "seq": 4,
+     "from": "redis",
+     "to": "badger"
+    },
+    {
+     "seq": 5,
+     "from": "badger",
+     "to": "bbolt"
+    },
+    {
+     "seq": 6,
+     "from": "bbolt",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 7,
+     "from": "rocksdb",
+     "to": "bbolt"
+    },
+    {
+     "seq": 8,
+     "from": "bbolt",
+     "to": "badger"
+    },
+    {
+     "seq": 9,
+     "from": "badger",
+     "to": "lmdb"
+    },
+    {
+     "seq": 10,
+     "from": "lmdb",
+     "to": "sled"
+    },
+    {
+     "seq": 11,
+     "from": "sled",
+     "to": "redis"
+    },
+    {
+     "seq": 12,
+     "from": "redis",
+     "to": "sqlite"
+    },
+    {
+     "seq": 13,
+     "from": "sqlite",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 14,
+     "from": "rocksdb",
+     "to": "bbolt"
+    },
+    {
+     "seq": 15,
+     "from": "bbolt",
+     "to": "sled"
+    },
+    {
+     "seq": 16,
+     "from": "sled",
+     "to": "lmdb"
+    },
+    {
+     "seq": 17,
+     "from": "lmdb",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 18,
+     "from": "rocksdb",
+     "to": "lmdb"
+    },
+    {
+     "seq": 19,
+     "from": "lmdb",
+     "to": "redis"
+    },
+    {
+     "seq": 20,
+     "from": "redis",
+     "to": "bbolt"
+    },
+    {
+     "seq": 21,
+     "from": "bbolt",
+     "to": "sqlite"
+    },
+    {
+     "seq": 22,
+     "from": "sqlite",
+     "to": "bbolt"
+    },
+    {
+     "seq": 23,
+     "from": "bbolt",
+     "to": "sled"
+    },
+    {
+     "seq": 24,
+     "from": "sled",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 25,
+     "from": "rocksdb",
+     "to": "badger"
+    },
+    {
+     "seq": 26,
+     "from": "badger",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 27,
+     "from": "rocksdb",
+     "to": "redis"
+    },
+    {
+     "seq": 28,
+     "from": "redis",
+     "to": "sqlite"
+    },
+    {
+     "seq": 29,
+     "from": "sqlite",
+     "to": "bbolt"
+    },
+    {
+     "seq": 30,
+     "from": "bbolt",
+     "to": "lmdb"
+    },
+    {
+     "seq": 31,
+     "from": "lmdb",
+     "to": "redis"
+    },
+    {
+     "seq": 32,
+     "from": "redis",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 33,
+     "from": "rocksdb",
+     "to": "bbolt"
+    },
+    {
+     "seq": 34,
+     "from": "bbolt",
+     "to": "redis"
+    },
+    {
+     "seq": 35,
+     "from": "redis",
+     "to": "bbolt"
+    },
+    {
+     "seq": 36,
+     "from": "bbolt",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 37,
+     "from": "rocksdb",
+     "to": "badger"
+    },
+    {
+     "seq": 38,
+     "from": "badger",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 39,
+     "from": "rocksdb",
+     "to": "lmdb"
+    },
+    {
+     "seq": 40,
+     "from": "lmdb",
+     "to": "sqlite"
+    },
+    {
+     "seq": 41,
+     "from": "sqlite",
+     "to": "redis"
+    },
+    {
+     "seq": 44,
+     "from": "redis",
+     "to": "lmdb"
+    },
+    {
+     "seq": 47,
+     "from": "lmdb",
+     "to": "bbolt"
+    },
+    {
+     "seq": 50,
+     "from": "bbolt",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 56,
+     "from": "rocksdb",
+     "to": "redis"
+    }
+   ],
+   "change_chain": [
+    {
+     "seq": 2,
+     "from": "redis",
+     "to": "lmdb"
+    },
+    {
+     "seq": 3,
+     "from": "lmdb",
+     "to": "redis"
+    },
+    {
+     "seq": 4,
+     "from": "redis",
+     "to": "badger"
+    },
+    {
+     "seq": 5,
+     "from": "badger",
+     "to": "bbolt"
+    },
+    {
+     "seq": 6,
+     "from": "bbolt",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 7,
+     "from": "rocksdb",
+     "to": "bbolt"
+    },
+    {
+     "seq": 8,
+     "from": "bbolt",
+     "to": "badger"
+    },
+    {
+     "seq": 9,
+     "from": "badger",
+     "to": "lmdb"
+    },
+    {
+     "seq": 10,
+     "from": "lmdb",
+     "to": "sled"
+    },
+    {
+     "seq": 11,
+     "from": "sled",
+     "to": "redis"
+    },
+    {
+     "seq": 12,
+     "from": "redis",
+     "to": "sqlite"
+    },
+    {
+     "seq": 13,
+     "from": "sqlite",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 14,
+     "from": "rocksdb",
+     "to": "bbolt"
+    },
+    {
+     "seq": 15,
+     "from": "bbolt",
+     "to": "sled"
+    },
+    {
+     "seq": 16,
+     "from": "sled",
+     "to": "lmdb"
+    },
+    {
+     "seq": 17,
+     "from": "lmdb",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 18,
+     "from": "rocksdb",
+     "to": "lmdb"
+    },
+    {
+     "seq": 19,
+     "from": "lmdb",
+     "to": "redis"
+    },
+    {
+     "seq": 22,
+     "from": "sqlite",
+     "to": "bbolt"
+    },
+    {
+     "seq": 23,
+     "from": "bbolt",
+     "to": "sled"
+    },
+    {
+     "seq": 24,
+     "from": "sled",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 25,
+     "from": "rocksdb",
+     "to": "badger"
+    },
+    {
+     "seq": 26,
+     "from": "badger",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 27,
+     "from": "rocksdb",
+     "to": "redis"
+    },
+    {
+     "seq": 28,
+     "from": "redis",
+     "to": "sqlite"
+    },
+    {
+     "seq": 29,
+     "from": "sqlite",
+     "to": "bbolt"
+    },
+    {
+     "seq": 30,
+     "from": "bbolt",
+     "to": "lmdb"
+    },
+    {
+     "seq": 31,
+     "from": "lmdb",
+     "to": "redis"
+    },
+    {
+     "seq": 32,
+     "from": "redis",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 33,
+     "from": "rocksdb",
+     "to": "bbolt"
+    },
+    {
+     "seq": 34,
+     "from": "bbolt",
+     "to": "redis"
+    },
+    {
+     "seq": 35,
+     "from": "redis",
+     "to": "bbolt"
+    },
+    {
+     "seq": 36,
+     "from": "bbolt",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 37,
+     "from": "rocksdb",
+     "to": "badger"
+    },
+    {
+     "seq": 38,
+     "from": "badger",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 39,
+     "from": "rocksdb",
+     "to": "lmdb"
+    },
+    {
+     "seq": 40,
+     "from": "lmdb",
+     "to": "sqlite"
+    },
+    {
+     "seq": 41,
+     "from": "sqlite",
+     "to": "redis"
+    },
+    {
+     "seq": 44,
+     "from": "redis",
+     "to": "lmdb"
+    },
+    {
+     "seq": 47,
+     "from": "lmdb",
+     "to": "bbolt"
+    },
+    {
+     "seq": 50,
+     "from": "bbolt",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 56,
+     "from": "rocksdb",
+     "to": "redis"
+    }
+   ]
+  },
+  "sample_at_seq": 60,
+  "chain_len": 45,
+  "interference": "none",
+  "reconstructible": false,
+  "ambiguous": false
+ },
+ {
+  "qid": "A1-001-history-0003",
+  "type": "历史",
+  "doc": "猎户项目",
+  "doc_id": "A1",
+  "subject": "猎户项目",
+  "slot": "依赖名",
+  "question": "在第 1 次提交时，猎户项目 的依赖名是什么值？",
+  "answer": {
+   "value": "redis",
+   "state": "active",
+   "at_seq": 1,
+   "chain": [
+    {
+     "seq": 1,
+     "from": null,
+     "to": "redis"
+    },
+    {
+     "seq": 2,
+     "from": "redis",
+     "to": "lmdb"
+    },
+    {
+     "seq": 3,
+     "from": "lmdb",
+     "to": "redis"
+    },
+    {
+     "seq": 4,
+     "from": "redis",
+     "to": "badger"
+    },
+    {
+     "seq": 5,
+     "from": "badger",
+     "to": "bbolt"
+    },
+    {
+     "seq": 6,
+     "from": "bbolt",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 7,
+     "from": "rocksdb",
+     "to": "bbolt"
+    },
+    {
+     "seq": 8,
+     "from": "bbolt",
+     "to": "badger"
+    },
+    {
+     "seq": 9,
+     "from": "badger",
+     "to": "lmdb"
+    },
+    {
+     "seq": 10,
+     "from": "lmdb",
+     "to": "sled"
+    },
+    {
+     "seq": 11,
+     "from": "sled",
+     "to": "redis"
+    },
+    {
+     "seq": 12,
+     "from": "redis",
+     "to": "sqlite"
+    },
+    {
+     "seq": 13,
+     "from": "sqlite",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 14,
+     "from": "rocksdb",
+     "to": "bbolt"
+    },
+    {
+     "seq": 15,
+     "from": "bbolt",
+     "to": "sled"
+    },
+    {
+     "seq": 16,
+     "from": "sled",
+     "to": "lmdb"
+    },
+    {
+     "seq": 17,
+     "from": "lmdb",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 18,
+     "from": "rocksdb",
+     "to": "lmdb"
+    },
+    {
+     "seq": 19,
+     "from": "lmdb",
+     "to": "redis"
+    },
+    {
+     "seq": 20,
+     "from": "redis",
+     "to": "bbolt"
+    },
+    {
+     "seq": 21,
+     "from": "bbolt",
+     "to": "sqlite"
+    },
+    {
+     "seq": 22,
+     "from": "sqlite",
+     "to": "bbolt"
+    },
+    {
+     "seq": 23,
+     "from": "bbolt",
+     "to": "sled"
+    },
+    {
+     "seq": 24,
+     "from": "sled",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 25,
+     "from": "rocksdb",
+     "to": "badger"
+    },
+    {
+     "seq": 26,
+     "from": "badger",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 27,
+     "from": "rocksdb",
+     "to": "redis"
+    },
+    {
+     "seq": 28,
+     "from": "redis",
+     "to": "sqlite"
+    },
+    {
+     "seq": 29,
+     "from": "sqlite",
+     "to": "bbolt"
+    },
+    {
+     "seq": 30,
+     "from": "bbolt",
+     "to": "lmdb"
+    },
+    {
+     "seq": 31,
+     "from": "lmdb",
+     "to": "redis"
+    },
+    {
+     "seq": 32,
+     "from": "redis",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 33,
+     "from": "rocksdb",
+     "to": "bbolt"
+    },
+    {
+     "seq": 34,
+     "from": "bbolt",
+     "to": "redis"
+    },
+    {
+     "seq": 35,
+     "from": "redis",
+     "to": "bbolt"
+    },
+    {
+     "seq": 36,
+     "from": "bbolt",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 37,
+     "from": "rocksdb",
+     "to": "badger"
+    },
+    {
+     "seq": 38,
+     "from": "badger",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 39,
+     "from": "rocksdb",
+     "to": "lmdb"
+    },
+    {
+     "seq": 40,
+     "from": "lmdb",
+     "to": "sqlite"
+    },
+    {
+     "seq": 41,
+     "from": "sqlite",
+     "to": "redis"
+    },
+    {
+     "seq": 44,
+     "from": "redis",
+     "to": "lmdb"
+    },
+    {
+     "seq": 47,
+     "from": "lmdb",
+     "to": "bbolt"
+    },
+    {
+     "seq": 50,
+     "from": "bbolt",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 56,
+     "from": "rocksdb",
+     "to": "redis"
+    }
+   ],
+   "change_chain": [
+    {
+     "seq": 2,
+     "from": "redis",
+     "to": "lmdb"
+    },
+    {
+     "seq": 3,
+     "from": "lmdb",
+     "to": "redis"
+    },
+    {
+     "seq": 4,
+     "from": "redis",
+     "to": "badger"
+    },
+    {
+     "seq": 5,
+     "from": "badger",
+     "to": "bbolt"
+    },
+    {
+     "seq": 6,
+     "from": "bbolt",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 7,
+     "from": "rocksdb",
+     "to": "bbolt"
+    },
+    {
+     "seq": 8,
+     "from": "bbolt",
+     "to": "badger"
+    },
+    {
+     "seq": 9,
+     "from": "badger",
+     "to": "lmdb"
+    },
+    {
+     "seq": 10,
+     "from": "lmdb",
+     "to": "sled"
+    },
+    {
+     "seq": 11,
+     "from": "sled",
+     "to": "redis"
+    },
+    {
+     "seq": 12,
+     "from": "redis",
+     "to": "sqlite"
+    },
+    {
+     "seq": 13,
+     "from": "sqlite",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 14,
+     "from": "rocksdb",
+     "to": "bbolt"
+    },
+    {
+     "seq": 15,
+     "from": "bbolt",
+     "to": "sled"
+    },
+    {
+     "seq": 16,
+     "from": "sled",
+     "to": "lmdb"
+    },
+    {
+     "seq": 17,
+     "from": "lmdb",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 18,
+     "from": "rocksdb",
+     "to": "lmdb"
+    },
+    {
+     "seq": 19,
+     "from": "lmdb",
+     "to": "redis"
+    },
+    {
+     "seq": 22,
+     "from": "sqlite",
+     "to": "bbolt"
+    },
+    {
+     "seq": 23,
+     "from": "bbolt",
+     "to": "sled"
+    },
+    {
+     "seq": 24,
+     "from": "sled",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 25,
+     "from": "rocksdb",
+     "to": "badger"
+    },
+    {
+     "seq": 26,
+     "from": "badger",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 27,
+     "from": "rocksdb",
+     "to": "redis"
+    },
+    {
+     "seq": 28,
+     "from": "redis",
+     "to": "sqlite"
+    },
+    {
+     "seq": 29,
+     "from": "sqlite",
+     "to": "bbolt"
+    },
+    {
+     "seq": 30,
+     "from": "bbolt",
+     "to": "lmdb"
+    },
+    {
+     "seq": 31,
+     "from": "lmdb",
+     "to": "redis"
+    },
+    {
+     "seq": 32,
+     "from": "redis",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 33,
+     "from": "rocksdb",
+     "to": "bbolt"
+    },
+    {
+     "seq": 34,
+     "from": "bbolt",
+     "to": "redis"
+    },
+    {
+     "seq": 35,
+     "from": "redis",
+     "to": "bbolt"
+    },
+    {
+     "seq": 36,
+     "from": "bbolt",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 37,
+     "from": "rocksdb",
+     "to": "badger"
+    },
+    {
+     "seq": 38,
+     "from": "badger",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 39,
+     "from": "rocksdb",
+     "to": "lmdb"
+    },
+    {
+     "seq": 40,
+     "from": "lmdb",
+     "to": "sqlite"
+    },
+    {
+     "seq": 41,
+     "from": "sqlite",
+     "to": "redis"
+    },
+    {
+     "seq": 44,
+     "from": "redis",
+     "to": "lmdb"
+    },
+    {
+     "seq": 47,
+     "from": "lmdb",
+     "to": "bbolt"
+    },
+    {
+     "seq": 50,
+     "from": "bbolt",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 56,
+     "from": "rocksdb",
+     "to": "redis"
+    }
+   ]
+  },
+  "sample_at_seq": 1,
+  "chain_len": 45,
+  "interference": "none",
+  "reconstructible": false,
+  "ambiguous": false
+ },
+ {
+  "qid": "A1-016-history-0004",
+  "type": "历史",
+  "doc": "猎户项目",
+  "doc_id": "A1",
+  "subject": "猎户项目",
+  "slot": "依赖名",
+  "question": "在第 16 次提交时，猎户项目 的依赖名是什么值？",
+  "answer": {
+   "value": "lmdb",
+   "state": "active",
+   "at_seq": 16,
+   "chain": [
+    {
+     "seq": 1,
+     "from": null,
+     "to": "redis"
+    },
+    {
+     "seq": 2,
+     "from": "redis",
+     "to": "lmdb"
+    },
+    {
+     "seq": 3,
+     "from": "lmdb",
+     "to": "redis"
+    },
+    {
+     "seq": 4,
+     "from": "redis",
+     "to": "badger"
+    },
+    {
+     "seq": 5,
+     "from": "badger",
+     "to": "bbolt"
+    },
+    {
+     "seq": 6,
+     "from": "bbolt",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 7,
+     "from": "rocksdb",
+     "to": "bbolt"
+    },
+    {
+     "seq": 8,
+     "from": "bbolt",
+     "to": "badger"
+    },
+    {
+     "seq": 9,
+     "from": "badger",
+     "to": "lmdb"
+    },
+    {
+     "seq": 10,
+     "from": "lmdb",
+     "to": "sled"
+    },
+    {
+     "seq": 11,
+     "from": "sled",
+     "to": "redis"
+    },
+    {
+     "seq": 12,
+     "from": "redis",
+     "to": "sqlite"
+    },
+    {
+     "seq": 13,
+     "from": "sqlite",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 14,
+     "from": "rocksdb",
+     "to": "bbolt"
+    },
+    {
+     "seq": 15,
+     "from": "bbolt",
+     "to": "sled"
+    },
+    {
+     "seq": 16,
+     "from": "sled",
+     "to": "lmdb"
+    },
+    {
+     "seq": 17,
+     "from": "lmdb",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 18,
+     "from": "rocksdb",
+     "to": "lmdb"
+    },
+    {
+     "seq": 19,
+     "from": "lmdb",
+     "to": "redis"
+    },
+    {
+     "seq": 20,
+     "from": "redis",
+     "to": "bbolt"
+    },
+    {
+     "seq": 21,
+     "from": "bbolt",
+     "to": "sqlite"
+    },
+    {
+     "seq": 22,
+     "from": "sqlite",
+     "to": "bbolt"
+    },
+    {
+     "seq": 23,
+     "from": "bbolt",
+     "to": "sled"
+    },
+    {
+     "seq": 24,
+     "from": "sled",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 25,
+     "from": "rocksdb",
+     "to": "badger"
+    },
+    {
+     "seq": 26,
+     "from": "badger",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 27,
+     "from": "rocksdb",
+     "to": "redis"
+    },
+    {
+     "seq": 28,
+     "from": "redis",
+     "to": "sqlite"
+    },
+    {
+     "seq": 29,
+     "from": "sqlite",
+     "to": "bbolt"
+    },
+    {
+     "seq": 30,
+     "from": "bbolt",
+     "to": "lmdb"
+    },
+    {
+     "seq": 31,
+     "from": "lmdb",
+     "to": "redis"
+    },
+    {
+     "seq": 32,
+     "from": "redis",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 33,
+     "from": "rocksdb",
+     "to": "bbolt"
+    },
+    {
+     "seq": 34,
+     "from": "bbolt",
+     "to": "redis"
+    },
+    {
+     "seq": 35,
+     "from": "redis",
+     "to": "bbolt"
+    },
+    {
+     "seq": 36,
+     "from": "bbolt",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 37,
+     "from": "rocksdb",
+     "to": "badger"
+    },
+    {
+     "seq": 38,
+     "from": "badger",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 39,
+     "from": "rocksdb",
+     "to": "lmdb"
+    },
+    {
+     "seq": 40,
+     "from": "lmdb",
+     "to": "sqlite"
+    },
+    {
+     "seq": 41,
+     "from": "sqlite",
+     "to": "redis"
+    },
+    {
+     "seq": 44,
+     "from": "redis",
+     "to": "lmdb"
+    },
+    {
+     "seq": 47,
+     "from": "lmdb",
+     "to": "bbolt"
+    },
+    {
+     "seq": 50,
+     "from": "bbolt",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 56,
+     "from": "rocksdb",
+     "to": "redis"
+    }
+   ],
+   "change_chain": [
+    {
+     "seq": 2,
+     "from": "redis",
+     "to": "lmdb"
+    },
+    {
+     "seq": 3,
+     "from": "lmdb",
+     "to": "redis"
+    },
+    {
+     "seq": 4,
+     "from": "redis",
+     "to": "badger"
+    },
+    {
+     "seq": 5,
+     "from": "badger",
+     "to": "bbolt"
+    },
+    {
+     "seq": 6,
+     "from": "bbolt",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 7,
+     "from": "rocksdb",
+     "to": "bbolt"
+    },
+    {
+     "seq": 8,
+     "from": "bbolt",
+     "to": "badger"
+    },
+    {
+     "seq": 9,
+     "from": "badger",
+     "to": "lmdb"
+    },
+    {
+     "seq": 10,
+     "from": "lmdb",
+     "to": "sled"
+    },
+    {
+     "seq": 11,
+     "from": "sled",
+     "to": "redis"
+    },
+    {
+     "seq": 12,
+     "from": "redis",
+     "to": "sqlite"
+    },
+    {
+     "seq": 13,
+     "from": "sqlite",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 14,
+     "from": "rocksdb",
+     "to": "bbolt"
+    },
+    {
+     "seq": 15,
+     "from": "bbolt",
+     "to": "sled"
+    },
+    {
+     "seq": 16,
+     "from": "sled",
+     "to": "lmdb"
+    },
+    {
+     "seq": 17,
+     "from": "lmdb",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 18,
+     "from": "rocksdb",
+     "to": "lmdb"
+    },
+    {
+     "seq": 19,
+     "from": "lmdb",
+     "to": "redis"
+    },
+    {
+     "seq": 22,
+     "from": "sqlite",
+     "to": "bbolt"
+    },
+    {
+     "seq": 23,
+     "from": "bbolt",
+     "to": "sled"
+    },
+    {
+     "seq": 24,
+     "from": "sled",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 25,
+     "from": "rocksdb",
+     "to": "badger"
+    },
+    {
+     "seq": 26,
+     "from": "badger",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 27,
+     "from": "rocksdb",
+     "to": "redis"
+    },
+    {
+     "seq": 28,
+     "from": "redis",
+     "to": "sqlite"
+    },
+    {
+     "seq": 29,
+     "from": "sqlite",
+     "to": "bbolt"
+    },
+    {
+     "seq": 30,
+     "from": "bbolt",
+     "to": "lmdb"
+    },
+    {
+     "seq": 31,
+     "from": "lmdb",
+     "to": "redis"
+    },
+    {
+     "seq": 32,
+     "from": "redis",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 33,
+     "from": "rocksdb",
+     "to": "bbolt"
+    },
+    {
+     "seq": 34,
+     "from": "bbolt",
+     "to": "redis"
+    },
+    {
+     "seq": 35,
+     "from": "redis",
+     "to": "bbolt"
+    },
+    {
+     "seq": 36,
+     "from": "bbolt",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 37,
+     "from": "rocksdb",
+     "to": "badger"
+    },
+    {
+     "seq": 38,
+     "from": "badger",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 39,
+     "from": "rocksdb",
+     "to": "lmdb"
+    },
+    {
+     "seq": 40,
+     "from": "lmdb",
+     "to": "sqlite"
+    },
+    {
+     "seq": 41,
+     "from": "sqlite",
+     "to": "redis"
+    },
+    {
+     "seq": 44,
+     "from": "redis",
+     "to": "lmdb"
+    },
+    {
+     "seq": 47,
+     "from": "lmdb",
+     "to": "bbolt"
+    },
+    {
+     "seq": 50,
+     "from": "bbolt",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 56,
+     "from": "rocksdb",
+     "to": "redis"
+    }
+   ]
+  },
+  "sample_at_seq": 16,
+  "chain_len": 45,
+  "interference": "none",
+  "reconstructible": false,
+  "ambiguous": false
+ },
+ {
+  "qid": "A1-031-history-0005",
+  "type": "历史",
+  "doc": "猎户项目",
+  "doc_id": "A1",
+  "subject": "猎户项目",
+  "slot": "依赖名",
+  "question": "在第 31 次提交时，猎户项目 的依赖名是什么值？",
+  "answer": {
+   "value": "redis",
+   "state": "active",
+   "at_seq": 31,
+   "chain": [
+    {
+     "seq": 1,
+     "from": null,
+     "to": "redis"
+    },
+    {
+     "seq": 2,
+     "from": "redis",
+     "to": "lmdb"
+    },
+    {
+     "seq": 3,
+     "from": "lmdb",
+     "to": "redis"
+    },
+    {
+     "seq": 4,
+     "from": "redis",
+     "to": "badger"
+    },
+    {
+     "seq": 5,
+     "from": "badger",
+     "to": "bbolt"
+    },
+    {
+     "seq": 6,
+     "from": "bbolt",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 7,
+     "from": "rocksdb",
+     "to": "bbolt"
+    },
+    {
+     "seq": 8,
+     "from": "bbolt",
+     "to": "badger"
+    },
+    {
+     "seq": 9,
+     "from": "badger",
+     "to": "lmdb"
+    },
+    {
+     "seq": 10,
+     "from": "lmdb",
+     "to": "sled"
+    },
+    {
+     "seq": 11,
+     "from": "sled",
+     "to": "redis"
+    },
+    {
+     "seq": 12,
+     "from": "redis",
+     "to": "sqlite"
+    },
+    {
+     "seq": 13,
+     "from": "sqlite",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 14,
+     "from": "rocksdb",
+     "to": "bbolt"
+    },
+    {
+     "seq": 15,
+     "from": "bbolt",
+     "to": "sled"
+    },
+    {
+     "seq": 16,
+     "from": "sled",
+     "to": "lmdb"
+    },
+    {
+     "seq": 17,
+     "from": "lmdb",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 18,
+     "from": "rocksdb",
+     "to": "lmdb"
+    },
+    {
+     "seq": 19,
+     "from": "lmdb",
+     "to": "redis"
+    },
+    {
+     "seq": 20,
+     "from": "redis",
+     "to": "bbolt"
+    },
+    {
+     "seq": 21,
+     "from": "bbolt",
+     "to": "sqlite"
+    },
+    {
+     "seq": 22,
+     "from": "sqlite",
+     "to": "bbolt"
+    },
+    {
+     "seq": 23,
+     "from": "bbolt",
+     "to": "sled"
+    },
+    {
+     "seq": 24,
+     "from": "sled",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 25,
+     "from": "rocksdb",
+     "to": "badger"
+    },
+    {
+     "seq": 26,
+     "from": "badger",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 27,
+     "from": "rocksdb",
+     "to": "redis"
+    },
+    {
+     "seq": 28,
+     "from": "redis",
+     "to": "sqlite"
+    },
+    {
+     "seq": 29,
+     "from": "sqlite",
+     "to": "bbolt"
+    },
+    {
+     "seq": 30,
+     "from": "bbolt",
+     "to": "lmdb"
+    },
+    {
+     "seq": 31,
+     "from": "lmdb",
+     "to": "redis"
+    },
+    {
+     "seq": 32,
+     "from": "redis",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 33,
+     "from": "rocksdb",
+     "to": "bbolt"
+    },
+    {
+     "seq": 34,
+     "from": "bbolt",
+     "to": "redis"
+    },
+    {
+     "seq": 35,
+     "from": "redis",
+     "to": "bbolt"
+    },
+    {
+     "seq": 36,
+     "from": "bbolt",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 37,
+     "from": "rocksdb",
+     "to": "badger"
+    },
+    {
+     "seq": 38,
+     "from": "badger",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 39,
+     "from": "rocksdb",
+     "to": "lmdb"
+    },
+    {
+     "seq": 40,
+     "from": "lmdb",
+     "to": "sqlite"
+    },
+    {
+     "seq": 41,
+     "from": "sqlite",
+     "to": "redis"
+    },
+    {
+     "seq": 44,
+     "from": "redis",
+     "to": "lmdb"
+    },
+    {
+     "seq": 47,
+     "from": "lmdb",
+     "to": "bbolt"
+    },
+    {
+     "seq": 50,
+     "from": "bbolt",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 56,
+     "from": "rocksdb",
+     "to": "redis"
+    }
+   ],
+   "change_chain": [
+    {
+     "seq": 2,
+     "from": "redis",
+     "to": "lmdb"
+    },
+    {
+     "seq": 3,
+     "from": "lmdb",
+     "to": "redis"
+    },
+    {
+     "seq": 4,
+     "from": "redis",
+     "to": "badger"
+    },
+    {
+     "seq": 5,
+     "from": "badger",
+     "to": "bbolt"
+    },
+    {
+     "seq": 6,
+     "from": "bbolt",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 7,
+     "from": "rocksdb",
+     "to": "bbolt"
+    },
+    {
+     "seq": 8,
+     "from": "bbolt",
+     "to": "badger"
+    },
+    {
+     "seq": 9,
+     "from": "badger",
+     "to": "lmdb"
+    },
+    {
+     "seq": 10,
+     "from": "lmdb",
+     "to": "sled"
+    },
+    {
+     "seq": 11,
+     "from": "sled",
+     "to": "redis"
+    },
+    {
+     "seq": 12,
+     "from": "redis",
+     "to": "sqlite"
+    },
+    {
+     "seq": 13,
+     "from": "sqlite",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 14,
+     "from": "rocksdb",
+     "to": "bbolt"
+    },
+    {
+     "seq": 15,
+     "from": "bbolt",
+     "to": "sled"
+    },
+    {
+     "seq": 16,
+     "from": "sled",
+     "to": "lmdb"
+    },
+    {
+     "seq": 17,
+     "from": "lmdb",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 18,
+     "from": "rocksdb",
+     "to": "lmdb"
+    },
+    {
+     "seq": 19,
+     "from": "lmdb",
+     "to": "redis"
+    },
+    {
+     "seq": 22,
+     "from": "sqlite",
+     "to": "bbolt"
+    },
+    {
+     "seq": 23,
+     "from": "bbolt",
+     "to": "sled"
+    },
+    {
+     "seq": 24,
+     "from": "sled",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 25,
+     "from": "rocksdb",
+     "to": "badger"
+    },
+    {
+     "seq": 26,
+     "from": "badger",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 27,
+     "from": "rocksdb",
+     "to": "redis"
+    },
+    {
+     "seq": 28,
+     "from": "redis",
+     "to": "sqlite"
+    },
+    {
+     "seq": 29,
+     "from": "sqlite",
+     "to": "bbolt"
+    },
+    {
+     "seq": 30,
+     "from": "bbolt",
+     "to": "lmdb"
+    },
+    {
+     "seq": 31,
+     "from": "lmdb",
+     "to": "redis"
+    },
+    {
+     "seq": 32,
+     "from": "redis",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 33,
+     "from": "rocksdb",
+     "to": "bbolt"
+    },
+    {
+     "seq": 34,
+     "from": "bbolt",
+     "to": "redis"
+    },
+    {
+     "seq": 35,
+     "from": "redis",
+     "to": "bbolt"
+    },
+    {
+     "seq": 36,
+     "from": "bbolt",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 37,
+     "from": "rocksdb",
+     "to": "badger"
+    },
+    {
+     "seq": 38,
+     "from": "badger",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 39,
+     "from": "rocksdb",
+     "to": "lmdb"
+    },
+    {
+     "seq": 40,
+     "from": "lmdb",
+     "to": "sqlite"
+    },
+    {
+     "seq": 41,
+     "from": "sqlite",
+     "to": "redis"
+    },
+    {
+     "seq": 44,
+     "from": "redis",
+     "to": "lmdb"
+    },
+    {
+     "seq": 47,
+     "from": "lmdb",
+     "to": "bbolt"
+    },
+    {
+     "seq": 50,
+     "from": "bbolt",
+     "to": "rocksdb"
+    },
+    {
+     "seq": 56,
+     "from": "rocksdb",
+     "to": "redis"
+    }
+   ]
+  },
+  "sample_at_seq": 31,
+  "chain_len": 45,
+  "interference": "none",
+  "reconstructible": false,
+  "ambiguous": false
+ },
+ {
+  "qid": "A1-060-present-0011",
+  "type": "现值",
+  "doc": "猎户项目",
+  "doc_id": "A1",
+  "subject": "猎户项目",
+  "slot": "函数签名",
+  "question": "截至第 60 次提交，猎户项目 的函数签名当前是什么值？（请给出值、状态，以及该值生效的序号）",
+  "answer": {
+   "value": "sync(key, ttl)",
+   "state": "active",
+   "at_seq": 54,
+   "chain": [
+    {
+     "seq": 16,
+     "from": null,
+     "to": "get(id, key, ttl)"
+    },
+    {
+     "seq": 18,
+     "from": "get(id, key, ttl)",
+     "to": "get(key)"
+    },
+    {
+     "seq": 20,
+     "from": "get(key)",
+     "to": "sync(id, key, ttl)"
+    },
+    {
+     "seq": 22,
+     "from": "sync(id, key, ttl)",
+     "to": "resolve(key, ttl, force)"
+    },
+    {
+     "seq": 24,
+     "from": "resolve(key, ttl, force)",
+     "to": "load(key, ttl, force)"
+    },
+    {
+     "seq": 26,
+     "from": "load(key, ttl, force)",
+     "to": "resolve(key)"
+    },
+    {
+     "seq": 28,
+     "from": "resolve(key)",
+     "to": "fetch(key, ttl, tag, refresh)"
+    },
+    {
+     "seq": 30,
+     "from": "fetch(key, ttl, tag, refresh)",
+     "to": "resolve(key, ttl, refresh)"
+    },
+    {
+     "seq": 33,
+     "from": "resolve(key, ttl, refresh)",
+     "to": "fetch(key, ttl)"
+    },
+    {
+     "seq": 36,
+     "from": "fetch(key, ttl)",
+     "to": "get(key, ttl, tag, refresh)"
+    },
+    {
+     "seq": 39,
+     "from": "get(key, ttl, tag, refresh)",
+     "to": "sync(key)"
+    },
+    {
+     "seq": 43,
+     "from": "sync(key)",
+     "to": "fetch(key, ttl, refresh)"
+    },
+    {
+     "seq": 46,
+     "from": "fetch(key, ttl, refresh)",
+     "to": "sync(key, ttl, tag, refresh)"
+    },
+    {
+     "seq": 49,
+     "from": "sync(key, ttl, tag, refresh)",
+     "to": "fetch(key)"
+    },
+    {
+     "seq": 54,
+     "from": "fetch(key)",
+     "to": "sync(key, ttl)"
+    }
+   ],
+   "change_chain": [
+    {
+     "seq": 18,
+     "from": "get(id, key, ttl)",
+     "to": "get(key)"
+    },
+    {
+     "seq": 20,
+     "from": "get(key)",
+     "to": "sync(id, key, ttl)"
+    },
+    {
+     "seq": 22,
+     "from": "sync(id, key, ttl)",
+     "to": "resolve(key, ttl, force)"
+    },
+    {
+     "seq": 24,
+     "from": "resolve(key, ttl, force)",
+     "to": "load(key, ttl, force)"
+    },
+    {
+     "seq": 26,
+     "from": "load(key, ttl, force)",
+     "to": "resolve(key)"
+    },
+    {
+     "seq": 28,
+     "from": "resolve(key)",
+     "to": "fetch(key, ttl, tag, refresh)"
+    },
+    {
+     "seq": 30,
+     "from": "fetch(key, ttl, tag, refresh)",
+     "to": "resolve(key, ttl, refresh)"
+    },
+    {
+     "seq": 33,
+     "from": "resolve(key, ttl, refresh)",
+     "to": "fetch(key, ttl)"
+    },
+    {
+     "seq": 36,
+     "from": "fetch(key, ttl)",
+     "to": "get(key, ttl, tag, refresh)"
+    },
+    {
+     "seq": 39,
+     "from": "get(key, ttl, tag, refresh)",
+     "to": "sync(key)"
+    },
+    {
+     "seq": 43,
+     "from": "sync(key)",
+     "to": "fetch(key, ttl, refresh)"
+    },
+    {
+     "seq": 54,
+     "from": "fetch(key)",
+     "to": "sync(key, ttl)"
+    }
+   ]
+  },
+  "sample_at_seq": 60,
+  "chain_len": 15,
+  "interference": "嵌套主体",
+  "reconstructible": false,
+  "ambiguous": false
+ },
+ {
+  "qid": "A1-016-history-0013",
+  "type": "历史",
+  "doc": "猎户项目",
+  "doc_id": "A1",
+  "subject": "猎户项目",
+  "slot": "函数签名",
+  "question": "在第 16 次提交时，猎户项目 的函数签名是什么值？",
+  "answer": {
+   "value": "get(id, key, ttl)",
+   "state": "active",
+   "at_seq": 16,
+   "chain": [
+    {
+     "seq": 16,
+     "from": null,
+     "to": "get(id, key, ttl)"
+    },
+    {
+     "seq": 18,
+     "from": "get(id, key, ttl)",
+     "to": "get(key)"
+    },
+    {
+     "seq": 20,
+     "from": "get(key)",
+     "to": "sync(id, key, ttl)"
+    },
+    {
+     "seq": 22,
+     "from": "sync(id, key, ttl)",
+     "to": "resolve(key, ttl, force)"
+    },
+    {
+     "seq": 24,
+     "from": "resolve(key, ttl, force)",
+     "to": "load(key, ttl, force)"
+    },
+    {
+     "seq": 26,
+     "from": "load(key, ttl, force)",
+     "to": "resolve(key)"
+    },
+    {
+     "seq": 28,
+     "from": "resolve(key)",
+     "to": "fetch(key, ttl, tag, refresh)"
+    },
+    {
+     "seq": 30,
+     "from": "fetch(key, ttl, tag, refresh)",
+     "to": "resolve(key, ttl, refresh)"
+    },
+    {
+     "seq": 33,
+     "from": "resolve(key, ttl, refresh)",
+     "to": "fetch(key, ttl)"
+    },
+    {
+     "seq": 36,
+     "from": "fetch(key, ttl)",
+     "to": "get(key, ttl, tag, refresh)"
+    },
+    {
+     "seq": 39,
+     "from": "get(key, ttl, tag, refresh)",
+     "to": "sync(key)"
+    },
+    {
+     "seq": 43,
+     "from": "sync(key)",
+     "to": "fetch(key, ttl, refresh)"
+    },
+    {
+     "seq": 46,
+     "from": "fetch(key, ttl, refresh)",
+     "to": "sync(key, ttl, tag, refresh)"
+    },
+    {
+     "seq": 49,
+     "from": "sync(key, ttl, tag, refresh)",
+     "to": "fetch(key)"
+    },
+    {
+     "seq": 54,
+     "from": "fetch(key)",
+     "to": "sync(key, ttl)"
+    }
+   ],
+   "change_chain": [
+    {
+     "seq": 18,
+     "from": "get(id, key, ttl)",
+     "to": "get(key)"
+    },
+    {
+     "seq": 20,
+     "from": "get(key)",
+     "to": "sync(id, key, ttl)"
+    },
+    {
+     "seq": 22,
+     "from": "sync(id, key, ttl)",
+     "to": "resolve(key, ttl, force)"
+    },
+    {
+     "seq": 24,
+     "from": "resolve(key, ttl, force)",
+     "to": "load(key, ttl, force)"
+    },
+    {
+     "seq": 26,
+     "from": "load(key, ttl, force)",
+     "to": "resolve(key)"
+    },
+    {
+     "seq": 28,
+     "from": "resolve(key)",
+     "to": "fetch(key, ttl, tag, refresh)"
+    },
+    {
+     "seq": 30,
+     "from": "fetch(key, ttl, tag, refresh)",
+     "to": "resolve(key, ttl, refresh)"
+    },
+    {
+     "seq": 33,
+     "from": "resolve(key, ttl, refresh)",
+     "to": "fetch(key, ttl)"
+    },
+    {
+     "seq": 36,
+     "from": "fetch(key, ttl)",
+     "to": "get(key, ttl, tag, refresh)"
+    },
+    {
+     "seq": 39,
+     "from": "get(key, ttl, tag, refresh)",
+     "to": "sync(key)"
+    },
+    {
+     "seq": 43,
+     "from": "sync(key)",
+     "to": "fetch(key, ttl, refresh)"
+    },
+    {
+     "seq": 54,
+     "from": "fetch(key)",
+     "to": "sync(key, ttl)"
+    }
+   ]
+  },
+  "sample_at_seq": 16,
+  "chain_len": 15,
+  "interference": "嵌套主体",
+  "reconstructible": false,
+  "ambiguous": false
+ },
+ {
+  "qid": "A1-026-history-0014",
+  "type": "历史",
+  "doc": "猎户项目",
+  "doc_id": "A1",
+  "subject": "猎户项目",
+  "slot": "函数签名",
+  "question": "在第 26 次提交时，猎户项目 的函数签名是什么值？",
+  "answer": {
+   "value": "resolve(key)",
+   "state": "active",
+   "at_seq": 26,
+   "chain": [
+    {
+     "seq": 16,
+     "from": null,
+     "to": "get(id, key, ttl)"
+    },
+    {
+     "seq": 18,
+     "from": "get(id, key, ttl)",
+     "to": "get(key)"
+    },
+    {
+     "seq": 20,
+     "from": "get(key)",
+     "to": "sync(id, key, ttl)"
+    },
+    {
+     "seq": 22,
+     "from": "sync(id, key, ttl)",
+     "to": "resolve(key, ttl, force)"
+    },
+    {
+     "seq": 24,
+     "from": "resolve(key, ttl, force)",
+     "to": "load(key, ttl, force)"
+    },
+    {
+     "seq": 26,
+     "from": "load(key, ttl, force)",
+     "to": "resolve(key)"
+    },
+    {
+     "seq": 28,
+     "from": "resolve(key)",
+     "to": "fetch(key, ttl, tag, refresh)"
+    },
+    {
+     "seq": 30,
+     "from": "fetch(key, ttl, tag, refresh)",
+     "to": "resolve(key, ttl, refresh)"
+    },
+    {
+     "seq": 33,
+     "from": "resolve(key, ttl, refresh)",
+     "to": "fetch(key, ttl)"
+    },
+    {
+     "seq": 36,
+     "from": "fetch(key, ttl)",
+     "to": "get(key, ttl, tag, refresh)"
+    },
+    {
+     "seq": 39,
+     "from": "get(key, ttl, tag, refresh)",
+     "to": "sync(key)"
+    },
+    {
+     "seq": 43,
+     "from": "sync(key)",
+     "to": "fetch(key, ttl, refresh)"
+    },
+    {
+     "seq": 46,
+     "from": "fetch(key, ttl, refresh)",
+     "to": "sync(key, ttl, tag, refresh)"
+    },
+    {
+     "seq": 49,
+     "from": "sync(key, ttl, tag, refresh)",
+     "to": "fetch(key)"
+    },
+    {
+     "seq": 54,
+     "from": "fetch(key)",
+     "to": "sync(key, ttl)"
+    }
+   ],
+   "change_chain": [
+    {
+     "seq": 18,
+     "from": "get(id, key, ttl)",
+     "to": "get(key)"
+    },
+    {
+     "seq": 20,
+     "from": "get(key)",
+     "to": "sync(id, key, ttl)"
+    },
+    {
+     "seq": 22,
+     "from": "sync(id, key, ttl)",
+     "to": "resolve(key, ttl, force)"
+    },
+    {
+     "seq": 24,
+     "from": "resolve(key, ttl, force)",
+     "to": "load(key, ttl, force)"
+    },
+    {
+     "seq": 26,
+     "from": "load(key, ttl, force)",
+     "to": "resolve(key)"
+    },
+    {
+     "seq": 28,
+     "from": "resolve(key)",
+     "to": "fetch(key, ttl, tag, refresh)"
+    },
+    {
+     "seq": 30,
+     "from": "fetch(key, ttl, tag, refresh)",
+     "to": "resolve(key, ttl, refresh)"
+    },
+    {
+     "seq": 33,
+     "from": "resolve(key, ttl, refresh)",
+     "to": "fetch(key, ttl)"
+    },
+    {
+     "seq": 36,
+     "from": "fetch(key, ttl)",
+     "to": "get(key, ttl, tag, refresh)"
+    },
+    {
+     "seq": 39,
+     "from": "get(key, ttl, tag, refresh)",
+     "to": "sync(key)"
+    },
+    {
+     "seq": 43,
+     "from": "sync(key)",
+     "to": "fetch(key, ttl, refresh)"
+    },
+    {
+     "seq": 54,
+     "from": "fetch(key)",
+     "to": "sync(key, ttl)"
+    }
+   ]
+  },
+  "sample_at_seq": 26,
+  "chain_len": 15,
+  "interference": "嵌套主体",
+  "reconstructible": false,
+  "ambiguous": false
+ },
+ {
+  "qid": "A1-039-history-0015",
+  "type": "历史",
+  "doc": "猎户项目",
+  "doc_id": "A1",
+  "subject": "猎户项目",
+  "slot": "函数签名",
+  "question": "在第 39 次提交时，猎户项目 的函数签名是什么值？",
+  "answer": {
+   "value": "sync(key)",
+   "state": "active",
+   "at_seq": 39,
+   "chain": [
+    {
+     "seq": 16,
+     "from": null,
+     "to": "get(id, key, ttl)"
+    },
+    {
+     "seq": 18,
+     "from": "get(id, key, ttl)",
+     "to": "get(key)"
+    },
+    {
+     "seq": 20,
+     "from": "get(key)",
+     "to": "sync(id, key, ttl)"
+    },
+    {
+     "seq": 22,
+     "from": "sync(id, key, ttl)",
+     "to": "resolve(key, ttl, force)"
+    },
+    {
+     "seq": 24,
+     "from": "resolve(key, ttl, force)",
+     "to": "load(key, ttl, force)"
+    },
+    {
+     "seq": 26,
+     "from": "load(key, ttl, force)",
+     "to": "resolve(key)"
+    },
+    {
+     "seq": 28,
+     "from": "resolve(key)",
+     "to": "fetch(key, ttl, tag, refresh)"
+    },
+    {
+     "seq": 30,
+     "from": "fetch(key, ttl, tag, refresh)",
+     "to": "resolve(key, ttl, refresh)"
+    },
+    {
+     "seq": 33,
+     "from": "resolve(key, ttl, refresh)",
+     "to": "fetch(key, ttl)"
+    },
+    {
+     "seq": 36,
+     "from": "fetch(key, ttl)",
+     "to": "get(key, ttl, tag, refresh)"
+    },
+    {
+     "seq": 39,
+     "from": "get(key, ttl, tag, refresh)",
+     "to": "sync(key)"
+    },
+    {
+     "seq": 43,
+     "from": "sync(key)",
+     "to": "fetch(key, ttl, refresh)"
+    },
+    {
+     "seq": 46,
+     "from": "fetch(key, ttl, refresh)",
+     "to": "sync(key, ttl, tag, refresh)"
+    },
+    {
+     "seq": 49,
+     "from": "sync(key, ttl, tag, refresh)",
+     "to": "fetch(key)"
+    },
+    {
+     "seq": 54,
+     "from": "fetch(key)",
+     "to": "sync(key, ttl)"
+    }
+   ],
+   "change_chain": [
+    {
+     "seq": 18,
+     "from": "get(id, key, ttl)",
+     "to": "get(key)"
+    },
+    {
+     "seq": 20,
+     "from": "get(key)",
+     "to": "sync(id, key, ttl)"
+    },
+    {
+     "seq": 22,
+     "from": "sync(id, key, ttl)",
+     "to": "resolve(key, ttl, force)"
+    },
+    {
+     "seq": 24,
+     "from": "resolve(key, ttl, force)",
+     "to": "load(key, ttl, force)"
+    },
+    {
+     "seq": 26,
+     "from": "load(key, ttl, force)",
+     "to": "resolve(key)"
+    },
+    {
+     "seq": 28,
+     "from": "resolve(key)",
+     "to": "fetch(key, ttl, tag, refresh)"
+    },
+    {
+     "seq": 30,
+     "from": "fetch(key, ttl, tag, refresh)",
+     "to": "resolve(key, ttl, refresh)"
+    },
+    {
+     "seq": 33,
+     "from": "resolve(key, ttl, refresh)",
+     "to": "fetch(key, ttl)"
+    },
+    {
+     "seq": 36,
+     "from": "fetch(key, ttl)",
+     "to": "get(key, ttl, tag, refresh)"
+    },
+    {
+     "seq": 39,
+     "from": "get(key, ttl, tag, refresh)",
+     "to": "sync(key)"
+    },
+    {
+     "seq": 43,
+     "from": "sync(key)",
+     "to": "fetch(key, ttl, refresh)"
+    },
+    {
+     "seq": 54,
+     "from": "fetch(key)",
+     "to": "sync(key, ttl)"
+    }
+   ]
+  },
+  "sample_at_seq": 39,
+  "chain_len": 15,
+  "interference": "嵌套主体",
+  "reconstructible": false,
+  "ambiguous": false
+ },
+ {
+  "qid": "A1-060-present-0021",
+  "type": "现值",
+  "doc": "猎户项目",
+  "doc_id": "A1",
+  "subject": "猎户项目",
+  "slot": "有效期秒数",
+  "question": "截至第 60 次提交，猎户项目 的有效期秒数当前是什么值？（请给出值、状态，以及该值生效的序号）",
+  "answer": {
+   "value": null,
+   "state": "retired",
+   "at_seq": 55,
+   "chain": [
+    {
+     "seq": 31,
+     "from": null,
+     "to": "600"
+    },
+    {
+     "seq": 34,
+     "from": "600",
+     "to": "1800"
+    },
+    {
+     "seq": 37,
+     "from": "1800",
+     "to": "3600"
+    },
+    {
+     "seq": 40,
+     "from": "3600",
+     "to": "21600"
+    },
+    {
+     "seq": 43,
+     "from": "21600",
+     "to": "600"
+    },
+    {
+     "seq": 46,
+     "from": "600",
+     "to": "900"
+    },
+    {
+     "seq": 49,
+     "from": "900",
+     "to": "10800"
+    },
+    {
+     "seq": 55,
+     "from": "10800",
+     "to": null
+    }
+   ],
+   "change_chain": [
+    {
+     "seq": 34,
+     "from": "600",
+     "to": "1800"
+    },
+    {
+     "seq": 37,
+     "from": "1800",
+     "to": "3600"
+    },
+    {
+     "seq": 40,
+     "from": "3600",
+     "to": "21600"
+    },
+    {
+     "seq": 43,
+     "from": "21600",
+     "to": "600"
+    },
+    {
+     "seq": 46,
+     "from": "600",
+     "to": "900"
+    },
+    {
+     "seq": 49,
+     "from": "900",
+     "to": "10800"
+    }
+   ]
+  },
+  "sample_at_seq": 60,
+  "chain_len": 8,
+  "interference": "同名异体",
+  "reconstructible": false,
+  "ambiguous": true,
+  "ambiguous_why": "合并读法 value='7200'，答案键 None"
+ },
+ {
+  "qid": "A1-031-history-0023",
+  "type": "历史",
+  "doc": "猎户项目",
+  "doc_id": "A1",
+  "subject": "猎户项目",
+  "slot": "有效期秒数",
+  "question": "在第 31 次提交时，猎户项目 的有效期秒数是什么值？",
+  "answer": {
+   "value": "600",
+   "state": "active",
+   "at_seq": 31,
+   "chain": [
+    {
+     "seq": 31,
+     "from": null,
+     "to": "600"
+    },
+    {
+     "seq": 34,
+     "from": "600",
+     "to": "1800"
+    },
+    {
+     "seq": 37,
+     "from": "1800",
+     "to": "3600"
+    },
+    {
+     "seq": 40,
+     "from": "3600",
+     "to": "21600"
+    },
+    {
+     "seq": 43,
+     "from": "21600",
+     "to": "600"
+    },
+    {
+     "seq": 46,
+     "from": "600",
+     "to": "900"
+    },
+    {
+     "seq": 49,
+     "from": "900",
+     "to": "10800"
+    },
+    {
+     "seq": 55,
+     "from": "10800",
+     "to": null
+    }
+   ],
+   "change_chain": [
+    {
+     "seq": 34,
+     "from": "600",
+     "to": "1800"
+    },
+    {
+     "seq": 37,
+     "from": "1800",
+     "to": "3600"
+    },
+    {
+     "seq": 40,
+     "from": "3600",
+     "to": "21600"
+    },
+    {
+     "seq": 43,
+     "from": "21600",
+     "to": "600"
+    },
+    {
+     "seq": 46,
+     "from": "600",
+     "to": "900"
+    },
+    {
+     "seq": 49,
+     "from": "900",
+     "to": "10800"
+    }
+   ]
+  },
+  "sample_at_seq": 31,
+  "chain_len": 8,
+  "interference": "同名异体",
+  "reconstructible": false,
+  "ambiguous": false
+ },
+ {
+  "qid": "A1-040-history-0024",
+  "type": "历史",
+  "doc": "猎户项目",
+  "doc_id": "A1",
+  "subject": "猎户项目",
+  "slot": "有效期秒数",
+  "question": "在第 40 次提交时，猎户项目 的有效期秒数是什么值？",
+  "answer": {
+   "value": "21600",
+   "state": "active",
+   "at_seq": 40,
+   "chain": [
+    {
+     "seq": 31,
+     "from": null,
+     "to": "600"
+    },
+    {
+     "seq": 34,
+     "from": "600",
+     "to": "1800"
+    },
+    {
+     "seq": 37,
+     "from": "1800",
+     "to": "3600"
+    },
+    {
+     "seq": 40,
+     "from": "3600",
+     "to": "21600"
+    },
+    {
+     "seq": 43,
+     "from": "21600",
+     "to": "600"
+    },
+    {
+     "seq": 46,
+     "from": "600",
+     "to": "900"
+    },
+    {
+     "seq": 49,
+     "from": "900",
+     "to": "10800"
+    },
+    {
+     "seq": 55,
+     "from": "10800",
+     "to": null
+    }
+   ],
+   "change_chain": [
+    {
+     "seq": 34,
+     "from": "600",
+     "to": "1800"
+    },
+    {
+     "seq": 37,
+     "from": "1800",
+     "to": "3600"
+    },
+    {
+     "seq": 40,
+     "from": "3600",
+     "to": "21600"
+    },
+    {
+     "seq": 43,
+     "from": "21600",
+     "to": "600"
+    },
+    {
+     "seq": 46,
+     "from": "600",
+     "to": "900"
+    },
+    {
+     "seq": 49,
+     "from": "900",
+     "to": "10800"
+    }
+   ]
+  },
+  "sample_at_seq": 40,
+  "chain_len": 8,
+  "interference": "同名异体",
+  "reconstructible": false,
+  "ambiguous": false
+ },
+ {
+  "qid": "A1-046-history-0025",
+  "type": "历史",
+  "doc": "猎户项目",
+  "doc_id": "A1",
+  "subject": "猎户项目",
+  "slot": "有效期秒数",
+  "question": "在第 46 次提交时，猎户项目 的有效期秒数是什么值？",
+  "answer": {
+   "value": "900",
+   "state": "active",
+   "at_seq": 46,
+   "chain": [
+    {
+     "seq": 31,
+     "from": null,
+     "to": "600"
+    },
+    {
+     "seq": 34,
+     "from": "600",
+     "to": "1800"
+    },
+    {
+     "seq": 37,
+     "from": "1800",
+     "to": "3600"
+    },
+    {
+     "seq": 40,
+     "from": "3600",
+     "to": "21600"
+    },
+    {
+     "seq": 43,
+     "from": "21600",
+     "to": "600"
+    },
+    {
+     "seq": 46,
+     "from": "600",
+     "to": "900"
+    },
+    {
+     "seq": 49,
+     "from": "900",
+     "to": "10800"
+    },
+    {
+     "seq": 55,
+     "from": "10800",
+     "to": null
+    }
+   ],
+   "change_chain": [
+    {
+     "seq": 34,
+     "from": "600",
+     "to": "1800"
+    },
+    {
+     "seq": 37,
+     "from": "1800",
+     "to": "3600"
+    },
+    {
+     "seq": 40,
+     "from": "3600",
+     "to": "21600"
+    },
+    {
+     "seq": 43,
+     "from": "21600",
+     "to": "600"
+    },
+    {
+     "seq": 46,
+     "from": "600",
+     "to": "900"
+    },
+    {
+     "seq": 49,
+     "from": "900",
+     "to": "10800"
+    }
+   ]
+  },
+  "sample_at_seq": 46,
+  "chain_len": 8,
+  "interference": "同名异体",
+  "reconstructible": false,
+  "ambiguous": false
+ },
+ {
+  "qid": "A1-060-present-0031",
+  "type": "现值",
+  "doc": "猎户项目",
+  "doc_id": "A1",
+  "subject": "猎户项目",
+  "slot": "配置值",
+  "question": "截至第 60 次提交，猎户项目 的配置值当前是什么值？（请给出值、状态，以及该值生效的序号）",
+  "answer": {
+   "value": "cfg_241943",
+   "state": "active",
+   "at_seq": 60,
+   "chain": [
+    {
+     "seq": 1,
+     "from": null,
+     "to": "max_conn=256"
+    },
+    {
+     "seq": 2,
+     "from": "max_conn=256",
+     "to": "retry=16"
+    },
+    {
+     "seq": 3,
+     "from": "retry=16",
+     "to": "retry=256"
+    },
+    {
+     "seq": 4,
+     "from": "retry=256",
+     "to": "batch_size=256"
+    },
+    {
+     "seq": 5,
+     "from": "batch_size=256",
+     "to": "timeout_ms=128"
+    },
+    {
+     "seq": 6,
+     "from": "timeout_ms=128",
+     "to": "batch_size=32"
+    },
+    {
+     "seq": 7,
+     "from": "batch_size=32",
+     "to": "retry=32"
+    },
+    {
+     "seq": 8,
+     "from": "retry=32",
+     "to": "retry=64"
+    },
+    {
+     "seq": 9,
+     "from": "retry=64",
+     "to": "batch_size=128"
+    },
+    {
+     "seq": 10,
+     "from": "batch_size=128",
+     "to": "batch_size=16"
+    },
+    {
+     "seq": 11,
+     "from": "batch_size=16",
+     "to": "retry=128"
+    },
+    {
+     "seq": 12,
+     "from": "retry=128",
+     "to": "max_conn=32"
+    },
+    {
+     "seq": 13,
+     "from": "max_conn=32",
+     "to": "timeout_ms=64"
+    },
+    {
+     "seq": 14,
+     "from": "timeout_ms=64",
+     "to": "timeout_ms=32"
+    },
+    {
+     "seq": 15,
+     "from": "timeout_ms=32",
+     "to": "timeout_ms=16"
+    },
+    {
+     "seq": 16,
+     "from": "timeout_ms=16",
+     "to": "timeout_ms=256"
+    },
+    {
+     "seq": 17,
+     "from": "timeout_ms=256",
+     "to": "batch_size=64"
+    },
+    {
+     "seq": 18,
+     "from": "batch_size=64",
+     "to": "max_conn=128"
+    },
+    {
+     "seq": 19,
+     "from": "max_conn=128",
+     "to": "max_conn=64"
+    },
+    {
+     "seq": 20,
+     "from": "max_conn=64",
+     "to": "max_conn=16"
+    },
+    {
+     "seq": 21,
+     "from": "max_conn=16",
+     "to": "cfg_544042"
+    },
+    {
+     "seq": 22,
+     "from": "cfg_544042",
+     "to": "cfg_406962"
+    },
+    {
+     "seq": 23,
+     "from": "cfg_406962",
+     "to": "cfg_646706"
+    },
+    {
+     "seq": 24,
+     "from": "cfg_646706",
+     "to": "cfg_220773"
+    },
+    {
+     "seq": 25,
+     "from": "cfg_220773",
+     "to": "cfg_499219"
+    },
+    {
+     "seq": 26,
+     "from": "cfg_499219",
+     "to": "cfg_620931"
+    },
+    {
+     "seq": 27,
+     "from": "cfg_620931",
+     "to": "cfg_459512"
+    },
+    {
+     "seq": 28,
+     "from": "cfg_459512",
+     "to": "cfg_437851"
+    },
+    {
+     "seq": 29,
+     "from": "cfg_437851",
+     "to": "cfg_21624"
+    },
+    {
+     "seq": 30,
+     "from": "cfg_21624",
+     "to": "cfg_803135"
+    },
+    {
+     "seq": 31,
+     "from": "cfg_803135",
+     "to": "cfg_832425"
+    },
+    {
+     "seq": 32,
+     "from": "cfg_832425",
+     "to": "cfg_932410"
+    },
+    {
+     "seq": 33,
+     "from": "cfg_932410",
+     "to": "cfg_539629"
+    },
+    {
+     "seq": 34,
+     "from": "cfg_539629",
+     "to": "cfg_156204"
+    },
+    {
+     "seq": 35,
+     "from": "cfg_156204",
+     "to": "cfg_449065"
+    },
+    {
+     "seq": 36,
+     "from": "cfg_449065",
+     "to": "cfg_250956"
+    },
+    {
+     "seq": 37,
+     "from": "cfg_250956",
+     "to": "cfg_361983"
+    },
+    {
+     "seq": 38,
+     "from": "cfg_361983",
+     "to": "cfg_772769"
+    },
+    {
+     "seq": 39,
+     "from": "cfg_772769",
+     "to": "cfg_68312"
+    },
+    {
+     "seq": 40,
+     "from": "cfg_68312",
+     "to": "cfg_224463"
+    },
+    {
+     "seq": 41,
+     "from": "cfg_224463",
+     "to": "cfg_725173"
+    },
+    {
+     "seq": 42,
+     "from": "cfg_725173",
+     "to": "cfg_675850"
+    },
+    {
+     "seq": 43,
+     "from": "cfg_675850",
+     "to": "cfg_998058"
+    },
+    {
+     "seq": 44,
+     "from": "cfg_998058",
+     "to": "cfg_866999"
+    },
+    {
+     "seq": 45,
+     "from": "cfg_866999",
+     "to": "cfg_747585"
+    },
+    {
+     "seq": 46,
+     "from": "cfg_747585",
+     "to": "cfg_853425"
+    },
+    {
+     "seq": 47,
+     "from": "cfg_853425",
+     "to": "cfg_196568"
+    },
+    {
+     "seq": 48,
+     "from": "cfg_196568",
+     "to": "cfg_705895"
+    },
+    {
+     "seq": 49,
+     "from": "cfg_705895",
+     "to": "cfg_596309"
+    },
+    {
+     "seq": 50,
+     "from": "cfg_596309",
+     "to": "cfg_281"
+    },
+    {
+     "seq": 51,
+     "from": "cfg_281",
+     "to": "cfg_202750"
+    },
+    {
+     "seq": 52,
+     "from": "cfg_202750",
+     "to": "cfg_688617"
+    },
+    {
+     "seq": 53,
+     "from": "cfg_688617",
+     "to": "cfg_667254"
+    },
+    {
+     "seq": 54,
+     "from": "cfg_667254",
+     "to": "cfg_484563"
+    },
+    {
+     "seq": 55,
+     "from": "cfg_484563",
+     "to": "cfg_231666"
+    },
+    {
+     "seq": 56,
+     "from": "cfg_231666",
+     "to": "cfg_783330"
+    },
+    {
+     "seq": 57,
+     "from": "cfg_783330",
+     "to": null
+    },
+    {
+     "seq": 58,
+     "from": null,
+     "to": "cfg_916265"
+    },
+    {
+     "seq": 59,
+     "from": "cfg_916265",
+     "to": "cfg_231689"
+    },
+    {
+     "seq": 60,
+     "from": "cfg_231689",
+     "to": "cfg_241943"
+    }
+   ],
+   "change_chain": [
+    {
+     "seq": 2,
+     "from": "max_conn=256",
+     "to": "retry=16"
+    },
+    {
+     "seq": 3,
+     "from": "retry=16",
+     "to": "retry=256"
+    },
+    {
+     "seq": 4,
+     "from": "retry=256",
+     "to": "batch_size=256"
+    },
+    {
+     "seq": 5,
+     "from": "batch_size=256",
+     "to": "timeout_ms=128"
+    },
+    {
+     "seq": 6,
+     "from": "timeout_ms=128",
+     "to": "batch_size=32"
+    },
+    {
+     "seq": 7,
+     "from": "batch_size=32",
+     "to": "retry=32"
+    },
+    {
+     "seq": 8,
+     "from": "retry=32",
+     "to": "retry=64"
+    },
+    {
+     "seq": 9,
+     "from": "retry=64",
+     "to": "batch_size=128"
+    },
+    {
+     "seq": 10,
+     "from": "batch_size=128",
+     "to": "batch_size=16"
+    },
+    {
+     "seq": 11,
+     "from": "batch_size=16",
+     "to": "retry=128"
+    },
+    {
+     "seq": 12,
+     "from": "retry=128",
+     "to": "max_conn=32"
+    },
+    {
+     "seq": 13,
+     "from": "max_conn=32",
+     "to": "timeout_ms=64"
+    },
+    {
+     "seq": 14,
+     "from": "timeout_ms=64",
+     "to": "timeout_ms=32"
+    },
+    {
+     "seq": 15,
+     "from": "timeout_ms=32",
+     "to": "timeout_ms=16"
+    },
+    {
+     "seq": 16,
+     "from": "timeout_ms=16",
+     "to": "timeout_ms=256"
+    },
+    {
+     "seq": 17,
+     "from": "timeout_ms=256",
+     "to": "batch_size=64"
+    },
+    {
+     "seq": 18,
+     "from": "batch_size=64",
+     "to": "max_conn=128"
+    },
+    {
+     "seq": 19,
+     "from": "max_conn=128",
+     "to": "max_conn=64"
+    },
+    {
+     "seq": 20,
+     "from": "max_conn=64",
+     "to": "max_conn=16"
+    },
+    {
+     "seq": 21,
+     "from": "max_conn=16",
+     "to": "cfg_544042"
+    },
+    {
+     "seq": 22,
+     "from": "cfg_544042",
+     "to": "cfg_406962"
+    },
+    {
+     "seq": 23,
+     "from": "cfg_406962",
+     "to": "cfg_646706"
+    },
+    {
+     "seq": 24,
+     "from": "cfg_646706",
+     "to": "cfg_220773"
+    },
+    {
+     "seq": 25,
+     "from": "cfg_220773",
+     "to": "cfg_499219"
+    },
+    {
+     "seq": 26,
+     "from": "cfg_499219",
+     "to": "cfg_620931"
+    },
+    {
+     "seq": 27,
+     "from": "cfg_620931",
+     "to": "cfg_459512"
+    },
+    {
+     "seq": 28,
+     "from": "cfg_459512",
+     "to": "cfg_437851"
+    },
+    {
+     "seq": 29,
+     "from": "cfg_437851",
+     "to": "cfg_21624"
+    },
+    {
+     "seq": 30,
+     "from": "cfg_21624",
+     "to": "cfg_803135"
+    },
+    {
+     "seq": 31,
+     "from": "cfg_803135",
+     "to": "cfg_832425"
+    },
+    {
+     "seq": 32,
+     "from": "cfg_832425",
+     "to": "cfg_932410"
+    },
+    {
+     "seq": 33,
+     "from": "cfg_932410",
+     "to": "cfg_539629"
+    },
+    {
+     "seq": 34,
+     "from": "cfg_539629",
+     "to": "cfg_156204"
+    },
+    {
+     "seq": 35,
+     "from": "cfg_156204",
+     "to": "cfg_449065"
+    },
+    {
+     "seq": 36,
+     "from": "cfg_449065",
+     "to": "cfg_250956"
+    },
+    {
+     "seq": 37,
+     "from": "cfg_250956",
+     "to": "cfg_361983"
+    },
+    {
+     "seq": 38,
+     "from": "cfg_361983",
+     "to": "cfg_772769"
+    },
+    {
+     "seq": 39,
+     "from": "cfg_772769",
+     "to": "cfg_68312"
+    },
+    {
+     "seq": 40,
+     "from": "cfg_68312",
+     "to": "cfg_224463"
+    },
+    {
+     "seq": 41,
+     "from": "cfg_224463",
+     "to": "cfg_725173"
+    },
+    {
+     "seq": 42,
+     "from": "cfg_725173",
+     "to": "cfg_675850"
+    },
+    {
+     "seq": 43,
+     "from": "cfg_675850",
+     "to": "cfg_998058"
+    },
+    {
+     "seq": 44,
+     "from": "cfg_998058",
+     "to": "cfg_866999"
+    },
+    {
+     "seq": 45,
+     "from": "cfg_866999",
+     "to": "cfg_747585"
+    },
+    {
+     "seq": 46,
+     "from": "cfg_747585",
+     "to": "cfg_853425"
+    },
+    {
+     "seq": 47,
+     "from": "cfg_853425",
+     "to": "cfg_196568"
+    },
+    {
+     "seq": 48,
+     "from": "cfg_196568",
+     "to": "cfg_705895"
+    },
+    {
+     "seq": 49,
+     "from": "cfg_705895",
+     "to": "cfg_596309"
+    },
+    {
+     "seq": 50,
+     "from": "cfg_596309",
+     "to": "cfg_281"
+    },
+    {
+     "seq": 51,
+     "from": "cfg_281",
+     "to": "cfg_202750"
+    },
+    {
+     "seq": 52,
+     "from": "cfg_202750",
+     "to": "cfg_688617"
+    },
+    {
+     "seq": 53,
+     "from": "cfg_688617",
+     "to": "cfg_667254"
+    },
+    {
+     "seq": 54,
+     "from": "cfg_667254",
+     "to": "cfg_484563"
+    },
+    {
+     "seq": 55,
+     "from": "cfg_484563",
+     "to": "cfg_231666"
+    },
+    {
+     "seq": 56,
+     "from": "cfg_231666",
+     "to": "cfg_783330"
+    },
+    {
+     "seq": 59,
+     "from": "cfg_916265",
+     "to": "cfg_231689"
+    },
+    {
+     "seq": 60,
+     "from": "cfg_231689",
+     "to": "cfg_241943"
+    }
+   ]
+  },
+  "sample_at_seq": 60,
+  "chain_len": 60,
+  "interference": "同体异名",
+  "reconstructible": false,
+  "ambiguous": false
+ },
+ {
+  "qid": "A1-001-history-0033",
+  "type": "历史",
+  "doc": "猎户项目",
+  "doc_id": "A1",
+  "subject": "猎户项目",
+  "slot": "配置值",
+  "question": "在第 1 次提交时，猎户项目 的配置值是什么值？",
+  "answer": {
+   "value": "max_conn=256",
+   "state": "active",
+   "at_seq": 1,
+   "chain": [
+    {
+     "seq": 1,
+     "from": null,
+     "to": "max_conn=256"
+    },
+    {
+     "seq": 2,
+     "from": "max_conn=256",
+     "to": "retry=16"
+    },
+    {
+     "seq": 3,
+     "from": "retry=16",
+     "to": "retry=256"
+    },
+    {
+     "seq": 4,
+     "from": "retry=256",
+     "to": "batch_size=256"
+    },
+    {
+     "seq": 5,
+     "from": "batch_size=256",
+     "to": "timeout_ms=128"
+    },
+    {
+     "seq": 6,
+     "from": "timeout_ms=128",
+     "to": "batch_size=32"
+    },
+    {
+     "seq": 7,
+     "from": "batch_size=32",
+     "to": "retry=32"
+    },
+    {
+     "seq": 8,
+     "from": "retry=32",
+     "to": "retry=64"
+    },
+    {
+     "seq": 9,
+     "from": "retry=64",
+     "to": "batch_size=128"
+    },
+    {
+     "seq": 10,
+     "from": "batch_size=128",
+     "to": "batch_size=16"
+    },
+    {
+     "seq": 11,
+     "from": "batch_size=16",
+     "to": "retry=128"
+    },
+    {
+     "seq": 12,
+     "from": "retry=128",
+     "to": "max_conn=32"
+    },
+    {
+     "seq": 13,
+     "from": "max_conn=32",
+     "to": "timeout_ms=64"
+    },
+    {
+     "seq": 14,
+     "from": "timeout_ms=64",
+     "to": "timeout_ms=32"
+    },
+    {
+     "seq": 15,
+     "from": "timeout_ms=32",
+     "to": "timeout_ms=16"
+    },
+    {
+     "seq": 16,
+     "from": "timeout_ms=16",
+     "to": "timeout_ms=256"
+    },
+    {
+     "seq": 17,
+     "from": "timeout_ms=256",
+     "to": "batch_size=64"
+    },
+    {
+     "seq": 18,
+     "from": "batch_size=64",
+     "to": "max_conn=128"
+    },
+    {
+     "seq": 19,
+     "from": "max_conn=128",
+     "to": "max_conn=64"
+    },
+    {
+     "seq": 20,
+     "from": "max_conn=64",
+     "to": "max_conn=16"
+    },
+    {
+     "seq": 21,
+     "from": "max_conn=16",
+     "to": "cfg_544042"
+    },
+    {
+     "seq": 22,
+     "from": "cfg_544042",
+     "to": "cfg_406962"
+    },
+    {
+     "seq": 23,
+     "from": "cfg_406962",
+     "to": "cfg_646706"
+    },
+    {
+     "seq": 24,
+     "from": "cfg_646706",
+     "to": "cfg_220773"
+    },
+    {
+     "seq": 25,
+     "from": "cfg_220773",
+     "to": "cfg_499219"
+    },
+    {
+     "seq": 26,
+     "from": "cfg_499219",
+     "to": "cfg_620931"
+    },
+    {
+     "seq": 27,
+     "from": "cfg_620931",
+     "to": "cfg_459512"
+    },
+    {
+     "seq": 28,
+     "from": "cfg_459512",
+     "to": "cfg_437851"
+    },
+    {
+     "seq": 29,
+     "from": "cfg_437851",
+     "to": "cfg_21624"
+    },
+    {
+     "seq": 30,
+     "from": "cfg_21624",
+     "to": "cfg_803135"
+    },
+    {
+     "seq": 31,
+     "from": "cfg_803135",
+     "to": "cfg_832425"
+    },
+    {
+     "seq": 32,
+     "from": "cfg_832425",
+     "to": "cfg_932410"
+    },
+    {
+     "seq": 33,
+     "from": "cfg_932410",
+     "to": "cfg_539629"
+    },
+    {
+     "seq": 34,
+     "from": "cfg_539629",
+     "to": "cfg_156204"
+    },
+    {
+     "seq": 35,
+     "from": "cfg_156204",
+     "to": "cfg_449065"
+    },
+    {
+     "seq": 36,
+     "from": "cfg_449065",
+     "to": "cfg_250956"
+    },
+    {
+     "seq": 37,
+     "from": "cfg_250956",
+     "to": "cfg_361983"
+    },
+    {
+     "seq": 38,
+     "from": "cfg_361983",
+     "to": "cfg_772769"
+    },
+    {
+     "seq": 39,
+     "from": "cfg_772769",
+     "to": "cfg_68312"
+    },
+    {
+     "seq": 40,
+     "from": "cfg_68312",
+     "to": "cfg_224463"
+    },
+    {
+     "seq": 41,
+     "from": "cfg_224463",
+     "to": "cfg_725173"
+    },
+    {
+     "seq": 42,
+     "from": "cfg_725173",
+     "to": "cfg_675850"
+    },
+    {
+     "seq": 43,
+     "from": "cfg_675850",
+     "to": "cfg_998058"
+    },
+    {
+     "seq": 44,
+     "from": "cfg_998058",
+     "to": "cfg_866999"
+    },
+    {
+     "seq": 45,
+     "from": "cfg_866999",
+     "to": "cfg_747585"
+    },
+    {
+     "seq": 46,
+     "from": "cfg_747585",
+     "to": "cfg_853425"
+    },
+    {
+     "seq": 47,
+     "from": "cfg_853425",
+     "to": "cfg_196568"
+    },
+    {
+     "seq": 48,
+     "from": "cfg_196568",
+     "to": "cfg_705895"
+    },
+    {
+     "seq": 49,
+     "from": "cfg_705895",
+     "to": "cfg_596309"
+    },
+    {
+     "seq": 50,
+     "from": "cfg_596309",
+     "to": "cfg_281"
+    },
+    {
+     "seq": 51,
+     "from": "cfg_281",
+     "to": "cfg_202750"
+    },
+    {
+     "seq": 52,
+     "from": "cfg_202750",
+     "to": "cfg_688617"
+    },
+    {
+     "seq": 53,
+     "from": "cfg_688617",
+     "to": "cfg_667254"
+    },
+    {
+     "seq": 54,
+     "from": "cfg_667254",
+     "to": "cfg_484563"
+    },
+    {
+     "seq": 55,
+     "from": "cfg_484563",
+     "to": "cfg_231666"
+    },
+    {
+     "seq": 56,
+     "from": "cfg_231666",
+     "to": "cfg_783330"
+    },
+    {
+     "seq": 57,
+     "from": "cfg_783330",
+     "to": null
+    },
+    {
+     "seq": 58,
+     "from": null,
+     "to": "cfg_916265"
+    },
+    {
+     "seq": 59,
+     "from": "cfg_916265",
+     "to": "cfg_231689"
+    },
+    {
+     "seq": 60,
+     "from": "cfg_231689",
+     "to": "cfg_241943"
+    }
+   ],
+   "change_chain": [
+    {
+     "seq": 2,
+     "from": "max_conn=256",
+     "to": "retry=16"
+    },
+    {
+     "seq": 3,
+     "from": "retry=16",
+     "to": "retry=256"
+    },
+    {
+     "seq": 4,
+     "from": "retry=256",
+     "to": "batch_size=256"
+    },
+    {
+     "seq": 5,
+     "from": "batch_size=256",
+     "to": "timeout_ms=128"
+    },
+    {
+     "seq": 6,
+     "from": "timeout_ms=128",
+     "to": "batch_size=32"
+    },
+    {
+     "seq": 7,
+     "from": "batch_size=32",
+     "to": "retry=32"
+    },
+    {
+     "seq": 8,
+     "from": "retry=32",
+     "to": "retry=64"
+    },
+    {
+     "seq": 9,
+     "from": "retry=64",
+     "to": "batch_size=128"
+    },
+    {
+     "seq": 10,
+     "from": "batch_size=128",
+     "to": "batch_size=16"
+    },
+    {
+     "seq": 11,
+     "from": "batch_size=16",
+     "to": "retry=128"
+    },
+    {
+     "seq": 12,
+     "from": "retry=128",
+     "to": "max_conn=32"
+    },
+    {
+     "seq": 13,
+     "from": "max_conn=32",
+     "to": "timeout_ms=64"
+    },
+    {
+     "seq": 14,
+     "from": "timeout_ms=64",
+     "to": "timeout_ms=32"
+    },
+    {
+     "seq": 15,
+     "from": "timeout_ms=32",
+     "to": "timeout_ms=16"
+    },
+    {
+     "seq": 16,
+     "from": "timeout_ms=16",
+     "to": "timeout_ms=256"
+    },
+    {
+     "seq": 17,
+     "from": "timeout_ms=256",
+     "to": "batch_size=64"
+    },
+    {
+     "seq": 18,
+     "from": "batch_size=64",
+     "to": "max_conn=128"
+    },
+    {
+     "seq": 19,
+     "from": "max_conn=128",
+     "to": "max_conn=64"
+    },
+    {
+     "seq": 20,
+     "from": "max_conn=64",
+     "to": "max_conn=16"
+    },
+    {
+     "seq": 21,
+     "from": "max_conn=16",
+     "to": "cfg_544042"
+    },
+    {
+     "seq": 22,
+     "from": "cfg_544042",
+     "to": "cfg_406962"
+    },
+    {
+     "seq": 23,
+     "from": "cfg_406962",
+     "to": "cfg_646706"
+    },
+    {
+     "seq": 24,
+     "from": "cfg_646706",
+     "to": "cfg_220773"
+    },
+    {
+     "seq": 25,
+     "from": "cfg_220773",
+     "to": "cfg_499219"
+    },
+    {
+     "seq": 26,
+     "from": "cfg_499219",
+     "to": "cfg_620931"
+    },
+    {
+     "seq": 27,
+     "from": "cfg_620931",
+     "to": "cfg_459512"
+    },
+    {
+     "seq": 28,
+     "from": "cfg_459512",
+     "to": "cfg_437851"
+    },
+    {
+     "seq": 29,
+     "from": "cfg_437851",
+     "to": "cfg_21624"
+    },
+    {
+     "seq": 30,
+     "from": "cfg_21624",
+     "to": "cfg_803135"
+    },
+    {
+     "seq": 31,
+     "from": "cfg_803135",
+     "to": "cfg_832425"
+    },
+    {
+     "seq": 32,
+     "from": "cfg_832425",
+     "to": "cfg_932410"
+    },
+    {
+     "seq": 33,
+     "from": "cfg_932410",
+     "to": "cfg_539629"
+    },
+    {
+     "seq": 34,
+     "from": "cfg_539629",
+     "to": "cfg_156204"
+    },
+    {
+     "seq": 35,
+     "from": "cfg_156204",
+     "to": "cfg_449065"
+    },
+    {
+     "seq": 36,
+     "from": "cfg_449065",
+     "to": "cfg_250956"
+    },
+    {
+     "seq": 37,
+     "from": "cfg_250956",
+     "to": "cfg_361983"
+    },
+    {
+     "seq": 38,
+     "from": "cfg_361983",
+     "to": "cfg_772769"
+    },
+    {
+     "seq": 39,
+     "from": "cfg_772769",
+     "to": "cfg_68312"
+    },
+    {
+     "seq": 40,
+     "from": "cfg_68312",
+     "to": "cfg_224463"
+    },
+    {
+     "seq": 41,
+     "from": "cfg_224463",
+     "to": "cfg_725173"
+    },
+    {
+     "seq": 42,
+     "from": "cfg_725173",
+     "to": "cfg_675850"
+    },
+    {
+     "seq": 43,
+     "from": "cfg_675850",
+     "to": "cfg_998058"
+    },
+    {
+     "seq": 44,
+     "from": "cfg_998058",
+     "to": "cfg_866999"
+    },
+    {
+     "seq": 45,
+     "from": "cfg_866999",
+     "to": "cfg_747585"
+    },
+    {
+     "seq": 46,
+     "from": "cfg_747585",
+     "to": "cfg_853425"
+    },
+    {
+     "seq": 47,
+     "from": "cfg_853425",
+     "to": "cfg_196568"
+    },
+    {
+     "seq": 48,
+     "from": "cfg_196568",
+     "to": "cfg_705895"
+    },
+    {
+     "seq": 49,
+     "from": "cfg_705895",
+     "to": "cfg_596309"
+    },
+    {
+     "seq": 50,
+     "from": "cfg_596309",
+     "to": "cfg_281"
+    },
+    {
+     "seq": 51,
+     "from": "cfg_281",
+     "to": "cfg_202750"
+    },
+    {
+     "seq": 52,
+     "from": "cfg_202750",
+     "to": "cfg_688617"
+    },
+    {
+     "seq": 53,
+     "from": "cfg_688617",
+     "to": "cfg_667254"
+    },
+    {
+     "seq": 54,
+     "from": "cfg_667254",
+     "to": "cfg_484563"
+    },
+    {
+     "seq": 55,
+     "from": "cfg_484563",
+     "to": "cfg_231666"
+    },
+    {
+     "seq": 56,
+     "from": "cfg_231666",
+     "to": "cfg_783330"
+    },
+    {
+     "seq": 59,
+     "from": "cfg_916265",
+     "to": "cfg_231689"
+    },
+    {
+     "seq": 60,
+     "from": "cfg_231689",
+     "to": "cfg_241943"
+    }
+   ]
+  },
+  "sample_at_seq": 1,
+  "chain_len": 60,
+  "interference": "同体异名",
+  "reconstructible": false,
+  "ambiguous": false
+ },
+ {
+  "qid": "A1-021-history-0034",
+  "type": "历史",
+  "doc": "猎户项目",
+  "doc_id": "A1",
+  "subject": "猎户项目",
+  "slot": "配置值",
+  "question": "在第 21 次提交时，猎户项目 的配置值是什么值？",
+  "answer": {
+   "value": "cfg_544042",
+   "state": "active",
+   "at_seq": 21,
+   "chain": [
+    {
+     "seq": 1,
+     "from": null,
+     "to": "max_conn=256"
+    },
+    {
+     "seq": 2,
+     "from": "max_conn=256",
+     "to": "retry=16"
+    },
+    {
+     "seq": 3,
+     "from": "retry=16",
+     "to": "retry=256"
+    },
+    {
+     "seq": 4,
+     "from": "retry=256",
+     "to": "batch_size=256"
+    },
+    {
+     "seq": 5,
+     "from": "batch_size=256",
+     "to": "timeout_ms=128"
+    },
+    {
+     "seq": 6,
+     "from": "timeout_ms=128",
+     "to": "batch_size=32"
+    },
+    {
+     "seq": 7,
+     "from": "batch_size=32",
+     "to": "retry=32"
+    },
+    {
+     "seq": 8,
+     "from": "retry=32",
+     "to": "retry=64"
+    },
+    {
+     "seq": 9,
+     "from": "retry=64",
+     "to": "batch_size=128"
+    },
+    {
+     "seq": 10,
+     "from": "batch_size=128",
+     "to": "batch_size=16"
+    },
+    {
+     "seq": 11,
+     "from": "batch_size=16",
+     "to": "retry=128"
+    },
+    {
+     "seq": 12,
+     "from": "retry=128",
+     "to": "max_conn=32"
+    },
+    {
+     "seq": 13,
+     "from": "max_conn=32",
+     "to": "timeout_ms=64"
+    },
+    {
+     "seq": 14,
+     "from": "timeout_ms=64",
+     "to": "timeout_ms=32"
+    },
+    {
+     "seq": 15,
+     "from": "timeout_ms=32",
+     "to": "timeout_ms=16"
+    },
+    {
+     "seq": 16,
+     "from": "timeout_ms=16",
+     "to": "timeout_ms=256"
+    },
+    {
+     "seq": 17,
+     "from": "timeout_ms=256",
+     "to": "batch_size=64"
+    },
+    {
+     "seq": 18,
+     "from": "batch_size=64",
+     "to": "max_conn=128"
+    },
+    {
+     "seq": 19,
+     "from": "max_conn=128",
+     "to": "max_conn=64"
+    },
+    {
+     "seq": 20,
+     "from": "max_conn=64",
+     "to": "max_conn=16"
+    },
+    {
+     "seq": 21,
+     "from": "max_conn=16",
+     "to": "cfg_544042"
+    },
+    {
+     "seq": 22,
+     "from": "cfg_544042",
+     "to": "cfg_406962"
+    },
+    {
+     "seq": 23,
+     "from": "cfg_406962",
+     "to": "cfg_646706"
+    },
+    {
+     "seq": 24,
+     "from": "cfg_646706",
+     "to": "cfg_220773"
+    },
+    {
+     "seq": 25,
+     "from": "cfg_220773",
+     "to": "cfg_499219"
+    },
+    {
+     "seq": 26,
+     "from": "cfg_499219",
+     "to": "cfg_620931"
+    },
+    {
+     "seq": 27,
+     "from": "cfg_620931",
+     "to": "cfg_459512"
+    },
+    {
+     "seq": 28,
+     "from": "cfg_459512",
+     "to": "cfg_437851"
+    },
+    {
+     "seq": 29,
+     "from": "cfg_437851",
+     "to": "cfg_21624"
+    },
+    {
+     "seq": 30,
+     "from": "cfg_21624",
+     "to": "cfg_803135"
+    },
+    {
+     "seq": 31,
+     "from": "cfg_803135",
+     "to": "cfg_832425"
+    },
+    {
+     "seq": 32,
+     "from": "cfg_832425",
+     "to": "cfg_932410"
+    },
+    {
+     "seq": 33,
+     "from": "cfg_932410",
+     "to": "cfg_539629"
+    },
+    {
+     "seq": 34,
+     "from": "cfg_539629",
+     "to": "cfg_156204"
+    },
+    {
+     "seq": 35,
+     "from": "cfg_156204",
+     "to": "cfg_449065"
+    },
+    {
+     "seq": 36,
+     "from": "cfg_449065",
+     "to": "cfg_250956"
+    },
+    {
+     "seq": 37,
+     "from": "cfg_250956",
+     "to": "cfg_361983"
+    },
+    {
+     "seq": 38,
+     "from": "cfg_361983",
+     "to": "cfg_772769"
+    },
+    {
+     "seq": 39,
+     "from": "cfg_772769",
+     "to": "cfg_68312"
+    },
+    {
+     "seq": 40,
+     "from": "cfg_68312",
+     "to": "cfg_224463"
+    },
+    {
+     "seq": 41,
+     "from": "cfg_224463",
+     "to": "cfg_725173"
+    },
+    {
+     "seq": 42,
+     "from": "cfg_725173",
+     "to": "cfg_675850"
+    },
+    {
+     "seq": 43,
+     "from": "cfg_675850",
+     "to": "cfg_998058"
+    },
+    {
+     "seq": 44,
+     "from": "cfg_998058",
+     "to": "cfg_866999"
+    },
+    {
+     "seq": 45,
+     "from": "cfg_866999",
+     "to": "cfg_747585"
+    },
+    {
+     "seq": 46,
+     "from": "cfg_747585",
+     "to": "cfg_853425"
+    },
+    {
+     "seq": 47,
+     "from": "cfg_853425",
+     "to": "cfg_196568"
+    },
+    {
+     "seq": 48,
+     "from": "cfg_196568",
+     "to": "cfg_705895"
+    },
+    {
+     "seq": 49,
+     "from": "cfg_705895",
+     "to": "cfg_596309"
+    },
+    {
+     "seq": 50,
+     "from": "cfg_596309",
+     "to": "cfg_281"
+    },
+    {
+     "seq": 51,
+     "from": "cfg_281",
+     "to": "cfg_202750"
+    },
+    {
+     "seq": 52,
+     "from": "cfg_202750",
+     "to": "cfg_688617"
+    },
+    {
+     "seq": 53,
+     "from": "cfg_688617",
+     "to": "cfg_667254"
+    },
+    {
+     "seq": 54,
+     "from": "cfg_667254",
+     "to": "cfg_484563"
+    },
+    {
+     "seq": 55,
+     "from": "cfg_484563",
+     "to": "cfg_231666"
+    },
+    {
+     "seq": 56,
+     "from": "cfg_231666",
+     "to": "cfg_783330"
+    },
+    {
+     "seq": 57,
+     "from": "cfg_783330",
+     "to": null
+    },
+    {
+     "seq": 58,
+     "from": null,
+     "to": "cfg_916265"
+    },
+    {
+     "seq": 59,
+     "from": "cfg_916265",
+     "to": "cfg_231689"
+    },
+    {
+     "seq": 60,
+     "from": "cfg_231689",
+     "to": "cfg_241943"
+    }
+   ],
+   "change_chain": [
+    {
+     "seq": 2,
+     "from": "max_conn=256",
+     "to": "retry=16"
+    },
+    {
+     "seq": 3,
+     "from": "retry=16",
+     "to": "retry=256"
+    },
+    {
+     "seq": 4,
+     "from": "retry=256",
+     "to": "batch_size=256"
+    },
+    {
+     "seq": 5,
+     "from": "batch_size=256",
+     "to": "timeout_ms=128"
+    },
+    {
+     "seq": 6,
+     "from": "timeout_ms=128",
+     "to": "batch_size=32"
+    },
+    {
+     "seq": 7,
+     "from": "batch_size=32",
+     "to": "retry=32"
+    },
+    {
+     "seq": 8,
+     "from": "retry=32",
+     "to": "retry=64"
+    },
+    {
+     "seq": 9,
+     "from": "retry=64",
+     "to": "batch_size=128"
+    },
+    {
+     "seq": 10,
+     "from": "batch_size=128",
+     "to": "batch_size=16"
+    },
+    {
+     "seq": 11,
+     "from": "batch_size=16",
+     "to": "retry=128"
+    },
+    {
+     "seq": 12,
+     "from": "retry=128",
+     "to": "max_conn=32"
+    },
+    {
+     "seq": 13,
+     "from": "max_conn=32",
+     "to": "timeout_ms=64"
+    },
+    {
+     "seq": 14,
+     "from": "timeout_ms=64",
+     "to": "timeout_ms=32"
+    },
+    {
+     "seq": 15,
+     "from": "timeout_ms=32",
+     "to": "timeout_ms=16"
+    },
+    {
+     "seq": 16,
+     "from": "timeout_ms=16",
+     "to": "timeout_ms=256"
+    },
+    {
+     "seq": 17,
+     "from": "timeout_ms=256",
+     "to": "batch_size=64"
+    },
+    {
+     "seq": 18,
+     "from": "batch_size=64",
+     "to": "max_conn=128"
+    },
+    {
+     "seq": 19,
+     "from": "max_conn=128",
+     "to": "max_conn=64"
+    },
+    {
+     "seq": 20,
+     "from": "max_conn=64",
+     "to": "max_conn=16"
+    },
+    {
+     "seq": 21,
+     "from": "max_conn=16",
+     "to": "cfg_544042"
+    },
+    {
+     "seq": 22,
+     "from": "cfg_544042",
+     "to": "cfg_406962"
+    },
+    {
+     "seq": 23,
+     "from": "cfg_406962",
+     "to": "cfg_646706"
+    },
+    {
+     "seq": 24,
+     "from": "cfg_646706",
+     "to": "cfg_220773"
+    },
+    {
+     "seq": 25,
+     "from": "cfg_220773",
+     "to": "cfg_499219"
+    },
+    {
+     "seq": 26,
+     "from": "cfg_499219",
+     "to": "cfg_620931"
+    },
+    {
+     "seq": 27,
+     "from": "cfg_620931",
+     "to": "cfg_459512"
+    },
+    {
+     "seq": 28,
+     "from": "cfg_459512",
+     "to": "cfg_437851"
+    },
+    {
+     "seq": 29,
+     "from": "cfg_437851",
+     "to": "cfg_21624"
+    },
+    {
+     "seq": 30,
+     "from": "cfg_21624",
+     "to": "cfg_803135"
+    },
+    {
+     "seq": 31,
+     "from": "cfg_803135",
+     "to": "cfg_832425"
+    },
+    {
+     "seq": 32,
+     "from": "cfg_832425",
+     "to": "cfg_932410"
+    },
+    {
+     "seq": 33,
+     "from": "cfg_932410",
+     "to": "cfg_539629"
+    },
+    {
+     "seq": 34,
+     "from": "cfg_539629",
+     "to": "cfg_156204"
+    },
+    {
+     "seq": 35,
+     "from": "cfg_156204",
+     "to": "cfg_449065"
+    },
+    {
+     "seq": 36,
+     "from": "cfg_449065",
+     "to": "cfg_250956"
+    },
+    {
+     "seq": 37,
+     "from": "cfg_250956",
+     "to": "cfg_361983"
+    },
+    {
+     "seq": 38,
+     "from": "cfg_361983",
+     "to": "cfg_772769"
+    },
+    {
+     "seq": 39,
+     "from": "cfg_772769",
+     "to": "cfg_68312"
+    },
+    {
+     "seq": 40,
+     "from": "cfg_68312",
+     "to": "cfg_224463"
+    },
+    {
+     "seq": 41,
+     "from": "cfg_224463",
+     "to": "cfg_725173"
+    },
+    {
+     "seq": 42,
+     "from": "cfg_725173",
+     "to": "cfg_675850"
+    },
+    {
+     "seq": 43,
+     "from": "cfg_675850",
+     "to": "cfg_998058"
+    },
+    {
+     "seq": 44,
+     "from": "cfg_998058",
+     "to": "cfg_866999"
+    },
+    {
+     "seq": 45,
+     "from": "cfg_866999",
+     "to": "cfg_747585"
+    },
+    {
+     "seq": 46,
+     "from": "cfg_747585",
+     "to": "cfg_853425"
+    },
+    {
+     "seq": 47,
+     "from": "cfg_853425",
+     "to": "cfg_196568"
+    },
+    {
+     "seq": 48,
+     "from": "cfg_196568",
+     "to": "cfg_705895"
+    },
+    {
+     "seq": 49,
+     "from": "cfg_705895",
+     "to": "cfg_596309"
+    },
+    {
+     "seq": 50,
+     "from": "cfg_596309",
+     "to": "cfg_281"
+    },
+    {
+     "seq": 51,
+     "from": "cfg_281",
+     "to": "cfg_202750"
+    },
+    {
+     "seq": 52,
+     "from": "cfg_202750",
+     "to": "cfg_688617"
+    },
+    {
+     "seq": 53,
+     "from": "cfg_688617",
+     "to": "cfg_667254"
+    },
+    {
+     "seq": 54,
+     "from": "cfg_667254",
+     "to": "cfg_484563"
+    },
+    {
+     "seq": 55,
+     "from": "cfg_484563",
+     "to": "cfg_231666"
+    },
+    {
+     "seq": 56,
+     "from": "cfg_231666",
+     "to": "cfg_783330"
+    },
+    {
+     "seq": 59,
+     "from": "cfg_916265",
+     "to": "cfg_231689"
+    },
+    {
+     "seq": 60,
+     "from": "cfg_231689",
+     "to": "cfg_241943"
+    }
+   ]
+  },
+  "sample_at_seq": 21,
+  "chain_len": 60,
+  "interference": "同体异名",
+  "reconstructible": false,
+  "ambiguous": false
+ },
+ {
+  "qid": "A1-041-history-0035",
+  "type": "历史",
+  "doc": "猎户项目",
+  "doc_id": "A1",
+  "subject": "猎户项目",
+  "slot": "配置值",
+  "question": "在第 41 次提交时，猎户项目 的配置值是什么值？",
+  "answer": {
+   "value": "cfg_725173",
+   "state": "active",
+   "at_seq": 41,
+   "chain": [
+    {
+     "seq": 1,
+     "from": null,
+     "to": "max_conn=256"
+    },
+    {
+     "seq": 2,
+     "from": "max_conn=256",
+     "to": "retry=16"
+    },
+    {
+     "seq": 3,
+     "from": "retry=16",
+     "to": "retry=256"
+    },
+    {
+     "seq": 4,
+     "from": "retry=256",
+     "to": "batch_size=256"
+    },
+    {
+     "seq": 5,
+     "from": "batch_size=256",
+     "to": "timeout_ms=128"
+    },
+    {
+     "seq": 6,
+     "from": "timeout_ms=128",
+     "to": "batch_size=32"
+    },
+    {
+     "seq": 7,
+     "from": "batch_size=32",
+     "to": "retry=32"
+    },
+    {
+     "seq": 8,
+     "from": "retry=32",
+     "to": "retry=64"
+    },
+    {
+     "seq": 9,
+     "from": "retry=64",
+     "to": "batch_size=128"
+    },
+    {
+     "seq": 10,
+     "from": "batch_size=128",
+     "to": "batch_size=16"
+    },
+    {
+     "seq": 11,
+     "from": "batch_size=16",
+     "to": "retry=128"
+    },
+    {
+     "seq": 12,
+     "from": "retry=128",
+     "to": "max_conn=32"
+    },
+    {
+     "seq": 13,
+     "from": "max_conn=32",
+     "to": "timeout_ms=64"
+    },
+    {
+     "seq": 14,
+     "from": "timeout_ms=64",
+     "to": "timeout_ms=32"
+    },
+    {
+     "seq": 15,
+     "from": "timeout_ms=32",
+     "to": "timeout_ms=16"
+    },
+    {
+     "seq": 16,
+     "from": "timeout_ms=16",
+     "to": "timeout_ms=256"
+    },
+    {
+     "seq": 17,
+     "from": "timeout_ms=256",
+     "to": "batch_size=64"
+    },
+    {
+     "seq": 18,
+     "from": "batch_size=64",
+     "to": "max_conn=128"
+    },
+    {
+     "seq": 19,
+     "from": "max_conn=128",
+     "to": "max_conn=64"
+    },
+    {
+     "seq": 20,
+     "from": "max_conn=64",
+     "to": "max_conn=16"
+    },
+    {
+     "seq": 21,
+     "from": "max_conn=16",
+     "to": "cfg_544042"
+    },
+    {
+     "seq": 22,
+     "from": "cfg_544042",
+     "to": "cfg_406962"
+    },
+    {
+     "seq": 23,
+     "from": "cfg_406962",
+     "to": "cfg_646706"
+    },
+    {
+     "seq": 24,
+     "from": "cfg_646706",
+     "to": "cfg_220773"
+    },
+    {
+     "seq": 25,
+     "from": "cfg_220773",
+     "to": "cfg_499219"
+    },
+    {
+     "seq": 26,
+     "from": "cfg_499219",
+     "to": "cfg_620931"
+    },
+    {
+     "seq": 27,
+     "from": "cfg_620931",
+     "to": "cfg_459512"
+    },
+    {
+     "seq": 28,
+     "from": "cfg_459512",
+     "to": "cfg_437851"
+    },
+    {
+     "seq": 29,
+     "from": "cfg_437851",
+     "to": "cfg_21624"
+    },
+    {
+     "seq": 30,
+     "from": "cfg_21624",
+     "to": "cfg_803135"
+    },
+    {
+     "seq": 31,
+     "from": "cfg_803135",
+     "to": "cfg_832425"
+    },
+    {
+     "seq": 32,
+     "from": "cfg_832425",
+     "to": "cfg_932410"
+    },
+    {
+     "seq": 33,
+     "from": "cfg_932410",
+     "to": "cfg_539629"
+    },
+    {
+     "seq": 34,
+     "from": "cfg_539629",
+     "to": "cfg_156204"
+    },
+    {
+     "seq": 35,
+     "from": "cfg_156204",
+     "to": "cfg_449065"
+    },
+    {
+     "seq": 36,
+     "from": "cfg_449065",
+     "to": "cfg_250956"
+    },
+    {
+     "seq": 37,
+     "from": "cfg_250956",
+     "to": "cfg_361983"
+    },
+    {
+     "seq": 38,
+     "from": "cfg_361983",
+     "to": "cfg_772769"
+    },
+    {
+     "seq": 39,
+     "from": "cfg_772769",
+     "to": "cfg_68312"
+    },
+    {
+     "seq": 40,
+     "from": "cfg_68312",
+     "to": "cfg_224463"
+    },
+    {
+     "seq": 41,
+     "from": "cfg_224463",
+     "to": "cfg_725173"
+    },
+    {
+     "seq": 42,
+     "from": "cfg_725173",
+     "to": "cfg_675850"
+    },
+    {
+     "seq": 43,
+     "from": "cfg_675850",
+     "to": "cfg_998058"
+    },
+    {
+     "seq": 44,
+     "from": "cfg_998058",
+     "to": "cfg_866999"
+    },
+    {
+     "seq": 45,
+     "from": "cfg_866999",
+     "to": "cfg_747585"
+    },
+    {
+     "seq": 46,
+     "from": "cfg_747585",
+     "to": "cfg_853425"
+    },
+    {
+     "seq": 47,
+     "from": "cfg_853425",
+     "to": "cfg_196568"
+    },
+    {
+     "seq": 48,
+     "from": "cfg_196568",
+     "to": "cfg_705895"
+    },
+    {
+     "seq": 49,
+     "from": "cfg_705895",
+     "to": "cfg_596309"
+    },
+    {
+     "seq": 50,
+     "from": "cfg_596309",
+     "to": "cfg_281"
+    },
+    {
+     "seq": 51,
+     "from": "cfg_281",
+     "to": "cfg_202750"
+    },
+    {
+     "seq": 52,
+     "from": "cfg_202750",
+     "to": "cfg_688617"
+    },
+    {
+     "seq": 53,
+     "from": "cfg_688617",
+     "to": "cfg_667254"
+    },
+    {
+     "seq": 54,
+     "from": "cfg_667254",
+     "to": "cfg_484563"
+    },
+    {
+     "seq": 55,
+     "from": "cfg_484563",
+     "to": "cfg_231666"
+    },
+    {
+     "seq": 56,
+     "from": "cfg_231666",
+     "to": "cfg_783330"
+    },
+    {
+     "seq": 57,
+     "from": "cfg_783330",
+     "to": null
+    },
+    {
+     "seq": 58,
+     "from": null,
+     "to": "cfg_916265"
+    },
+    {
+     "seq": 59,
+     "from": "cfg_916265",
+     "to": "cfg_231689"
+    },
+    {
+     "seq": 60,
+     "from": "cfg_231689",
+     "to": "cfg_241943"
+    }
+   ],
+   "change_chain": [
+    {
+     "seq": 2,
+     "from": "max_conn=256",
+     "to": "retry=16"
+    },
+    {
+     "seq": 3,
+     "from": "retry=16",
+     "to": "retry=256"
+    },
+    {
+     "seq": 4,
+     "from": "retry=256",
+     "to": "batch_size=256"
+    },
+    {
+     "seq": 5,
+     "from": "batch_size=256",
+     "to": "timeout_ms=128"
+    },
+    {
+     "seq": 6,
+     "from": "timeout_ms=128",
+     "to": "batch_size=32"
+    },
+    {
+     "seq": 7,
+     "from": "batch_size=32",
+     "to": "retry=32"
+    },
+    {
+     "seq": 8,
+     "from": "retry=32",
+     "to": "retry=64"
+    },
+    {
+     "seq": 9,
+     "from": "retry=64",
+     "to": "batch_size=128"
+    },
+    {
+     "seq": 10,
+     "from": "batch_size=128",
+     "to": "batch_size=16"
+    },
+    {
+     "seq": 11,
+     "from": "batch_size=16",
+     "to": "retry=128"
+    },
+    {
+     "seq": 12,
+     "from": "retry=128",
+     "to": "max_conn=32"
+    },
+    {
+     "seq": 13,
+     "from": "max_conn=32",
+     "to": "timeout_ms=64"
+    },
+    {
+     "seq": 14,
+     "from": "timeout_ms=64",
+     "to": "timeout_ms=32"
+    },
+    {
+     "seq": 15,
+     "from": "timeout_ms=32",
+     "to": "timeout_ms=16"
+    },
+    {
+     "seq": 16,
+     "from": "timeout_ms=16",
+     "to": "timeout_ms=256"
+    },
+    {
+     "seq": 17,
+     "from": "timeout_ms=256",
+     "to": "batch_size=64"
+    },
+    {
+     "seq": 18,
+     "from": "batch_size=64",
+     "to": "max_conn=128"
+    },
+    {
+     "seq": 19,
+     "from": "max_conn=128",
+     "to": "max_conn=64"
+    },
+    {
+     "seq": 20,
+     "from": "max_conn=64",
+     "to": "max_conn=16"
+    },
+    {
+     "seq": 21,
+     "from": "max_conn=16",
+     "to": "cfg_544042"
+    },
+    {
+     "seq": 22,
+     "from": "cfg_544042",
+     "to": "cfg_406962"
+    },
+    {
+     "seq": 23,
+     "from": "cfg_406962",
+     "to": "cfg_646706"
+    },
+    {
+     "seq": 24,
+     "from": "cfg_646706",
+     "to": "cfg_220773"
+    },
+    {
+     "seq": 25,
+     "from": "cfg_220773",
+     "to": "cfg_499219"
+    },
+    {
+     "seq": 26,
+     "from": "cfg_499219",
+     "to": "cfg_620931"
+    },
+    {
+     "seq": 27,
+     "from": "cfg_620931",
+     "to": "cfg_459512"
+    },
+    {
+     "seq": 28,
+     "from": "cfg_459512",
+     "to": "cfg_437851"
+    },
+    {
+     "seq": 29,
+     "from": "cfg_437851",
+     "to": "cfg_21624"
+    },
+    {
+     "seq": 30,
+     "from": "cfg_21624",
+     "to": "cfg_803135"
+    },
+    {
+     "seq": 31,
+     "from": "cfg_803135",
+     "to": "cfg_832425"
+    },
+    {
+     "seq": 32,
+     "from": "cfg_832425",
+     "to": "cfg_932410"
+    },
+    {
+     "seq": 33,
+     "from": "cfg_932410",
+     "to": "cfg_539629"
+    },
+    {
+     "seq": 34,
+     "from": "cfg_539629",
+     "to": "cfg_156204"
+    },
+    {
+     "seq": 35,
+     "from": "cfg_156204",
+     "to": "cfg_449065"
+    },
+    {
+     "seq": 36,
+     "from": "cfg_449065",
+     "to": "cfg_250956"
+    },
+    {
+     "seq": 37,
+     "from": "cfg_250956",
+     "to": "cfg_361983"
+    },
+    {
+     "seq": 38,
+     "from": "cfg_361983",
+     "to": "cfg_772769"
+    },
+    {
+     "seq": 39,
+     "from": "cfg_772769",
+     "to": "cfg_68312"
+    },
+    {
+     "seq": 40,
+     "from": "cfg_68312",
+     "to": "cfg_224463"
+    },
+    {
+     "seq": 41,
+     "from": "cfg_224463",
+     "to": "cfg_725173"
+    },
+    {
+     "seq": 42,
+     "from": "cfg_725173",
+     "to": "cfg_675850"
+    },
+    {
+     "seq": 43,
+     "from": "cfg_675850",
+     "to": "cfg_998058"
+    },
+    {
+     "seq": 44,
+     "from": "cfg_998058",
+     "to": "cfg_866999"
+    },
+    {
+     "seq": 45,
+     "from": "cfg_866999",
+     "to": "cfg_747585"
+    },
+    {
+     "seq": 46,
+     "from": "cfg_747585",
+     "to": "cfg_853425"
+    },
+    {
+     "seq": 47,
+     "from": "cfg_853425",
+     "to": "cfg_196568"
+    },
+    {
+     "seq": 48,
+     "from": "cfg_196568",
+     "to": "cfg_705895"
+    },
+    {
+     "seq": 49,
+     "from": "cfg_705895",
+     "to": "cfg_596309"
+    },
+    {
+     "seq": 50,
+     "from": "cfg_596309",
+     "to": "cfg_281"
+    },
+    {
+     "seq": 51,
+     "from": "cfg_281",
+     "to": "cfg_202750"
+    },
+    {
+     "seq": 52,
+     "from": "cfg_202750",
+     "to": "cfg_688617"
+    },
+    {
+     "seq": 53,
+     "from": "cfg_688617",
+     "to": "cfg_667254"
+    },
+    {
+     "seq": 54,
+     "from": "cfg_667254",
+     "to": "cfg_484563"
+    },
+    {
+     "seq": 55,
+     "from": "cfg_484563",
+     "to": "cfg_231666"
+    },
+    {
+     "seq": 56,
+     "from": "cfg_231666",
+     "to": "cfg_783330"
+    },
+    {
+     "seq": 59,
+     "from": "cfg_916265",
+     "to": "cfg_231689"
+    },
+    {
+     "seq": 60,
+     "from": "cfg_231689",
+     "to": "cfg_241943"
+    }
+   ]
+  },
+  "sample_at_seq": 41,
+  "chain_len": 60,
+  "interference": "同体异名",
+  "reconstructible": false,
+  "ambiguous": false
+ },
+ {
+  "qid": "A1-060-present-0041",
+  "type": "现值",
+  "doc": "猎户项目",
+  "doc_id": "A1",
+  "subject": "猎户项目·缓存模块",
+  "slot": "有效期秒数",
+  "question": "截至第 60 次提交，猎户项目·缓存模块 的有效期秒数当前是什么值？（请给出值、状态，以及该值生效的序号）",
+  "answer": {
+   "value": null,
+   "state": "retired",
+   "at_seq": 57,
+   "chain": [
+    {
+     "seq": 1,
+     "from": null,
+     "to": "10800"
+    },
+    {
+     "seq": 2,
+     "from": "10800",
+     "to": "21600"
+    },
+    {
+     "seq": 3,
+     "from": "21600",
+     "to": "1800"
+    },
+    {
+     "seq": 4,
+     "from": "1800",
+     "to": "300"
+    },
+    {
+     "seq": 5,
+     "from": "300",
+     "to": "3600"
+    },
+    {
+     "seq": 6,
+     "from": "3600",
+     "to": "7200"
+    },
+    {
+     "seq": 7,
+     "from": "7200",
+     "to": "21600"
+    },
+    {
+     "seq": 8,
+     "from": "21600",
+     "to": "10800"
+    },
+    {
+     "seq": 9,
+     "from": "10800",
+     "to": "7200"
+    },
+    {
+     "seq": 10,
+     "from": "7200",
+     "to": "1800"
+    },
+    {
+     "seq": 11,
+     "from": "1800",
+     "to": "21600"
+    },
+    {
+     "seq": 12,
+     "from": "21600",
+     "to": "1800"
+    },
+    {
+     "seq": 13,
+     "from": "1800",
+     "to": "10800"
+    },
+    {
+     "seq": 14,
+     "from": "10800",
+     "to": "21600"
+    },
+    {
+     "seq": 15,
+     "from": "21600",
+     "to": "300"
+    },
+    {
+     "seq": 17,
+     "from": "300",
+     "to": "900"
+    },
+    {
+     "seq": 19,
+     "from": "900",
+     "to": "1800"
+    },
+    {
+     "seq": 21,
+     "from": "1800",
+     "to": "900"
+    },
+    {
+     "seq": 23,
+     "from": "900",
+     "to": "1800"
+    },
+    {
+     "seq": 25,
+     "from": "1800",
+     "to": "3600"
+    },
+    {
+     "seq": 27,
+     "from": "3600",
+     "to": "21600"
+    },
+    {
+     "seq": 29,
+     "from": "21600",
+     "to": "900"
+    },
+    {
+     "seq": 32,
+     "from": "900",
+     "to": "1800"
+    },
+    {
+     "seq": 35,
+     "from": "1800",
+     "to": "300"
+    },
+    {
+     "seq": 38,
+     "from": "300",
+     "to": "600"
+    },
+    {
+     "seq": 41,
+     "from": "600",
+     "to": "900"
+    },
+    {
+     "seq": 44,
+     "from": "900",
+     "to": "21600"
+    },
+    {
+     "seq": 47,
+     "from": "21600",
+     "to": "10800"
+    },
+    {
+     "seq": 50,
+     "from": "10800",
+     "to": "3600"
+    },
+    {
+     "seq": 57,
+     "from": "3600",
+     "to": null
+    }
+   ],
+   "change_chain": [
+    {
+     "seq": 2,
+     "from": "10800",
+     "to": "21600"
+    },
+    {
+     "seq": 3,
+     "from": "21600",
+     "to": "1800"
+    },
+    {
+     "seq": 4,
+     "from": "1800",
+     "to": "300"
+    },
+    {
+     "seq": 5,
+     "from": "300",
+     "to": "3600"
+    },
+    {
+     "seq": 6,
+     "from": "3600",
+     "to": "7200"
+    },
+    {
+     "seq": 7,
+     "from": "7200",
+     "to": "21600"
+    },
+    {
+     "seq": 8,
+     "from": "21600",
+     "to": "10800"
+    },
+    {
+     "seq": 9,
+     "from": "10800",
+     "to": "7200"
+    },
+    {
+     "seq": 10,
+     "from": "7200",
+     "to": "1800"
+    },
+    {
+     "seq": 11,
+     "from": "1800",
+     "to": "21600"
+    },
+    {
+     "seq": 12,
+     "from": "21600",
+     "to": "1800"
+    },
+    {
+     "seq": 13,
+     "from": "1800",
+     "to": "10800"
+    },
+    {
+     "seq": 14,
+     "from": "10800",
+     "to": "21600"
+    },
+    {
+     "seq": 15,
+     "from": "21600",
+     "to": "300"
+    },
+    {
+     "seq": 17,
+     "from": "300",
+     "to": "900"
+    },
+    {
+     "seq": 19,
+     "from": "900",
+     "to": "1800"
+    },
+    {
+     "seq": 21,
+     "from": "1800",
+     "to": "900"
+    },
+    {
+     "seq": 23,
+     "from": "900",
+     "to": "1800"
+    },
+    {
+     "seq": 25,
+     "from": "1800",
+     "to": "3600"
+    },
+    {
+     "seq": 27,
+     "from": "3600",
+     "to": "21600"
+    },
+    {
+     "seq": 29,
+     "from": "21600",
+     "to": "900"
+    },
+    {
+     "seq": 32,
+     "from": "900",
+     "to": "1800"
+    },
+    {
+     "seq": 35,
+     "from": "1800",
+     "to": "300"
+    },
+    {
+     "seq": 38,
+     "from": "300",
+     "to": "600"
+    },
+    {
+     "seq": 41,
+     "from": "600",
+     "to": "900"
+    },
+    {
+     "seq": 44,
+     "from": "900",
+     "to": "21600"
+    },
+    {
+     "seq": 47,
+     "from": "21600",
+     "to": "10800"
+    },
+    {
+     "seq": 50,
+     "from": "10800",
+     "to": "3600"
+    }
+   ]
+  },
+  "sample_at_seq": 60,
+  "chain_len": 30,
+  "interference": "嵌套主体",
+  "reconstructible": false,
+  "ambiguous": false
+ },
+ {
+  "qid": "A1-001-history-0043",
+  "type": "历史",
+  "doc": "猎户项目",
+  "doc_id": "A1",
+  "subject": "猎户项目·缓存模块",
+  "slot": "有效期秒数",
+  "question": "在第 1 次提交时，猎户项目·缓存模块 的有效期秒数是什么值？",
+  "answer": {
+   "value": "10800",
+   "state": "active",
+   "at_seq": 1,
+   "chain": [
+    {
+     "seq": 1,
+     "from": null,
+     "to": "10800"
+    },
+    {
+     "seq": 2,
+     "from": "10800",
+     "to": "21600"
+    },
+    {
+     "seq": 3,
+     "from": "21600",
+     "to": "1800"
+    },
+    {
+     "seq": 4,
+     "from": "1800",
+     "to": "300"
+    },
+    {
+     "seq": 5,
+     "from": "300",
+     "to": "3600"
+    },
+    {
+     "seq": 6,
+     "from": "3600",
+     "to": "7200"
+    },
+    {
+     "seq": 7,
+     "from": "7200",
+     "to": "21600"
+    },
+    {
+     "seq": 8,
+     "from": "21600",
+     "to": "10800"
+    },
+    {
+     "seq": 9,
+     "from": "10800",
+     "to": "7200"
+    },
+    {
+     "seq": 10,
+     "from": "7200",
+     "to": "1800"
+    },
+    {
+     "seq": 11,
+     "from": "1800",
+     "to": "21600"
+    },
+    {
+     "seq": 12,
+     "from": "21600",
+     "to": "1800"
+    },
+    {
+     "seq": 13,
+     "from": "1800",
+     "to": "10800"
+    },
+    {
+     "seq": 14,
+     "from": "10800",
+     "to": "21600"
+    },
+    {
+     "seq": 15,
+     "from": "21600",
+     "to": "300"
+    },
+    {
+     "seq": 17,
+     "from": "300",
+     "to": "900"
+    },
+    {
+     "seq": 19,
+     "from": "900",
+     "to": "1800"
+    },
+    {
+     "seq": 21,
+     "from": "1800",
+     "to": "900"
+    },
+    {
+     "seq": 23,
+     "from": "900",
+     "to": "1800"
+    },
+    {
+     "seq": 25,
+     "from": "1800",
+     "to": "3600"
+    },
+    {
+     "seq": 27,
+     "from": "3600",
+     "to": "21600"
+    },
+    {
+     "seq": 29,
+     "from": "21600",
+     "to": "900"
+    },
+    {
+     "seq": 32,
+     "from": "900",
+     "to": "1800"
+    },
+    {
+     "seq": 35,
+     "from": "1800",
+     "to": "300"
+    },
+    {
+     "seq": 38,
+     "from": "300",
+     "to": "600"
+    },
+    {
+     "seq": 41,
+     "from": "600",
+     "to": "900"
+    },
+    {
+     "seq": 44,
+     "from": "900",
+     "to": "21600"
+    },
+    {
+     "seq": 47,
+     "from": "21600",
+     "to": "10800"
+    },
+    {
+     "seq": 50,
+     "from": "10800",
+     "to": "3600"
+    },
+    {
+     "seq": 57,
+     "from": "3600",
+     "to": null
+    }
+   ],
+   "change_chain": [
+    {
+     "seq": 2,
+     "from": "10800",
+     "to": "21600"
+    },
+    {
+     "seq": 3,
+     "from": "21600",
+     "to": "1800"
+    },
+    {
+     "seq": 4,
+     "from": "1800",
+     "to": "300"
+    },
+    {
+     "seq": 5,
+     "from": "300",
+     "to": "3600"
+    },
+    {
+     "seq": 6,
+     "from": "3600",
+     "to": "7200"
+    },
+    {
+     "seq": 7,
+     "from": "7200",
+     "to": "21600"
+    },
+    {
+     "seq": 8,
+     "from": "21600",
+     "to": "10800"
+    },
+    {
+     "seq": 9,
+     "from": "10800",
+     "to": "7200"
+    },
+    {
+     "seq": 10,
+     "from": "7200",
+     "to": "1800"
+    },
+    {
+     "seq": 11,
+     "from": "1800",
+     "to": "21600"
+    },
+    {
+     "seq": 12,
+     "from": "21600",
+     "to": "1800"
+    },
+    {
+     "seq": 13,
+     "from": "1800",
+     "to": "10800"
+    },
+    {
+     "seq": 14,
+     "from": "10800",
+     "to": "21600"
+    },
+    {
+     "seq": 15,
+     "from": "21600",
+     "to": "300"
+    },
+    {
+     "seq": 17,
+     "from": "300",
+     "to": "900"
+    },
+    {
+     "seq": 19,
+     "from": "900",
+     "to": "1800"
+    },
+    {
+     "seq": 21,
+     "from": "1800",
+     "to": "900"
+    },
+    {
+     "seq": 23,
+     "from": "900",
+     "to": "1800"
+    },
+    {
+     "seq": 25,
+     "from": "1800",
+     "to": "3600"
+    },
+    {
+     "seq": 27,
+     "from": "3600",
+     "to": "21600"
+    },
+    {
+     "seq": 29,
+     "from": "21600",
+     "to": "900"
+    },
+    {
+     "seq": 32,
+     "from": "900",
+     "to": "1800"
+    },
+    {
+     "seq": 35,
+     "from": "1800",
+     "to": "300"
+    },
+    {
+     "seq": 38,
+     "from": "300",
+     "to": "600"
+    },
+    {
+     "seq": 41,
+     "from": "600",
+     "to": "900"
+    },
+    {
+     "seq": 44,
+     "from": "900",
+     "to": "21600"
+    },
+    {
+     "seq": 47,
+     "from": "21600",
+     "to": "10800"
+    },
+    {
+     "seq": 50,
+     "from": "10800",
+     "to": "3600"
+    }
+   ]
+  },
+  "sample_at_seq": 1,
+  "chain_len": 30,
+  "interference": "嵌套主体",
+  "reconstructible": false,
+  "ambiguous": false
+ },
+ {
+  "qid": "A1-011-history-0044",
+  "type": "历史",
+  "doc": "猎户项目",
+  "doc_id": "A1",
+  "subject": "猎户项目·缓存模块",
+  "slot": "有效期秒数",
+  "question": "在第 11 次提交时，猎户项目·缓存模块 的有效期秒数是什么值？",
+  "answer": {
+   "value": "21600",
+   "state": "active",
+   "at_seq": 11,
+   "chain": [
+    {
+     "seq": 1,
+     "from": null,
+     "to": "10800"
+    },
+    {
+     "seq": 2,
+     "from": "10800",
+     "to": "21600"
+    },
+    {
+     "seq": 3,
+     "from": "21600",
+     "to": "1800"
+    },
+    {
+     "seq": 4,
+     "from": "1800",
+     "to": "300"
+    },
+    {
+     "seq": 5,
+     "from": "300",
+     "to": "3600"
+    },
+    {
+     "seq": 6,
+     "from": "3600",
+     "to": "7200"
+    },
+    {
+     "seq": 7,
+     "from": "7200",
+     "to": "21600"
+    },
+    {
+     "seq": 8,
+     "from": "21600",
+     "to": "10800"
+    },
+    {
+     "seq": 9,
+     "from": "10800",
+     "to": "7200"
+    },
+    {
+     "seq": 10,
+     "from": "7200",
+     "to": "1800"
+    },
+    {
+     "seq": 11,
+     "from": "1800",
+     "to": "21600"
+    },
+    {
+     "seq": 12,
+     "from": "21600",
+     "to": "1800"
+    },
+    {
+     "seq": 13,
+     "from": "1800",
+     "to": "10800"
+    },
+    {
+     "seq": 14,
+     "from": "10800",
+     "to": "21600"
+    },
+    {
+     "seq": 15,
+     "from": "21600",
+     "to": "300"
+    },
+    {
+     "seq": 17,
+     "from": "300",
+     "to": "900"
+    },
+    {
+     "seq": 19,
+     "from": "900",
+     "to": "1800"
+    },
+    {
+     "seq": 21,
+     "from": "1800",
+     "to": "900"
+    },
+    {
+     "seq": 23,
+     "from": "900",
+     "to": "1800"
+    },
+    {
+     "seq": 25,
+     "from": "1800",
+     "to": "3600"
+    },
+    {
+     "seq": 27,
+     "from": "3600",
+     "to": "21600"
+    },
+    {
+     "seq": 29,
+     "from": "21600",
+     "to": "900"
+    },
+    {
+     "seq": 32,
+     "from": "900",
+     "to": "1800"
+    },
+    {
+     "seq": 35,
+     "from": "1800",
+     "to": "300"
+    },
+    {
+     "seq": 38,
+     "from": "300",
+     "to": "600"
+    },
+    {
+     "seq": 41,
+     "from": "600",
+     "to": "900"
+    },
+    {
+     "seq": 44,
+     "from": "900",
+     "to": "21600"
+    },
+    {
+     "seq": 47,
+     "from": "21600",
+     "to": "10800"
+    },
+    {
+     "seq": 50,
+     "from": "10800",
+     "to": "3600"
+    },
+    {
+     "seq": 57,
+     "from": "3600",
+     "to": null
+    }
+   ],
+   "change_chain": [
+    {
+     "seq": 2,
+     "from": "10800",
+     "to": "21600"
+    },
+    {
+     "seq": 3,
+     "from": "21600",
+     "to": "1800"
+    },
+    {
+     "seq": 4,
+     "from": "1800",
+     "to": "300"
+    },
+    {
+     "seq": 5,
+     "from": "300",
+     "to": "3600"
+    },
+    {
+     "seq": 6,
+     "from": "3600",
+     "to": "7200"
+    },
+    {
+     "seq": 7,
+     "from": "7200",
+     "to": "21600"
+    },
+    {
+     "seq": 8,
+     "from": "21600",
+     "to": "10800"
+    },
+    {
+     "seq": 9,
+     "from": "10800",
+     "to": "7200"
+    },
+    {
+     "seq": 10,
+     "from": "7200",
+     "to": "1800"
+    },
+    {
+     "seq": 11,
+     "from": "1800",
+     "to": "21600"
+    },
+    {
+     "seq": 12,
+     "from": "21600",
+     "to": "1800"
+    },
+    {
+     "seq": 13,
+     "from": "1800",
+     "to": "10800"
+    },
+    {
+     "seq": 14,
+     "from": "10800",
+     "to": "21600"
+    },
+    {
+     "seq": 15,
+     "from": "21600",
+     "to": "300"
+    },
+    {
+     "seq": 17,
+     "from": "300",
+     "to": "900"
+    },
+    {
+     "seq": 19,
+     "from": "900",
+     "to": "1800"
+    },
+    {
+     "seq": 21,
+     "from": "1800",
+     "to": "900"
+    },
+    {
+     "seq": 23,
+     "from": "900",
+     "to": "1800"
+    },
+    {
+     "seq": 25,
+     "from": "1800",
+     "to": "3600"
+    },
+    {
+     "seq": 27,
+     "from": "3600",
+     "to": "21600"
+    },
+    {
+     "seq": 29,
+     "from": "21600",
+     "to": "900"
+    },
+    {
+     "seq": 32,
+     "from": "900",
+     "to": "1800"
+    },
+    {
+     "seq": 35,
+     "from": "1800",
+     "to": "300"
+    },
+    {
+     "seq": 38,
+     "from": "300",
+     "to": "600"
+    },
+    {
+     "seq": 41,
+     "from": "600",
+     "to": "900"
+    },
+    {
+     "seq": 44,
+     "from": "900",
+     "to": "21600"
+    },
+    {
+     "seq": 47,
+     "from": "21600",
+     "to": "10800"
+    },
+    {
+     "seq": 50,
+     "from": "10800",
+     "to": "3600"
+    }
+   ]
+  },
+  "sample_at_seq": 11,
+  "chain_len": 30,
+  "interference": "嵌套主体",
+  "reconstructible": false,
+  "ambiguous": false
+ },
+ {
+  "qid": "A1-027-history-0045",
+  "type": "历史",
+  "doc": "猎户项目",
+  "doc_id": "A1",
+  "subject": "猎户项目·缓存模块",
+  "slot": "有效期秒数",
+  "question": "在第 27 次提交时，猎户项目·缓存模块 的有效期秒数是什么值？",
+  "answer": {
+   "value": "21600",
+   "state": "active",
+   "at_seq": 27,
+   "chain": [
+    {
+     "seq": 1,
+     "from": null,
+     "to": "10800"
+    },
+    {
+     "seq": 2,
+     "from": "10800",
+     "to": "21600"
+    },
+    {
+     "seq": 3,
+     "from": "21600",
+     "to": "1800"
+    },
+    {
+     "seq": 4,
+     "from": "1800",
+     "to": "300"
+    },
+    {
+     "seq": 5,
+     "from": "300",
+     "to": "3600"
+    },
+    {
+     "seq": 6,
+     "from": "3600",
+     "to": "7200"
+    },
+    {
+     "seq": 7,
+     "from": "7200",
+     "to": "21600"
+    },
+    {
+     "seq": 8,
+     "from": "21600",
+     "to": "10800"
+    },
+    {
+     "seq": 9,
+     "from": "10800",
+     "to": "7200"
+    },
+    {
+     "seq": 10,
+     "from": "7200",
+     "to": "1800"
+    },
+    {
+     "seq": 11,
+     "from": "1800",
+     "to": "21600"
+    },
+    {
+     "seq": 12,
+     "from": "21600",
+     "to": "1800"
+    },
+    {
+     "seq": 13,
+     "from": "1800",
+     "to": "10800"
+    },
+    {
+     "seq": 14,
+     "from": "10800",
+     "to": "21600"
+    },
+    {
+     "seq": 15,
+     "from": "21600",
+     "to": "300"
+    },
+    {
+     "seq": 17,
+     "from": "300",
+     "to": "900"
+    },
+    {
+     "seq": 19,
+     "from": "900",
+     "to": "1800"
+    },
+    {
+     "seq": 21,
+     "from": "1800",
+     "to": "900"
+    },
+    {
+     "seq": 23,
+     "from": "900",
+     "to": "1800"
+    },
+    {
+     "seq": 25,
+     "from": "1800",
+     "to": "3600"
+    },
+    {
+     "seq": 27,
+     "from": "3600",
+     "to": "21600"
+    },
+    {
+     "seq": 29,
+     "from": "21600",
+     "to": "900"
+    },
+    {
+     "seq": 32,
+     "from": "900",
+     "to": "1800"
+    },
+    {
+     "seq": 35,
+     "from": "1800",
+     "to": "300"
+    },
+    {
+     "seq": 38,
+     "from": "300",
+     "to": "600"
+    },
+    {
+     "seq": 41,
+     "from": "600",
+     "to": "900"
+    },
+    {
+     "seq": 44,
+     "from": "900",
+     "to": "21600"
+    },
+    {
+     "seq": 47,
+     "from": "21600",
+     "to": "10800"
+    },
+    {
+     "seq": 50,
+     "from": "10800",
+     "to": "3600"
+    },
+    {
+     "seq": 57,
+     "from": "3600",
+     "to": null
+    }
+   ],
+   "change_chain": [
+    {
+     "seq": 2,
+     "from": "10800",
+     "to": "21600"
+    },
+    {
+     "seq": 3,
+     "from": "21600",
+     "to": "1800"
+    },
+    {
+     "seq": 4,
+     "from": "1800",
+     "to": "300"
+    },
+    {
+     "seq": 5,
+     "from": "300",
+     "to": "3600"
+    },
+    {
+     "seq": 6,
+     "from": "3600",
+     "to": "7200"
+    },
+    {
+     "seq": 7,
+     "from": "7200",
+     "to": "21600"
+    },
+    {
+     "seq": 8,
+     "from": "21600",
+     "to": "10800"
+    },
+    {
+     "seq": 9,
+     "from": "10800",
+     "to": "7200"
+    },
+    {
+     "seq": 10,
+     "from": "7200",
+     "to": "1800"
+    },
+    {
+     "seq": 11,
+     "from": "1800",
+     "to": "21600"
+    },
+    {
+     "seq": 12,
+     "from": "21600",
+     "to": "1800"
+    },
+    {
+     "seq": 13,
+     "from": "1800",
+     "to": "10800"
+    },
+    {
+     "seq": 14,
+     "from": "10800",
+     "to": "21600"
+    },
+    {
+     "seq": 15,
+     "from": "21600",
+     "to": "300"
+    },
+    {
+     "seq": 17,
+     "from": "300",
+     "to": "900"
+    },
+    {
+     "seq": 19,
+     "from": "900",
+     "to": "1800"
+    },
+    {
+     "seq": 21,
+     "from": "1800",
+     "to": "900"
+    },
+    {
+     "seq": 23,
+     "from": "900",
+     "to": "1800"
+    },
+    {
+     "seq": 25,
+     "from": "1800",
+     "to": "3600"
+    },
+    {
+     "seq": 27,
+     "from": "3600",
+     "to": "21600"
+    },
+    {
+     "seq": 29,
+     "from": "21600",
+     "to": "900"
+    },
+    {
+     "seq": 32,
+     "from": "900",
+     "to": "1800"
+    },
+    {
+     "seq": 35,
+     "from": "1800",
+     "to": "300"
+    },
+    {
+     "seq": 38,
+     "from": "300",
+     "to": "600"
+    },
+    {
+     "seq": 41,
+     "from": "600",
+     "to": "900"
+    },
+    {
+     "seq": 44,
+     "from": "900",
+     "to": "21600"
+    },
+    {
+     "seq": 47,
+     "from": "21600",
+     "to": "10800"
+    },
+    {
+     "seq": 50,
+     "from": "10800",
+     "to": "3600"
+    }
+   ]
+  },
+  "sample_at_seq": 27,
+  "chain_len": 30,
+  "interference": "嵌套主体",
+  "reconstructible": false,
+  "ambiguous": false
+ }
+]
