@@ -1,0 +1,16 @@
+import subprocess
+def run(*a):
+    p = subprocess.run(list(a), capture_output=True, text=True, encoding='utf-8', errors='replace', cwd=r'D:/1_ai/_hb_lab/r58')
+    return p.returncode, (p.stdout or '') + (p.stderr or '')
+rc, out = run('git','fetch','origin','feat/hive-mcq-182-and-scores')
+print('fetch:', rc)
+rc2, out2 = run('git','pull','--ff-only','origin','feat/hive-mcq-182-and-scores')
+print('pull:', rc2, out2[-250:])
+rc3, out3 = run('git','log','--oneline','-5')
+print()
+print('=== 最近提交 ===')
+print(out3[:400])
+rc4, out4 = run('git','diff','--stat','HEAD~1','HEAD','--')
+print()
+print('=== 最新提交改动 ===')
+print(out4[:600])

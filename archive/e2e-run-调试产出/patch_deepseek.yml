@@ -1,0 +1,22 @@
+# 临时覆盖：把 provider 换成 deepseek（仅本次运行，不改原 profile）
+# key 不写在本文件，运行时由 DEEPSEEK_KEY 环境变量提供
+- id: llm-pi-ai
+  name: "@deepseek-ai/dsh-llm-pi-ai"
+  config:
+    providers:
+      ds:
+        apiKeyEnv: DEEPSEEK_KEY
+        api: openai-completions
+        baseURL: https://api.deepseek.com
+        models:
+          - id: deepseek-chat
+            name: deepseek-chat
+            contextWindow: 128000
+            maxTokens: 8192
+            input:
+              - text
+- id: agent-default-model
+  name: "@deepseek-ai/dsh-agent-default-model"
+  config:
+    provider: ds
+    model: deepseek-chat

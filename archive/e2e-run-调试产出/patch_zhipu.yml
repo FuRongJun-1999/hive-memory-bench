@@ -1,0 +1,22 @@
+# 临时覆盖：把 provider 换成智谱（仅本次运行，不改原 profile）
+# key 不写在本文件，运行时由 ZHIPU_API_KEY 环境变量提供
+- id: llm-pi-ai
+  name: "@deepseek-ai/dsh-llm-pi-ai"
+  config:
+    providers:
+      zhipu:
+        apiKeyEnv: ZHIPU_API_KEY
+        api: openai-completions
+        baseURL: https://open.bigmodel.cn/api/paas/v4
+        models:
+          - id: glm-5.3-flash
+            name: glm-5.3-flash
+            contextWindow: 200000
+            maxTokens: 32000
+            input:
+              - text
+- id: agent-default-model
+  name: "@deepseek-ai/dsh-agent-default-model"
+  config:
+    provider: zhipu
+    model: glm-5.3-flash
