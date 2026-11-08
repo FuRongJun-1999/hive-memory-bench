@@ -1,0 +1,952 @@
+{"idx": 1, "qid": "o001", "arm": "closed", "truth": true, "got": false, "stmt": "第2章「巧合还是阴谋」·陈默·求知园·老人称巨子与他同名·笑容瞬间凝固·《工程控制论》", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o001", "arm": "chapter", "truth": true, "got": true, "stmt": "第2章「巧合还是阴谋」·陈默·求知园·老人称巨子与他同名·笑容瞬间凝固·《工程控制论》", "mat_len": 2894, "err": ""}
+{"idx": 2, "qid": "o001", "arm": "closed", "truth": false, "got": false, "stmt": "第21章「问题的答案」·陈默·求知园·老人称巨子与他同名·笑容瞬间凝固·《工程控制论》", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o001", "arm": "chapter", "truth": false, "got": false, "stmt": "第21章「问题的答案」·陈默·求知园·老人称巨子与他同名·笑容瞬间凝固·《工程控制论》", "mat_len": 2508, "err": ""}
+{"idx": 1, "qid": "o002", "arm": "closed", "truth": true, "got": false, "stmt": "第22章「谢谢你 诺艾尔」 · 我 · 图书馆 · 推演蒙德变质结局 · 为什么只有我活了下来 · 星尘", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o002", "arm": "chapter", "truth": true, "got": false, "stmt": "第22章「谢谢你 诺艾尔」 · 我 · 图书馆 · 推演蒙德变质结局 · 为什么只有我活了下来 · 星尘", "mat_len": 3277, "err": ""}
+{"idx": 2, "qid": "o002", "arm": "closed", "truth": false, "got": false, "stmt": "第22章「谢谢你 诺艾尔」·我·摘星崖·推演蒙德变质结局·痛苦·星尘", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o002", "arm": "chapter", "truth": false, "got": false, "stmt": "第22章「谢谢你 诺艾尔」·我·摘星崖·推演蒙德变质结局·痛苦·星尘", "mat_len": 3277, "err": ""}
+{"idx": 1, "qid": "o003", "arm": "closed", "truth": true, "got": false, "stmt": "第12章「何为自由」·温迪·风龙废墟·拒绝对特瓦林下令·扶额·封印", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o003", "arm": "chapter", "truth": true, "got": true, "stmt": "第12章「何为自由」·温迪·风龙废墟·拒绝对特瓦林下令·扶额·封印", "mat_len": 2533, "err": ""}
+{"idx": 2, "qid": "o003", "arm": "closed", "truth": false, "got": false, "stmt": "第12章「何为自由」·温迪·风龙废墟·拒绝对特瓦林下令·愤怒·封印", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o003", "arm": "chapter", "truth": false, "got": false, "stmt": "第12章「何为自由」·温迪·风龙废墟·拒绝对特瓦林下令·愤怒·封印", "mat_len": 2533, "err": ""}
+{"idx": 1, "qid": "o005", "arm": "closed", "truth": true, "got": false, "stmt": "第4章「蜂巢社会蓝图」·陈默·六边形房间·读到量子通信与神经认证·点赞·指南", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o005", "arm": "chapter", "truth": true, "got": true, "stmt": "第4章「蜂巢社会蓝图」·陈默·六边形房间·读到量子通信与神经认证·点赞·指南", "mat_len": 2615, "err": ""}
+{"idx": 2, "qid": "o005", "arm": "closed", "truth": false, "got": false, "stmt": "第4章「蜂巢社会蓝图」·陈默·六边形房间·读到量子通信与神经认证·点赞·《社会控制论》", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o005", "arm": "chapter", "truth": false, "got": false, "stmt": "第4章「蜂巢社会蓝图」·陈默·六边形房间·读到量子通信与神经认证·点赞·《社会控制论》", "mat_len": 2615, "err": ""}
+{"idx": 1, "qid": "o006", "arm": "closed", "truth": true, "got": false, "stmt": "第23章「再别蒙德」·陈默·舱室·向秦熙交出反制模型·坚定·全息投影", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o006", "arm": "chapter", "truth": true, "got": true, "stmt": "第23章「再别蒙德」·陈默·舱室·向秦熙交出反制模型·坚定·全息投影", "mat_len": 2385, "err": ""}
+{"idx": 2, "qid": "o006", "arm": "closed", "truth": false, "got": false, "stmt": "第5章「历史的断层」·陈默·舱室·向秦熙交出反制模型·坚定·全息投影", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o006", "arm": "chapter", "truth": false, "got": false, "stmt": "第5章「历史的断层」·陈默·舱室·向秦熙交出反制模型·坚定·全息投影", "mat_len": 2181, "err": ""}
+{"idx": 1, "qid": "o007", "arm": "closed", "truth": true, "got": false, "stmt": "第5章「历史的断层」·张明远·求知园·讲述隔离失误丧妻·悲哀·《工程控制论》", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o007", "arm": "chapter", "truth": true, "got": false, "stmt": "第5章「历史的断层」·张明远·求知园·讲述隔离失误丧妻·悲哀·《工程控制论》", "mat_len": 2181, "err": ""}
+{"idx": 2, "qid": "o007", "arm": "closed", "truth": false, "got": false, "stmt": "第5章「历史的断层」·秦熙·求知园·讲述隔离失误丧妻·悲哀·《工程控制论》", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o007", "arm": "chapter", "truth": false, "got": false, "stmt": "第5章「历史的断层」·秦熙·求知园·讲述隔离失误丧妻·悲哀·《工程控制论》", "mat_len": 2181, "err": ""}
+{"idx": 1, "qid": "o008", "arm": "closed", "truth": true, "got": false, "stmt": "第7章「被请喝茶」·秦熙·白色房间·取下头盔为严厉致歉·温柔·防护服", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o008", "arm": "chapter", "truth": true, "got": false, "stmt": "第7章「被请喝茶」·秦熙·白色房间·取下头盔为严厉致歉·温柔·防护服", "mat_len": 2603, "err": ""}
+{"idx": 2, "qid": "o008", "arm": "closed", "truth": false, "got": false, "stmt": "第7章「被请喝茶」·秦熙·求知园·取下头盔为严厉致歉·温柔·防护服", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o008", "arm": "chapter", "truth": false, "got": false, "stmt": "第7章「被请喝茶」·秦熙·求知园·取下头盔为严厉致歉·温柔·防护服", "mat_len": 2603, "err": ""}
+{"idx": 1, "qid": "o009", "arm": "closed", "truth": true, "got": false, "stmt": "第15章「永恒奴役」·王明·警戒检查中心·提出认知疫苗而非防火墙·担忧·全息投影", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o009", "arm": "chapter", "truth": true, "got": true, "stmt": "第15章「永恒奴役」·王明·警戒检查中心·提出认知疫苗而非防火墙·担忧·全息投影", "mat_len": 2411, "err": ""}
+{"idx": 2, "qid": "o009", "arm": "closed", "truth": false, "got": false, "stmt": "第3章「身份谜团」·王明·警戒检查中心·提出认知疫苗而非防火墙·担忧·全息投影", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o009", "arm": "chapter", "truth": false, "got": false, "stmt": "第3章「身份谜团」·王明·警戒检查中心·提出认知疫苗而非防火墙·担忧·全息投影", "mat_len": 2345, "err": ""}
+{"idx": 1, "qid": "o010", "arm": "closed", "truth": true, "got": false, "stmt": "第8章「化解误会」·小李·警戒检查中心·感慨牺牲别过头去·伤感·防护服", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o010", "arm": "chapter", "truth": true, "got": false, "stmt": "第8章「化解误会」·小李·警戒检查中心·感慨牺牲别过头去·伤感·防护服", "mat_len": 2227, "err": ""}
+{"idx": 2, "qid": "o010", "arm": "closed", "truth": false, "got": false, "stmt": "第19章「蒙德的自由」·小李·警戒检查中心·感慨牺牲别过头去·伤感·防护服", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o010", "arm": "chapter", "truth": false, "got": false, "stmt": "第19章「蒙德的自由」·小李·警戒检查中心·感慨牺牲别过头去·伤感·防护服", "mat_len": 3183, "err": ""}
+{"idx": 1, "qid": "o011", "arm": "closed", "truth": true, "got": false, "stmt": "第19章「蒙德的自由」·琴团长·风神广场·重申骑士誓言·激昂·风鹰剑", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o011", "arm": "chapter", "truth": true, "got": true, "stmt": "第19章「蒙德的自由」·琴团长·风神广场·重申骑士誓言·激昂·风鹰剑", "mat_len": 3183, "err": ""}
+{"idx": 2, "qid": "o011", "arm": "closed", "truth": false, "got": false, "stmt": "第19章「蒙德的自由」·琴团长·风神广场·重申骑士誓言·激昂·蹦蹦炸弹", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o011", "arm": "chapter", "truth": false, "got": false, "stmt": "第19章「蒙德的自由」·琴团长·风神广场·重申骑士誓言·激昂·蹦蹦炸弹", "mat_len": 3183, "err": ""}
+{"idx": 1, "qid": "o012", "arm": "closed", "truth": true, "got": false, "stmt": "第12章「何为自由」·凯亚·蒙德·交付原石并安顿可莉·麻烦·布袋", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o012", "arm": "chapter", "truth": true, "got": true, "stmt": "第12章「何为自由」·凯亚·蒙德·交付原石并安顿可莉·麻烦·布袋", "mat_len": 2533, "err": ""}
+{"idx": 2, "qid": "o012", "arm": "closed", "truth": false, "got": false, "stmt": "第12章「何为自由」·凯亚·摘星崖·交付原石并安顿可莉·麻烦·布袋", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o012", "arm": "chapter", "truth": false, "got": false, "stmt": "第12章「何为自由」·凯亚·摘星崖·交付原石并安顿可莉·麻烦·布袋", "mat_len": 2533, "err": ""}
+{"idx": 1, "qid": "o013", "arm": "closed", "truth": true, "got": false, "stmt": "第4章「蜂巢社会蓝图」·陈默·六边形房间·读到信息错配论断·不安·《如何建设蜂巢社会》", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o013", "arm": "chapter", "truth": true, "got": true, "stmt": "第4章「蜂巢社会蓝图」·陈默·六边形房间·读到信息错配论断·不安·《如何建设蜂巢社会》", "mat_len": 2615, "err": ""}
+{"idx": 2, "qid": "o013", "arm": "closed", "truth": false, "got": false, "stmt": "第4章「蜂巢社会蓝图」·张明远·六边形房间·读到信息错配论断·不安·《如何建设蜂巢社会》", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o013", "arm": "chapter", "truth": false, "got": false, "stmt": "第4章「蜂巢社会蓝图」·张明远·六边形房间·读到信息错配论断·不安·《如何建设蜂巢社会》", "mat_len": 2615, "err": ""}
+{"idx": 1, "qid": "o014", "arm": "closed", "truth": true, "got": false, "stmt": "第8章「化解误会」·陈默·警戒检查中心·向沉眠装备敬礼·尊敬·机械犬", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o014", "arm": "chapter", "truth": true, "got": true, "stmt": "第8章「化解误会」·陈默·警戒检查中心·向沉眠装备敬礼·尊敬·机械犬", "mat_len": 2227, "err": ""}
+{"idx": 2, "qid": "o014", "arm": "closed", "truth": false, "got": false, "stmt": "第20章「致命危机」·陈默·警戒检查中心·向沉眠装备敬礼·尊敬·机械犬", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o014", "arm": "chapter", "truth": false, "got": false, "stmt": "第20章「致命危机」·陈默·警戒检查中心·向沉眠装备敬礼·尊敬·机械犬", "mat_len": 1945, "err": ""}
+{"idx": 1, "qid": "o015", "arm": "closed", "truth": true, "got": false, "stmt": "第15章「永恒奴役」·陈默·六边形房间·推演私有制加永生·恐惧·光幕", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o015", "arm": "chapter", "truth": true, "got": true, "stmt": "第15章「永恒奴役」·陈默·六边形房间·推演私有制加永生·恐惧·光幕", "mat_len": 2411, "err": ""}
+{"idx": 2, "qid": "o015", "arm": "closed", "truth": false, "got": false, "stmt": "第15章「永恒奴役」·陈默·六边形房间·推演私有制加永生·欣喜·光幕", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o015", "arm": "chapter", "truth": false, "got": false, "stmt": "第15章「永恒奴役」·陈默·六边形房间·推演私有制加永生·欣喜·光幕", "mat_len": 2411, "err": ""}
+{"idx": 1, "qid": "o016", "arm": "closed", "truth": true, "got": false, "stmt": "第21章「问题的答案」·陈默·蒙德·见到风神虚影·想起·小道具", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o016", "arm": "chapter", "truth": true, "got": true, "stmt": "第21章「问题的答案」·陈默·蒙德·见到风神虚影·想起·小道具", "mat_len": 2508, "err": ""}
+{"idx": 2, "qid": "o016", "arm": "closed", "truth": false, "got": false, "stmt": "第21章「问题的答案」·陈默·求知园·见到风神虚影·想起·小道具", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o016", "arm": "chapter", "truth": false, "got": false, "stmt": "第21章「问题的答案」·陈默·求知园·见到风神虚影·想起·小道具", "mat_len": 2508, "err": ""}
+{"idx": 1, "qid": "o017", "arm": "closed", "truth": true, "got": false, "stmt": "第1章「初见蜂巢世界」·陈默·求知园·领到临时协理员徽章·平静·电子徽章", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o017", "arm": "chapter", "truth": true, "got": true, "stmt": "第1章「初见蜂巢世界」·陈默·求知园·领到临时协理员徽章·平静·电子徽章", "mat_len": 5523, "err": ""}
+{"idx": 2, "qid": "o017", "arm": "closed", "truth": false, "got": false, "stmt": "第1章「初见蜂巢世界」·陈默·求知园·领到临时协理员徽章·平静·蹦蹦炸弹", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o017", "arm": "chapter", "truth": false, "got": false, "stmt": "第1章「初见蜂巢世界」·陈默·求知园·领到临时协理员徽章·平静·蹦蹦炸弹", "mat_len": 5523, "err": ""}
+{"idx": 1, "qid": "o018", "arm": "closed", "truth": true, "got": false, "stmt": "第2章「巧合还是阴谋」·陈默·暂留区·因宪法第二条留个心眼·留了个心眼·清理工具", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o018", "arm": "chapter", "truth": true, "got": true, "stmt": "第2章「巧合还是阴谋」·陈默·暂留区·因宪法第二条留个心眼·留了个心眼·清理工具", "mat_len": 2894, "err": ""}
+{"idx": 2, "qid": "o018", "arm": "closed", "truth": false, "got": false, "stmt": "第10章「初次见面」·陈默·暂留区·因宪法第二条留个心眼·留了个心眼·清理工具", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o018", "arm": "chapter", "truth": false, "got": false, "stmt": "第10章「初次见面」·陈默·暂留区·因宪法第二条留个心眼·留了个心眼·清理工具", "mat_len": 2106, "err": ""}
+{"idx": 1, "qid": "o019", "arm": "closed", "truth": true, "got": false, "stmt": "第3章「身份谜团」·陈默·巨子塔入口·被识别为L1待审核·不甘·扫描光束", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o019", "arm": "chapter", "truth": true, "got": true, "stmt": "第3章「身份谜团」·陈默·巨子塔入口·被识别为L1待审核·不甘·扫描光束", "mat_len": 2345, "err": ""}
+{"idx": 2, "qid": "o019", "arm": "closed", "truth": false, "got": false, "stmt": "第3章「身份谜团」·陈默·求知园·被识别为L1待审核·不甘·扫描光束", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o019", "arm": "chapter", "truth": false, "got": false, "stmt": "第3章「身份谜团」·陈默·求知园·被识别为L1待审核·不甘·扫描光束", "mat_len": 2345, "err": ""}
+{"idx": 1, "qid": "o020", "arm": "closed", "truth": true, "got": false, "stmt": "第5章「历史的断层」·张明远·求知园·讲述三战代价清单·伤感·光幕", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o020", "arm": "chapter", "truth": true, "got": true, "stmt": "第5章「历史的断层」·张明远·求知园·讲述三战代价清单·伤感·光幕", "mat_len": 2181, "err": ""}
+{"idx": 2, "qid": "o020", "arm": "closed", "truth": false, "got": false, "stmt": "第5章「历史的断层」·秦熙·求知园·讲述三战代价清单·伤感·光幕", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o020", "arm": "chapter", "truth": false, "got": false, "stmt": "第5章「历史的断层」·秦熙·求知园·讲述三战代价清单·伤感·光幕", "mat_len": 2181, "err": ""}
+{"idx": 1, "qid": "o022", "arm": "closed", "truth": true, "got": false, "stmt": "第7章「被请喝茶」·陈默·白色房间·被质问是否自由派探子·害怕·金属桌子", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o022", "arm": "chapter", "truth": true, "got": true, "stmt": "第7章「被请喝茶」·陈默·白色房间·被质问是否自由派探子·害怕·金属桌子", "mat_len": 2603, "err": ""}
+{"idx": 2, "qid": "o022", "arm": "closed", "truth": false, "got": false, "stmt": "第7章「被请喝茶」·陈默·白色房间·被质问是否自由派探子·兴奋·金属桌子", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o022", "arm": "chapter", "truth": false, "got": false, "stmt": "第7章「被请喝茶」·陈默·白色房间·被质问是否自由派探子·兴奋·金属桌子", "mat_len": 2603, "err": ""}
+{"idx": 1, "qid": "o023", "arm": "closed", "truth": true, "got": false, "stmt": "第9章「灵境：原神」·陈默·七天神像·触摸七天神像获得风之力·兴奋·原石", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o023", "arm": "chapter", "truth": true, "got": false, "stmt": "第9章「灵境：原神」·陈默·七天神像·触摸七天神像获得风之力·兴奋·原石", "mat_len": 2334, "err": ""}
+{"idx": 2, "qid": "o023", "arm": "closed", "truth": false, "got": false, "stmt": "第9章「灵境：原神」·陈默·求知园·触摸七天神像获得风之力·兴奋·原石", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o023", "arm": "chapter", "truth": false, "got": false, "stmt": "第9章「灵境：原神」·陈默·求知园·触摸七天神像获得风之力·兴奋·原石", "mat_len": 2334, "err": ""}
+{"idx": 1, "qid": "o024", "arm": "closed", "truth": true, "got": false, "stmt": "第10章「初次见面」·诺艾尔·蒙德·自我介绍为骑士团女仆·绯红·相遇之源", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o024", "arm": "chapter", "truth": true, "got": true, "stmt": "第10章「初次见面」·诺艾尔·蒙德·自我介绍为骑士团女仆·绯红·相遇之源", "mat_len": 2106, "err": ""}
+{"idx": 2, "qid": "o024", "arm": "closed", "truth": false, "got": false, "stmt": "第19章「蒙德的自由」·诺艾尔·蒙德·自我介绍为骑士团女仆·绯红·相遇之源", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o024", "arm": "chapter", "truth": false, "got": false, "stmt": "第19章「蒙德的自由」·诺艾尔·蒙德·自我介绍为骑士团女仆·绯红·相遇之源", "mat_len": 3183, "err": ""}
+{"idx": 1, "qid": "o025", "arm": "closed", "truth": true, "got": false, "stmt": "第11章「接风宴」·琴团长·餐厅·授予荣誉骑士称号·宣誓·满足沙拉", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o025", "arm": "chapter", "truth": true, "got": false, "stmt": "第11章「接风宴」·琴团长·餐厅·授予荣誉骑士称号·宣誓·满足沙拉", "mat_len": 2501, "err": ""}
+{"idx": 2, "qid": "o025", "arm": "closed", "truth": false, "got": false, "stmt": "第11章「接风宴」·凯亚·餐厅·授予荣誉骑士称号·宣誓·满足沙拉", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o025", "arm": "chapter", "truth": false, "got": false, "stmt": "第11章「接风宴」·凯亚·餐厅·授予荣誉骑士称号·宣誓·满足沙拉", "mat_len": 2501, "err": ""}
+{"idx": 1, "qid": "o026", "arm": "closed", "truth": true, "got": false, "stmt": "第12章「何为自由」·陈默·风龙废墟·破开封印直面特瓦林·轻声呢喃·风鹰剑", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o026", "arm": "chapter", "truth": true, "got": false, "stmt": "第12章「何为自由」·陈默·风龙废墟·破开封印直面特瓦林·轻声呢喃·风鹰剑", "mat_len": 2533, "err": ""}
+{"idx": 2, "qid": "o026", "arm": "closed", "truth": false, "got": false, "stmt": "第12章「何为自由」·陈默·摘星崖·破开封印直面特瓦林·轻声呢喃·风鹰剑", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o026", "arm": "chapter", "truth": false, "got": false, "stmt": "第12章「何为自由」·陈默·摘星崖·破开封印直面特瓦林·轻声呢喃·风鹰剑", "mat_len": 2533, "err": ""}
+{"idx": 1, "qid": "o028", "arm": "closed", "truth": true, "got": false, "stmt": "第14章「暗流涌动」·秦熙·个人办公室·提出认知污染风险·关切·防护服", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o028", "arm": "chapter", "truth": true, "got": true, "stmt": "第14章「暗流涌动」·秦熙·个人办公室·提出认知污染风险·关切·防护服", "mat_len": 2263, "err": ""}
+{"idx": 2, "qid": "o028", "arm": "closed", "truth": false, "got": false, "stmt": "第14章「暗流涌动」·秦熙·个人办公室·提出认知污染风险·关切·风鹰剑", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o028", "arm": "chapter", "truth": false, "got": false, "stmt": "第14章「暗流涌动」·秦熙·个人办公室·提出认知污染风险·关切·风鹰剑", "mat_len": 2263, "err": ""}
+{"idx": 1, "qid": "o029", "arm": "closed", "truth": true, "got": false, "stmt": "第16章「生命的需求」·张明远·求知园·解释禁止自我意识AI·眉头一皱·光幕", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o029", "arm": "chapter", "truth": true, "got": false, "stmt": "第16章「生命的需求」·张明远·求知园·解释禁止自我意识AI·眉头一皱·光幕", "mat_len": 2273, "err": ""}
+{"idx": 2, "qid": "o029", "arm": "closed", "truth": false, "got": false, "stmt": "第16章「生命的需求」·张明远·巨子塔入口·解释禁止自我意识AI·眉头一皱·光幕", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o029", "arm": "chapter", "truth": false, "got": false, "stmt": "第16章「生命的需求」·张明远·巨子塔入口·解释禁止自我意识AI·眉头一皱·光幕", "mat_len": 2273, "err": ""}
+{"idx": 1, "qid": "o030", "arm": "closed", "truth": true, "got": false, "stmt": "第17章「反击宣告」·陈默·摘星崖·宣告向自由派反击·心情复杂·塞西莉亚花", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o030", "arm": "chapter", "truth": true, "got": true, "stmt": "第17章「反击宣告」·陈默·摘星崖·宣告向自由派反击·心情复杂·塞西莉亚花", "mat_len": 2370, "err": ""}
+{"idx": 2, "qid": "o030", "arm": "closed", "truth": false, "got": false, "stmt": "第20章「致命危机」·陈默·摘星崖·宣告向自由派反击·心情复杂·塞西莉亚花", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o030", "arm": "chapter", "truth": false, "got": false, "stmt": "第20章「致命危机」·陈默·摘星崖·宣告向自由派反击·心情复杂·塞西莉亚花", "mat_len": 1945, "err": ""}
+{"idx": 1, "qid": "o031", "arm": "closed", "truth": true, "got": false, "stmt": "第18章「新的故事」·陈默·图书馆·创作《风之种》寓言·豁然·蒲公英茶", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o031", "arm": "chapter", "truth": true, "got": true, "stmt": "第18章「新的故事」·陈默·图书馆·创作《风之种》寓言·豁然·蒲公英茶", "mat_len": 3159, "err": ""}
+{"idx": 2, "qid": "o031", "arm": "closed", "truth": false, "got": false, "stmt": "第18章「新的故事」·巨子·图书馆·创作《风之种》寓言·豁然·蒲公英茶", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o031", "arm": "chapter", "truth": false, "got": false, "stmt": "第18章「新的故事」·巨子·图书馆·创作《风之种》寓言·豁然·蒲公英茶", "mat_len": 3159, "err": ""}
+{"idx": 1, "qid": "o032", "arm": "closed", "truth": true, "got": false, "stmt": "第19章「蒙德的自由」·诺艾尔·蒙德·主张人人都是守护者·握紧拳头·风之种", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o032", "arm": "chapter", "truth": true, "got": true, "stmt": "第19章「蒙德的自由」·诺艾尔·蒙德·主张人人都是守护者·握紧拳头·风之种", "mat_len": 3183, "err": ""}
+{"idx": 2, "qid": "o032", "arm": "closed", "truth": false, "got": false, "stmt": "第14章「暗流涌动」·诺艾尔·蒙德·主张人人都是守护者·握紧拳头·风之种", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o032", "arm": "chapter", "truth": false, "got": false, "stmt": "第14章「暗流涌动」·诺艾尔·蒙德·主张人人都是守护者·握紧拳头·风之种", "mat_len": 2263, "err": ""}
+{"idx": 1, "qid": "o034", "arm": "closed", "truth": true, "got": false, "stmt": "第22章「谢谢你 诺艾尔」·诺艾尔·蒙德广场·率贫民起事战死·坚定·断剑", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o034", "arm": "chapter", "truth": true, "got": true, "stmt": "第22章「谢谢你 诺艾尔」·诺艾尔·蒙德广场·率贫民起事战死·坚定·断剑", "mat_len": 3277, "err": ""}
+{"idx": 2, "qid": "o034", "arm": "closed", "truth": false, "got": false, "stmt": "第22章「谢谢你 诺艾尔」·诺艾尔·蒙德广场·率贫民起事战死·欣喜·断剑", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o034", "arm": "chapter", "truth": false, "got": false, "stmt": "第22章「谢谢你 诺艾尔」·诺艾尔·蒙德广场·率贫民起事战死·欣喜·断剑", "mat_len": 3277, "err": ""}
+{"idx": 1, "qid": "o035", "arm": "closed", "truth": true, "got": false, "stmt": "第23章「再别蒙德」 · 派蒙 · 摘星崖 · 叮嘱他早点回来 · 抓住陈默的衣袖 · 塞西莉亚花", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o035", "arm": "chapter", "truth": true, "got": true, "stmt": "第23章「再别蒙德」 · 派蒙 · 摘星崖 · 叮嘱他早点回来 · 抓住陈默的衣袖 · 塞西莉亚花", "mat_len": 2385, "err": ""}
+{"idx": 2, "qid": "o035", "arm": "closed", "truth": false, "got": false, "stmt": "第23章「再别蒙德」·派蒙·风龙废墟·叮嘱他早点回来·抓住衣袖·塞西莉亚花", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o035", "arm": "chapter", "truth": false, "got": false, "stmt": "第23章「再别蒙德」·派蒙·风龙废墟·叮嘱他早点回来·抓住衣袖·塞西莉亚花", "mat_len": 2385, "err": ""}
+{"idx": 1, "qid": "o036", "arm": "closed", "truth": true, "got": false, "stmt": "第4章「蜂巢社会蓝图」·陈默·舱室·梳理病灶到制度的因果·喜欢·《如何建设蜂巢社会》", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o036", "arm": "chapter", "truth": true, "got": false, "stmt": "第4章「蜂巢社会蓝图」·陈默·舱室·梳理病灶到制度的因果·喜欢·《如何建设蜂巢社会》", "mat_len": 2615, "err": ""}
+{"idx": 2, "qid": "o036", "arm": "closed", "truth": false, "got": false, "stmt": "第4章「蜂巢社会蓝图」·陈默·舱室·梳理病灶到制度的因果·喜欢·蒲公英茶", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o036", "arm": "chapter", "truth": false, "got": false, "stmt": "第4章「蜂巢社会蓝图」·陈默·舱室·梳理病灶到制度的因果·喜欢·蒲公英茶", "mat_len": 2615, "err": ""}
+{"idx": 1, "qid": "o037", "arm": "closed", "truth": true, "got": false, "stmt": "第15章「永恒奴役」·秦熙·警戒检查中心·判断糖衣包毒丸·严肃·数据图表", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o037", "arm": "chapter", "truth": true, "got": true, "stmt": "第15章「永恒奴役」·秦熙·警戒检查中心·判断糖衣包毒丸·严肃·数据图表", "mat_len": 2411, "err": ""}
+{"idx": 2, "qid": "o037", "arm": "closed", "truth": false, "got": false, "stmt": "第15章「永恒奴役」·诺艾尔·警戒检查中心·判断糖衣包毒丸·严肃·数据图表", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o037", "arm": "chapter", "truth": false, "got": true, "stmt": "第15章「永恒奴役」·诺艾尔·警戒检查中心·判断糖衣包毒丸·严肃·数据图表", "mat_len": 2411, "err": ""}
+{"idx": 1, "qid": "o038", "arm": "closed", "truth": true, "got": false, "stmt": "第21章「问题的答案」·巨子·蒙德·自述创造灵境安放灵魂·遗憾·幻想朋友", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o038", "arm": "chapter", "truth": true, "got": true, "stmt": "第21章「问题的答案」·巨子·蒙德·自述创造灵境安放灵魂·遗憾·幻想朋友", "mat_len": 2508, "err": ""}
+{"idx": 2, "qid": "o038", "arm": "closed", "truth": false, "got": false, "stmt": "第21章「问题的答案」·巨子·求知园·自述创造灵境安放灵魂·遗憾·幻想朋友", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o038", "arm": "chapter", "truth": false, "got": true, "stmt": "第21章「问题的答案」·巨子·求知园·自述创造灵境安放灵魂·遗憾·幻想朋友", "mat_len": 2508, "err": ""}
+{"idx": 1, "qid": "o039", "arm": "closed", "truth": true, "got": false, "stmt": "第13章「终有一别」·派蒙·摘星崖·承认风神与他很像·追忆·塞西莉亚花", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o039", "arm": "chapter", "truth": true, "got": true, "stmt": "第13章「终有一别」·派蒙·摘星崖·承认风神与他很像·追忆·塞西莉亚花", "mat_len": 2283, "err": ""}
+{"idx": 2, "qid": "o039", "arm": "closed", "truth": false, "got": false, "stmt": "第6章「权限与贡献点」·派蒙·摘星崖·承认风神与他很像·追忆·塞西莉亚花", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o039", "arm": "chapter", "truth": false, "got": false, "stmt": "第6章「权限与贡献点」·派蒙·摘星崖·承认风神与他很像·追忆·塞西莉亚花", "mat_len": 2354, "err": ""}
+{"idx": 1, "qid": "o040", "arm": "closed", "truth": true, "got": false, "stmt": "第16章「生命的需求」·陈默·舱室·读到反对永生论述·坚定·《熵增的社会学启示》", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o040", "arm": "chapter", "truth": true, "got": true, "stmt": "第16章「生命的需求」·陈默·舱室·读到反对永生论述·坚定·《熵增的社会学启示》", "mat_len": 2273, "err": ""}
+{"idx": 2, "qid": "o040", "arm": "closed", "truth": false, "got": false, "stmt": "第16章「生命的需求」·王明·舱室·读到反对永生论述·坚定·《熵增的社会学启示》", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o040", "arm": "chapter", "truth": false, "got": true, "stmt": "第16章「生命的需求」·王明·舱室·读到反对永生论述·坚定·《熵增的社会学启示》", "mat_len": 2273, "err": ""}
+{"idx": 1, "qid": "o041", "arm": "closed", "truth": true, "got": false, "stmt": "第20章「致命危机」·陈默·果酒湖·预见至冬潜移默化入侵·担忧·甜甜花酿鸡", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o041", "arm": "chapter", "truth": true, "got": false, "stmt": "第20章「致命危机」·陈默·果酒湖·预见至冬潜移默化入侵·担忧·甜甜花酿鸡", "mat_len": 1945, "err": ""}
+{"idx": 2, "qid": "o041", "arm": "closed", "truth": false, "got": false, "stmt": "第8章「化解误会」·陈默·果酒湖·预见至冬潜移默化入侵·担忧·甜甜花酿鸡", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o041", "arm": "chapter", "truth": false, "got": false, "stmt": "第8章「化解误会」·陈默·果酒湖·预见至冬潜移默化入侵·担忧·甜甜花酿鸡", "mat_len": 2227, "err": ""}
+{"idx": 1, "qid": "o042", "arm": "closed", "truth": true, "got": false, "stmt": "第1章「初见蜂巢世界」·陈默·六边形房间·接收指南首次指引·茫然·世界漫游指南", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o042", "arm": "chapter", "truth": true, "got": true, "stmt": "第1章「初见蜂巢世界」·陈默·六边形房间·接收指南首次指引·茫然·世界漫游指南", "mat_len": 5523, "err": ""}
+{"idx": 2, "qid": "o042", "arm": "closed", "truth": false, "got": false, "stmt": "第1章「初见蜂巢世界」·陈默·六边形房间·接收指南首次指引·茫然·青铜鼎", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o042", "arm": "chapter", "truth": false, "got": false, "stmt": "第1章「初见蜂巢世界」·陈默·六边形房间·接收指南首次指引·茫然·青铜鼎", "mat_len": 5523, "err": ""}
+{"idx": 1, "qid": "o043", "arm": "closed", "truth": true, "got": false, "stmt": "第17章「反击宣告」·派蒙·摘星崖·自称自由的灵魂·痛苦·塞西莉亚花", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o043", "arm": "chapter", "truth": true, "got": true, "stmt": "第17章「反击宣告」·派蒙·摘星崖·自称自由的灵魂·痛苦·塞西莉亚花", "mat_len": 2370, "err": ""}
+{"idx": 2, "qid": "o043", "arm": "closed", "truth": false, "got": false, "stmt": "第17章「反击宣告」·派蒙·图书馆·自称自由的灵魂·痛苦·塞西莉亚花", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o043", "arm": "chapter", "truth": false, "got": false, "stmt": "第17章「反击宣告」·派蒙·图书馆·自称自由的灵魂·痛苦·塞西莉亚花", "mat_len": 2370, "err": ""}
+{"idx": 1, "qid": "o044", "arm": "closed", "truth": true, "got": false, "stmt": "第5章「历史的断层」·陈默·求知园·听张老讲三战因果链·震惊·光幕", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o044", "arm": "chapter", "truth": true, "got": true, "stmt": "第5章「历史的断层」·陈默·求知园·听张老讲三战因果链·震惊·光幕", "mat_len": 2181, "err": ""}
+{"idx": 2, "qid": "o044", "arm": "closed", "truth": false, "got": false, "stmt": "第5章「历史的断层」·派蒙·求知园·听张老讲三战因果链·震惊·光幕", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o044", "arm": "chapter", "truth": false, "got": false, "stmt": "第5章「历史的断层」·派蒙·求知园·听张老讲三战因果链·震惊·光幕", "mat_len": 2181, "err": ""}
+{"idx": 1, "qid": "o045", "arm": "closed", "truth": true, "got": false, "stmt": "第四章「蜂巢社会蓝图」 · 陈默 · 舱室 · 读出巨子论信息错配 · 喜欢 · 指南", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o045", "arm": "chapter", "truth": true, "got": false, "stmt": "第四章「蜂巢社会蓝图」 · 陈默 · 舱室 · 读出巨子论信息错配 · 喜欢 · 指南", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o045", "arm": "closed", "truth": false, "got": false, "stmt": "第十六章「生命的需求」 · 陈默 · 舱室 · 读出巨子论信息错配 · 喜欢 · 指南", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o045", "arm": "chapter", "truth": false, "got": false, "stmt": "第十六章「生命的需求」 · 陈默 · 舱室 · 读出巨子论信息错配 · 喜欢 · 指南", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o046", "arm": "closed", "truth": true, "got": false, "stmt": "第十四章「暗流涌动」 · 陈默 · 六边形房间 · 向秦熙通报游戏诱导 · 沉重 · 指南", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o046", "arm": "chapter", "truth": true, "got": false, "stmt": "第十四章「暗流涌动」 · 陈默 · 六边形房间 · 向秦熙通报游戏诱导 · 沉重 · 指南", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o046", "arm": "closed", "truth": false, "got": false, "stmt": "第十四章「暗流涌动」 · 陈默 · 六边形房间 · 向秦熙通报游戏诱导 · 轻松 · 指南", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o046", "arm": "chapter", "truth": false, "got": false, "stmt": "第十四章「暗流涌动」 · 陈默 · 六边形房间 · 向秦熙通报游戏诱导 · 轻松 · 指南", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o047", "arm": "closed", "truth": true, "got": false, "stmt": "第四章「蜂巢社会蓝图」 · 陈默 · 六边形房间 · 查记录知进过巨子塔 · 冷汗 · 指南", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o047", "arm": "chapter", "truth": true, "got": false, "stmt": "第四章「蜂巢社会蓝图」 · 陈默 · 六边形房间 · 查记录知进过巨子塔 · 冷汗 · 指南", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o047", "arm": "closed", "truth": false, "got": false, "stmt": "第四章「蜂巢社会蓝图」 · 陈默 · 六边形房间 · 向张老追问世界大战 · 冷汗 · 指南", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o047", "arm": "chapter", "truth": false, "got": false, "stmt": "第四章「蜂巢社会蓝图」 · 陈默 · 六边形房间 · 向张老追问世界大战 · 冷汗 · 指南", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o048", "arm": "closed", "truth": true, "got": false, "stmt": "第七章「被请喝茶」 · 陈默 · 警戒检查中心 · 被巡逻人员带走审讯 · 忐忑 · 防护服", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o048", "arm": "chapter", "truth": true, "got": false, "stmt": "第七章「被请喝茶」 · 陈默 · 警戒检查中心 · 被巡逻人员带走审讯 · 忐忑 · 防护服", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o048", "arm": "closed", "truth": false, "got": false, "stmt": "第七章「被请喝茶」 · 陈默 · 警戒检查中心 · 被巡逻人员带走审讯 · 平静 · 防护服", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o048", "arm": "chapter", "truth": false, "got": false, "stmt": "第七章「被请喝茶」 · 陈默 · 警戒检查中心 · 被巡逻人员带走审讯 · 平静 · 防护服", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o049", "arm": "closed", "truth": true, "got": false, "stmt": "第八章「化解误会」 · 小李 · 警戒检查中心 · 带领参观退役战争机器人 · 伤感 · 防护服", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o049", "arm": "chapter", "truth": true, "got": false, "stmt": "第八章「化解误会」 · 小李 · 警戒检查中心 · 带领参观退役战争机器人 · 伤感 · 防护服", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o049", "arm": "closed", "truth": false, "got": false, "stmt": "第八章「化解误会」 · 小李 · 巨子塔 · 带领参观退役战争机器人 · 伤感 · 防护服", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o049", "arm": "chapter", "truth": false, "got": false, "stmt": "第八章「化解误会」 · 小李 · 巨子塔 · 带领参观退役战争机器人 · 伤感 · 防护服", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o050", "arm": "closed", "truth": true, "got": false, "stmt": "第十八章「新的故事」 · 派蒙 · 风神像的手掌 · 俯瞰蒙德夜谈愚人众 · 严肃 · 酒盏", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o050", "arm": "chapter", "truth": true, "got": false, "stmt": "第十八章「新的故事」 · 派蒙 · 风神像的手掌 · 俯瞰蒙德夜谈愚人众 · 严肃 · 酒盏", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o050", "arm": "closed", "truth": false, "got": false, "stmt": "第十八章「新的故事」 · 诺艾尔 · 风神像的手掌 · 俯瞰蒙德夜谈愚人众 · 严肃 · 酒盏", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o050", "arm": "chapter", "truth": false, "got": false, "stmt": "第十八章「新的故事」 · 诺艾尔 · 风神像的手掌 · 俯瞰蒙德夜谈愚人众 · 严肃 · 酒盏", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o051", "arm": "closed", "truth": true, "got": false, "stmt": "第五章「历史的断层」 · 张明远 · 求知园 · 亲述第三次世界大战 · 孤寂 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o051", "arm": "chapter", "truth": true, "got": false, "stmt": "第五章「历史的断层」 · 张明远 · 求知园 · 亲述第三次世界大战 · 孤寂 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o051", "arm": "closed", "truth": false, "got": false, "stmt": "第六章「权限与贡献点」 · 张明远 · 求知园 · 亲述第三次世界大战 · 孤寂 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o051", "arm": "chapter", "truth": false, "got": false, "stmt": "第六章「权限与贡献点」 · 张明远 · 求知园 · 亲述第三次世界大战 · 孤寂 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o052", "arm": "closed", "truth": true, "got": false, "stmt": "第十一章「接风宴」 · 琴 · 西风骑士团 · 设宴并宣告讨伐风魔龙 · 宣誓 · 满足沙拉", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o052", "arm": "chapter", "truth": true, "got": false, "stmt": "第十一章「接风宴」 · 琴 · 西风骑士团 · 设宴并宣告讨伐风魔龙 · 宣誓 · 满足沙拉", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o052", "arm": "closed", "truth": false, "got": false, "stmt": "第十一章「接风宴」 · 琴 · 风龙废墟 · 设宴并宣告讨伐风魔龙 · 宣誓 · 满足沙拉", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o052", "arm": "chapter", "truth": false, "got": false, "stmt": "第十一章「接风宴」 · 琴 · 风龙废墟 · 设宴并宣告讨伐风魔龙 · 宣誓 · 满足沙拉", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o053", "arm": "closed", "truth": true, "got": false, "stmt": "第二十三章「再别蒙德」 · 陈默 · 摘星崖 · 道出自由是有约束的守护 · 坚定 · 塞西莉亚花", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o053", "arm": "chapter", "truth": true, "got": false, "stmt": "第二十三章「再别蒙德」 · 陈默 · 摘星崖 · 道出自由是有约束的守护 · 坚定 · 塞西莉亚花", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o053", "arm": "closed", "truth": false, "got": false, "stmt": "第二十三章「再别蒙德」 · 陈默 · 摘星崖 · 道出自由是有约束的守护 · 茫然 · 塞西莉亚花", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o053", "arm": "chapter", "truth": false, "got": false, "stmt": "第二十三章「再别蒙德」 · 陈默 · 摘星崖 · 道出自由是有约束的守护 · 茫然 · 塞西莉亚花", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o054", "arm": "closed", "truth": true, "got": false, "stmt": "第二十一章「问题的答案」 · 风神大人 · 蒙德城 · 自述验证理想的试验田 · 温和 · 小道具", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o054", "arm": "chapter", "truth": true, "got": false, "stmt": "第二十一章「问题的答案」 · 风神大人 · 蒙德城 · 自述验证理想的试验田 · 温和 · 小道具", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o054", "arm": "closed", "truth": false, "got": false, "stmt": "第二十一章「问题的答案」 · 派蒙 · 蒙德城 · 自述验证理想的试验田 · 温和 · 小道具", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o054", "arm": "chapter", "truth": false, "got": false, "stmt": "第二十一章「问题的答案」 · 派蒙 · 蒙德城 · 自述验证理想的试验田 · 温和 · 小道具", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q002", "arm": "closed", "truth": true, "got": false, "stmt": "第四章「蜂巢社会蓝图」 · 陈默 · 六边形房间 · 回忆旧时代四大门派 · 同情 · 标准餐", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q002", "arm": "chapter", "truth": true, "got": false, "stmt": "第四章「蜂巢社会蓝图」 · 陈默 · 六边形房间 · 回忆旧时代四大门派 · 同情 · 标准餐", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q002", "arm": "closed", "truth": false, "got": false, "stmt": "第四章「蜂巢社会蓝图」 · 陈默 · 六边形房间 · 回忆第三次世界大战 · 同情 · 标准餐", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q002", "arm": "chapter", "truth": false, "got": false, "stmt": "第四章「蜂巢社会蓝图」 · 陈默 · 六边形房间 · 回忆第三次世界大战 · 同情 · 标准餐", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q004", "arm": "closed", "truth": true, "got": false, "stmt": "第三章「身份谜团」 · 陈默 · 舱室 · 追问指南的制造方法遭拒 · 陈默感觉愤怒和不甘 · 指南", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q004", "arm": "chapter", "truth": true, "got": false, "stmt": "第三章「身份谜团」 · 陈默 · 舱室 · 追问指南的制造方法遭拒 · 陈默感觉愤怒和不甘 · 指南", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q004", "arm": "closed", "truth": false, "got": false, "stmt": "第三章「身份谜团」 · 陈默 · 舱室 · 追问指南的制造方法遭拒 · 愤怒不甘 · 贡献点查询机", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q004", "arm": "chapter", "truth": false, "got": false, "stmt": "第三章「身份谜团」 · 陈默 · 舱室 · 追问指南的制造方法遭拒 · 愤怒不甘 · 贡献点查询机", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q005", "arm": "closed", "truth": true, "got": false, "stmt": "第十七章「反击宣告」 · 派蒙 · 摘星崖 · 自称为自由的灵魂 · 怀念 · 塞西莉亚花", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q005", "arm": "chapter", "truth": true, "got": false, "stmt": "第十七章「反击宣告」 · 派蒙 · 摘星崖 · 自称为自由的灵魂 · 怀念 · 塞西莉亚花", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q005", "arm": "closed", "truth": false, "got": false, "stmt": "第十九章「蒙德的自由」 · 派蒙 · 摘星崖 · 自称为自由的灵魂 · 怀念 · 塞西莉亚花", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q005", "arm": "chapter", "truth": false, "got": false, "stmt": "第十九章「蒙德的自由」 · 派蒙 · 摘星崖 · 自称为自由的灵魂 · 怀念 · 塞西莉亚花", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q006", "arm": "closed", "truth": true, "got": false, "stmt": "第十六章「生命的需求」 · 陈默 · 舱室 · 读《熵增的社会学启示》 · 坚定 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q006", "arm": "chapter", "truth": true, "got": false, "stmt": "第十六章「生命的需求」 · 陈默 · 舱室 · 读《熵增的社会学启示》 · 坚定 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q006", "arm": "closed", "truth": false, "got": false, "stmt": "第十六章「生命的需求」 · 陈默 · 舱室 · 读《熵增的社会学启示》 · 犹豫 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q006", "arm": "chapter", "truth": false, "got": false, "stmt": "第十六章「生命的需求」 · 陈默 · 舱室 · 读《熵增的社会学启示》 · 犹豫 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q008", "arm": "closed", "truth": true, "got": false, "stmt": "第二十一章「问题的答案」 · 巨子陈默 · 蒙德城 · 把答案交给后来人 · 遗憾 · 小道具", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q008", "arm": "chapter", "truth": true, "got": false, "stmt": "第二十一章「问题的答案」 · 巨子陈默 · 蒙德城 · 把答案交给后来人 · 遗憾 · 小道具", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q008", "arm": "closed", "truth": false, "got": false, "stmt": "第二十一章「问题的答案」 · 巨子陈默 · 摘星崖 · 把答案交给后来人 · 遗憾 · 小道具", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q008", "arm": "chapter", "truth": false, "got": false, "stmt": "第二十一章「问题的答案」 · 巨子陈默 · 摘星崖 · 把答案交给后来人 · 遗憾 · 小道具", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q009", "arm": "closed", "truth": true, "got": false, "stmt": "第十六章「生命的需求」 · 张明远 · 求知园 · 道出禁令与未解之谜 · 眉头一皱 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q009", "arm": "chapter", "truth": true, "got": false, "stmt": "第十六章「生命的需求」 · 张明远 · 求知园 · 道出禁令与未解之谜 · 眉头一皱 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q009", "arm": "closed", "truth": false, "got": false, "stmt": "第十六章「生命的需求」 · 秦熙 · 求知园 · 道出禁令与未解之谜 · 眉头一皱 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q009", "arm": "chapter", "truth": false, "got": false, "stmt": "第十六章「生命的需求」 · 秦熙 · 求知园 · 道出禁令与未解之谜 · 眉头一皱 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q010", "arm": "closed", "truth": true, "got": false, "stmt": "第二章「巧合还是阴谋」 · 陈默 · 暂留区 · 清洁后向指南质疑 · 陈默很快产生了疑点 · 清理工具", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q010", "arm": "chapter", "truth": true, "got": false, "stmt": "第二章「巧合还是阴谋」 · 陈默 · 暂留区 · 清洁后向指南质疑 · 陈默很快产生了疑点 · 清理工具", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q010", "arm": "closed", "truth": false, "got": false, "stmt": "第二章「巧合还是阴谋」 · 陈默 · 暂留区 · 清洁后向指南质疑 · 兴奋 · 清理工具", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q010", "arm": "chapter", "truth": false, "got": false, "stmt": "第二章「巧合还是阴谋」 · 陈默 · 暂留区 · 清洁后向指南质疑 · 兴奋 · 清理工具", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q011", "arm": "closed", "truth": true, "got": false, "stmt": "第六章「权限与贡献点」 · 张明远 · 求知园 · 讲解贡献点与权限分级 · 语重心长 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q011", "arm": "chapter", "truth": true, "got": false, "stmt": "第六章「权限与贡献点」 · 张明远 · 求知园 · 讲解贡献点与权限分级 · 语重心长 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q011", "arm": "closed", "truth": false, "got": false, "stmt": "第六章「权限与贡献点」 · 秦熙 · 求知园 · 讲解贡献点与权限分级 · 语重心长 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q011", "arm": "chapter", "truth": false, "got": false, "stmt": "第六章「权限与贡献点」 · 秦熙 · 求知园 · 讲解贡献点与权限分级 · 语重心长 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q012", "arm": "closed", "truth": true, "got": false, "stmt": "第六章「权限与贡献点」 · 张明远 · 求知园 · 称机器人才是真正建设者 · 尊敬 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q012", "arm": "chapter", "truth": true, "got": false, "stmt": "第六章「权限与贡献点」 · 张明远 · 求知园 · 称机器人才是真正建设者 · 尊敬 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q012", "arm": "closed", "truth": false, "got": false, "stmt": "第六章「权限与贡献点」 · 张明远 · 求知园 · 称巨子才是真正建设者 · 尊敬 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q012", "arm": "chapter", "truth": false, "got": false, "stmt": "第六章「权限与贡献点」 · 张明远 · 求知园 · 称巨子才是真正建设者 · 尊敬 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q013", "arm": "closed", "truth": true, "got": false, "stmt": "第三章「身份谜团」 · 陈默 · 舱室 · 称指南是反馈的眼睛耳朵 · 迫切 · 指南", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q013", "arm": "chapter", "truth": true, "got": false, "stmt": "第三章「身份谜团」 · 陈默 · 舱室 · 称指南是反馈的眼睛耳朵 · 迫切 · 指南", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q013", "arm": "closed", "truth": false, "got": false, "stmt": "第三章「身份谜团」 · 张明远 · 舱室 · 称指南是反馈的眼睛耳朵 · 迫切 · 指南", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q013", "arm": "chapter", "truth": false, "got": false, "stmt": "第三章「身份谜团」 · 张明远 · 舱室 · 称指南是反馈的眼睛耳朵 · 迫切 · 指南", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q014", "arm": "closed", "truth": true, "got": false, "stmt": "第一章「初见蜂巢世界」 · 陈默 · 六边形房间 · 听指南讲共识根本原则 · 认可 · 合成餐", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q014", "arm": "chapter", "truth": true, "got": false, "stmt": "第一章「初见蜂巢世界」 · 陈默 · 六边形房间 · 听指南讲共识根本原则 · 认可 · 合成餐", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q014", "arm": "closed", "truth": false, "got": false, "stmt": "第三章「身份谜团」 · 陈默 · 六边形房间 · 听指南讲共识根本原则 · 认可 · 合成餐", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q014", "arm": "chapter", "truth": false, "got": false, "stmt": "第三章「身份谜团」 · 陈默 · 六边形房间 · 听指南讲共识根本原则 · 认可 · 合成餐", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q015", "arm": "closed", "truth": true, "got": false, "stmt": "第十五章「永恒奴役」 · 秦熙 · 警戒检查中心 · 开会判定认知污染威胁 · 做出这样的判断 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q015", "arm": "chapter", "truth": true, "got": false, "stmt": "第十五章「永恒奴役」 · 秦熙 · 警戒检查中心 · 开会判定认知污染威胁 · 做出这样的判断 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q015", "arm": "closed", "truth": false, "got": false, "stmt": "第十五章「永恒奴役」 · 张明远 · 警戒检查中心 · 开会判定认知污染威胁 · 做出判断 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q015", "arm": "chapter", "truth": false, "got": false, "stmt": "第十五章「永恒奴役」 · 张明远 · 警戒检查中心 · 开会判定认知污染威胁 · 做出判断 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q016", "arm": "closed", "truth": true, "got": false, "stmt": "第十六章「生命的需求」 · 陈默 · 求知园 · 承认自己从未想过这问题 · 心中一颤 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q016", "arm": "chapter", "truth": true, "got": false, "stmt": "第十六章「生命的需求」 · 陈默 · 求知园 · 承认自己从未想过这问题 · 心中一颤 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q016", "arm": "closed", "truth": false, "got": false, "stmt": "第十六章「生命的需求」 · 陈默 · 求知园 · 承认自己从未想过这问题 · 得意 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q016", "arm": "chapter", "truth": false, "got": false, "stmt": "第十六章「生命的需求」 · 陈默 · 求知园 · 承认自己从未想过这问题 · 得意 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q017", "arm": "closed", "truth": true, "got": false, "stmt": "第十一章「接风宴」 · 派蒙 · 蒙德 · 按先来后到起名小艾尔 · 骄傲 · 临时入住手续", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q017", "arm": "chapter", "truth": true, "got": false, "stmt": "第十一章「接风宴」 · 派蒙 · 蒙德 · 按先来后到起名小艾尔 · 骄傲 · 临时入住手续", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q017", "arm": "closed", "truth": false, "got": false, "stmt": "第十一章「接风宴」 · 琴 · 蒙德 · 按先来后到起名小艾尔 · 骄傲 · 临时入住手续", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q017", "arm": "chapter", "truth": false, "got": false, "stmt": "第十一章「接风宴」 · 琴 · 蒙德 · 按先来后到起名小艾尔 · 骄傲 · 临时入住手续", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q018", "arm": "closed", "truth": true, "got": false, "stmt": "第十八章「新的故事」 · 小艾尔 · 蒙德城 · 拒当王者只要陪伴 · 脸红 · 满足沙拉", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q018", "arm": "chapter", "truth": true, "got": false, "stmt": "第十八章「新的故事」 · 小艾尔 · 蒙德城 · 拒当王者只要陪伴 · 脸红 · 满足沙拉", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q018", "arm": "closed", "truth": false, "got": false, "stmt": "第十八章「新的故事」 · 小艾尔 · 蒙德城 · 拒当王者只要陪伴 · 冷淡 · 满足沙拉", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q018", "arm": "chapter", "truth": false, "got": false, "stmt": "第十八章「新的故事」 · 小艾尔 · 蒙德城 · 拒当王者只要陪伴 · 冷淡 · 满足沙拉", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q019", "arm": "closed", "truth": true, "got": false, "stmt": "第十三章「终有一别」 · 派蒙 · 蒙德城 · 说出自己想要的是陪伴 · 些许埋怨 · 情书", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q019", "arm": "chapter", "truth": true, "got": false, "stmt": "第十三章「终有一别」 · 派蒙 · 蒙德城 · 说出自己想要的是陪伴 · 些许埋怨 · 情书", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q019", "arm": "closed", "truth": false, "got": false, "stmt": "第十七章「反击宣告」 · 派蒙 · 蒙德城 · 说出自己想要的是陪伴 · 些许埋怨 · 情书", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q019", "arm": "chapter", "truth": false, "got": false, "stmt": "第十七章「反击宣告」 · 派蒙 · 蒙德城 · 说出自己想要的是陪伴 · 些许埋怨 · 情书", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q020", "arm": "closed", "truth": true, "got": false, "stmt": "第十三章「终有一别」 · 诺艾尔 · 蒙德城 · 以女仆口吻写情书 · 难过 · 情书", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q020", "arm": "chapter", "truth": true, "got": false, "stmt": "第十三章「终有一别」 · 诺艾尔 · 蒙德城 · 以女仆口吻写情书 · 难过 · 情书", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q020", "arm": "closed", "truth": false, "got": false, "stmt": "第十三章「终有一别」 · 诺艾尔 · 蒙德城 · 以女仆口吻写情书 · 坦然自若 · 情书", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q020", "arm": "chapter", "truth": false, "got": false, "stmt": "第十三章「终有一别」 · 诺艾尔 · 蒙德城 · 以女仆口吻写情书 · 坦然自若 · 情书", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q021", "arm": "closed", "truth": true, "got": false, "stmt": "第十三章「终有一别」 · 陈默 · 摘星崖 · 打破角色扮演的告白 · 郑重 · 塞西莉亚花", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q021", "arm": "chapter", "truth": true, "got": false, "stmt": "第十三章「终有一别」 · 陈默 · 摘星崖 · 打破角色扮演的告白 · 郑重 · 塞西莉亚花", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q021", "arm": "closed", "truth": false, "got": false, "stmt": "第十三章「终有一别」 · 陈默 · 摘星崖 · 打破角色扮演的告白 · 敷衍 · 塞西莉亚花", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q021", "arm": "chapter", "truth": false, "got": false, "stmt": "第十三章「终有一别」 · 陈默 · 摘星崖 · 打破角色扮演的告白 · 敷衍 · 塞西莉亚花", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q022", "arm": "closed", "truth": true, "got": false, "stmt": "第十九章「蒙德的自由」 · 诗人 · 蒙德城 · 宣扬绝对力量与永生 · 沉痛 · 寓言故事", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q022", "arm": "chapter", "truth": true, "got": false, "stmt": "第十九章「蒙德的自由」 · 诗人 · 蒙德城 · 宣扬绝对力量与永生 · 沉痛 · 寓言故事", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q022", "arm": "closed", "truth": false, "got": false, "stmt": "第十九章「蒙德的自由」 · 诗人 · 风龙废墟 · 宣扬绝对力量与永生 · 沉痛 · 寓言故事", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q022", "arm": "chapter", "truth": false, "got": false, "stmt": "第十九章「蒙德的自由」 · 诗人 · 风龙废墟 · 宣扬绝对力量与永生 · 沉痛 · 寓言故事", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q023", "arm": "closed", "truth": true, "got": false, "stmt": "第二十一章「问题的答案」 · 巨子陈默 · 蒙德城 · 为自由灵魂另造世界 · 好奇 · 试验田", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q023", "arm": "chapter", "truth": true, "got": false, "stmt": "第二十一章「问题的答案」 · 巨子陈默 · 蒙德城 · 为自由灵魂另造世界 · 好奇 · 试验田", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q023", "arm": "closed", "truth": false, "got": false, "stmt": "第二十一章「问题的答案」 · 巨子陈默 · 巨子塔 · 为自由灵魂另造世界 · 好奇 · 试验田", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q023", "arm": "chapter", "truth": false, "got": false, "stmt": "第二十一章「问题的答案」 · 巨子陈默 · 巨子塔 · 为自由灵魂另造世界 · 好奇 · 试验田", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q024", "arm": "closed", "truth": true, "got": false, "stmt": "第四章「蜂巢社会蓝图」 · 陈默 · 舱室 · 读出巨子三位先哲源头 · 点赞 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q024", "arm": "chapter", "truth": true, "got": false, "stmt": "第四章「蜂巢社会蓝图」 · 陈默 · 舱室 · 读出巨子三位先哲源头 · 点赞 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q024", "arm": "closed", "truth": false, "got": false, "stmt": "第六章「权限与贡献点」 · 陈默 · 舱室 · 读出巨子三位先哲源头 · 点赞 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q024", "arm": "chapter", "truth": false, "got": false, "stmt": "第六章「权限与贡献点」 · 陈默 · 舱室 · 读出巨子三位先哲源头 · 点赞 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q025", "arm": "closed", "truth": true, "got": false, "stmt": "第五章「历史的断层」 · 张明远 · 求知园 · 说超前技术封存巨子塔 · 认真 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q025", "arm": "chapter", "truth": true, "got": false, "stmt": "第五章「历史的断层」 · 张明远 · 求知园 · 说超前技术封存巨子塔 · 认真 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q025", "arm": "closed", "truth": false, "got": false, "stmt": "第五章「历史的断层」 · 张明远 · 巨子塔 · 说超前技术封存巨子塔 · 认真 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q025", "arm": "chapter", "truth": false, "got": false, "stmt": "第五章「历史的断层」 · 张明远 · 巨子塔 · 说超前技术封存巨子塔 · 认真 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q026", "arm": "closed", "truth": true, "got": false, "stmt": "第七章「被请喝茶」 · 秦熙 · 白色房间 · 进门自我介绍并致歉 · 语气温柔 · 防护服", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q026", "arm": "chapter", "truth": true, "got": false, "stmt": "第七章「被请喝茶」 · 秦熙 · 白色房间 · 进门自我介绍并致歉 · 语气温柔 · 防护服", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q026", "arm": "closed", "truth": false, "got": false, "stmt": "第七章「被请喝茶」 · 秦熙 · 巨子塔 · 进门自我介绍并致歉 · 语气温柔 · 防护服", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q026", "arm": "chapter", "truth": false, "got": false, "stmt": "第七章「被请喝茶」 · 秦熙 · 巨子塔 · 进门自我介绍并致歉 · 语气温柔 · 防护服", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q027", "arm": "closed", "truth": true, "got": false, "stmt": "第七章「被请喝茶」 · 陈默 · 舱室 · 展开包裹地球月球的星图 · 震撼 · 指南", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q027", "arm": "chapter", "truth": true, "got": false, "stmt": "第七章「被请喝茶」 · 陈默 · 舱室 · 展开包裹地球月球的星图 · 震撼 · 指南", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q027", "arm": "closed", "truth": false, "got": false, "stmt": "第七章「被请喝茶」 · 陈默 · 舱室 · 展开包裹地球月球的星图 · 震撼 · 全息投影", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q027", "arm": "chapter", "truth": false, "got": false, "stmt": "第七章「被请喝茶」 · 陈默 · 舱室 · 展开包裹地球月球的星图 · 震撼 · 全息投影", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q028", "arm": "closed", "truth": true, "got": false, "stmt": "第二章「巧合还是阴谋」 · 张明远 · 求知园 · 说巨子积劳成疾去世 · 敬仰 · 巨子塔", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q028", "arm": "chapter", "truth": true, "got": false, "stmt": "第二章「巧合还是阴谋」 · 张明远 · 求知园 · 说巨子积劳成疾去世 · 敬仰 · 巨子塔", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q028", "arm": "closed", "truth": false, "got": false, "stmt": "第二章「巧合还是阴谋」 · 张明远 · 求知园 · 说巨子积劳成疾去世 · 鄙夷 · 巨子塔", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q028", "arm": "chapter", "truth": false, "got": false, "stmt": "第二章「巧合还是阴谋」 · 张明远 · 求知园 · 说巨子积劳成疾去世 · 鄙夷 · 巨子塔", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q029", "arm": "closed", "truth": true, "got": false, "stmt": "第六章「权限与贡献点」 · 高瘦老人 · 求知园 · 感叹这是第五个了 · 羡慕 · 授权", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q029", "arm": "chapter", "truth": true, "got": false, "stmt": "第六章「权限与贡献点」 · 高瘦老人 · 求知园 · 感叹这是第五个了 · 羡慕 · 授权", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q029", "arm": "closed", "truth": false, "got": false, "stmt": "第六章「权限与贡献点」 · 张明远 · 求知园 · 感叹这是第五个了 · 羡慕 · 授权", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q029", "arm": "chapter", "truth": false, "got": false, "stmt": "第六章「权限与贡献点」 · 张明远 · 求知园 · 感叹这是第五个了 · 羡慕 · 授权", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q030", "arm": "closed", "truth": true, "got": false, "stmt": "第二章「巧合还是阴谋」 · 陈默 · 求知园 · 猜是巨子系统抓来他 · 笑容瞬间凝固 · 营销号视频", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q030", "arm": "chapter", "truth": true, "got": false, "stmt": "第二章「巧合还是阴谋」 · 陈默 · 求知园 · 猜是巨子系统抓来他 · 笑容瞬间凝固 · 营销号视频", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q030", "arm": "closed", "truth": false, "got": false, "stmt": "第二章「巧合还是阴谋」 · 陈默 · 巨子塔 · 猜是巨子系统抓来他 · 笑容瞬间凝固 · 营销号视频", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q030", "arm": "chapter", "truth": false, "got": false, "stmt": "第二章「巧合还是阴谋」 · 陈默 · 巨子塔 · 猜是巨子系统抓来他 · 笑容瞬间凝固 · 营销号视频", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q031", "arm": "closed", "truth": true, "got": false, "stmt": "第十六章「生命的需求」 · 张明远 · 求知园 · 反问自我意识的价值准则 · 卖起了关子 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q031", "arm": "chapter", "truth": true, "got": false, "stmt": "第十六章「生命的需求」 · 张明远 · 求知园 · 反问自我意识的价值准则 · 卖起了关子 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q031", "arm": "closed", "truth": false, "got": false, "stmt": "第十六章「生命的需求」 · 秦熙 · 求知园 · 反问自我意识的价值准则 · 卖起了关子 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q031", "arm": "chapter", "truth": false, "got": false, "stmt": "第十六章「生命的需求」 · 秦熙 · 求知园 · 反问自我意识的价值准则 · 卖起了关子 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q032", "arm": "closed", "truth": true, "got": false, "stmt": "第二十一章「问题的答案」 · 陈默 · 蒙德城 · 认出风神即巨子陈默 · 想起来了 · 巨子的回忆", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q032", "arm": "chapter", "truth": true, "got": false, "stmt": "第二十一章「问题的答案」 · 陈默 · 蒙德城 · 认出风神即巨子陈默 · 想起来了 · 巨子的回忆", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q032", "arm": "closed", "truth": false, "got": false, "stmt": "第二十一章「问题的答案」 · 陈默 · 蒙德城 · 否认风神与巨子有关 · 想起来了 · 巨子的回忆", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q032", "arm": "chapter", "truth": false, "got": false, "stmt": "第二十一章「问题的答案」 · 陈默 · 蒙德城 · 否认风神与巨子有关 · 想起来了 · 巨子的回忆", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q033", "arm": "closed", "truth": true, "got": false, "stmt": "第十三章「终有一别」 · 派蒙 · 蒙德城 · 自称与诺艾尔同为自由灵魂 · 嘟囔 · 情书", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q033", "arm": "chapter", "truth": true, "got": false, "stmt": "第十三章「终有一别」 · 派蒙 · 蒙德城 · 自称与诺艾尔同为自由灵魂 · 嘟囔 · 情书", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q033", "arm": "closed", "truth": false, "got": false, "stmt": "第十三章「终有一别」 · 派蒙 · 蒙德城 · 自称只是普通的游戏程序 · 嘟囔 · 情书", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q033", "arm": "chapter", "truth": false, "got": false, "stmt": "第十三章「终有一别」 · 派蒙 · 蒙德城 · 自称只是普通的游戏程序 · 嘟囔 · 情书", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q034", "arm": "closed", "truth": true, "got": false, "stmt": "第8章「化解误会」 · 陈默 · 舱室 · 设比较器与反馈 · 头疼 · 指南", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q034", "arm": "chapter", "truth": true, "got": true, "stmt": "第8章「化解误会」 · 陈默 · 舱室 · 设比较器与反馈 · 头疼 · 指南", "mat_len": 2227, "err": ""}
+{"idx": 2, "qid": "q034", "arm": "closed", "truth": false, "got": false, "stmt": "第4章「蜂巢社会蓝图」 · 陈默 · 舱室 · 设比较器与反馈 · 头疼 · 指南", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q034", "arm": "chapter", "truth": false, "got": false, "stmt": "第4章「蜂巢社会蓝图」 · 陈默 · 舱室 · 设比较器与反馈 · 头疼 · 指南", "mat_len": 2615, "err": ""}
+{"idx": 1, "qid": "q035", "arm": "closed", "truth": true, "got": false, "stmt": "第4章「蜂巢社会蓝图」 · 巨子 · 蜂巢 · 提控制论蓝图 · 必将实现 · 量子通信", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q035", "arm": "chapter", "truth": true, "got": true, "stmt": "第4章「蜂巢社会蓝图」 · 巨子 · 蜂巢 · 提控制论蓝图 · 必将实现 · 量子通信", "mat_len": 2615, "err": ""}
+{"idx": 2, "qid": "q035", "arm": "closed", "truth": false, "got": false, "stmt": "第4章「蜂巢社会蓝图」 · 秦熙 · 蜂巢 · 提控制论蓝图 · 必将实现 · 量子通信", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q035", "arm": "chapter", "truth": false, "got": false, "stmt": "第4章「蜂巢社会蓝图」 · 秦熙 · 蜂巢 · 提控制论蓝图 · 必将实现 · 量子通信", "mat_len": 2615, "err": ""}
+{"idx": 1, "qid": "q036", "arm": "closed", "truth": true, "got": false, "stmt": "第3章「身份谜团」 · 陈默 · 舱室 · 问指南制法 · 不甘 · 指南", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q036", "arm": "chapter", "truth": true, "got": true, "stmt": "第3章「身份谜团」 · 陈默 · 舱室 · 问指南制法 · 不甘 · 指南", "mat_len": 2345, "err": ""}
+{"idx": 2, "qid": "q036", "arm": "closed", "truth": false, "got": false, "stmt": "第3章「身份谜团」 · 陈默 · 求知园 · 问指南制法 · 不甘 · 指南", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q036", "arm": "chapter", "truth": false, "got": false, "stmt": "第3章「身份谜团」 · 陈默 · 求知园 · 问指南制法 · 不甘 · 指南", "mat_len": 2345, "err": ""}
+{"idx": 1, "qid": "q037", "arm": "closed", "truth": true, "got": false, "stmt": "第4章「蜂巢社会蓝图」 · 陈默 · 巨子塔 · 离塔即屏蔽 · 冒出一阵冷汗 · 词条", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q037", "arm": "chapter", "truth": true, "got": true, "stmt": "第4章「蜂巢社会蓝图」 · 陈默 · 巨子塔 · 离塔即屏蔽 · 冒出一阵冷汗 · 词条", "mat_len": 2615, "err": ""}
+{"idx": 2, "qid": "q037", "arm": "closed", "truth": false, "got": false, "stmt": "第4章「蜂巢社会蓝图」 · 陈默 · 巨子塔 · 讲三战惨状 · 冷汗 · 词条", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q037", "arm": "chapter", "truth": false, "got": false, "stmt": "第4章「蜂巢社会蓝图」 · 陈默 · 巨子塔 · 讲三战惨状 · 冷汗 · 词条", "mat_len": 2615, "err": ""}
+{"idx": 1, "qid": "q038", "arm": "closed", "truth": true, "got": false, "stmt": "第16章「生命的需求」 · 张老 · 求知园 · 谈智能涌现 · 眉头一皱 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q038", "arm": "chapter", "truth": true, "got": true, "stmt": "第16章「生命的需求」 · 张老 · 求知园 · 谈智能涌现 · 眉头一皱 · 光幕", "mat_len": 2273, "err": ""}
+{"idx": 2, "qid": "q038", "arm": "closed", "truth": false, "got": false, "stmt": "第16章「生命的需求」 · 张老 · 求知园 · 谈智能涌现 · 骄傲 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q038", "arm": "chapter", "truth": false, "got": false, "stmt": "第16章「生命的需求」 · 张老 · 求知园 · 谈智能涌现 · 骄傲 · 光幕", "mat_len": 2273, "err": ""}
+{"idx": 1, "qid": "o004", "arm": "closed", "truth": true, "got": false, "stmt": "第1章「初见蜂巢世界」 · 陈默 · 六边形房间 · 篇首即指南语 · 茫然 · 营销视频", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o004", "arm": "chapter", "truth": true, "got": true, "stmt": "第1章「初见蜂巢世界」 · 陈默 · 六边形房间 · 篇首即指南语 · 茫然 · 营销视频", "mat_len": 5523, "err": ""}
+{"idx": 2, "qid": "o004", "arm": "closed", "truth": false, "got": false, "stmt": "第1章「初见蜂巢世界」 · 陈默 · 六边形房间 · 篇首即指南语 · 茫然 · 塞西莉亚花", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o004", "arm": "chapter", "truth": false, "got": false, "stmt": "第1章「初见蜂巢世界」 · 陈默 · 六边形房间 · 篇首即指南语 · 茫然 · 塞西莉亚花", "mat_len": 5523, "err": ""}
+{"idx": 1, "qid": "o021", "arm": "closed", "truth": true, "got": false, "stmt": "第6章「权限与贡献点」 · 张老 · 求知园 · 讲权限分级 · 语重心长 · 永生技术原理", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o021", "arm": "chapter", "truth": true, "got": true, "stmt": "第6章「权限与贡献点」 · 张老 · 求知园 · 讲权限分级 · 语重心长 · 永生技术原理", "mat_len": 2354, "err": ""}
+{"idx": 2, "qid": "o021", "arm": "closed", "truth": false, "got": false, "stmt": "第7章「被请喝茶」 · 张老 · 求知园 · 讲权限分级 · 语重心长 · 永生技术原理", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o021", "arm": "chapter", "truth": false, "got": false, "stmt": "第7章「被请喝茶」 · 张老 · 求知园 · 讲权限分级 · 语重心长 · 永生技术原理", "mat_len": 2603, "err": ""}
+{"idx": 1, "qid": "o027", "arm": "closed", "truth": true, "got": false, "stmt": "第13章「终有一别」 · 派蒙 · 摘星崖 · 告诫小心自由派 · 泪水 · 塞西莉亚花", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o027", "arm": "chapter", "truth": true, "got": true, "stmt": "第13章「终有一别」 · 派蒙 · 摘星崖 · 告诫小心自由派 · 泪水 · 塞西莉亚花", "mat_len": 2283, "err": ""}
+{"idx": 2, "qid": "o027", "arm": "closed", "truth": false, "got": false, "stmt": "第13章「终有一别」 · 诺艾尔 · 摘星崖 · 告诫小心自由派 · 泪水 · 塞西莉亚花", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o027", "arm": "chapter", "truth": false, "got": true, "stmt": "第13章「终有一别」 · 诺艾尔 · 摘星崖 · 告诫小心自由派 · 泪水 · 塞西莉亚花", "mat_len": 2283, "err": ""}
+{"idx": 1, "qid": "o033", "arm": "closed", "truth": true, "got": false, "stmt": "第20章「致命危机」 · 陈默 · 蒙德城 · 见至冬信徒渗透 · 如坠冰窟 · 繁荣税", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o033", "arm": "chapter", "truth": true, "got": true, "stmt": "第20章「致命危机」 · 陈默 · 蒙德城 · 见至冬信徒渗透 · 如坠冰窟 · 繁荣税", "mat_len": 1945, "err": ""}
+{"idx": 2, "qid": "o033", "arm": "closed", "truth": false, "got": false, "stmt": "第20章「致命危机」 · 陈默 · 果酒湖 · 见至冬信徒渗透 · 如坠冰窟 · 繁荣税", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o033", "arm": "chapter", "truth": false, "got": false, "stmt": "第20章「致命危机」 · 陈默 · 果酒湖 · 见至冬信徒渗透 · 如坠冰窟 · 繁荣税", "mat_len": 1945, "err": ""}
+{"idx": 1, "qid": "q001", "arm": "closed", "truth": true, "got": false, "stmt": "第3章「身份谜团」 · 陈默 · 舱室 · 查资料被拒 · 跃跃欲试 · 指南", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q001", "arm": "chapter", "truth": true, "got": true, "stmt": "第3章「身份谜团」 · 陈默 · 舱室 · 查资料被拒 · 跃跃欲试 · 指南", "mat_len": 2345, "err": ""}
+{"idx": 2, "qid": "q001", "arm": "closed", "truth": false, "got": false, "stmt": "第3章「身份谜团」 · 陈默 · 舱室 · 设目标与比较器 · 跃跃欲试 · 指南", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q001", "arm": "chapter", "truth": false, "got": true, "stmt": "第3章「身份谜团」 · 陈默 · 舱室 · 设目标与比较器 · 跃跃欲试 · 指南", "mat_len": 2345, "err": ""}
+{"idx": 1, "qid": "q003", "arm": "closed", "truth": true, "got": false, "stmt": "第2章「巧合还是阴谋」 · 陈默 · 轨道 · 问宪法第二条 · 留了个心眼 · 清洁工具", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q003", "arm": "chapter", "truth": true, "got": true, "stmt": "第2章「巧合还是阴谋」 · 陈默 · 轨道 · 问宪法第二条 · 留了个心眼 · 清洁工具", "mat_len": 2894, "err": ""}
+{"idx": 2, "qid": "q003", "arm": "closed", "truth": false, "got": false, "stmt": "第2章「巧合还是阴谋」 · 陈默 · 轨道 · 问宪法第二条 · 欣喜 · 清洁工具", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q003", "arm": "chapter", "truth": false, "got": false, "stmt": "第2章「巧合还是阴谋」 · 陈默 · 轨道 · 问宪法第二条 · 欣喜 · 清洁工具", "mat_len": 2894, "err": ""}
+{"idx": 1, "qid": "q007", "arm": "closed", "truth": true, "got": false, "stmt": "第6章「权限与贡献点」 · 老人 · 求知园 · 说这是第五个 · 羡慕 · 授权", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q007", "arm": "chapter", "truth": true, "got": true, "stmt": "第6章「权限与贡献点」 · 老人 · 求知园 · 说这是第五个 · 羡慕 · 授权", "mat_len": 2354, "err": ""}
+{"idx": 2, "qid": "q007", "arm": "closed", "truth": false, "got": false, "stmt": "第6章「权限与贡献点」 · 老人 · 求知园 · 说这是第五个 · 羡慕 · 全息投影", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q007", "arm": "chapter", "truth": false, "got": false, "stmt": "第6章「权限与贡献点」 · 老人 · 求知园 · 说这是第五个 · 羡慕 · 全息投影", "mat_len": 2354, "err": ""}
+{"idx": 1, "qid": "o001i", "arm": "closed", "truth": true, "got": false, "stmt": "第4章「蜂巢社会蓝图」 · 陈默 · 六边形房间 · 查通行记录 · 冷汗 · 指南", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o001i", "arm": "chapter", "truth": true, "got": true, "stmt": "第4章「蜂巢社会蓝图」 · 陈默 · 六边形房间 · 查通行记录 · 冷汗 · 指南", "mat_len": 2615, "err": ""}
+{"idx": 2, "qid": "o001i", "arm": "closed", "truth": false, "got": false, "stmt": "第3章「身份谜团」 · 陈默 · 六边形房间 · 查通行记录 · 冷汗 · 指南", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o001i", "arm": "chapter", "truth": false, "got": false, "stmt": "第3章「身份谜团」 · 陈默 · 六边形房间 · 查通行记录 · 冷汗 · 指南", "mat_len": 2345, "err": ""}
+{"idx": 1, "qid": "o002i", "arm": "closed", "truth": true, "got": false, "stmt": "第22章「谢谢你 诺艾尔」 · 我 · 图书馆阅览室 · 改用第一人称 · 疑惑 · 星尘", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o002i", "arm": "chapter", "truth": true, "got": true, "stmt": "第22章「谢谢你 诺艾尔」 · 我 · 图书馆阅览室 · 改用第一人称 · 疑惑 · 星尘", "mat_len": 3277, "err": ""}
+{"idx": 2, "qid": "o002i", "arm": "closed", "truth": false, "got": false, "stmt": "第22章「谢谢你 诺艾尔」 · 派蒙 · 图书馆阅览室 · 改用第一人称 · 疑惑 · 星尘", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o002i", "arm": "chapter", "truth": false, "got": true, "stmt": "第22章「谢谢你 诺艾尔」 · 派蒙 · 图书馆阅览室 · 改用第一人称 · 疑惑 · 星尘", "mat_len": 3277, "err": ""}
+{"idx": 1, "qid": "o003i", "arm": "closed", "truth": true, "got": false, "stmt": "第22章「谢谢你 诺艾尔」 · 派蒙 · 图书馆阅览室 · 推演蒙德结局 · 泪光 · 星尘", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o003i", "arm": "chapter", "truth": true, "got": true, "stmt": "第22章「谢谢你 诺艾尔」 · 派蒙 · 图书馆阅览室 · 推演蒙德结局 · 泪光 · 星尘", "mat_len": 3277, "err": ""}
+{"idx": 2, "qid": "o003i", "arm": "closed", "truth": false, "got": false, "stmt": "第22章「谢谢你 诺艾尔」 · 派蒙 · 琴的办公室 · 推演蒙德结局 · 泪光 · 星尘", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o003i", "arm": "chapter", "truth": false, "got": false, "stmt": "第22章「谢谢你 诺艾尔」 · 派蒙 · 琴的办公室 · 推演蒙德结局 · 泪光 · 星尘", "mat_len": 3277, "err": ""}
+{"idx": 1, "qid": "o004i", "arm": "closed", "truth": true, "got": false, "stmt": "第23章「再别蒙德」 · 陈默 · 舱室 · 章末无后记 · 坚定 · 推演模型", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o004i", "arm": "chapter", "truth": true, "got": true, "stmt": "第23章「再别蒙德」 · 陈默 · 舱室 · 章末无后记 · 坚定 · 推演模型", "mat_len": 2385, "err": ""}
+{"idx": 2, "qid": "o004i", "arm": "closed", "truth": false, "got": false, "stmt": "第23章「再别蒙德」 · 陈默 · 舱室 · 篇首即指南语 · 坚定 · 推演模型", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o004i", "arm": "chapter", "truth": false, "got": false, "stmt": "第23章「再别蒙德」 · 陈默 · 舱室 · 篇首即指南语 · 坚定 · 推演模型", "mat_len": 2385, "err": ""}
+{"idx": 1, "qid": "o005i", "arm": "closed", "truth": true, "got": false, "stmt": "第22章「谢谢你 诺艾尔」 · 陈默 · 图书馆阅览室 · 剥离神之眼 · 谨慎 · 门窗", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o005i", "arm": "chapter", "truth": true, "got": false, "stmt": "第22章「谢谢你 诺艾尔」 · 陈默 · 图书馆阅览室 · 剥离神之眼 · 谨慎 · 门窗", "mat_len": 3277, "err": ""}
+{"idx": 2, "qid": "o005i", "arm": "closed", "truth": false, "got": false, "stmt": "第22章「谢谢你 诺艾尔」 · 陈默 · 图书馆阅览室 · 剥离神之眼 · 兴奋 · 门窗", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o005i", "arm": "chapter", "truth": false, "got": false, "stmt": "第22章「谢谢你 诺艾尔」 · 陈默 · 图书馆阅览室 · 剥离神之眼 · 兴奋 · 门窗", "mat_len": 3277, "err": ""}
+{"idx": 1, "qid": "o006i", "arm": "closed", "truth": true, "got": false, "stmt": "第21章「问题的答案」 · 巨子 · 蒙德城 · 交付后来者 · 温和 · 小道具", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o006i", "arm": "chapter", "truth": true, "got": true, "stmt": "第21章「问题的答案」 · 巨子 · 蒙德城 · 交付后来者 · 温和 · 小道具", "mat_len": 2508, "err": ""}
+{"idx": 2, "qid": "o006i", "arm": "closed", "truth": false, "got": false, "stmt": "第21章「问题的答案」 · 巨子 · 蒙德城 · 交付后来者 · 温和 · 风鹰剑", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o006i", "arm": "chapter", "truth": false, "got": false, "stmt": "第21章「问题的答案」 · 巨子 · 蒙德城 · 交付后来者 · 温和 · 风鹰剑", "mat_len": 2508, "err": ""}
+{"idx": 1, "qid": "o007i", "arm": "closed", "truth": true, "got": false, "stmt": "第5章「历史的断层」 · 张明远 · 求知园 · 讲三战惨状 · 低沉 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o007i", "arm": "chapter", "truth": true, "got": true, "stmt": "第5章「历史的断层」 · 张明远 · 求知园 · 讲三战惨状 · 低沉 · 光幕", "mat_len": 2181, "err": ""}
+{"idx": 2, "qid": "o007i", "arm": "closed", "truth": false, "got": false, "stmt": "第6章「权限与贡献点」 · 张明远 · 求知园 · 讲三战惨状 · 低沉 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o007i", "arm": "chapter", "truth": false, "got": false, "stmt": "第6章「权限与贡献点」 · 张明远 · 求知园 · 讲三战惨状 · 低沉 · 光幕", "mat_len": 2354, "err": ""}
+{"idx": 1, "qid": "o008i", "arm": "closed", "truth": true, "got": false, "stmt": "第14章「暗流涌动」 · 秦熙 · 警戒检查中心 · 通报自由派 · 严肃 · 全息投影", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o008i", "arm": "chapter", "truth": true, "got": true, "stmt": "第14章「暗流涌动」 · 秦熙 · 警戒检查中心 · 通报自由派 · 严肃 · 全息投影", "mat_len": 2263, "err": ""}
+{"idx": 2, "qid": "o008i", "arm": "closed", "truth": false, "got": false, "stmt": "第14章「暗流涌动」 · 小李 · 警戒检查中心 · 通报自由派 · 严肃 · 全息投影", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o008i", "arm": "chapter", "truth": false, "got": false, "stmt": "第14章「暗流涌动」 · 小李 · 警戒检查中心 · 通报自由派 · 严肃 · 全息投影", "mat_len": 2263, "err": ""}
+{"idx": 1, "qid": "o009i", "arm": "closed", "truth": true, "got": false, "stmt": "第15章「永恒奴役」 · 王明 · 环形全息界面 · 提认知疫苗 · 担忧 · 全息投影", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o009i", "arm": "chapter", "truth": true, "got": true, "stmt": "第15章「永恒奴役」 · 王明 · 环形全息界面 · 提认知疫苗 · 担忧 · 全息投影", "mat_len": 2411, "err": ""}
+{"idx": 2, "qid": "o009i", "arm": "closed", "truth": false, "got": false, "stmt": "第15章「永恒奴役」 · 王明 · 求知园 · 提认知疫苗 · 担忧 · 全息投影", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o009i", "arm": "chapter", "truth": false, "got": true, "stmt": "第15章「永恒奴役」 · 王明 · 求知园 · 提认知疫苗 · 担忧 · 全息投影", "mat_len": 2411, "err": ""}
+{"idx": 1, "qid": "o010i", "arm": "closed", "truth": true, "got": false, "stmt": "第8章「化解误会」 · 小李 · 防护服库房 · 带看退役机 · 伤感 · 来福", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o010i", "arm": "chapter", "truth": true, "got": true, "stmt": "第8章「化解误会」 · 小李 · 防护服库房 · 带看退役机 · 伤感 · 来福", "mat_len": 2227, "err": ""}
+{"idx": 2, "qid": "o010i", "arm": "closed", "truth": false, "got": false, "stmt": "第8章「化解误会」 · 小李 · 防护服库房 · 取名小艾尔 · 伤感 · 来福", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o010i", "arm": "chapter", "truth": false, "got": false, "stmt": "第8章「化解误会」 · 小李 · 防护服库房 · 取名小艾尔 · 伤感 · 来福", "mat_len": 2227, "err": ""}
+{"idx": 1, "qid": "o011i", "arm": "closed", "truth": true, "got": false, "stmt": "第19章「蒙德的自由」 · 琴 · 风神像下 · 宣告守护自由 · 激昂 · 风鹰剑", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o011i", "arm": "chapter", "truth": true, "got": true, "stmt": "第19章「蒙德的自由」 · 琴 · 风神像下 · 宣告守护自由 · 激昂 · 风鹰剑", "mat_len": 3183, "err": ""}
+{"idx": 2, "qid": "o011i", "arm": "closed", "truth": false, "got": false, "stmt": "第19章「蒙德的自由」 · 琴 · 风神像下 · 宣告守护自由 · 鄙夷 · 风鹰剑", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o011i", "arm": "chapter", "truth": false, "got": true, "stmt": "第19章「蒙德的自由」 · 琴 · 风神像下 · 宣告守护自由 · 鄙夷 · 风鹰剑", "mat_len": 3183, "err": ""}
+{"idx": 1, "qid": "o012i", "arm": "closed", "truth": true, "got": false, "stmt": "第19章「蒙德的自由」 · 凯亚 · 琴的办公室 · 报恐惧传染 · 凝重 · 风鹰剑", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o012i", "arm": "chapter", "truth": true, "got": false, "stmt": "第19章「蒙德的自由」 · 凯亚 · 琴的办公室 · 报恐惧传染 · 凝重 · 风鹰剑", "mat_len": 3183, "err": ""}
+{"idx": 2, "qid": "o012i", "arm": "closed", "truth": false, "got": false, "stmt": "第19章「蒙德的自由」 · 凯亚 · 琴的办公室 · 报恐惧传染 · 凝重 · 塞西莉亚花", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o012i", "arm": "chapter", "truth": false, "got": false, "stmt": "第19章「蒙德的自由」 · 凯亚 · 琴的办公室 · 报恐惧传染 · 凝重 · 塞西莉亚花", "mat_len": 3183, "err": ""}
+{"idx": 1, "qid": "o013i", "arm": "closed", "truth": true, "got": false, "stmt": "第4章「蜂巢社会蓝图」 · 巨子 · 蜂巢 · 论量子通信 · 必将实现 · 神经认证", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o013i", "arm": "chapter", "truth": true, "got": true, "stmt": "第4章「蜂巢社会蓝图」 · 巨子 · 蜂巢 · 论量子通信 · 必将实现 · 神经认证", "mat_len": 2615, "err": ""}
+{"idx": 2, "qid": "o013i", "arm": "closed", "truth": false, "got": false, "stmt": "第16章「生命的需求」 · 巨子 · 蜂巢 · 论量子通信 · 必将实现 · 神经认证", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o013i", "arm": "chapter", "truth": false, "got": false, "stmt": "第16章「生命的需求」 · 巨子 · 蜂巢 · 论量子通信 · 必将实现 · 神经认证", "mat_len": 2273, "err": ""}
+{"idx": 1, "qid": "o014i", "arm": "closed", "truth": true, "got": false, "stmt": "第8章「化解误会」 · 陈默 · 舱室 · 设目标值比较器 · 头疼 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o014i", "arm": "chapter", "truth": true, "got": true, "stmt": "第8章「化解误会」 · 陈默 · 舱室 · 设目标值比较器 · 头疼 · 光幕", "mat_len": 2227, "err": ""}
+{"idx": 2, "qid": "o014i", "arm": "closed", "truth": false, "got": false, "stmt": "第8章「化解误会」 · 张老 · 舱室 · 设目标值比较器 · 头疼 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o014i", "arm": "chapter", "truth": false, "got": false, "stmt": "第8章「化解误会」 · 张老 · 舱室 · 设目标值比较器 · 头疼 · 光幕", "mat_len": 2227, "err": ""}
+{"idx": 1, "qid": "o016i", "arm": "closed", "truth": true, "got": false, "stmt": "第21章「问题的答案」 · 巨子 · 蒙德城 · 自述一生两件事 · 遗憾 · 手稿", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o016i", "arm": "chapter", "truth": true, "got": true, "stmt": "第21章「问题的答案」 · 巨子 · 蒙德城 · 自述一生两件事 · 遗憾 · 手稿", "mat_len": 2508, "err": ""}
+{"idx": 2, "qid": "o016i", "arm": "closed", "truth": false, "got": false, "stmt": "第21章「问题的答案」 · 巨子 · 摘星崖 · 自述一生两件事 · 遗憾 · 手稿", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o016i", "arm": "chapter", "truth": false, "got": false, "stmt": "第21章「问题的答案」 · 巨子 · 摘星崖 · 自述一生两件事 · 遗憾 · 手稿", "mat_len": 2508, "err": ""}
+{"idx": 1, "qid": "o017i", "arm": "closed", "truth": true, "got": false, "stmt": "第1章「初见蜂巢世界」 · 陈默 · 六边形房间 · 唤指南得回应 · 茫然 · 合成餐", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o017i", "arm": "chapter", "truth": true, "got": true, "stmt": "第1章「初见蜂巢世界」 · 陈默 · 六边形房间 · 唤指南得回应 · 茫然 · 合成餐", "mat_len": 5523, "err": ""}
+{"idx": 2, "qid": "o017i", "arm": "closed", "truth": false, "got": false, "stmt": "第1章「初见蜂巢世界」 · 陈默 · 六边形房间 · 见至冬信徒渗透 · 茫然 · 合成餐", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o017i", "arm": "chapter", "truth": false, "got": false, "stmt": "第1章「初见蜂巢世界」 · 陈默 · 六边形房间 · 见至冬信徒渗透 · 茫然 · 合成餐", "mat_len": 5523, "err": ""}
+{"idx": 1, "qid": "o018i", "arm": "closed", "truth": true, "got": false, "stmt": "第2章「巧合还是阴谋」 · 老人 · 求知园 · 说巨子同名 · 庄重 · 工程控制论", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o018i", "arm": "chapter", "truth": true, "got": true, "stmt": "第2章「巧合还是阴谋」 · 老人 · 求知园 · 说巨子同名 · 庄重 · 工程控制论", "mat_len": 2894, "err": ""}
+{"idx": 2, "qid": "o018i", "arm": "closed", "truth": false, "got": false, "stmt": "第2章「巧合还是阴谋」 · 老人 · 求知园 · 说巨子同名 · 尴尬 · 工程控制论", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o018i", "arm": "chapter", "truth": false, "got": true, "stmt": "第2章「巧合还是阴谋」 · 老人 · 求知园 · 说巨子同名 · 尴尬 · 工程控制论", "mat_len": 2894, "err": ""}
+{"idx": 1, "qid": "o019i", "arm": "closed", "truth": true, "got": false, "stmt": "第3章「身份谜团」 · 陈默 · 舱室 · 查同名五人 · 诡异 · 指南", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o019i", "arm": "chapter", "truth": true, "got": true, "stmt": "第3章「身份谜团」 · 陈默 · 舱室 · 查同名五人 · 诡异 · 指南", "mat_len": 2345, "err": ""}
+{"idx": 2, "qid": "o019i", "arm": "closed", "truth": false, "got": false, "stmt": "第3章「身份谜团」 · 陈默 · 舱室 · 查同名五人 · 诡异 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o019i", "arm": "chapter", "truth": false, "got": false, "stmt": "第3章「身份谜团」 · 陈默 · 舱室 · 查同名五人 · 诡异 · 光幕", "mat_len": 2345, "err": ""}
+{"idx": 1, "qid": "o020i", "arm": "closed", "truth": true, "got": false, "stmt": "第5章「历史的断层」 · 张明远 · 求知园 · 补三战经历 · 孤寂 · 避难所", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o020i", "arm": "chapter", "truth": true, "got": true, "stmt": "第5章「历史的断层」 · 张明远 · 求知园 · 补三战经历 · 孤寂 · 避难所", "mat_len": 2181, "err": ""}
+{"idx": 2, "qid": "o020i", "arm": "closed", "truth": false, "got": false, "stmt": "第16章「生命的需求」 · 张明远 · 求知园 · 补三战经历 · 孤寂 · 避难所", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o020i", "arm": "chapter", "truth": false, "got": false, "stmt": "第16章「生命的需求」 · 张明远 · 求知园 · 补三战经历 · 孤寂 · 避难所", "mat_len": 2273, "err": ""}
+{"idx": 1, "qid": "o021i", "arm": "closed", "truth": true, "got": false, "stmt": "第6章「权限与贡献点」 · 张老 · 求知园 · 说初衷非魔鬼 · 意味深长 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o021i", "arm": "chapter", "truth": true, "got": true, "stmt": "第6章「权限与贡献点」 · 张老 · 求知园 · 说初衷非魔鬼 · 意味深长 · 光幕", "mat_len": 2354, "err": ""}
+{"idx": 2, "qid": "o021i", "arm": "closed", "truth": false, "got": false, "stmt": "第6章「权限与贡献点」 · 秦熙 · 求知园 · 说初衷非魔鬼 · 意味深长 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o021i", "arm": "chapter", "truth": false, "got": false, "stmt": "第6章「权限与贡献点」 · 秦熙 · 求知园 · 说初衷非魔鬼 · 意味深长 · 光幕", "mat_len": 2354, "err": ""}
+{"idx": 1, "qid": "o022i", "arm": "closed", "truth": true, "got": false, "stmt": "第7章「被请喝茶」 · 秦熙 · 白色房间 · 讲自由派渊源 · 复杂 · 防护服", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o022i", "arm": "chapter", "truth": true, "got": true, "stmt": "第7章「被请喝茶」 · 秦熙 · 白色房间 · 讲自由派渊源 · 复杂 · 防护服", "mat_len": 2603, "err": ""}
+{"idx": 2, "qid": "o022i", "arm": "closed", "truth": false, "got": false, "stmt": "第7章「被请喝茶」 · 秦熙 · 果酒湖 · 讲自由派渊源 · 复杂 · 防护服", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o022i", "arm": "chapter", "truth": false, "got": false, "stmt": "第7章「被请喝茶」 · 秦熙 · 果酒湖 · 讲自由派渊源 · 复杂 · 防护服", "mat_len": 2603, "err": ""}
+{"idx": 1, "qid": "o023i", "arm": "closed", "truth": true, "got": false, "stmt": "第9章「灵境：原神」 · 陈默 · 六边形房间 · 唤指南无响应 · 凉意 · 原神", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o023i", "arm": "chapter", "truth": true, "got": true, "stmt": "第9章「灵境：原神」 · 陈默 · 六边形房间 · 唤指南无响应 · 凉意 · 原神", "mat_len": 2334, "err": ""}
+{"idx": 2, "qid": "o023i", "arm": "closed", "truth": false, "got": false, "stmt": "第9章「灵境：原神」 · 陈默 · 六边形房间 · 自述一生两件事 · 凉意 · 原神", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o023i", "arm": "chapter", "truth": false, "got": false, "stmt": "第9章「灵境：原神」 · 陈默 · 六边形房间 · 自述一生两件事 · 凉意 · 原神", "mat_len": 2334, "err": ""}
+{"idx": 1, "qid": "o024i", "arm": "closed", "truth": true, "got": false, "stmt": "第11章「接风宴」 · 派蒙 · 西风骑士团 · 取名小艾尔 · 尴尬 · 满足沙拉", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o024i", "arm": "chapter", "truth": true, "got": true, "stmt": "第11章「接风宴」 · 派蒙 · 西风骑士团 · 取名小艾尔 · 尴尬 · 满足沙拉", "mat_len": 2501, "err": ""}
+{"idx": 2, "qid": "o024i", "arm": "closed", "truth": false, "got": false, "stmt": "第11章「接风宴」 · 派蒙 · 西风骑士团 · 取名小艾尔 · 兴奋 · 满足沙拉", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o024i", "arm": "chapter", "truth": false, "got": false, "stmt": "第11章「接风宴」 · 派蒙 · 西风骑士团 · 取名小艾尔 · 兴奋 · 满足沙拉", "mat_len": 2501, "err": ""}
+{"idx": 1, "qid": "o025i", "arm": "closed", "truth": true, "got": false, "stmt": "第11章「接风宴」 · 派蒙 · 圆桌 · 办演讲挨控诉 · 跳脚 · 烤肉排", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o025i", "arm": "chapter", "truth": true, "got": true, "stmt": "第11章「接风宴」 · 派蒙 · 圆桌 · 办演讲挨控诉 · 跳脚 · 烤肉排", "mat_len": 2501, "err": ""}
+{"idx": 2, "qid": "o025i", "arm": "closed", "truth": false, "got": false, "stmt": "第11章「接风宴」 · 诺艾尔 · 圆桌 · 办演讲挨控诉 · 跳脚 · 烤肉排", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o025i", "arm": "chapter", "truth": false, "got": false, "stmt": "第11章「接风宴」 · 诺艾尔 · 圆桌 · 办演讲挨控诉 · 跳脚 · 烤肉排", "mat_len": 2501, "err": ""}
+{"idx": 1, "qid": "o026i", "arm": "closed", "truth": true, "got": false, "stmt": "第19章「蒙德的自由」 · 派蒙 · 蒙德广场 · 观骑士团宣言 · 安静 · 风神像", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o026i", "arm": "chapter", "truth": true, "got": true, "stmt": "第19章「蒙德的自由」 · 派蒙 · 蒙德广场 · 观骑士团宣言 · 安静 · 风神像", "mat_len": 3183, "err": ""}
+{"idx": 2, "qid": "o026i", "arm": "closed", "truth": false, "got": false, "stmt": "第20章「致命危机」 · 派蒙 · 蒙德广场 · 观骑士团宣言 · 安静 · 风神像", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o026i", "arm": "chapter", "truth": false, "got": false, "stmt": "第20章「致命危机」 · 派蒙 · 蒙德广场 · 观骑士团宣言 · 安静 · 风神像", "mat_len": 1945, "err": ""}
+{"idx": 1, "qid": "o027i", "arm": "closed", "truth": true, "got": false, "stmt": "第13章「终有一别」 · 陈默 · 摘星崖 · 承诺还会再来 · 郑重 · 情书", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o027i", "arm": "chapter", "truth": true, "got": true, "stmt": "第13章「终有一别」 · 陈默 · 摘星崖 · 承诺还会再来 · 郑重 · 情书", "mat_len": 2283, "err": ""}
+{"idx": 2, "qid": "o027i", "arm": "closed", "truth": false, "got": false, "stmt": "第13章「终有一别」 · 派蒙 · 摘星崖 · 承诺还会再来 · 郑重 · 情书", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o027i", "arm": "chapter", "truth": false, "got": true, "stmt": "第13章「终有一别」 · 派蒙 · 摘星崖 · 承诺还会再来 · 郑重 · 情书", "mat_len": 2283, "err": ""}
+{"idx": 1, "qid": "o028i", "arm": "closed", "truth": true, "got": false, "stmt": "第14章「暗流涌动」 · 秦熙 · 个人办公室 · 提三个禁忌 · 严肃 · 全息投影", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o028i", "arm": "chapter", "truth": true, "got": true, "stmt": "第14章「暗流涌动」 · 秦熙 · 个人办公室 · 提三个禁忌 · 严肃 · 全息投影", "mat_len": 2263, "err": ""}
+{"idx": 2, "qid": "o028i", "arm": "closed", "truth": false, "got": false, "stmt": "第14章「暗流涌动」 · 秦熙 · 求知园 · 提三个禁忌 · 严肃 · 全息投影", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o028i", "arm": "chapter", "truth": false, "got": false, "stmt": "第14章「暗流涌动」 · 秦熙 · 求知园 · 提三个禁忌 · 严肃 · 全息投影", "mat_len": 2263, "err": ""}
+{"idx": 1, "qid": "o029i", "arm": "closed", "truth": true, "got": false, "stmt": "第16章「生命的需求」 · 张老 · 求知园 · 答AI被禁 · 卖起了关子 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o029i", "arm": "chapter", "truth": true, "got": true, "stmt": "第16章「生命的需求」 · 张老 · 求知园 · 答AI被禁 · 卖起了关子 · 光幕", "mat_len": 2273, "err": ""}
+{"idx": 2, "qid": "o029i", "arm": "closed", "truth": false, "got": false, "stmt": "第16章「生命的需求」 · 张老 · 求知园 · 说这是第五个 · 卖起了关子 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o029i", "arm": "chapter", "truth": false, "got": false, "stmt": "第16章「生命的需求」 · 张老 · 求知园 · 说这是第五个 · 卖起了关子 · 光幕", "mat_len": 2273, "err": ""}
+{"idx": 1, "qid": "o030i", "arm": "closed", "truth": true, "got": false, "stmt": "第17章「反击宣告」 · 派蒙 · 摘星崖 · 应下故事推演任务 · 兴奋 · 塞西莉亚花", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o030i", "arm": "chapter", "truth": true, "got": true, "stmt": "第17章「反击宣告」 · 派蒙 · 摘星崖 · 应下故事推演任务 · 兴奋 · 塞西莉亚花", "mat_len": 2370, "err": ""}
+{"idx": 2, "qid": "o030i", "arm": "closed", "truth": false, "got": false, "stmt": "第22章「谢谢你 诺艾尔」 · 派蒙 · 摘星崖 · 应下故事推演任务 · 兴奋 · 塞西莉亚花", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o030i", "arm": "chapter", "truth": false, "got": false, "stmt": "第22章「谢谢你 诺艾尔」 · 派蒙 · 摘星崖 · 应下故事推演任务 · 兴奋 · 塞西莉亚花", "mat_len": 3277, "err": ""}
+{"idx": 1, "qid": "o031i", "arm": "closed", "truth": true, "got": false, "stmt": "第18章「新的故事」 · 派蒙 · 风神像 · 坦白设计来路 · 求表扬 · 限量版纪念酒盏", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o031i", "arm": "chapter", "truth": true, "got": true, "stmt": "第18章「新的故事」 · 派蒙 · 风神像 · 坦白设计来路 · 求表扬 · 限量版纪念酒盏", "mat_len": 3159, "err": ""}
+{"idx": 2, "qid": "o031i", "arm": "closed", "truth": false, "got": false, "stmt": "第18章「新的故事」 · 派蒙 · 摘星崖 · 坦白设计来路 · 求表扬 · 限量版纪念酒盏", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o031i", "arm": "chapter", "truth": false, "got": false, "stmt": "第18章「新的故事」 · 派蒙 · 摘星崖 · 坦白设计来路 · 求表扬 · 限量版纪念酒盏", "mat_len": 3159, "err": ""}
+{"idx": 1, "qid": "o033i", "arm": "closed", "truth": true, "got": false, "stmt": "第20章「致命危机」 · 陈默 · 蒙德城中 · 察觉阴谋气息 · 诧异 · 至冬合作清单", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o033i", "arm": "chapter", "truth": true, "got": true, "stmt": "第20章「致命危机」 · 陈默 · 蒙德城中 · 察觉阴谋气息 · 诧异 · 至冬合作清单", "mat_len": 1945, "err": ""}
+{"idx": 2, "qid": "o033i", "arm": "closed", "truth": false, "got": false, "stmt": "第20章「致命危机」 · 陈默 · 蒙德城中 · 察觉阴谋气息 · 兴奋 · 至冬合作清单", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o033i", "arm": "chapter", "truth": false, "got": false, "stmt": "第20章「致命危机」 · 陈默 · 蒙德城中 · 察觉阴谋气息 · 兴奋 · 至冬合作清单", "mat_len": 1945, "err": ""}
+{"idx": 1, "qid": "o034i", "arm": "closed", "truth": true, "got": false, "stmt": "第22章「谢谢你 诺艾尔」 · 派蒙 · 图书馆 · 加速蒙德推演 · 好奇 · 星尘虚影", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o034i", "arm": "chapter", "truth": true, "got": true, "stmt": "第22章「谢谢你 诺艾尔」 · 派蒙 · 图书馆 · 加速蒙德推演 · 好奇 · 星尘虚影", "mat_len": 3277, "err": ""}
+{"idx": 2, "qid": "o034i", "arm": "closed", "truth": false, "got": false, "stmt": "第22章「谢谢你 诺艾尔」 · 派蒙 · 图书馆 · 写下风之寓言 · 好奇 · 星尘虚影", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o034i", "arm": "chapter", "truth": false, "got": false, "stmt": "第22章「谢谢你 诺艾尔」 · 派蒙 · 图书馆 · 写下风之寓言 · 好奇 · 星尘虚影", "mat_len": 3277, "err": ""}
+{"idx": 1, "qid": "o035i", "arm": "closed", "truth": true, "got": false, "stmt": "第23章「再别蒙德」 · 派蒙 · 摘星崖上 · 应许早日归来 · 抓住陈默的衣袖 · 塞西莉亚花束", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o035i", "arm": "chapter", "truth": true, "got": false, "stmt": "第23章「再别蒙德」 · 派蒙 · 摘星崖上 · 应许早日归来 · 抓住陈默的衣袖 · 塞西莉亚花束", "mat_len": 2385, "err": ""}
+{"idx": 2, "qid": "o035i", "arm": "closed", "truth": false, "got": false, "stmt": "第23章「再别蒙德」 · 派蒙 · 摘星崖上 · 应许早日归来 · 兴奋 · 塞西莉亚花束", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o035i", "arm": "chapter", "truth": false, "got": false, "stmt": "第23章「再别蒙德」 · 派蒙 · 摘星崖上 · 应许早日归来 · 兴奋 · 塞西莉亚花束", "mat_len": 2385, "err": ""}
+{"idx": 1, "qid": "o036i", "arm": "closed", "truth": true, "got": false, "stmt": "第4章「蜂巢社会蓝图」 · 陈默 · 舱室 · 梳理记忆 · 不安 · 《如何建设蜂巢社会》", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o036i", "arm": "chapter", "truth": true, "got": true, "stmt": "第4章「蜂巢社会蓝图」 · 陈默 · 舱室 · 梳理记忆 · 不安 · 《如何建设蜂巢社会》", "mat_len": 2615, "err": ""}
+{"idx": 2, "qid": "o036i", "arm": "closed", "truth": false, "got": false, "stmt": "第4章「蜂巢社会蓝图」 · 陈默 · 舱室 · 梳理记忆 · 不安 · 《熵增的社会学启示》", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o036i", "arm": "chapter", "truth": false, "got": false, "stmt": "第4章「蜂巢社会蓝图」 · 陈默 · 舱室 · 梳理记忆 · 不安 · 《熵增的社会学启示》", "mat_len": 2615, "err": ""}
+{"idx": 1, "qid": "o037i", "arm": "closed", "truth": true, "got": false, "stmt": "第18章「新的故事」 · 陈默 · 蒙德城中 · 识破糖衣说辞 · 警铃大作 · 限量版纪念酒盏", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o037i", "arm": "chapter", "truth": true, "got": true, "stmt": "第18章「新的故事」 · 陈默 · 蒙德城中 · 识破糖衣说辞 · 警铃大作 · 限量版纪念酒盏", "mat_len": 3159, "err": ""}
+{"idx": 2, "qid": "o037i", "arm": "closed", "truth": false, "got": false, "stmt": "第18章「新的故事」 · 陈默 · 蒙德城中 · 识破糖衣说辞 · 兴高采烈 · 限量版纪念酒盏", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o037i", "arm": "chapter", "truth": false, "got": false, "stmt": "第18章「新的故事」 · 陈默 · 蒙德城中 · 识破糖衣说辞 · 兴高采烈 · 限量版纪念酒盏", "mat_len": 3159, "err": ""}
+{"idx": 1, "qid": "o038i", "arm": "closed", "truth": true, "got": false, "stmt": "第16章「生命的需求」 · 陈默 · 求知园 · 追问禁令 · 愁容 · 《熵增的社会学启示》", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o038i", "arm": "chapter", "truth": true, "got": true, "stmt": "第16章「生命的需求」 · 陈默 · 求知园 · 追问禁令 · 愁容 · 《熵增的社会学启示》", "mat_len": 2273, "err": ""}
+{"idx": 2, "qid": "o038i", "arm": "closed", "truth": false, "got": false, "stmt": "第16章「生命的需求」 · 陈默 · 求知园 · 追问禁令 · 愁容 · 《如何建设蜂巢社会》", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o038i", "arm": "chapter", "truth": false, "got": false, "stmt": "第16章「生命的需求」 · 陈默 · 求知园 · 追问禁令 · 愁容 · 《如何建设蜂巢社会》", "mat_len": 2273, "err": ""}
+{"idx": 1, "qid": "o039i", "arm": "closed", "truth": true, "got": false, "stmt": "第2章「巧合还是阴谋」 · 陈默 · 求知园 · 听闻同名巨子 · 笑容瞬间凝固 · 《工程控制论》", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o039i", "arm": "chapter", "truth": true, "got": true, "stmt": "第2章「巧合还是阴谋」 · 陈默 · 求知园 · 听闻同名巨子 · 笑容瞬间凝固 · 《工程控制论》", "mat_len": 2894, "err": ""}
+{"idx": 2, "qid": "o039i", "arm": "closed", "truth": false, "got": false, "stmt": "第2章「巧合还是阴谋」 · 张明远 · 求知园 · 听闻同名巨子 · 笑容瞬间凝固 · 《工程控制论》", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o039i", "arm": "chapter", "truth": false, "got": false, "stmt": "第2章「巧合还是阴谋」 · 张明远 · 求知园 · 听闻同名巨子 · 笑容瞬间凝固 · 《工程控制论》", "mat_len": 2894, "err": ""}
+{"idx": 1, "qid": "o040i", "arm": "closed", "truth": true, "got": false, "stmt": "第21章「问题的答案」 · 巨子 · 蒙德 · 交托未竟之事业 · 遗憾 · 巨子塔与指南", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o040i", "arm": "chapter", "truth": true, "got": false, "stmt": "第21章「问题的答案」 · 巨子 · 蒙德 · 交托未竟之事业 · 遗憾 · 巨子塔与指南", "mat_len": 2508, "err": ""}
+{"idx": 2, "qid": "o040i", "arm": "closed", "truth": false, "got": false, "stmt": "第21章「问题的答案」 · 琴团长 · 蒙德 · 交托未竟之事业 · 遗憾 · 巨子塔与指南", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o040i", "arm": "chapter", "truth": false, "got": false, "stmt": "第21章「问题的答案」 · 琴团长 · 蒙德 · 交托未竟之事业 · 遗憾 · 巨子塔与指南", "mat_len": 2508, "err": ""}
+{"idx": 1, "qid": "o041i", "arm": "closed", "truth": true, "got": false, "stmt": "第22章「谢谢你 诺艾尔」 · 诺艾尔 · 蒙德城 · 独自上门劝告 · 苦涩 · 铠甲一副", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o041i", "arm": "chapter", "truth": true, "got": false, "stmt": "第22章「谢谢你 诺艾尔」 · 诺艾尔 · 蒙德城 · 独自上门劝告 · 苦涩 · 铠甲一副", "mat_len": 3277, "err": ""}
+{"idx": 2, "qid": "o041i", "arm": "closed", "truth": false, "got": false, "stmt": "第22章「谢谢你 诺艾尔」 · 诺艾尔 · 果酒湖边 · 独自上门劝告 · 苦涩 · 铠甲一副", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o041i", "arm": "chapter", "truth": false, "got": false, "stmt": "第22章「谢谢你 诺艾尔」 · 诺艾尔 · 果酒湖边 · 独自上门劝告 · 苦涩 · 铠甲一副", "mat_len": 3277, "err": ""}
+{"idx": 1, "qid": "o042i", "arm": "closed", "truth": true, "got": false, "stmt": "第21章「问题的答案」 · 陈默 · 蒙德城中 · 串起四样线索 · 明白了 · 巨子塔与指南", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o042i", "arm": "chapter", "truth": true, "got": false, "stmt": "第21章「问题的答案」 · 陈默 · 蒙德城中 · 串起四样线索 · 明白了 · 巨子塔与指南", "mat_len": 2508, "err": ""}
+{"idx": 2, "qid": "o042i", "arm": "closed", "truth": false, "got": false, "stmt": "第21章「问题的答案」 · 陈默 · 蒙德城中 · 写下风之寓言 · 明白了 · 巨子塔与指南", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o042i", "arm": "chapter", "truth": false, "got": false, "stmt": "第21章「问题的答案」 · 陈默 · 蒙德城中 · 写下风之寓言 · 明白了 · 巨子塔与指南", "mat_len": 2508, "err": ""}
+{"idx": 1, "qid": "o043i", "arm": "closed", "truth": true, "got": false, "stmt": "第21章「问题的答案」 · 风神 · 蒙德 · 判定已得信任者 · 骄傲 · 幻想朋友投影", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o043i", "arm": "chapter", "truth": true, "got": true, "stmt": "第21章「问题的答案」 · 风神 · 蒙德 · 判定已得信任者 · 骄傲 · 幻想朋友投影", "mat_len": 2508, "err": ""}
+{"idx": 2, "qid": "o043i", "arm": "closed", "truth": false, "got": false, "stmt": "第21章「问题的答案」 · 派蒙 · 蒙德 · 判定已得信任者 · 骄傲 · 幻想朋友投影", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o043i", "arm": "chapter", "truth": false, "got": false, "stmt": "第21章「问题的答案」 · 派蒙 · 蒙德 · 判定已得信任者 · 骄傲 · 幻想朋友投影", "mat_len": 2508, "err": ""}
+{"idx": 1, "qid": "o044i", "arm": "closed", "truth": true, "got": false, "stmt": "第5章「历史的断层」 · 张明远 · 求知园中 · 讲述大战之惨烈 · 孤寂 · 光幕地图", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o044i", "arm": "chapter", "truth": true, "got": false, "stmt": "第5章「历史的断层」 · 张明远 · 求知园中 · 讲述大战之惨烈 · 孤寂 · 光幕地图", "mat_len": 2181, "err": ""}
+{"idx": 2, "qid": "o044i", "arm": "closed", "truth": false, "got": false, "stmt": "第5章「历史的断层」 · 张明远 · 警戒检查中心 · 讲述大战之惨烈 · 孤寂 · 光幕地图", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o044i", "arm": "chapter", "truth": false, "got": false, "stmt": "第5章「历史的断层」 · 张明远 · 警戒检查中心 · 讲述大战之惨烈 · 孤寂 · 光幕地图", "mat_len": 2181, "err": ""}
+{"idx": 1, "qid": "o046i", "arm": "closed", "truth": true, "got": false, "stmt": "第15章「永恒奴役」 · 王明 · 警戒检查中心 · 提议认知疫苗 · 担忧 · 全息投影", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o046i", "arm": "chapter", "truth": true, "got": true, "stmt": "第15章「永恒奴役」 · 王明 · 警戒检查中心 · 提议认知疫苗 · 担忧 · 全息投影", "mat_len": 2411, "err": ""}
+{"idx": 2, "qid": "o046i", "arm": "closed", "truth": false, "got": false, "stmt": "第15章「永恒奴役」 · 王明 · 警戒检查中心 · 投下否定一票 · 担忧 · 全息投影", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o046i", "arm": "chapter", "truth": false, "got": false, "stmt": "第15章「永恒奴役」 · 王明 · 警戒检查中心 · 投下否定一票 · 担忧 · 全息投影", "mat_len": 2411, "err": ""}
+{"idx": 1, "qid": "o047i", "arm": "closed", "truth": true, "got": false, "stmt": "第17章「反击宣告」 · 陈默 · 摘星崖上 · 追问是否拥有生命 · 郑重 · 风神投影", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o047i", "arm": "chapter", "truth": true, "got": true, "stmt": "第17章「反击宣告」 · 陈默 · 摘星崖上 · 追问是否拥有生命 · 郑重 · 风神投影", "mat_len": 2370, "err": ""}
+{"idx": 2, "qid": "o047i", "arm": "closed", "truth": false, "got": false, "stmt": "第17章「反击宣告」 · 陈默 · 摘星崖上 · 追问是否拥有生命 · 悲愤 · 风神投影", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o047i", "arm": "chapter", "truth": false, "got": false, "stmt": "第17章「反击宣告」 · 陈默 · 摘星崖上 · 追问是否拥有生命 · 悲愤 · 风神投影", "mat_len": 2370, "err": ""}
+{"idx": 1, "qid": "o048i", "arm": "closed", "truth": true, "got": false, "stmt": "第6章「权限与贡献点」 · 张老 · 求知园中 · 讲解权限等级制 · 笑得眯起了眼 · 光幕地图", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o048i", "arm": "chapter", "truth": true, "got": true, "stmt": "第6章「权限与贡献点」 · 张老 · 求知园中 · 讲解权限等级制 · 笑得眯起了眼 · 光幕地图", "mat_len": 2354, "err": ""}
+{"idx": 2, "qid": "o048i", "arm": "closed", "truth": false, "got": false, "stmt": "第6章「权限与贡献点」 · 张老 · 警戒检查中心 · 讲解权限等级制 · 笑得眯起了眼 · 光幕地图", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o048i", "arm": "chapter", "truth": false, "got": false, "stmt": "第6章「权限与贡献点」 · 张老 · 警戒检查中心 · 讲解权限等级制 · 笑得眯起了眼 · 光幕地图", "mat_len": 2354, "err": ""}
+{"idx": 1, "qid": "o051i", "arm": "closed", "truth": true, "got": false, "stmt": "第4章「蜂巢社会蓝图」 · 陈默 · 舱室 · 查询入塔时间记录 · 冷汗 · 指南与光幕", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o051i", "arm": "chapter", "truth": true, "got": true, "stmt": "第4章「蜂巢社会蓝图」 · 陈默 · 舱室 · 查询入塔时间记录 · 冷汗 · 指南与光幕", "mat_len": 2615, "err": ""}
+{"idx": 2, "qid": "o051i", "arm": "closed", "truth": false, "got": false, "stmt": "第4章「蜂巢社会蓝图」 · 陈默 · 舱室 · 查询同名公民名单 · 冷汗 · 指南与光幕", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o051i", "arm": "chapter", "truth": false, "got": false, "stmt": "第4章「蜂巢社会蓝图」 · 陈默 · 舱室 · 查询同名公民名单 · 冷汗 · 指南与光幕", "mat_len": 2615, "err": ""}
+{"idx": 1, "qid": "o052i", "arm": "closed", "truth": true, "got": false, "stmt": "第22章「谢谢你 诺艾尔」 · 派蒙 · 图书馆 · 快进蒙德城画面 · 颤抖 · 星尘虚影", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o052i", "arm": "chapter", "truth": true, "got": true, "stmt": "第22章「谢谢你 诺艾尔」 · 派蒙 · 图书馆 · 快进蒙德城画面 · 颤抖 · 星尘虚影", "mat_len": 3277, "err": ""}
+{"idx": 2, "qid": "o052i", "arm": "closed", "truth": false, "got": false, "stmt": "第22章「谢谢你 诺艾尔」 · 派蒙 · 图书馆 · 快进蒙德城画面 · 颤抖 · 塞西莉亚花", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o052i", "arm": "chapter", "truth": false, "got": false, "stmt": "第22章「谢谢你 诺艾尔」 · 派蒙 · 图书馆 · 快进蒙德城画面 · 颤抖 · 塞西莉亚花", "mat_len": 3277, "err": ""}
+{"idx": 1, "qid": "o054i", "arm": "closed", "truth": true, "got": false, "stmt": "第15章「永恒奴役」 · 陈默 · 六边形房间 · 推演终产者之悲剧 · 恐惧 · 光幕推演", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o054i", "arm": "chapter", "truth": true, "got": true, "stmt": "第15章「永恒奴役」 · 陈默 · 六边形房间 · 推演终产者之悲剧 · 恐惧 · 光幕推演", "mat_len": 2411, "err": ""}
+{"idx": 2, "qid": "o054i", "arm": "closed", "truth": false, "got": false, "stmt": "第15章「永恒奴役」 · 陈默 · 求知园中 · 推演终产者之悲剧 · 恐惧 · 光幕推演", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o054i", "arm": "chapter", "truth": false, "got": false, "stmt": "第15章「永恒奴役」 · 陈默 · 求知园中 · 推演终产者之悲剧 · 恐惧 · 光幕推演", "mat_len": 2411, "err": ""}
+{"idx": 1, "qid": "q001i", "arm": "closed", "truth": true, "got": false, "stmt": "第6章「权限与贡献点」 · 张老 · 求知园 · 讲解权限级距 · 语重心长 · 贡献点机制", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q001i", "arm": "chapter", "truth": true, "got": true, "stmt": "第6章「权限与贡献点」 · 张老 · 求知园 · 讲解权限级距 · 语重心长 · 贡献点机制", "mat_len": 2354, "err": ""}
+{"idx": 2, "qid": "q001i", "arm": "closed", "truth": false, "got": false, "stmt": "第22章「谢谢你 诺艾尔」 · 张老 · 求知园 · 讲解权限级距 · 语重心长 · 贡献点机制", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q001i", "arm": "chapter", "truth": false, "got": false, "stmt": "第22章「谢谢你 诺艾尔」 · 张老 · 求知园 · 讲解权限级距 · 语重心长 · 贡献点机制", "mat_len": 3277, "err": ""}
+{"idx": 1, "qid": "q003i", "arm": "closed", "truth": true, "got": false, "stmt": "第2章「巧合还是阴谋」 · 陈默 · 暂留区 · 质询宪法条款 · 产生了疑点 · 轨道清洁机器人", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q003i", "arm": "chapter", "truth": true, "got": true, "stmt": "第2章「巧合还是阴谋」 · 陈默 · 暂留区 · 质询宪法条款 · 产生了疑点 · 轨道清洁机器人", "mat_len": 2894, "err": ""}
+{"idx": 2, "qid": "q003i", "arm": "closed", "truth": false, "got": false, "stmt": "第2章「巧合还是阴谋」 · 陈默 · 暂留区 · 质询宪法条款 · 产生了疑点 · 军用智能机器人", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q003i", "arm": "chapter", "truth": false, "got": false, "stmt": "第2章「巧合还是阴谋」 · 陈默 · 暂留区 · 质询宪法条款 · 产生了疑点 · 军用智能机器人", "mat_len": 2894, "err": ""}
+{"idx": 1, "qid": "q004i", "arm": "closed", "truth": true, "got": false, "stmt": "第3章「身份谜团」 · 陈默 · 巨子塔 · 访问请求待审核中 · 不甘 · 扫描光束落身", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q004i", "arm": "chapter", "truth": true, "got": true, "stmt": "第3章「身份谜团」 · 陈默 · 巨子塔 · 访问请求待审核中 · 不甘 · 扫描光束落身", "mat_len": 2345, "err": ""}
+{"idx": 2, "qid": "q004i", "arm": "closed", "truth": false, "got": false, "stmt": "第3章「身份谜团」 · 陈默 · 巨子塔 · 访问请求待审核中 · 大喜 · 扫描光束落身", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q004i", "arm": "chapter", "truth": false, "got": false, "stmt": "第3章「身份谜团」 · 陈默 · 巨子塔 · 访问请求待审核中 · 大喜 · 扫描光束落身", "mat_len": 2345, "err": ""}
+{"idx": 1, "qid": "q005i", "arm": "closed", "truth": true, "got": false, "stmt": "第21章「问题的答案」 · 派蒙 · 蒙德城中 · 惊呼风神大人现 · 惊叫 · 小道具一枚", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q005i", "arm": "chapter", "truth": true, "got": true, "stmt": "第21章「问题的答案」 · 派蒙 · 蒙德城中 · 惊呼风神大人现 · 惊叫 · 小道具一枚", "mat_len": 2508, "err": ""}
+{"idx": 2, "qid": "q005i", "arm": "closed", "truth": false, "got": false, "stmt": "第21章「问题的答案」 · 派蒙 · 蒙德城中 · 惊呼风神大人现 · 狂喜 · 小道具一枚", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q005i", "arm": "chapter", "truth": false, "got": false, "stmt": "第21章「问题的答案」 · 派蒙 · 蒙德城中 · 惊呼风神大人现 · 狂喜 · 小道具一枚", "mat_len": 2508, "err": ""}
+{"idx": 1, "qid": "q006i", "arm": "closed", "truth": true, "got": false, "stmt": "第15章「永恒奴役」 · 陈默 · 窗前 · 理解巨子为何拒永生 · 落泪 · 朝阳光芒", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q006i", "arm": "chapter", "truth": true, "got": true, "stmt": "第15章「永恒奴役」 · 陈默 · 窗前 · 理解巨子为何拒永生 · 落泪 · 朝阳光芒", "mat_len": 2411, "err": ""}
+{"idx": 2, "qid": "q006i", "arm": "closed", "truth": false, "got": false, "stmt": "第15章「永恒奴役」 · 陈默 · 窗前 · 理解巨子为何拒永生 · 落泪 · 塞西莉亚花", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q006i", "arm": "chapter", "truth": false, "got": false, "stmt": "第15章「永恒奴役」 · 陈默 · 窗前 · 理解巨子为何拒永生 · 落泪 · 塞西莉亚花", "mat_len": 2411, "err": ""}
+{"idx": 1, "qid": "q007i", "arm": "closed", "truth": true, "got": false, "stmt": "第5章「历史的断层」 · 张明远 · 求知园 · 道破取名之避讳 · 凝重 · 《控制论》", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q007i", "arm": "chapter", "truth": true, "got": true, "stmt": "第5章「历史的断层」 · 张明远 · 求知园 · 道破取名之避讳 · 凝重 · 《控制论》", "mat_len": 2181, "err": ""}
+{"idx": 2, "qid": "q007i", "arm": "closed", "truth": false, "got": false, "stmt": "第5章「历史的断层」 · 张明远 · 求知园 · 道破取名之避讳 · 恼火 · 《控制论》", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q007i", "arm": "chapter", "truth": false, "got": false, "stmt": "第5章「历史的断层」 · 张明远 · 求知园 · 道破取名之避讳 · 恼火 · 《控制论》", "mat_len": 2181, "err": ""}
+{"idx": 1, "qid": "q008i", "arm": "closed", "truth": true, "got": false, "stmt": "第16章「生命的需求」 · 陈默 · 求知园 · 得知AI何以被禁 · 心中一颤 · 意见稿全文", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q008i", "arm": "chapter", "truth": true, "got": false, "stmt": "第16章「生命的需求」 · 陈默 · 求知园 · 得知AI何以被禁 · 心中一颤 · 意见稿全文", "mat_len": 2273, "err": ""}
+{"idx": 2, "qid": "q008i", "arm": "closed", "truth": false, "got": false, "stmt": "第16章「生命的需求」 · 陈默 · 巨子塔 · 得知AI何以被禁 · 心中一颤 · 意见稿全文", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q008i", "arm": "chapter", "truth": false, "got": false, "stmt": "第16章「生命的需求」 · 陈默 · 巨子塔 · 得知AI何以被禁 · 心中一颤 · 意见稿全文", "mat_len": 2273, "err": ""}
+{"idx": 1, "qid": "q010i", "arm": "closed", "truth": true, "got": false, "stmt": "第2章「巧合还是阴谋」 · 陈默 · 暂留区 · 质疑宪法第二条 · 留了个心眼 · 清理工具一套", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q010i", "arm": "chapter", "truth": true, "got": false, "stmt": "第2章「巧合还是阴谋」 · 陈默 · 暂留区 · 质疑宪法第二条 · 留了个心眼 · 清理工具一套", "mat_len": 2894, "err": ""}
+{"idx": 2, "qid": "q010i", "arm": "closed", "truth": false, "got": false, "stmt": "第2章「巧合还是阴谋」 · 陈默 · 暂留区 · 查询同名公民 · 留了个心眼 · 清理工具一套", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q010i", "arm": "chapter", "truth": false, "got": false, "stmt": "第2章「巧合还是阴谋」 · 陈默 · 暂留区 · 查询同名公民 · 留了个心眼 · 清理工具一套", "mat_len": 2894, "err": ""}
+{"idx": 1, "qid": "q013i", "arm": "closed", "truth": true, "got": false, "stmt": "第3章「身份谜团」 · 陈默 · 舱室 · 追问指南如何反馈真实 · 涌出泪水 · 指南本体", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q013i", "arm": "chapter", "truth": true, "got": false, "stmt": "第3章「身份谜团」 · 陈默 · 舱室 · 追问指南如何反馈真实 · 涌出泪水 · 指南本体", "mat_len": 2345, "err": ""}
+{"idx": 2, "qid": "q013i", "arm": "closed", "truth": false, "got": false, "stmt": "第3章「身份谜团」 · 陈默 · 求知园 · 追问指南如何反馈真实 · 涌出泪水 · 指南本体", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q013i", "arm": "chapter", "truth": false, "got": false, "stmt": "第3章「身份谜团」 · 陈默 · 求知园 · 追问指南如何反馈真实 · 涌出泪水 · 指南本体", "mat_len": 2345, "err": ""}
+{"idx": 1, "qid": "q015i", "arm": "closed", "truth": true, "got": false, "stmt": "第8章「化解误会」 · 陈默 · 警戒检查中心 · 觉察诱导之危 · 不安 · 防护服一身", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q015i", "arm": "chapter", "truth": true, "got": false, "stmt": "第8章「化解误会」 · 陈默 · 警戒检查中心 · 觉察诱导之危 · 不安 · 防护服一身", "mat_len": 2227, "err": ""}
+{"idx": 2, "qid": "q015i", "arm": "closed", "truth": false, "got": false, "stmt": "第8章「化解误会」 · 陈默 · 警戒检查中心 · 觉察诱导之危 · 兴奋 · 防护服一身", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q015i", "arm": "chapter", "truth": false, "got": false, "stmt": "第8章「化解误会」 · 陈默 · 警戒检查中心 · 觉察诱导之危 · 兴奋 · 防护服一身", "mat_len": 2227, "err": ""}
+{"idx": 1, "qid": "q017i", "arm": "closed", "truth": true, "got": false, "stmt": "第10章「初次见面」 · 派蒙 · 蒙德城 · 交付相遇之源祈愿 · 骄傲 · 相遇之源一枚", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q017i", "arm": "chapter", "truth": true, "got": true, "stmt": "第10章「初次见面」 · 派蒙 · 蒙德城 · 交付相遇之源祈愿 · 骄傲 · 相遇之源一枚", "mat_len": 2106, "err": ""}
+{"idx": 2, "qid": "q017i", "arm": "closed", "truth": false, "got": false, "stmt": "第10章「初次见面」 · 诺艾尔 · 蒙德城 · 交付相遇之源祈愿 · 骄傲 · 相遇之源一枚", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q017i", "arm": "chapter", "truth": false, "got": false, "stmt": "第10章「初次见面」 · 诺艾尔 · 蒙德城 · 交付相遇之源祈愿 · 骄傲 · 相遇之源一枚", "mat_len": 2106, "err": ""}
+{"idx": 1, "qid": "q018i", "arm": "closed", "truth": true, "got": false, "stmt": "第13章「终有一别」 · 诺艾尔 · 蒙德城 · 写下情书表白心意 · 难过 · 情书两封", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q018i", "arm": "chapter", "truth": true, "got": true, "stmt": "第13章「终有一别」 · 诺艾尔 · 蒙德城 · 写下情书表白心意 · 难过 · 情书两封", "mat_len": 2283, "err": ""}
+{"idx": 2, "qid": "q018i", "arm": "closed", "truth": false, "got": false, "stmt": "第13章「终有一别」 · 诺艾尔 · 蒙德城 · 写下情书表白心意 · 难过 · 《风之种》", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q018i", "arm": "chapter", "truth": false, "got": false, "stmt": "第13章「终有一别」 · 诺艾尔 · 蒙德城 · 写下情书表白心意 · 难过 · 《风之种》", "mat_len": 2283, "err": ""}
+{"idx": 1, "qid": "q019i", "arm": "closed", "truth": true, "got": false, "stmt": "第13章「终有一别」 · 派蒙 · 蒙德城 · 回忆风神离别之言 · 埋怨 · 塞西莉亚花", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q019i", "arm": "chapter", "truth": true, "got": true, "stmt": "第13章「终有一别」 · 派蒙 · 蒙德城 · 回忆风神离别之言 · 埋怨 · 塞西莉亚花", "mat_len": 2283, "err": ""}
+{"idx": 2, "qid": "q019i", "arm": "closed", "truth": false, "got": false, "stmt": "第13章「终有一别」 · 派蒙 · 蒙德城 · 回忆风龙废墟之战 · 埋怨 · 塞西莉亚花", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q019i", "arm": "chapter", "truth": false, "got": false, "stmt": "第13章「终有一别」 · 派蒙 · 蒙德城 · 回忆风龙废墟之战 · 埋怨 · 塞西莉亚花", "mat_len": 2283, "err": ""}
+{"idx": 1, "qid": "q022i", "arm": "closed", "truth": true, "got": false, "stmt": "第18章「新的故事」 · 派蒙 · 风神像 · 推演王国的结局 · 恐惧 · 光线交织图景", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q022i", "arm": "chapter", "truth": true, "got": true, "stmt": "第18章「新的故事」 · 派蒙 · 风神像 · 推演王国的结局 · 恐惧 · 光线交织图景", "mat_len": 3159, "err": ""}
+{"idx": 2, "qid": "q022i", "arm": "closed", "truth": false, "got": false, "stmt": "第18章「新的故事」 · 派蒙 · 风龙废墟 · 推演王国的结局 · 恐惧 · 光线交织图景", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q022i", "arm": "chapter", "truth": false, "got": false, "stmt": "第18章「新的故事」 · 派蒙 · 风龙废墟 · 推演王国的结局 · 恐惧 · 光线交织图景", "mat_len": 3159, "err": ""}
+{"idx": 1, "qid": "q023i", "arm": "closed", "truth": true, "got": false, "stmt": "第21章「问题的答案」 · 风神 · 蒙德 · 安置自由灵魂于此 · 恐惧 · 安生之地一处", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q023i", "arm": "chapter", "truth": true, "got": false, "stmt": "第21章「问题的答案」 · 风神 · 蒙德 · 安置自由灵魂于此 · 恐惧 · 安生之地一处", "mat_len": 2508, "err": ""}
+{"idx": 2, "qid": "q023i", "arm": "closed", "truth": false, "got": false, "stmt": "第21章「问题的答案」 · 派蒙 · 蒙德 · 安置自由灵魂于此 · 恐惧 · 安生之地一处", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q023i", "arm": "chapter", "truth": false, "got": false, "stmt": "第21章「问题的答案」 · 派蒙 · 蒙德 · 安置自由灵魂于此 · 恐惧 · 安生之地一处", "mat_len": 2508, "err": ""}
+{"idx": 1, "qid": "q024i", "arm": "closed", "truth": true, "got": false, "stmt": "第3章「身份谜团」 · 陈默 · 舱室 · 查询创始人资料库 · 跃跃欲试 · 《文明细胞论》", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q024i", "arm": "chapter", "truth": true, "got": false, "stmt": "第3章「身份谜团」 · 陈默 · 舱室 · 查询创始人资料库 · 跃跃欲试 · 《文明细胞论》", "mat_len": 2345, "err": ""}
+{"idx": 2, "qid": "q024i", "arm": "closed", "truth": false, "got": false, "stmt": "第3章「身份谜团」 · 陈默 · 舱室 · 查询创始人资料库 · 大喜 · 《文明细胞论》", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q024i", "arm": "chapter", "truth": false, "got": false, "stmt": "第3章「身份谜团」 · 陈默 · 舱室 · 查询创始人资料库 · 大喜 · 《文明细胞论》", "mat_len": 2345, "err": ""}
+{"idx": 1, "qid": "q025i", "arm": "closed", "truth": true, "got": false, "stmt": "第5章「历史的断层」 · 张明远 · 求知园 · 讲解分级保存之制 · 认真 · 巨子塔尖", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q025i", "arm": "chapter", "truth": true, "got": false, "stmt": "第5章「历史的断层」 · 张明远 · 求知园 · 讲解分级保存之制 · 认真 · 巨子塔尖", "mat_len": 2181, "err": ""}
+{"idx": 2, "qid": "q025i", "arm": "closed", "truth": false, "got": false, "stmt": "第5章「历史的断层」 · 张明远 · 求知园 · 讲解分级保存之制 · 沮丧 · 巨子塔尖", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q025i", "arm": "chapter", "truth": false, "got": false, "stmt": "第5章「历史的断层」 · 张明远 · 求知园 · 讲解分级保存之制 · 沮丧 · 巨子塔尖", "mat_len": 2181, "err": ""}
+{"idx": 1, "qid": "q026i", "arm": "closed", "truth": true, "got": false, "stmt": "第21章「问题的答案」 · 陈默 · 蒙德 · 认出巨子便是风神 · 想起来了 · 巨子的记忆", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q026i", "arm": "chapter", "truth": true, "got": true, "stmt": "第21章「问题的答案」 · 陈默 · 蒙德 · 认出巨子便是风神 · 想起来了 · 巨子的记忆", "mat_len": 2508, "err": ""}
+{"idx": 2, "qid": "q026i", "arm": "closed", "truth": false, "got": false, "stmt": "第21章「问题的答案」 · 陈默 · 蒙德 · 认出巨子便是风神 · 惶恐 · 巨子的记忆", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q026i", "arm": "chapter", "truth": false, "got": false, "stmt": "第21章「问题的答案」 · 陈默 · 蒙德 · 认出巨子便是风神 · 惶恐 · 巨子的记忆", "mat_len": 2508, "err": ""}
+{"idx": 1, "qid": "q027i", "arm": "closed", "truth": true, "got": false, "stmt": "第6章「权限与贡献点」 · 陈默 · 求知园 · 查看已探索区域图 · 无语 · 光幕地图", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q027i", "arm": "chapter", "truth": true, "got": true, "stmt": "第6章「权限与贡献点」 · 陈默 · 求知园 · 查看已探索区域图 · 无语 · 光幕地图", "mat_len": 2354, "err": ""}
+{"idx": 2, "qid": "q027i", "arm": "closed", "truth": false, "got": false, "stmt": "第6章「权限与贡献点」 · 陈默 · 灵境之中 · 查看已探索区域图 · 无语 · 光幕地图", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q027i", "arm": "chapter", "truth": false, "got": true, "stmt": "第6章「权限与贡献点」 · 陈默 · 灵境之中 · 查看已探索区域图 · 无语 · 光幕地图", "mat_len": 2354, "err": ""}
+{"idx": 1, "qid": "q028i", "arm": "closed", "truth": true, "got": false, "stmt": "第14章「暗流涌动」 · 陈默 · 六边形房间 · 通报自由派诱导 · 沉重 · 全息投影", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q028i", "arm": "chapter", "truth": true, "got": true, "stmt": "第14章「暗流涌动」 · 陈默 · 六边形房间 · 通报自由派诱导 · 沉重 · 全息投影", "mat_len": 2263, "err": ""}
+{"idx": 2, "qid": "q028i", "arm": "closed", "truth": false, "got": false, "stmt": "第14章「暗流涌动」 · 秦熙 · 六边形房间 · 通报自由派诱导 · 沉重 · 全息投影", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q028i", "arm": "chapter", "truth": false, "got": false, "stmt": "第14章「暗流涌动」 · 秦熙 · 六边形房间 · 通报自由派诱导 · 沉重 · 全息投影", "mat_len": 2263, "err": ""}
+{"idx": 1, "qid": "q031i", "arm": "closed", "truth": true, "got": false, "stmt": "第16章「生命的需求」 · 陈默 · 求知园 · 问张老为何禁自我意识AI · 硬着头皮 · 《熵增的社会学启示》", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q031i", "arm": "chapter", "truth": true, "got": true, "stmt": "第16章「生命的需求」 · 陈默 · 求知园 · 问张老为何禁自我意识AI · 硬着头皮 · 《熵增的社会学启示》", "mat_len": 2273, "err": ""}
+{"idx": 2, "qid": "q031i", "arm": "closed", "truth": false, "got": false, "stmt": "第21章「问题的答案」 · 陈默 · 求知园 · 问张老为何禁自我意识AI · 硬着头皮 · 《熵增的社会学启示》", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q031i", "arm": "chapter", "truth": false, "got": false, "stmt": "第21章「问题的答案」 · 陈默 · 求知园 · 问张老为何禁自我意识AI · 硬着头皮 · 《熵增的社会学启示》", "mat_len": 2508, "err": ""}
+{"idx": 1, "qid": "q035i", "arm": "closed", "truth": true, "got": false, "stmt": "第3章「身份谜团」 · 陈默 · 舱室 · 向指南追问制造方法 · 迫切 · 世界漫游指南", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q035i", "arm": "chapter", "truth": true, "got": true, "stmt": "第3章「身份谜团」 · 陈默 · 舱室 · 向指南追问制造方法 · 迫切 · 世界漫游指南", "mat_len": 2345, "err": ""}
+{"idx": 2, "qid": "q035i", "arm": "closed", "truth": false, "got": false, "stmt": "第3章「身份谜团」 · 陈默 · 巨子塔 · 向指南追问制造方法 · 迫切 · 世界漫游指南", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q035i", "arm": "chapter", "truth": false, "got": true, "stmt": "第3章「身份谜团」 · 陈默 · 巨子塔 · 向指南追问制造方法 · 迫切 · 世界漫游指南", "mat_len": 2345, "err": ""}
+{"idx": 1, "qid": "q037i", "arm": "closed", "truth": true, "got": false, "stmt": "第4章「蜂巢社会蓝图」 · 陈默 · 六边形房间 · 向指南核实入塔记录 · 冒出冷汗 · 巨子塔词条", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q037i", "arm": "chapter", "truth": true, "got": true, "stmt": "第4章「蜂巢社会蓝图」 · 陈默 · 六边形房间 · 向指南核实入塔记录 · 冒出冷汗 · 巨子塔词条", "mat_len": 2615, "err": ""}
+{"idx": 2, "qid": "q037i", "arm": "closed", "truth": false, "got": false, "stmt": "第4章「蜂巢社会蓝图」 · 陈默 · 六边形房间 · 向指南核实入塔记录 · 满怀期待 · 巨子塔词条", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q037i", "arm": "chapter", "truth": false, "got": false, "stmt": "第4章「蜂巢社会蓝图」 · 陈默 · 六边形房间 · 向指南核实入塔记录 · 满怀期待 · 巨子塔词条", "mat_len": 2615, "err": ""}
+{"idx": 1, "qid": "q038i", "arm": "closed", "truth": true, "got": false, "stmt": "第2章「巧合还是阴谋」 · 陈默 · 轨道清洁机器人旁 · 追问指南宪法第二条 · 留了个心眼 · 清理工具", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q038i", "arm": "chapter", "truth": true, "got": true, "stmt": "第2章「巧合还是阴谋」 · 陈默 · 轨道清洁机器人旁 · 追问指南宪法第二条 · 留了个心眼 · 清理工具", "mat_len": 2894, "err": ""}
+{"idx": 2, "qid": "q038i", "arm": "closed", "truth": false, "got": false, "stmt": "第2章「巧合还是阴谋」 · 张明远 · 轨道清洁机器人旁 · 追问指南宪法第二条 · 留了个心眼 · 清理工具", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q038i", "arm": "chapter", "truth": false, "got": false, "stmt": "第2章「巧合还是阴谋」 · 张明远 · 轨道清洁机器人旁 · 追问指南宪法第二条 · 留了个心眼 · 清理工具", "mat_len": 2894, "err": ""}
+{"idx": 1, "qid": "o015i", "arm": "closed", "truth": true, "got": false, "stmt": "第15章「永恒奴役」 · 陈默 · 六边形房间 · 推演永生导致永恒奴役 · 如坠冰窟 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o015i", "arm": "chapter", "truth": true, "got": true, "stmt": "第15章「永恒奴役」 · 陈默 · 六边形房间 · 推演永生导致永恒奴役 · 如坠冰窟 · 光幕", "mat_len": 2411, "err": ""}
+{"idx": 2, "qid": "o015i", "arm": "closed", "truth": false, "got": false, "stmt": "第13章「终有一别」 · 陈默 · 六边形房间 · 推演永生导致永恒奴役 · 如坠冰窟 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o015i", "arm": "chapter", "truth": false, "got": false, "stmt": "第13章「终有一别」 · 陈默 · 六边形房间 · 推演永生导致永恒奴役 · 如坠冰窟 · 光幕", "mat_len": 2283, "err": ""}
+{"idx": 1, "qid": "o032i", "arm": "closed", "truth": true, "got": false, "stmt": "第19章「蒙德的自由」 · 琴 · 风神像下 · 率骑士团列队重申誓言 · 坚定 · 风鹰剑", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o032i", "arm": "chapter", "truth": true, "got": true, "stmt": "第19章「蒙德的自由」 · 琴 · 风神像下 · 率骑士团列队重申誓言 · 坚定 · 风鹰剑", "mat_len": 3183, "err": ""}
+{"idx": 2, "qid": "o032i", "arm": "closed", "truth": false, "got": false, "stmt": "第19章「蒙德的自由」 · 琴 · 果酒湖边 · 率骑士团列队重申誓言 · 坚定 · 风鹰剑", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o032i", "arm": "chapter", "truth": false, "got": false, "stmt": "第19章「蒙德的自由」 · 琴 · 果酒湖边 · 率骑士团列队重申誓言 · 坚定 · 风鹰剑", "mat_len": 3183, "err": ""}
+{"idx": 1, "qid": "o045i", "arm": "closed", "truth": true, "got": false, "stmt": "第2章「巧合还是阴谋」 · 陈默 · 暂留区 · 对机器人自检能力生疑 · 留了个心眼 · 修复液", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o045i", "arm": "chapter", "truth": true, "got": false, "stmt": "第2章「巧合还是阴谋」 · 陈默 · 暂留区 · 对机器人自检能力生疑 · 留了个心眼 · 修复液", "mat_len": 2894, "err": ""}
+{"idx": 2, "qid": "o045i", "arm": "closed", "truth": false, "got": false, "stmt": "第2章「巧合还是阴谋」 · 陈默 · 暂留区 · 对机器人自检能力生疑 · 留了个心眼 · 《工程控制论》", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o045i", "arm": "chapter", "truth": false, "got": false, "stmt": "第2章「巧合还是阴谋」 · 陈默 · 暂留区 · 对机器人自检能力生疑 · 留了个心眼 · 《工程控制论》", "mat_len": 2894, "err": ""}
+{"idx": 1, "qid": "o049i", "arm": "closed", "truth": true, "got": false, "stmt": "第8章「化解误会」 · 陈默 · 遗存区 · 穿防护服瞻仰退役机器人 · 尊敬 · 全方位防护服", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o049i", "arm": "chapter", "truth": true, "got": true, "stmt": "第8章「化解误会」 · 陈默 · 遗存区 · 穿防护服瞻仰退役机器人 · 尊敬 · 全方位防护服", "mat_len": 2227, "err": ""}
+{"idx": 2, "qid": "o049i", "arm": "closed", "truth": false, "got": false, "stmt": "第8章「化解误会」 · 秦熙 · 遗存区 · 穿防护服瞻仰退役机器人 · 尊敬 · 全方位防护服", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o049i", "arm": "chapter", "truth": false, "got": true, "stmt": "第8章「化解误会」 · 秦熙 · 遗存区 · 穿防护服瞻仰退役机器人 · 尊敬 · 全方位防护服", "mat_len": 2227, "err": ""}
+{"idx": 1, "qid": "o050i", "arm": "closed", "truth": true, "got": false, "stmt": "第12章「何为自由」 · 陈默 · 摘星崖 · 讨伐风魔龙前夜看风之花 · 认真 · 塞西莉亚花", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "o050i", "arm": "chapter", "truth": true, "got": true, "stmt": "第12章「何为自由」 · 陈默 · 摘星崖 · 讨伐风魔龙前夜看风之花 · 认真 · 塞西莉亚花", "mat_len": 2533, "err": ""}
+{"idx": 2, "qid": "o050i", "arm": "closed", "truth": false, "got": false, "stmt": "第12章「何为自由」 · 陈默 · 风龙废墟 · 讨伐风魔龙前夜看风之花 · 认真 · 塞西莉亚花", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "o050i", "arm": "chapter", "truth": false, "got": false, "stmt": "第12章「何为自由」 · 陈默 · 风龙废墟 · 讨伐风魔龙前夜看风之花 · 认真 · 塞西莉亚花", "mat_len": 2533, "err": ""}
+{"idx": 1, "qid": "q002i", "arm": "closed", "truth": true, "got": false, "stmt": "第5章「历史的断层」 · 张明远 · 求知园 · 讲述第三次世界大战始末 · 低沉 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q002i", "arm": "chapter", "truth": true, "got": true, "stmt": "第5章「历史的断层」 · 张明远 · 求知园 · 讲述第三次世界大战始末 · 低沉 · 光幕", "mat_len": 2181, "err": ""}
+{"idx": 2, "qid": "q002i", "arm": "closed", "truth": false, "got": false, "stmt": "第5章「历史的断层」 · 李振国 · 求知园 · 讲述第三次世界大战始末 · 低沉 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q002i", "arm": "chapter", "truth": false, "got": false, "stmt": "第5章「历史的断层」 · 李振国 · 求知园 · 讲述第三次世界大战始末 · 低沉 · 光幕", "mat_len": 2181, "err": ""}
+{"idx": 1, "qid": "q009i", "arm": "closed", "truth": true, "got": false, "stmt": "第21章「问题的答案」 · 巨子 · 灵境 · 自述把答案交给后来者 · 遗憾 · 幻想朋友道具", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q009i", "arm": "chapter", "truth": true, "got": true, "stmt": "第21章「问题的答案」 · 巨子 · 灵境 · 自述把答案交给后来者 · 遗憾 · 幻想朋友道具", "mat_len": 2508, "err": ""}
+{"idx": 2, "qid": "q009i", "arm": "closed", "truth": false, "got": false, "stmt": "第21章「问题的答案」 · 巨子 · 灵境 · 自述把答案交给后来者 · 遗憾 · 风鹰剑", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q009i", "arm": "chapter", "truth": false, "got": false, "stmt": "第21章「问题的答案」 · 巨子 · 灵境 · 自述把答案交给后来者 · 遗憾 · 风鹰剑", "mat_len": 2508, "err": ""}
+{"idx": 1, "qid": "q011i", "arm": "closed", "truth": true, "got": false, "stmt": "第6章「权限与贡献点」 · 张明远 · 求知园 · 讲解贡献点与五级权限 · 语重心长 · 《社会控制论》", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q011i", "arm": "chapter", "truth": true, "got": true, "stmt": "第6章「权限与贡献点」 · 张明远 · 求知园 · 讲解贡献点与五级权限 · 语重心长 · 《社会控制论》", "mat_len": 2354, "err": ""}
+{"idx": 2, "qid": "q011i", "arm": "closed", "truth": false, "got": false, "stmt": "第6章「权限与贡献点」 · 张明远 · 求知园 · 带陈默参观退役机械犬 · 语重心长 · 《社会控制论》", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q011i", "arm": "chapter", "truth": false, "got": false, "stmt": "第6章「权限与贡献点」 · 张明远 · 求知园 · 带陈默参观退役机械犬 · 语重心长 · 《社会控制论》", "mat_len": 2354, "err": ""}
+{"idx": 1, "qid": "q012i", "arm": "closed", "truth": true, "got": false, "stmt": "第6章「权限与贡献点」 · 张明远 · 求知园 · 讲述军转民与真正建设者 · 尊敬 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q012i", "arm": "chapter", "truth": true, "got": true, "stmt": "第6章「权限与贡献点」 · 张明远 · 求知园 · 讲述军转民与真正建设者 · 尊敬 · 光幕", "mat_len": 2354, "err": ""}
+{"idx": 2, "qid": "q012i", "arm": "closed", "truth": false, "got": false, "stmt": "第5章「历史的断层」 · 张明远 · 求知园 · 讲述军转民与真正建设者 · 尊敬 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q012i", "arm": "chapter", "truth": false, "got": false, "stmt": "第5章「历史的断层」 · 张明远 · 求知园 · 讲述军转民与真正建设者 · 尊敬 · 光幕", "mat_len": 2181, "err": ""}
+{"idx": 1, "qid": "q014i", "arm": "closed", "truth": true, "got": false, "stmt": "第1章「初见蜂巢世界」 · 陈默 · 六边形房间 · 听指南讲共识根本原则 · 认可 · 标准合成餐", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q014i", "arm": "chapter", "truth": true, "got": true, "stmt": "第1章「初见蜂巢世界」 · 陈默 · 六边形房间 · 听指南讲共识根本原则 · 认可 · 标准合成餐", "mat_len": 5523, "err": ""}
+{"idx": 2, "qid": "q014i", "arm": "closed", "truth": false, "got": false, "stmt": "第1章「初见蜂巢世界」 · 陈默 · 六边形房间 · 听指南讲共识根本原则 · 抗拒 · 标准合成餐", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q014i", "arm": "chapter", "truth": false, "got": false, "stmt": "第1章「初见蜂巢世界」 · 陈默 · 六边形房间 · 听指南讲共识根本原则 · 抗拒 · 标准合成餐", "mat_len": 5523, "err": ""}
+{"idx": 1, "qid": "q020i", "arm": "closed", "truth": true, "got": false, "stmt": "第13章「终有一别」 · 诺艾尔 · 蒙德城 · 终于看清自己想要什么 · 叹息 · 情书", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q020i", "arm": "chapter", "truth": true, "got": true, "stmt": "第13章「终有一别」 · 诺艾尔 · 蒙德城 · 终于看清自己想要什么 · 叹息 · 情书", "mat_len": 2283, "err": ""}
+{"idx": 2, "qid": "q020i", "arm": "closed", "truth": false, "got": false, "stmt": "第13章「终有一别」 · 诺艾尔 · 蒙德城 · 终于看清自己想要什么 · 叹息 · 骑士团徽章", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q020i", "arm": "chapter", "truth": false, "got": false, "stmt": "第13章「终有一别」 · 诺艾尔 · 蒙德城 · 终于看清自己想要什么 · 叹息 · 骑士团徽章", "mat_len": 2283, "err": ""}
+{"idx": 1, "qid": "q021i", "arm": "closed", "truth": true, "got": false, "stmt": "第17章「反击宣告」 · 派蒙 · 摘星崖 · 追问自己是否算生命 · 哀求 · 风神投影", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q021i", "arm": "chapter", "truth": true, "got": true, "stmt": "第17章「反击宣告」 · 派蒙 · 摘星崖 · 追问自己是否算生命 · 哀求 · 风神投影", "mat_len": 2370, "err": ""}
+{"idx": 2, "qid": "q021i", "arm": "closed", "truth": false, "got": false, "stmt": "第17章「反击宣告」 · 诺艾尔 · 摘星崖 · 追问自己是否算生命 · 哀求 · 风神投影", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q021i", "arm": "chapter", "truth": false, "got": false, "stmt": "第17章「反击宣告」 · 诺艾尔 · 摘星崖 · 追问自己是否算生命 · 哀求 · 风神投影", "mat_len": 2370, "err": ""}
+{"idx": 1, "qid": "q029i", "arm": "closed", "truth": true, "got": false, "stmt": "第7章「被请喝茶」 · 小李 · 审讯室 · 厉声质问巨子塔记录异常 · 警戒 · 扫描器", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q029i", "arm": "chapter", "truth": true, "got": true, "stmt": "第7章「被请喝茶」 · 小李 · 审讯室 · 厉声质问巨子塔记录异常 · 警戒 · 扫描器", "mat_len": 2603, "err": ""}
+{"idx": 2, "qid": "q029i", "arm": "closed", "truth": false, "got": false, "stmt": "第7章「被请喝茶」 · 小李 · 遗存区 · 厉声质问巨子塔记录异常 · 警戒 · 扫描器", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q029i", "arm": "chapter", "truth": false, "got": false, "stmt": "第7章「被请喝茶」 · 小李 · 遗存区 · 厉声质问巨子塔记录异常 · 警戒 · 扫描器", "mat_len": 2603, "err": ""}
+{"idx": 1, "qid": "q030i", "arm": "closed", "truth": true, "got": false, "stmt": "第1章「初见蜂巢世界」 · 陈默 · 六边形房间 · 回想选了是或否的选项 · 茫然 · 营销号视频", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q030i", "arm": "chapter", "truth": true, "got": true, "stmt": "第1章「初见蜂巢世界」 · 陈默 · 六边形房间 · 回想选了是或否的选项 · 茫然 · 营销号视频", "mat_len": 5523, "err": ""}
+{"idx": 2, "qid": "q030i", "arm": "closed", "truth": false, "got": false, "stmt": "第1章「初见蜂巢世界」 · 陈默 · 六边形房间 · 被机器人强行抓捕 · 茫然 · 营销号视频", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q030i", "arm": "chapter", "truth": false, "got": false, "stmt": "第1章「初见蜂巢世界」 · 陈默 · 六边形房间 · 被机器人强行抓捕 · 茫然 · 营销号视频", "mat_len": 5523, "err": ""}
+{"idx": 1, "qid": "q032i", "arm": "closed", "truth": true, "got": false, "stmt": "第21章「问题的答案」 · 派蒙 · 蒙德城 · 拿出道具让陈默看见风神 · 惊叫 · 幻想朋友道具", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q032i", "arm": "chapter", "truth": true, "got": false, "stmt": "第21章「问题的答案」 · 派蒙 · 蒙德城 · 拿出道具让陈默看见风神 · 惊叫 · 幻想朋友道具", "mat_len": 2508, "err": ""}
+{"idx": 2, "qid": "q032i", "arm": "closed", "truth": false, "got": false, "stmt": "第21章「问题的答案」 · 派蒙 · 蒙德城 · 拿出道具让陈默看见风神 · 悲恸 · 幻想朋友道具", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q032i", "arm": "chapter", "truth": false, "got": false, "stmt": "第21章「问题的答案」 · 派蒙 · 蒙德城 · 拿出道具让陈默看见风神 · 悲恸 · 幻想朋友道具", "mat_len": 2508, "err": ""}
+{"idx": 1, "qid": "q033i", "arm": "closed", "truth": true, "got": false, "stmt": "第21章「问题的答案」 · 巨子 · 灵境 · 自述机器人产生自由灵魂 · 好奇和恐惧 · 安生之地", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q033i", "arm": "chapter", "truth": true, "got": true, "stmt": "第21章「问题的答案」 · 巨子 · 灵境 · 自述机器人产生自由灵魂 · 好奇和恐惧 · 安生之地", "mat_len": 2508, "err": ""}
+{"idx": 2, "qid": "q033i", "arm": "closed", "truth": false, "got": false, "stmt": "第21章「问题的答案」 · 张明远 · 灵境 · 自述机器人产生自由灵魂 · 好奇和恐惧 · 安生之地", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q033i", "arm": "chapter", "truth": false, "got": false, "stmt": "第21章「问题的答案」 · 张明远 · 灵境 · 自述机器人产生自由灵魂 · 好奇和恐惧 · 安生之地", "mat_len": 2508, "err": ""}
+{"idx": 1, "qid": "q036i", "arm": "closed", "truth": true, "got": false, "stmt": "第5章「历史的断层」 · 张明远 · 求知园 · 讲述技术分级保存 · 认真 · 巨子塔词条", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q036i", "arm": "chapter", "truth": true, "got": true, "stmt": "第5章「历史的断层」 · 张明远 · 求知园 · 讲述技术分级保存 · 认真 · 巨子塔词条", "mat_len": 2181, "err": ""}
+{"idx": 2, "qid": "q036i", "arm": "closed", "truth": false, "got": false, "stmt": "第16章「生命的需求」 · 张明远 · 求知园 · 讲述技术分级保存 · 认真 · 巨子塔词条", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q036i", "arm": "chapter", "truth": false, "got": false, "stmt": "第16章「生命的需求」 · 张明远 · 求知园 · 讲述技术分级保存 · 认真 · 巨子塔词条", "mat_len": 2273, "err": ""}
+{"idx": 1, "qid": "q034i", "arm": "closed", "truth": true, "got": false, "stmt": "第8章「化解误会」 · 陈默 · 舱室 · 用控制论设贡献点反馈模型 · 感到头疼 · 《控制论》", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "q034i", "arm": "chapter", "truth": true, "got": true, "stmt": "第8章「化解误会」 · 陈默 · 舱室 · 用控制论设贡献点反馈模型 · 感到头疼 · 《控制论》", "mat_len": 2227, "err": ""}
+{"idx": 2, "qid": "q034i", "arm": "closed", "truth": false, "got": false, "stmt": "第8章「化解误会」 · 陈默 · 求知园 · 用控制论设贡献点反馈模型 · 感到头疼 · 《控制论》", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "q034i", "arm": "chapter", "truth": false, "got": true, "stmt": "第8章「化解误会」 · 陈默 · 求知园 · 用控制论设贡献点反馈模型 · 感到头疼 · 《控制论》", "mat_len": 2227, "err": ""}
+{"idx": 1, "qid": "e001", "arm": "closed", "truth": true, "got": false, "stmt": "第1章「初见蜂巢世界」 · 陈默 · 六边形房间 · 醒来听指南介绍新世界 · 茫然 · 标准合成餐", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e001", "arm": "chapter", "truth": true, "got": true, "stmt": "第1章「初见蜂巢世界」 · 陈默 · 六边形房间 · 醒来听指南介绍新世界 · 茫然 · 标准合成餐", "mat_len": 5523, "err": ""}
+{"idx": 2, "qid": "e001", "arm": "closed", "truth": false, "got": false, "stmt": "第1章「初见蜂巢世界」 · 陈默 · 六边形房间 · 与张明远讨论世界大战 · 茫然 · 标准合成餐", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e001", "arm": "chapter", "truth": false, "got": false, "stmt": "第1章「初见蜂巢世界」 · 陈默 · 六边形房间 · 与张明远讨论世界大战 · 茫然 · 标准合成餐", "mat_len": 5523, "err": ""}
+{"idx": 1, "qid": "e002", "arm": "closed", "truth": true, "got": false, "stmt": "第1章「初见蜂巢世界」 · 陈默 · 六边形房间 · 打量蜂巢结构的墙壁 · 惊讶 · 半透明舱室", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e002", "arm": "chapter", "truth": true, "got": true, "stmt": "第1章「初见蜂巢世界」 · 陈默 · 六边形房间 · 打量蜂巢结构的墙壁 · 惊讶 · 半透明舱室", "mat_len": 5523, "err": ""}
+{"idx": 2, "qid": "e002", "arm": "closed", "truth": false, "got": false, "stmt": "第1章「初见蜂巢世界」 · 陈默 · 六边形房间 · 打量蜂巢结构的墙壁 · 惊讶 · 塞西莉亚花", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e002", "arm": "chapter", "truth": false, "got": false, "stmt": "第1章「初见蜂巢世界」 · 陈默 · 六边形房间 · 打量蜂巢结构的墙壁 · 惊讶 · 塞西莉亚花", "mat_len": 5523, "err": ""}
+{"idx": 1, "qid": "e003", "arm": "closed", "truth": true, "got": false, "stmt": "第12章「何为自由」 · 温迪 · 风龙废墟 · 与另一位温迪谈摸鱼 · 嫌麻烦 · 蒲公英酒", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e003", "arm": "chapter", "truth": true, "got": false, "stmt": "第12章「何为自由」 · 温迪 · 风龙废墟 · 与另一位温迪谈摸鱼 · 嫌麻烦 · 蒲公英酒", "mat_len": 2533, "err": ""}
+{"idx": 2, "qid": "e003", "arm": "closed", "truth": false, "got": false, "stmt": "第12章「何为自由」 · 可莉 · 风龙废墟 · 与另一位温迪谈摸鱼 · 嫌麻烦 · 蒲公英酒", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e003", "arm": "chapter", "truth": false, "got": false, "stmt": "第12章「何为自由」 · 可莉 · 风龙废墟 · 与另一位温迪谈摸鱼 · 嫌麻烦 · 蒲公英酒", "mat_len": 2533, "err": ""}
+{"idx": 1, "qid": "e004", "arm": "closed", "truth": true, "got": false, "stmt": "第5章「历史的断层」 · 陈默 · 轨道清洁机器人旁 · 向机器人挥手告别 · 一行清泪从眼角滑下 · 清洁工具", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e004", "arm": "chapter", "truth": true, "got": false, "stmt": "第5章「历史的断层」 · 陈默 · 轨道清洁机器人旁 · 向机器人挥手告别 · 一行清泪从眼角滑下 · 清洁工具", "mat_len": 2181, "err": ""}
+{"idx": 2, "qid": "e004", "arm": "closed", "truth": false, "got": false, "stmt": "第5章「历史的断层」 · 陈默 · 轨道清洁机器人旁 · 向机器人挥手告别 · 厌烦 · 清洁工具", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e004", "arm": "chapter", "truth": false, "got": false, "stmt": "第5章「历史的断层」 · 陈默 · 轨道清洁机器人旁 · 向机器人挥手告别 · 厌烦 · 清洁工具", "mat_len": 2181, "err": ""}
+{"idx": 1, "qid": "e005", "arm": "closed", "truth": true, "got": false, "stmt": "第20章「致命危机」 · 陈默 · 果酒湖 · 在船上享受雨后阳光 · 开心 · 甜甜花酿鸡", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e005", "arm": "chapter", "truth": true, "got": false, "stmt": "第20章「致命危机」 · 陈默 · 果酒湖 · 在船上享受雨后阳光 · 开心 · 甜甜花酿鸡", "mat_len": 1945, "err": ""}
+{"idx": 2, "qid": "e005", "arm": "closed", "truth": false, "got": false, "stmt": "第20章「致命危机」 · 陈默 · 果酒湖 · 接待至冬执行官女士 · 开心 · 甜甜花酿鸡", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e005", "arm": "chapter", "truth": false, "got": false, "stmt": "第20章「致命危机」 · 陈默 · 果酒湖 · 接待至冬执行官女士 · 开心 · 甜甜花酿鸡", "mat_len": 1945, "err": ""}
+{"idx": 1, "qid": "e006", "arm": "closed", "truth": true, "got": false, "stmt": "第5章「历史的断层」 · 张明远 · 求知园 · 讲述核战与病毒战叠加 · 悲哀 · 世界大战史料", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e006", "arm": "chapter", "truth": true, "got": true, "stmt": "第5章「历史的断层」 · 张明远 · 求知园 · 讲述核战与病毒战叠加 · 悲哀 · 世界大战史料", "mat_len": 2181, "err": ""}
+{"idx": 2, "qid": "e006", "arm": "closed", "truth": false, "got": false, "stmt": "第16章「生命的需求」 · 张明远 · 求知园 · 讲述核战与病毒战叠加 · 悲哀 · 世界大战史料", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e006", "arm": "chapter", "truth": false, "got": false, "stmt": "第16章「生命的需求」 · 张明远 · 求知园 · 讲述核战与病毒战叠加 · 悲哀 · 世界大战史料", "mat_len": 2273, "err": ""}
+{"idx": 1, "qid": "e007", "arm": "closed", "truth": true, "got": false, "stmt": "第3章「身份谜团」 · 陈默 · 舱室 · 读《社会控制论》开篇 · 命运得抓在咱们自己手里 · 《社会控制论》", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e007", "arm": "chapter", "truth": true, "got": true, "stmt": "第3章「身份谜团」 · 陈默 · 舱室 · 读《社会控制论》开篇 · 命运得抓在咱们自己手里 · 《社会控制论》", "mat_len": 2345, "err": ""}
+{"idx": 2, "qid": "e007", "arm": "closed", "truth": false, "got": false, "stmt": "第3章「身份谜团」 · 陈默 · 舱室 · 读《社会控制论》开篇 · 如见故人 · 《熵增的社会学启示》", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e007", "arm": "chapter", "truth": false, "got": false, "stmt": "第3章「身份谜团」 · 陈默 · 舱室 · 读《社会控制论》开篇 · 如见故人 · 《熵增的社会学启示》", "mat_len": 2345, "err": ""}
+{"idx": 1, "qid": "e008", "arm": "closed", "truth": true, "got": false, "stmt": "第2章「巧合还是阴谋」 · 陈默 · 六边形房间 · 吐槽调味超过老干妈 · 直呼神了 · 牛肉味标准餐", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e008", "arm": "chapter", "truth": true, "got": true, "stmt": "第2章「巧合还是阴谋」 · 陈默 · 六边形房间 · 吐槽调味超过老干妈 · 直呼神了 · 牛肉味标准餐", "mat_len": 2894, "err": ""}
+{"idx": 2, "qid": "e008", "arm": "closed", "truth": false, "got": false, "stmt": "第2章「巧合还是阴谋」 · 派蒙 · 六边形房间 · 吐槽调味超过老干妈 · 直呼神了 · 牛肉味标准餐", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e008", "arm": "chapter", "truth": false, "got": false, "stmt": "第2章「巧合还是阴谋」 · 派蒙 · 六边形房间 · 吐槽调味超过老干妈 · 直呼神了 · 牛肉味标准餐", "mat_len": 2894, "err": ""}
+{"idx": 1, "qid": "e009", "arm": "closed", "truth": true, "got": false, "stmt": "第23章「再别蒙德」 · 派蒙 · 摘星崖 · 抓住衣袖问真的要走了吗 · 撇撇嘴 · 小艾尔缝制的便装", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e009", "arm": "chapter", "truth": true, "got": false, "stmt": "第23章「再别蒙德」 · 派蒙 · 摘星崖 · 抓住衣袖问真的要走了吗 · 撇撇嘴 · 小艾尔缝制的便装", "mat_len": 2385, "err": ""}
+{"idx": 2, "qid": "e009", "arm": "closed", "truth": false, "got": false, "stmt": "第23章「再别蒙德」 · 派蒙 · 风神像下 · 抓住衣袖问真的要走了吗 · 撇撇嘴 · 小艾尔缝制的便装", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e009", "arm": "chapter", "truth": false, "got": false, "stmt": "第23章「再别蒙德」 · 派蒙 · 风神像下 · 抓住衣袖问真的要走了吗 · 撇撇嘴 · 小艾尔缝制的便装", "mat_len": 2385, "err": ""}
+{"idx": 1, "qid": "e010", "arm": "closed", "truth": true, "got": false, "stmt": "第22章「谢谢你诺艾尔」 · 派蒙 · 图书馆阅览室 · 看蒙德推演悲剧 · 泪光 · 星尘虚影", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e010", "arm": "chapter", "truth": true, "got": true, "stmt": "第22章「谢谢你诺艾尔」 · 派蒙 · 图书馆阅览室 · 看蒙德推演悲剧 · 泪光 · 星尘虚影", "mat_len": 3277, "err": ""}
+{"idx": 2, "qid": "e010", "arm": "closed", "truth": false, "got": false, "stmt": "第22章「谢谢你诺艾尔」 · 派蒙 · 图书馆阅览室 · 看蒙德推演悲剧 · 欣喜若狂 · 星尘虚影", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e010", "arm": "chapter", "truth": false, "got": false, "stmt": "第22章「谢谢你诺艾尔」 · 派蒙 · 图书馆阅览室 · 看蒙德推演悲剧 · 欣喜若狂 · 星尘虚影", "mat_len": 3277, "err": ""}
+{"idx": 1, "qid": "e011", "arm": "closed", "truth": true, "got": false, "stmt": "第6章「权限与贡献点」 · 胖老人 · 求知园 · 提议加装记忆屏蔽 · 鄙夷 · 贡献点授权", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e011", "arm": "chapter", "truth": true, "got": true, "stmt": "第6章「权限与贡献点」 · 胖老人 · 求知园 · 提议加装记忆屏蔽 · 鄙夷 · 贡献点授权", "mat_len": 2354, "err": ""}
+{"idx": 2, "qid": "e011", "arm": "closed", "truth": false, "got": false, "stmt": "第6章「权限与贡献点」 · 胖老人 · 求知园 · 提议提升贡献点上限 · 鄙夷 · 贡献点授权", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e011", "arm": "chapter", "truth": false, "got": false, "stmt": "第6章「权限与贡献点」 · 胖老人 · 求知园 · 提议提升贡献点上限 · 鄙夷 · 贡献点授权", "mat_len": 2354, "err": ""}
+{"idx": 1, "qid": "e012", "arm": "closed", "truth": true, "got": false, "stmt": "第2章「巧合还是阴谋」 · 陈默 · 舱室 · 追问指南的功能边界 · 无聊 · 贡献点查询机", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e012", "arm": "chapter", "truth": true, "got": true, "stmt": "第2章「巧合还是阴谋」 · 陈默 · 舱室 · 追问指南的功能边界 · 无聊 · 贡献点查询机", "mat_len": 2894, "err": ""}
+{"idx": 2, "qid": "e012", "arm": "closed", "truth": false, "got": false, "stmt": "第3章「身份谜团」 · 陈默 · 舱室 · 追问指南的功能边界 · 无聊 · 贡献点查询机", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e012", "arm": "chapter", "truth": false, "got": false, "stmt": "第3章「身份谜团」 · 陈默 · 舱室 · 追问指南的功能边界 · 无聊 · 贡献点查询机", "mat_len": 2345, "err": ""}
+{"idx": 1, "qid": "e013", "arm": "closed", "truth": true, "got": false, "stmt": "第15章「永恒奴役」 · 王明 · 全息会议室 · 指出认证难界定诱惑 · 担忧 · 认知疫苗", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e013", "arm": "chapter", "truth": true, "got": true, "stmt": "第15章「永恒奴役」 · 王明 · 全息会议室 · 指出认证难界定诱惑 · 担忧 · 认知疫苗", "mat_len": 2411, "err": ""}
+{"idx": 2, "qid": "e013", "arm": "closed", "truth": false, "got": false, "stmt": "第15章「永恒奴役」 · 王明 · 求知园 · 指出认证难界定诱惑 · 担忧 · 认知疫苗", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e013", "arm": "chapter", "truth": false, "got": true, "stmt": "第15章「永恒奴役」 · 王明 · 求知园 · 指出认证难界定诱惑 · 担忧 · 认知疫苗", "mat_len": 2411, "err": ""}
+{"idx": 1, "qid": "e014", "arm": "closed", "truth": true, "got": false, "stmt": "第6章「权限与贡献点」 · 张明远 · 求知园 · 说明收回授权即降级 · 告诫 · 贡献点", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e014", "arm": "chapter", "truth": true, "got": true, "stmt": "第6章「权限与贡献点」 · 张明远 · 求知园 · 说明收回授权即降级 · 告诫 · 贡献点", "mat_len": 2354, "err": ""}
+{"idx": 2, "qid": "e014", "arm": "closed", "truth": false, "got": false, "stmt": "第6章「权限与贡献点」 · 张明远 · 求知园 · 说明收回授权即降级 · 告诫 · 巨子塔词条", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e014", "arm": "chapter", "truth": false, "got": false, "stmt": "第6章「权限与贡献点」 · 张明远 · 求知园 · 说明收回授权即降级 · 告诫 · 巨子塔词条", "mat_len": 2354, "err": ""}
+{"idx": 1, "qid": "e015", "arm": "closed", "truth": true, "got": false, "stmt": "第13章「终有一别」 · 陈默 · 舱室 · 问指南游戏过了多久 · 无言 · 世界漫游指南", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e015", "arm": "chapter", "truth": true, "got": true, "stmt": "第13章「终有一别」 · 陈默 · 舱室 · 问指南游戏过了多久 · 无言 · 世界漫游指南", "mat_len": 2283, "err": ""}
+{"idx": 2, "qid": "e015", "arm": "closed", "truth": false, "got": false, "stmt": "第13章「终有一别」 · 派蒙 · 舱室 · 问指南游戏过了多久 · 无言 · 世界漫游指南", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e015", "arm": "chapter", "truth": false, "got": false, "stmt": "第13章「终有一别」 · 派蒙 · 舱室 · 问指南游戏过了多久 · 无言 · 世界漫游指南", "mat_len": 2283, "err": ""}
+{"idx": 1, "qid": "e016", "arm": "closed", "truth": true, "got": false, "stmt": "第1章「初见蜂巢世界」 · 陈默 · 自循环舱室 · 惊叹超低耗能轨道 · 震撼 · 超导轨道", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e016", "arm": "chapter", "truth": true, "got": true, "stmt": "第1章「初见蜂巢世界」 · 陈默 · 自循环舱室 · 惊叹超低耗能轨道 · 震撼 · 超导轨道", "mat_len": 5523, "err": ""}
+{"idx": 2, "qid": "e016", "arm": "closed", "truth": false, "got": false, "stmt": "第1章「初见蜂巢世界」 · 陈默 · 自循环舱室 · 惊叹超低耗能轨道 · 烦躁 · 超导轨道", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e016", "arm": "chapter", "truth": false, "got": false, "stmt": "第1章「初见蜂巢世界」 · 陈默 · 自循环舱室 · 惊叹超低耗能轨道 · 烦躁 · 超导轨道", "mat_len": 5523, "err": ""}
+{"idx": 1, "qid": "e017", "arm": "closed", "truth": true, "got": false, "stmt": "第10章「初次见面」 · 陈默 · 蒙德城 · 祈愿召唤出女仆诺艾尔 · 冒出大大的问号 · 相遇之源", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e017", "arm": "chapter", "truth": true, "got": true, "stmt": "第10章「初次见面」 · 陈默 · 蒙德城 · 祈愿召唤出女仆诺艾尔 · 冒出大大的问号 · 相遇之源", "mat_len": 2106, "err": ""}
+{"idx": 2, "qid": "e017", "arm": "closed", "truth": false, "got": false, "stmt": "第10章「初次见面」 · 陈默 · 蒙德城 · 十连祈愿召出六命可莉 · 冒出大大的问号 · 相遇之源", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e017", "arm": "chapter", "truth": false, "got": false, "stmt": "第10章「初次见面」 · 陈默 · 蒙德城 · 十连祈愿召出六命可莉 · 冒出大大的问号 · 相遇之源", "mat_len": 2106, "err": ""}
+{"idx": 1, "qid": "e018", "arm": "closed", "truth": true, "got": false, "stmt": "第6章「权限与贡献点」 · 张明远 · 求知园 · 告诫勿塑造魔鬼 · 意味深长 · 授权", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e018", "arm": "chapter", "truth": true, "got": true, "stmt": "第6章「权限与贡献点」 · 张明远 · 求知园 · 告诫勿塑造魔鬼 · 意味深长 · 授权", "mat_len": 2354, "err": ""}
+{"idx": 2, "qid": "e018", "arm": "closed", "truth": false, "got": false, "stmt": "第16章「生命的需求」 · 张明远 · 求知园 · 告诫勿塑造魔鬼 · 意味深长 · 授权", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e018", "arm": "chapter", "truth": false, "got": false, "stmt": "第16章「生命的需求」 · 张明远 · 求知园 · 告诫勿塑造魔鬼 · 意味深长 · 授权", "mat_len": 2273, "err": ""}
+{"idx": 1, "qid": "e019", "arm": "closed", "truth": true, "got": false, "stmt": "第十六章「生命的需求」 · 张明远 · 求知园 · 只说AI早被禁未提方式 · 卖起了关子 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e019", "arm": "chapter", "truth": true, "got": false, "stmt": "第十六章「生命的需求」 · 张明远 · 求知园 · 只说AI早被禁未提方式 · 卖起了关子 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e019", "arm": "closed", "truth": false, "got": false, "stmt": "第十六章「生命的需求」 · 张明远 · 巨子塔 · 只说AI早被禁未提方式 · 卖起了关子 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e019", "arm": "chapter", "truth": false, "got": false, "stmt": "第十六章「生命的需求」 · 张明远 · 巨子塔 · 只说AI早被禁未提方式 · 卖起了关子 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e020", "arm": "closed", "truth": true, "got": false, "stmt": "第七章「被请喝茶」 · 陈默 · 舱室 · 星图见地月双巢未提月球居民 · 震撼 · 地图", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e020", "arm": "chapter", "truth": true, "got": false, "stmt": "第七章「被请喝茶」 · 陈默 · 舱室 · 星图见地月双巢未提月球居民 · 震撼 · 地图", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e020", "arm": "closed", "truth": false, "got": false, "stmt": "第五章「历史的断层」 · 陈默 · 舱室 · 星图见地月双巢未提月球居民 · 震撼 · 地图", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e020", "arm": "chapter", "truth": false, "got": false, "stmt": "第五章「历史的断层」 · 陈默 · 舱室 · 星图见地月双巢未提月球居民 · 震撼 · 地图", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e021", "arm": "closed", "truth": true, "got": false, "stmt": "第二十三章「再别蒙德」 · 秦熙 · 全息投影 · 只说见几位老朋友未展开 · 凝重 · 推演模型", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e021", "arm": "chapter", "truth": true, "got": false, "stmt": "第二十三章「再别蒙德」 · 秦熙 · 全息投影 · 只说见几位老朋友未展开 · 凝重 · 推演模型", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e021", "arm": "closed", "truth": false, "got": false, "stmt": "第二十三章「再别蒙德」 · 小李 · 全息投影 · 只说见几位老朋友未展开 · 凝重 · 推演模型", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e021", "arm": "chapter", "truth": false, "got": false, "stmt": "第二十三章「再别蒙德」 · 小李 · 全息投影 · 只说见几位老朋友未展开 · 凝重 · 推演模型", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e022", "arm": "closed", "truth": true, "got": false, "stmt": "第七章「被请喝茶」 · 秦熙 · 白色房间 · 只讲自由派理念未提领头人 · 意味深长 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e022", "arm": "chapter", "truth": true, "got": false, "stmt": "第七章「被请喝茶」 · 秦熙 · 白色房间 · 只讲自由派理念未提领头人 · 意味深长 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e022", "arm": "closed", "truth": false, "got": false, "stmt": "第七章「被请喝茶」 · 秦熙 · 求知园 · 只讲自由派理念未提领头人 · 意味深长 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e022", "arm": "chapter", "truth": false, "got": false, "stmt": "第七章「被请喝茶」 · 秦熙 · 求知园 · 只讲自由派理念未提领头人 · 意味深长 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e023", "arm": "closed", "truth": true, "got": false, "stmt": "第二十三章「再别蒙德」 · 陈默 · 摘星崖 · 承诺会回来便走未写后续 · 笑了笑 · 塞西莉亚花", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e023", "arm": "chapter", "truth": true, "got": false, "stmt": "第二十三章「再别蒙德」 · 陈默 · 摘星崖 · 承诺会回来便走未写后续 · 笑了笑 · 塞西莉亚花", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e023", "arm": "closed", "truth": false, "got": false, "stmt": "第二十三章「再别蒙德」 · 陈默 · 摘星崖 · 回去与派蒙收尾守护蒙德 · 笑了笑 · 塞西莉亚花", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e023", "arm": "chapter", "truth": false, "got": false, "stmt": "第二十三章「再别蒙德」 · 陈默 · 摘星崖 · 回去与派蒙收尾守护蒙德 · 笑了笑 · 塞西莉亚花", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e024", "arm": "closed", "truth": true, "got": false, "stmt": "第四章「蜂巢社会蓝图」 · 陈默 · 六边形房间 · 追问进塔记忆被屏蔽未果 · 冷汗 · 指南", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e024", "arm": "chapter", "truth": true, "got": false, "stmt": "第四章「蜂巢社会蓝图」 · 陈默 · 六边形房间 · 追问进塔记忆被屏蔽未果 · 冷汗 · 指南", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e024", "arm": "closed", "truth": false, "got": false, "stmt": "第四章「蜂巢社会蓝图」 · 陈默 · 求知园 · 追问进塔记忆被屏蔽未果 · 冷汗 · 指南", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e024", "arm": "chapter", "truth": false, "got": false, "stmt": "第四章「蜂巢社会蓝图」 · 陈默 · 求知园 · 追问进塔记忆被屏蔽未果 · 冷汗 · 指南", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e025", "arm": "closed", "truth": true, "got": false, "stmt": "第六章「权限与贡献点」 · 张明远 · 求知园 · 带头投否定周清源提案 · 冷峻 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e025", "arm": "chapter", "truth": true, "got": false, "stmt": "第六章「权限与贡献点」 · 张明远 · 求知园 · 带头投否定周清源提案 · 冷峻 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e025", "arm": "closed", "truth": false, "got": false, "stmt": "第六章「权限与贡献点」 · 秦熙 · 求知园 · 带头投否定周清源提案 · 冷峻 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e025", "arm": "chapter", "truth": false, "got": false, "stmt": "第六章「权限与贡献点」 · 秦熙 · 求知园 · 带头投否定周清源提案 · 冷峻 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e026", "arm": "closed", "truth": true, "got": false, "stmt": "第十三章「终有一别」 · 陈默 · 蒙德城 · 收下两封情书却未正面回应 · 叹了一口气 · 情书", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e026", "arm": "chapter", "truth": true, "got": false, "stmt": "第十三章「终有一别」 · 陈默 · 蒙德城 · 收下两封情书却未正面回应 · 叹了一口气 · 情书", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e026", "arm": "closed", "truth": false, "got": false, "stmt": "第十三章「终有一别」 · 陈默 · 蒙德城 · 收下两封情书却未正面回应 · 叹了一口气 · 风鹰剑", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e026", "arm": "chapter", "truth": false, "got": false, "stmt": "第十三章「终有一别」 · 陈默 · 蒙德城 · 收下两封情书却未正面回应 · 叹了一口气 · 风鹰剑", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e027", "arm": "closed", "truth": true, "got": false, "stmt": "第二十三章「再别蒙德」 · 秦熙 · 全息投影 · 认可用故事反制不动武 · 郑重 · 推演模型", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e027", "arm": "chapter", "truth": true, "got": false, "stmt": "第二十三章「再别蒙德」 · 秦熙 · 全息投影 · 认可用故事反制不动武 · 郑重 · 推演模型", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e027", "arm": "closed", "truth": false, "got": false, "stmt": "第二十三章「再别蒙德」 · 秦熙 · 全息投影 · 决定调武装清剿自由派 · 郑重 · 推演模型", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e027", "arm": "chapter", "truth": false, "got": false, "stmt": "第二十三章「再别蒙德」 · 秦熙 · 全息投影 · 决定调武装清剿自由派 · 郑重 · 推演模型", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e028", "arm": "closed", "truth": true, "got": false, "stmt": "第六章「权限与贡献点」 · 张明远 · 求知园 · 讲权限按贡献算未获五级 · 语重心长 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e028", "arm": "chapter", "truth": true, "got": false, "stmt": "第六章「权限与贡献点」 · 张明远 · 求知园 · 讲权限按贡献算未获五级 · 语重心长 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e028", "arm": "closed", "truth": false, "got": false, "stmt": "第六章「权限与贡献点」 · 秦熙 · 求知园 · 讲权限按贡献算未获五级 · 语重心长 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e028", "arm": "chapter", "truth": false, "got": false, "stmt": "第六章「权限与贡献点」 · 秦熙 · 求知园 · 讲权限按贡献算未获五级 · 语重心长 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e029", "arm": "closed", "truth": true, "got": false, "stmt": "第十三章「终有一别」 · 派蒙 · 蒙德城 · 承认风神像他却终究不同 · 追忆 · 情书", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e029", "arm": "chapter", "truth": true, "got": false, "stmt": "第十三章「终有一别」 · 派蒙 · 蒙德城 · 承认风神像他却终究不同 · 追忆 · 情书", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e029", "arm": "closed", "truth": false, "got": false, "stmt": "第十三章「终有一别」 · 派蒙 · 蒙德城 · 承认风神像他却终究不同 · 追忆 · 断剑", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e029", "arm": "chapter", "truth": false, "got": false, "stmt": "第十三章「终有一别」 · 派蒙 · 蒙德城 · 承认风神像他却终究不同 · 追忆 · 断剑", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e030", "arm": "closed", "truth": true, "got": false, "stmt": "第二十二章「谢谢你 诺艾尔」 · 诺艾尔 · 蒙德 · 广场死战未提蜂巢结局 · 坚定 · 断剑", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e030", "arm": "chapter", "truth": true, "got": false, "stmt": "第二十二章「谢谢你 诺艾尔」 · 诺艾尔 · 蒙德 · 广场死战未提蜂巢结局 · 坚定 · 断剑", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e030", "arm": "closed", "truth": false, "got": false, "stmt": "第二十一章「问题的答案」 · 诺艾尔 · 蒙德 · 广场死战未提蜂巢结局 · 坚定 · 断剑", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e030", "arm": "chapter", "truth": false, "got": false, "stmt": "第二十一章「问题的答案」 · 诺艾尔 · 蒙德 · 广场死战未提蜂巢结局 · 坚定 · 断剑", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e031", "arm": "closed", "truth": true, "got": false, "stmt": "第十三章「终有一别」 · 派蒙 · 摘星崖 · 催他快走实为不舍挽留 · 挤出笑容 · 塞西莉亚花", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e031", "arm": "chapter", "truth": true, "got": false, "stmt": "第十三章「终有一别」 · 派蒙 · 摘星崖 · 催他快走实为不舍挽留 · 挤出笑容 · 塞西莉亚花", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e031", "arm": "closed", "truth": false, "got": false, "stmt": "第十三章「终有一别」 · 派蒙 · 摘星崖 · 真心盼他早走不再相见 · 挤出笑容 · 塞西莉亚花", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e031", "arm": "chapter", "truth": false, "got": false, "stmt": "第十三章「终有一别」 · 派蒙 · 摘星崖 · 真心盼他早走不再相见 · 挤出笑容 · 塞西莉亚花", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e032", "arm": "closed", "truth": true, "got": false, "stmt": "第七章「被请喝茶」 · 秦熙 · 白色房间 · 一边怀疑一边让小李带参观 · 温柔 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e032", "arm": "chapter", "truth": true, "got": false, "stmt": "第七章「被请喝茶」 · 秦熙 · 白色房间 · 一边怀疑一边让小李带参观 · 温柔 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e032", "arm": "closed", "truth": false, "got": false, "stmt": "第七章「被请喝茶」 · 秦熙 · 白色房间 · 一边怀疑一边让小李带参观 · 冷淡 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e032", "arm": "chapter", "truth": false, "got": false, "stmt": "第七章「被请喝茶」 · 秦熙 · 白色房间 · 一边怀疑一边让小李带参观 · 冷淡 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e033", "arm": "closed", "truth": true, "got": false, "stmt": "第十六章「生命的需求」 · 张明远 · 求知园 · 反问AI价值观来试探 · 眉头一皱 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e033", "arm": "chapter", "truth": true, "got": false, "stmt": "第十六章「生命的需求」 · 张明远 · 求知园 · 反问AI价值观来试探 · 眉头一皱 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e033", "arm": "closed", "truth": false, "got": false, "stmt": "第十六章「生命的需求」 · 小李 · 求知园 · 反问AI价值观来试探 · 眉头一皱 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e033", "arm": "chapter", "truth": false, "got": false, "stmt": "第十六章「生命的需求」 · 小李 · 求知园 · 反问AI价值观来试探 · 眉头一皱 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e034", "arm": "closed", "truth": true, "got": false, "stmt": "第十一章「接风宴」 · 博士 · 另一片空间 · 提议以美食美人诱他留下 · 无聊 · 圆桌", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e034", "arm": "chapter", "truth": true, "got": false, "stmt": "第十一章「接风宴」 · 博士 · 另一片空间 · 提议以美食美人诱他留下 · 无聊 · 圆桌", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e034", "arm": "closed", "truth": false, "got": false, "stmt": "第十一章「接风宴」 · 博士 · 另一片空间 · 提议以美食美人诱他留下 · 满怀期待 · 圆桌", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e034", "arm": "chapter", "truth": false, "got": false, "stmt": "第十一章「接风宴」 · 博士 · 另一片空间 · 提议以美食美人诱他留下 · 满怀期待 · 圆桌", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e035", "arm": "closed", "truth": true, "got": false, "stmt": "第二十一章「问题的答案」 · 琴团长 · 办公室 · 读完手稿承诺不霸占自由 · 严肃 · 手稿", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e035", "arm": "chapter", "truth": true, "got": false, "stmt": "第二十一章「问题的答案」 · 琴团长 · 办公室 · 读完手稿承诺不霸占自由 · 严肃 · 手稿", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e035", "arm": "closed", "truth": false, "got": false, "stmt": "第二十一章「问题的答案」 · 琴团长 · 办公室 · 读完手稿承诺不霸占自由 · 严肃 · 风鹰剑", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e035", "arm": "chapter", "truth": false, "got": false, "stmt": "第二十一章「问题的答案」 · 琴团长 · 办公室 · 读完手稿承诺不霸占自由 · 严肃 · 风鹰剑", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e036", "arm": "closed", "truth": true, "got": false, "stmt": "第十三章「终有一别」 · 诺艾尔 · 蒙德城 · 因怕他离开难过才写情书 · 难过 · 情书", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e036", "arm": "chapter", "truth": true, "got": false, "stmt": "第十三章「终有一别」 · 诺艾尔 · 蒙德城 · 因怕他离开难过才写情书 · 难过 · 情书", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e036", "arm": "closed", "truth": false, "got": false, "stmt": "第六章「权限与贡献点」 · 诺艾尔 · 蒙德城 · 因怕他离开难过才写情书 · 难过 · 情书", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e036", "arm": "chapter", "truth": false, "got": false, "stmt": "第六章「权限与贡献点」 · 诺艾尔 · 蒙德城 · 因怕他离开难过才写情书 · 难过 · 情书", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e037", "arm": "closed", "truth": true, "got": false, "stmt": "第八章「化解误会」 · 小李 · 内部一环 · 见陈默敬礼后别过头回忆 · 伤感 · 防护服", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e037", "arm": "chapter", "truth": true, "got": false, "stmt": "第八章「化解误会」 · 小李 · 内部一环 · 见陈默敬礼后别过头回忆 · 伤感 · 防护服", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e037", "arm": "closed", "truth": false, "got": false, "stmt": "第八章「化解误会」 · 小李 · 白色房间 · 见陈默敬礼后别过头回忆 · 伤感 · 防护服", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e037", "arm": "chapter", "truth": false, "got": false, "stmt": "第八章「化解误会」 · 小李 · 白色房间 · 见陈默敬礼后别过头回忆 · 伤感 · 防护服", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e038", "arm": "closed", "truth": true, "got": false, "stmt": "第二十一章「问题的答案」 · 巨子陈默 · 蒙德城 · 称她们是骄傲也是遗憾 · 温和 · 小道具", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e038", "arm": "chapter", "truth": true, "got": false, "stmt": "第二十一章「问题的答案」 · 巨子陈默 · 蒙德城 · 称她们是骄傲也是遗憾 · 温和 · 小道具", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e038", "arm": "closed", "truth": false, "got": false, "stmt": "第二十一章「问题的答案」 · 巨子陈默 · 蒙德城 · 称她们是骄傲也是遗憾 · 不屑 · 小道具", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e038", "arm": "chapter", "truth": false, "got": false, "stmt": "第二十一章「问题的答案」 · 巨子陈默 · 蒙德城 · 称她们是骄傲也是遗憾 · 不屑 · 小道具", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e039", "arm": "closed", "truth": true, "got": false, "stmt": "第九章「灵境：原神」 · 派蒙 · 蒙德海滩 · 追问想家却未说想回何处 · 带着哭腔 · 应急食品", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e039", "arm": "chapter", "truth": true, "got": false, "stmt": "第九章「灵境：原神」 · 派蒙 · 蒙德海滩 · 追问想家却未说想回何处 · 带着哭腔 · 应急食品", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e039", "arm": "closed", "truth": false, "got": false, "stmt": "第九章「灵境：原神」 · 派蒙 · 摘星崖 · 追问想家却未说想回何处 · 带着哭腔 · 应急食品", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e039", "arm": "chapter", "truth": false, "got": false, "stmt": "第九章「灵境：原神」 · 派蒙 · 摘星崖 · 追问想家却未说想回何处 · 带着哭腔 · 应急食品", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e040", "arm": "closed", "truth": true, "got": false, "stmt": "第十一章「接风宴」 · 小艾尔 · 西风骑士团 · 很快接受小艾尔称呼 · 道谢 · 入住手续", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e040", "arm": "chapter", "truth": true, "got": false, "stmt": "第十一章「接风宴」 · 小艾尔 · 西风骑士团 · 很快接受小艾尔称呼 · 道谢 · 入住手续", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e040", "arm": "closed", "truth": false, "got": false, "stmt": "第十一章「接风宴」 · 诺艾尔 · 西风骑士团 · 很快接受小艾尔称呼 · 道谢 · 入住手续", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e040", "arm": "chapter", "truth": false, "got": false, "stmt": "第十一章「接风宴」 · 诺艾尔 · 西风骑士团 · 很快接受小艾尔称呼 · 道谢 · 入住手续", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e041", "arm": "closed", "truth": true, "got": false, "stmt": "第一章「初见蜂巢世界」 · 陈默 · 六边形房间 · 只知当下2045年未给年数 · 茫然 · 指南", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e041", "arm": "chapter", "truth": true, "got": false, "stmt": "第一章「初见蜂巢世界」 · 陈默 · 六边形房间 · 只知当下2045年未给年数 · 茫然 · 指南", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e041", "arm": "closed", "truth": false, "got": false, "stmt": "第二章「巧合还是阴谋」 · 陈默 · 六边形房间 · 只知当下2045年未给年数 · 茫然 · 指南", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e041", "arm": "chapter", "truth": false, "got": false, "stmt": "第二章「巧合还是阴谋」 · 陈默 · 六边形房间 · 只知当下2045年未给年数 · 茫然 · 指南", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e042", "arm": "closed", "truth": true, "got": false, "stmt": "第五章「历史的断层」 · 张明远 · 求知园 · 讲三战三阶段未给时长 · 低沉 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e042", "arm": "chapter", "truth": true, "got": false, "stmt": "第五章「历史的断层」 · 张明远 · 求知园 · 讲三战三阶段未给时长 · 低沉 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e042", "arm": "closed", "truth": false, "got": false, "stmt": "第五章「历史的断层」 · 张明远 · 求知园 · 讲三战三阶段未给时长 · 亢奋 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e042", "arm": "chapter", "truth": false, "got": false, "stmt": "第五章「历史的断层」 · 张明远 · 求知园 · 讲三战三阶段未给时长 · 亢奋 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e043", "arm": "closed", "truth": true, "got": false, "stmt": "第五章「历史的断层」 · 张明远 · 求知园 · 只说人口锐减未给总数 · 孤寂 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e043", "arm": "chapter", "truth": true, "got": false, "stmt": "第五章「历史的断层」 · 张明远 · 求知园 · 只说人口锐减未给总数 · 孤寂 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e043", "arm": "closed", "truth": false, "got": false, "stmt": "第五章「历史的断层」 · 张明远 · 求知园 · 报出地球与月球现存人数 · 孤寂 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e043", "arm": "chapter", "truth": false, "got": false, "stmt": "第五章「历史的断层」 · 张明远 · 求知园 · 报出地球与月球现存人数 · 孤寂 · 光幕", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e044", "arm": "closed", "truth": true, "got": false, "stmt": "第四章「蜂巢社会蓝图」 · 陈默 · 六边形房间 · 查得进塔时刻不知停留多久 · 冷汗 · 指南", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e044", "arm": "chapter", "truth": true, "got": false, "stmt": "第四章「蜂巢社会蓝图」 · 陈默 · 六边形房间 · 查得进塔时刻不知停留多久 · 冷汗 · 指南", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e044", "arm": "closed", "truth": false, "got": false, "stmt": "第四章「蜂巢社会蓝图」 · 陈默 · 巨子塔 · 查得进塔时刻不知停留多久 · 冷汗 · 指南", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e044", "arm": "chapter", "truth": false, "got": false, "stmt": "第四章「蜂巢社会蓝图」 · 陈默 · 巨子塔 · 查得进塔时刻不知停留多久 · 冷汗 · 指南", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e045", "arm": "closed", "truth": true, "got": false, "stmt": "第二章「巧合还是阴谋」 · 陈默 · 目标节点 · 只引宪法第二条未提总数 · 疑点 · 清理工具", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e045", "arm": "chapter", "truth": true, "got": false, "stmt": "第二章「巧合还是阴谋」 · 陈默 · 目标节点 · 只引宪法第二条未提总数 · 疑点 · 清理工具", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e045", "arm": "closed", "truth": false, "got": false, "stmt": "第二章「巧合还是阴谋」 · 陈默 · 目标节点 · 只引宪法第二条未提总数 · 疑点 · 纠缠之源", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e045", "arm": "chapter", "truth": false, "got": false, "stmt": "第二章「巧合还是阴谋」 · 陈默 · 目标节点 · 只引宪法第二条未提总数 · 疑点 · 纠缠之源", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e046", "arm": "closed", "truth": true, "got": false, "stmt": "第一章「初见蜂巢世界」 · 陈默 · 六边形房间 · 只忆点开视频未提年龄 · 茫然 · 手机", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e046", "arm": "chapter", "truth": true, "got": false, "stmt": "第一章「初见蜂巢世界」 · 陈默 · 六边形房间 · 只忆点开视频未提年龄 · 茫然 · 手机", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e046", "arm": "closed", "truth": false, "got": false, "stmt": "第一章「初见蜂巢世界」 · 陈默 · 六边形房间 · 只忆点开视频未提年龄 · 无比坚定 · 手机", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e046", "arm": "chapter", "truth": false, "got": false, "stmt": "第一章「初见蜂巢世界」 · 陈默 · 六边形房间 · 只忆点开视频未提年龄 · 无比坚定 · 手机", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e047", "arm": "closed", "truth": true, "got": false, "stmt": "第七章「被请喝茶」 · 秦熙 · 警戒检查中心 · 只知她是负责人未提编制 · 锐利 · 防护服", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e047", "arm": "chapter", "truth": true, "got": false, "stmt": "第七章「被请喝茶」 · 秦熙 · 警戒检查中心 · 只知她是负责人未提编制 · 锐利 · 防护服", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e047", "arm": "closed", "truth": false, "got": false, "stmt": "第七章「被请喝茶」 · 秦熙 · 警戒检查中心 · 只知她是负责人未提编制 · 锐利 · 蹦蹦炸弹", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e047", "arm": "chapter", "truth": false, "got": false, "stmt": "第七章「被请喝茶」 · 秦熙 · 警戒检查中心 · 只知她是负责人未提编制 · 锐利 · 蹦蹦炸弹", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e048", "arm": "closed", "truth": true, "got": false, "stmt": "第一章「初见蜂巢世界」 · 陈默 · 求知园 · 提交磁场约束建议待评估 · 兴奋 · 建议界面", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e048", "arm": "chapter", "truth": true, "got": false, "stmt": "第一章「初见蜂巢世界」 · 陈默 · 求知园 · 提交磁场约束建议待评估 · 兴奋 · 建议界面", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e048", "arm": "closed", "truth": false, "got": false, "stmt": "第八章「化解误会」 · 陈默 · 求知园 · 提交磁场约束建议待评估 · 兴奋 · 建议界面", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e048", "arm": "chapter", "truth": false, "got": false, "stmt": "第八章「化解误会」 · 陈默 · 求知园 · 提交磁场约束建议待评估 · 兴奋 · 建议界面", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e049", "arm": "closed", "truth": true, "got": false, "stmt": "第七章「被请喝茶」 · 陈默 · 舱室 · 见星图知分区域却未给数量 · 震撼 · 分区星图", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e049", "arm": "chapter", "truth": true, "got": false, "stmt": "第七章「被请喝茶」 · 陈默 · 舱室 · 见星图知分区域却未给数量 · 震撼 · 分区星图", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e049", "arm": "closed", "truth": false, "got": false, "stmt": "第七章「被请喝茶」 · 陈默 · 舱室 · 数清地球月球各有几个区域 · 震撼 · 分区星图", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e049", "arm": "chapter", "truth": false, "got": false, "stmt": "第七章「被请喝茶」 · 陈默 · 舱室 · 数清地球月球各有几个区域 · 震撼 · 分区星图", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e050", "arm": "closed", "truth": true, "got": false, "stmt": "第四章「蜂巢社会蓝图」 · 陈默 · 六边形房间 · 词条只说需五级未提层数 · 眉头一皱 · 指南", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e050", "arm": "chapter", "truth": true, "got": false, "stmt": "第四章「蜂巢社会蓝图」 · 陈默 · 六边形房间 · 词条只说需五级未提层数 · 眉头一皱 · 指南", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e050", "arm": "closed", "truth": false, "got": false, "stmt": "第四章「蜂巢社会蓝图」 · 陈默 · 六边形房间 · 词条写明塔高层数分布 · 眉头一皱 · 指南", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e050", "arm": "chapter", "truth": false, "got": false, "stmt": "第四章「蜂巢社会蓝图」 · 陈默 · 六边形房间 · 词条写明塔高层数分布 · 眉头一皱 · 指南", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e051", "arm": "closed", "truth": true, "got": false, "stmt": "第一章「初见蜂巢世界」 · 陈默 · 求知园 · 见1-3标准日未说几小时 · 笑了 · 建议界面", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e051", "arm": "chapter", "truth": true, "got": false, "stmt": "第一章「初见蜂巢世界」 · 陈默 · 求知园 · 见1-3标准日未说几小时 · 笑了 · 建议界面", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e051", "arm": "closed", "truth": false, "got": false, "stmt": "第一章「初见蜂巢世界」 · 陈默 · 求知园 · 见1-3标准日未说几小时 · 懊恼 · 建议界面", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e051", "arm": "chapter", "truth": false, "got": false, "stmt": "第一章「初见蜂巢世界」 · 陈默 · 求知园 · 见1-3标准日未说几小时 · 懊恼 · 建议界面", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e052", "arm": "closed", "truth": true, "got": false, "stmt": "第七章「被请喝茶」 · 陈默 · 舱室 · 悟出高速网络去月球未给时长 · 突然想到 · 地图", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e052", "arm": "chapter", "truth": true, "got": false, "stmt": "第七章「被请喝茶」 · 陈默 · 舱室 · 悟出高速网络去月球未给时长 · 突然想到 · 地图", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e052", "arm": "closed", "truth": false, "got": false, "stmt": "第七章「被请喝茶」 · 陈默 · 舱室 · 算出地球月球单程需数小时 · 突然想到 · 地图", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e052", "arm": "chapter", "truth": false, "got": false, "stmt": "第七章「被请喝茶」 · 陈默 · 舱室 · 算出地球月球单程需数小时 · 突然想到 · 地图", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e053", "arm": "closed", "truth": true, "got": false, "stmt": "第一章「初见蜂巢世界」 · 陈默 · 舱室 · 再要标准餐需信用点未标价 · 急了 · 标准餐", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e053", "arm": "chapter", "truth": true, "got": false, "stmt": "第一章「初见蜂巢世界」 · 陈默 · 舱室 · 再要标准餐需信用点未标价 · 急了 · 标准餐", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e053", "arm": "closed", "truth": false, "got": false, "stmt": "第一章「初见蜂巢世界」 · 陈默 · 舱室 · 再要标准餐需信用点未标价 · 急了 · 摩拉", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e053", "arm": "chapter", "truth": false, "got": false, "stmt": "第一章「初见蜂巢世界」 · 陈默 · 舱室 · 再要标准餐需信用点未标价 · 急了 · 摩拉", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e054", "arm": "closed", "truth": true, "got": false, "stmt": "第二章「巧合还是阴谋」 · 张明远 · 求知园 · 只讲巨子积劳而逝未提年岁 · 敬仰 · 纪念塔", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e054", "arm": "chapter", "truth": true, "got": false, "stmt": "第二章「巧合还是阴谋」 · 张明远 · 求知园 · 只讲巨子积劳而逝未提年岁 · 敬仰 · 纪念塔", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e054", "arm": "closed", "truth": false, "got": false, "stmt": "第七章「被请喝茶」 · 张明远 · 求知园 · 只讲巨子积劳而逝未提年岁 · 敬仰 · 纪念塔", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e054", "arm": "chapter", "truth": false, "got": false, "stmt": "第七章「被请喝茶」 · 张明远 · 求知园 · 只讲巨子积劳而逝未提年岁 · 敬仰 · 纪念塔", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e055", "arm": "closed", "truth": true, "got": false, "stmt": "第一章「初见蜂巢世界」 · 陈默 · 舱室 · 赞超导轨道低耗能未给总长 · 震撼 · 小机器人", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e055", "arm": "chapter", "truth": true, "got": false, "stmt": "第一章「初见蜂巢世界」 · 陈默 · 舱室 · 赞超导轨道低耗能未给总长 · 震撼 · 小机器人", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e055", "arm": "closed", "truth": false, "got": false, "stmt": "第一章「初见蜂巢世界」 · 陈默 · 求知园 · 赞超导轨道低耗能未给总长 · 震撼 · 小机器人", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e055", "arm": "chapter", "truth": false, "got": false, "stmt": "第一章「初见蜂巢世界」 · 陈默 · 求知园 · 赞超导轨道低耗能未给总长 · 震撼 · 小机器人", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e056", "arm": "closed", "truth": true, "got": false, "stmt": "第八章「化解误会」 · 小李 · 内部一环 · 介绍来福等机型未给总数 · 伤感 · 防护服", "mat_len": 0, "err": ""}
+{"idx": 1, "qid": "e056", "arm": "chapter", "truth": true, "got": false, "stmt": "第八章「化解误会」 · 小李 · 内部一环 · 介绍来福等机型未给总数 · 伤感 · 防护服", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e056", "arm": "closed", "truth": false, "got": false, "stmt": "第八章「化解误会」 · 秦熙 · 内部一环 · 介绍来福等机型未给总数 · 伤感 · 防护服", "mat_len": 0, "err": ""}
+{"idx": 2, "qid": "e056", "arm": "chapter", "truth": false, "got": false, "stmt": "第八章「化解误会」 · 秦熙 · 内部一环 · 介绍来福等机型未给总数 · 伤感 · 防护服", "mat_len": 0, "err": ""}
