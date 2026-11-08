@@ -15,6 +15,11 @@
 | `judged_single.json` | 对 `rubric92_single_s552.jsonl` 的判分（`grade_rubric.py`） | TPR/TNR/平衡准确率/φ/分槽位 |
 | `judged_batch6.json` | 对 `rubric92_batch6_full.jsonl` 的判分 | 整题全对率 / p vs 1/64 / 要点级 |
 | `judged_476_single.json` | 对 `six_element476_single.jsonl` 的判分 | 同上 |
+| `sys1/four_arms_552.jsonl` | 四臂（闭卷/所引章节/千问RAG/OpenViking）逐条作答，552×4 = 2,208 条 | `qid, pi, arm, truth, got, slots, mat_len, stmt` |
+| `sys1/judged_four_arms.json` | 用 `grade_rubric.py` 对四臂独立复算 | TPR/TNR/平衡准确率/φ/分槽位 |
+
+> 四臂判分模型为 `deepseek-chat`（与他家实测同尺），不是本目录其它批次的 `deepseek-flash`；
+> 见 [千问RAG与OpenViking实测](../../docs/新推理库_千问RAG与OpenViking实测_v1.0.md)。
 
 `got` 取值：`true`=判「是」，`false`=判「否」，`null`=未解析（本批 0 例）。
 
