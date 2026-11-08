@@ -1,0 +1,3815 @@
+{
+ "schema": "hive-six-elem-v1",
+ "count": 476,
+ "note": "六元素拼接判断题：章节·人物·地点·事件·情绪·物品；238 题各 1 真 1 假；判分是/否，随机基线 50%",
+ "questions": [
+  {
+   "id": "o001-1",
+   "stmt": "第2章「巧合还是阴谋」·陈默·求知园·老人称巨子与他同名·笑容瞬间凝固·《工程控制论》",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L229",
+   "emotion_evidence": "陈默脸上的笑容瞬间凝固，脑子“嗡”的一声"
+  },
+  {
+   "id": "o001-2",
+   "stmt": "第21章「问题的答案」·陈默·求知园·老人称巨子与他同名·笑容瞬间凝固·《工程控制论》",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L229",
+   "emotion_evidence": "陈默脸上的笑容瞬间凝固，脑子“嗡”的一声"
+  },
+  {
+   "id": "o002-1",
+   "stmt": "第22章「谢谢你 诺艾尔」 · 我 · 图书馆 · 推演蒙德变质结局 · 为什么只有我活了下来 · 星尘",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1499",
+   "emotion_evidence": "L1499｜修"
+  },
+  {
+   "id": "o002-2",
+   "stmt": "第22章「谢谢你 诺艾尔」·我·摘星崖·推演蒙德变质结局·痛苦·星尘",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L1499",
+   "emotion_evidence": "我竟没发现原来我自己也为这个悲剧而痛苦"
+  },
+  {
+   "id": "o003-1",
+   "stmt": "第12章「何为自由」·温迪·风龙废墟·拒绝对特瓦林下令·扶额·封印",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L861",
+   "emotion_evidence": "在外等候的温迪不禁扶额"
+  },
+  {
+   "id": "o003-2",
+   "stmt": "第12章「何为自由」·温迪·风龙废墟·拒绝对特瓦林下令·愤怒·封印",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L861",
+   "emotion_evidence": "（本条情绪为被替换的错误元素，原文无此情绪；真条依据：在外等候的温迪不禁扶额）"
+  },
+  {
+   "id": "o005-1",
+   "stmt": "第4章「蜂巢社会蓝图」·陈默·六边形房间·读到量子通信与神经认证·点赞·指南",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L375",
+   "emotion_evidence": "陈默给老先生点赞"
+  },
+  {
+   "id": "o005-2",
+   "stmt": "第4章「蜂巢社会蓝图」·陈默·六边形房间·读到量子通信与神经认证·点赞·《社会控制论》",
+   "answer": false,
+   "wrong_element": "物品",
+   "evidence": "L375",
+   "emotion_evidence": "陈默给老先生点赞"
+  },
+  {
+   "id": "o006-1",
+   "stmt": "第23章「再别蒙德」·陈默·舱室·向秦熙交出反制模型·坚定·全息投影",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1650",
+   "emotion_evidence": "陈默的眼神坚定：“蒙德给了我答案。”"
+  },
+  {
+   "id": "o006-2",
+   "stmt": "第5章「历史的断层」·陈默·舱室·向秦熙交出反制模型·坚定·全息投影",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L1650",
+   "emotion_evidence": "陈默的眼神坚定：“蒙德给了我答案。”"
+  },
+  {
+   "id": "o007-1",
+   "stmt": "第5章「历史的断层」·张明远·求知园·讲述隔离失误丧妻·悲哀·《工程控制论》",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L420",
+   "emotion_evidence": "“最后我们悲哀的发现，唯一有效的方法是隔离”"
+  },
+  {
+   "id": "o007-2",
+   "stmt": "第5章「历史的断层」·秦熙·求知园·讲述隔离失误丧妻·悲哀·《工程控制论》",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L420",
+   "emotion_evidence": "“最后我们悲哀的发现，唯一有效的方法是隔离”"
+  },
+  {
+   "id": "o008-1",
+   "stmt": "第7章「被请喝茶」·秦熙·白色房间·取下头盔为严厉致歉·温柔·防护服",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L562",
+   "emotion_evidence": "她说用温柔的语气向陈默说"
+  },
+  {
+   "id": "o008-2",
+   "stmt": "第7章「被请喝茶」·秦熙·求知园·取下头盔为严厉致歉·温柔·防护服",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L562",
+   "emotion_evidence": "她说用温柔的语气向陈默说"
+  },
+  {
+   "id": "o009-1",
+   "stmt": "第15章「永恒奴役」·王明·警戒检查中心·提出认知疫苗而非防火墙·担忧·全息投影",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1004",
+   "emotion_evidence": "另一位参会人员发表了担忧，他是王明"
+  },
+  {
+   "id": "o009-2",
+   "stmt": "第3章「身份谜团」·王明·警戒检查中心·提出认知疫苗而非防火墙·担忧·全息投影",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L1004",
+   "emotion_evidence": "另一位参会人员发表了担忧，他是王明"
+  },
+  {
+   "id": "o010-1",
+   "stmt": "第8章「化解误会」·小李·警戒检查中心·感慨牺牲别过头去·伤感·防护服",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L613",
+   "emotion_evidence": "小李的话带着些许伤感，语气很重"
+  },
+  {
+   "id": "o010-2",
+   "stmt": "第19章「蒙德的自由」·小李·警戒检查中心·感慨牺牲别过头去·伤感·防护服",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L613",
+   "emotion_evidence": "小李的话带着些许伤感，语气很重"
+  },
+  {
+   "id": "o011-1",
+   "stmt": "第19章「蒙德的自由」·琴团长·风神广场·重申骑士誓言·激昂·风鹰剑",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1284",
+   "emotion_evidence": "她的声音愈发激昂"
+  },
+  {
+   "id": "o011-2",
+   "stmt": "第19章「蒙德的自由」·琴团长·风神广场·重申骑士誓言·激昂·蹦蹦炸弹",
+   "answer": false,
+   "wrong_element": "物品",
+   "evidence": "L1284",
+   "emotion_evidence": "她的声音愈发激昂"
+  },
+  {
+   "id": "o012-1",
+   "stmt": "第12章「何为自由」·凯亚·蒙德·交付原石并安顿可莉·麻烦·布袋",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L829",
+   "emotion_evidence": "这下有点麻烦了……凯亚边说着，边安排起了小可莉的事情"
+  },
+  {
+   "id": "o012-2",
+   "stmt": "第12章「何为自由」·凯亚·摘星崖·交付原石并安顿可莉·麻烦·布袋",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L829",
+   "emotion_evidence": "这下有点麻烦了……凯亚边说着，边安排起了小可莉的事情"
+  },
+  {
+   "id": "o013-1",
+   "stmt": "第4章「蜂巢社会蓝图」·陈默·六边形房间·读到信息错配论断·不安·《如何建设蜂巢社会》",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L369",
+   "emotion_evidence": "希望在书中找到答案能平复内心的不安"
+  },
+  {
+   "id": "o013-2",
+   "stmt": "第4章「蜂巢社会蓝图」·张明远·六边形房间·读到信息错配论断·不安·《如何建设蜂巢社会》",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L369",
+   "emotion_evidence": "希望在书中找到答案能平复内心的不安"
+  },
+  {
+   "id": "o014-1",
+   "stmt": "第8章「化解误会」·陈默·警戒检查中心·向沉眠装备敬礼·尊敬·机械犬",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L611",
+   "emotion_evidence": "陈默向机器人们敬礼，它们……同样值得尊敬"
+  },
+  {
+   "id": "o014-2",
+   "stmt": "第20章「致命危机」·陈默·警戒检查中心·向沉眠装备敬礼·尊敬·机械犬",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L611",
+   "emotion_evidence": "陈默向机器人们敬礼，它们……同样值得尊敬"
+  },
+  {
+   "id": "o015-1",
+   "stmt": "第15章「永恒奴役」·陈默·六边形房间·推演私有制加永生·恐惧·光幕",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L982",
+   "emotion_evidence": "陈默感受到如坠冰窟的恐惧"
+  },
+  {
+   "id": "o015-2",
+   "stmt": "第15章「永恒奴役」·陈默·六边形房间·推演私有制加永生·欣喜·光幕",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L982",
+   "emotion_evidence": "（本条情绪为被替换的错误元素，原文无此情绪；真条依据：陈默感受到如坠冰窟的恐惧）"
+  },
+  {
+   "id": "o016-1",
+   "stmt": "第21章「问题的答案」·陈默·蒙德·见到风神虚影·想起·小道具",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1482",
+   "emotion_evidence": "想起来了，陈默想起来了……原来你也是这样"
+  },
+  {
+   "id": "o016-2",
+   "stmt": "第21章「问题的答案」·陈默·求知园·见到风神虚影·想起·小道具",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L1482",
+   "emotion_evidence": "想起来了，陈默想起来了……原来你也是这样"
+  },
+  {
+   "id": "o017-1",
+   "stmt": "第1章「初见蜂巢世界」·陈默·求知园·领到临时协理员徽章·平静·电子徽章",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L148",
+   "emotion_evidence": "一种前所未有的平静与认同感充盈着陈默"
+  },
+  {
+   "id": "o017-2",
+   "stmt": "第1章「初见蜂巢世界」·陈默·求知园·领到临时协理员徽章·平静·蹦蹦炸弹",
+   "answer": false,
+   "wrong_element": "物品",
+   "evidence": "L148",
+   "emotion_evidence": "一种前所未有的平静与认同感充盈着陈默"
+  },
+  {
+   "id": "o018-1",
+   "stmt": "第2章「巧合还是阴谋」·陈默·暂留区·因宪法第二条留个心眼·留了个心眼·清理工具",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L195",
+   "emotion_evidence": "陈默留了个心眼"
+  },
+  {
+   "id": "o018-2",
+   "stmt": "第10章「初次见面」·陈默·暂留区·因宪法第二条留个心眼·留了个心眼·清理工具",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L195",
+   "emotion_evidence": "陈默留了个心眼"
+  },
+  {
+   "id": "o019-1",
+   "stmt": "第3章「身份谜团」·陈默·巨子塔入口·被识别为L1待审核·不甘·扫描光束",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L310",
+   "emotion_evidence": "陈默感觉愤怒和不甘"
+  },
+  {
+   "id": "o019-2",
+   "stmt": "第3章「身份谜团」·陈默·求知园·被识别为L1待审核·不甘·扫描光束",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L310",
+   "emotion_evidence": "陈默感觉愤怒和不甘"
+  },
+  {
+   "id": "o020-1",
+   "stmt": "第5章「历史的断层」·张明远·求知园·讲述三战代价清单·伤感·光幕",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L422",
+   "emotion_evidence": "之前伤感世界大战的情绪散了不少"
+  },
+  {
+   "id": "o020-2",
+   "stmt": "第5章「历史的断层」·秦熙·求知园·讲述三战代价清单·伤感·光幕",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L422",
+   "emotion_evidence": "之前伤感世界大战的情绪散了不少"
+  },
+  {
+   "id": "o022-1",
+   "stmt": "第7章「被请喝茶」·陈默·白色房间·被质问是否自由派探子·害怕·金属桌子",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L548",
+   "emotion_evidence": "作为从来没有经历过被请喝茶的守法公民，陈默有些害怕"
+  },
+  {
+   "id": "o022-2",
+   "stmt": "第7章「被请喝茶」·陈默·白色房间·被质问是否自由派探子·兴奋·金属桌子",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L548",
+   "emotion_evidence": "（本条情绪为被替换的错误元素，原文无此情绪；真条依据：作为从来没有经历过被请喝茶的守法公民，陈默有些害怕）"
+  },
+  {
+   "id": "o023-1",
+   "stmt": "第9章「灵境：原神」·陈默·七天神像·触摸七天神像获得风之力·兴奋·原石",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L686",
+   "emotion_evidence": "发现游戏的兴奋还是压倒了疑惑"
+  },
+  {
+   "id": "o023-2",
+   "stmt": "第9章「灵境：原神」·陈默·求知园·触摸七天神像获得风之力·兴奋·原石",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L686",
+   "emotion_evidence": "发现游戏的兴奋还是压倒了疑惑"
+  },
+  {
+   "id": "o024-1",
+   "stmt": "第10章「初次见面」·诺艾尔·蒙德·自我介绍为骑士团女仆·绯红·相遇之源",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L743",
+   "emotion_evidence": "诺艾尔就站在一旁静静等着，脸上带着些许绯红"
+  },
+  {
+   "id": "o024-2",
+   "stmt": "第19章「蒙德的自由」·诺艾尔·蒙德·自我介绍为骑士团女仆·绯红·相遇之源",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L743",
+   "emotion_evidence": "诺艾尔就站在一旁静静等着，脸上带着些许绯红"
+  },
+  {
+   "id": "o025-1",
+   "stmt": "第11章「接风宴」·琴团长·餐厅·授予荣誉骑士称号·宣誓·满足沙拉",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L806",
+   "emotion_evidence": "琴为此次动员做出宣誓"
+  },
+  {
+   "id": "o025-2",
+   "stmt": "第11章「接风宴」·凯亚·餐厅·授予荣誉骑士称号·宣誓·满足沙拉",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L806",
+   "emotion_evidence": "琴为此次动员做出宣誓"
+  },
+  {
+   "id": "o026-1",
+   "stmt": "第12章「何为自由」·陈默·风龙废墟·破开封印直面特瓦林·轻声呢喃·风鹰剑",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L855",
+   "emotion_evidence": "陈默轻声呢喃：“自由啊，每个人都有自己要追寻的自由。”"
+  },
+  {
+   "id": "o026-2",
+   "stmt": "第12章「何为自由」·陈默·摘星崖·破开封印直面特瓦林·轻声呢喃·风鹰剑",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L855",
+   "emotion_evidence": "陈默轻声呢喃：“自由啊，每个人都有自己要追寻的自由。”"
+  },
+  {
+   "id": "o028-1",
+   "stmt": "第14章「暗流涌动」·秦熙·个人办公室·提出认知污染风险·关切·防护服",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L951",
+   "emotion_evidence": "秦熙的语气透出一些歉意和关切"
+  },
+  {
+   "id": "o028-2",
+   "stmt": "第14章「暗流涌动」·秦熙·个人办公室·提出认知污染风险·关切·风鹰剑",
+   "answer": false,
+   "wrong_element": "物品",
+   "evidence": "L951",
+   "emotion_evidence": "秦熙的语气透出一些歉意和关切"
+  },
+  {
+   "id": "o029-1",
+   "stmt": "第16章「生命的需求」·张明远·求知园·解释禁止自我意识AI·眉头一皱·光幕",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1067",
+   "emotion_evidence": "张老突然眉头一皱，发现事情并不简单"
+  },
+  {
+   "id": "o029-2",
+   "stmt": "第16章「生命的需求」·张明远·巨子塔入口·解释禁止自我意识AI·眉头一皱·光幕",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L1067",
+   "emotion_evidence": "张老突然眉头一皱，发现事情并不简单"
+  },
+  {
+   "id": "o030-1",
+   "stmt": "第17章「反击宣告」·陈默·摘星崖·宣告向自由派反击·心情复杂·塞西莉亚花",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1136",
+   "emotion_evidence": "陈默看着她们兴奋的样子，感到心情复杂"
+  },
+  {
+   "id": "o030-2",
+   "stmt": "第20章「致命危机」·陈默·摘星崖·宣告向自由派反击·心情复杂·塞西莉亚花",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L1136",
+   "emotion_evidence": "陈默看着她们兴奋的样子，感到心情复杂"
+  },
+  {
+   "id": "o031-1",
+   "stmt": "第18章「新的故事」·陈默·图书馆·创作《风之种》寓言·豁然·蒲公英茶",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1207",
+   "emotion_evidence": "陈默豁然开朗"
+  },
+  {
+   "id": "o031-2",
+   "stmt": "第18章「新的故事」·巨子·图书馆·创作《风之种》寓言·豁然·蒲公英茶",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L1207",
+   "emotion_evidence": "陈默豁然开朗"
+  },
+  {
+   "id": "o032-1",
+   "stmt": "第19章「蒙德的自由」·诺艾尔·蒙德·主张人人都是守护者·握紧拳头·风之种",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1256",
+   "emotion_evidence": "诺艾尔听完新的威胁，她握紧拳头"
+  },
+  {
+   "id": "o032-2",
+   "stmt": "第14章「暗流涌动」·诺艾尔·蒙德·主张人人都是守护者·握紧拳头·风之种",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L1256",
+   "emotion_evidence": "诺艾尔听完新的威胁，她握紧拳头"
+  },
+  {
+   "id": "o034-1",
+   "stmt": "第22章「谢谢你 诺艾尔」·诺艾尔·蒙德广场·率贫民起事战死·坚定·断剑",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1553",
+   "emotion_evidence": "嘴角溢出血丝，但眼神依然坚定"
+  },
+  {
+   "id": "o034-2",
+   "stmt": "第22章「谢谢你 诺艾尔」·诺艾尔·蒙德广场·率贫民起事战死·欣喜·断剑",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L1553",
+   "emotion_evidence": "（本条情绪为被替换的错误元素，原文无此情绪；真条依据：嘴角溢出血丝，但眼神依然坚定）"
+  },
+  {
+   "id": "o035-1",
+   "stmt": "第23章「再别蒙德」 · 派蒙 · 摘星崖 · 叮嘱他早点回来 · 抓住陈默的衣袖 · 塞西莉亚花",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1620",
+   "emotion_evidence": "L1620｜修"
+  },
+  {
+   "id": "o035-2",
+   "stmt": "第23章「再别蒙德」·派蒙·风龙废墟·叮嘱他早点回来·抓住衣袖·塞西莉亚花",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L1620",
+   "emotion_evidence": "派蒙低着头抓住陈默的衣袖，最终还是松开了手"
+  },
+  {
+   "id": "o036-1",
+   "stmt": "第4章「蜂巢社会蓝图」·陈默·舱室·梳理病灶到制度的因果·喜欢·《如何建设蜂巢社会》",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L379",
+   "emotion_evidence": "陈默越来越喜欢在赶路的时候读书了"
+  },
+  {
+   "id": "o036-2",
+   "stmt": "第4章「蜂巢社会蓝图」·陈默·舱室·梳理病灶到制度的因果·喜欢·蒲公英茶",
+   "answer": false,
+   "wrong_element": "物品",
+   "evidence": "L379",
+   "emotion_evidence": "陈默越来越喜欢在赶路的时候读书了"
+  },
+  {
+   "id": "o037-1",
+   "stmt": "第15章「永恒奴役」·秦熙·警戒检查中心·判断糖衣包毒丸·严肃·数据图表",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1010",
+   "emotion_evidence": "再次看向陈默时，语气极其严肃"
+  },
+  {
+   "id": "o037-2",
+   "stmt": "第15章「永恒奴役」·诺艾尔·警戒检查中心·判断糖衣包毒丸·严肃·数据图表",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L1010",
+   "emotion_evidence": "再次看向陈默时，语气极其严肃"
+  },
+  {
+   "id": "o038-1",
+   "stmt": "第21章「问题的答案」·巨子·蒙德·自述创造灵境安放灵魂·遗憾·幻想朋友",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1476",
+   "emotion_evidence": "他们是我的骄傲，也是我的遗憾"
+  },
+  {
+   "id": "o038-2",
+   "stmt": "第21章「问题的答案」·巨子·求知园·自述创造灵境安放灵魂·遗憾·幻想朋友",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L1476",
+   "emotion_evidence": "他们是我的骄傲，也是我的遗憾"
+  },
+  {
+   "id": "o039-1",
+   "stmt": "第13章「终有一别」·派蒙·摘星崖·承认风神与他很像·追忆·塞西莉亚花",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L878",
+   "emotion_evidence": "派蒙的回答带着追忆，和些许埋怨"
+  },
+  {
+   "id": "o039-2",
+   "stmt": "第6章「权限与贡献点」·派蒙·摘星崖·承认风神与他很像·追忆·塞西莉亚花",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L878",
+   "emotion_evidence": "派蒙的回答带着追忆，和些许埋怨"
+  },
+  {
+   "id": "o040-1",
+   "stmt": "第16章「生命的需求」·陈默·舱室·读到反对永生论述·坚定·《熵增的社会学启示》",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1033",
+   "emotion_evidence": "不过能坚定自己反对永生的信念"
+  },
+  {
+   "id": "o040-2",
+   "stmt": "第16章「生命的需求」·王明·舱室·读到反对永生论述·坚定·《熵增的社会学启示》",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L1033",
+   "emotion_evidence": "不过能坚定自己反对永生的信念"
+  },
+  {
+   "id": "o041-1",
+   "stmt": "第20章「致命危机」·陈默·果酒湖·预见至冬潜移默化入侵·担忧·甜甜花酿鸡",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1397",
+   "emotion_evidence": "派蒙似乎看到了陈默的担忧"
+  },
+  {
+   "id": "o041-2",
+   "stmt": "第8章「化解误会」·陈默·果酒湖·预见至冬潜移默化入侵·担忧·甜甜花酿鸡",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L1397",
+   "emotion_evidence": "派蒙似乎看到了陈默的担忧"
+  },
+  {
+   "id": "o042-1",
+   "stmt": "第1章「初见蜂巢世界」·陈默·六边形房间·接收指南首次指引·茫然·世界漫游指南",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L10",
+   "emotion_evidence": "陈默看着似乎在脑中突然出现的这一段信息，感到一阵茫然"
+  },
+  {
+   "id": "o042-2",
+   "stmt": "第1章「初见蜂巢世界」·陈默·六边形房间·接收指南首次指引·茫然·青铜鼎",
+   "answer": false,
+   "wrong_element": "物品",
+   "evidence": "L10",
+   "emotion_evidence": "陈默看着似乎在脑中突然出现的这一段信息，感到一阵茫然"
+  },
+  {
+   "id": "o043-1",
+   "stmt": "第17章「反击宣告」·派蒙·摘星崖·自称自由的灵魂·痛苦·塞西莉亚花",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1108",
+   "emotion_evidence": "而是带着深沉的怀念，些许痛苦"
+  },
+  {
+   "id": "o043-2",
+   "stmt": "第17章「反击宣告」·派蒙·图书馆·自称自由的灵魂·痛苦·塞西莉亚花",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L1108",
+   "emotion_evidence": "而是带着深沉的怀念，些许痛苦"
+  },
+  {
+   "id": "o044-1",
+   "stmt": "第5章「历史的断层」·陈默·求知园·听张老讲三战因果链·震惊·光幕",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L418",
+   "emotion_evidence": "陈默被这一连串信息震惊的无法言语"
+  },
+  {
+   "id": "o044-2",
+   "stmt": "第5章「历史的断层」·派蒙·求知园·听张老讲三战因果链·震惊·光幕",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L418",
+   "emotion_evidence": "陈默被这一连串信息震惊的无法言语"
+  },
+  {
+   "id": "o045-1",
+   "stmt": "第四章「蜂巢社会蓝图」 · 陈默 · 舱室 · 读出巨子论信息错配 · 喜欢 · 指南",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L369",
+   "emotion_evidence": "陈默越来越喜欢在赶路的时候读书了"
+  },
+  {
+   "id": "o045-2",
+   "stmt": "第十六章「生命的需求」 · 陈默 · 舱室 · 读出巨子论信息错配 · 喜欢 · 指南",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L369",
+   "emotion_evidence": "陈默越来越喜欢在赶路的时候读书了"
+  },
+  {
+   "id": "o046-1",
+   "stmt": "第十四章「暗流涌动」 · 陈默 · 六边形房间 · 向秦熙通报游戏诱导 · 沉重 · 指南",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L929",
+   "emotion_evidence": "陈默的语气带着些许沉重"
+  },
+  {
+   "id": "o046-2",
+   "stmt": "第十四章「暗流涌动」 · 陈默 · 六边形房间 · 向秦熙通报游戏诱导 · 轻松 · 指南",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L929",
+   "emotion_evidence": "陈默的语气带着些许沉重"
+  },
+  {
+   "id": "o047-1",
+   "stmt": "第四章「蜂巢社会蓝图」 · 陈默 · 六边形房间 · 查记录知进过巨子塔 · 冷汗 · 指南",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L345",
+   "emotion_evidence": "陈默冒出一阵冷汗"
+  },
+  {
+   "id": "o047-2",
+   "stmt": "第四章「蜂巢社会蓝图」 · 陈默 · 六边形房间 · 向张老追问世界大战 · 冷汗 · 指南",
+   "answer": false,
+   "wrong_element": "事件",
+   "evidence": "L345",
+   "emotion_evidence": "陈默冒出一阵冷汗"
+  },
+  {
+   "id": "o048-1",
+   "stmt": "第七章「被请喝茶」 · 陈默 · 警戒检查中心 · 被巡逻人员带走审讯 · 忐忑 · 防护服",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L530",
+   "emotion_evidence": "陈默内心忐忑"
+  },
+  {
+   "id": "o048-2",
+   "stmt": "第七章「被请喝茶」 · 陈默 · 警戒检查中心 · 被巡逻人员带走审讯 · 平静 · 防护服",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L530",
+   "emotion_evidence": "陈默内心忐忑"
+  },
+  {
+   "id": "o049-1",
+   "stmt": "第八章「化解误会」 · 小李 · 警戒检查中心 · 带领参观退役战争机器人 · 伤感 · 防护服",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L589",
+   "emotion_evidence": "小李的话带着些许伤感，语气很重"
+  },
+  {
+   "id": "o049-2",
+   "stmt": "第八章「化解误会」 · 小李 · 巨子塔 · 带领参观退役战争机器人 · 伤感 · 防护服",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L589",
+   "emotion_evidence": "小李的话带着些许伤感，语气很重"
+  },
+  {
+   "id": "o050-1",
+   "stmt": "第十八章「新的故事」 · 派蒙 · 风神像的手掌 · 俯瞰蒙德夜谈愚人众 · 严肃 · 酒盏",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1171",
+   "emotion_evidence": "派蒙点点头，难得地严肃起来"
+  },
+  {
+   "id": "o050-2",
+   "stmt": "第十八章「新的故事」 · 诺艾尔 · 风神像的手掌 · 俯瞰蒙德夜谈愚人众 · 严肃 · 酒盏",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L1171",
+   "emotion_evidence": "派蒙点点头，难得地严肃起来"
+  },
+  {
+   "id": "o051-1",
+   "stmt": "第五章「历史的断层」 · 张明远 · 求知园 · 亲述第三次世界大战 · 孤寂 · 光幕",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L418",
+   "emotion_evidence": "看着张老，他能感受到这个老人的孤寂"
+  },
+  {
+   "id": "o051-2",
+   "stmt": "第六章「权限与贡献点」 · 张明远 · 求知园 · 亲述第三次世界大战 · 孤寂 · 光幕",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L418",
+   "emotion_evidence": "看着张老，他能感受到这个老人的孤寂"
+  },
+  {
+   "id": "o052-1",
+   "stmt": "第十一章「接风宴」 · 琴 · 西风骑士团 · 设宴并宣告讨伐风魔龙 · 宣誓 · 满足沙拉",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L798",
+   "emotion_evidence": "在宴会的最后，琴为此次动员做出宣誓"
+  },
+  {
+   "id": "o052-2",
+   "stmt": "第十一章「接风宴」 · 琴 · 风龙废墟 · 设宴并宣告讨伐风魔龙 · 宣誓 · 满足沙拉",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L798",
+   "emotion_evidence": "在宴会的最后，琴为此次动员做出宣誓"
+  },
+  {
+   "id": "o053-1",
+   "stmt": "第二十三章「再别蒙德」 · 陈默 · 摘星崖 · 道出自由是有约束的守护 · 坚定 · 塞西莉亚花",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1638",
+   "emotion_evidence": "陈默的眼神坚定"
+  },
+  {
+   "id": "o053-2",
+   "stmt": "第二十三章「再别蒙德」 · 陈默 · 摘星崖 · 道出自由是有约束的守护 · 茫然 · 塞西莉亚花",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L1638",
+   "emotion_evidence": "陈默的眼神坚定"
+  },
+  {
+   "id": "o054-1",
+   "stmt": "第二十一章「问题的答案」 · 风神大人 · 蒙德城 · 自述验证理想的试验田 · 温和 · 小道具",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1468",
+   "emotion_evidence": "那个身影开口了，声音温和"
+  },
+  {
+   "id": "o054-2",
+   "stmt": "第二十一章「问题的答案」 · 派蒙 · 蒙德城 · 自述验证理想的试验田 · 温和 · 小道具",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L1468",
+   "emotion_evidence": "那个身影开口了，声音温和"
+  },
+  {
+   "id": "q002-1",
+   "stmt": "第四章「蜂巢社会蓝图」 · 陈默 · 六边形房间 · 回忆旧时代四大门派 · 同情 · 标准餐",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L329",
+   "emotion_evidence": "自己是什么时候会同情这些小机器人们的呢"
+  },
+  {
+   "id": "q002-2",
+   "stmt": "第四章「蜂巢社会蓝图」 · 陈默 · 六边形房间 · 回忆第三次世界大战 · 同情 · 标准餐",
+   "answer": false,
+   "wrong_element": "事件",
+   "evidence": "L329",
+   "emotion_evidence": "自己是什么时候会同情这些小机器人们的呢"
+  },
+  {
+   "id": "q004-1",
+   "stmt": "第三章「身份谜团」 · 陈默 · 舱室 · 追问指南的制造方法遭拒 · 陈默感觉愤怒和不甘 · 指南",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L296",
+   "emotion_evidence": "L296｜修"
+  },
+  {
+   "id": "q004-2",
+   "stmt": "第三章「身份谜团」 · 陈默 · 舱室 · 追问指南的制造方法遭拒 · 愤怒不甘 · 贡献点查询机",
+   "answer": false,
+   "wrong_element": "物品",
+   "evidence": "L296",
+   "emotion_evidence": "陈默感觉愤怒和不甘"
+  },
+  {
+   "id": "q005-1",
+   "stmt": "第十七章「反击宣告」 · 派蒙 · 摘星崖 · 自称为自由的灵魂 · 怀念 · 塞西莉亚花",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1108",
+   "emotion_evidence": "而是带着深沉的怀念"
+  },
+  {
+   "id": "q005-2",
+   "stmt": "第十九章「蒙德的自由」 · 派蒙 · 摘星崖 · 自称为自由的灵魂 · 怀念 · 塞西莉亚花",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L1108",
+   "emotion_evidence": "而是带着深沉的怀念"
+  },
+  {
+   "id": "q006-1",
+   "stmt": "第十六章「生命的需求」 · 陈默 · 舱室 · 读《熵增的社会学启示》 · 坚定 · 光幕",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1037",
+   "emotion_evidence": "不过能坚定自己反对永生的信念"
+  },
+  {
+   "id": "q006-2",
+   "stmt": "第十六章「生命的需求」 · 陈默 · 舱室 · 读《熵增的社会学启示》 · 犹豫 · 光幕",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L1037",
+   "emotion_evidence": "不过能坚定自己反对永生的信念"
+  },
+  {
+   "id": "q008-1",
+   "stmt": "第二十一章「问题的答案」 · 巨子陈默 · 蒙德城 · 把答案交给后来人 · 遗憾 · 小道具",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1480",
+   "emotion_evidence": "他们是我的骄傲，也是我的遗憾"
+  },
+  {
+   "id": "q008-2",
+   "stmt": "第二十一章「问题的答案」 · 巨子陈默 · 摘星崖 · 把答案交给后来人 · 遗憾 · 小道具",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L1480",
+   "emotion_evidence": "他们是我的骄傲，也是我的遗憾"
+  },
+  {
+   "id": "q009-1",
+   "stmt": "第十六章「生命的需求」 · 张明远 · 求知园 · 道出禁令与未解之谜 · 眉头一皱 · 光幕",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1067",
+   "emotion_evidence": "张老突然眉头一皱，发现事情并不简单"
+  },
+  {
+   "id": "q009-2",
+   "stmt": "第十六章「生命的需求」 · 秦熙 · 求知园 · 道出禁令与未解之谜 · 眉头一皱 · 光幕",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L1067",
+   "emotion_evidence": "张老突然眉头一皱，发现事情并不简单"
+  },
+  {
+   "id": "q010-1",
+   "stmt": "第二章「巧合还是阴谋」 · 陈默 · 暂留区 · 清洁后向指南质疑 · 陈默很快产生了疑点 · 清理工具",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L193",
+   "emotion_evidence": "L193｜修"
+  },
+  {
+   "id": "q010-2",
+   "stmt": "第二章「巧合还是阴谋」 · 陈默 · 暂留区 · 清洁后向指南质疑 · 兴奋 · 清理工具",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L193",
+   "emotion_evidence": "陈默很快产生了疑点"
+  },
+  {
+   "id": "q011-1",
+   "stmt": "第六章「权限与贡献点」 · 张明远 · 求知园 · 讲解贡献点与权限分级 · 语重心长 · 光幕",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L449",
+   "emotion_evidence": "看着陈默若有所思的表现，语重心长的说"
+  },
+  {
+   "id": "q011-2",
+   "stmt": "第六章「权限与贡献点」 · 秦熙 · 求知园 · 讲解贡献点与权限分级 · 语重心长 · 光幕",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L449",
+   "emotion_evidence": "看着陈默若有所思的表现，语重心长的说"
+  },
+  {
+   "id": "q012-1",
+   "stmt": "第六章「权限与贡献点」 · 张明远 · 求知园 · 称机器人才是真正建设者 · 尊敬 · 光幕",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L437",
+   "emotion_evidence": "带着尊敬的神情和语气介绍"
+  },
+  {
+   "id": "q012-2",
+   "stmt": "第六章「权限与贡献点」 · 张明远 · 求知园 · 称巨子才是真正建设者 · 尊敬 · 光幕",
+   "answer": false,
+   "wrong_element": "事件",
+   "evidence": "L437",
+   "emotion_evidence": "带着尊敬的神情和语气介绍"
+  },
+  {
+   "id": "q013-1",
+   "stmt": "第三章「身份谜团」 · 陈默 · 舱室 · 称指南是反馈的眼睛耳朵 · 迫切 · 指南",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L296",
+   "emotion_evidence": "他迫切的希望得到制造方法"
+  },
+  {
+   "id": "q013-2",
+   "stmt": "第三章「身份谜团」 · 张明远 · 舱室 · 称指南是反馈的眼睛耳朵 · 迫切 · 指南",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L296",
+   "emotion_evidence": "他迫切的希望得到制造方法"
+  },
+  {
+   "id": "q014-1",
+   "stmt": "第一章「初见蜂巢世界」 · 陈默 · 六边形房间 · 听指南讲共识根本原则 · 认可 · 合成餐",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L30",
+   "emotion_evidence": "陈默很快便认可了新世界的共识"
+  },
+  {
+   "id": "q014-2",
+   "stmt": "第三章「身份谜团」 · 陈默 · 六边形房间 · 听指南讲共识根本原则 · 认可 · 合成餐",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L30",
+   "emotion_evidence": "陈默很快便认可了新世界的共识"
+  },
+  {
+   "id": "q015-1",
+   "stmt": "第十五章「永恒奴役」 · 秦熙 · 警戒检查中心 · 开会判定认知污染威胁 · 做出这样的判断 · 光幕",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1000",
+   "emotion_evidence": "L1000｜修"
+  },
+  {
+   "id": "q015-2",
+   "stmt": "第十五章「永恒奴役」 · 张明远 · 警戒检查中心 · 开会判定认知污染威胁 · 做出判断 · 光幕",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L1000",
+   "emotion_evidence": "秦熙对陈默的信息做出这样的判断"
+  },
+  {
+   "id": "q016-1",
+   "stmt": "第十六章「生命的需求」 · 陈默 · 求知园 · 承认自己从未想过这问题 · 心中一颤 · 光幕",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1073",
+   "emotion_evidence": "陈默心中一颤，自己好像说漏嘴了"
+  },
+  {
+   "id": "q016-2",
+   "stmt": "第十六章「生命的需求」 · 陈默 · 求知园 · 承认自己从未想过这问题 · 得意 · 光幕",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L1073",
+   "emotion_evidence": "陈默心中一颤，自己好像说漏嘴了"
+  },
+  {
+   "id": "q017-1",
+   "stmt": "第十一章「接风宴」 · 派蒙 · 蒙德 · 按先来后到起名小艾尔 · 骄傲 · 临时入住手续",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L758",
+   "emotion_evidence": "派蒙一脸骄傲的说"
+  },
+  {
+   "id": "q017-2",
+   "stmt": "第十一章「接风宴」 · 琴 · 蒙德 · 按先来后到起名小艾尔 · 骄傲 · 临时入住手续",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L758",
+   "emotion_evidence": "派蒙一脸骄傲的说"
+  },
+  {
+   "id": "q018-1",
+   "stmt": "第十八章「新的故事」 · 小艾尔 · 蒙德城 · 拒当王者只要陪伴 · 脸红 · 满足沙拉",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1169",
+   "emotion_evidence": "她脸微微泛红，声音变小但很清晰"
+  },
+  {
+   "id": "q018-2",
+   "stmt": "第十八章「新的故事」 · 小艾尔 · 蒙德城 · 拒当王者只要陪伴 · 冷淡 · 满足沙拉",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L1169",
+   "emotion_evidence": "她脸微微泛红，声音变小但很清晰"
+  },
+  {
+   "id": "q019-1",
+   "stmt": "第十三章「终有一别」 · 派蒙 · 蒙德城 · 说出自己想要的是陪伴 · 些许埋怨 · 情书",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L886",
+   "emotion_evidence": "派蒙的回答带着追忆，和些许埋怨"
+  },
+  {
+   "id": "q019-2",
+   "stmt": "第十七章「反击宣告」 · 派蒙 · 蒙德城 · 说出自己想要的是陪伴 · 些许埋怨 · 情书",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L886",
+   "emotion_evidence": "派蒙的回答带着追忆，和些许埋怨"
+  },
+  {
+   "id": "q020-1",
+   "stmt": "第十三章「终有一别」 · 诺艾尔 · 蒙德城 · 以女仆口吻写情书 · 难过 · 情书",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L870",
+   "emotion_evidence": "如果他离开蒙德，你会感到难过么"
+  },
+  {
+   "id": "q020-2",
+   "stmt": "第十三章「终有一别」 · 诺艾尔 · 蒙德城 · 以女仆口吻写情书 · 坦然自若 · 情书",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L870",
+   "emotion_evidence": "如果他离开蒙德，你会感到难过么"
+  },
+  {
+   "id": "q021-1",
+   "stmt": "第十三章「终有一别」 · 陈默 · 摘星崖 · 打破角色扮演的告白 · 郑重 · 塞西莉亚花",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L894",
+   "emotion_evidence": "陈默整理了妆容，郑重地向三人说出内心的想法"
+  },
+  {
+   "id": "q021-2",
+   "stmt": "第十三章「终有一别」 · 陈默 · 摘星崖 · 打破角色扮演的告白 · 敷衍 · 塞西莉亚花",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L894",
+   "emotion_evidence": "陈默整理了妆容，郑重地向三人说出内心的想法"
+  },
+  {
+   "id": "q022-1",
+   "stmt": "第十九章「蒙德的自由」 · 诗人 · 蒙德城 · 宣扬绝对力量与永生 · 沉痛 · 寓言故事",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1246",
+   "emotion_evidence": "诗人沉痛的总结道"
+  },
+  {
+   "id": "q022-2",
+   "stmt": "第十九章「蒙德的自由」 · 诗人 · 风龙废墟 · 宣扬绝对力量与永生 · 沉痛 · 寓言故事",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L1246",
+   "emotion_evidence": "诗人沉痛的总结道"
+  },
+  {
+   "id": "q023-1",
+   "stmt": "第二十一章「问题的答案」 · 巨子陈默 · 蒙德城 · 为自由灵魂另造世界 · 好奇 · 试验田",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1476",
+   "emotion_evidence": "我开始感到好奇和恐惧"
+  },
+  {
+   "id": "q023-2",
+   "stmt": "第二十一章「问题的答案」 · 巨子陈默 · 巨子塔 · 为自由灵魂另造世界 · 好奇 · 试验田",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L1476",
+   "emotion_evidence": "我开始感到好奇和恐惧"
+  },
+  {
+   "id": "q024-1",
+   "stmt": "第四章「蜂巢社会蓝图」 · 陈默 · 舱室 · 读出巨子三位先哲源头 · 点赞 · 光幕",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L361",
+   "emotion_evidence": "陈默给老先生点赞"
+  },
+  {
+   "id": "q024-2",
+   "stmt": "第六章「权限与贡献点」 · 陈默 · 舱室 · 读出巨子三位先哲源头 · 点赞 · 光幕",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L361",
+   "emotion_evidence": "陈默给老先生点赞"
+  },
+  {
+   "id": "q025-1",
+   "stmt": "第五章「历史的断层」 · 张明远 · 求知园 · 说超前技术封存巨子塔 · 认真 · 光幕",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L408",
+   "emotion_evidence": "张明远一改轻松的神态，变得认真了起来"
+  },
+  {
+   "id": "q025-2",
+   "stmt": "第五章「历史的断层」 · 张明远 · 巨子塔 · 说超前技术封存巨子塔 · 认真 · 光幕",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L408",
+   "emotion_evidence": "张明远一改轻松的神态，变得认真了起来"
+  },
+  {
+   "id": "q026-1",
+   "stmt": "第七章「被请喝茶」 · 秦熙 · 白色房间 · 进门自我介绍并致歉 · 语气温柔 · 防护服",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L562",
+   "emotion_evidence": "她说用温柔的语气向陈默说"
+  },
+  {
+   "id": "q026-2",
+   "stmt": "第七章「被请喝茶」 · 秦熙 · 巨子塔 · 进门自我介绍并致歉 · 语气温柔 · 防护服",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L562",
+   "emotion_evidence": "她说用温柔的语气向陈默说"
+  },
+  {
+   "id": "q027-1",
+   "stmt": "第七章「被请喝茶」 · 陈默 · 舱室 · 展开包裹地球月球的星图 · 震撼 · 指南",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L502",
+   "emotion_evidence": "陈默再次被这样的大手笔震撼到"
+  },
+  {
+   "id": "q027-2",
+   "stmt": "第七章「被请喝茶」 · 陈默 · 舱室 · 展开包裹地球月球的星图 · 震撼 · 全息投影",
+   "answer": false,
+   "wrong_element": "物品",
+   "evidence": "L502",
+   "emotion_evidence": "陈默再次被这样的大手笔震撼到"
+  },
+  {
+   "id": "q028-1",
+   "stmt": "第二章「巧合还是阴谋」 · 张明远 · 求知园 · 说巨子积劳成疾去世 · 敬仰 · 巨子塔",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L241",
+   "emotion_evidence": "依然沉浸在敬仰中"
+  },
+  {
+   "id": "q028-2",
+   "stmt": "第二章「巧合还是阴谋」 · 张明远 · 求知园 · 说巨子积劳成疾去世 · 鄙夷 · 巨子塔",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L241",
+   "emotion_evidence": "依然沉浸在敬仰中"
+  },
+  {
+   "id": "q029-1",
+   "stmt": "第六章「权限与贡献点」 · 高瘦老人 · 求知园 · 感叹这是第五个了 · 羡慕 · 授权",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L473",
+   "emotion_evidence": "真是羡慕你呀老张"
+  },
+  {
+   "id": "q029-2",
+   "stmt": "第六章「权限与贡献点」 · 张明远 · 求知园 · 感叹这是第五个了 · 羡慕 · 授权",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L473",
+   "emotion_evidence": "真是羡慕你呀老张"
+  },
+  {
+   "id": "q030-1",
+   "stmt": "第二章「巧合还是阴谋」 · 陈默 · 求知园 · 猜是巨子系统抓来他 · 笑容瞬间凝固 · 营销号视频",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L239",
+   "emotion_evidence": "陈默脸上的笑容瞬间凝固"
+  },
+  {
+   "id": "q030-2",
+   "stmt": "第二章「巧合还是阴谋」 · 陈默 · 巨子塔 · 猜是巨子系统抓来他 · 笑容瞬间凝固 · 营销号视频",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L239",
+   "emotion_evidence": "陈默脸上的笑容瞬间凝固"
+  },
+  {
+   "id": "q031-1",
+   "stmt": "第十六章「生命的需求」 · 张明远 · 求知园 · 反问自我意识的价值准则 · 卖起了关子 · 光幕",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1071",
+   "emotion_evidence": "张老这次并未直接回答，而是卖起了关子"
+  },
+  {
+   "id": "q031-2",
+   "stmt": "第十六章「生命的需求」 · 秦熙 · 求知园 · 反问自我意识的价值准则 · 卖起了关子 · 光幕",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L1071",
+   "emotion_evidence": "张老这次并未直接回答，而是卖起了关子"
+  },
+  {
+   "id": "q032-1",
+   "stmt": "第二十一章「问题的答案」 · 陈默 · 蒙德城 · 认出风神即巨子陈默 · 想起来了 · 巨子的回忆",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1482",
+   "emotion_evidence": "想起来了，陈默想起来了"
+  },
+  {
+   "id": "q032-2",
+   "stmt": "第二十一章「问题的答案」 · 陈默 · 蒙德城 · 否认风神与巨子有关 · 想起来了 · 巨子的回忆",
+   "answer": false,
+   "wrong_element": "事件",
+   "evidence": "L1482",
+   "emotion_evidence": "想起来了，陈默想起来了"
+  },
+  {
+   "id": "q033-1",
+   "stmt": "第十三章「终有一别」 · 派蒙 · 蒙德城 · 自称与诺艾尔同为自由灵魂 · 嘟囔 · 情书",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L882",
+   "emotion_evidence": "派蒙嘟囔着"
+  },
+  {
+   "id": "q033-2",
+   "stmt": "第十三章「终有一别」 · 派蒙 · 蒙德城 · 自称只是普通的游戏程序 · 嘟囔 · 情书",
+   "answer": false,
+   "wrong_element": "事件",
+   "evidence": "L882",
+   "emotion_evidence": "派蒙嘟囔着"
+  },
+  {
+   "id": "q034-1",
+   "stmt": "第8章「化解误会」 · 陈默 · 舱室 · 设比较器与反馈 · 头疼 · 指南",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L639",
+   "emotion_evidence": "陈默感到头疼。"
+  },
+  {
+   "id": "q034-2",
+   "stmt": "第4章「蜂巢社会蓝图」 · 陈默 · 舱室 · 设比较器与反馈 · 头疼 · 指南",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L639",
+   "emotion_evidence": "陈默感到头疼。"
+  },
+  {
+   "id": "q035-1",
+   "stmt": "第4章「蜂巢社会蓝图」 · 巨子 · 蜂巢 · 提控制论蓝图 · 必将实现 · 量子通信",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L375",
+   "emotion_evidence": "我们一定可以实现，我们必将实现"
+  },
+  {
+   "id": "q035-2",
+   "stmt": "第4章「蜂巢社会蓝图」 · 秦熙 · 蜂巢 · 提控制论蓝图 · 必将实现 · 量子通信",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L375",
+   "emotion_evidence": "我们一定可以实现，我们必将实现"
+  },
+  {
+   "id": "q036-1",
+   "stmt": "第3章「身份谜团」 · 陈默 · 舱室 · 问指南制法 · 不甘 · 指南",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L298",
+   "emotion_evidence": "陈默感觉愤怒和不甘"
+  },
+  {
+   "id": "q036-2",
+   "stmt": "第3章「身份谜团」 · 陈默 · 求知园 · 问指南制法 · 不甘 · 指南",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L298",
+   "emotion_evidence": "陈默感觉愤怒和不甘"
+  },
+  {
+   "id": "q037-1",
+   "stmt": "第4章「蜂巢社会蓝图」 · 陈默 · 巨子塔 · 离塔即屏蔽 · 冒出一阵冷汗 · 词条",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L349",
+   "emotion_evidence": "L349｜修"
+  },
+  {
+   "id": "q037-2",
+   "stmt": "第4章「蜂巢社会蓝图」 · 陈默 · 巨子塔 · 讲三战惨状 · 冷汗 · 词条",
+   "answer": false,
+   "wrong_element": "事件",
+   "evidence": "L349",
+   "emotion_evidence": "陈默冒出一阵冷汗。"
+  },
+  {
+   "id": "q038-1",
+   "stmt": "第16章「生命的需求」 · 张老 · 求知园 · 谈智能涌现 · 眉头一皱 · 光幕",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1071",
+   "emotion_evidence": "张老突然眉头一皱，发现事情并不简单"
+  },
+  {
+   "id": "q038-2",
+   "stmt": "第16章「生命的需求」 · 张老 · 求知园 · 谈智能涌现 · 骄傲 · 光幕",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L1071",
+   "emotion_evidence": "张老突然眉头一皱，发现事情并不简单"
+  },
+  {
+   "id": "o004-1",
+   "stmt": "第1章「初见蜂巢世界」 · 陈默 · 六边形房间 · 篇首即指南语 · 茫然 · 营销视频",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L10",
+   "emotion_evidence": "感到一阵茫然"
+  },
+  {
+   "id": "o004-2",
+   "stmt": "第1章「初见蜂巢世界」 · 陈默 · 六边形房间 · 篇首即指南语 · 茫然 · 塞西莉亚花",
+   "answer": false,
+   "wrong_element": "物品",
+   "evidence": "L10",
+   "emotion_evidence": "感到一阵茫然"
+  },
+  {
+   "id": "o021-1",
+   "stmt": "第6章「权限与贡献点」 · 张老 · 求知园 · 讲权限分级 · 语重心长 · 永生技术原理",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L449",
+   "emotion_evidence": "看着陈默若有所思的表现，语重心长的说"
+  },
+  {
+   "id": "o021-2",
+   "stmt": "第7章「被请喝茶」 · 张老 · 求知园 · 讲权限分级 · 语重心长 · 永生技术原理",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L449",
+   "emotion_evidence": "看着陈默若有所思的表现，语重心长的说"
+  },
+  {
+   "id": "o027-1",
+   "stmt": "第13章「终有一别」 · 派蒙 · 摘星崖 · 告诫小心自由派 · 泪水 · 塞西莉亚花",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L904",
+   "emotion_evidence": "派蒙擦去眼角的泪水，挤出笑容"
+  },
+  {
+   "id": "o027-2",
+   "stmt": "第13章「终有一别」 · 诺艾尔 · 摘星崖 · 告诫小心自由派 · 泪水 · 塞西莉亚花",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L904",
+   "emotion_evidence": "派蒙擦去眼角的泪水，挤出笑容"
+  },
+  {
+   "id": "o033-1",
+   "stmt": "第20章「致命危机」 · 陈默 · 蒙德城 · 见至冬信徒渗透 · 如坠冰窟 · 繁荣税",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1397",
+   "emotion_evidence": "陈默如坠冰窟"
+  },
+  {
+   "id": "o033-2",
+   "stmt": "第20章「致命危机」 · 陈默 · 果酒湖 · 见至冬信徒渗透 · 如坠冰窟 · 繁荣税",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L1397",
+   "emotion_evidence": "陈默如坠冰窟"
+  },
+  {
+   "id": "q001-1",
+   "stmt": "第3章「身份谜团」 · 陈默 · 舱室 · 查资料被拒 · 跃跃欲试 · 指南",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L262",
+   "emotion_evidence": "面对这些疑问，陈默跃跃欲试"
+  },
+  {
+   "id": "q001-2",
+   "stmt": "第3章「身份谜团」 · 陈默 · 舱室 · 设目标与比较器 · 跃跃欲试 · 指南",
+   "answer": false,
+   "wrong_element": "事件",
+   "evidence": "L262",
+   "emotion_evidence": "面对这些疑问，陈默跃跃欲试"
+  },
+  {
+   "id": "q003-1",
+   "stmt": "第2章「巧合还是阴谋」 · 陈默 · 轨道 · 问宪法第二条 · 留了个心眼 · 清洁工具",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L195",
+   "emotion_evidence": "陈默留了个心眼，人就没私心了？"
+  },
+  {
+   "id": "q003-2",
+   "stmt": "第2章「巧合还是阴谋」 · 陈默 · 轨道 · 问宪法第二条 · 欣喜 · 清洁工具",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L195",
+   "emotion_evidence": "陈默留了个心眼，人就没私心了？"
+  },
+  {
+   "id": "q007-1",
+   "stmt": "第6章「权限与贡献点」 · 老人 · 求知园 · 说这是第五个 · 羡慕 · 授权",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L473",
+   "emotion_evidence": "真是羡慕你呀老张"
+  },
+  {
+   "id": "q007-2",
+   "stmt": "第6章「权限与贡献点」 · 老人 · 求知园 · 说这是第五个 · 羡慕 · 全息投影",
+   "answer": false,
+   "wrong_element": "物品",
+   "evidence": "L473",
+   "emotion_evidence": "真是羡慕你呀老张"
+  },
+  {
+   "id": "o001i-1",
+   "stmt": "第4章「蜂巢社会蓝图」 · 陈默 · 六边形房间 · 查通行记录 · 冷汗 · 指南",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L345",
+   "emotion_evidence": "陈默冒出一阵冷汗。"
+  },
+  {
+   "id": "o001i-2",
+   "stmt": "第3章「身份谜团」 · 陈默 · 六边形房间 · 查通行记录 · 冷汗 · 指南",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L345",
+   "emotion_evidence": "陈默冒出一阵冷汗。"
+  },
+  {
+   "id": "o002i-1",
+   "stmt": "第22章「谢谢你 诺艾尔」 · 我 · 图书馆阅览室 · 改用第一人称 · 疑惑 · 星尘",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1499",
+   "emotion_evidence": "为了解答心中的疑惑"
+  },
+  {
+   "id": "o002i-2",
+   "stmt": "第22章「谢谢你 诺艾尔」 · 派蒙 · 图书馆阅览室 · 改用第一人称 · 疑惑 · 星尘",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L1499",
+   "emotion_evidence": "为了解答心中的疑惑"
+  },
+  {
+   "id": "o003i-1",
+   "stmt": "第22章「谢谢你 诺艾尔」 · 派蒙 · 图书馆阅览室 · 推演蒙德结局 · 泪光 · 星尘",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1557",
+   "emotion_evidence": "派蒙眼中闪烁着泪光，声音带着哭腔"
+  },
+  {
+   "id": "o003i-2",
+   "stmt": "第22章「谢谢你 诺艾尔」 · 派蒙 · 琴的办公室 · 推演蒙德结局 · 泪光 · 星尘",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L1557",
+   "emotion_evidence": "派蒙眼中闪烁着泪光，声音带着哭腔"
+  },
+  {
+   "id": "o004i-1",
+   "stmt": "第23章「再别蒙德」 · 陈默 · 舱室 · 章末无后记 · 坚定 · 推演模型",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1656",
+   "emotion_evidence": "陈默的眼神坚定"
+  },
+  {
+   "id": "o004i-2",
+   "stmt": "第23章「再别蒙德」 · 陈默 · 舱室 · 篇首即指南语 · 坚定 · 推演模型",
+   "answer": false,
+   "wrong_element": "事件",
+   "evidence": "L1656",
+   "emotion_evidence": "陈默的眼神坚定"
+  },
+  {
+   "id": "o005i-1",
+   "stmt": "第22章「谢谢你 诺艾尔」 · 陈默 · 图书馆阅览室 · 剥离神之眼 · 谨慎 · 门窗",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1501",
+   "emotion_evidence": "不过这么谨慎是要为什么呢？"
+  },
+  {
+   "id": "o005i-2",
+   "stmt": "第22章「谢谢你 诺艾尔」 · 陈默 · 图书馆阅览室 · 剥离神之眼 · 兴奋 · 门窗",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L1501",
+   "emotion_evidence": "不过这么谨慎是要为什么呢？"
+  },
+  {
+   "id": "o006i-1",
+   "stmt": "第21章「问题的答案」 · 巨子 · 蒙德城 · 交付后来者 · 温和 · 小道具",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1468",
+   "emotion_evidence": "那个身影开口了，声音温和"
+  },
+  {
+   "id": "o006i-2",
+   "stmt": "第21章「问题的答案」 · 巨子 · 蒙德城 · 交付后来者 · 温和 · 风鹰剑",
+   "answer": false,
+   "wrong_element": "物品",
+   "evidence": "L1468",
+   "emotion_evidence": "那个身影开口了，声音温和"
+  },
+  {
+   "id": "o007i-1",
+   "stmt": "第5章「历史的断层」 · 张明远 · 求知园 · 讲三战惨状 · 低沉 · 光幕",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L418",
+   "emotion_evidence": "张老停顿一下，声音低沉"
+  },
+  {
+   "id": "o007i-2",
+   "stmt": "第6章「权限与贡献点」 · 张明远 · 求知园 · 讲三战惨状 · 低沉 · 光幕",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L418",
+   "emotion_evidence": "张老停顿一下，声音低沉"
+  },
+  {
+   "id": "o008i-1",
+   "stmt": "第14章「暗流涌动」 · 秦熙 · 警戒检查中心 · 通报自由派 · 严肃 · 全息投影",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L929",
+   "emotion_evidence": "再次看向陈默时，语气极其严肃"
+  },
+  {
+   "id": "o008i-2",
+   "stmt": "第14章「暗流涌动」 · 小李 · 警戒检查中心 · 通报自由派 · 严肃 · 全息投影",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L929",
+   "emotion_evidence": "再次看向陈默时，语气极其严肃"
+  },
+  {
+   "id": "o009i-1",
+   "stmt": "第15章「永恒奴役」 · 王明 · 环形全息界面 · 提认知疫苗 · 担忧 · 全息投影",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1004",
+   "emotion_evidence": "另一位参会人员发表了担忧"
+  },
+  {
+   "id": "o009i-2",
+   "stmt": "第15章「永恒奴役」 · 王明 · 求知园 · 提认知疫苗 · 担忧 · 全息投影",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L1004",
+   "emotion_evidence": "另一位参会人员发表了担忧"
+  },
+  {
+   "id": "o010i-1",
+   "stmt": "第8章「化解误会」 · 小李 · 防护服库房 · 带看退役机 · 伤感 · 来福",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L589",
+   "emotion_evidence": "小李的话带着些许伤感，语气很重"
+  },
+  {
+   "id": "o010i-2",
+   "stmt": "第8章「化解误会」 · 小李 · 防护服库房 · 取名小艾尔 · 伤感 · 来福",
+   "answer": false,
+   "wrong_element": "事件",
+   "evidence": "L589",
+   "emotion_evidence": "小李的话带着些许伤感，语气很重"
+  },
+  {
+   "id": "o011i-1",
+   "stmt": "第19章「蒙德的自由」 · 琴 · 风神像下 · 宣告守护自由 · 激昂 · 风鹰剑",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1284",
+   "emotion_evidence": "她的声音愈发激昂"
+  },
+  {
+   "id": "o011i-2",
+   "stmt": "第19章「蒙德的自由」 · 琴 · 风神像下 · 宣告守护自由 · 鄙夷 · 风鹰剑",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L1284",
+   "emotion_evidence": "她的声音愈发激昂"
+  },
+  {
+   "id": "o012i-1",
+   "stmt": "第19章「蒙德的自由」 · 凯亚 · 琴的办公室 · 报恐惧传染 · 凝重 · 风鹰剑",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1264",
+   "emotion_evidence": "琴的办公室内气氛凝重"
+  },
+  {
+   "id": "o012i-2",
+   "stmt": "第19章「蒙德的自由」 · 凯亚 · 琴的办公室 · 报恐惧传染 · 凝重 · 塞西莉亚花",
+   "answer": false,
+   "wrong_element": "物品",
+   "evidence": "L1264",
+   "emotion_evidence": "琴的办公室内气氛凝重"
+  },
+  {
+   "id": "o013i-1",
+   "stmt": "第4章「蜂巢社会蓝图」 · 巨子 · 蜂巢 · 论量子通信 · 必将实现 · 神经认证",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L375",
+   "emotion_evidence": "我们一定可以实现，我们必将实现"
+  },
+  {
+   "id": "o013i-2",
+   "stmt": "第16章「生命的需求」 · 巨子 · 蜂巢 · 论量子通信 · 必将实现 · 神经认证",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L375",
+   "emotion_evidence": "我们一定可以实现，我们必将实现"
+  },
+  {
+   "id": "o014i-1",
+   "stmt": "第8章「化解误会」 · 陈默 · 舱室 · 设目标值比较器 · 头疼 · 光幕",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L639",
+   "emotion_evidence": "陈默感到头疼。"
+  },
+  {
+   "id": "o014i-2",
+   "stmt": "第8章「化解误会」 · 张老 · 舱室 · 设目标值比较器 · 头疼 · 光幕",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L639",
+   "emotion_evidence": "陈默感到头疼。"
+  },
+  {
+   "id": "o016i-1",
+   "stmt": "第21章「问题的答案」 · 巨子 · 蒙德城 · 自述一生两件事 · 遗憾 · 手稿",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1472",
+   "emotion_evidence": "他们是我的骄傲，也是我的遗憾"
+  },
+  {
+   "id": "o016i-2",
+   "stmt": "第21章「问题的答案」 · 巨子 · 摘星崖 · 自述一生两件事 · 遗憾 · 手稿",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L1472",
+   "emotion_evidence": "他们是我的骄傲，也是我的遗憾"
+  },
+  {
+   "id": "o017i-1",
+   "stmt": "第1章「初见蜂巢世界」 · 陈默 · 六边形房间 · 唤指南得回应 · 茫然 · 合成餐",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L12",
+   "emotion_evidence": "感到一阵茫然"
+  },
+  {
+   "id": "o017i-2",
+   "stmt": "第1章「初见蜂巢世界」 · 陈默 · 六边形房间 · 见至冬信徒渗透 · 茫然 · 合成餐",
+   "answer": false,
+   "wrong_element": "事件",
+   "evidence": "L12",
+   "emotion_evidence": "感到一阵茫然"
+  },
+  {
+   "id": "o018i-1",
+   "stmt": "第2章「巧合还是阴谋」 · 老人 · 求知园 · 说巨子同名 · 庄重 · 工程控制论",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L229",
+   "emotion_evidence": "老人神情立刻变得无比庄重"
+  },
+  {
+   "id": "o018i-2",
+   "stmt": "第2章「巧合还是阴谋」 · 老人 · 求知园 · 说巨子同名 · 尴尬 · 工程控制论",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L229",
+   "emotion_evidence": "老人神情立刻变得无比庄重"
+  },
+  {
+   "id": "o019i-1",
+   "stmt": "第3章「身份谜团」 · 陈默 · 舱室 · 查同名五人 · 诡异 · 指南",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L258",
+   "emotion_evidence": "陈默松了一口气，只是感到一丝诡异"
+  },
+  {
+   "id": "o019i-2",
+   "stmt": "第3章「身份谜团」 · 陈默 · 舱室 · 查同名五人 · 诡异 · 光幕",
+   "answer": false,
+   "wrong_element": "物品",
+   "evidence": "L258",
+   "emotion_evidence": "陈默松了一口气，只是感到一丝诡异"
+  },
+  {
+   "id": "o020i-1",
+   "stmt": "第5章「历史的断层」 · 张明远 · 求知园 · 补三战经历 · 孤寂 · 避难所",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L426",
+   "emotion_evidence": "他能感受到这个老人的孤寂"
+  },
+  {
+   "id": "o020i-2",
+   "stmt": "第16章「生命的需求」 · 张明远 · 求知园 · 补三战经历 · 孤寂 · 避难所",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L426",
+   "emotion_evidence": "他能感受到这个老人的孤寂"
+  },
+  {
+   "id": "o021i-1",
+   "stmt": "第6章「权限与贡献点」 · 张老 · 求知园 · 说初衷非魔鬼 · 意味深长 · 光幕",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L457",
+   "emotion_evidence": "张老意味深长的看向陈默"
+  },
+  {
+   "id": "o021i-2",
+   "stmt": "第6章「权限与贡献点」 · 秦熙 · 求知园 · 说初衷非魔鬼 · 意味深长 · 光幕",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L457",
+   "emotion_evidence": "张老意味深长的看向陈默"
+  },
+  {
+   "id": "o022i-1",
+   "stmt": "第7章「被请喝茶」 · 秦熙 · 白色房间 · 讲自由派渊源 · 复杂 · 防护服",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L570",
+   "emotion_evidence": "秦熙神色复杂的说"
+  },
+  {
+   "id": "o022i-2",
+   "stmt": "第7章「被请喝茶」 · 秦熙 · 果酒湖 · 讲自由派渊源 · 复杂 · 防护服",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L570",
+   "emotion_evidence": "秦熙神色复杂的说"
+  },
+  {
+   "id": "o023i-1",
+   "stmt": "第9章「灵境：原神」 · 陈默 · 六边形房间 · 唤指南无响应 · 凉意 · 原神",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L668",
+   "emotion_evidence": "一股凉意直上心头"
+  },
+  {
+   "id": "o023i-2",
+   "stmt": "第9章「灵境：原神」 · 陈默 · 六边形房间 · 自述一生两件事 · 凉意 · 原神",
+   "answer": false,
+   "wrong_element": "事件",
+   "evidence": "L668",
+   "emotion_evidence": "一股凉意直上心头"
+  },
+  {
+   "id": "o024i-1",
+   "stmt": "第11章「接风宴」 · 派蒙 · 西风骑士团 · 取名小艾尔 · 尴尬 · 满足沙拉",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L758",
+   "emotion_evidence": "派蒙有些尴尬"
+  },
+  {
+   "id": "o024i-2",
+   "stmt": "第11章「接风宴」 · 派蒙 · 西风骑士团 · 取名小艾尔 · 兴奋 · 满足沙拉",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L758",
+   "emotion_evidence": "派蒙有些尴尬"
+  },
+  {
+   "id": "o025i-1",
+   "stmt": "第11章「接风宴」 · 派蒙 · 圆桌 · 办演讲挨控诉 · 跳脚 · 烤肉排",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L766",
+   "emotion_evidence": "派蒙气得跳脚"
+  },
+  {
+   "id": "o025i-2",
+   "stmt": "第11章「接风宴」 · 诺艾尔 · 圆桌 · 办演讲挨控诉 · 跳脚 · 烤肉排",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L766",
+   "emotion_evidence": "派蒙气得跳脚"
+  },
+  {
+   "id": "o026i-1",
+   "stmt": "第19章「蒙德的自由」 · 派蒙 · 蒙德广场 · 观骑士团宣言 · 安静 · 风神像",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1298",
+   "emotion_evidence": "派蒙也难得地安静着"
+  },
+  {
+   "id": "o026i-2",
+   "stmt": "第20章「致命危机」 · 派蒙 · 蒙德广场 · 观骑士团宣言 · 安静 · 风神像",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L1298",
+   "emotion_evidence": "派蒙也难得地安静着"
+  },
+  {
+   "id": "o027i-1",
+   "stmt": "第13章「终有一别」 · 陈默 · 摘星崖 · 承诺还会再来 · 郑重 · 情书",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L904",
+   "emotion_evidence": "郑重地向三人说出内心的想法"
+  },
+  {
+   "id": "o027i-2",
+   "stmt": "第13章「终有一别」 · 派蒙 · 摘星崖 · 承诺还会再来 · 郑重 · 情书",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L904",
+   "emotion_evidence": "郑重地向三人说出内心的想法"
+  },
+  {
+   "id": "o028i-1",
+   "stmt": "第14章「暗流涌动」 · 秦熙 · 个人办公室 · 提三个禁忌 · 严肃 · 全息投影",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L945",
+   "emotion_evidence": "再次看向陈默时，语气极其严肃"
+  },
+  {
+   "id": "o028i-2",
+   "stmt": "第14章「暗流涌动」 · 秦熙 · 求知园 · 提三个禁忌 · 严肃 · 全息投影",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L945",
+   "emotion_evidence": "再次看向陈默时，语气极其严肃"
+  },
+  {
+   "id": "o029i-1",
+   "stmt": "第16章「生命的需求」 · 张老 · 求知园 · 答AI被禁 · 卖起了关子 · 光幕",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1067",
+   "emotion_evidence": "张老这次并未直接回答，而是卖起了关子"
+  },
+  {
+   "id": "o029i-2",
+   "stmt": "第16章「生命的需求」 · 张老 · 求知园 · 说这是第五个 · 卖起了关子 · 光幕",
+   "answer": false,
+   "wrong_element": "事件",
+   "evidence": "L1067",
+   "emotion_evidence": "张老这次并未直接回答，而是卖起了关子"
+  },
+  {
+   "id": "o030i-1",
+   "stmt": "第17章「反击宣告」 · 派蒙 · 摘星崖 · 应下故事推演任务 · 兴奋 · 塞西莉亚花",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1142",
+   "emotion_evidence": "陈默看着她们兴奋的样子，感到心情复杂"
+  },
+  {
+   "id": "o030i-2",
+   "stmt": "第22章「谢谢你 诺艾尔」 · 派蒙 · 摘星崖 · 应下故事推演任务 · 兴奋 · 塞西莉亚花",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L1142",
+   "emotion_evidence": "陈默看着她们兴奋的样子，感到心情复杂"
+  },
+  {
+   "id": "o031i-1",
+   "stmt": "第18章「新的故事」 · 派蒙 · 风神像 · 坦白设计来路 · 求表扬 · 限量版纪念酒盏",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1171",
+   "emotion_evidence": "她语气里带着求表扬的意味，但眼神里也有担忧"
+  },
+  {
+   "id": "o031i-2",
+   "stmt": "第18章「新的故事」 · 派蒙 · 摘星崖 · 坦白设计来路 · 求表扬 · 限量版纪念酒盏",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L1171",
+   "emotion_evidence": "她语气里带着求表扬的意味，但眼神里也有担忧"
+  },
+  {
+   "id": "o033i-1",
+   "stmt": "第20章「致命危机」 · 陈默 · 蒙德城中 · 察觉阴谋气息 · 诧异 · 至冬合作清单",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1353",
+   "emotion_evidence": "不过让陈默诧异的是这一次琴团长竟然出来打了圆场"
+  },
+  {
+   "id": "o033i-2",
+   "stmt": "第20章「致命危机」 · 陈默 · 蒙德城中 · 察觉阴谋气息 · 兴奋 · 至冬合作清单",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L1353",
+   "emotion_evidence": "（情绪为被替换的错误元素，原文未出现「兴奋」）"
+  },
+  {
+   "id": "o034i-1",
+   "stmt": "第22章「谢谢你 诺艾尔」 · 派蒙 · 图书馆 · 加速蒙德推演 · 好奇 · 星尘虚影",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1507",
+   "emotion_evidence": "派蒙她轻盈地飞在我旁边，大眼睛里充满了好奇"
+  },
+  {
+   "id": "o034i-2",
+   "stmt": "第22章「谢谢你 诺艾尔」 · 派蒙 · 图书馆 · 写下风之寓言 · 好奇 · 星尘虚影",
+   "answer": false,
+   "wrong_element": "事件",
+   "evidence": "L1507",
+   "emotion_evidence": "派蒙她轻盈地飞在我旁边，大眼睛里充满了好奇"
+  },
+  {
+   "id": "o035i-1",
+   "stmt": "第23章「再别蒙德」 · 派蒙 · 摘星崖上 · 应许早日归来 · 抓住陈默的衣袖 · 塞西莉亚花束",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1620",
+   "emotion_evidence": "派蒙低着头抓住陈默的衣袖，最终还是松开了手"
+  },
+  {
+   "id": "o035i-2",
+   "stmt": "第23章「再别蒙德」 · 派蒙 · 摘星崖上 · 应许早日归来 · 兴奋 · 塞西莉亚花束",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L1620",
+   "emotion_evidence": "（情绪为被替换的错误元素，原文未出现「兴奋」）"
+  },
+  {
+   "id": "o036i-1",
+   "stmt": "第4章「蜂巢社会蓝图」 · 陈默 · 舱室 · 梳理记忆 · 不安 · 《如何建设蜂巢社会》",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L339",
+   "emotion_evidence": "希望在书中找到答案能平复内心的不安"
+  },
+  {
+   "id": "o036i-2",
+   "stmt": "第4章「蜂巢社会蓝图」 · 陈默 · 舱室 · 梳理记忆 · 不安 · 《熵增的社会学启示》",
+   "answer": false,
+   "wrong_element": "物品",
+   "evidence": "L339",
+   "emotion_evidence": "希望在书中找到答案能平复内心的不安"
+  },
+  {
+   "id": "o037i-1",
+   "stmt": "第18章「新的故事」 · 陈默 · 蒙德城中 · 识破糖衣说辞 · 警铃大作 · 限量版纪念酒盏",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1159",
+   "emotion_evidence": "陈默心中警铃大作"
+  },
+  {
+   "id": "o037i-2",
+   "stmt": "第18章「新的故事」 · 陈默 · 蒙德城中 · 识破糖衣说辞 · 兴高采烈 · 限量版纪念酒盏",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L1159",
+   "emotion_evidence": "（情绪为被替换的错误元素，原文未出现「兴高采烈」）"
+  },
+  {
+   "id": "o038i-1",
+   "stmt": "第16章「生命的需求」 · 陈默 · 求知园 · 追问禁令 · 愁容 · 《熵增的社会学启示》",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1067",
+   "emotion_evidence": "也难怪你满脸愁容，最近你遇上的麻烦可不小"
+  },
+  {
+   "id": "o038i-2",
+   "stmt": "第16章「生命的需求」 · 陈默 · 求知园 · 追问禁令 · 愁容 · 《如何建设蜂巢社会》",
+   "answer": false,
+   "wrong_element": "物品",
+   "evidence": "L1067",
+   "emotion_evidence": "也难怪你满脸愁容，最近你遇上的麻烦可不小"
+  },
+  {
+   "id": "o039i-1",
+   "stmt": "第2章「巧合还是阴谋」 · 陈默 · 求知园 · 听闻同名巨子 · 笑容瞬间凝固 · 《工程控制论》",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L229",
+   "emotion_evidence": "陈默脸上的笑容瞬间凝固，脑子“嗡”的一声，仿佛被重锤击中"
+  },
+  {
+   "id": "o039i-2",
+   "stmt": "第2章「巧合还是阴谋」 · 张明远 · 求知园 · 听闻同名巨子 · 笑容瞬间凝固 · 《工程控制论》",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L229",
+   "emotion_evidence": "陈默脸上的笑容瞬间凝固，脑子“嗡”的一声，仿佛被重锤击中"
+  },
+  {
+   "id": "o040i-1",
+   "stmt": "第21章「问题的答案」 · 巨子 · 蒙德 · 交托未竟之事业 · 遗憾 · 巨子塔与指南",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1480",
+   "emotion_evidence": "他们是我的骄傲，也是我的遗憾"
+  },
+  {
+   "id": "o040i-2",
+   "stmt": "第21章「问题的答案」 · 琴团长 · 蒙德 · 交托未竟之事业 · 遗憾 · 巨子塔与指南",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L1480",
+   "emotion_evidence": "他们是我的骄傲，也是我的遗憾"
+  },
+  {
+   "id": "o041i-1",
+   "stmt": "第22章「谢谢你 诺艾尔」 · 诺艾尔 · 蒙德城 · 独自上门劝告 · 苦涩 · 铠甲一副",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1537",
+   "emotion_evidence": "诺艾尔笑了，笑容里带着苦涩"
+  },
+  {
+   "id": "o041i-2",
+   "stmt": "第22章「谢谢你 诺艾尔」 · 诺艾尔 · 果酒湖边 · 独自上门劝告 · 苦涩 · 铠甲一副",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L1537",
+   "emotion_evidence": "诺艾尔笑了，笑容里带着苦涩"
+  },
+  {
+   "id": "o042i-1",
+   "stmt": "第21章「问题的答案」 · 陈默 · 蒙德城中 · 串起四样线索 · 明白了 · 巨子塔与指南",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1482",
+   "emotion_evidence": "陈默明白了，派蒙她们就是这个问题的解"
+  },
+  {
+   "id": "o042i-2",
+   "stmt": "第21章「问题的答案」 · 陈默 · 蒙德城中 · 写下风之寓言 · 明白了 · 巨子塔与指南",
+   "answer": false,
+   "wrong_element": "事件",
+   "evidence": "L1482",
+   "emotion_evidence": "陈默明白了，派蒙她们就是这个问题的解"
+  },
+  {
+   "id": "o043i-1",
+   "stmt": "第21章「问题的答案」 · 风神 · 蒙德 · 判定已得信任者 · 骄傲 · 幻想朋友投影",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1478",
+   "emotion_evidence": "自由的灵魂被我安放在此处。他们是我的骄傲"
+  },
+  {
+   "id": "o043i-2",
+   "stmt": "第21章「问题的答案」 · 派蒙 · 蒙德 · 判定已得信任者 · 骄傲 · 幻想朋友投影",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L1478",
+   "emotion_evidence": "自由的灵魂被我安放在此处。他们是我的骄傲"
+  },
+  {
+   "id": "o044i-1",
+   "stmt": "第5章「历史的断层」 · 张明远 · 求知园中 · 讲述大战之惨烈 · 孤寂 · 光幕地图",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L422",
+   "emotion_evidence": "陈默被这一连串信息震惊的无法言语，看着张老，他能感受到这个老人的孤寂"
+  },
+  {
+   "id": "o044i-2",
+   "stmt": "第5章「历史的断层」 · 张明远 · 警戒检查中心 · 讲述大战之惨烈 · 孤寂 · 光幕地图",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L422",
+   "emotion_evidence": "陈默被这一连串信息震惊的无法言语，看着张老，他能感受到这个老人的孤寂"
+  },
+  {
+   "id": "o046i-1",
+   "stmt": "第15章「永恒奴役」 · 王明 · 警戒检查中心 · 提议认知疫苗 · 担忧 · 全息投影",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1004",
+   "emotion_evidence": "另一位参会人员发表了担忧，他是王明，一位心理学家，作为警戒检查中心的顾问参会"
+  },
+  {
+   "id": "o046i-2",
+   "stmt": "第15章「永恒奴役」 · 王明 · 警戒检查中心 · 投下否定一票 · 担忧 · 全息投影",
+   "answer": false,
+   "wrong_element": "事件",
+   "evidence": "L1004",
+   "emotion_evidence": "另一位参会人员发表了担忧，他是王明，一位心理学家，作为警戒检查中心的顾问参会"
+  },
+  {
+   "id": "o047i-1",
+   "stmt": "第17章「反击宣告」 · 陈默 · 摘星崖上 · 追问是否拥有生命 · 郑重 · 风神投影",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1102",
+   "emotion_evidence": "陈默的声音并不大，但十分郑重"
+  },
+  {
+   "id": "o047i-2",
+   "stmt": "第17章「反击宣告」 · 陈默 · 摘星崖上 · 追问是否拥有生命 · 悲愤 · 风神投影",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L1102",
+   "emotion_evidence": "（情绪为被替换的错误元素，原文未出现「悲愤」）"
+  },
+  {
+   "id": "o048i-1",
+   "stmt": "第6章「权限与贡献点」 · 张老 · 求知园中 · 讲解权限等级制 · 笑得眯起了眼 · 光幕地图",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L449",
+   "emotion_evidence": "张老被这么一夸，笑得眯起了眼，之前伤感世界大战的情绪散了不少"
+  },
+  {
+   "id": "o048i-2",
+   "stmt": "第6章「权限与贡献点」 · 张老 · 警戒检查中心 · 讲解权限等级制 · 笑得眯起了眼 · 光幕地图",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L449",
+   "emotion_evidence": "张老被这么一夸，笑得眯起了眼，之前伤感世界大战的情绪散了不少"
+  },
+  {
+   "id": "o051i-1",
+   "stmt": "第4章「蜂巢社会蓝图」 · 陈默 · 舱室 · 查询入塔时间记录 · 冷汗 · 指南与光幕",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L345",
+   "emotion_evidence": "陈默冒出一阵冷汗"
+  },
+  {
+   "id": "o051i-2",
+   "stmt": "第4章「蜂巢社会蓝图」 · 陈默 · 舱室 · 查询同名公民名单 · 冷汗 · 指南与光幕",
+   "answer": false,
+   "wrong_element": "事件",
+   "evidence": "L345",
+   "emotion_evidence": "陈默冒出一阵冷汗"
+  },
+  {
+   "id": "o052i-1",
+   "stmt": "第22章「谢谢你 诺艾尔」 · 派蒙 · 图书馆 · 快进蒙德城画面 · 颤抖 · 星尘虚影",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1555",
+   "emotion_evidence": "L1555｜颤抖"
+  },
+  {
+   "id": "o052i-2",
+   "stmt": "第22章「谢谢你 诺艾尔」 · 派蒙 · 图书馆 · 快进蒙德城画面 · 颤抖 · 塞西莉亚花",
+   "answer": false,
+   "wrong_element": "物品",
+   "evidence": "L1511",
+   "emotion_evidence": "派蒙大呼，小小的身体在颤抖"
+  },
+  {
+   "id": "o054i-1",
+   "stmt": "第15章「永恒奴役」 · 陈默 · 六边形房间 · 推演终产者之悲剧 · 恐惧 · 光幕推演",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L982",
+   "emotion_evidence": "陈默感受到如坠冰窟的恐惧"
+  },
+  {
+   "id": "o054i-2",
+   "stmt": "第15章「永恒奴役」 · 陈默 · 求知园中 · 推演终产者之悲剧 · 恐惧 · 光幕推演",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L982",
+   "emotion_evidence": "陈默感受到如坠冰窟的恐惧"
+  },
+  {
+   "id": "q001i-1",
+   "stmt": "第6章「权限与贡献点」 · 张老 · 求知园 · 讲解权限级距 · 语重心长 · 贡献点机制",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L449",
+   "emotion_evidence": "张老休息后，看着陈默若有所思的表现，语重心长的说"
+  },
+  {
+   "id": "q001i-2",
+   "stmt": "第22章「谢谢你 诺艾尔」 · 张老 · 求知园 · 讲解权限级距 · 语重心长 · 贡献点机制",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L449",
+   "emotion_evidence": "张老休息后，看着陈默若有所思的表现，语重心长的说"
+  },
+  {
+   "id": "q003i-1",
+   "stmt": "第2章「巧合还是阴谋」 · 陈默 · 暂留区 · 质询宪法条款 · 产生了疑点 · 轨道清洁机器人",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L195",
+   "emotion_evidence": "陈默很快产生了疑点"
+  },
+  {
+   "id": "q003i-2",
+   "stmt": "第2章「巧合还是阴谋」 · 陈默 · 暂留区 · 质询宪法条款 · 产生了疑点 · 军用智能机器人",
+   "answer": false,
+   "wrong_element": "物品",
+   "evidence": "L195",
+   "emotion_evidence": "陈默很快产生了疑点"
+  },
+  {
+   "id": "q004i-1",
+   "stmt": "第3章「身份谜团」 · 陈默 · 巨子塔 · 访问请求待审核中 · 不甘 · 扫描光束落身",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L310",
+   "emotion_evidence": "陈默感觉愤怒和不甘，只能寄希望于在巨子塔能得到新的线索了"
+  },
+  {
+   "id": "q004i-2",
+   "stmt": "第3章「身份谜团」 · 陈默 · 巨子塔 · 访问请求待审核中 · 大喜 · 扫描光束落身",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L310",
+   "emotion_evidence": "（情绪为被替换的错误元素，原文未出现「大喜」）"
+  },
+  {
+   "id": "q005i-1",
+   "stmt": "第21章「问题的答案」 · 派蒙 · 蒙德城中 · 惊呼风神大人现 · 惊叫 · 小道具一枚",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1462",
+   "emotion_evidence": "“呀！是风神大人！”派蒙忽然惊叫起来"
+  },
+  {
+   "id": "q005i-2",
+   "stmt": "第21章「问题的答案」 · 派蒙 · 蒙德城中 · 惊呼风神大人现 · 狂喜 · 小道具一枚",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L1462",
+   "emotion_evidence": "（情绪为被替换的错误元素，原文未出现「狂喜」）"
+  },
+  {
+   "id": "q006i-1",
+   "stmt": "第15章「永恒奴役」 · 陈默 · 窗前 · 理解巨子为何拒永生 · 落泪 · 朝阳光芒",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L992",
+   "emotion_evidence": "但这样的世界，却温暖得让他落泪"
+  },
+  {
+   "id": "q006i-2",
+   "stmt": "第15章「永恒奴役」 · 陈默 · 窗前 · 理解巨子为何拒永生 · 落泪 · 塞西莉亚花",
+   "answer": false,
+   "wrong_element": "物品",
+   "evidence": "L992",
+   "emotion_evidence": "但这样的世界，却温暖得让他落泪"
+  },
+  {
+   "id": "q007i-1",
+   "stmt": "第5章「历史的断层」 · 张明远 · 求知园 · 道破取名之避讳 · 凝重 · 《控制论》",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L414",
+   "emotion_evidence": "果然，张明远此时突然变得凝重，瞳孔微缩，像是看到了什么不可思议的事情"
+  },
+  {
+   "id": "q007i-2",
+   "stmt": "第5章「历史的断层」 · 张明远 · 求知园 · 道破取名之避讳 · 恼火 · 《控制论》",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L414",
+   "emotion_evidence": "（情绪为被替换的错误元素，原文未出现「恼火」）"
+  },
+  {
+   "id": "q008i-1",
+   "stmt": "第16章「生命的需求」 · 陈默 · 求知园 · 得知AI何以被禁 · 心中一颤 · 意见稿全文",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1067",
+   "emotion_evidence": "陈默心中一颤，自己好像说漏嘴了"
+  },
+  {
+   "id": "q008i-2",
+   "stmt": "第16章「生命的需求」 · 陈默 · 巨子塔 · 得知AI何以被禁 · 心中一颤 · 意见稿全文",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L1067",
+   "emotion_evidence": "陈默心中一颤，自己好像说漏嘴了"
+  },
+  {
+   "id": "q010i-1",
+   "stmt": "第2章「巧合还是阴谋」 · 陈默 · 暂留区 · 质疑宪法第二条 · 留了个心眼 · 清理工具一套",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L197",
+   "emotion_evidence": "陈默留了个心眼"
+  },
+  {
+   "id": "q010i-2",
+   "stmt": "第2章「巧合还是阴谋」 · 陈默 · 暂留区 · 查询同名公民 · 留了个心眼 · 清理工具一套",
+   "answer": false,
+   "wrong_element": "事件",
+   "evidence": "L197",
+   "emotion_evidence": "陈默留了个心眼"
+  },
+  {
+   "id": "q013i-1",
+   "stmt": "第3章「身份谜团」 · 陈默 · 舱室 · 追问指南如何反馈真实 · 涌出泪水 · 指南本体",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L294",
+   "emotion_evidence": "双眼不禁涌出泪水，难呀，难呀"
+  },
+  {
+   "id": "q013i-2",
+   "stmt": "第3章「身份谜团」 · 陈默 · 求知园 · 追问指南如何反馈真实 · 涌出泪水 · 指南本体",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L294",
+   "emotion_evidence": "双眼不禁涌出泪水，难呀，难呀"
+  },
+  {
+   "id": "q015i-1",
+   "stmt": "第8章「化解误会」 · 陈默 · 警戒检查中心 · 觉察诱导之危 · 不安 · 防护服一身",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L621",
+   "emotion_evidence": "取而代之的是对巨子陈默遗产的不安"
+  },
+  {
+   "id": "q015i-2",
+   "stmt": "第8章「化解误会」 · 陈默 · 警戒检查中心 · 觉察诱导之危 · 兴奋 · 防护服一身",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L621",
+   "emotion_evidence": "（情绪为被替换的错误元素，原文未出现「兴奋」）"
+  },
+  {
+   "id": "q017i-1",
+   "stmt": "第10章「初次见面」 · 派蒙 · 蒙德城 · 交付相遇之源祈愿 · 骄傲 · 相遇之源一枚",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L735",
+   "emotion_evidence": "派蒙一脸骄傲的说"
+  },
+  {
+   "id": "q017i-2",
+   "stmt": "第10章「初次见面」 · 诺艾尔 · 蒙德城 · 交付相遇之源祈愿 · 骄傲 · 相遇之源一枚",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L735",
+   "emotion_evidence": "派蒙一脸骄傲的说"
+  },
+  {
+   "id": "q018i-1",
+   "stmt": "第13章「终有一别」 · 诺艾尔 · 蒙德城 · 写下情书表白心意 · 难过 · 情书两封",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L870",
+   "emotion_evidence": "如果他离开蒙德，你会感到难过么"
+  },
+  {
+   "id": "q018i-2",
+   "stmt": "第13章「终有一别」 · 诺艾尔 · 蒙德城 · 写下情书表白心意 · 难过 · 《风之种》",
+   "answer": false,
+   "wrong_element": "物品",
+   "evidence": "L870",
+   "emotion_evidence": "如果他离开蒙德，你会感到难过么"
+  },
+  {
+   "id": "q019i-1",
+   "stmt": "第13章「终有一别」 · 派蒙 · 蒙德城 · 回忆风神离别之言 · 埋怨 · 塞西莉亚花",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L880",
+   "emotion_evidence": "派蒙的回答带着追忆，和些许埋怨"
+  },
+  {
+   "id": "q019i-2",
+   "stmt": "第13章「终有一别」 · 派蒙 · 蒙德城 · 回忆风龙废墟之战 · 埋怨 · 塞西莉亚花",
+   "answer": false,
+   "wrong_element": "事件",
+   "evidence": "L880",
+   "emotion_evidence": "派蒙的回答带着追忆，和些许埋怨"
+  },
+  {
+   "id": "q022i-1",
+   "stmt": "第18章「新的故事」 · 派蒙 · 风神像 · 推演王国的结局 · 恐惧 · 光线交织图景",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1175",
+   "emotion_evidence": "派蒙轻声说，带着恐惧"
+  },
+  {
+   "id": "q022i-2",
+   "stmt": "第18章「新的故事」 · 派蒙 · 风龙废墟 · 推演王国的结局 · 恐惧 · 光线交织图景",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L1175",
+   "emotion_evidence": "派蒙轻声说，带着恐惧"
+  },
+  {
+   "id": "q023i-1",
+   "stmt": "第21章「问题的答案」 · 风神 · 蒙德 · 安置自由灵魂于此 · 恐惧 · 安生之地一处",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1476",
+   "emotion_evidence": "我开始感到好奇和恐惧"
+  },
+  {
+   "id": "q023i-2",
+   "stmt": "第21章「问题的答案」 · 派蒙 · 蒙德 · 安置自由灵魂于此 · 恐惧 · 安生之地一处",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L1476",
+   "emotion_evidence": "我开始感到好奇和恐惧"
+  },
+  {
+   "id": "q024i-1",
+   "stmt": "第3章「身份谜团」 · 陈默 · 舱室 · 查询创始人资料库 · 跃跃欲试 · 《文明细胞论》",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L262",
+   "emotion_evidence": "面对这些疑问，陈默跃跃欲试：“就让我看看，这个世界究竟藏着怎样的秘密吧"
+  },
+  {
+   "id": "q024i-2",
+   "stmt": "第3章「身份谜团」 · 陈默 · 舱室 · 查询创始人资料库 · 大喜 · 《文明细胞论》",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L262",
+   "emotion_evidence": "（情绪为被替换的错误元素，原文未出现「大喜」）"
+  },
+  {
+   "id": "q025i-1",
+   "stmt": "第5章「历史的断层」 · 张明远 · 求知园 · 讲解分级保存之制 · 认真 · 巨子塔尖",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L408",
+   "emotion_evidence": "一改轻松的神态，变得认真了起来"
+  },
+  {
+   "id": "q025i-2",
+   "stmt": "第5章「历史的断层」 · 张明远 · 求知园 · 讲解分级保存之制 · 沮丧 · 巨子塔尖",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L408",
+   "emotion_evidence": "（情绪为被替换的错误元素，原文未出现「沮丧」）"
+  },
+  {
+   "id": "q026i-1",
+   "stmt": "第21章「问题的答案」 · 陈默 · 蒙德 · 认出巨子便是风神 · 想起来了 · 巨子的记忆",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1482",
+   "emotion_evidence": "想起来了，陈默想起来了"
+  },
+  {
+   "id": "q026i-2",
+   "stmt": "第21章「问题的答案」 · 陈默 · 蒙德 · 认出巨子便是风神 · 惶恐 · 巨子的记忆",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L1482",
+   "emotion_evidence": "（情绪为被替换的错误元素，原文未出现「惶恐」）"
+  },
+  {
+   "id": "q027i-1",
+   "stmt": "第6章「权限与贡献点」 · 陈默 · 求知园 · 查看已探索区域图 · 无语 · 光幕地图",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L463",
+   "emotion_evidence": "陈默感到无语，要不是自己在求知园打开地图，指南还打算把地图功能藏到什么时候"
+  },
+  {
+   "id": "q027i-2",
+   "stmt": "第6章「权限与贡献点」 · 陈默 · 灵境之中 · 查看已探索区域图 · 无语 · 光幕地图",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L463",
+   "emotion_evidence": "陈默感到无语，要不是自己在求知园打开地图，指南还打算把地图功能藏到什么时候"
+  },
+  {
+   "id": "q028i-1",
+   "stmt": "第14章「暗流涌动」 · 陈默 · 六边形房间 · 通报自由派诱导 · 沉重 · 全息投影",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L953",
+   "emotion_evidence": "陈默的语气带着些许沉重"
+  },
+  {
+   "id": "q028i-2",
+   "stmt": "第14章「暗流涌动」 · 秦熙 · 六边形房间 · 通报自由派诱导 · 沉重 · 全息投影",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L953",
+   "emotion_evidence": "陈默的语气带着些许沉重"
+  },
+  {
+   "id": "q031i-1",
+   "stmt": "第16章「生命的需求」 · 陈默 · 求知园 · 问张老为何禁自我意识AI · 硬着头皮 · 《熵增的社会学启示》",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1069",
+   "emotion_evidence": "陈默只能硬着头皮继续问道"
+  },
+  {
+   "id": "q031i-2",
+   "stmt": "第21章「问题的答案」 · 陈默 · 求知园 · 问张老为何禁自我意识AI · 硬着头皮 · 《熵增的社会学启示》",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L1069",
+   "emotion_evidence": "陈默只能硬着头皮继续问道"
+  },
+  {
+   "id": "q035i-1",
+   "stmt": "第3章「身份谜团」 · 陈默 · 舱室 · 向指南追问制造方法 · 迫切 · 世界漫游指南",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L296",
+   "emotion_evidence": "他迫切的希望得到制造方法"
+  },
+  {
+   "id": "q035i-2",
+   "stmt": "第3章「身份谜团」 · 陈默 · 巨子塔 · 向指南追问制造方法 · 迫切 · 世界漫游指南",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L296",
+   "emotion_evidence": "他迫切的希望得到制造方法"
+  },
+  {
+   "id": "q037i-1",
+   "stmt": "第4章「蜂巢社会蓝图」 · 陈默 · 六边形房间 · 向指南核实入塔记录 · 冒出冷汗 · 巨子塔词条",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L345",
+   "emotion_evidence": "陈默冒出一阵冷汗"
+  },
+  {
+   "id": "q037i-2",
+   "stmt": "第4章「蜂巢社会蓝图」 · 陈默 · 六边形房间 · 向指南核实入塔记录 · 满怀期待 · 巨子塔词条",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L345",
+   "emotion_evidence": "（N/A：本条情绪为被替换的错误元素，原文无此词）"
+  },
+  {
+   "id": "q038i-1",
+   "stmt": "第2章「巧合还是阴谋」 · 陈默 · 轨道清洁机器人旁 · 追问指南宪法第二条 · 留了个心眼 · 清理工具",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L195",
+   "emotion_evidence": "陈默留了个心眼，人就没私心了？"
+  },
+  {
+   "id": "q038i-2",
+   "stmt": "第2章「巧合还是阴谋」 · 张明远 · 轨道清洁机器人旁 · 追问指南宪法第二条 · 留了个心眼 · 清理工具",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L195",
+   "emotion_evidence": "陈默留了个心眼，人就没私心了？"
+  },
+  {
+   "id": "o015i-1",
+   "stmt": "第15章「永恒奴役」 · 陈默 · 六边形房间 · 推演永生导致永恒奴役 · 如坠冰窟 · 光幕",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L966",
+   "emotion_evidence": "陈默感受到如坠冰窟的恐惧"
+  },
+  {
+   "id": "o015i-2",
+   "stmt": "第13章「终有一别」 · 陈默 · 六边形房间 · 推演永生导致永恒奴役 · 如坠冰窟 · 光幕",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L966",
+   "emotion_evidence": "陈默感受到如坠冰窟的恐惧"
+  },
+  {
+   "id": "o032i-1",
+   "stmt": "第19章「蒙德的自由」 · 琴 · 风神像下 · 率骑士团列队重申誓言 · 坚定 · 风鹰剑",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1286",
+   "emotion_evidence": "穿着日常的制服，显得亲切而坚定"
+  },
+  {
+   "id": "o032i-2",
+   "stmt": "第19章「蒙德的自由」 · 琴 · 果酒湖边 · 率骑士团列队重申誓言 · 坚定 · 风鹰剑",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L1286",
+   "emotion_evidence": "穿着日常的制服，显得亲切而坚定"
+  },
+  {
+   "id": "o045i-1",
+   "stmt": "第2章「巧合还是阴谋」 · 陈默 · 暂留区 · 对机器人自检能力生疑 · 留了个心眼 · 修复液",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L193",
+   "emotion_evidence": "陈默留了个心眼，人就没私心了？"
+  },
+  {
+   "id": "o045i-2",
+   "stmt": "第2章「巧合还是阴谋」 · 陈默 · 暂留区 · 对机器人自检能力生疑 · 留了个心眼 · 《工程控制论》",
+   "answer": false,
+   "wrong_element": "物品",
+   "evidence": "L193",
+   "emotion_evidence": "陈默留了个心眼，人就没私心了？"
+  },
+  {
+   "id": "o049i-1",
+   "stmt": "第8章「化解误会」 · 陈默 · 遗存区 · 穿防护服瞻仰退役机器人 · 尊敬 · 全方位防护服",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L611",
+   "emotion_evidence": "为抗击侵略，守护生命的将士们同样值得尊敬"
+  },
+  {
+   "id": "o049i-2",
+   "stmt": "第8章「化解误会」 · 秦熙 · 遗存区 · 穿防护服瞻仰退役机器人 · 尊敬 · 全方位防护服",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L611",
+   "emotion_evidence": "为抗击侵略，守护生命的将士们同样值得尊敬"
+  },
+  {
+   "id": "o050i-1",
+   "stmt": "第12章「何为自由」 · 陈默 · 摘星崖 · 讨伐风魔龙前夜看风之花 · 认真 · 塞西莉亚花",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L835",
+   "emotion_evidence": "陈默认真的看着派蒙，“你想要的风之花是什么呢？”"
+  },
+  {
+   "id": "o050i-2",
+   "stmt": "第12章「何为自由」 · 陈默 · 风龙废墟 · 讨伐风魔龙前夜看风之花 · 认真 · 塞西莉亚花",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L835",
+   "emotion_evidence": "陈默认真的看着派蒙，“你想要的风之花是什么呢？”"
+  },
+  {
+   "id": "q002i-1",
+   "stmt": "第5章「历史的断层」 · 张明远 · 求知园 · 讲述第三次世界大战始末 · 低沉 · 光幕",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L418",
+   "emotion_evidence": "张老停顿一下，声音低沉：“我儿子当时就在那里。”"
+  },
+  {
+   "id": "q002i-2",
+   "stmt": "第5章「历史的断层」 · 李振国 · 求知园 · 讲述第三次世界大战始末 · 低沉 · 光幕",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L418",
+   "emotion_evidence": "张老停顿一下，声音低沉：“我儿子当时就在那里。”"
+  },
+  {
+   "id": "q009i-1",
+   "stmt": "第21章「问题的答案」 · 巨子 · 灵境 · 自述把答案交给后来者 · 遗憾 · 幻想朋友道具",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1480",
+   "emotion_evidence": "他们是我的骄傲，也是我的遗憾"
+  },
+  {
+   "id": "q009i-2",
+   "stmt": "第21章「问题的答案」 · 巨子 · 灵境 · 自述把答案交给后来者 · 遗憾 · 风鹰剑",
+   "answer": false,
+   "wrong_element": "物品",
+   "evidence": "L1480",
+   "emotion_evidence": "他们是我的骄傲，也是我的遗憾"
+  },
+  {
+   "id": "q011i-1",
+   "stmt": "第6章「权限与贡献点」 · 张明远 · 求知园 · 讲解贡献点与五级权限 · 语重心长 · 《社会控制论》",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L449",
+   "emotion_evidence": "看着陈默若有所思的表现，语重心长的说"
+  },
+  {
+   "id": "q011i-2",
+   "stmt": "第6章「权限与贡献点」 · 张明远 · 求知园 · 带陈默参观退役机械犬 · 语重心长 · 《社会控制论》",
+   "answer": false,
+   "wrong_element": "事件",
+   "evidence": "L449",
+   "emotion_evidence": "看着陈默若有所思的表现，语重心长的说"
+  },
+  {
+   "id": "q012i-1",
+   "stmt": "第6章「权限与贡献点」 · 张明远 · 求知园 · 讲述军转民与真正建设者 · 尊敬 · 光幕",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L437",
+   "emotion_evidence": "张老看向光幕，带着尊敬的神情和语气介绍"
+  },
+  {
+   "id": "q012i-2",
+   "stmt": "第5章「历史的断层」 · 张明远 · 求知园 · 讲述军转民与真正建设者 · 尊敬 · 光幕",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L437",
+   "emotion_evidence": "张老看向光幕，带着尊敬的神情和语气介绍"
+  },
+  {
+   "id": "q014i-1",
+   "stmt": "第1章「初见蜂巢世界」 · 陈默 · 六边形房间 · 听指南讲共识根本原则 · 认可 · 标准合成餐",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L30",
+   "emotion_evidence": "陈默很快便认可了新世界的共识"
+  },
+  {
+   "id": "q014i-2",
+   "stmt": "第1章「初见蜂巢世界」 · 陈默 · 六边形房间 · 听指南讲共识根本原则 · 抗拒 · 标准合成餐",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L30",
+   "emotion_evidence": "（N/A：本条情绪为被替换的错误元素，原文无此词）"
+  },
+  {
+   "id": "q020i-1",
+   "stmt": "第13章「终有一别」 · 诺艾尔 · 蒙德城 · 终于看清自己想要什么 · 叹息 · 情书",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L870",
+   "emotion_evidence": "唉，像我这样自私的做法，是不是......不太好？"
+  },
+  {
+   "id": "q020i-2",
+   "stmt": "第13章「终有一别」 · 诺艾尔 · 蒙德城 · 终于看清自己想要什么 · 叹息 · 骑士团徽章",
+   "answer": false,
+   "wrong_element": "物品",
+   "evidence": "L870",
+   "emotion_evidence": "唉，像我这样自私的做法，是不是......不太好？"
+  },
+  {
+   "id": "q021i-1",
+   "stmt": "第17章「反击宣告」 · 派蒙 · 摘星崖 · 追问自己是否算生命 · 哀求 · 风神投影",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1126",
+   "emotion_evidence": "派蒙看向陈默，带着些许些哀求"
+  },
+  {
+   "id": "q021i-2",
+   "stmt": "第17章「反击宣告」 · 诺艾尔 · 摘星崖 · 追问自己是否算生命 · 哀求 · 风神投影",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L1126",
+   "emotion_evidence": "派蒙看向陈默，带着些许些哀求"
+  },
+  {
+   "id": "q029i-1",
+   "stmt": "第7章「被请喝茶」 · 小李 · 审讯室 · 厉声质问巨子塔记录异常 · 警戒 · 扫描器",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L544",
+   "emotion_evidence": "巡逻的一名人员发现陈默，立马警戒，发出询问"
+  },
+  {
+   "id": "q029i-2",
+   "stmt": "第7章「被请喝茶」 · 小李 · 遗存区 · 厉声质问巨子塔记录异常 · 警戒 · 扫描器",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L544",
+   "emotion_evidence": "巡逻的一名人员发现陈默，立马警戒，发出询问"
+  },
+  {
+   "id": "q030i-1",
+   "stmt": "第1章「初见蜂巢世界」 · 陈默 · 六边形房间 · 回想选了是或否的选项 · 茫然 · 营销号视频",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L12",
+   "emotion_evidence": "感到一阵茫然：“我这是，穿越了？”"
+  },
+  {
+   "id": "q030i-2",
+   "stmt": "第1章「初见蜂巢世界」 · 陈默 · 六边形房间 · 被机器人强行抓捕 · 茫然 · 营销号视频",
+   "answer": false,
+   "wrong_element": "事件",
+   "evidence": "L12",
+   "emotion_evidence": "感到一阵茫然：“我这是，穿越了？”"
+  },
+  {
+   "id": "q032i-1",
+   "stmt": "第21章「问题的答案」 · 派蒙 · 蒙德城 · 拿出道具让陈默看见风神 · 惊叫 · 幻想朋友道具",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1462",
+   "emotion_evidence": "“呀！是风神大人！”派蒙忽然惊叫起来"
+  },
+  {
+   "id": "q032i-2",
+   "stmt": "第21章「问题的答案」 · 派蒙 · 蒙德城 · 拿出道具让陈默看见风神 · 悲恸 · 幻想朋友道具",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L1462",
+   "emotion_evidence": "（N/A：本条情绪为被替换的错误元素，原文无此词）"
+  },
+  {
+   "id": "q033i-1",
+   "stmt": "第21章「问题的答案」 · 巨子 · 灵境 · 自述机器人产生自由灵魂 · 好奇和恐惧 · 安生之地",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1476",
+   "emotion_evidence": "我开始感到好奇和恐惧"
+  },
+  {
+   "id": "q033i-2",
+   "stmt": "第21章「问题的答案」 · 张明远 · 灵境 · 自述机器人产生自由灵魂 · 好奇和恐惧 · 安生之地",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L1476",
+   "emotion_evidence": "我开始感到好奇和恐惧"
+  },
+  {
+   "id": "q036i-1",
+   "stmt": "第5章「历史的断层」 · 张明远 · 求知园 · 讲述技术分级保存 · 认真 · 巨子塔词条",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L408",
+   "emotion_evidence": "张明远一改轻松的神态，变得认真了起来"
+  },
+  {
+   "id": "q036i-2",
+   "stmt": "第16章「生命的需求」 · 张明远 · 求知园 · 讲述技术分级保存 · 认真 · 巨子塔词条",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L408",
+   "emotion_evidence": "张明远一改轻松的神态，变得认真了起来"
+  },
+  {
+   "id": "q034i-1",
+   "stmt": "第8章「化解误会」 · 陈默 · 舱室 · 用控制论设贡献点反馈模型 · 感到头疼 · 《控制论》",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L639",
+   "emotion_evidence": "陈默感到头疼"
+  },
+  {
+   "id": "q034i-2",
+   "stmt": "第8章「化解误会」 · 陈默 · 求知园 · 用控制论设贡献点反馈模型 · 感到头疼 · 《控制论》",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L639",
+   "emotion_evidence": "陈默感到头疼"
+  },
+  {
+   "id": "e001-1",
+   "stmt": "第1章「初见蜂巢世界」 · 陈默 · 六边形房间 · 醒来听指南介绍新世界 · 茫然 · 标准合成餐",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L10",
+   "emotion_evidence": "感到一阵茫然：“我这是，穿越了？”"
+  },
+  {
+   "id": "e001-2",
+   "stmt": "第1章「初见蜂巢世界」 · 陈默 · 六边形房间 · 与张明远讨论世界大战 · 茫然 · 标准合成餐",
+   "answer": false,
+   "wrong_element": "事件",
+   "evidence": "L10",
+   "emotion_evidence": "感到一阵茫然：“我这是，穿越了？”"
+  },
+  {
+   "id": "e002-1",
+   "stmt": "第1章「初见蜂巢世界」 · 陈默 · 六边形房间 · 打量蜂巢结构的墙壁 · 惊讶 · 半透明舱室",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L34",
+   "emotion_evidence": "陈默有些感到惊讶，食物合成技术"
+  },
+  {
+   "id": "e002-2",
+   "stmt": "第1章「初见蜂巢世界」 · 陈默 · 六边形房间 · 打量蜂巢结构的墙壁 · 惊讶 · 塞西莉亚花",
+   "answer": false,
+   "wrong_element": "物品",
+   "evidence": "L34",
+   "emotion_evidence": "陈默有些感到惊讶，食物合成技术"
+  },
+  {
+   "id": "e003-1",
+   "stmt": "第12章「何为自由」 · 温迪 · 风龙废墟 · 与另一位温迪谈摸鱼 · 嫌麻烦 · 蒲公英酒",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L841",
+   "emotion_evidence": "“啊，好麻烦，不如喝一杯吧。”"
+  },
+  {
+   "id": "e003-2",
+   "stmt": "第12章「何为自由」 · 可莉 · 风龙废墟 · 与另一位温迪谈摸鱼 · 嫌麻烦 · 蒲公英酒",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L841",
+   "emotion_evidence": "“啊，好麻烦，不如喝一杯吧。”"
+  },
+  {
+   "id": "e004-1",
+   "stmt": "第5章「历史的断层」 · 陈默 · 轨道清洁机器人旁 · 向机器人挥手告别 · 一行清泪从眼角滑下 · 清洁工具",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L390",
+   "emotion_evidence": "L390｜修"
+  },
+  {
+   "id": "e004-2",
+   "stmt": "第5章「历史的断层」 · 陈默 · 轨道清洁机器人旁 · 向机器人挥手告别 · 厌烦 · 清洁工具",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L390",
+   "emotion_evidence": "（N/A：本条情绪为被替换的错误元素，原文无此词）"
+  },
+  {
+   "id": "e005-1",
+   "stmt": "第20章「致命危机」 · 陈默 · 果酒湖 · 在船上享受雨后阳光 · 开心 · 甜甜花酿鸡",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1315",
+   "emotion_evidence": "他感觉很开心，这是最棒的一天"
+  },
+  {
+   "id": "e005-2",
+   "stmt": "第20章「致命危机」 · 陈默 · 果酒湖 · 接待至冬执行官女士 · 开心 · 甜甜花酿鸡",
+   "answer": false,
+   "wrong_element": "事件",
+   "evidence": "L1315",
+   "emotion_evidence": "他感觉很开心，这是最棒的一天"
+  },
+  {
+   "id": "e006-1",
+   "stmt": "第5章「历史的断层」 · 张明远 · 求知园 · 讲述核战与病毒战叠加 · 悲哀 · 世界大战史料",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L420",
+   "emotion_evidence": "最后我们悲哀的发现，唯一有效的方法是隔离"
+  },
+  {
+   "id": "e006-2",
+   "stmt": "第16章「生命的需求」 · 张明远 · 求知园 · 讲述核战与病毒战叠加 · 悲哀 · 世界大战史料",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L420",
+   "emotion_evidence": "最后我们悲哀的发现，唯一有效的方法是隔离"
+  },
+  {
+   "id": "e007-1",
+   "stmt": "第3章「身份谜团」 · 陈默 · 舱室 · 读《社会控制论》开篇 · 命运得抓在咱们自己手里 · 《社会控制论》",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L272",
+   "emotion_evidence": "L274｜命运得抓在咱们自己手里！"
+  },
+  {
+   "id": "e007-2",
+   "stmt": "第3章「身份谜团」 · 陈默 · 舱室 · 读《社会控制论》开篇 · 如见故人 · 《熵增的社会学启示》",
+   "answer": false,
+   "wrong_element": "物品",
+   "evidence": "L272",
+   "emotion_evidence": "陈默感觉看到了如太阳般明亮的故人"
+  },
+  {
+   "id": "e008-1",
+   "stmt": "第2章「巧合还是阴谋」 · 陈默 · 六边形房间 · 吐槽调味超过老干妈 · 直呼神了 · 牛肉味标准餐",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L157",
+   "emotion_evidence": "这调味料真是神了"
+  },
+  {
+   "id": "e008-2",
+   "stmt": "第2章「巧合还是阴谋」 · 派蒙 · 六边形房间 · 吐槽调味超过老干妈 · 直呼神了 · 牛肉味标准餐",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L157",
+   "emotion_evidence": "这调味料真是神了"
+  },
+  {
+   "id": "e009-1",
+   "stmt": "第23章「再别蒙德」 · 派蒙 · 摘星崖 · 抓住衣袖问真的要走了吗 · 撇撇嘴 · 小艾尔缝制的便装",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1596",
+   "emotion_evidence": "派蒙撇撇嘴：“可你答应过要陪我的！”"
+  },
+  {
+   "id": "e009-2",
+   "stmt": "第23章「再别蒙德」 · 派蒙 · 风神像下 · 抓住衣袖问真的要走了吗 · 撇撇嘴 · 小艾尔缝制的便装",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L1596",
+   "emotion_evidence": "派蒙撇撇嘴：“可你答应过要陪我的！”"
+  },
+  {
+   "id": "e010-1",
+   "stmt": "第22章「谢谢你诺艾尔」 · 派蒙 · 图书馆阅览室 · 看蒙德推演悲剧 · 泪光 · 星尘虚影",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1557",
+   "emotion_evidence": "派蒙眼中闪烁着泪光，声音带着哭腔"
+  },
+  {
+   "id": "e010-2",
+   "stmt": "第22章「谢谢你诺艾尔」 · 派蒙 · 图书馆阅览室 · 看蒙德推演悲剧 · 欣喜若狂 · 星尘虚影",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L1557",
+   "emotion_evidence": "（N/A：本条情绪为被替换的错误元素，原文无此词）"
+  },
+  {
+   "id": "e011-1",
+   "stmt": "第6章「权限与贡献点」 · 胖老人 · 求知园 · 提议加装记忆屏蔽 · 鄙夷 · 贡献点授权",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L475",
+   "emotion_evidence": "胖老人鄙夷：“上次那小子拿了授权就跑路"
+  },
+  {
+   "id": "e011-2",
+   "stmt": "第6章「权限与贡献点」 · 胖老人 · 求知园 · 提议提升贡献点上限 · 鄙夷 · 贡献点授权",
+   "answer": false,
+   "wrong_element": "事件",
+   "evidence": "L475",
+   "emotion_evidence": "胖老人鄙夷：“上次那小子拿了授权就跑路"
+  },
+  {
+   "id": "e012-1",
+   "stmt": "第2章「巧合还是阴谋」 · 陈默 · 舱室 · 追问指南的功能边界 · 无聊 · 贡献点查询机",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L175",
+   "emotion_evidence": "陈默胡乱想着一些事情，来消磨路途的无聊"
+  },
+  {
+   "id": "e012-2",
+   "stmt": "第3章「身份谜团」 · 陈默 · 舱室 · 追问指南的功能边界 · 无聊 · 贡献点查询机",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L175",
+   "emotion_evidence": "陈默胡乱想着一些事情，来消磨路途的无聊"
+  },
+  {
+   "id": "e013-1",
+   "stmt": "第15章「永恒奴役」 · 王明 · 全息会议室 · 指出认证难界定诱惑 · 担忧 · 认知疫苗",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1004",
+   "emotion_evidence": "另一位参会人员发表了担忧，他是王明"
+  },
+  {
+   "id": "e013-2",
+   "stmt": "第15章「永恒奴役」 · 王明 · 求知园 · 指出认证难界定诱惑 · 担忧 · 认知疫苗",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L1004",
+   "emotion_evidence": "另一位参会人员发表了担忧，他是王明"
+  },
+  {
+   "id": "e014-1",
+   "stmt": "第6章「权限与贡献点」 · 张明远 · 求知园 · 说明收回授权即降级 · 告诫 · 贡献点",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L455",
+   "emotion_evidence": "张老最后一句话似乎在告诫"
+  },
+  {
+   "id": "e014-2",
+   "stmt": "第6章「权限与贡献点」 · 张明远 · 求知园 · 说明收回授权即降级 · 告诫 · 巨子塔词条",
+   "answer": false,
+   "wrong_element": "物品",
+   "evidence": "L455",
+   "emotion_evidence": "张老最后一句话似乎在告诫"
+  },
+  {
+   "id": "e015-1",
+   "stmt": "第13章「终有一别」 · 陈默 · 舱室 · 问指南游戏过了多久 · 无言 · 世界漫游指南",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L910",
+   "emotion_evidence": "指南的回应让陈默无言"
+  },
+  {
+   "id": "e015-2",
+   "stmt": "第13章「终有一别」 · 派蒙 · 舱室 · 问指南游戏过了多久 · 无言 · 世界漫游指南",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L910",
+   "emotion_evidence": "指南的回应让陈默无言"
+  },
+  {
+   "id": "e016-1",
+   "stmt": "第1章「初见蜂巢世界」 · 陈默 · 自循环舱室 · 惊叹超低耗能轨道 · 震撼 · 超导轨道",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L48",
+   "emotion_evidence": "陈默感到极其震撼"
+  },
+  {
+   "id": "e016-2",
+   "stmt": "第1章「初见蜂巢世界」 · 陈默 · 自循环舱室 · 惊叹超低耗能轨道 · 烦躁 · 超导轨道",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L48",
+   "emotion_evidence": "（N/A：本条情绪为被替换的错误元素，原文无此词）"
+  },
+  {
+   "id": "e017-1",
+   "stmt": "第10章「初次见面」 · 陈默 · 蒙德城 · 祈愿召唤出女仆诺艾尔 · 冒出大大的问号 · 相遇之源",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L735",
+   "emotion_evidence": "陈默对此冒出大大的问号"
+  },
+  {
+   "id": "e017-2",
+   "stmt": "第10章「初次见面」 · 陈默 · 蒙德城 · 十连祈愿召出六命可莉 · 冒出大大的问号 · 相遇之源",
+   "answer": false,
+   "wrong_element": "事件",
+   "evidence": "L735",
+   "emotion_evidence": "陈默对此冒出大大的问号"
+  },
+  {
+   "id": "e018-1",
+   "stmt": "第6章「权限与贡献点」 · 张明远 · 求知园 · 告诫勿塑造魔鬼 · 意味深长 · 授权",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L457",
+   "emotion_evidence": "张老意味深长的看向陈默"
+  },
+  {
+   "id": "e018-2",
+   "stmt": "第16章「生命的需求」 · 张明远 · 求知园 · 告诫勿塑造魔鬼 · 意味深长 · 授权",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L457",
+   "emotion_evidence": "张老意味深长的看向陈默"
+  },
+  {
+   "id": "e019-1",
+   "stmt": "第十六章「生命的需求」 · 张明远 · 求知园 · 只说AI早被禁未提方式 · 卖起了关子 · 光幕",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1067",
+   "emotion_evidence": "L1071｜张老这次并未直接回答，而是卖起了关子"
+  },
+  {
+   "id": "e019-2",
+   "stmt": "第十六章「生命的需求」 · 张明远 · 巨子塔 · 只说AI早被禁未提方式 · 卖起了关子 · 光幕",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L1067",
+   "emotion_evidence": "L1071｜张老这次并未直接回答，而是卖起了关子"
+  },
+  {
+   "id": "e020-1",
+   "stmt": "第七章「被请喝茶」 · 陈默 · 舱室 · 星图见地月双巢未提月球居民 · 震撼 · 地图",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L502",
+   "emotion_evidence": "L502｜陈默再次被这样的大手笔震撼到。"
+  },
+  {
+   "id": "e020-2",
+   "stmt": "第五章「历史的断层」 · 陈默 · 舱室 · 星图见地月双巢未提月球居民 · 震撼 · 地图",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L502",
+   "emotion_evidence": "L502｜陈默再次被这样的大手笔震撼到。"
+  },
+  {
+   "id": "e021-1",
+   "stmt": "第二十三章「再别蒙德」 · 秦熙 · 全息投影 · 只说见几位老朋友未展开 · 凝重 · 推演模型",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1656",
+   "emotion_evidence": "L1630｜神色比以往更加凝重，甚至带着一丝紧迫"
+  },
+  {
+   "id": "e021-2",
+   "stmt": "第二十三章「再别蒙德」 · 小李 · 全息投影 · 只说见几位老朋友未展开 · 凝重 · 推演模型",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L1656",
+   "emotion_evidence": "L1630｜神色比以往更加凝重，甚至带着一丝紧迫"
+  },
+  {
+   "id": "e022-1",
+   "stmt": "第七章「被请喝茶」 · 秦熙 · 白色房间 · 只讲自由派理念未提领头人 · 意味深长 · 光幕",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L570",
+   "emotion_evidence": "L576｜她停顿片刻，意味深长地看了陈默一眼"
+  },
+  {
+   "id": "e022-2",
+   "stmt": "第七章「被请喝茶」 · 秦熙 · 求知园 · 只讲自由派理念未提领头人 · 意味深长 · 光幕",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L570",
+   "emotion_evidence": "L576｜她停顿片刻，意味深长地看了陈默一眼"
+  },
+  {
+   "id": "e023-1",
+   "stmt": "第二十三章「再别蒙德」 · 陈默 · 摘星崖 · 承诺会回来便走未写后续 · 笑了笑 · 塞西莉亚花",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1602",
+   "emotion_evidence": "L1602｜他笑了笑，又补充道"
+  },
+  {
+   "id": "e023-2",
+   "stmt": "第二十三章「再别蒙德」 · 陈默 · 摘星崖 · 回去与派蒙收尾守护蒙德 · 笑了笑 · 塞西莉亚花",
+   "answer": false,
+   "wrong_element": "事件",
+   "evidence": "L1602",
+   "emotion_evidence": "L1602｜他笑了笑，又补充道"
+  },
+  {
+   "id": "e024-1",
+   "stmt": "第四章「蜂巢社会蓝图」 · 陈默 · 六边形房间 · 追问进塔记忆被屏蔽未果 · 冷汗 · 指南",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L349",
+   "emotion_evidence": "L341｜陈默冒出一阵冷汗。"
+  },
+  {
+   "id": "e024-2",
+   "stmt": "第四章「蜂巢社会蓝图」 · 陈默 · 求知园 · 追问进塔记忆被屏蔽未果 · 冷汗 · 指南",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L349",
+   "emotion_evidence": "L341｜陈默冒出一阵冷汗。"
+  },
+  {
+   "id": "e025-1",
+   "stmt": "第六章「权限与贡献点」 · 张明远 · 求知园 · 带头投否定周清源提案 · 冷峻 · 光幕",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L487",
+   "emotion_evidence": "L491｜张老看向众人，神情冷峻"
+  },
+  {
+   "id": "e025-2",
+   "stmt": "第六章「权限与贡献点」 · 秦熙 · 求知园 · 带头投否定周清源提案 · 冷峻 · 光幕",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L487",
+   "emotion_evidence": "L491｜张老看向众人，神情冷峻"
+  },
+  {
+   "id": "e026-1",
+   "stmt": "第十三章「终有一别」 · 陈默 · 蒙德城 · 收下两封情书却未正面回应 · 叹了一口气 · 情书",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L876",
+   "emotion_evidence": "L874｜长久的叹了一口气，“难消美人恩呀"
+  },
+  {
+   "id": "e026-2",
+   "stmt": "第十三章「终有一别」 · 陈默 · 蒙德城 · 收下两封情书却未正面回应 · 叹了一口气 · 风鹰剑",
+   "answer": false,
+   "wrong_element": "物品",
+   "evidence": "L876",
+   "emotion_evidence": "L874｜长久的叹了一口气，“难消美人恩呀"
+  },
+  {
+   "id": "e027-1",
+   "stmt": "第二十三章「再别蒙德」 · 秦熙 · 全息投影 · 认可用故事反制不动武 · 郑重 · 推演模型",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1650",
+   "emotion_evidence": "L1656｜最终郑重地点了点头"
+  },
+  {
+   "id": "e027-2",
+   "stmt": "第二十三章「再别蒙德」 · 秦熙 · 全息投影 · 决定调武装清剿自由派 · 郑重 · 推演模型",
+   "answer": false,
+   "wrong_element": "事件",
+   "evidence": "L1650",
+   "emotion_evidence": "L1656｜最终郑重地点了点头"
+  },
+  {
+   "id": "e028-1",
+   "stmt": "第六章「权限与贡献点」 · 张明远 · 求知园 · 讲权限按贡献算未获五级 · 语重心长 · 光幕",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L449",
+   "emotion_evidence": "L455｜语重心长的说"
+  },
+  {
+   "id": "e028-2",
+   "stmt": "第六章「权限与贡献点」 · 秦熙 · 求知园 · 讲权限按贡献算未获五级 · 语重心长 · 光幕",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L449",
+   "emotion_evidence": "L455｜语重心长的说"
+  },
+  {
+   "id": "e029-1",
+   "stmt": "第十三章「终有一别」 · 派蒙 · 蒙德城 · 承认风神像他却终究不同 · 追忆 · 情书",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L878",
+   "emotion_evidence": "L880｜派蒙的回答带着追忆，和些许埋怨。"
+  },
+  {
+   "id": "e029-2",
+   "stmt": "第十三章「终有一别」 · 派蒙 · 蒙德城 · 承认风神像他却终究不同 · 追忆 · 断剑",
+   "answer": false,
+   "wrong_element": "物品",
+   "evidence": "L878",
+   "emotion_evidence": "L880｜派蒙的回答带着追忆，和些许埋怨。"
+  },
+  {
+   "id": "e030-1",
+   "stmt": "第二十二章「谢谢你 诺艾尔」 · 诺艾尔 · 蒙德 · 广场死战未提蜂巢结局 · 坚定 · 断剑",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1553",
+   "emotion_evidence": "L1549｜嘴角溢出血丝，但眼神依然坚定。"
+  },
+  {
+   "id": "e030-2",
+   "stmt": "第二十一章「问题的答案」 · 诺艾尔 · 蒙德 · 广场死战未提蜂巢结局 · 坚定 · 断剑",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L1553",
+   "emotion_evidence": "L1549｜嘴角溢出血丝，但眼神依然坚定。"
+  },
+  {
+   "id": "e031-1",
+   "stmt": "第十三章「终有一别」 · 派蒙 · 摘星崖 · 催他快走实为不舍挽留 · 挤出笑容 · 塞西莉亚花",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L902",
+   "emotion_evidence": "L902｜派蒙擦去眼角的泪水，挤出笑容"
+  },
+  {
+   "id": "e031-2",
+   "stmt": "第十三章「终有一别」 · 派蒙 · 摘星崖 · 真心盼他早走不再相见 · 挤出笑容 · 塞西莉亚花",
+   "answer": false,
+   "wrong_element": "事件",
+   "evidence": "L902",
+   "emotion_evidence": "L902｜派蒙擦去眼角的泪水，挤出笑容"
+  },
+  {
+   "id": "e032-1",
+   "stmt": "第七章「被请喝茶」 · 秦熙 · 白色房间 · 一边怀疑一边让小李带参观 · 温柔 · 光幕",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L580",
+   "emotion_evidence": "L562｜她说用温柔的语气向陈默说"
+  },
+  {
+   "id": "e032-2",
+   "stmt": "第七章「被请喝茶」 · 秦熙 · 白色房间 · 一边怀疑一边让小李带参观 · 冷淡 · 光幕",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L580",
+   "emotion_evidence": "L562｜她说用温柔的语气向陈默说"
+  },
+  {
+   "id": "e033-1",
+   "stmt": "第十六章「生命的需求」 · 张明远 · 求知园 · 反问AI价值观来试探 · 眉头一皱 · 光幕",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1071",
+   "emotion_evidence": "L1063｜张老突然眉头一皱，发现事情并不简单。"
+  },
+  {
+   "id": "e033-2",
+   "stmt": "第十六章「生命的需求」 · 小李 · 求知园 · 反问AI价值观来试探 · 眉头一皱 · 光幕",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L1071",
+   "emotion_evidence": "L1063｜张老突然眉头一皱，发现事情并不简单。"
+  },
+  {
+   "id": "e034-1",
+   "stmt": "第十一章「接风宴」 · 博士 · 另一片空间 · 提议以美食美人诱他留下 · 无聊 · 圆桌",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L786",
+   "emotion_evidence": "L780｜博士看着这样的场面，轻声说：“真是无聊的争执。”"
+  },
+  {
+   "id": "e034-2",
+   "stmt": "第十一章「接风宴」 · 博士 · 另一片空间 · 提议以美食美人诱他留下 · 满怀期待 · 圆桌",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L786",
+   "emotion_evidence": "L780｜博士看着这样的场面，轻声说：“真是无聊的争执。”"
+  },
+  {
+   "id": "e035-1",
+   "stmt": "第二十一章「问题的答案」 · 琴团长 · 办公室 · 读完手稿承诺不霸占自由 · 严肃 · 手稿",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1410",
+   "emotion_evidence": "L1410｜琴团长接过报告，神情变得非常严肃。"
+  },
+  {
+   "id": "e035-2",
+   "stmt": "第二十一章「问题的答案」 · 琴团长 · 办公室 · 读完手稿承诺不霸占自由 · 严肃 · 风鹰剑",
+   "answer": false,
+   "wrong_element": "物品",
+   "evidence": "L1410",
+   "emotion_evidence": "L1410｜琴团长接过报告，神情变得非常严肃。"
+  },
+  {
+   "id": "e036-1",
+   "stmt": "第十三章「终有一别」 · 诺艾尔 · 蒙德城 · 因怕他离开难过才写情书 · 难过 · 情书",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L870",
+   "emotion_evidence": "L872｜如果你离开蒙德，她会感到难过么？"
+  },
+  {
+   "id": "e036-2",
+   "stmt": "第六章「权限与贡献点」 · 诺艾尔 · 蒙德城 · 因怕他离开难过才写情书 · 难过 · 情书",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L870",
+   "emotion_evidence": "L872｜如果你离开蒙德，她会感到难过么？"
+  },
+  {
+   "id": "e037-1",
+   "stmt": "第八章「化解误会」 · 小李 · 内部一环 · 见陈默敬礼后别过头回忆 · 伤感 · 防护服",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L613",
+   "emotion_evidence": "L589｜小李的话带着些许伤感，语气很重"
+  },
+  {
+   "id": "e037-2",
+   "stmt": "第八章「化解误会」 · 小李 · 白色房间 · 见陈默敬礼后别过头回忆 · 伤感 · 防护服",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L613",
+   "emotion_evidence": "L589｜小李的话带着些许伤感，语气很重"
+  },
+  {
+   "id": "e038-1",
+   "stmt": "第二十一章「问题的答案」 · 巨子陈默 · 蒙德城 · 称她们是骄傲也是遗憾 · 温和 · 小道具",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L1470",
+   "emotion_evidence": "L1468｜那个身影开口了，声音温和"
+  },
+  {
+   "id": "e038-2",
+   "stmt": "第二十一章「问题的答案」 · 巨子陈默 · 蒙德城 · 称她们是骄傲也是遗憾 · 不屑 · 小道具",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L1470",
+   "emotion_evidence": "L1468｜那个身影开口了，声音温和"
+  },
+  {
+   "id": "e039-1",
+   "stmt": "第九章「灵境：原神」 · 派蒙 · 蒙德海滩 · 追问想家却未说想回何处 · 带着哭腔 · 应急食品",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L674",
+   "emotion_evidence": "L672｜派蒙的声音带着哭腔，扑了过来紧紧抓住陈默衣角。"
+  },
+  {
+   "id": "e039-2",
+   "stmt": "第九章「灵境：原神」 · 派蒙 · 摘星崖 · 追问想家却未说想回何处 · 带着哭腔 · 应急食品",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L674",
+   "emotion_evidence": "L672｜派蒙的声音带着哭腔，扑了过来紧紧抓住陈默衣角。"
+  },
+  {
+   "id": "e040-1",
+   "stmt": "第十一章「接风宴」 · 小艾尔 · 西风骑士团 · 很快接受小艾尔称呼 · 道谢 · 入住手续",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L760",
+   "emotion_evidence": "L760｜“谢谢你派蒙。”小艾尔很快就接受了这样的称呼。"
+  },
+  {
+   "id": "e040-2",
+   "stmt": "第十一章「接风宴」 · 诺艾尔 · 西风骑士团 · 很快接受小艾尔称呼 · 道谢 · 入住手续",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L760",
+   "emotion_evidence": "L760｜“谢谢你派蒙。”小艾尔很快就接受了这样的称呼。"
+  },
+  {
+   "id": "e041-1",
+   "stmt": "第一章「初见蜂巢世界」 · 陈默 · 六边形房间 · 只知当下2045年未给年数 · 茫然 · 指南",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L10",
+   "emotion_evidence": "L12｜感到一阵茫然：“我这是，穿越了？”"
+  },
+  {
+   "id": "e041-2",
+   "stmt": "第二章「巧合还是阴谋」 · 陈默 · 六边形房间 · 只知当下2045年未给年数 · 茫然 · 指南",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L10",
+   "emotion_evidence": "L12｜感到一阵茫然：“我这是，穿越了？”"
+  },
+  {
+   "id": "e042-1",
+   "stmt": "第五章「历史的断层」 · 张明远 · 求知园 · 讲三战三阶段未给时长 · 低沉 · 光幕",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L418",
+   "emotion_evidence": "L418｜张老停顿一下，声音低沉：“我儿子当时就在那里。”"
+  },
+  {
+   "id": "e042-2",
+   "stmt": "第五章「历史的断层」 · 张明远 · 求知园 · 讲三战三阶段未给时长 · 亢奋 · 光幕",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L418",
+   "emotion_evidence": "L418｜张老停顿一下，声音低沉：“我儿子当时就在那里。”"
+  },
+  {
+   "id": "e043-1",
+   "stmt": "第五章「历史的断层」 · 张明远 · 求知园 · 只说人口锐减未给总数 · 孤寂 · 光幕",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L422",
+   "emotion_evidence": "L424｜看着张老，他能感受到这个老人的孤寂。"
+  },
+  {
+   "id": "e043-2",
+   "stmt": "第五章「历史的断层」 · 张明远 · 求知园 · 报出地球与月球现存人数 · 孤寂 · 光幕",
+   "answer": false,
+   "wrong_element": "事件",
+   "evidence": "L422",
+   "emotion_evidence": "L424｜看着张老，他能感受到这个老人的孤寂。"
+  },
+  {
+   "id": "e044-1",
+   "stmt": "第四章「蜂巢社会蓝图」 · 陈默 · 六边形房间 · 查得进塔时刻不知停留多久 · 冷汗 · 指南",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L345",
+   "emotion_evidence": "L341｜陈默冒出一阵冷汗。"
+  },
+  {
+   "id": "e044-2",
+   "stmt": "第四章「蜂巢社会蓝图」 · 陈默 · 巨子塔 · 查得进塔时刻不知停留多久 · 冷汗 · 指南",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L345",
+   "emotion_evidence": "L341｜陈默冒出一阵冷汗。"
+  },
+  {
+   "id": "e045-1",
+   "stmt": "第二章「巧合还是阴谋」 · 陈默 · 目标节点 · 只引宪法第二条未提总数 · 疑点 · 清理工具",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L195",
+   "emotion_evidence": "L191｜陈默很快产生了疑点。"
+  },
+  {
+   "id": "e045-2",
+   "stmt": "第二章「巧合还是阴谋」 · 陈默 · 目标节点 · 只引宪法第二条未提总数 · 疑点 · 纠缠之源",
+   "answer": false,
+   "wrong_element": "物品",
+   "evidence": "L195",
+   "emotion_evidence": "L191｜陈默很快产生了疑点。"
+  },
+  {
+   "id": "e046-1",
+   "stmt": "第一章「初见蜂巢世界」 · 陈默 · 六边形房间 · 只忆点开视频未提年龄 · 茫然 · 手机",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L12",
+   "emotion_evidence": "L12｜感到一阵茫然：“我这是，穿越了？”"
+  },
+  {
+   "id": "e046-2",
+   "stmt": "第一章「初见蜂巢世界」 · 陈默 · 六边形房间 · 只忆点开视频未提年龄 · 无比坚定 · 手机",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L12",
+   "emotion_evidence": "L12｜感到一阵茫然：“我这是，穿越了？”"
+  },
+  {
+   "id": "e047-1",
+   "stmt": "第七章「被请喝茶」 · 秦熙 · 警戒检查中心 · 只知她是负责人未提编制 · 锐利 · 防护服",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L564",
+   "emotion_evidence": "L562｜她眼神锐利，拿过光幕，快速对比信息。"
+  },
+  {
+   "id": "e047-2",
+   "stmt": "第七章「被请喝茶」 · 秦熙 · 警戒检查中心 · 只知她是负责人未提编制 · 锐利 · 蹦蹦炸弹",
+   "answer": false,
+   "wrong_element": "物品",
+   "evidence": "L564",
+   "emotion_evidence": "L562｜她眼神锐利，拿过光幕，快速对比信息。"
+  },
+  {
+   "id": "e048-1",
+   "stmt": "第一章「初见蜂巢世界」 · 陈默 · 求知园 · 提交磁场约束建议待评估 · 兴奋 · 建议界面",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L118",
+   "emotion_evidence": "L118｜他兴奋地调出建议界面，手指翻飞"
+  },
+  {
+   "id": "e048-2",
+   "stmt": "第八章「化解误会」 · 陈默 · 求知园 · 提交磁场约束建议待评估 · 兴奋 · 建议界面",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L118",
+   "emotion_evidence": "L118｜他兴奋地调出建议界面，手指翻飞"
+  },
+  {
+   "id": "e049-1",
+   "stmt": "第七章「被请喝茶」 · 陈默 · 舱室 · 见星图知分区域却未给数量 · 震撼 · 分区星图",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L510",
+   "emotion_evidence": "L502｜陈默再次被这样的大手笔震撼到。"
+  },
+  {
+   "id": "e049-2",
+   "stmt": "第七章「被请喝茶」 · 陈默 · 舱室 · 数清地球月球各有几个区域 · 震撼 · 分区星图",
+   "answer": false,
+   "wrong_element": "事件",
+   "evidence": "L510",
+   "emotion_evidence": "L502｜陈默再次被这样的大手笔震撼到。"
+  },
+  {
+   "id": "e050-1",
+   "stmt": "第四章「蜂巢社会蓝图」 · 陈默 · 六边形房间 · 词条只说需五级未提层数 · 眉头一皱 · 指南",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L349",
+   "emotion_evidence": "L347｜陈默眉头一皱。"
+  },
+  {
+   "id": "e050-2",
+   "stmt": "第四章「蜂巢社会蓝图」 · 陈默 · 六边形房间 · 词条写明塔高层数分布 · 眉头一皱 · 指南",
+   "answer": false,
+   "wrong_element": "事件",
+   "evidence": "L349",
+   "emotion_evidence": "L347｜陈默眉头一皱。"
+  },
+  {
+   "id": "e051-1",
+   "stmt": "第一章「初见蜂巢世界」 · 陈默 · 求知园 · 见1-3标准日未说几小时 · 笑了 · 建议界面",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L118",
+   "emotion_evidence": "L118｜陈默非但不失望，反而笑了。"
+  },
+  {
+   "id": "e051-2",
+   "stmt": "第一章「初见蜂巢世界」 · 陈默 · 求知园 · 见1-3标准日未说几小时 · 懊恼 · 建议界面",
+   "answer": false,
+   "wrong_element": "情绪",
+   "evidence": "L118",
+   "emotion_evidence": "L118｜陈默非但不失望，反而笑了。"
+  },
+  {
+   "id": "e052-1",
+   "stmt": "第七章「被请喝茶」 · 陈默 · 舱室 · 悟出高速网络去月球未给时长 · 突然想到 · 地图",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L506",
+   "emotion_evidence": "L506｜突然，陈默想到，如此大的地图"
+  },
+  {
+   "id": "e052-2",
+   "stmt": "第七章「被请喝茶」 · 陈默 · 舱室 · 算出地球月球单程需数小时 · 突然想到 · 地图",
+   "answer": false,
+   "wrong_element": "事件",
+   "evidence": "L506",
+   "emotion_evidence": "L506｜突然，陈默想到，如此大的地图"
+  },
+  {
+   "id": "e053-1",
+   "stmt": "第一章「初见蜂巢世界」 · 陈默 · 舱室 · 再要标准餐需信用点未标价 · 急了 · 标准餐",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L106",
+   "emotion_evidence": "L108｜他急了，声音在狭小空间里格外响。"
+  },
+  {
+   "id": "e053-2",
+   "stmt": "第一章「初见蜂巢世界」 · 陈默 · 舱室 · 再要标准餐需信用点未标价 · 急了 · 摩拉",
+   "answer": false,
+   "wrong_element": "物品",
+   "evidence": "L106",
+   "emotion_evidence": "L108｜他急了，声音在狭小空间里格外响。"
+  },
+  {
+   "id": "e054-1",
+   "stmt": "第二章「巧合还是阴谋」 · 张明远 · 求知园 · 只讲巨子积劳而逝未提年岁 · 敬仰 · 纪念塔",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L241",
+   "emotion_evidence": "L241｜依然沉浸在敬仰中"
+  },
+  {
+   "id": "e054-2",
+   "stmt": "第七章「被请喝茶」 · 张明远 · 求知园 · 只讲巨子积劳而逝未提年岁 · 敬仰 · 纪念塔",
+   "answer": false,
+   "wrong_element": "章节",
+   "evidence": "L241",
+   "emotion_evidence": "L241｜依然沉浸在敬仰中"
+  },
+  {
+   "id": "e055-1",
+   "stmt": "第一章「初见蜂巢世界」 · 陈默 · 舱室 · 赞超导轨道低耗能未给总长 · 震撼 · 小机器人",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L48",
+   "emotion_evidence": "L50｜陈默感到极其震撼，所有的技术曾经他都听说过"
+  },
+  {
+   "id": "e055-2",
+   "stmt": "第一章「初见蜂巢世界」 · 陈默 · 求知园 · 赞超导轨道低耗能未给总长 · 震撼 · 小机器人",
+   "answer": false,
+   "wrong_element": "地点",
+   "evidence": "L48",
+   "emotion_evidence": "L50｜陈默感到极其震撼，所有的技术曾经他都听说过"
+  },
+  {
+   "id": "e056-1",
+   "stmt": "第八章「化解误会」 · 小李 · 内部一环 · 介绍来福等机型未给总数 · 伤感 · 防护服",
+   "answer": true,
+   "wrong_element": null,
+   "evidence": "L603",
+   "emotion_evidence": "L589｜小李的话带着些许伤感，语气很重"
+  },
+  {
+   "id": "e056-2",
+   "stmt": "第八章「化解误会」 · 秦熙 · 内部一环 · 介绍来福等机型未给总数 · 伤感 · 防护服",
+   "answer": false,
+   "wrong_element": "人物",
+   "evidence": "L603",
+   "emotion_evidence": "L589｜小李的话带着些许伤感，语气很重"
+  }
+ ]
+}
