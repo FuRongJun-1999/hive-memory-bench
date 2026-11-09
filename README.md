@@ -25,20 +25,20 @@
 | 条件 | 平衡准确率 | φ | 认出真 | 认出假 | 材料字数 |
 | --- | ---: | ---: | ---: | ---: | ---: |
 | 只给所引章节（上限锚）| **87.7%** | 0.754 | 85.9% | 89.5% | 2,670 |
-| dsh-memu-memory 1.3.1（两跳·章节）| **87.3%** | 0.747 | 86.2% | 88.4% | 5,384 |
-| dsh-memu-memory 1.3.1（两跳·top-1 章）| **87.3%** | 0.747 | 85.1% | 89.5% | 2,663 |
-| **dsh-memory（灵枢）0.10.0 · top-3** | **86.4%** | 0.730 | 83.0% | 89.9% | 5,302 |
-| **dsh-memory（灵枢）0.10.0 · top-1** | **85.9%** | 0.719 | 82.6% | 89.1% | 2,714 |
-| dsh-memu-memory 1.3.1（两跳·top-3 章）| 83.5% | 0.671 | 82.2% | 84.8% | 7,954 |
-| surfcore 0.8.6 | 82.8% | 0.656 | 81.2% | 84.4% | 25,251 |
-| dsh-memu-memory 1.3.1（两跳·块）| 79.9% | 0.625 | 65.2% | 94.6% | 2,094 |
-| OpenViking 0.4.22 | 76.6% | 0.556 | 62.3% | 90.9% | 25,484 |
+| [dsh-memu-memory](https://github.com/Tkingxiao/dsh-memu-memory) 1.3.1（两跳·章节）| **87.3%** | 0.747 | 86.2% | 88.4% | 5,384 |
+| [dsh-memu-memory](https://github.com/Tkingxiao/dsh-memu-memory) 1.3.1（两跳·top-1 章）| **87.3%** | 0.747 | 85.1% | 89.5% | 2,663 |
+| [**dsh-memory（灵枢）**](https://github.com/FuRongJun-1999/dsh-memory) 0.10.0 · top-3 | **86.4%** | 0.730 | 83.0% | 89.9% | 5,302 |
+| [**dsh-memory（灵枢）**](https://github.com/FuRongJun-1999/dsh-memory) 0.10.0 · top-1 | **85.9%** | 0.719 | 82.6% | 89.1% | 2,714 |
+| [dsh-memu-memory](https://github.com/Tkingxiao/dsh-memu-memory) 1.3.1（两跳·top-3 章）| 83.5% | 0.671 | 82.2% | 84.8% | 7,954 |
+| [surfcore](https://github.com/Mieksido/surfcore) 0.8.6 | 82.8% | 0.656 | 81.2% | 84.4% | 25,251 |
+| [dsh-memu-memory](https://github.com/Tkingxiao/dsh-memu-memory) 1.3.1（两跳·块）| 79.9% | 0.625 | 65.2% | 94.6% | 2,094 |
+| [OpenViking](https://github.com/volcengine/OpenViking) 0.4.22 | 76.6% | 0.556 | 62.3% | 90.9% | 25,484 |
 | 千问 RAG（qwen3-embedding-4b）| 69.6% | 0.448 | 45.3% | 93.8% | 9,727 |
-| dsh-rofm 1.4.4 | 62.5% | 0.318 | 31.5% | 93.5% | 11,883 |
-| dsh-world 0.7.3 | 51.4% | 0.121 | 2.9% | 100.0% | 2,938 |
-| dsh-soul 2.0.0 | 50.0% | 0.000 | 0.0% | 100.0% | 180 |
+| [dsh-rofm](https://github.com/wall1234567/dsh-rofm) 1.4.4 | 62.5% | 0.318 | 31.5% | 93.5% | 11,883 |
+| [dsh-world](https://github.com/chenkezhen480/dsh-world) 0.7.3 | 51.4% | 0.121 | 2.9% | 100.0% | 2,938 |
+| [dsh-soul](https://github.com/icyaaaww/dsh-soul) 2.0.0 | 50.0% | 0.000 | 0.0% | 100.0% | 180 |
 | 不给材料（下界）| 50.0% | 0.000 | 0.0% | 100.0% | 0 |
-| dsh-memu-memory 1.3.1（只看索引卡）| 49.8% | −0.043 | 0.0% | 99.6% | 1,265 |
+| [dsh-memu-memory](https://github.com/Tkingxiao/dsh-memu-memory) 1.3.1（只看索引卡）| 49.8% | −0.043 | 0.0% | 99.6% | 1,265 |
 
 「上限锚」是正解章节原文，谁也不比它更该答对，它是这把尺的顶。
 
@@ -50,17 +50,17 @@
 
 | 条件 | 平衡准确率 | φ | 认出真 | 认出假 | 材料字数 |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| dsh-memu-memory 1.3.1（两跳·章节）| **82.6%** | 0.655 | 76.9% | 88.2% | 5,419 |
-| dsh-memu-memory 1.3.1（两跳·top-1 章）| **82.6%** | 0.659 | 74.8% | 90.3% | 2,691 |
+| [dsh-memu-memory](https://github.com/Tkingxiao/dsh-memu-memory) 1.3.1（两跳·章节）| **82.6%** | 0.655 | 76.9% | 88.2% | 5,419 |
+| [dsh-memu-memory](https://github.com/Tkingxiao/dsh-memu-memory) 1.3.1（两跳·top-1 章）| **82.6%** | 0.659 | 74.8% | 90.3% | 2,691 |
 | 只给所引章节（上限锚）| 82.4% | 0.655 | 74.4% | 90.3% | 2,683 |
-| **dsh-memory（灵枢）0.10.0 · top-3** | **81.9%** | 0.647 | 73.9% | 89.9% | 6,024 |
-| dsh-memu-memory 1.3.1（两跳·top-3 章）| 81.5% | 0.633 | 76.9% | 86.1% | 8,056 |
-| surfcore 0.8.6 | 79.2% | 0.586 | 83.2% | 75.2% | 25,241 |
-| **dsh-memory（灵枢）0.10.0 · top-1** | 76.1% | 0.551 | 59.7% | 92.4% | 3,022 |
-| dsh-memu-memory 1.3.1（两跳·块）| 71.4% | 0.463 | 52.5% | 90.3% | 1,997 |
-| dsh-rofm 1.4.4 | 64.7% | 0.376 | 33.6% | 95.8% | 12,172 |
-| dsh-world 0.7.3 | 51.5% | 0.122 | 2.9% | 100.0% | 2,956 |
-| dsh-soul 2.0.0 | 50.0% | 0.000 | 0.0% | 100.0% | 239 |
+| [**dsh-memory（灵枢）**](https://github.com/FuRongJun-1999/dsh-memory) 0.10.0 · top-3 | **81.9%** | 0.647 | 73.9% | 89.9% | 6,024 |
+| [dsh-memu-memory](https://github.com/Tkingxiao/dsh-memu-memory) 1.3.1（两跳·top-3 章）| 81.5% | 0.633 | 76.9% | 86.1% | 8,056 |
+| [surfcore](https://github.com/Mieksido/surfcore) 0.8.6 | 79.2% | 0.586 | 83.2% | 75.2% | 25,241 |
+| [**dsh-memory（灵枢）**](https://github.com/FuRongJun-1999/dsh-memory) 0.10.0 · top-1 | 76.1% | 0.551 | 59.7% | 92.4% | 3,022 |
+| [dsh-memu-memory](https://github.com/Tkingxiao/dsh-memu-memory) 1.3.1（两跳·块）| 71.4% | 0.463 | 52.5% | 90.3% | 1,997 |
+| [dsh-rofm](https://github.com/wall1234567/dsh-rofm) 1.4.4 | 64.7% | 0.376 | 33.6% | 95.8% | 12,172 |
+| [dsh-world](https://github.com/chenkezhen480/dsh-world) 0.7.3 | 51.5% | 0.122 | 2.9% | 100.0% | 2,956 |
+| [dsh-soul](https://github.com/icyaaaww/dsh-soul) 2.0.0 | 50.0% | 0.000 | 0.0% | 100.0% | 239 |
 | 不给材料（下界）| 50.0% | 0.000 | 0.0% | 100.0% | 0 |
 
 ## 从哪里开始
