@@ -1,0 +1,53 @@
+{
+ "state_track_fixed": {
+  "n": 552,
+  "top1": 0.9928,
+  "balanced": 0.9801,
+  "tp": 265,
+  "tn": 276,
+  "fp": 0,
+  "fn": 11
+ },
+ "chapter_paths_fixed": {
+  "默认": [
+   1.0,
+   1.0,
+   0.9221,
+   0.9964
+  ],
+  "仅bm25": [
+   1.0,
+   1.0,
+   0.9112,
+   0.9982
+  ],
+  "bm25+entity": [
+   1.0,
+   1.0,
+   0.9112,
+   0.9982
+  ],
+  "lexical+bm25": [
+   1.0,
+   1.0,
+   0.9149,
+   0.9982
+  ]
+ },
+ "e2e_timepack_fixed": {
+  "n": 552,
+  "tp": 96,
+  "tn": 271,
+  "fp": 5,
+  "fn": 180,
+  "balanced_acc": 0.6649,
+  "phi": 0.4264,
+  "mat_avg": 10006,
+  "judge": "deepseek-chat"
+ },
+ "e2e_timepack_old": {
+  "balanced_acc": 0.6522,
+  "phi": 0.4048,
+  "chapters": 22
+ }
+}
