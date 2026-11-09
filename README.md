@@ -41,6 +41,7 @@
 | --- | --- |
 | 看考什么、怎么判 | [测试方法](docs/灵枢实测_三种口径与统一尺度_v2.0.md) |
 | 下载完整题库 | [复杂推理（唯一现行的两套）](mcq/reasoning/README.md)｜[简单检索](mcq/e2e-simple/)｜[人格一致性](mcq/persona/) |
+| 复测灵枢、或用自己的系统跑同尺 | [scripts/](scripts/README.md) |
 | 给自己的作答判分 | [grade_rubric.py](grade_rubric.py)（六元素/多跳）｜[grade_mcq.py](grade_mcq.py)（选择题） |
 | 读题、接入自己的系统 | [作答契约](mcq/e2e-simple/作答契约_选择题.md)｜作答器 [run_rubric.py](run_rubric.py) |
 | 看多跳题怎么验的 | [验证报告](docs/多跳六元素rubric92_验证报告_v1.0.md) |
@@ -64,6 +65,21 @@ cd hive-memory-bench
 # 3. 判分
 python grade_mcq.py --questions mcq/reasoning/题目_六元素判断题_476.json --answers answers.jsonl
 ```
+
+## 自己复测
+
+三个纯标准库脚本，不需要装灵枢、不需要 API key：
+
+```sh
+# 检索层（确定性，秒级）
+HMB=$(pwd) python scripts/bench_state_track.py
+
+# 端到端：生成 552 条单断言任务 → 你用自己的系统作答 → 判分
+python scripts/reproduce_e2e.py --task --arm top1 --out tasks.jsonl
+python scripts/reproduce_e2e.py --grade --picks my_answers.jsonl
+```
+
+灵枢检索需要内部库，外部跑不了，所以仓库发布了**检索明细**（[`readings/lingshu_retrieval_rubric92.json`](readings/lingshu_retrieval_rubric92.json)：552 条断言各自的 gold / top-1 / top-3 章号）。据此取原文即可复测，不必复现检索。详见 [scripts/README.md](scripts/README.md)。
 
 ## 我们怎么理解“记住了”
 
