@@ -1,0 +1,4797 @@
+{
+ "note": "灵枢生产模块检索明细（476 条六元素判断题）。检索前对 stmt 的 · 做了空格规范化（原文件是 ·无空格，直接检索会掉 10 点且 81 条返回 0 章）。",
+ "n": 476,
+ "top1_rate": 0.645,
+ "top3_rate": 0.8256,
+ "normalization": "re.sub(r\"\\s*·\\s*\", \" · \", stmt)",
+ "rows": [
+  {
+   "aid": "o001-1",
+   "gold": 2,
+   "top1": 2,
+   "top3": [
+    2,
+    4
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o001-2",
+   "gold": 21,
+   "top1": 2,
+   "top3": [
+    2,
+    4
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o002-1",
+   "gold": 22,
+   "top1": 22,
+   "top3": [
+    22
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o002-2",
+   "gold": 22,
+   "top1": 17,
+   "top3": [
+    17,
+    22
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o003-1",
+   "gold": 12,
+   "top1": 12,
+   "top3": [
+    12,
+    9
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o003-2",
+   "gold": 12,
+   "top1": 12,
+   "top3": [
+    12,
+    13
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o005-1",
+   "gold": 4,
+   "top1": 1,
+   "top3": [
+    1,
+    4,
+    9
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o005-2",
+   "gold": 4,
+   "top1": 1,
+   "top3": [
+    1,
+    3,
+    4
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o006-1",
+   "gold": 23,
+   "top1": 23,
+   "top3": [
+    23,
+    15
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o006-2",
+   "gold": 5,
+   "top1": 23,
+   "top3": [
+    23,
+    15
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o007-1",
+   "gold": 5,
+   "top1": 2,
+   "top3": [
+    2,
+    4,
+    5
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o007-2",
+   "gold": 5,
+   "top1": 2,
+   "top3": [
+    2,
+    4,
+    6
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o008-1",
+   "gold": 7,
+   "top1": 7,
+   "top3": [
+    7,
+    23
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o008-2",
+   "gold": 7,
+   "top1": 7,
+   "top3": [
+    7,
+    23
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o009-1",
+   "gold": 15,
+   "top1": 15,
+   "top3": [
+    15,
+    14
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o009-2",
+   "gold": 3,
+   "top1": 15,
+   "top3": [
+    15,
+    14
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o010-1",
+   "gold": 8,
+   "top1": 8,
+   "top3": [
+    8,
+    7
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o010-2",
+   "gold": 19,
+   "top1": 8,
+   "top3": [
+    8,
+    7
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o011-1",
+   "gold": 19,
+   "top1": 19,
+   "top3": [
+    19
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o011-2",
+   "gold": 19,
+   "top1": 19,
+   "top3": [
+    19,
+    12
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o012-1",
+   "gold": 12,
+   "top1": 12,
+   "top3": [
+    12,
+    11
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o012-2",
+   "gold": 12,
+   "top1": 12,
+   "top3": [
+    12,
+    11
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o013-1",
+   "gold": 4,
+   "top1": 4,
+   "top3": [
+    4,
+    1
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o013-2",
+   "gold": 4,
+   "top1": 4,
+   "top3": [
+    4
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o014-1",
+   "gold": 8,
+   "top1": 6,
+   "top3": [
+    6,
+    8
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o014-2",
+   "gold": 20,
+   "top1": 6,
+   "top3": [
+    6,
+    8
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o015-1",
+   "gold": 15,
+   "top1": 1,
+   "top3": [
+    1,
+    15,
+    23
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o015-2",
+   "gold": 15,
+   "top1": 1,
+   "top3": [
+    1,
+    2
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o016-1",
+   "gold": 21,
+   "top1": 21,
+   "top3": [
+    21,
+    12
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o016-2",
+   "gold": 21,
+   "top1": 1,
+   "top3": [
+    1,
+    2,
+    4
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o017-1",
+   "gold": 1,
+   "top1": 1,
+   "top3": [
+    1,
+    2
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o017-2",
+   "gold": 1,
+   "top1": 1,
+   "top3": [
+    1,
+    2
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o018-1",
+   "gold": 2,
+   "top1": 2,
+   "top3": [
+    2
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o018-2",
+   "gold": 10,
+   "top1": 2,
+   "top3": [
+    2
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o019-1",
+   "gold": 3,
+   "top1": 3,
+   "top3": [
+    3
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o019-2",
+   "gold": 3,
+   "top1": 3,
+   "top3": [
+    3,
+    1
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o020-1",
+   "gold": 5,
+   "top1": 5,
+   "top3": [
+    5,
+    1
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o020-2",
+   "gold": 5,
+   "top1": 7,
+   "top3": [
+    7,
+    8,
+    16
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o022-1",
+   "gold": 7,
+   "top1": 7,
+   "top3": [
+    7,
+    17
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o022-2",
+   "gold": 7,
+   "top1": 7,
+   "top3": [
+    7,
+    1
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o023-1",
+   "gold": 9,
+   "top1": 9,
+   "top3": [
+    9,
+    1
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o023-2",
+   "gold": 9,
+   "top1": 1,
+   "top3": [
+    1,
+    9,
+    17
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o024-1",
+   "gold": 10,
+   "top1": 10,
+   "top3": [
+    10,
+    11
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o024-2",
+   "gold": 19,
+   "top1": 10,
+   "top3": [
+    10,
+    11
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o025-1",
+   "gold": 11,
+   "top1": 11,
+   "top3": [
+    11,
+    22
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o025-2",
+   "gold": 11,
+   "top1": 11,
+   "top3": [
+    11,
+    22
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o026-1",
+   "gold": 12,
+   "top1": 12,
+   "top3": [
+    12,
+    10
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o026-2",
+   "gold": 12,
+   "top1": 12,
+   "top3": [
+    12,
+    13
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o028-1",
+   "gold": 14,
+   "top1": 14,
+   "top3": [
+    14,
+    7
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o028-2",
+   "gold": 14,
+   "top1": 14,
+   "top3": [
+    14
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o029-1",
+   "gold": 16,
+   "top1": 5,
+   "top3": [
+    5,
+    16
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o029-2",
+   "gold": 16,
+   "top1": 5,
+   "top3": [
+    5,
+    16
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o030-1",
+   "gold": 17,
+   "top1": 17,
+   "top3": [
+    17,
+    12
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o030-2",
+   "gold": 20,
+   "top1": 17,
+   "top3": [
+    17,
+    12
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o031-1",
+   "gold": 18,
+   "top1": 18,
+   "top3": [
+    18
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o031-2",
+   "gold": 18,
+   "top1": 18,
+   "top3": [
+    18
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o032-1",
+   "gold": 19,
+   "top1": 19,
+   "top3": [
+    19,
+    18
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o032-2",
+   "gold": 14,
+   "top1": 19,
+   "top3": [
+    19,
+    18
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o034-1",
+   "gold": 22,
+   "top1": 22,
+   "top3": [
+    22,
+    17
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o034-2",
+   "gold": 22,
+   "top1": 22,
+   "top3": [
+    22,
+    20
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o035-1",
+   "gold": 23,
+   "top1": 23,
+   "top3": [
+    23,
+    12
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o035-2",
+   "gold": 23,
+   "top1": 12,
+   "top3": [
+    12,
+    13
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o036-1",
+   "gold": 4,
+   "top1": 4,
+   "top3": [
+    4,
+    3
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o036-2",
+   "gold": 4,
+   "top1": 4,
+   "top3": [
+    4,
+    18,
+    23
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o037-1",
+   "gold": 15,
+   "top1": 14,
+   "top3": [
+    14,
+    15
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o037-2",
+   "gold": 15,
+   "top1": 14,
+   "top3": [
+    14,
+    10
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o038-1",
+   "gold": 21,
+   "top1": 21,
+   "top3": [
+    21,
+    17
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o038-2",
+   "gold": 21,
+   "top1": 21,
+   "top3": [
+    21,
+    2
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o039-1",
+   "gold": 13,
+   "top1": 13,
+   "top3": [
+    13,
+    12
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o039-2",
+   "gold": 6,
+   "top1": 13,
+   "top3": [
+    13,
+    12
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o040-1",
+   "gold": 16,
+   "top1": 16,
+   "top3": [
+    16,
+    3
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o040-2",
+   "gold": 16,
+   "top1": 16,
+   "top3": [
+    16,
+    3
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o041-1",
+   "gold": 20,
+   "top1": 20,
+   "top3": [
+    20,
+    18
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o041-2",
+   "gold": 8,
+   "top1": 20,
+   "top3": [
+    20,
+    18
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o042-1",
+   "gold": 1,
+   "top1": 1,
+   "top3": [
+    1,
+    2
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o042-2",
+   "gold": 1,
+   "top1": 1,
+   "top3": [
+    1,
+    5
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o043-1",
+   "gold": 17,
+   "top1": 17,
+   "top3": [
+    17,
+    12
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o043-2",
+   "gold": 17,
+   "top1": 17,
+   "top3": [
+    17,
+    18,
+    22
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o044-1",
+   "gold": 5,
+   "top1": 1,
+   "top3": [
+    1,
+    2,
+    5
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o044-2",
+   "gold": 5,
+   "top1": 16,
+   "top3": [
+    16,
+    1
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o045-1",
+   "gold": 4,
+   "top1": 4,
+   "top3": [
+    4,
+    1
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o045-2",
+   "gold": 16,
+   "top1": 4,
+   "top3": [
+    4,
+    1
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o046-1",
+   "gold": 14,
+   "top1": 1,
+   "top3": [
+    1,
+    9
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o046-2",
+   "gold": 14,
+   "top1": 1,
+   "top3": [
+    1,
+    5,
+    9
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o047-1",
+   "gold": 4,
+   "top1": 1,
+   "top3": [
+    1,
+    4,
+    9
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o047-2",
+   "gold": 4,
+   "top1": 1,
+   "top3": [
+    1,
+    4,
+    9
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o048-1",
+   "gold": 7,
+   "top1": 7,
+   "top3": [
+    7,
+    8
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o048-2",
+   "gold": 7,
+   "top1": 7,
+   "top3": [
+    7,
+    8,
+    14
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o049-1",
+   "gold": 8,
+   "top1": 8,
+   "top3": [
+    8,
+    7
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o049-2",
+   "gold": 8,
+   "top1": 8,
+   "top3": [
+    8,
+    7
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o050-1",
+   "gold": 18,
+   "top1": 18,
+   "top3": [
+    18,
+    10
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o050-2",
+   "gold": 18,
+   "top1": 18,
+   "top3": [
+    18,
+    10
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o051-1",
+   "gold": 5,
+   "top1": 1,
+   "top3": [
+    1,
+    5
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o051-2",
+   "gold": 6,
+   "top1": 1,
+   "top3": [
+    1,
+    5
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o052-1",
+   "gold": 11,
+   "top1": 11,
+   "top3": [
+    11,
+    22
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o052-2",
+   "gold": 11,
+   "top1": 11,
+   "top3": [
+    11
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o053-1",
+   "gold": 23,
+   "top1": 17,
+   "top3": [
+    17,
+    23
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o053-2",
+   "gold": 23,
+   "top1": 12,
+   "top3": [
+    12,
+    13,
+    17
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o054-1",
+   "gold": 21,
+   "top1": 21,
+   "top3": [
+    21,
+    18
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o054-2",
+   "gold": 21,
+   "top1": 21,
+   "top3": [
+    21,
+    18
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q002-1",
+   "gold": 4,
+   "top1": 1,
+   "top3": [
+    1,
+    9
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q002-2",
+   "gold": 4,
+   "top1": 1,
+   "top3": [
+    1,
+    9
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q004-1",
+   "gold": 3,
+   "top1": 3,
+   "top3": [
+    3,
+    1
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q004-2",
+   "gold": 3,
+   "top1": 1,
+   "top3": [
+    1,
+    2
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q005-1",
+   "gold": 17,
+   "top1": 17,
+   "top3": [
+    17,
+    12
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q005-2",
+   "gold": 19,
+   "top1": 17,
+   "top3": [
+    17,
+    12
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q006-1",
+   "gold": 16,
+   "top1": 16,
+   "top3": [
+    16,
+    23
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q006-2",
+   "gold": 16,
+   "top1": 1,
+   "top3": [
+    1,
+    2
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q008-1",
+   "gold": 21,
+   "top1": 21,
+   "top3": [
+    21
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q008-2",
+   "gold": 21,
+   "top1": 21,
+   "top3": [
+    21,
+    17
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q009-1",
+   "gold": 16,
+   "top1": 5,
+   "top3": [
+    5,
+    16
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q009-2",
+   "gold": 16,
+   "top1": 16,
+   "top3": [
+    16,
+    7
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q010-1",
+   "gold": 2,
+   "top1": 2,
+   "top3": [
+    2
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q010-2",
+   "gold": 2,
+   "top1": 2,
+   "top3": [
+    2,
+    1
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q011-1",
+   "gold": 6,
+   "top1": 5,
+   "top3": [
+    5,
+    6
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q011-2",
+   "gold": 6,
+   "top1": 6,
+   "top3": [
+    6,
+    7,
+    16
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q012-1",
+   "gold": 6,
+   "top1": 5,
+   "top3": [
+    5,
+    6
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q012-2",
+   "gold": 6,
+   "top1": 5,
+   "top3": [
+    5,
+    6
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q013-1",
+   "gold": 3,
+   "top1": 3,
+   "top3": [
+    3,
+    1
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q013-2",
+   "gold": 3,
+   "top1": 3,
+   "top3": [
+    3,
+    1
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q014-1",
+   "gold": 1,
+   "top1": 1,
+   "top3": [
+    1,
+    6
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q014-2",
+   "gold": 3,
+   "top1": 1,
+   "top3": [
+    1,
+    6
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q015-1",
+   "gold": 15,
+   "top1": 15,
+   "top3": [
+    15,
+    7
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q015-2",
+   "gold": 15,
+   "top1": 5,
+   "top3": [
+    5,
+    6,
+    7
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q016-1",
+   "gold": 16,
+   "top1": 16,
+   "top3": [
+    16,
+    1
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q016-2",
+   "gold": 16,
+   "top1": 1,
+   "top3": [
+    1,
+    2,
+    5
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q017-1",
+   "gold": 11,
+   "top1": 10,
+   "top3": [
+    10,
+    11,
+    21
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q017-2",
+   "gold": 11,
+   "top1": 10,
+   "top3": [
+    10,
+    11,
+    21
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q018-1",
+   "gold": 18,
+   "top1": 11,
+   "top3": [
+    11,
+    18,
+    23
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q018-2",
+   "gold": 18,
+   "top1": 11,
+   "top3": [
+    11,
+    18,
+    23
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q019-1",
+   "gold": 13,
+   "top1": 13,
+   "top3": [
+    13,
+    9
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q019-2",
+   "gold": 17,
+   "top1": 13,
+   "top3": [
+    13,
+    9
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q020-1",
+   "gold": 13,
+   "top1": 13,
+   "top3": [
+    13,
+    9
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q020-2",
+   "gold": 13,
+   "top1": 13,
+   "top3": [
+    13,
+    9
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q021-1",
+   "gold": 13,
+   "top1": 13,
+   "top3": [
+    13,
+    17,
+    23
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q021-2",
+   "gold": 13,
+   "top1": 12,
+   "top3": [
+    12,
+    13,
+    17
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q022-1",
+   "gold": 19,
+   "top1": 19,
+   "top3": [
+    19,
+    18
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q022-2",
+   "gold": 19,
+   "top1": 19,
+   "top3": [
+    19
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q023-1",
+   "gold": 21,
+   "top1": 21,
+   "top3": [
+    21,
+    9
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q023-2",
+   "gold": 21,
+   "top1": 21,
+   "top3": [
+    21,
+    4
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q024-1",
+   "gold": 4,
+   "top1": 1,
+   "top3": [
+    1,
+    2,
+    4
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q024-2",
+   "gold": 6,
+   "top1": 1,
+   "top3": [
+    1,
+    2,
+    4
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q025-1",
+   "gold": 5,
+   "top1": 5,
+   "top3": [
+    5,
+    6
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q025-2",
+   "gold": 5,
+   "top1": 5,
+   "top3": [
+    5,
+    2
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q026-1",
+   "gold": 7,
+   "top1": 7,
+   "top3": [
+    7,
+    8
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q026-2",
+   "gold": 7,
+   "top1": 7,
+   "top3": [
+    7,
+    8
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q027-1",
+   "gold": 7,
+   "top1": 1,
+   "top3": [
+    1,
+    2,
+    7
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q027-2",
+   "gold": 7,
+   "top1": 1,
+   "top3": [
+    1,
+    2,
+    7
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q028-1",
+   "gold": 2,
+   "top1": 2,
+   "top3": [
+    2,
+    5
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q028-2",
+   "gold": 2,
+   "top1": 5,
+   "top3": [
+    5,
+    2
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q029-1",
+   "gold": 6,
+   "top1": 6,
+   "top3": [
+    6,
+    16
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q029-2",
+   "gold": 6,
+   "top1": 6,
+   "top3": [
+    6,
+    5
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q030-1",
+   "gold": 2,
+   "top1": 2,
+   "top3": [
+    2,
+    1
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q030-2",
+   "gold": 2,
+   "top1": 2,
+   "top3": [
+    2,
+    3
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q031-1",
+   "gold": 16,
+   "top1": 5,
+   "top3": [
+    5,
+    16
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q031-2",
+   "gold": 16,
+   "top1": 16,
+   "top3": [
+    16,
+    7
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q032-1",
+   "gold": 21,
+   "top1": 21,
+   "top3": [
+    21,
+    9
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q032-2",
+   "gold": 21,
+   "top1": 21,
+   "top3": [
+    21,
+    9
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q033-1",
+   "gold": 13,
+   "top1": 13,
+   "top3": [
+    13,
+    9
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q033-2",
+   "gold": 13,
+   "top1": 13,
+   "top3": [
+    13,
+    9
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q034-1",
+   "gold": 8,
+   "top1": 8,
+   "top3": [
+    8,
+    1
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q034-2",
+   "gold": 4,
+   "top1": 8,
+   "top3": [
+    8,
+    1
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q035-1",
+   "gold": 4,
+   "top1": 4,
+   "top3": [
+    4,
+    8
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q035-2",
+   "gold": 4,
+   "top1": 4,
+   "top3": [
+    4,
+    8
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q036-1",
+   "gold": 3,
+   "top1": 3,
+   "top3": [
+    3,
+    1
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q036-2",
+   "gold": 3,
+   "top1": 1,
+   "top3": [
+    1,
+    2,
+    3
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q037-1",
+   "gold": 4,
+   "top1": 4,
+   "top3": [
+    4,
+    2
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q037-2",
+   "gold": 4,
+   "top1": 4,
+   "top3": [
+    4,
+    2
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q038-1",
+   "gold": 16,
+   "top1": 16,
+   "top3": [
+    16,
+    5
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q038-2",
+   "gold": 16,
+   "top1": 5,
+   "top3": [
+    5,
+    6,
+    16
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o004-1",
+   "gold": 1,
+   "top1": 1,
+   "top3": [
+    1,
+    5
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o004-2",
+   "gold": 1,
+   "top1": 1,
+   "top3": [
+    1,
+    5
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o021-1",
+   "gold": 6,
+   "top1": 6,
+   "top3": [
+    6,
+    5
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o021-2",
+   "gold": 7,
+   "top1": 6,
+   "top3": [
+    6,
+    5
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o027-1",
+   "gold": 13,
+   "top1": 23,
+   "top3": [
+    23,
+    12
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o027-2",
+   "gold": 13,
+   "top1": 23,
+   "top3": [
+    23,
+    12
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o033-1",
+   "gold": 20,
+   "top1": 20,
+   "top3": [
+    20,
+    9
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o033-2",
+   "gold": 20,
+   "top1": 20,
+   "top3": [
+    20,
+    15
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q001-1",
+   "gold": 3,
+   "top1": 3,
+   "top3": [
+    3,
+    1
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q001-2",
+   "gold": 3,
+   "top1": 3,
+   "top3": [
+    3,
+    1
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q003-1",
+   "gold": 2,
+   "top1": 2,
+   "top3": [
+    2,
+    1
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q003-2",
+   "gold": 2,
+   "top1": 1,
+   "top3": [
+    1,
+    2,
+    4
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q007-1",
+   "gold": 6,
+   "top1": 6,
+   "top3": [
+    6,
+    1
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q007-2",
+   "gold": 6,
+   "top1": 6,
+   "top3": [
+    6,
+    1
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o001i-1",
+   "gold": 4,
+   "top1": 1,
+   "top3": [
+    1,
+    4,
+    9
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o001i-2",
+   "gold": 3,
+   "top1": 1,
+   "top3": [
+    1,
+    4,
+    9
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o002i-1",
+   "gold": 22,
+   "top1": 22,
+   "top3": [
+    22
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o002i-2",
+   "gold": 22,
+   "top1": 22,
+   "top3": [
+    22,
+    9
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o003i-1",
+   "gold": 22,
+   "top1": 22,
+   "top3": [
+    22
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o003i-2",
+   "gold": 22,
+   "top1": 22,
+   "top3": [
+    22,
+    19
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o004i-1",
+   "gold": 23,
+   "top1": 23,
+   "top3": [
+    23,
+    16
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o004i-2",
+   "gold": 23,
+   "top1": 23,
+   "top3": [
+    23,
+    16
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o005i-1",
+   "gold": 22,
+   "top1": 14,
+   "top3": [
+    14,
+    22
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o005i-2",
+   "gold": 22,
+   "top1": 1,
+   "top3": [
+    1,
+    9,
+    17
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o006i-1",
+   "gold": 21,
+   "top1": 21,
+   "top3": [
+    21,
+    18
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o006i-2",
+   "gold": 21,
+   "top1": 21,
+   "top3": [
+    21,
+    18
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o007i-1",
+   "gold": 5,
+   "top1": 5,
+   "top3": [
+    5,
+    1
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o007i-2",
+   "gold": 6,
+   "top1": 5,
+   "top3": [
+    5,
+    1
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o008i-1",
+   "gold": 14,
+   "top1": 14,
+   "top3": [
+    14,
+    15
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o008i-2",
+   "gold": 14,
+   "top1": 14,
+   "top3": [
+    14,
+    15
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o009i-1",
+   "gold": 15,
+   "top1": 15,
+   "top3": [
+    15
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o009i-2",
+   "gold": 15,
+   "top1": 15,
+   "top3": [
+    15
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o010i-1",
+   "gold": 8,
+   "top1": 8,
+   "top3": [
+    8
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o010i-2",
+   "gold": 8,
+   "top1": 8,
+   "top3": [
+    8
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o011i-1",
+   "gold": 19,
+   "top1": 19,
+   "top3": [
+    19
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o011i-2",
+   "gold": 19,
+   "top1": 19,
+   "top3": [
+    19
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o012i-1",
+   "gold": 19,
+   "top1": 19,
+   "top3": [
+    19
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o012i-2",
+   "gold": 19,
+   "top1": 19,
+   "top3": [
+    19,
+    12
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o013i-1",
+   "gold": 4,
+   "top1": 4,
+   "top3": [
+    4,
+    5
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o013i-2",
+   "gold": 16,
+   "top1": 4,
+   "top3": [
+    4,
+    5
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o014i-1",
+   "gold": 8,
+   "top1": 8,
+   "top3": [
+    8,
+    1
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o014i-2",
+   "gold": 8,
+   "top1": 8,
+   "top3": [
+    8,
+    6
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o016i-1",
+   "gold": 21,
+   "top1": 21,
+   "top3": [
+    21,
+    23
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o016i-2",
+   "gold": 21,
+   "top1": 21,
+   "top3": [
+    21,
+    14
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o017i-1",
+   "gold": 1,
+   "top1": 1,
+   "top3": [
+    1,
+    5
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o017i-2",
+   "gold": 1,
+   "top1": 1,
+   "top3": [
+    1,
+    5
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o018i-1",
+   "gold": 2,
+   "top1": 2,
+   "top3": [
+    2,
+    4
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o018i-2",
+   "gold": 2,
+   "top1": 2,
+   "top3": [
+    2,
+    4,
+    6
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o019i-1",
+   "gold": 3,
+   "top1": 3,
+   "top3": [
+    3,
+    1
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o019i-2",
+   "gold": 3,
+   "top1": 1,
+   "top3": [
+    1,
+    2,
+    3
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o020i-1",
+   "gold": 5,
+   "top1": 5,
+   "top3": [
+    5,
+    1
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o020i-2",
+   "gold": 16,
+   "top1": 5,
+   "top3": [
+    5,
+    1
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o021i-1",
+   "gold": 6,
+   "top1": 6,
+   "top3": [
+    6,
+    5
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o021i-2",
+   "gold": 6,
+   "top1": 7,
+   "top3": [
+    7,
+    6
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o022i-1",
+   "gold": 7,
+   "top1": 7,
+   "top3": [
+    7,
+    8
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o022i-2",
+   "gold": 7,
+   "top1": 7,
+   "top3": [
+    7,
+    8,
+    23
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o023i-1",
+   "gold": 9,
+   "top1": 9,
+   "top3": [
+    9,
+    1
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o023i-2",
+   "gold": 9,
+   "top1": 9,
+   "top3": [
+    9,
+    1
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o024i-1",
+   "gold": 11,
+   "top1": 11,
+   "top3": [
+    11,
+    23
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o024i-2",
+   "gold": 11,
+   "top1": 11,
+   "top3": [
+    11,
+    18,
+    21
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o025i-1",
+   "gold": 11,
+   "top1": 11,
+   "top3": [
+    11,
+    9
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o025i-2",
+   "gold": 11,
+   "top1": 11,
+   "top3": [
+    11,
+    9
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o026i-1",
+   "gold": 19,
+   "top1": 19,
+   "top3": [
+    19,
+    22
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o026i-2",
+   "gold": 20,
+   "top1": 19,
+   "top3": [
+    19,
+    22
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o027i-1",
+   "gold": 13,
+   "top1": 13,
+   "top3": [
+    13,
+    17
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o027i-2",
+   "gold": 13,
+   "top1": 13,
+   "top3": [
+    13,
+    17
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o028i-1",
+   "gold": 14,
+   "top1": 14,
+   "top3": [
+    14,
+    15
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o028i-2",
+   "gold": 14,
+   "top1": 14,
+   "top3": [
+    14,
+    7
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o029i-1",
+   "gold": 16,
+   "top1": 16,
+   "top3": [
+    16,
+    5
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o029i-2",
+   "gold": 16,
+   "top1": 16,
+   "top3": [
+    16,
+    5
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o030i-1",
+   "gold": 17,
+   "top1": 17,
+   "top3": [
+    17,
+    12
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o030i-2",
+   "gold": 22,
+   "top1": 17,
+   "top3": [
+    17,
+    12
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o031i-1",
+   "gold": 18,
+   "top1": 18,
+   "top3": [
+    18,
+    19
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o031i-2",
+   "gold": 18,
+   "top1": 18,
+   "top3": [
+    18,
+    12
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o033i-1",
+   "gold": 20,
+   "top1": 20,
+   "top3": [
+    20,
+    3
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o033i-2",
+   "gold": 20,
+   "top1": 1,
+   "top3": [
+    1,
+    9,
+    13
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o034i-1",
+   "gold": 22,
+   "top1": 22,
+   "top3": [
+    22,
+    9
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o034i-2",
+   "gold": 22,
+   "top1": 22,
+   "top3": [
+    22,
+    9
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o035i-1",
+   "gold": 23,
+   "top1": 23,
+   "top3": [
+    23
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o035i-2",
+   "gold": 23,
+   "top1": 9,
+   "top3": [
+    9,
+    17,
+    18
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o036i-1",
+   "gold": 4,
+   "top1": 4,
+   "top3": [
+    4,
+    2
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o036i-2",
+   "gold": 4,
+   "top1": 4,
+   "top3": [
+    4,
+    2
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o037i-1",
+   "gold": 18,
+   "top1": 18,
+   "top3": [
+    18,
+    13
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o037i-2",
+   "gold": 18,
+   "top1": 13,
+   "top3": [
+    13,
+    18,
+    19
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o038i-1",
+   "gold": 16,
+   "top1": 16,
+   "top3": [
+    16,
+    1
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o038i-2",
+   "gold": 16,
+   "top1": 4,
+   "top3": [
+    4,
+    6,
+    16
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o039i-1",
+   "gold": 2,
+   "top1": 2,
+   "top3": [
+    2,
+    4
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o039i-2",
+   "gold": 2,
+   "top1": 2,
+   "top3": [
+    2,
+    4
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o040i-1",
+   "gold": 21,
+   "top1": 21,
+   "top3": [
+    21,
+    17
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o040i-2",
+   "gold": 21,
+   "top1": 21,
+   "top3": [
+    21,
+    12
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o041i-1",
+   "gold": 22,
+   "top1": 22,
+   "top3": [
+    22,
+    9
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o041i-2",
+   "gold": 22,
+   "top1": 19,
+   "top3": [
+    19,
+    22
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o042i-1",
+   "gold": 21,
+   "top1": 19,
+   "top3": [
+    19,
+    1
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o042i-2",
+   "gold": 21,
+   "top1": 19,
+   "top3": [
+    19,
+    1
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o043i-1",
+   "gold": 21,
+   "top1": 10,
+   "top3": [
+    10,
+    21
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o043i-2",
+   "gold": 21,
+   "top1": 10,
+   "top3": [
+    10,
+    21
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o044i-1",
+   "gold": 5,
+   "top1": 2,
+   "top3": [
+    2,
+    5
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o044i-2",
+   "gold": 5,
+   "top1": null,
+   "top3": [],
+   "answer": false
+  },
+  {
+   "aid": "o046i-1",
+   "gold": 15,
+   "top1": 15,
+   "top3": [
+    15,
+    14
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o046i-2",
+   "gold": 15,
+   "top1": 15,
+   "top3": [
+    15,
+    14
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o047i-1",
+   "gold": 17,
+   "top1": 23,
+   "top3": [
+    23,
+    13
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o047i-2",
+   "gold": 17,
+   "top1": 23,
+   "top3": [
+    23
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o048i-1",
+   "gold": 6,
+   "top1": 2,
+   "top3": [
+    2,
+    5
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o048i-2",
+   "gold": 6,
+   "top1": 6,
+   "top3": [
+    6,
+    8
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o051i-1",
+   "gold": 4,
+   "top1": 4,
+   "top3": [
+    4,
+    1
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o051i-2",
+   "gold": 4,
+   "top1": 4,
+   "top3": [
+    4,
+    1
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o052i-1",
+   "gold": 22,
+   "top1": 22,
+   "top3": [
+    22,
+    18
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o052i-2",
+   "gold": 22,
+   "top1": 18,
+   "top3": [
+    18,
+    22
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o054i-1",
+   "gold": 15,
+   "top1": 1,
+   "top3": [
+    1,
+    9,
+    15
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o054i-2",
+   "gold": 15,
+   "top1": 2,
+   "top3": [
+    2,
+    5,
+    15
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q001i-1",
+   "gold": 6,
+   "top1": 6,
+   "top3": [
+    6,
+    5
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q001i-2",
+   "gold": 22,
+   "top1": 6,
+   "top3": [
+    6,
+    5
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q003i-1",
+   "gold": 2,
+   "top1": 2,
+   "top3": [
+    2,
+    1
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q003i-2",
+   "gold": 2,
+   "top1": 2,
+   "top3": [
+    2,
+    8
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q004i-1",
+   "gold": 3,
+   "top1": 3,
+   "top3": [
+    3,
+    2
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q004i-2",
+   "gold": 3,
+   "top1": 1,
+   "top3": [
+    1,
+    2,
+    3
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q005i-1",
+   "gold": 21,
+   "top1": 13,
+   "top3": [
+    13,
+    19,
+    20
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q005i-2",
+   "gold": 21,
+   "top1": 13,
+   "top3": [
+    13,
+    19,
+    20
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q006i-1",
+   "gold": 15,
+   "top1": 15,
+   "top3": [
+    15,
+    19
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q006i-2",
+   "gold": 15,
+   "top1": 12,
+   "top3": [
+    12,
+    13,
+    15
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q007i-1",
+   "gold": 5,
+   "top1": 5,
+   "top3": [
+    5
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q007i-2",
+   "gold": 5,
+   "top1": 5,
+   "top3": [
+    5
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q008i-1",
+   "gold": 16,
+   "top1": 16,
+   "top3": [
+    16,
+    1
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q008i-2",
+   "gold": 16,
+   "top1": 2,
+   "top3": [
+    2,
+    3,
+    4
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q010i-1",
+   "gold": 2,
+   "top1": 2,
+   "top3": [
+    2
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q010i-2",
+   "gold": 2,
+   "top1": 2,
+   "top3": [
+    2
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q013i-1",
+   "gold": 3,
+   "top1": 3,
+   "top3": [
+    3,
+    1
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q013i-2",
+   "gold": 3,
+   "top1": 1,
+   "top3": [
+    1,
+    2,
+    3
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q015i-1",
+   "gold": 8,
+   "top1": 7,
+   "top3": [
+    7,
+    8,
+    23
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q015i-2",
+   "gold": 8,
+   "top1": 1,
+   "top3": [
+    1,
+    6,
+    7
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q017i-1",
+   "gold": 10,
+   "top1": 10,
+   "top3": [
+    10,
+    21
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q017i-2",
+   "gold": 10,
+   "top1": 10,
+   "top3": [
+    10,
+    21
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q018i-1",
+   "gold": 13,
+   "top1": 13,
+   "top3": [
+    13,
+    9
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q018i-2",
+   "gold": 13,
+   "top1": 13,
+   "top3": [
+    13,
+    18
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q019i-1",
+   "gold": 13,
+   "top1": 13,
+   "top3": [
+    13,
+    17
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q019i-2",
+   "gold": 13,
+   "top1": 13,
+   "top3": [
+    13,
+    17
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q022i-1",
+   "gold": 18,
+   "top1": 18,
+   "top3": [
+    18,
+    19,
+    22
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q022i-2",
+   "gold": 18,
+   "top1": 10,
+   "top3": [
+    10,
+    12,
+    13
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q023i-1",
+   "gold": 21,
+   "top1": 18,
+   "top3": [
+    18,
+    19,
+    21
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q023i-2",
+   "gold": 21,
+   "top1": 18,
+   "top3": [
+    18,
+    19,
+    20
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q024i-1",
+   "gold": 3,
+   "top1": 3,
+   "top3": [
+    3,
+    1
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q024i-2",
+   "gold": 3,
+   "top1": 1,
+   "top3": [
+    1,
+    3
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q025i-1",
+   "gold": 5,
+   "top1": 5,
+   "top3": [
+    5,
+    6
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q025i-2",
+   "gold": 5,
+   "top1": 5,
+   "top3": [
+    5
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q026i-1",
+   "gold": 21,
+   "top1": 21,
+   "top3": [
+    21,
+    9
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q026i-2",
+   "gold": 21,
+   "top1": 9,
+   "top3": [
+    9,
+    10,
+    11
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q027i-1",
+   "gold": 6,
+   "top1": 2,
+   "top3": [
+    2,
+    6
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q027i-2",
+   "gold": 6,
+   "top1": 2,
+   "top3": [
+    2,
+    6,
+    8
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q028i-1",
+   "gold": 14,
+   "top1": 1,
+   "top3": [
+    1,
+    9,
+    14
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q028i-2",
+   "gold": 14,
+   "top1": 14,
+   "top3": [
+    14,
+    15,
+    23
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q031i-1",
+   "gold": 16,
+   "top1": 16,
+   "top3": [
+    16,
+    1
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q031i-2",
+   "gold": 21,
+   "top1": 16,
+   "top3": [
+    16,
+    1
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q035i-1",
+   "gold": 3,
+   "top1": 3,
+   "top3": [
+    3,
+    1
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q035i-2",
+   "gold": 3,
+   "top1": 3,
+   "top3": [
+    3,
+    2
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q037i-1",
+   "gold": 4,
+   "top1": 1,
+   "top3": [
+    1,
+    4,
+    9
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q037i-2",
+   "gold": 4,
+   "top1": 1,
+   "top3": [
+    1,
+    4,
+    9
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q038i-1",
+   "gold": 2,
+   "top1": 2,
+   "top3": [
+    2
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q038i-2",
+   "gold": 2,
+   "top1": 2,
+   "top3": [
+    2
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o015i-1",
+   "gold": 15,
+   "top1": 1,
+   "top3": [
+    1,
+    15
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o015i-2",
+   "gold": 13,
+   "top1": 1,
+   "top3": [
+    1,
+    15
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o032i-1",
+   "gold": 19,
+   "top1": 19,
+   "top3": [
+    19,
+    22
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o032i-2",
+   "gold": 19,
+   "top1": 19,
+   "top3": [
+    19
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o045i-1",
+   "gold": 2,
+   "top1": 2,
+   "top3": [
+    2
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o045i-2",
+   "gold": 2,
+   "top1": 2,
+   "top3": [
+    2,
+    4
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o049i-1",
+   "gold": 8,
+   "top1": 5,
+   "top3": [
+    5,
+    6,
+    7
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o049i-2",
+   "gold": 8,
+   "top1": 7,
+   "top3": [
+    7,
+    8,
+    23
+   ],
+   "answer": false
+  },
+  {
+   "aid": "o050i-1",
+   "gold": 12,
+   "top1": 12,
+   "top3": [
+    12,
+    17
+   ],
+   "answer": true
+  },
+  {
+   "aid": "o050i-2",
+   "gold": 12,
+   "top1": 12,
+   "top3": [
+    12,
+    10
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q002i-1",
+   "gold": 5,
+   "top1": 5,
+   "top3": [
+    5,
+    1
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q002i-2",
+   "gold": 5,
+   "top1": 1,
+   "top3": [
+    1,
+    2
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q009i-1",
+   "gold": 21,
+   "top1": 8,
+   "top3": [
+    8,
+    21
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q009i-2",
+   "gold": 21,
+   "top1": 8,
+   "top3": [
+    8,
+    21
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q011i-1",
+   "gold": 6,
+   "top1": 6,
+   "top3": [
+    6,
+    5
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q011i-2",
+   "gold": 6,
+   "top1": 6,
+   "top3": [
+    6,
+    5
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q012i-1",
+   "gold": 6,
+   "top1": 5,
+   "top3": [
+    5,
+    6
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q012i-2",
+   "gold": 5,
+   "top1": 5,
+   "top3": [
+    5,
+    6
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q014i-1",
+   "gold": 1,
+   "top1": 1,
+   "top3": [
+    1,
+    6
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q014i-2",
+   "gold": 1,
+   "top1": 1,
+   "top3": [
+    1,
+    9
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q020i-1",
+   "gold": 13,
+   "top1": 13,
+   "top3": [
+    13,
+    9
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q020i-2",
+   "gold": 13,
+   "top1": 9,
+   "top3": [
+    9,
+    10,
+    11
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q021i-1",
+   "gold": 17,
+   "top1": 17,
+   "top3": [
+    17,
+    12
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q021i-2",
+   "gold": 17,
+   "top1": 17,
+   "top3": [
+    17,
+    12
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q029i-1",
+   "gold": 7,
+   "top1": 7,
+   "top3": [
+    7,
+    8
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q029i-2",
+   "gold": 7,
+   "top1": 7,
+   "top3": [
+    7,
+    8
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q030i-1",
+   "gold": 1,
+   "top1": 1,
+   "top3": [
+    1,
+    2
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q030i-2",
+   "gold": 1,
+   "top1": 1,
+   "top3": [
+    1,
+    2
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q032i-1",
+   "gold": 21,
+   "top1": 21,
+   "top3": [
+    21,
+    9
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q032i-2",
+   "gold": 21,
+   "top1": 9,
+   "top3": [
+    9,
+    10,
+    11
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q033i-1",
+   "gold": 21,
+   "top1": 21,
+   "top3": [
+    21,
+    8
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q033i-2",
+   "gold": 21,
+   "top1": 21,
+   "top3": [
+    21
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q036i-1",
+   "gold": 5,
+   "top1": 5,
+   "top3": [
+    5,
+    4
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q036i-2",
+   "gold": 16,
+   "top1": 5,
+   "top3": [
+    5,
+    4
+   ],
+   "answer": false
+  },
+  {
+   "aid": "q034i-1",
+   "gold": 8,
+   "top1": 8,
+   "top3": [
+    8,
+    1
+   ],
+   "answer": true
+  },
+  {
+   "aid": "q034i-2",
+   "gold": 8,
+   "top1": 5,
+   "top3": [
+    5,
+    8
+   ],
+   "answer": false
+  },
+  {
+   "aid": "e001-1",
+   "gold": 1,
+   "top1": 1,
+   "top3": [
+    1,
+    5
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e001-2",
+   "gold": 1,
+   "top1": 1,
+   "top3": [
+    1,
+    5
+   ],
+   "answer": false
+  },
+  {
+   "aid": "e002-1",
+   "gold": 1,
+   "top1": 1,
+   "top3": [
+    1,
+    9
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e002-2",
+   "gold": 1,
+   "top1": 1,
+   "top3": [
+    1,
+    23
+   ],
+   "answer": false
+  },
+  {
+   "aid": "e003-1",
+   "gold": 12,
+   "top1": 12,
+   "top3": [
+    12,
+    13
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e003-2",
+   "gold": 12,
+   "top1": 12,
+   "top3": [
+    12
+   ],
+   "answer": false
+  },
+  {
+   "aid": "e004-1",
+   "gold": 5,
+   "top1": 5,
+   "top3": [
+    5
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e004-2",
+   "gold": 5,
+   "top1": null,
+   "top3": [],
+   "answer": false
+  },
+  {
+   "aid": "e005-1",
+   "gold": 20,
+   "top1": 20,
+   "top3": [
+    20,
+    18
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e005-2",
+   "gold": 20,
+   "top1": 20,
+   "top3": [
+    20,
+    18
+   ],
+   "answer": false
+  },
+  {
+   "aid": "e006-1",
+   "gold": 5,
+   "top1": 5,
+   "top3": [
+    5
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e006-2",
+   "gold": 16,
+   "top1": 5,
+   "top3": [
+    5
+   ],
+   "answer": false
+  },
+  {
+   "aid": "e007-1",
+   "gold": 3,
+   "top1": 3,
+   "top3": [
+    3,
+    6
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e007-2",
+   "gold": 3,
+   "top1": 3,
+   "top3": [
+    3,
+    16
+   ],
+   "answer": false
+  },
+  {
+   "aid": "e008-1",
+   "gold": 2,
+   "top1": 1,
+   "top3": [
+    1,
+    9
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e008-2",
+   "gold": 2,
+   "top1": 9,
+   "top3": [
+    9
+   ],
+   "answer": false
+  },
+  {
+   "aid": "e009-1",
+   "gold": 23,
+   "top1": 23,
+   "top3": [
+    23,
+    12
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e009-2",
+   "gold": 23,
+   "top1": 19,
+   "top3": [
+    19,
+    22,
+    23
+   ],
+   "answer": false
+  },
+  {
+   "aid": "e010-1",
+   "gold": 22,
+   "top1": 22,
+   "top3": [
+    22
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e010-2",
+   "gold": 22,
+   "top1": null,
+   "top3": [],
+   "answer": false
+  },
+  {
+   "aid": "e011-1",
+   "gold": 6,
+   "top1": 6,
+   "top3": [
+    6
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e011-2",
+   "gold": 6,
+   "top1": 6,
+   "top3": [
+    6
+   ],
+   "answer": false
+  },
+  {
+   "aid": "e012-1",
+   "gold": 2,
+   "top1": 2,
+   "top3": [
+    2,
+    1
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e012-2",
+   "gold": 3,
+   "top1": 2,
+   "top3": [
+    2,
+    1
+   ],
+   "answer": false
+  },
+  {
+   "aid": "e013-1",
+   "gold": 15,
+   "top1": 15,
+   "top3": [
+    15
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e013-2",
+   "gold": 15,
+   "top1": 15,
+   "top3": [
+    15
+   ],
+   "answer": false
+  },
+  {
+   "aid": "e014-1",
+   "gold": 6,
+   "top1": 5,
+   "top3": [
+    5,
+    6
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e014-2",
+   "gold": 6,
+   "top1": 4,
+   "top3": [
+    4,
+    5,
+    6
+   ],
+   "answer": false
+  },
+  {
+   "aid": "e015-1",
+   "gold": 13,
+   "top1": 1,
+   "top3": [
+    1,
+    2,
+    3
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e015-2",
+   "gold": 13,
+   "top1": 1,
+   "top3": [
+    1,
+    2,
+    3
+   ],
+   "answer": false
+  },
+  {
+   "aid": "e016-1",
+   "gold": 1,
+   "top1": 1,
+   "top3": [
+    1,
+    2
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e016-2",
+   "gold": 1,
+   "top1": 1,
+   "top3": [
+    1,
+    2,
+    13
+   ],
+   "answer": false
+  },
+  {
+   "aid": "e017-1",
+   "gold": 10,
+   "top1": 10,
+   "top3": [
+    10,
+    11
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e017-2",
+   "gold": 10,
+   "top1": 10,
+   "top3": [
+    10,
+    11
+   ],
+   "answer": false
+  },
+  {
+   "aid": "e018-1",
+   "gold": 6,
+   "top1": 6,
+   "top3": [
+    6,
+    5
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e018-2",
+   "gold": 16,
+   "top1": 6,
+   "top3": [
+    6,
+    5
+   ],
+   "answer": false
+  },
+  {
+   "aid": "e019-1",
+   "gold": 16,
+   "top1": 5,
+   "top3": [
+    5,
+    16
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e019-2",
+   "gold": 16,
+   "top1": 5,
+   "top3": [
+    5,
+    2
+   ],
+   "answer": false
+  },
+  {
+   "aid": "e020-1",
+   "gold": 7,
+   "top1": 2,
+   "top3": [
+    2,
+    7
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e020-2",
+   "gold": 5,
+   "top1": 2,
+   "top3": [
+    2,
+    7
+   ],
+   "answer": false
+  },
+  {
+   "aid": "e021-1",
+   "gold": 23,
+   "top1": 23,
+   "top3": [
+    23,
+    14
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e021-2",
+   "gold": 23,
+   "top1": 23,
+   "top3": [
+    23,
+    14
+   ],
+   "answer": false
+  },
+  {
+   "aid": "e022-1",
+   "gold": 7,
+   "top1": 7,
+   "top3": [
+    7,
+    6
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e022-2",
+   "gold": 7,
+   "top1": 7,
+   "top3": [
+    7,
+    6
+   ],
+   "answer": false
+  },
+  {
+   "aid": "e023-1",
+   "gold": 23,
+   "top1": 23,
+   "top3": [
+    23,
+    12
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e023-2",
+   "gold": 23,
+   "top1": 23,
+   "top3": [
+    23,
+    12
+   ],
+   "answer": false
+  },
+  {
+   "aid": "e024-1",
+   "gold": 4,
+   "top1": 1,
+   "top3": [
+    1,
+    4,
+    9
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e024-2",
+   "gold": 4,
+   "top1": 4,
+   "top3": [
+    4,
+    1
+   ],
+   "answer": false
+  },
+  {
+   "aid": "e025-1",
+   "gold": 6,
+   "top1": 5,
+   "top3": [
+    5,
+    6,
+    7
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e025-2",
+   "gold": 6,
+   "top1": 7,
+   "top3": [
+    7,
+    6
+   ],
+   "answer": false
+  },
+  {
+   "aid": "e026-1",
+   "gold": 13,
+   "top1": 13,
+   "top3": [
+    13,
+    1
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e026-2",
+   "gold": 13,
+   "top1": 13,
+   "top3": [
+    13,
+    19
+   ],
+   "answer": false
+  },
+  {
+   "aid": "e027-1",
+   "gold": 23,
+   "top1": 23,
+   "top3": [
+    23,
+    14
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e027-2",
+   "gold": 23,
+   "top1": 23,
+   "top3": [
+    23,
+    14
+   ],
+   "answer": false
+  },
+  {
+   "aid": "e028-1",
+   "gold": 6,
+   "top1": 5,
+   "top3": [
+    5,
+    6
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e028-2",
+   "gold": 6,
+   "top1": 6,
+   "top3": [
+    6,
+    7,
+    16
+   ],
+   "answer": false
+  },
+  {
+   "aid": "e029-1",
+   "gold": 13,
+   "top1": 13,
+   "top3": [
+    13,
+    9
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e029-2",
+   "gold": 13,
+   "top1": 13,
+   "top3": [
+    13,
+    22
+   ],
+   "answer": false
+  },
+  {
+   "aid": "e030-1",
+   "gold": 22,
+   "top1": 22,
+   "top3": [
+    22,
+    17
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e030-2",
+   "gold": 21,
+   "top1": 22,
+   "top3": [
+    22,
+    17
+   ],
+   "answer": false
+  },
+  {
+   "aid": "e031-1",
+   "gold": 13,
+   "top1": 12,
+   "top3": [
+    12,
+    13,
+    17
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e031-2",
+   "gold": 13,
+   "top1": 12,
+   "top3": [
+    12,
+    13,
+    17
+   ],
+   "answer": false
+  },
+  {
+   "aid": "e032-1",
+   "gold": 7,
+   "top1": 7,
+   "top3": [
+    7,
+    23
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e032-2",
+   "gold": 7,
+   "top1": 7,
+   "top3": [
+    7,
+    8
+   ],
+   "answer": false
+  },
+  {
+   "aid": "e033-1",
+   "gold": 16,
+   "top1": 5,
+   "top3": [
+    5,
+    16
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e033-2",
+   "gold": 16,
+   "top1": 7,
+   "top3": [
+    7,
+    16
+   ],
+   "answer": false
+  },
+  {
+   "aid": "e034-1",
+   "gold": 11,
+   "top1": 11,
+   "top3": [
+    11
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e034-2",
+   "gold": 11,
+   "top1": 11,
+   "top3": [
+    11
+   ],
+   "answer": false
+  },
+  {
+   "aid": "e035-1",
+   "gold": 21,
+   "top1": 21,
+   "top3": [
+    21,
+    14
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e035-2",
+   "gold": 21,
+   "top1": 19,
+   "top3": [
+    19,
+    21
+   ],
+   "answer": false
+  },
+  {
+   "aid": "e036-1",
+   "gold": 13,
+   "top1": 13,
+   "top3": [
+    13,
+    9
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e036-2",
+   "gold": 6,
+   "top1": 13,
+   "top3": [
+    13,
+    9
+   ],
+   "answer": false
+  },
+  {
+   "aid": "e037-1",
+   "gold": 8,
+   "top1": 8,
+   "top3": [
+    8,
+    7
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e037-2",
+   "gold": 8,
+   "top1": 7,
+   "top3": [
+    7,
+    8
+   ],
+   "answer": false
+  },
+  {
+   "aid": "e038-1",
+   "gold": 21,
+   "top1": 21,
+   "top3": [
+    21,
+    18
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e038-2",
+   "gold": 21,
+   "top1": 21,
+   "top3": [
+    21
+   ],
+   "answer": false
+  },
+  {
+   "aid": "e039-1",
+   "gold": 9,
+   "top1": 9,
+   "top3": [
+    9,
+    22
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e039-2",
+   "gold": 9,
+   "top1": 9,
+   "top3": [
+    9,
+    12
+   ],
+   "answer": false
+  },
+  {
+   "aid": "e040-1",
+   "gold": 11,
+   "top1": 11,
+   "top3": [
+    11,
+    19
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e040-2",
+   "gold": 11,
+   "top1": 11,
+   "top3": [
+    11,
+    10
+   ],
+   "answer": false
+  },
+  {
+   "aid": "e041-1",
+   "gold": 1,
+   "top1": 1,
+   "top3": [
+    1,
+    5
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e041-2",
+   "gold": 2,
+   "top1": 1,
+   "top3": [
+    1,
+    5
+   ],
+   "answer": false
+  },
+  {
+   "aid": "e042-1",
+   "gold": 5,
+   "top1": 5,
+   "top3": [
+    5,
+    1
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e042-2",
+   "gold": 5,
+   "top1": 5,
+   "top3": [
+    5,
+    1
+   ],
+   "answer": false
+  },
+  {
+   "aid": "e043-1",
+   "gold": 5,
+   "top1": 1,
+   "top3": [
+    1,
+    5
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e043-2",
+   "gold": 5,
+   "top1": 1,
+   "top3": [
+    1,
+    5
+   ],
+   "answer": false
+  },
+  {
+   "aid": "e044-1",
+   "gold": 4,
+   "top1": 1,
+   "top3": [
+    1,
+    4,
+    9
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e044-2",
+   "gold": 4,
+   "top1": 4,
+   "top3": [
+    4,
+    2
+   ],
+   "answer": false
+  },
+  {
+   "aid": "e045-1",
+   "gold": 2,
+   "top1": 2,
+   "top3": [
+    2,
+    7
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e045-2",
+   "gold": 2,
+   "top1": 2,
+   "top3": [
+    2,
+    7
+   ],
+   "answer": false
+  },
+  {
+   "aid": "e046-1",
+   "gold": 1,
+   "top1": 1,
+   "top3": [
+    1,
+    4
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e046-2",
+   "gold": 1,
+   "top1": 1,
+   "top3": [
+    1,
+    4
+   ],
+   "answer": false
+  },
+  {
+   "aid": "e047-1",
+   "gold": 7,
+   "top1": 7,
+   "top3": [
+    7,
+    14
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e047-2",
+   "gold": 7,
+   "top1": 7,
+   "top3": [
+    7,
+    14
+   ],
+   "answer": false
+  },
+  {
+   "aid": "e048-1",
+   "gold": 1,
+   "top1": 1,
+   "top3": [
+    1,
+    17
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e048-2",
+   "gold": 8,
+   "top1": 1,
+   "top3": [
+    1,
+    17
+   ],
+   "answer": false
+  },
+  {
+   "aid": "e049-1",
+   "gold": 7,
+   "top1": 1,
+   "top3": [
+    1,
+    2,
+    7
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e049-2",
+   "gold": 7,
+   "top1": 1,
+   "top3": [
+    1,
+    2,
+    7
+   ],
+   "answer": false
+  },
+  {
+   "aid": "e050-1",
+   "gold": 4,
+   "top1": 1,
+   "top3": [
+    1,
+    4,
+    9
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e050-2",
+   "gold": 4,
+   "top1": 1,
+   "top3": [
+    1,
+    4,
+    9
+   ],
+   "answer": false
+  },
+  {
+   "aid": "e051-1",
+   "gold": 1,
+   "top1": 1,
+   "top3": [
+    1,
+    2
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e051-2",
+   "gold": 1,
+   "top1": 1,
+   "top3": [
+    1,
+    2
+   ],
+   "answer": false
+  },
+  {
+   "aid": "e052-1",
+   "gold": 7,
+   "top1": 2,
+   "top3": [
+    2,
+    6,
+    7
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e052-2",
+   "gold": 7,
+   "top1": 2,
+   "top3": [
+    2,
+    6,
+    7
+   ],
+   "answer": false
+  },
+  {
+   "aid": "e053-1",
+   "gold": 1,
+   "top1": 1,
+   "top3": [
+    1,
+    2
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e053-2",
+   "gold": 1,
+   "top1": 1,
+   "top3": [
+    1,
+    9
+   ],
+   "answer": false
+  },
+  {
+   "aid": "e054-1",
+   "gold": 2,
+   "top1": 2,
+   "top3": [
+    2,
+    5
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e054-2",
+   "gold": 7,
+   "top1": 2,
+   "top3": [
+    2,
+    5
+   ],
+   "answer": false
+  },
+  {
+   "aid": "e055-1",
+   "gold": 1,
+   "top1": 1,
+   "top3": [
+    1,
+    7
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e055-2",
+   "gold": 1,
+   "top1": 1,
+   "top3": [
+    1,
+    7
+   ],
+   "answer": false
+  },
+  {
+   "aid": "e056-1",
+   "gold": 8,
+   "top1": 8,
+   "top3": [
+    8,
+    7
+   ],
+   "answer": true
+  },
+  {
+   "aid": "e056-2",
+   "gold": 8,
+   "top1": 8,
+   "top3": [
+    8,
+    7
+   ],
+   "answer": false
+  }
+ ]
+}

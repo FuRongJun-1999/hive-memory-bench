@@ -41,6 +41,12 @@ python scripts/reproduce_e2e.py --grade --picks my_answers.jsonl
 
 与 [三种口径与统一尺度 v2.0](../docs/灵枢实测_三种口径与统一尺度_v2.0.md) 的 97.83% / 99.82% 一致。
 
+**476 条那套也发布了**：[`readings/lingshu_retrieval_476.json`](../readings/lingshu_retrieval_476.json)，
+top-1 命中 **64.50%** / top-3 **82.56%**。
+
+> ⚠ 476 条原文件的 `stmt` 用 `·`（无空格）分隔，直接喂 `pick_scopes` 会掉 10 点、81 条检不到任何章。
+> 明细是用规范化后的 stmt（`re.sub(r'\s*·\s*', ' · ', stmt)`）导出的，该做法记在 JSON 的 `normalization` 字段里。
+
 ## ⚠ 材料粒度不同，读数不可直接互换
 
 | 来源 | 材料 | 平均字数 |
