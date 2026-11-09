@@ -1,0 +1,32 @@
+{
+ "memu_blocks": {
+  "n": 552,
+  "balanced_acc": 50.0,
+  "phi": 0.0,
+  "tpr": 0.0,
+  "tnr": 100.0,
+  "yes": 0,
+  "q_all": 0,
+  "q_n": 92,
+  "mat_avg": 287.43840579710144,
+  "ids_avg": 2.0,
+  "chap_hit": 0.0,
+  "judge": "deepseek-chat",
+  "p_vs_50": 1.0
+ },
+ "memu_chapters": {
+  "n": 552,
+  "balanced_acc": 50.0,
+  "phi": 0.0,
+  "tpr": 0.0,
+  "tnr": 100.0,
+  "yes": 0,
+  "q_all": 0,
+  "q_n": 92,
+  "mat_avg": 282.8242753623188,
+  "ids_avg": 2.0,
+  "chap_hit": 0.0,
+  "judge": "deepseek-chat",
+  "p_vs_50": 1.0
+ }
+}
