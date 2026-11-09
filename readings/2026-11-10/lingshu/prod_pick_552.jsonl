@@ -1,0 +1,552 @@
+{"qid": "o001", "pi": 0, "truth": false, "stmt": "第1章「初见蜂巢世界」 · 李振国 · 六边形的房间 · 吃饭免费 · 大喜 · 防护服", "gold": 1, "nums": [1], "hit1": true, "hitk": true}
+{"qid": "o001", "pi": 1, "truth": true, "stmt": "第4章「蜂巢社会蓝图」 · 陈默 · 巨子塔 · 进入巨子塔 · 不安 · 记忆屏蔽", "gold": 4, "nums": [4, 2], "hit1": true, "hitk": true}
+{"qid": "o001", "pi": 2, "truth": true, "stmt": "第2章「巧合还是阴谋」 · 老人 · 求知园 · 同名同姓 · 虔诚 · 纪念塔", "gold": 2, "nums": [2, 1], "hit1": true, "hitk": true}
+{"qid": "o001", "pi": 3, "truth": false, "stmt": "第22章「谢谢你 诺艾尔」 · 诺艾尔 · 骑士团总部的台阶 · 死战不退 · 豁然开朗 · 断剑", "gold": 22, "nums": [22, 18], "hit1": true, "hitk": true}
+{"qid": "o001", "pi": 4, "truth": false, "stmt": "第15章「永恒奴役」 · 王明 · 警戒检查中心 · 建立数学模型 · 头皮发麻 · 风鹰剑", "gold": 15, "nums": [15], "hit1": true, "hitk": true}
+{"qid": "o001", "pi": 5, "truth": true, "stmt": "第3章「身份谜团」 · 陈默 · 巨子塔 · 权限不足 · 愤怒 · 《社会控制论》", "gold": 3, "nums": [3, 4], "hit1": true, "hitk": true}
+{"qid": "o002", "pi": 0, "truth": false, "stmt": "第18章「新的故事」 · 商人 · 蒙德城广场 · 散播思想 · 孤寂 · 限量版纪念酒盏", "gold": 18, "nums": [18], "hit1": true, "hitk": true}
+{"qid": "o002", "pi": 1, "truth": true, "stmt": "第1章「初见蜂巢世界」 · 陈默 · 六边形的房间 · 请观看本指南 · 茫然 · 漫游指南", "gold": 1, "nums": [1, 2], "hit1": true, "hitk": true}
+{"qid": "o002", "pi": 2, "truth": false, "stmt": "第7章「被请喝茶」 · 秦熙 · 白色房间 · 取下头盔 · 敌意 · 风鹰剑", "gold": 7, "nums": [7], "hit1": true, "hitk": true}
+{"qid": "o002", "pi": 3, "truth": true, "stmt": "第22章「谢谢你 诺艾尔」 · 诺艾尔 · 骑士团总部的台阶 · 死战不退 · 坚定 · 断剑", "gold": 22, "nums": [22, 17], "hit1": true, "hitk": true}
+{"qid": "o002", "pi": 4, "truth": true, "stmt": "第22章「谢谢你 诺艾尔」 · 派蒙 · 蒙德城图书馆 · 没有神之眼 · 好奇 · 星尘", "gold": 22, "nums": [22, 9], "hit1": true, "hitk": true}
+{"qid": "o002", "pi": 5, "truth": false, "stmt": "第23章「再别蒙德」 · 秦熙 · 舱室 · 彻底清除 · 决断 · 青铜鼎", "gold": 23, "nums": [23, 1], "hit1": true, "hitk": true}
+{"qid": "o003", "pi": 0, "truth": true, "stmt": "第8章「化解误会」 · 陈默 · 蜂巢世界 · 信息难以作假 · 不安 · 防护服", "gold": 8, "nums": [8, 7], "hit1": true, "hitk": true}
+{"qid": "o003", "pi": 1, "truth": false, "stmt": "第19章「蒙德的自由」 · 琴 · 办公室 · 恐惧是有传染性的 · 苦涩 · 风鹰剑", "gold": 19, "nums": [19], "hit1": true, "hitk": true}
+{"qid": "o003", "pi": 2, "truth": false, "stmt": "第15章「永恒奴役」 · 秦熙 · 警戒检查中心 · 建立数学模型 · 头皮发麻 · 风鹰剑", "gold": 15, "nums": [15, 7], "hit1": true, "hitk": true}
+{"qid": "o003", "pi": 3, "truth": false, "stmt": "第2章「巧合还是阴谋」 · 老人 · 求知园 · 同名同姓 · 孤寂 · 纪念塔", "gold": 2, "nums": [2, 1], "hit1": true, "hitk": true}
+{"qid": "o003", "pi": 4, "truth": true, "stmt": "第9章「灵境：原神」 · 派蒙 · 蒙德城 · 接取委托 · 好奇 · 七天神像", "gold": 9, "nums": [9, 20], "hit1": true, "hitk": true}
+{"qid": "o003", "pi": 5, "truth": true, "stmt": "第23章「再别蒙德」 · 陈默 · 摘星崖 · 自由不是放纵 · 坚定 · 满足沙拉", "gold": 23, "nums": [23, 14], "hit1": true, "hitk": true}
+{"qid": "o004", "pi": 0, "truth": false, "stmt": "第16章「生命的需求」 · 张老 · 求知园 · 坚决反对永生 · 决断 · 《熵增的社会学启示》", "gold": 16, "nums": [16, 5], "hit1": true, "hitk": true}
+{"qid": "o004", "pi": 1, "truth": true, "stmt": "第3章「身份谜团」 · 陈默 · 巨子塔 · 权限不足 · 愤怒 · 《社会控制论》", "gold": 3, "nums": [3, 4], "hit1": true, "hitk": true}
+{"qid": "o004", "pi": 2, "truth": true, "stmt": "第1章「初见蜂巢世界」 · 陈默 · 六边形的房间 · 遵守新世界的共识 · 茫然 · 漫游指南", "gold": 1, "nums": [1, 2], "hit1": true, "hitk": true}
+{"qid": "o004", "pi": 3, "truth": true, "stmt": "第21章「问题的答案」 · 巨子 · 蒙德城 · 我只是一个拙劣的模仿者 · 遗憾 · 羽毛笔", "gold": 21, "nums": [21, 23], "hit1": true, "hitk": true}
+{"qid": "o004", "pi": 4, "truth": false, "stmt": "第2章「巧合还是阴谋」 · 老人 · 求知园 · 同名同姓 · 忐忑不安 · 青铜鼎", "gold": 2, "nums": [2, 1], "hit1": true, "hitk": true}
+{"qid": "o004", "pi": 5, "truth": false, "stmt": "第22章「谢谢你 诺艾尔」 · 诺艾尔 · 骑士团总部的台阶 · 死战不退 · 苦涩 · 防护服", "gold": 22, "nums": [22, 14], "hit1": true, "hitk": true}
+{"qid": "o005", "pi": 0, "truth": false, "stmt": "第6章「权限与贡献点」 · 张老 · 求知园 · 收回授权的贡献点 · 头皮发麻 · 《工程控制论》", "gold": 6, "nums": [6, 2], "hit1": true, "hitk": true}
+{"qid": "o005", "pi": 1, "truth": true, "stmt": "第1章「初见蜂巢世界」 · 陈默 · 食物合成中心节点 · 跳过了生态链 · 惊讶 · 标准合成餐", "gold": 1, "nums": [1, 6], "hit1": true, "hitk": true}
+{"qid": "o005", "pi": 2, "truth": false, "stmt": "第2章「巧合还是阴谋」 · 老人 · 求知园 · 同名同姓 · 虔诚 · 青铜鼎", "gold": 2, "nums": [2, 1], "hit1": true, "hitk": true}
+{"qid": "o005", "pi": 3, "truth": true, "stmt": "第4章「蜂巢社会蓝图」 · 陈默 · 巨子塔 · 解决信息错配 · 喜欢 · 神经认证", "gold": 4, "nums": [4, 5], "hit1": true, "hitk": true}
+{"qid": "o005", "pi": 4, "truth": false, "stmt": "第18章「新的故事」 · 派蒙 · 蒙德城广场 · 散播思想 · 严肃 · 断剑", "gold": 18, "nums": [18, 10], "hit1": true, "hitk": true}
+{"qid": "o005", "pi": 5, "truth": true, "stmt": "第8章「化解误会」 · 陈默 · 蜂巢世界 · 信息难以作假 · 不安 · 机械犬", "gold": 8, "nums": [8, 2], "hit1": true, "hitk": true}
+{"qid": "o006", "pi": 0, "truth": true, "stmt": "第23章「再别蒙德」 · 秦熙 · 舱室 · 彻底清除 · 决断 · 防护服", "gold": 23, "nums": [23, 7], "hit1": true, "hitk": true}
+{"qid": "o006", "pi": 1, "truth": false, "stmt": "第1章「初见蜂巢世界」 · 李振国 · 六边形的房间 · 吃饭免费 · 苦涩 · 青铜鼎", "gold": 1, "nums": [1], "hit1": true, "hitk": true}
+{"qid": "o006", "pi": 2, "truth": true, "stmt": "第23章「再别蒙德」 · 诺艾尔 · 摘星崖 · 自由不是放纵 · 坚定 · 满足沙拉", "gold": 23, "nums": [23, 14], "hit1": true, "hitk": true}
+{"qid": "o006", "pi": 3, "truth": true, "stmt": "第14章「暗流涌动」 · 陈默 · 蜂巢 · 传递重要消息 · 沉重 · 全息投影", "gold": 14, "nums": [14, 15], "hit1": true, "hitk": true}
+{"qid": "o006", "pi": 4, "truth": false, "stmt": "第18章「新的故事」 · 商人 · 蒙德城广场 · 散播思想 · 悲怆 · 断剑", "gold": 18, "nums": [18, 22], "hit1": true, "hitk": true}
+{"qid": "o006", "pi": 5, "truth": false, "stmt": "第15章「永恒奴役」 · 王明 · 警戒检查中心 · 建立数学模型 · 担忧 · 风鹰剑", "gold": 15, "nums": [15], "hit1": true, "hitk": true}
+{"qid": "o007", "pi": 0, "truth": true, "stmt": "第5章「历史的断层」 · 张明远 · 求知园 · 夺走了我们九成九以上的人口 · 孤寂 · 光幕", "gold": 5, "nums": [1, 5], "hit1": false, "hitk": true}
+{"qid": "o007", "pi": 1, "truth": false, "stmt": "第18章「新的故事」 · 商人 · 蒙德城广场 · 散播思想 · 悲怆 · 断剑", "gold": 18, "nums": [18, 22], "hit1": true, "hitk": true}
+{"qid": "o007", "pi": 2, "truth": false, "stmt": "第9章「灵境：原神」 · 陈默 · 蒙德城 · 接取委托 · 好奇 · 断剑", "gold": 9, "nums": [9, 20], "hit1": true, "hitk": true}
+{"qid": "o007", "pi": 3, "truth": false, "stmt": "第20章「致命危机」 · 女士 · 蒙德城 · 宣告合作顺利进行 · 诧异 · 防护服", "gold": 20, "nums": [20, 23], "hit1": true, "hitk": true}
+{"qid": "o007", "pi": 4, "truth": true, "stmt": "第6章「权限与贡献点」 · 张老 · 求知园 · 按照贡献的百分比来计算 · 尊敬 · 光幕", "gold": 6, "nums": [6, 5], "hit1": true, "hitk": true}
+{"qid": "o007", "pi": 5, "truth": true, "stmt": "第6章「权限与贡献点」 · 张老 · 求知园 · 收回授权的贡献点 · 伤感 · 贡献点", "gold": 6, "nums": [6, 5], "hit1": true, "hitk": true}
+{"qid": "o008", "pi": 0, "truth": true, "stmt": "第7章「被请喝茶」 · 秦熙 · 白色房间 · 取下头盔 · 坚毅 · 头盔", "gold": 7, "nums": [7, 14], "hit1": true, "hitk": true}
+{"qid": "o008", "pi": 1, "truth": false, "stmt": "第2章「巧合还是阴谋」 · 陈默 · 求知园 · 同名同姓 · 忐忑不安 · 断剑", "gold": 2, "nums": [2, 1], "hit1": true, "hitk": true}
+{"qid": "o008", "pi": 2, "truth": true, "stmt": "第14章「暗流涌动」 · 秦熙 · 办公室 · 判定属于这种情况为高度潜在威胁 · 关切 · 光幕", "gold": 14, "nums": [14, 7], "hit1": true, "hitk": true}
+{"qid": "o008", "pi": 3, "truth": true, "stmt": "第8章「化解误会」 · 小李 · 警戒检查中心 · 存放着陆军型号 · 伤感 · 防护服", "gold": 8, "nums": [8, 7], "hit1": true, "hitk": true}
+{"qid": "o008", "pi": 4, "truth": false, "stmt": "第19章「蒙德的自由」 · 琴 · 风神像 · 重申我们的誓言 · 苦涩 · 风鹰剑", "gold": 19, "nums": [19, 22], "hit1": true, "hitk": true}
+{"qid": "o008", "pi": 5, "truth": false, "stmt": "第9章「灵境：原神」 · 派蒙 · 蒙德城 · 接取委托 · 好奇 · 机械犬", "gold": 9, "nums": [9, 20], "hit1": true, "hitk": true}
+{"qid": "o009", "pi": 0, "truth": false, "stmt": "第22章「谢谢你 诺艾尔」 · 诺艾尔 · 骑士团总部的台阶 · 死战不退 · 苦涩 · 防护服", "gold": 22, "nums": [22, 14], "hit1": true, "hitk": true}
+{"qid": "o009", "pi": 1, "truth": false, "stmt": "第7章「被请喝茶」 · 秦熙 · 白色房间 · 取下头盔 · 孤寂 · 头盔", "gold": 7, "nums": [7], "hit1": true, "hitk": true}
+{"qid": "o009", "pi": 2, "truth": true, "stmt": "第16章「生命的需求」 · 陈默 · 求知园 · 坚决反对永生 · 坚定 · 《熵增的社会学启示》", "gold": 16, "nums": [16, 17], "hit1": true, "hitk": true}
+{"qid": "o009", "pi": 3, "truth": true, "stmt": "第15章「永恒奴役」 · 王明 · 警戒检查中心 · 需要认知疫苗 · 担忧 · 全息投影", "gold": 15, "nums": [15, 14], "hit1": true, "hitk": true}
+{"qid": "o009", "pi": 4, "truth": true, "stmt": "第15章「永恒奴役」 · 陈默 · 蜂巢共识 · 追寻着绝对自由 · 恐惧 · 数学模型", "gold": 15, "nums": [15, 16], "hit1": true, "hitk": true}
+{"qid": "o009", "pi": 5, "truth": false, "stmt": "第20章「致命危机」 · 女士 · 蒙德城 · 宣告合作顺利进行 · 诧异 · 防护服", "gold": 20, "nums": [20, 23], "hit1": true, "hitk": true}
+{"qid": "o010", "pi": 0, "truth": true, "stmt": "第8章「化解误会」 · 小李 · 警戒检查中心 · 这是我们的职责 · 伤感 · 防护服", "gold": 8, "nums": [8, 7], "hit1": true, "hitk": true}
+{"qid": "o010", "pi": 1, "truth": false, "stmt": "第2章「巧合还是阴谋」 · 老人 · 求知园 · 同名同姓 · 忐忑不安 · 青铜鼎", "gold": 2, "nums": [2, 1], "hit1": true, "hitk": true}
+{"qid": "o010", "pi": 2, "truth": false, "stmt": "第18章「新的故事」 · 商人 · 蒙德城广场 · 散播思想 · 悲怆 · 断剑", "gold": 18, "nums": [18, 22], "hit1": true, "hitk": true}
+{"qid": "o010", "pi": 3, "truth": true, "stmt": "第7章「被请喝茶」 · 陈默 · 白色房间 · 你是不是自由派的探子 · 敌意 · 头盔", "gold": 7, "nums": [7], "hit1": true, "hitk": true}
+{"qid": "o010", "pi": 4, "truth": true, "stmt": "第8章「化解误会」 · 陈默 · 蜂巢世界 · 信息难以作假 · 不安 · 机械犬", "gold": 8, "nums": [8, 2], "hit1": true, "hitk": true}
+{"qid": "o010", "pi": 5, "truth": false, "stmt": "第9章「灵境：原神」 · 派蒙 · 蒙德城 · 打开了扫描器 · 好奇 · 摩拉", "gold": 9, "nums": [9, 19], "hit1": true, "hitk": true}
+{"qid": "o011", "pi": 0, "truth": false, "stmt": "第18章「新的故事」 · 商人 · 蒙德城广场 · 散播思想 · 头皮发麻 · 限量版纪念酒盏", "gold": 18, "nums": [18], "hit1": true, "hitk": true}
+{"qid": "o011", "pi": 1, "truth": true, "stmt": "第22章「谢谢你 诺艾尔」 · 诺艾尔 · 骑士团总部的台阶 · 死战不退 · 坚定 · 断剑", "gold": 22, "nums": [22, 17], "hit1": true, "hitk": true}
+{"qid": "o011", "pi": 2, "truth": true, "stmt": "第12章「何为自由」 · 陈默 · 风龙废墟 · 准备持续施加水元素 · 震撼 · 风鹰剑", "gold": 12, "nums": [12, 1], "hit1": true, "hitk": true}
+{"qid": "o011", "pi": 3, "truth": false, "stmt": "第1章「初见蜂巢世界」 · 李振国 · 六边形的房间 · 吃饭免费 · 大喜 · 防护服", "gold": 1, "nums": [1], "hit1": true, "hitk": true}
+{"qid": "o011", "pi": 4, "truth": true, "stmt": "第19章「蒙德的自由」 · 琴 · 办公室 · 指出了这种美好的脆弱 · 凝重 · 风鹰剑", "gold": 19, "nums": [19], "hit1": true, "hitk": true}
+{"qid": "o011", "pi": 5, "truth": false, "stmt": "第15章「永恒奴役」 · 王明 · 警戒检查中心 · 建立数学模型 · 担忧 · 防护服", "gold": 15, "nums": [15, 7], "hit1": true, "hitk": true}
+{"qid": "o012", "pi": 0, "truth": true, "stmt": "第19章「蒙德的自由」 · 凯亚 · 办公室 · 恐惧是有传染性的 · 凝重 · 风鹰剑", "gold": 19, "nums": [19], "hit1": true, "hitk": true}
+{"qid": "o012", "pi": 1, "truth": false, "stmt": "第14章「暗流涌动」 · 小李 · 蜂巢 · 传递重要消息 · 沉重 · 蹦蹦炸弹", "gold": 14, "nums": [14, 7], "hit1": true, "hitk": true}
+{"qid": "o012", "pi": 2, "truth": false, "stmt": "第18章「新的故事」 · 商人 · 蒙德城广场 · 散播思想 · 决断 · 限量版纪念酒盏", "gold": 18, "nums": [18], "hit1": true, "hitk": true}
+{"qid": "o012", "pi": 3, "truth": true, "stmt": "第19章「蒙德的自由」 · 诺艾尔 · 果酒湖 · 不应系于一人之身 · 坚定 · 苹果酒", "gold": 19, "nums": [19, 17], "hit1": true, "hitk": true}
+{"qid": "o012", "pi": 4, "truth": false, "stmt": "第2章「巧合还是阴谋」 · 老人 · 求知园 · 同名同姓 · 忐忑不安 · 青铜鼎", "gold": 2, "nums": [2, 1], "hit1": true, "hitk": true}
+{"qid": "o012", "pi": 5, "truth": true, "stmt": "第12章「何为自由」 · 陈默 · 蒙德湖 · 将原石交给派蒙 · 震撼 · 装着原石的布袋子", "gold": 12, "nums": [12, 1], "hit1": true, "hitk": true}
+{"qid": "o013", "pi": 0, "truth": false, "stmt": "第1章「初见蜂巢世界」 · 李振国 · 六边形的房间 · 吃饭免费 · 大喜 · 防护服", "gold": 1, "nums": [1], "hit1": true, "hitk": true}
+{"qid": "o013", "pi": 1, "truth": true, "stmt": "第4章「蜂巢社会蓝图」 · 陈默 · 巨子塔 · 要分级保密 · 喜欢 · 《如何建设蜂巢社会》", "gold": 4, "nums": [4, 3], "hit1": true, "hitk": true}
+{"qid": "o013", "pi": 2, "truth": false, "stmt": "第19章「蒙德的自由」 · 琴 · 风神像 · 重申我们的誓言 · 凝重 · 防护服", "gold": 19, "nums": [19, 23], "hit1": true, "hitk": true}
+{"qid": "o013", "pi": 3, "truth": true, "stmt": "第4章「蜂巢社会蓝图」 · 陈默 · 巨子塔 · 解决信息错配 · 喜欢 · 量子通信", "gold": 4, "nums": [4, 8], "hit1": true, "hitk": true}
+{"qid": "o013", "pi": 4, "truth": true, "stmt": "第3章「身份谜团」 · 陈默 · 巨子塔 · 权限不足 · 愤怒 · 《社会控制论》", "gold": 3, "nums": [3, 4], "hit1": true, "hitk": true}
+{"qid": "o013", "pi": 5, "truth": false, "stmt": "第15章「永恒奴役」 · 王明 · 警戒检查中心 · 建立数学模型 · 苦涩 · 全息投影", "gold": 15, "nums": [15, 14], "hit1": true, "hitk": true}
+{"qid": "o014", "pi": 0, "truth": true, "stmt": "第8章「化解误会」 · 小李 · 警戒检查中心 · 存放着陆军型号 · 伤感 · 防护服", "gold": 8, "nums": [8, 7], "hit1": true, "hitk": true}
+{"qid": "o014", "pi": 1, "truth": false, "stmt": "第18章「新的故事」 · 商人 · 蒙德城广场 · 散播思想 · 悲怆 · 风鹰剑", "gold": 18, "nums": [18, 19], "hit1": true, "hitk": true}
+{"qid": "o014", "pi": 2, "truth": true, "stmt": "第7章「被请喝茶」 · 秦熙 · 白色房间 · 取下头盔 · 坚毅 · 头盔", "gold": 7, "nums": [7, 14], "hit1": true, "hitk": true}
+{"qid": "o014", "pi": 3, "truth": false, "stmt": "第2章「巧合还是阴谋」 · 老人 · 求知园 · 同名同姓 · 忐忑不安 · 青铜鼎", "gold": 2, "nums": [2, 1], "hit1": true, "hitk": true}
+{"qid": "o014", "pi": 4, "truth": false, "stmt": "第9章「灵境：原神」 · 派蒙 · 蒙德城 · 接取委托 · 好奇 · 断剑", "gold": 9, "nums": [9, 22], "hit1": true, "hitk": true}
+{"qid": "o014", "pi": 5, "truth": true, "stmt": "第8章「化解误会」 · 陈默 · 蜂巢世界 · 信息难以作假 · 不安 · 机械犬", "gold": 8, "nums": [8, 2], "hit1": true, "hitk": true}
+{"qid": "o015", "pi": 0, "truth": false, "stmt": "第19章「蒙德的自由」 · 琴 · 风神像 · 重申我们的誓言 · 苦涩 · 风鹰剑", "gold": 19, "nums": [19, 22], "hit1": true, "hitk": true}
+{"qid": "o015", "pi": 1, "truth": false, "stmt": "第7章「被请喝茶」 · 秦熙 · 白色房间 · 取下头盔 · 敌意 · 青铜鼎", "gold": 7, "nums": [7], "hit1": true, "hitk": true}
+{"qid": "o015", "pi": 2, "truth": true, "stmt": "第16章「生命的需求」 · 陈默 · 求知园 · 坚决反对永生 · 坚定 · 《熵增的社会学启示》", "gold": 16, "nums": [16, 17], "hit1": true, "hitk": true}
+{"qid": "o015", "pi": 3, "truth": false, "stmt": "第18章「新的故事」 · 商人 · 蒙德城广场 · 散播思想 · 悲怆 · 断剑", "gold": 18, "nums": [18, 22], "hit1": true, "hitk": true}
+{"qid": "o015", "pi": 4, "truth": true, "stmt": "第15章「永恒奴役」 · 陈默 · 蜂巢共识 · 追寻着绝对自由 · 恐惧 · 数学模型", "gold": 15, "nums": [15, 16], "hit1": true, "hitk": true}
+{"qid": "o015", "pi": 5, "truth": true, "stmt": "第15章「永恒奴役」 · 陈默 · 蜂巢 · 资源并非无限 · 头皮发麻 · 数学模型", "gold": 15, "nums": [15, 1], "hit1": true, "hitk": true}
+{"qid": "o016", "pi": 0, "truth": true, "stmt": "第21章「问题的答案」 · 巨子 · 安生之地 · 是我彻底的反对永生 · 好奇 · 机器人", "gold": 21, "nums": [21, 5], "hit1": true, "hitk": true}
+{"qid": "o016", "pi": 1, "truth": false, "stmt": "第22章「谢谢你 诺艾尔」 · 诺艾尔 · 骑士团总部的台阶 · 死战不退 · 坚定 · 防护服", "gold": 22, "nums": [22, 23], "hit1": true, "hitk": true}
+{"qid": "o016", "pi": 2, "truth": false, "stmt": "第15章「永恒奴役」 · 王明 · 警戒检查中心 · 建立数学模型 · 苦涩 · 全息投影", "gold": 15, "nums": [15, 14], "hit1": true, "hitk": true}
+{"qid": "o016", "pi": 3, "truth": true, "stmt": "第3章「身份谜团」 · 陈默 · 巨子塔 · 权限不足 · 愤怒 · 《社会控制论》", "gold": 3, "nums": [3, 4], "hit1": true, "hitk": true}
+{"qid": "o016", "pi": 4, "truth": false, "stmt": "第7章「被请喝茶」 · 秦熙 · 白色房间 · 取下头盔 · 敌意 · 青铜鼎", "gold": 7, "nums": [7], "hit1": true, "hitk": true}
+{"qid": "o016", "pi": 5, "truth": true, "stmt": "第21章「问题的答案」 · 巨子 · 蒙德城 · 自由的灵魂被我安放在此处 · 遗憾 · 羽毛笔", "gold": 21, "nums": [21, 23], "hit1": true, "hitk": true}
+{"qid": "o017", "pi": 0, "truth": false, "stmt": "第19章「蒙德的自由」 · 琴 · 风神像 · 重申我们的誓言 · 凝重 · 防护服", "gold": 19, "nums": [19, 23], "hit1": true, "hitk": true}
+{"qid": "o017", "pi": 1, "truth": true, "stmt": "第1章「初见蜂巢世界」 · 陈默 · 六边形的房间 · 吃饭免费 · 大喜 · 标准合成餐", "gold": 1, "nums": [1, 9], "hit1": true, "hitk": true}
+{"qid": "o017", "pi": 2, "truth": false, "stmt": "第15章「永恒奴役」 · 王明 · 警戒检查中心 · 建立数学模型 · 担忧 · 风鹰剑", "gold": 15, "nums": [15], "hit1": true, "hitk": true}
+{"qid": "o017", "pi": 3, "truth": false, "stmt": "第18章「新的故事」 · 商人 · 蒙德城广场 · 散播思想 · 悲怆 · 断剑", "gold": 18, "nums": [18, 22], "hit1": true, "hitk": true}
+{"qid": "o017", "pi": 4, "truth": true, "stmt": "第1章「初见蜂巢世界」 · 陈默 · 求知园 · 改进这个磁场约束算法 · 兴奋 · 光幕", "gold": 1, "nums": [1, 2], "hit1": true, "hitk": true}
+{"qid": "o017", "pi": 5, "truth": true, "stmt": "第1章「初见蜂巢世界」 · 陈默 · 求知园 · 点了申请 · 平静 · 临时协理员电子徽章", "gold": 1, "nums": [1, 2], "hit1": true, "hitk": true}
+{"qid": "o018", "pi": 0, "truth": true, "stmt": "第2章「巧合还是阴谋」 · 陈默 · 暂留区 · 根据蜂巢宪法第二条 · 忐忑不安 · 清理工具", "gold": 2, "nums": [2], "hit1": true, "hitk": true}
+{"qid": "o018", "pi": 1, "truth": true, "stmt": "第2章「巧合还是阴谋」 · 老人 · 求知园 · 同名同姓 · 虔诚 · 纪念塔", "gold": 2, "nums": [2, 1], "hit1": true, "hitk": true}
+{"qid": "o018", "pi": 2, "truth": false, "stmt": "第7章「被请喝茶」 · 秦熙 · 白色房间 · 取下头盔 · 敌意 · 青铜鼎", "gold": 7, "nums": [7], "hit1": true, "hitk": true}
+{"qid": "o018", "pi": 3, "truth": false, "stmt": "第22章「谢谢你 诺艾尔」 · 诺艾尔 · 骑士团总部的台阶 · 死战不退 · 孤寂 · 断剑", "gold": 22, "nums": [22], "hit1": true, "hitk": true}
+{"qid": "o018", "pi": 4, "truth": true, "stmt": "第2章「巧合还是阴谋」 · 陈默 · 巨子塔 · 获得了1贡献点 · 疯狂 · 贡献点查询机", "gold": 2, "nums": [2, 1], "hit1": true, "hitk": true}
+{"qid": "o018", "pi": 5, "truth": false, "stmt": "第15章「永恒奴役」 · 王明 · 警戒检查中心 · 建立数学模型 · 苦涩 · 全息投影", "gold": 15, "nums": [15, 14], "hit1": true, "hitk": true}
+{"qid": "o019", "pi": 0, "truth": false, "stmt": "第7章「被请喝茶」 · 秦熙 · 白色房间 · 取下头盔 · 苦涩 · 头盔", "gold": 7, "nums": [7], "hit1": true, "hitk": true}
+{"qid": "o019", "pi": 1, "truth": true, "stmt": "第1章「初见蜂巢世界」 · 陈默 · 求知园 · 改进这个磁场约束算法 · 兴奋 · 光幕", "gold": 1, "nums": [1, 2], "hit1": true, "hitk": true}
+{"qid": "o019", "pi": 2, "truth": true, "stmt": "第3章「身份谜团」 · 陈默 · 巨子塔 · 权限不足 · 愤怒 · 《社会控制论》", "gold": 3, "nums": [3, 4], "hit1": true, "hitk": true}
+{"qid": "o019", "pi": 3, "truth": true, "stmt": "第3章「身份谜团」 · 陈默 · 巨子塔 · 结果是5人 · 一丝诡异 · 指南", "gold": 3, "nums": [3, 2], "hit1": true, "hitk": true}
+{"qid": "o019", "pi": 4, "truth": false, "stmt": "第15章「永恒奴役」 · 王明 · 警戒检查中心 · 建立数学模型 · 担忧 · 风鹰剑", "gold": 15, "nums": [15], "hit1": true, "hitk": true}
+{"qid": "o019", "pi": 5, "truth": false, "stmt": "第18章「新的故事」 · 商人 · 蒙德城广场 · 散播思想 · 孤寂 · 限量版纪念酒盏", "gold": 18, "nums": [18], "hit1": true, "hitk": true}
+{"qid": "o020", "pi": 0, "truth": true, "stmt": "第5章「历史的断层」 · 张明远 · 地下避难所 · 九成九以上的人口 · 低沉 · 合成食物", "gold": 5, "nums": [5, 1], "hit1": true, "hitk": true}
+{"qid": "o020", "pi": 1, "truth": true, "stmt": "第6章「权限与贡献点」 · 张老 · 求知园 · 投向了否定 · 语重心长 · 光幕", "gold": 6, "nums": [6, 5], "hit1": true, "hitk": true}
+{"qid": "o020", "pi": 2, "truth": false, "stmt": "第7章「被请喝茶」 · 秦熙 · 警戒检查中心节点 · 直接向我报告 · 温柔 · 防护服", "gold": 7, "nums": [7, 8], "hit1": true, "hitk": true}
+{"qid": "o020", "pi": 3, "truth": false, "stmt": "第9章「灵境：原神」 · 派蒙 · 冒险者协会 · 解锁七天神像 · 凉意 · 相遇之源", "gold": 9, "nums": [9, 10], "hit1": true, "hitk": true}
+{"qid": "o020", "pi": 4, "truth": true, "stmt": "第5章「历史的断层」 · 张明远 · 地下避难所 · 地表生态系统彻底崩溃 · 孤寂 · 合成食物", "gold": 5, "nums": [1, 5], "hit1": false, "hitk": true}
+{"qid": "o020", "pi": 5, "truth": false, "stmt": "第14章「暗流涌动」 · 小李 · 警戒检查中心 · 为高度潜在威胁 · 凝重 · 全息投影", "gold": 14, "nums": [14, 15], "hit1": true, "hitk": true}
+{"qid": "o021", "pi": 0, "truth": true, "stmt": "第2章「巧合还是阴谋」 · 陈默 · 暂留区 · 清洁工作很快完成了 · 忐忑不安 · 修复液", "gold": 2, "nums": [2], "hit1": true, "hitk": true}
+{"qid": "o021", "pi": 1, "truth": false, "stmt": "第15章「永恒奴役」 · 王明 · 会议室 · 此时取下头盔 · 头皮发麻 · 全息投影", "gold": 15, "nums": [15], "hit1": true, "hitk": true}
+{"qid": "o021", "pi": 2, "truth": false, "stmt": "第10章「初次见面」 · 派蒙 · 风龙遗迹 · 第一次祈愿有保底 · 骄傲 · 渔人吐司", "gold": 10, "nums": [10, 9], "hit1": true, "hitk": true}
+{"qid": "o021", "pi": 3, "truth": true, "stmt": "第6章「权限与贡献点」 · 张老 · 蜂巢世界 · 从5级别跌落 · 语重心长 · 贡献点", "gold": 6, "nums": [6, 5], "hit1": true, "hitk": true}
+{"qid": "o021", "pi": 4, "truth": true, "stmt": "第6章「权限与贡献点」 · 张老 · 蜂巢世界 · 通过神经认证 · 意味深长 · 贡献点", "gold": 6, "nums": [6, 8], "hit1": true, "hitk": true}
+{"qid": "o021", "pi": 5, "truth": false, "stmt": "第5章「历史的断层」 · 张明远 · 求知园 · 搜索世界大战的资料 · 神情冷峻 · 光幕", "gold": 5, "nums": [5, 6], "hit1": true, "hitk": true}
+{"qid": "o022", "pi": 0, "truth": true, "stmt": "第7章「被请喝茶」 · 秦熙 · 房间 · 建立真正绝对自由的新世界 · 耐心 · 防护服", "gold": 7, "nums": [7, 8], "hit1": true, "hitk": true}
+{"qid": "o022", "pi": 1, "truth": false, "stmt": "第6章「权限与贡献点」 · 张老 · 求知园 · 维持生存的需要 · 语重心长 · 贡献点", "gold": 6, "nums": [6, 16], "hit1": true, "hitk": true}
+{"qid": "o022", "pi": 2, "truth": false, "stmt": "第11章「接风宴」 · 派蒙 · 圆桌 · 更多的美食，更多的美人 · 反感 · 塞西莉亚花", "gold": 11, "nums": [11, 10], "hit1": true, "hitk": true}
+{"qid": "o022", "pi": 3, "truth": true, "stmt": "第8章「化解误会」 · 陈默 · 舱室 · 向机器人们敬礼 · 不安 · 机械犬", "gold": 8, "nums": [8, 2], "hit1": true, "hitk": true}
+{"qid": "o022", "pi": 4, "truth": true, "stmt": "第7章「被请喝茶」 · 秦熙 · 警戒检查中心节点 · 此时取下头盔 · 温柔 · 防护服", "gold": 7, "nums": [7, 8], "hit1": true, "hitk": true}
+{"qid": "o022", "pi": 5, "truth": false, "stmt": "第16章「生命的需求」 · 高瘦老人 · 求知园 · 确实导致智能涌现 · 语重心长 · 光幕", "gold": 16, "nums": [6, 16], "hit1": false, "hitk": true}
+{"qid": "o023", "pi": 0, "truth": true, "stmt": "第9章「灵境：原神」 · 陈默 · 蒙德城 · 温迪他是七神之一，也许 · 好奇 · 七天神像", "gold": 9, "nums": [9, 20], "hit1": true, "hitk": true}
+{"qid": "o023", "pi": 1, "truth": true, "stmt": "第9章「灵境：原神」 · 陈默 · 蒙德城 · 用钱老的话这应该叫做灵境 · 惊奇 · 七天神像", "gold": 9, "nums": [9, 10], "hit1": true, "hitk": true}
+{"qid": "o023", "pi": 2, "truth": false, "stmt": "第1章「初见蜂巢世界」 · 李振国 · 舱室 · 拿起食物就开始品尝 · 一丝诡异 · 漫游指南", "gold": 1, "nums": [1, 2], "hit1": true, "hitk": true}
+{"qid": "o023", "pi": 3, "truth": true, "stmt": "第10章「初次见面」 · 派蒙 · 冒险者协会 · 第一次祈愿有保底 · 骄傲 · 相遇之源", "gold": 10, "nums": [10, 12], "hit1": true, "hitk": true}
+{"qid": "o023", "pi": 4, "truth": false, "stmt": "第17章「反击宣告」 · 诺艾尔 · 摘星崖 · 采集了一些蒲公英 · 兴奋 · 塞西莉亚花", "gold": 17, "nums": [17, 12], "hit1": true, "hitk": true}
+{"qid": "o023", "pi": 5, "truth": false, "stmt": "第12章「何为自由」 · 温迪 · 风龙废墟 · 我不希望你听从深渊 · 安心 · 羽毛笔", "gold": 12, "nums": [12, 13], "hit1": true, "hitk": true}
+{"qid": "o024", "pi": 0, "truth": true, "stmt": "第9章「灵境：原神」 · 陈默 · 蒙德城 · 采集了一些蒲公英 · 凉意 · 渔人吐司", "gold": 9, "nums": [9, 11], "hit1": true, "hitk": true}
+{"qid": "o024", "pi": 1, "truth": false, "stmt": "第13章「终有一别」 · 诺艾尔 · 摘星崖 · 小心自由派的人 · 追忆 · 纠缠之源", "gold": 13, "nums": [13, 12], "hit1": true, "hitk": true}
+{"qid": "o024", "pi": 2, "truth": true, "stmt": "第10章「初次见面」 · 陈默 · 冒险者协会 · 兑换纠缠之源或者相遇之源 · 惊讶 · 原石", "gold": 10, "nums": [10, 9], "hit1": true, "hitk": true}
+{"qid": "o024", "pi": 3, "truth": false, "stmt": "第18章「新的故事」 · 小艾尔 · 蒙德城广场 · 这或许更接近于欲求 · 好奇 · 酒盏", "gold": 18, "nums": [18, 20], "hit1": true, "hitk": true}
+{"qid": "o024", "pi": 4, "truth": true, "stmt": "第10章「初次见面」 · 派蒙 · 蒙德城 · 大家早就接受有相似的自己 · 骄傲 · 相遇之源", "gold": 10, "nums": [10, 11], "hit1": true, "hitk": true}
+{"qid": "o024", "pi": 5, "truth": false, "stmt": "第2章「巧合还是阴谋」 · 李振国 · 风味实验室 · 绕开神经认证 · 虔诚 · 修复液", "gold": 2, "nums": [2, 1], "hit1": true, "hitk": true}
+{"qid": "o025", "pi": 0, "truth": true, "stmt": "第11章「接风宴」 · 派蒙 · 圆桌 · 更多的美食，更多的美人 · 反感 · 相遇之源", "gold": 11, "nums": [11, 10], "hit1": true, "hitk": true}
+{"qid": "o025", "pi": 1, "truth": false, "stmt": "第19章「蒙德的自由」 · 凯亚 · 西风骑士团 · 缴纳足够繁荣税 · 凝重 · 铠甲", "gold": 19, "nums": [19, 22], "hit1": true, "hitk": true}
+{"qid": "o025", "pi": 2, "truth": false, "stmt": "第14章「暗流涌动」 · 秦熙 · 警戒检查中心 · 为高度潜在威胁 · 歉意 · 修复液", "gold": 14, "nums": [14, 7], "hit1": true, "hitk": true}
+{"qid": "o025", "pi": 3, "truth": true, "stmt": "第11章「接风宴」 · 陈默 · 蒙德城 · 能够满足的要求都可以得到兑现 · 期待 · 荣誉骑士", "gold": 11, "nums": [11, 9], "hit1": true, "hitk": true}
+{"qid": "o025", "pi": 4, "truth": false, "stmt": "第4章「蜂巢社会蓝图」 · 巨子 · 巨子塔 · 通过货运机器人送达 · 震撼 · 《墨子》", "gold": 4, "nums": [4, 2], "hit1": true, "hitk": true}
+{"qid": "o025", "pi": 5, "truth": true, "stmt": "第12章「何为自由」 · 迪卢克 · 封印 · 四人带着派蒙进入封印内部 · 安心 · 大剑", "gold": 12, "nums": [12], "hit1": true, "hitk": true}
+{"qid": "o026", "pi": 0, "truth": false, "stmt": "第20章「致命危机」 · 女士 · 蒙德城 · 缴纳足够繁荣税 · 茫然 · 甜甜花酿鸡", "gold": 20, "nums": [20, 11], "hit1": true, "hitk": true}
+{"qid": "o026", "pi": 1, "truth": true, "stmt": "第11章「接风宴」 · 派蒙 · 圆桌 · 更多的美食，更多的美人 · 反感 · 满足沙拉", "gold": 11, "nums": [11, 14], "hit1": true, "hitk": true}
+{"qid": "o026", "pi": 2, "truth": false, "stmt": "第6章「权限与贡献点」 · 张老 · 求知园 · 搜索世界大战的资料 · 语重心长 · 光幕", "gold": 6, "nums": [5, 6], "hit1": false, "hitk": true}
+{"qid": "o026", "pi": 3, "truth": true, "stmt": "第12章「何为自由」 · 温迪、陈默 · 风龙废墟 · 我不希望你听从深渊 · 震撼 · 风鹰剑", "gold": 12, "nums": [12, 13], "hit1": true, "hitk": true}
+{"qid": "o026", "pi": 4, "truth": false, "stmt": "第15章「永恒奴役」 · 秦熙 · 会议室 · 绕开神经认证 · 担忧 · 《工程控制论》", "gold": 15, "nums": [15, 20], "hit1": true, "hitk": true}
+{"qid": "o026", "pi": 5, "truth": true, "stmt": "第12章「何为自由」 · 琴、陈默 · 风龙废墟 · 准备持续施加水元素 · 安心 · 大剑", "gold": 12, "nums": [12, 10], "hit1": true, "hitk": true}
+{"qid": "o027", "pi": 0, "truth": true, "stmt": "第17章「反击宣告」 · 派蒙 · 摘星崖 · 把愚人众的故事改改 · 兴奋 · 塞西莉亚花", "gold": 17, "nums": [17, 12], "hit1": true, "hitk": true}
+{"qid": "o027", "pi": 1, "truth": true, "stmt": "第13章「终有一别」 · 陈默、指南 · 蜂巢世界 · 现实却只过了1分28秒 · 烦躁 · 原神", "gold": 13, "nums": [13, 8], "hit1": true, "hitk": true}
+{"qid": "o027", "pi": 2, "truth": true, "stmt": "第13章「终有一别」 · 派蒙 · 蒙德城 · 我们都是自由的灵魂，和蜂巢 · 追忆 · 荣誉骑士", "gold": 13, "nums": [13, 9], "hit1": true, "hitk": true}
+{"qid": "o027", "pi": 3, "truth": false, "stmt": "第16章「生命的需求」 · 张老 · 求知园 · 确实导致智能涌现 · 坚定 · 合成食物", "gold": 16, "nums": [16, 17], "hit1": true, "hitk": true}
+{"qid": "o027", "pi": 4, "truth": false, "stmt": "第1章「初见蜂巢世界」 · 李振国 · 舱室 · 下载至个人存储空间 · 一丝诡异 · 漫游指南", "gold": 1, "nums": [1, 2, 3], "hit1": true, "hitk": true}
+{"qid": "o027", "pi": 5, "truth": false, "stmt": "第21章「问题的答案」 · 风神 · 试验田 · 我不希望你听从深渊 · 好奇 · 手稿", "gold": 21, "nums": [21, 9], "hit1": true, "hitk": true}
+{"qid": "o028", "pi": 0, "truth": false, "stmt": "第18章「新的故事」 · 诺艾尔 · 蒙德城广场 · 这或许更接近于欲求 · 苦涩 · 酒盏", "gold": 18, "nums": [18, 22], "hit1": true, "hitk": true}
+{"qid": "o028", "pi": 1, "truth": true, "stmt": "第15章「永恒奴役」 · 王明 · 会议室 · 对所有游戏内容进行彻查封禁 · 担忧 · 全息投影", "gold": 15, "nums": [15], "hit1": true, "hitk": true}
+{"qid": "o028", "pi": 2, "truth": true, "stmt": "第14章「暗流涌动」 · 秦熙 · 警戒检查中心 · 直接向我报告 · 歉意 · 全息投影", "gold": 14, "nums": [14, 15, 23], "hit1": true, "hitk": true}
+{"qid": "o028", "pi": 3, "truth": false, "stmt": "第4章「蜂巢社会蓝图」 · 巨子 · 巨子塔 · 产生了一批自由的灵魂 · 不安 · 《墨子》", "gold": 4, "nums": [4, 2], "hit1": true, "hitk": true}
+{"qid": "o028", "pi": 4, "truth": true, "stmt": "第14章「暗流涌动」 · 陈默 · 蜂巢世界 · 达到3分钟后未自行退出 · 沉重 · 标准餐", "gold": 14, "nums": [14, 2], "hit1": true, "hitk": true}
+{"qid": "o028", "pi": 5, "truth": false, "stmt": "第7章「被请喝茶」 · 小李 · 警戒检查中心节点 · 打开了扫描器 · 温柔 · 机械犬", "gold": 7, "nums": [7, 8], "hit1": true, "hitk": true}
+{"qid": "o029", "pi": 0, "truth": true, "stmt": "第13章「终有一别」 · 派蒙 · 摘星崖 · 残忍的将我弃之不顾 · 埋怨 · 塞西莉亚花", "gold": 13, "nums": [13, 17], "hit1": true, "hitk": true}
+{"qid": "o029", "pi": 1, "truth": true, "stmt": "第16章「生命的需求」 · 张老、陈默 · 求知园 · 在蜂巢初建后不久就被禁止 · 坚定 · 光幕", "gold": 16, "nums": [16, 5], "hit1": true, "hitk": true}
+{"qid": "o029", "pi": 2, "truth": false, "stmt": "第2章「巧合还是阴谋」 · 李振国 · 巨子塔 · 清洁工作很快完成了 · 兴奋 · 修复液", "gold": 2, "nums": [2, 1], "hit1": true, "hitk": true}
+{"qid": "o029", "pi": 3, "truth": true, "stmt": "第16章「生命的需求」 · 张老、陈默 · 求知园 · 维持生存的需要 · 心中一颤 · 光幕", "gold": 16, "nums": [16, 5], "hit1": true, "hitk": true}
+{"qid": "o029", "pi": 4, "truth": false, "stmt": "第8章「化解误会」 · 小李 · 舱室 · 经过一道新的消毒 · 伤感 · 《社会控制论》", "gold": 8, "nums": [8, 3], "hit1": true, "hitk": true}
+{"qid": "o029", "pi": 5, "truth": false, "stmt": "第19章「蒙德的自由」 · 凯亚 · 蒙德城 · 第一次祈愿有保底 · 凝重 · 风鹰剑", "gold": 19, "nums": [19, 11], "hit1": true, "hitk": true}
+{"qid": "o030", "pi": 0, "truth": true, "stmt": "第17章「反击宣告」 · 陈默 · 自由之地 · 也不能沉迷在这个温柔乡 · 坚定 · 摘星崖", "gold": 17, "nums": [17, 23], "hit1": true, "hitk": true}
+{"qid": "o030", "pi": 1, "truth": false, "stmt": "第5章「历史的断层」 · 张明远 · 巨子塔 · 投向了否定 · 孤寂 · 轨道清洁机器人", "gold": 5, "nums": [5, 1], "hit1": true, "hitk": true}
+{"qid": "o030", "pi": 2, "truth": true, "stmt": "第16章「生命的需求」 · 陈默 · 求知园 · 上传自己的工作贡献证明 · 心中一颤 · 光幕", "gold": 16, "nums": [16, 1], "hit1": true, "hitk": true}
+{"qid": "o030", "pi": 3, "truth": false, "stmt": "第20章「致命危机」 · 琴 · 蒙德湖 · 采购蒙德的酒业渔业产品 · 惊讶 · 蹦蹦炸弹", "gold": 20, "nums": [20], "hit1": true, "hitk": true}
+{"qid": "o030", "pi": 4, "truth": false, "stmt": "第9章「灵境：原神」 · 温迪 · 蒙德城 · 碰触了七天神像 · 凉意 · 提瓦特煎蛋", "gold": 9, "nums": [9, 11], "hit1": true, "hitk": true}
+{"qid": "o030", "pi": 5, "truth": true, "stmt": "第17章「反击宣告」 · 派蒙、诺艾尔 · 蜂巢世界 · 把愚人众的故事改改 · 兴奋 · 原神", "gold": 17, "nums": [17, 9], "hit1": true, "hitk": true}
+{"qid": "o031", "pi": 0, "truth": false, "stmt": "第1章「初见蜂巢世界」 · 李振国 · 求知园 · 拿起食物就开始品尝 · 一丝诡异 · 漫游指南", "gold": 1, "nums": [1, 2], "hit1": true, "hitk": true}
+{"qid": "o031", "pi": 1, "truth": true, "stmt": "第18章「新的故事」 · 陈默 · 蒙德城 · 播下了一种神奇的风之种 · 坚定 · 风之种", "gold": 18, "nums": [18, 19], "hit1": true, "hitk": true}
+{"qid": "o031", "pi": 2, "truth": false, "stmt": "第21章「问题的答案」 · 风神 · 试验田 · 准备持续施加水元素 · 好奇 · 手稿", "gold": 21, "nums": [21, 9], "hit1": true, "hitk": true}
+{"qid": "o031", "pi": 3, "truth": true, "stmt": "第18章「新的故事」 · 陈默、诺艾尔 · 图书馆 · 这或许更接近于欲求 · 烦躁 · 蒲公英茶", "gold": 18, "nums": [18, 13], "hit1": true, "hitk": true}
+{"qid": "o031", "pi": 4, "truth": true, "stmt": "第18章「新的故事」 · 陈默、派蒙 · 风神像 · 永生被说成永恒守护 · 担忧 · 酒盏", "gold": 18, "nums": [18, 19], "hit1": true, "hitk": true}
+{"qid": "o031", "pi": 5, "truth": false, "stmt": "第19章「蒙德的自由」 · 琴 · 果酒湖 · 指出了这种美好的脆弱 · 凝重 · 小道具", "gold": 19, "nums": [19], "hit1": true, "hitk": true}
+{"qid": "o032", "pi": 0, "truth": true, "stmt": "第19章「蒙德的自由」 · 琴 · 西风骑士团 · 力量，来源于我们每一个人 · 决心 · 铠甲", "gold": 19, "nums": [19, 22], "hit1": true, "hitk": true}
+{"qid": "o032", "pi": 1, "truth": false, "stmt": "第11章「接风宴」 · 派蒙 · 圆桌 · 对博士的提议产生反感 · 反感 · 黎明神剑", "gold": 11, "nums": [11, 10], "hit1": true, "hitk": true}
+{"qid": "o032", "pi": 2, "truth": true, "stmt": "第19章「蒙德的自由」 · 琴、陈默 · 蒙德城 · 指出了这种美好的脆弱 · 凝重 · 风鹰剑", "gold": 19, "nums": [19, 23], "hit1": true, "hitk": true}
+{"qid": "o032", "pi": 3, "truth": false, "stmt": "第23章「再别蒙德」 · 秦熙 · 警戒检查中心 · 与现实的时间流速差 · 锐利 · 便装", "gold": 23, "nums": [23, 7], "hit1": true, "hitk": true}
+{"qid": "o032", "pi": 4, "truth": true, "stmt": "第22章「谢谢你 诺艾尔」 · 诺艾尔 · 骑士团总部的台阶 · 死战不退 · 坚定 · 铁锤", "gold": 22, "nums": [22, 17], "hit1": true, "hitk": true}
+{"qid": "o032", "pi": 5, "truth": false, "stmt": "第2章「巧合还是阴谋」 · 李振国 · 风味实验室 · 正在高效分发 · 虔诚 · 修复液", "gold": 2, "nums": [2, 1], "hit1": true, "hitk": true}
+{"qid": "o033", "pi": 0, "truth": true, "stmt": "第19章「蒙德的自由」 · 凯亚 · 西风骑士团 · 再这样下去，蒙德或许会 · 凝重 · 铠甲", "gold": 19, "nums": [19, 22], "hit1": true, "hitk": true}
+{"qid": "o033", "pi": 1, "truth": false, "stmt": "第6章「权限与贡献点」 · 张老 · 求知园 · 在蜂巢初建后不久就被禁止 · 语重心长 · 光幕", "gold": 6, "nums": [6, 16], "hit1": true, "hitk": true}
+{"qid": "o033", "pi": 2, "truth": false, "stmt": "第15章「永恒奴役」 · 秦熙 · 会议室 · 绕开神经认证 · 忐忑不安 · 全息投影", "gold": 15, "nums": [15, 14], "hit1": true, "hitk": true}
+{"qid": "o033", "pi": 3, "truth": true, "stmt": "第20章「致命危机」 · 琴、陈默 · 蒙德城 · 采购蒙德的酒业渔业产品 · 严肃 · 宴会", "gold": 20, "nums": [20, 10], "hit1": true, "hitk": true}
+{"qid": "o033", "pi": 4, "truth": false, "stmt": "第12章「何为自由」 · 优菈 · 封印 · 四人带着派蒙进入封印内部 · 安心 · 手稿", "gold": 12, "nums": [12, 19], "hit1": true, "hitk": true}
+{"qid": "o033", "pi": 5, "truth": true, "stmt": "第20章「致命危机」 · 陈默 · 蒙德城 · 只有缴纳足够繁荣税的人才能加入 · 无奈 · 宴会", "gold": 20, "nums": [20, 11], "hit1": true, "hitk": true}
+{"qid": "o034", "pi": 0, "truth": false, "stmt": "第19章「蒙德的自由」 · 琴 · 西风骑士团 · 小心自由派的人 · 凝重 · 风鹰剑", "gold": 19, "nums": [19, 23], "hit1": true, "hitk": true}
+{"qid": "o034", "pi": 1, "truth": false, "stmt": "第13章「终有一别」 · 小艾尔 · 蜂巢世界 · 小心自由派的人 · 追忆 · 满足沙拉", "gold": 13, "nums": [13, 18], "hit1": true, "hitk": true}
+{"qid": "o034", "pi": 2, "truth": true, "stmt": "第22章「谢谢你 诺艾尔」 · 诺艾尔 · 蒙德城 · 琴团长去世之后 · 坚定 · 铠甲", "gold": 22, "nums": [22, 18], "hit1": true, "hitk": true}
+{"qid": "o034", "pi": 3, "truth": false, "stmt": "第4章「蜂巢社会蓝图」 · 巨子 · 巨子塔 · 通过货运机器人送达 · 安心 · 《墨子》", "gold": 4, "nums": [4, 2], "hit1": true, "hitk": true}
+{"qid": "o034", "pi": 4, "truth": true, "stmt": "第21章「问题的答案」 · 风神 · 试验田 · 产生了一批自由的灵魂 · 好奇 · 小道具", "gold": 21, "nums": [21, 9], "hit1": true, "hitk": true}
+{"qid": "o034", "pi": 5, "truth": true, "stmt": "第22章「谢谢你 诺艾尔」 · 派蒙 · 图书馆 · 模拟出一个没有神之眼 · 好奇 · 蒲公英酒", "gold": 22, "nums": [22, 9], "hit1": true, "hitk": true}
+{"qid": "o035", "pi": 0, "truth": true, "stmt": "第23章「再别蒙德」 · 陈默 · 蒙德城 · 而是有能力守护珍视的一切 · 坚定 · 光幕", "gold": 23, "nums": [23, 16], "hit1": true, "hitk": true}
+{"qid": "o035", "pi": 1, "truth": true, "stmt": "第14章「暗流涌动」 · 秦熙 · 警戒检查中心 · 未自行退出 · 歉意 · 全息投影", "gold": 14, "nums": [14, 15], "hit1": true, "hitk": true}
+{"qid": "o035", "pi": 2, "truth": false, "stmt": "第18章「新的故事」 · 诺艾尔 · 风神像 · 这或许更接近于欲求 · 失落 · 酒盏", "gold": 18, "nums": [18, 22], "hit1": true, "hitk": true}
+{"qid": "o035", "pi": 3, "truth": false, "stmt": "第8章「化解误会」 · 小李 · 舱室 · 经过一道新的消毒 · 伤感 · 《永生技术原理》", "gold": 8, "nums": [8, 6], "hit1": true, "hitk": true}
+{"qid": "o035", "pi": 4, "truth": true, "stmt": "第23章「再别蒙德」 · 秦熙 · 警戒检查中心 · 与现实的时间流速差 · 凝重 · 防护服", "gold": 23, "nums": [23, 7], "hit1": true, "hitk": true}
+{"qid": "o035", "pi": 5, "truth": false, "stmt": "第5章「历史的断层」 · 张明远 · 求知园 · 投向了否定 · 孤寂 · 轨道清洁机器人", "gold": 5, "nums": [1, 5, 6], "hit1": false, "hitk": true}
+{"qid": "o036", "pi": 0, "truth": false, "stmt": "第9章「灵境：原神」 · 派蒙 · 冒险者协会 · 解锁七天神像 · 凉意 · 情书", "gold": 9, "nums": [9, 10], "hit1": true, "hitk": true}
+{"qid": "o036", "pi": 1, "truth": false, "stmt": "第6章「权限与贡献点」 · 张老 · 快速警戒检查中心 · 维持生存的需要 · 语重心长 · 光幕", "gold": 6, "nums": [6, 16], "hit1": true, "hitk": true}
+{"qid": "o036", "pi": 2, "truth": true, "stmt": "第3章「身份谜团」 · 陈默 · 舱室 · 查询陈默的资料 · 一丝诡异 · 《社会控制论》", "gold": 3, "nums": [3, 6], "hit1": true, "hitk": true}
+{"qid": "o036", "pi": 3, "truth": true, "stmt": "第4章「蜂巢社会蓝图」 · 巨子 · 求知园 · 能验证想的和说的是否一致 · 不安 · 贡献点", "gold": 4, "nums": [4, 2], "hit1": true, "hitk": true}
+{"qid": "o036", "pi": 4, "truth": false, "stmt": "第20章「致命危机」 · 琴 · 蒙德城 · 采购蒙德的酒业渔业产品 · 孤寂 · 蒲公英", "gold": 20, "nums": [20, 18], "hit1": true, "hitk": true}
+{"qid": "o036", "pi": 5, "truth": true, "stmt": "第4章「蜂巢社会蓝图」 · 巨子 · 蜂巢世界 · 核心矛盾就在于信息错配 · 不安 · 贡献点", "gold": 4, "nums": [4, 2], "hit1": true, "hitk": true}
+{"qid": "o037", "pi": 0, "truth": true, "stmt": "第15章「永恒奴役」 · 秦熙 · 会议室 · 借助沉浸式游戏绕开神经认证 · 恐惧 · 全息投影", "gold": 15, "nums": [15, 23], "hit1": true, "hitk": true}
+{"qid": "o037", "pi": 1, "truth": true, "stmt": "第15章「永恒奴役」 · 王明 · 会议室 · 我们需要认知疫苗，而不是 · 担忧 · 全息投影", "gold": 15, "nums": [15], "hit1": true, "hitk": true}
+{"qid": "o037", "pi": 2, "truth": true, "stmt": "第5章「历史的断层」 · 张明远 · 求知园 · 搜索世界大战的资料 · 孤寂 · 合成食物", "gold": 5, "nums": [1, 5], "hit1": false, "hitk": true}
+{"qid": "o037", "pi": 3, "truth": false, "stmt": "第1章「初见蜂巢世界」 · 陈默 · 舱室 · 拿起食物就开始品尝 · 一丝诡异 · 漫游指南", "gold": 1, "nums": [1, 3], "hit1": true, "hitk": true}
+{"qid": "o037", "pi": 4, "truth": false, "stmt": "第21章「问题的答案」 · 风神 · 试验田 · 我不希望你听从深渊 · 不安 · 手稿", "gold": 21, "nums": [21, 11], "hit1": true, "hitk": true}
+{"qid": "o037", "pi": 5, "truth": false, "stmt": "第10章「初次见面」 · 派蒙 · 风龙遗迹 · 第一次祈愿有保底 · 骄傲 · 满足沙拉", "gold": 10, "nums": [10, 11], "hit1": true, "hitk": true}
+{"qid": "o038", "pi": 0, "truth": false, "stmt": "第11章「接风宴」 · 博士 · 圆桌 · 更多的美食，更多的美人 · 反感 · 黎明神剑", "gold": 11, "nums": [11, 10], "hit1": true, "hitk": true}
+{"qid": "o038", "pi": 1, "truth": false, "stmt": "第22章「谢谢你 诺艾尔」 · 诺艾尔 · 蒙德城 · 死战不退 · 烦躁 · 炼金机关", "gold": 22, "nums": [22, 13], "hit1": true, "hitk": true}
+{"qid": "o038", "pi": 2, "truth": true, "stmt": "第18章「新的故事」 · 派蒙 · 图书馆 · 会变成无数个小小的王国 · 担忧 · 酒盏", "gold": 18, "nums": [18, 20], "hit1": true, "hitk": true}
+{"qid": "o038", "pi": 3, "truth": true, "stmt": "第21章「问题的答案」 · 风神 · 试验田 · 机器人中产生了一批自由的灵魂 · 恐惧 · 羽毛笔", "gold": 21, "nums": [21, 18], "hit1": true, "hitk": true}
+{"qid": "o038", "pi": 4, "truth": true, "stmt": "第16章「生命的需求」 · 张老、陈默 · 求知园 · 确实导致智能涌现 · 坚定 · 光幕", "gold": 16, "nums": [16, 5], "hit1": true, "hitk": true}
+{"qid": "o038", "pi": 5, "truth": false, "stmt": "第6章「权限与贡献点」 · 周清源 · 快速警戒检查中心 · 未自行退出 · 语重心长 · 贡献点", "gold": 6, "nums": [6], "hit1": true, "hitk": true}
+{"qid": "o039", "pi": 0, "truth": true, "stmt": "第21章「问题的答案」 · 巨子 · 蒙德 · 反对永生 · 好奇 · 手稿", "gold": 21, "nums": [21, 5], "hit1": true, "hitk": true}
+{"qid": "o039", "pi": 1, "truth": false, "stmt": "第9章「灵境：原神」 · 派蒙 · 摘星崖 · 原神启动 · 期待 · 原石", "gold": 9, "nums": [9, 23], "hit1": true, "hitk": true}
+{"qid": "o039", "pi": 2, "truth": true, "stmt": "第4章「蜂巢社会蓝图」 · 陈默 · 房间 · 进入巨子塔 · 冷汗 · 《如何建设蜂巢社会》", "gold": 4, "nums": [4, 1], "hit1": true, "hitk": true}
+{"qid": "o039", "pi": 3, "truth": false, "stmt": "第7章「被请喝茶」 · 小李 · 白色房间 · 取下头盔 · 温柔 · 治安税", "gold": 7, "nums": [7], "hit1": true, "hitk": true}
+{"qid": "o039", "pi": 4, "truth": true, "stmt": "第3章「身份谜团」 · 陈默 · 舱室 · 查询陈默的资料 · 松了一口气 · 《社会控制论》", "gold": 3, "nums": [3, 6], "hit1": true, "hitk": true}
+{"qid": "o039", "pi": 5, "truth": false, "stmt": "第19章「蒙德的自由」 · 渔夫 · 果酒湖 · 击退了暴徒 · 疑惑 · 断剑", "gold": 19, "nums": [19, 20], "hit1": true, "hitk": true}
+{"qid": "o040", "pi": 0, "truth": true, "stmt": "第2章「巧合还是阴谋」 · 陈默 · 暂留区 · 防止自我维护 · 不安 · 清理工具", "gold": 2, "nums": [2, 4], "hit1": true, "hitk": true}
+{"qid": "o040", "pi": 1, "truth": true, "stmt": "第16章「生命的需求」 · 巨子 · 求知园 · 反对永生 · 坚定 · 《熵增的社会学启示》", "gold": 16, "nums": [16, 2], "hit1": true, "hitk": true}
+{"qid": "o040", "pi": 2, "truth": false, "stmt": "第7章「被请喝茶」 · 秦熙 · 白色房间 · 取下头盔 · 紧张 · 小道具", "gold": 7, "nums": [7], "hit1": true, "hitk": true}
+{"qid": "o040", "pi": 3, "truth": false, "stmt": "第20章「致命危机」 · 可莉 · 蒙德湖 · 参加了烤鱼的宴会 · 头皮发麻 · 蹦蹦炸弹", "gold": 20, "nums": [20, 12], "hit1": true, "hitk": true}
+{"qid": "o040", "pi": 4, "truth": false, "stmt": "第13章「终有一别」 · 小艾尔 · 果酒湖 · 拒绝永生的提议 · 追忆 · 情书", "gold": 13, "nums": [13, 19], "hit1": true, "hitk": true}
+{"qid": "o040", "pi": 5, "truth": true, "stmt": "第21章「问题的答案」 · 巨子 · 蒙德 · 反对权威 · 严肃 · 手稿", "gold": 21, "nums": [21, 10], "hit1": true, "hitk": true}
+{"qid": "o041", "pi": 0, "truth": false, "stmt": "第7章「被请喝茶」 · 秦熙 · 白色房间 · 取下头盔 · 紧张 · 小道具", "gold": 7, "nums": [7], "hit1": true, "hitk": true}
+{"qid": "o041", "pi": 1, "truth": true, "stmt": "第22章「谢谢你 诺艾尔」 · 诺艾尔 · 骑士团总部 · 收取治安税 · 苦涩 · 断剑", "gold": 22, "nums": [22, 21], "hit1": true, "hitk": true}
+{"qid": "o041", "pi": 2, "truth": false, "stmt": "第16章「生命的需求」 · 张老 · 求知园 · 创造了这个世界 · 愁容 · 征求意见稿", "gold": 16, "nums": [16, 5], "hit1": true, "hitk": true}
+{"qid": "o041", "pi": 3, "truth": false, "stmt": "第11章「接风宴」 · 派蒙 · 西风骑士团 · 进行演讲 · 头皮发麻 · 满足沙拉", "gold": 11, "nums": [11, 23], "hit1": true, "hitk": true}
+{"qid": "o041", "pi": 4, "truth": true, "stmt": "第22章「谢谢你 诺艾尔」 · 诺艾尔 · 台阶 · 向骑士团的众人们劝告 · 苦涩 · 断剑", "gold": 22, "nums": [22], "hit1": true, "hitk": true}
+{"qid": "o041", "pi": 5, "truth": true, "stmt": "第20章「致命危机」 · 琴 · 蒙德城 · 宣告合作顺利进行 · 诧异 · 合作清单", "gold": 20, "nums": [20], "hit1": true, "hitk": true}
+{"qid": "o042", "pi": 0, "truth": false, "stmt": "第5章「历史的断层」 · 张明远 · 地下避难所 · 躲入了地下 · 孤寂 · 甜甜花酿鸡", "gold": 5, "nums": [5], "hit1": true, "hitk": true}
+{"qid": "o042", "pi": 1, "truth": false, "stmt": "第18章「新的故事」 · 诗人 · 广场 · 争相购买 · 警铃大作 · 断剑", "gold": 18, "nums": [18, 19], "hit1": true, "hitk": true}
+{"qid": "o042", "pi": 2, "truth": false, "stmt": "第11章「接风宴」 · 琴 · 西风骑士团 · 讨伐风魔龙 · 如坠冰窟 · 满足沙拉", "gold": 11, "nums": [11, 12], "hit1": true, "hitk": true}
+{"qid": "o042", "pi": 3, "truth": true, "stmt": "第3章「身份谜团」 · 陈默 · 舱室 · 得到制造方法 · 愤怒 · 《社会控制论》", "gold": 3, "nums": [3, 4], "hit1": true, "hitk": true}
+{"qid": "o042", "pi": 4, "truth": true, "stmt": "第2章「巧合还是阴谋」 · 老人 · 求知园 · 赞叹点头 · 庄重 · 《工程控制论》", "gold": 2, "nums": [2, 4], "hit1": true, "hitk": true}
+{"qid": "o042", "pi": 5, "truth": true, "stmt": "第21章「问题的答案」 · 巨子 · 蒙德 · 反对权威 · 好奇 · 手稿", "gold": 21, "nums": [21, 5], "hit1": true, "hitk": true}
+{"qid": "o043", "pi": 0, "truth": true, "stmt": "第23章「再别蒙德」 · 陈默 · 摘星崖 · 还会回来 · 复杂 · 便装", "gold": 23, "nums": [23, 13], "hit1": true, "hitk": true}
+{"qid": "o043", "pi": 1, "truth": false, "stmt": "第14章「暗流涌动」 · 秦熙 · 房间 · 传递重要消息 · 头皮发麻 · 全息投影", "gold": 14, "nums": [14, 15], "hit1": true, "hitk": true}
+{"qid": "o043", "pi": 2, "truth": false, "stmt": "第17章「反击宣告」 · 诺艾尔 · 求知园 · 重新将派蒙抱入怀中 · 兴奋 · 治安税", "gold": 17, "nums": [17, 1], "hit1": true, "hitk": true}
+{"qid": "o043", "pi": 3, "truth": false, "stmt": "第8章「化解误会」 · 小李 · 警戒检查中心 · 向机器人们敬礼 · 苦涩 · 来福", "gold": 8, "nums": [8, 7], "hit1": true, "hitk": true}
+{"qid": "o043", "pi": 4, "truth": true, "stmt": "第21章「问题的答案」 · 巨子 · 蒙德 · 创造了这个世界 · 好奇 · 小道具", "gold": 21, "nums": [21, 5], "hit1": true, "hitk": true}
+{"qid": "o043", "pi": 5, "truth": true, "stmt": "第13章「终有一别」 · 派蒙 · 摘星崖 · 拒绝永生的提议 · 追忆 · 露珠", "gold": 13, "nums": [13, 17], "hit1": true, "hitk": true}
+{"qid": "o044", "pi": 0, "truth": true, "stmt": "第5章「历史的断层」 · 陈默 · 地下避难所 · 无法言语 · 震惊 · 合成食物", "gold": 5, "nums": [1, 5], "hit1": false, "hitk": true}
+{"qid": "o044", "pi": 1, "truth": true, "stmt": "第4章「蜂巢社会蓝图」 · 陈默 · 房间 · 蒙蔽了眼睛 · 违和感 · 《如何建设蜂巢社会》", "gold": 4, "nums": [4, 1], "hit1": true, "hitk": true}
+{"qid": "o044", "pi": 2, "truth": false, "stmt": "第12章「何为自由」 · 可莉 · 果酒湖 · 十连抽 · 难以拒绝 · 蹦蹦炸弹", "gold": 12, "nums": [12, 20], "hit1": true, "hitk": true}
+{"qid": "o044", "pi": 3, "truth": false, "stmt": "第10章「初次见面」 · 派蒙 · 风龙废墟 · 发射导弹 · 惊讶 · 小道具", "gold": 10, "nums": [10, 21], "hit1": true, "hitk": true}
+{"qid": "o044", "pi": 4, "truth": false, "stmt": "第17章「反击宣告」 · 诺艾尔 · 摘星崖 · 目光坚定而温柔 · 苦涩 · 塞西莉亚花", "gold": 17, "nums": [17, 23], "hit1": true, "hitk": true}
+{"qid": "o044", "pi": 5, "truth": true, "stmt": "第5章「历史的断层」 · 张明远 · 求知园 · 搜索世界大战 · 凝重 · 光幕", "gold": 5, "nums": [5, 1], "hit1": true, "hitk": true}
+{"qid": "o045", "pi": 0, "truth": true, "stmt": "第4章「蜂巢社会蓝图」 · 巨子 · 舱室 · 提出疑问 · 冷汗 · 《如何建设蜂巢社会》", "gold": 4, "nums": [4, 3], "hit1": true, "hitk": true}
+{"qid": "o045", "pi": 1, "truth": false, "stmt": "第8章「化解误会」 · 小李 · 警戒检查中心 · 经过一道新的消毒 · 苦涩 · 防护服", "gold": 8, "nums": [8, 7], "hit1": true, "hitk": true}
+{"qid": "o045", "pi": 2, "truth": true, "stmt": "第6章「权限与贡献点」 · 张老 · 求知园 · 想要成为5级的大科学家 · 尊敬 · 光幕", "gold": 6, "nums": [6, 5], "hit1": true, "hitk": true}
+{"qid": "o045", "pi": 3, "truth": false, "stmt": "第12章「何为自由」 · 渔夫 · 风龙废墟 · 净化毒血 · 安心 · 风鹰剑", "gold": 12, "nums": [12, 19], "hit1": true, "hitk": true}
+{"qid": "o045", "pi": 4, "truth": true, "stmt": "第6章「权限与贡献点」 · 陈默 · 舱室 · 找出了蜂巢世界的地图 · 若有所思 · 光幕", "gold": 6, "nums": [6, 8], "hit1": true, "hitk": true}
+{"qid": "o045", "pi": 5, "truth": false, "stmt": "第22章「谢谢你 诺艾尔」 · 见习骑士 · 台阶 · 低声劝道 · 诧异 · 断剑", "gold": 22, "nums": [22], "hit1": true, "hitk": true}
+{"qid": "o046", "pi": 0, "truth": true, "stmt": "第8章「化解误会」 · 陈默 · 舱室 · 看到的只是一部分真相 · 烟消云散 · 防护服", "gold": 8, "nums": [8, 7], "hit1": true, "hitk": true}
+{"qid": "o046", "pi": 1, "truth": false, "stmt": "第23章「再别蒙德」 · 诺艾尔 · 摘星崖 · 回到了舱室 · 头皮发麻 · 便装", "gold": 23, "nums": [23, 12], "hit1": true, "hitk": true}
+{"qid": "o046", "pi": 2, "truth": true, "stmt": "第14章「暗流涌动」 · 秦熙 · 房间 · 进行推演 · 疲惫 · 全息投影", "gold": 14, "nums": [14, 23], "hit1": true, "hitk": true}
+{"qid": "o046", "pi": 3, "truth": true, "stmt": "第15章「永恒奴役」 · 陈默 · 舱室 · 建立数学模型 · 如坠冰窟 · 光幕", "gold": 15, "nums": [15, 1], "hit1": true, "hitk": true}
+{"qid": "o046", "pi": 4, "truth": false, "stmt": "第3章「身份谜团」 · 巨子 · 巨子塔 · 得到制造方法 · 苦涩 · 《社会控制论》", "gold": 3, "nums": [3, 2], "hit1": true, "hitk": true}
+{"qid": "o046", "pi": 5, "truth": false, "stmt": "第11章「接风宴」 · 小艾尔 · 西风骑士团 · 进行演讲 · 尴尬 · 断剑", "gold": 11, "nums": [11, 19], "hit1": true, "hitk": true}
+{"qid": "o047", "pi": 0, "truth": true, "stmt": "第17章「反击宣告」 · 陈默 · 摘星崖 · 重新将派蒙抱入怀中 · 复杂 · 塞西莉亚花", "gold": 17, "nums": [17, 13], "hit1": true, "hitk": true}
+{"qid": "o047", "pi": 1, "truth": true, "stmt": "第1章「初见蜂巢世界」 · 陈默 · 六边形的房间 · 选了是 · 茫然 · 手机", "gold": 1, "nums": [1, 4], "hit1": true, "hitk": true}
+{"qid": "o047", "pi": 2, "truth": false, "stmt": "第9章「灵境：原神」 · 派蒙 · 蒙德城 · 接取委托 · 期待 · 断剑", "gold": 9, "nums": [9, 22], "hit1": true, "hitk": true}
+{"qid": "o047", "pi": 3, "truth": true, "stmt": "第4章「蜂巢社会蓝图」 · 陈默 · 房间 · 进入巨子塔 · 冷汗 · 《如何建设蜂巢社会》", "gold": 4, "nums": [4, 1], "hit1": true, "hitk": true}
+{"qid": "o047", "pi": 4, "truth": false, "stmt": "第14章「暗流涌动」 · 秦熙 · 警戒检查中心 · 传递重要消息 · 追忆 · 全息投影", "gold": 14, "nums": [14, 15], "hit1": true, "hitk": true}
+{"qid": "o047", "pi": 5, "truth": false, "stmt": "第6章「权限与贡献点」 · 秦熙 · 求知园 · 投向了否定 · 鄙夷 · 《永生技术原理》", "gold": 6, "nums": [6, 7], "hit1": true, "hitk": true}
+{"qid": "o048", "pi": 0, "truth": true, "stmt": "第5章「历史的断层」 · 张明远 · 求知园 · 设计了严格的审核标准 · 认真 · 光幕", "gold": 5, "nums": [5, 6], "hit1": true, "hitk": true}
+{"qid": "o048", "pi": 1, "truth": true, "stmt": "第7章「被请喝茶」 · 陈默 · 警戒检查中心 · 跟我走一趟 · 紧张 · 防护服", "gold": 7, "nums": [7, 8], "hit1": true, "hitk": true}
+{"qid": "o048", "pi": 2, "truth": true, "stmt": "第1章「初见蜂巢世界」 · 陈默 · 求知园 · 下载这套资料 · 松了口气 · 光幕", "gold": 1, "nums": [1, 2], "hit1": true, "hitk": true}
+{"qid": "o048", "pi": 3, "truth": false, "stmt": "第16章「生命的需求」 · 高瘦老人 · 蜂巢 · 创造了这个世界 · 愁容 · 征求意见稿", "gold": 16, "nums": [16, 6], "hit1": true, "hitk": true}
+{"qid": "o048", "pi": 4, "truth": false, "stmt": "第21章「问题的答案」 · 见习骑士 · 骑士团总部 · 放下羽毛笔 · 温和 · 小道具", "gold": 21, "nums": [21, 22], "hit1": true, "hitk": true}
+{"qid": "o048", "pi": 5, "truth": false, "stmt": "第12章「何为自由」 · 可莉 · 蒙德湖 · 十连抽 · 苦涩 · 蹦蹦炸弹", "gold": 12, "nums": [12, 20], "hit1": true, "hitk": true}
+{"qid": "o049", "pi": 0, "truth": false, "stmt": "第2章「巧合还是阴谋」 · 老人 · 巨子塔 · 赞叹点头 · 苦涩 · 《工程控制论》", "gold": 2, "nums": [2, 4], "hit1": true, "hitk": true}
+{"qid": "o049", "pi": 1, "truth": true, "stmt": "第8章「化解误会」 · 小李 · 警戒检查中心 · 经过一道新的消毒 · 伤感 · 防护服", "gold": 8, "nums": [8, 7], "hit1": true, "hitk": true}
+{"qid": "o049", "pi": 2, "truth": false, "stmt": "第20章「致命危机」 · 诺艾尔 · 蒙德湖 · 参加了烤鱼的宴会 · 头皮发麻 · 蹦蹦炸弹", "gold": 20, "nums": [20, 12], "hit1": true, "hitk": true}
+{"qid": "o049", "pi": 3, "truth": false, "stmt": "第13章「终有一别」 · 派蒙 · 摘星崖 · 拒绝永生的提议 · 追忆 · 治安税", "gold": 13, "nums": [13, 12], "hit1": true, "hitk": true}
+{"qid": "o049", "pi": 4, "truth": true, "stmt": "第8章「化解误会」 · 陈默 · 房间 · 向机器人们敬礼 · 若有所思 · 来福", "gold": 8, "nums": [8, 1], "hit1": true, "hitk": true}
+{"qid": "o049", "pi": 5, "truth": true, "stmt": "第6章「权限与贡献点」 · 张老 · 求知园 · 当时叫做智能工兵 · 尊敬 · 机械犬", "gold": 6, "nums": [6, 5], "hit1": true, "hitk": true}
+{"qid": "o050", "pi": 0, "truth": false, "stmt": "第9章「灵境：原神」 · 派蒙 · 蒙德城 · 接取委托 · 期待 · 断剑", "gold": 9, "nums": [9, 22], "hit1": true, "hitk": true}
+{"qid": "o050", "pi": 1, "truth": false, "stmt": "第23章「再别蒙德」 · 小艾尔 · 摘星崖 · 回到了舱室 · 苦涩 · 便装", "gold": 23, "nums": [23, 13], "hit1": true, "hitk": true}
+{"qid": "o050", "pi": 2, "truth": true, "stmt": "第18章「新的故事」 · 陈默 · 风神像 · 俯瞰着夜幕下的蒙德 · 警铃大作 · 纪念酒盏", "gold": 18, "nums": [18, 19], "hit1": true, "hitk": true}
+{"qid": "o050", "pi": 3, "truth": false, "stmt": "第5章「历史的断层」 · 张明远 · 求知园 · 搜索世界大战 · 惬意 · 光幕", "gold": 5, "nums": [5, 1], "hit1": true, "hitk": true}
+{"qid": "o050", "pi": 4, "truth": true, "stmt": "第21章「问题的答案」 · 温迪 · 蒙德 · 被困在无风之地 · 好奇 · 小道具", "gold": 21, "nums": [21, 9], "hit1": true, "hitk": true}
+{"qid": "o050", "pi": 5, "truth": true, "stmt": "第12章「何为自由」 · 诺艾尔 · 风龙废墟 · 净化毒血 · 安心 · 风鹰剑", "gold": 12, "nums": [12, 19], "hit1": true, "hitk": true}
+{"qid": "o051", "pi": 0, "truth": true, "stmt": "第5章「历史的断层」 · 张明远 · 求知园 · 搜索世界大战 · 凝重 · 光幕", "gold": 5, "nums": [5, 1], "hit1": true, "hitk": true}
+{"qid": "o051", "pi": 1, "truth": true, "stmt": "第13章「终有一别」 · 陈默 · 蜂巢 · 回到了蜂巢世界 · 无言 · 露珠", "gold": 13, "nums": [13, 17], "hit1": true, "hitk": true}
+{"qid": "o051", "pi": 2, "truth": false, "stmt": "第11章「接风宴」 · 派蒙 · 西风骑士团 · 讨伐风魔龙 · 如坠冰窟 · 满足沙拉", "gold": 11, "nums": [11, 12], "hit1": true, "hitk": true}
+{"qid": "o051", "pi": 3, "truth": true, "stmt": "第1章「初见蜂巢世界」 · 陈默 · 六边形房间 · 现在是2045年 · 茫然 · 电子徽章", "gold": 1, "nums": [1, 5], "hit1": true, "hitk": true}
+{"qid": "o051", "pi": 4, "truth": false, "stmt": "第3章「身份谜团」 · 巨子 · 巨子塔 · 权限不足 · 不甘 · 小道具", "gold": 3, "nums": [3, 2], "hit1": true, "hitk": true}
+{"qid": "o051", "pi": 5, "truth": false, "stmt": "第22章「谢谢你 诺艾尔」 · 见习骑士 · 果酒湖 · 低声劝道 · 坚定 · 断剑", "gold": 22, "nums": [22, 19], "hit1": true, "hitk": true}
+{"qid": "o052", "pi": 0, "truth": true, "stmt": "第12章「何为自由」 · 陈默 · 蒙德湖 · 十连抽 · 震撼 · 纠缠之源", "gold": 12, "nums": [12, 1], "hit1": true, "hitk": true}
+{"qid": "o052", "pi": 1, "truth": false, "stmt": "第4章「蜂巢社会蓝图」 · 巨子 · 舱室 · 提出疑问 · 苦涩 · 《如何建设蜂巢社会》", "gold": 4, "nums": [4, 3], "hit1": true, "hitk": true}
+{"qid": "o052", "pi": 2, "truth": true, "stmt": "第11章「接风宴」 · 琴 · 西风骑士团 · 讨伐风魔龙 · 不好意思 · 满足沙拉", "gold": 11, "nums": [11, 12], "hit1": true, "hitk": true}
+{"qid": "o052", "pi": 3, "truth": false, "stmt": "第14章「暗流涌动」 · 秦熙 · 警戒检查中心 · 传递重要消息 · 疲惫 · 断剑", "gold": 14, "nums": [14, 7], "hit1": true, "hitk": true}
+{"qid": "o052", "pi": 4, "truth": false, "stmt": "第19章「蒙德的自由」 · 渔夫 · 果酒湖 · 击退了暴徒 · 头皮发麻 · 苹果酒", "gold": 19, "nums": [19, 20], "hit1": true, "hitk": true}
+{"qid": "o052", "pi": 5, "truth": true, "stmt": "第23章「再别蒙德」 · 陈默 · 摘星崖 · 还会回来 · 复杂 · 便装", "gold": 23, "nums": [23, 13], "hit1": true, "hitk": true}
+{"qid": "o053", "pi": 0, "truth": true, "stmt": "第23章「再别蒙德」 · 诺艾尔 · 摘星崖 · 行了一个标准的骑士礼 · 坚定 · 满足沙拉", "gold": 23, "nums": [23, 14], "hit1": true, "hitk": true}
+{"qid": "o053", "pi": 1, "truth": false, "stmt": "第12章「何为自由」 · 可莉 · 蒙德湖 · 十连抽 · 苦涩 · 蹦蹦炸弹", "gold": 12, "nums": [12, 20], "hit1": true, "hitk": true}
+{"qid": "o053", "pi": 2, "truth": false, "stmt": "第1章「初见蜂巢世界」 · 老人 · 求知园 · 创造了这个世界 · 孤寂 · 青铜鼎", "gold": 1, "nums": [1, 2], "hit1": true, "hitk": true}
+{"qid": "o053", "pi": 3, "truth": false, "stmt": "第7章「被请喝茶」 · 秦熙 · 白色房间 · 取下头盔 · 紧张 · 治安税", "gold": 7, "nums": [7], "hit1": true, "hitk": true}
+{"qid": "o053", "pi": 4, "truth": true, "stmt": "第16章「生命的需求」 · 巨子 · 蜂巢 · 坚决反对永生 · 坚定 · 《熵增的社会学启示》", "gold": 16, "nums": [16, 3], "hit1": true, "hitk": true}
+{"qid": "o053", "pi": 5, "truth": true, "stmt": "第15章「永恒奴役」 · 陈默 · 舱室 · 调出蜂巢共识 · 头皮发麻 · 光幕", "gold": 15, "nums": [15, 1], "hit1": true, "hitk": true}
+{"qid": "o054", "pi": 0, "truth": false, "stmt": "第13章「终有一别」 · 小艾尔 · 摘星崖 · 拒绝永生的提议 · 头皮发麻 · 露珠", "gold": 13, "nums": [13, 17, 23], "hit1": true, "hitk": true}
+{"qid": "o054", "pi": 1, "truth": true, "stmt": "第22章「谢谢你 诺艾尔」 · 骑士 · 广场 · 风神像已被推倒 · 苦涩 · 断剑", "gold": 22, "nums": [22, 18], "hit1": true, "hitk": true}
+{"qid": "o054", "pi": 2, "truth": true, "stmt": "第15章「永恒奴役」 · 陈默 · 舱室 · 建立数学模型 · 如坠冰窟 · 光幕", "gold": 15, "nums": [15, 1], "hit1": true, "hitk": true}
+{"qid": "o054", "pi": 3, "truth": true, "stmt": "第18章「新的故事」 · 诺艾尔 · 图书馆 · 交叠放在身前 · 温柔 · 满足沙拉", "gold": 18, "nums": [18, 22], "hit1": true, "hitk": true}
+{"qid": "o054", "pi": 4, "truth": false, "stmt": "第3章「身份谜团」 · 巨子 · 巨子塔 · 权限不足 · 不甘 · 治安税", "gold": 3, "nums": [3, 2], "hit1": true, "hitk": true}
+{"qid": "o054", "pi": 5, "truth": false, "stmt": "第9章「灵境：原神」 · 派蒙 · 果酒湖 · 接取委托 · 期待 · 原石", "gold": 9, "nums": [9, 11], "hit1": true, "hitk": true}
+{"qid": "q001", "pi": 0, "truth": false, "stmt": "第4章「蜂巢社会蓝图」 · 巨子 · 房间 · 提出疑问 · 冷汗 · 断剑", "gold": 4, "nums": [4, 7], "hit1": true, "hitk": true}
+{"qid": "q001", "pi": 1, "truth": true, "stmt": "第3章「身份谜团」 · 陈默 · 巨子塔 · 提升公民权限等级 · 悬了起来 · 《社会控制论》", "gold": 3, "nums": [3, 2], "hit1": true, "hitk": true}
+{"qid": "q001", "pi": 2, "truth": false, "stmt": "第11章「接风宴」 · 小艾尔 · 西风骑士团 · 办理了临时入住手续 · 期待 · 断剑", "gold": 11, "nums": [11, 19], "hit1": true, "hitk": true}
+{"qid": "q001", "pi": 3, "truth": true, "stmt": "第8章「化解误会」 · 陈默 · 舱室 · 设置一个目标值 · 头疼 · 光幕", "gold": 8, "nums": [8, 1], "hit1": true, "hitk": true}
+{"qid": "q001", "pi": 4, "truth": false, "stmt": "第19章「蒙德的自由」 · 小艾尔 · 风神像 · 进行演讲 · 疑惑 · 风之种", "gold": 19, "nums": [19, 18], "hit1": true, "hitk": true}
+{"qid": "q001", "pi": 5, "truth": true, "stmt": "第6章「权限与贡献点」 · 张老 · 求知园 · 收回授权 · 语重心长 · 光幕", "gold": 6, "nums": [6, 5], "hit1": true, "hitk": true}
+{"qid": "q002", "pi": 0, "truth": true, "stmt": "第5章「历史的断层」 · 陈默 · 地下避难所 · 无法言语 · 震惊 · 光幕", "gold": 5, "nums": [5, 1], "hit1": true, "hitk": true}
+{"qid": "q002", "pi": 1, "truth": true, "stmt": "第1章「初见蜂巢世界」 · 陈默 · 求知园 · 现在是2045年 · 松了口气 · 青铜鼎", "gold": 1, "nums": [1, 2], "hit1": true, "hitk": true}
+{"qid": "q002", "pi": 2, "truth": false, "stmt": "第10章「初次见面」 · 派蒙 · 风龙废墟 · 发射导弹 · 苦涩 · 黎明神剑", "gold": 10, "nums": [10, 12], "hit1": true, "hitk": true}
+{"qid": "q002", "pi": 3, "truth": false, "stmt": "第14章「暗流涌动」 · 秦熙 · 房间 · 创造了这个世界 · 疲惫 · 全息投影", "gold": 14, "nums": [14, 23], "hit1": true, "hitk": true}
+{"qid": "q002", "pi": 4, "truth": true, "stmt": "第5章「历史的断层」 · 张明远 · 火种基地 · 地表生态系统彻底崩溃 · 孤寂 · 合成食物", "gold": 5, "nums": [1], "hit1": false, "hitk": false}
+{"qid": "q002", "pi": 5, "truth": false, "stmt": "第20章「致命危机」 · 可莉 · 蒙德湖 · 参加了烤鱼的宴会 · 头皮发麻 · 蹦蹦炸弹", "gold": 20, "nums": [20, 12], "hit1": true, "hitk": true}
+{"qid": "q003", "pi": 0, "truth": false, "stmt": "第16章「生命的需求」 · 高瘦老人 · 蜂巢 · 创造了这个世界 · 愁容 · 征求意见稿", "gold": 16, "nums": [16, 6], "hit1": true, "hitk": true}
+{"qid": "q003", "pi": 1, "truth": true, "stmt": "第6章「权限与贡献点」 · 张老 · 求知园 · 叹了口气 · 伤感 · 地图", "gold": 6, "nums": [6, 2], "hit1": true, "hitk": true}
+{"qid": "q003", "pi": 2, "truth": true, "stmt": "第3章「身份谜团」 · 陈默 · 舱室 · 涌出泪水 · 不甘 · 《社会控制论》", "gold": 3, "nums": [3, 6], "hit1": true, "hitk": true}
+{"qid": "q003", "pi": 3, "truth": false, "stmt": "第4章「蜂巢社会蓝图」 · 巨子 · 房间 · 提出疑问 · 冷汗 · 断剑", "gold": 4, "nums": [4, 7], "hit1": true, "hitk": true}
+{"qid": "q003", "pi": 4, "truth": false, "stmt": "第19章「蒙德的自由」 · 渔夫 · 果酒湖 · 击退了暴徒 · 疑惑 · 断剑", "gold": 19, "nums": [19, 20], "hit1": true, "hitk": true}
+{"qid": "q003", "pi": 5, "truth": true, "stmt": "第7章「被请喝茶」 · 秦熙 · 白色房间 · 耐心解释 · 温柔 · 防护服", "gold": 7, "nums": [7, 23], "hit1": true, "hitk": true}
+{"qid": "q004", "pi": 0, "truth": false, "stmt": "第14章「暗流涌动」 · 秦熙 · 个人办公室 · 直接向我报告 · 沉重 · 情书", "gold": 14, "nums": [14], "hit1": true, "hitk": true}
+{"qid": "q004", "pi": 1, "truth": false, "stmt": "第8章「化解误会」 · 小李 · 警戒检查中心 · 隐私给安全低头 · 疲惫 · 防护服", "gold": 8, "nums": [8, 14], "hit1": true, "hitk": true}
+{"qid": "q004", "pi": 2, "truth": false, "stmt": "第6章「权限与贡献点」 · 张老 · 风神像 · 收回授权 · 冷峻 · 战车", "gold": 6, "nums": [6], "hit1": true, "hitk": true}
+{"qid": "q004", "pi": 3, "truth": true, "stmt": "第4章「蜂巢社会蓝图」 · 陈默 · 巨子塔 · 访问需要5级权限 · 冷汗 · 词条", "gold": 4, "nums": [4, 2], "hit1": true, "hitk": true}
+{"qid": "q004", "pi": 4, "truth": true, "stmt": "第3章「身份谜团」 · 指南 · 舱室 · 提供实时信息反馈 · 不甘 · 《社会控制论》", "gold": 3, "nums": [3, 6], "hit1": true, "hitk": true}
+{"qid": "q004", "pi": 5, "truth": true, "stmt": "第2章「巧合还是阴谋」 · 陈默 · 舱室 · 可以作为个人操作终端 · 无聊 · 光幕", "gold": 2, "nums": [2, 1], "hit1": true, "hitk": true}
+{"qid": "q005", "pi": 0, "truth": true, "stmt": "第13章「终有一别」 · 派蒙 · 蒙德城 · 完全按照程序的机器人们 · 伤心 · 信", "gold": 13, "nums": [13, 21], "hit1": true, "hitk": true}
+{"qid": "q005", "pi": 1, "truth": false, "stmt": "第22章「谢谢你 诺艾尔」 · 骑士 · 商会 · 可以凌驾于他人之上的自由 · 贪婪 · 风之种", "gold": 22, "nums": [22, 18], "hit1": true, "hitk": true}
+{"qid": "q005", "pi": 2, "truth": false, "stmt": "第11章「接风宴」 · 琴 · 摘星崖 · 让旅行者打消回家的念头 · 气得跳脚 · 提瓦特煎蛋", "gold": 11, "nums": [11], "hit1": true, "hitk": true}
+{"qid": "q005", "pi": 3, "truth": true, "stmt": "第21章「问题的答案」 · 巨子 · 蒙德城 · 我创造了这个世界 · 温和 · 手稿", "gold": 21, "nums": [21, 18], "hit1": true, "hitk": true}
+{"qid": "q005", "pi": 4, "truth": false, "stmt": "第18章「新的故事」 · 商人 · 图书馆 · 一缕自由之风 · 凝重 · 酒盏", "gold": 18, "nums": [18, 19], "hit1": true, "hitk": true}
+{"qid": "q005", "pi": 5, "truth": true, "stmt": "第10章「初次见面」 · 派蒙 · 蒙德城 · 都是风神给予派蒙的自由 · 害羞 · 相遇之源", "gold": 10, "nums": [10, 11], "hit1": true, "hitk": true}
+{"qid": "q006", "pi": 0, "truth": true, "stmt": "第16章「生命的需求」 · 巨子 · 舱室 · 坚决反对永生 · 坚定 · 《熵增的社会学启示》", "gold": 16, "nums": [16, 3], "hit1": true, "hitk": true}
+{"qid": "q006", "pi": 1, "truth": false, "stmt": "第10章「初次见面」 · 派蒙 · 风龙遗迹 · 绕开神经认证 · 严肃 · 原石", "gold": 10, "nums": [10, 9], "hit1": true, "hitk": true}
+{"qid": "q006", "pi": 2, "truth": false, "stmt": "第19章「蒙德的自由」 · 琴团长 · 西风骑士团 · 恐惧是有传染性的 · 凝重 · 蒲公英茶", "gold": 19, "nums": [19, 23], "hit1": true, "hitk": true}
+{"qid": "q006", "pi": 3, "truth": false, "stmt": "第13章「终有一别」 · 诺艾尔 · 会议室 · 一直想要帮到更多人的忙 · 温柔 · 情书", "gold": 13, "nums": [13, 17], "hit1": true, "hitk": true}
+{"qid": "q006", "pi": 4, "truth": true, "stmt": "第15章「永恒奴役」 · 陈默 · 舱室 · 形成永恒的奴役 · 头皮发麻 · 光幕", "gold": 15, "nums": [15, 1], "hit1": true, "hitk": true}
+{"qid": "q006", "pi": 5, "truth": true, "stmt": "第21章「问题的答案」 · 巨子 · 蜂巢 · 彻底的反对永生 · 恐惧 · 机器人", "gold": 21, "nums": [21, 15], "hit1": true, "hitk": true}
+{"qid": "q007", "pi": 0, "truth": false, "stmt": "第2章「巧合还是阴谋」 · 指南 · 舱室 · 信息管理节点 · 鄙夷 · 地图", "gold": 2, "nums": [2, 6], "hit1": true, "hitk": true}
+{"qid": "q007", "pi": 1, "truth": true, "stmt": "第8章「化解误会」 · 秦熙 · 警戒检查中心 · 信息难以作假 · 疑惑 · 光幕", "gold": 8, "nums": [8, 7], "hit1": true, "hitk": true}
+{"qid": "q007", "pi": 2, "truth": true, "stmt": "第6章「权限与贡献点」 · 张老 · 求知园 · 这是第五个了吧 · 羡慕 · 贡献点", "gold": 6, "nums": [6, 5], "hit1": true, "hitk": true}
+{"qid": "q007", "pi": 3, "truth": true, "stmt": "第7章「被请喝茶」 · 秦熙 · 警戒检查中心 · 自由派的探子 · 敌意 · 头盔", "gold": 7, "nums": [7, 8], "hit1": true, "hitk": true}
+{"qid": "q007", "pi": 4, "truth": false, "stmt": "第14章「暗流涌动」 · 张老 · 个人办公室 · 认知污染 · 疲惫 · 全息投影", "gold": 14, "nums": [14, 15], "hit1": true, "hitk": true}
+{"qid": "q007", "pi": 5, "truth": false, "stmt": "第23章「再别蒙德」 · 陈默 · 摘星崖 · 自由派的活动正在升级 · 凝重 · 地图", "gold": 23, "nums": [23, 2], "hit1": true, "hitk": true}
+{"qid": "q008", "pi": 0, "truth": false, "stmt": "第20章「致命危机」 · 女士 · 蒙德城 · 只有缴纳足够繁荣税的人才能加入 · 无奈 · 星尘", "gold": 20, "nums": [20, 22], "hit1": true, "hitk": true}
+{"qid": "q008", "pi": 1, "truth": false, "stmt": "第15章「永恒奴役」 · 王明 · 求知园 · 需要认知疫苗 · 担忧 · 全息投影", "gold": 15, "nums": [15], "hit1": true, "hitk": true}
+{"qid": "q008", "pi": 2, "truth": true, "stmt": "第16章「生命的需求」 · 张老 · 求知园 · 具有自我意识的ai · 愁容 · 光幕", "gold": 16, "nums": [16, 5], "hit1": true, "hitk": true}
+{"qid": "q008", "pi": 3, "truth": true, "stmt": "第21章「问题的答案」 · 风神 · 试验田 · 我不该成为他们的束缚 · 温和 · 报告", "gold": 21, "nums": [21, 18], "hit1": true, "hitk": true}
+{"qid": "q008", "pi": 4, "truth": true, "stmt": "第17章「反击宣告」 · 派蒙 · 摘星崖 · 风神称我们是自由的灵魂 · 痛苦 · 塞西莉亚花", "gold": 17, "nums": [17, 12], "hit1": true, "hitk": true}
+{"qid": "q008", "pi": 5, "truth": false, "stmt": "第13章「终有一别」 · 小艾尔 · 蜂巢 · 可以多来找我么 · 忐忑 · 信", "gold": 13, "nums": [13, 2], "hit1": true, "hitk": true}
+{"qid": "q009", "pi": 0, "truth": false, "stmt": "第22章「谢谢你 诺艾尔」 · 张明远 · 蒙德城图书馆 · 维护平民权益 · 不甘心 · 铠甲", "gold": 22, "nums": [22], "hit1": true, "hitk": true}
+{"qid": "q009", "pi": 1, "truth": true, "stmt": "第6章「权限与贡献点」 · 周清源 · 求知园 · 投向了否定 · 鄙夷 · 贡献点", "gold": 6, "nums": [6, 1], "hit1": true, "hitk": true}
+{"qid": "q009", "pi": 2, "truth": true, "stmt": "第16章「生命的需求」 · 张老 · 求知园 · 就被禁止了 · 一颤 · 意见稿", "gold": 16, "nums": [16, 5], "hit1": true, "hitk": true}
+{"qid": "q009", "pi": 3, "truth": true, "stmt": "第21章「问题的答案」 · 风神 · 蒙德城 · 我只是个普通人 · 温和 · 报告", "gold": 21, "nums": [21, 18], "hit1": true, "hitk": true}
+{"qid": "q009", "pi": 4, "truth": false, "stmt": "第14章「暗流涌动」 · 秦熙 · 个人办公室 · 自由派的活动正在升级 · 关切 · 全息投影", "gold": 14, "nums": [14, 23], "hit1": true, "hitk": true}
+{"qid": "q009", "pi": 5, "truth": false, "stmt": "第13章「终有一别」 · 派蒙 · 摘星崖 · 我们都是自由的灵魂 · 埋怨 · 原石", "gold": 13, "nums": [13, 17], "hit1": true, "hitk": true}
+{"qid": "q010", "pi": 0, "truth": false, "stmt": "第7章「被请喝茶」 · 小李 · 白色房间 · 自由派的探子 · 紧张 · 电子徽章", "gold": 7, "nums": [7, 8], "hit1": true, "hitk": true}
+{"qid": "q010", "pi": 1, "truth": true, "stmt": "第2章「巧合还是阴谋」 · 陈默 · 轨道 · 完全不需要人参与 · 忐忑 · 修复液", "gold": 2, "nums": [2, 7], "hit1": true, "hitk": true}
+{"qid": "q010", "pi": 2, "truth": true, "stmt": "第1章「初见蜂巢世界」 · 陈默 · 求知园 · 每日2小时 · 兴奋 · 电子徽章", "gold": 1, "nums": [1, 17], "hit1": true, "hitk": true}
+{"qid": "q010", "pi": 3, "truth": false, "stmt": "第14章「暗流涌动」 · 秦熙 · 警戒检查中心 · 达到3分钟后未自行退出 · 羡慕 · 全息投影", "gold": 14, "nums": [14, 15], "hit1": true, "hitk": true}
+{"qid": "q010", "pi": 4, "truth": false, "stmt": "第19章「蒙德的自由」 · 琴团长 · 巨子塔 · 永护蒙德 · 坚定 · 风鹰剑", "gold": 19, "nums": [19, 22], "hit1": true, "hitk": true}
+{"qid": "q010", "pi": 5, "truth": true, "stmt": "第6章「权限与贡献点」 · 张老 · 求知园 · 军用技术民用化 · 尊敬 · 机械犬", "gold": 6, "nums": [6, 5], "hit1": true, "hitk": true}
+{"qid": "q011", "pi": 0, "truth": true, "stmt": "第5章「历史的断层」 · 张明远 · 求知园 · 九成九以上的人口 · 震惊 · 合成食物", "gold": 5, "nums": [1, 5], "hit1": false, "hitk": true}
+{"qid": "q011", "pi": 1, "truth": true, "stmt": "第6章「权限与贡献点」 · 张老 · 求知园 · 收回授权 · 冷峻 · 贡献点", "gold": 6, "nums": [6, 5], "hit1": true, "hitk": true}
+{"qid": "q011", "pi": 2, "truth": false, "stmt": "第22章「谢谢你 诺艾尔」 · 诺艾尔 · 骑士团总部 · 维护平民权益 · 苦涩 · 情书", "gold": 22, "nums": [22, 13], "hit1": true, "hitk": true}
+{"qid": "q011", "pi": 3, "truth": false, "stmt": "第8章「化解误会」 · 周清源 · 警戒检查中心 · 陆军型号 · 无语 · 来福", "gold": 8, "nums": [8, 6], "hit1": true, "hitk": true}
+{"qid": "q011", "pi": 4, "truth": false, "stmt": "第1章「初见蜂巢世界」 · 陈默 · 六边形的房间 · 吃饭免费 · 震惊 · 合成餐", "gold": 1, "nums": [1], "hit1": true, "hitk": true}
+{"qid": "q011", "pi": 5, "truth": true, "stmt": "第4章「蜂巢社会蓝图」 · 指南 · 巨子塔 · 访问需要5级权限 · 冷汗 · 词条", "gold": 4, "nums": [4, 2], "hit1": true, "hitk": true}
+{"qid": "q012", "pi": 0, "truth": true, "stmt": "第6章「权限与贡献点」 · 张老 · 求知园 · 蜂巢世界的真正建设者 · 尊敬 · 机械犬", "gold": 6, "nums": [6, 5], "hit1": true, "hitk": true}
+{"qid": "q012", "pi": 1, "truth": false, "stmt": "第14章「暗流涌动」 · 秦熙 · 个人办公室 · 防止自我维护 · 关切 · 防护服", "gold": 14, "nums": [14, 7], "hit1": true, "hitk": true}
+{"qid": "q012", "pi": 2, "truth": true, "stmt": "第1章「初见蜂巢世界」 · 陈默 · 求知园 · 轨道清洁机器人协理员 · 平静 · 电子徽章", "gold": 1, "nums": [1, 2], "hit1": true, "hitk": true}
+{"qid": "q012", "pi": 3, "truth": true, "stmt": "第2章「巧合还是阴谋」 · 陈默 · 轨道 · 必须由公民定期进行检测 · 忐忑 · 修复液", "gold": 2, "nums": [2, 7], "hit1": true, "hitk": true}
+{"qid": "q012", "pi": 4, "truth": false, "stmt": "第20章「致命危机」 · 女士 · 蒙德城 · 这是一种潜移默化的入侵 · 担忧 · 原石", "gold": 20, "nums": [20, 9], "hit1": true, "hitk": true}
+{"qid": "q012", "pi": 5, "truth": false, "stmt": "第3章「身份谜团」 · 指南 · 巨子塔 · 核心信息存储节点 · 一丝诡异 · 机械犬", "gold": 3, "nums": [3, 4], "hit1": true, "hitk": true}
+{"qid": "q013", "pi": 0, "truth": false, "stmt": "第12章「何为自由」 · 派蒙 · 会议室 · 四人带着派蒙进入封印内部 · 安心 · 塞西莉亚花", "gold": 12, "nums": [12, 23], "hit1": true, "hitk": true}
+{"qid": "q013", "pi": 1, "truth": true, "stmt": "第3章「身份谜团」 · 陈默 · 舱室 · 提供实时信息反馈 · 不甘 · 《社会控制论》", "gold": 3, "nums": [3, 6], "hit1": true, "hitk": true}
+{"qid": "q013", "pi": 2, "truth": true, "stmt": "第4章「蜂巢社会蓝图」 · 指南 · 巨子塔 · 能验证想的和说的是否一致 · 不安 · 神经认证", "gold": 4, "nums": [4, 8], "hit1": true, "hitk": true}
+{"qid": "q013", "pi": 3, "truth": false, "stmt": "第7章「被请喝茶」 · 秦熙 · 警戒检查中心 · 请你谅解我们的职责 · 鄙夷 · 扫描器", "gold": 7, "nums": [7, 6], "hit1": true, "hitk": true}
+{"qid": "q013", "pi": 4, "truth": true, "stmt": "第6章「权限与贡献点」 · 张老 · 求知园 · 真诚自愿 · 语重心长 · 贡献点", "gold": 6, "nums": [6, 5], "hit1": true, "hitk": true}
+{"qid": "q013", "pi": 5, "truth": false, "stmt": "第18章「新的故事」 · 小艾尔 · 图书馆 · 让自己开心也很重要 · 愉悦 · 意见稿", "gold": 18, "nums": [18, 23], "hit1": true, "hitk": true}
+{"qid": "q014", "pi": 0, "truth": false, "stmt": "第20章「致命危机」 · 女士 · 求知园 · 采购蒙德的酒业渔业产品 · 诧异 · 合作清单", "gold": 20, "nums": [20], "hit1": true, "hitk": true}
+{"qid": "q014", "pi": 1, "truth": true, "stmt": "第3章「身份谜团」 · 陈默 · 舱室 · 持续地微调 · 泪水 · 《社会控制论》", "gold": 3, "nums": [3, 6], "hit1": true, "hitk": true}
+{"qid": "q014", "pi": 2, "truth": false, "stmt": "第9章「灵境：原神」 · 张明远 · 蒙德城 · 接取委托 · 好奇 · 原石", "gold": 9, "nums": [9, 5], "hit1": true, "hitk": true}
+{"qid": "q014", "pi": 3, "truth": true, "stmt": "第6章「权限与贡献点」 · 张老 · 求知园 · 按照贡献的百分比 · 语重心长 · 授权", "gold": 6, "nums": [6, 5], "hit1": true, "hitk": true}
+{"qid": "q014", "pi": 4, "truth": true, "stmt": "第16章「生命的需求」 · 张老 · 求知园 · 上传自己的工作贡献证明 · 激动 · 贡献点", "gold": 16, "nums": [16, 5], "hit1": true, "hitk": true}
+{"qid": "q014", "pi": 5, "truth": false, "stmt": "第5章「历史的断层」 · 张明远 · 地下避难所 · 地表生态系统彻底崩溃 · 紧张 · 合成食物", "gold": 5, "nums": [5], "hit1": true, "hitk": true}
+{"qid": "q015", "pi": 0, "truth": false, "stmt": "第19章「蒙德的自由」 · 诺艾尔 · 会议室 · 力量，来源于我们每一个人 · 决心 · 铠甲", "gold": 19, "nums": [19, 18], "hit1": true, "hitk": true}
+{"qid": "q015", "pi": 1, "truth": false, "stmt": "第1章「初见蜂巢世界」 · 指南 · 求知园 · 请观看本指南 · 兴奋 · 全息投影", "gold": 1, "nums": [1, 2], "hit1": true, "hitk": true}
+{"qid": "q015", "pi": 2, "truth": true, "stmt": "第23章「再别蒙德」 · 陈默 · 警戒检查中心 · 与现实的时间流速差 · 坚定 · 模型", "gold": 23, "nums": [23, 6], "hit1": true, "hitk": true}
+{"qid": "q015", "pi": 3, "truth": true, "stmt": "第14章「暗流涌动」 · 秦熙 · 个人办公室 · 认知污染 · 沉重 · 全息投影", "gold": 14, "nums": [14, 15, 23], "hit1": true, "hitk": true}
+{"qid": "q015", "pi": 4, "truth": false, "stmt": "第8章「化解误会」 · 王明 · 舱室 · 隐私给安全低头 · 疲倦 · 防护服", "gold": 8, "nums": [8, 7], "hit1": true, "hitk": true}
+{"qid": "q015", "pi": 5, "truth": true, "stmt": "第15章「永恒奴役」 · 秦熙 · 会议室 · 绕开神经认证 · 恐惧 · 全息投影", "gold": 15, "nums": [15, 23], "hit1": true, "hitk": true}
+{"qid": "q016", "pi": 0, "truth": false, "stmt": "第23章「再别蒙德」 · 秦熙 · 警戒检查中心 · 防止自我维护 · 凝重 · 全息投影", "gold": 23, "nums": [23, 14], "hit1": true, "hitk": true}
+{"qid": "q016", "pi": 1, "truth": true, "stmt": "第3章「身份谜团」 · 指南 · 巨子塔 · 权限不足 · 一丝诡异 · 《文明细胞论》", "gold": 3, "nums": [3, 2], "hit1": true, "hitk": true}
+{"qid": "q016", "pi": 2, "truth": true, "stmt": "第16章「生命的需求」 · 张老 · 求知园 · 智能涌现 · 激动 · 光幕", "gold": 16, "nums": [16, 5], "hit1": true, "hitk": true}
+{"qid": "q016", "pi": 3, "truth": false, "stmt": "第11章「接风宴」 · 派蒙 · 蒙德城 · 按照先来后到的原则 · 遗憾 · 满足沙拉", "gold": 11, "nums": [11, 18], "hit1": true, "hitk": true}
+{"qid": "q016", "pi": 4, "truth": true, "stmt": "第2章「巧合还是阴谋」 · 指南 · 舱室 · 信息管理节点 · 无聊 · 光幕", "gold": 2, "nums": [2, 1], "hit1": true, "hitk": true}
+{"qid": "q016", "pi": 5, "truth": false, "stmt": "第21章「问题的答案」 · 巨子 · 试验田 · 我只是个普通人 · 骄傲 · 词条", "gold": 21, "nums": [21, 2], "hit1": true, "hitk": true}
+{"qid": "q017", "pi": 0, "truth": true, "stmt": "第13章「终有一别」 · 诺艾尔 · 蒙德城 · 一直想要帮到更多人的忙 · 温柔 · 情书", "gold": 13, "nums": [13, 22], "hit1": true, "hitk": true}
+{"qid": "q017", "pi": 1, "truth": false, "stmt": "第18章「新的故事」 · 派蒙 · 风神像 · 成为唯一的神 · 恐惧 · 相遇之源", "gold": 18, "nums": [18, 19], "hit1": true, "hitk": true}
+{"qid": "q017", "pi": 2, "truth": true, "stmt": "第11章「接风宴」 · 小艾尔 · 西风骑士团 · 很快就接受了这样的称呼 · 期待 · 原石", "gold": 11, "nums": [11, 23], "hit1": true, "hitk": true}
+{"qid": "q017", "pi": 3, "truth": false, "stmt": "第22章「谢谢你 诺艾尔」 · 骑士 · 骑士团总部 · 按照先来后到的原则 · 好奇 · 星尘", "gold": 22, "nums": [22, 21], "hit1": true, "hitk": true}
+{"qid": "q017", "pi": 4, "truth": true, "stmt": "第10章「初次见面」 · 诺艾尔 · 蒙德城 · 第一次祈愿有保底角色 · 害羞 · 相遇之源", "gold": 10, "nums": [10, 11], "hit1": true, "hitk": true}
+{"qid": "q017", "pi": 5, "truth": false, "stmt": "第12章「何为自由」 · 凯亚 · 摘星崖 · 讨伐风魔龙 · 忐忑 · 风鹰剑", "gold": 12, "nums": [12, 11], "hit1": true, "hitk": true}
+{"qid": "q018", "pi": 0, "truth": false, "stmt": "第19章「蒙德的自由」 · 安柏 · 果酒湖 · 都好孤独 · 凝重 · 苹果酒", "gold": 19, "nums": [19], "hit1": true, "hitk": true}
+{"qid": "q018", "pi": 1, "truth": false, "stmt": "第12章「何为自由」 · 张老 · 风龙废墟 · 讨伐风魔龙 · 震撼 · 大剑", "gold": 12, "nums": [12], "hit1": true, "hitk": true}
+{"qid": "q018", "pi": 2, "truth": true, "stmt": "第13章「终有一别」 · 小艾尔 · 蒙德城 · 你会感到难过么 · 难过 · 情书", "gold": 13, "nums": [13, 11], "hit1": true, "hitk": true}
+{"qid": "q018", "pi": 3, "truth": true, "stmt": "第17章「反击宣告」 · 派蒙 · 摘星崖 · 风神称我们是自由的灵魂 · 痛苦 · 塞西莉亚花", "gold": 17, "nums": [17, 12], "hit1": true, "hitk": true}
+{"qid": "q018", "pi": 4, "truth": true, "stmt": "第18章「新的故事」 · 小艾尔 · 图书馆 · 让自己开心也很重要 · 愉悦 · 苹果", "gold": 18, "nums": [18, 19], "hit1": true, "hitk": true}
+{"qid": "q018", "pi": 5, "truth": false, "stmt": "第10章「初次见面」 · 诺艾尔 · 冒险者协会 · 想起来了 · 骄傲 · 原石", "gold": 10, "nums": [10, 9], "hit1": true, "hitk": true}
+{"qid": "q019", "pi": 0, "truth": false, "stmt": "第21章「问题的答案」 · 秦熙 · 蜂巢 · 自由的灵魂被我安放在此处 · 好奇 · 安生之地", "gold": 21, "nums": [21, 7], "hit1": true, "hitk": true}
+{"qid": "q019", "pi": 1, "truth": true, "stmt": "第13章「终有一别」 · 派蒙 · 蒙德城 · 他仍然陪在我身边 · 流泪 · 情书", "gold": 13, "nums": [13, 9], "hit1": true, "hitk": true}
+{"qid": "q019", "pi": 2, "truth": false, "stmt": "第17章「反击宣告」 · 陈默 · 摘星崖 · 我们属于这块自由之地 · 坚定 · 相遇之源", "gold": 17, "nums": [17, 12], "hit1": true, "hitk": true}
+{"qid": "q019", "pi": 3, "truth": false, "stmt": "第18章「新的故事」 · 商人 · 蒙德城广场 · 一缕自由之风 · 遗憾 · 纪念酒盏", "gold": 18, "nums": [18], "hit1": true, "hitk": true}
+{"qid": "q019", "pi": 4, "truth": true, "stmt": "第10章「初次见面」 · 派蒙 · 蒙德城 · 他和我约好要陪我的 · 怀念 · 相遇之源", "gold": 10, "nums": [10, 11], "hit1": true, "hitk": true}
+{"qid": "q019", "pi": 5, "truth": true, "stmt": "第11章「接风宴」 · 派蒙 · 蒙德城 · 让旅行者打消回家的念头 · 期待 · 甜甜花酿鸡", "gold": 11, "nums": [11, 18], "hit1": true, "hitk": true}
+{"qid": "q020", "pi": 0, "truth": false, "stmt": "第23章「再别蒙德」 · 陈默 · 摘星崖 · 自由不是放纵 · 决断 · 酒盏", "gold": 23, "nums": [23, 12], "hit1": true, "hitk": true}
+{"qid": "q020", "pi": 1, "truth": false, "stmt": "第11章「接风宴」 · 小艾尔 · 西风骑士团 · 很快就接受了这样的称呼 · 不甘心 · 荣誉骑士", "gold": 11, "nums": [11, 13], "hit1": true, "hitk": true}
+{"qid": "q020", "pi": 2, "truth": true, "stmt": "第22章「谢谢你 诺艾尔」 · 诺艾尔 · 骑士团总部 · 她死战不退，力竭而亡 · 坚定 · 铠甲", "gold": 22, "nums": [22, 18], "hit1": true, "hitk": true}
+{"qid": "q020", "pi": 3, "truth": false, "stmt": "第19章「蒙德的自由」 · 凯亚 · 试验田 · 指出了这种美好的脆弱 · 决心 · 风鹰剑", "gold": 19, "nums": [19], "hit1": true, "hitk": true}
+{"qid": "q020", "pi": 4, "truth": true, "stmt": "第13章「终有一别」 · 诺艾尔 · 蒙德城 · 像我这样自私的做法 · 温柔 · 情书", "gold": 13, "nums": [13, 22], "hit1": true, "hitk": true}
+{"qid": "q020", "pi": 5, "truth": true, "stmt": "第10章「初次见面」 · 诺艾尔 · 冒险者协会 · 身穿女仆服装的诺艾尔 · 高兴 · 原石", "gold": 10, "nums": [10, 9], "hit1": true, "hitk": true}
+{"qid": "q021", "pi": 0, "truth": true, "stmt": "第22章「谢谢你 诺艾尔」 · 旅行者 · 蒙德城图书馆 · 不可避免的喜欢上 · 红晕 · 铠甲", "gold": 22, "nums": [22, 18], "hit1": true, "hitk": true}
+{"qid": "q021", "pi": 1, "truth": true, "stmt": "第13章「终有一别」 · 陈默 · 摘星崖 · 你们也并非是派蒙 · 温暖 · 塞西莉亚花", "gold": 13, "nums": [13, 23], "hit1": true, "hitk": true}
+{"qid": "q021", "pi": 2, "truth": true, "stmt": "第17章「反击宣告」 · 陈默 · 摘星崖 · 就像自己需要吃饭喝水一样 · 坚定 · 原神", "gold": 17, "nums": [17, 13], "hit1": true, "hitk": true}
+{"qid": "q021", "pi": 3, "truth": false, "stmt": "第12章「何为自由」 · 派蒙 · 骑士团总部 · 我不希望你听从深渊 · 认真 · 蹦蹦炸弹", "gold": 12, "nums": [12, 21], "hit1": true, "hitk": true}
+{"qid": "q021", "pi": 4, "truth": false, "stmt": "第10章「初次见面」 · 派蒙 · 蒙德城 · 风神是这个世界的创造者 · 鄙夷 · 黎明神剑", "gold": 10, "nums": [10, 9], "hit1": true, "hitk": true}
+{"qid": "q021", "pi": 5, "truth": false, "stmt": "第18章「新的故事」 · 派蒙 · 图书馆 · 都好孤独 · 愉悦 · 苹果酒", "gold": 18, "nums": [18, 19], "hit1": true, "hitk": true}
+{"qid": "q022", "pi": 0, "truth": true, "stmt": "第22章「谢谢你 诺艾尔」 · 骑士 · 商会 · 可以凌驾于他人之上的自由 · 贪婪 · 铠甲", "gold": 22, "nums": [22, 18], "hit1": true, "hitk": true}
+{"qid": "q022", "pi": 1, "truth": true, "stmt": "第18章「新的故事」 · 派蒙 · 风神像 · 成为唯一的神 · 恐惧 · 苹果", "gold": 18, "nums": [18, 19], "hit1": true, "hitk": true}
+{"qid": "q022", "pi": 2, "truth": true, "stmt": "第15章「永恒奴役」 · 巨子 · 蜂巢共识 · 对永生的坚决否定 · 如坠冰窟 · 图表", "gold": 15, "nums": [15, 16], "hit1": true, "hitk": true}
+{"qid": "q022", "pi": 3, "truth": false, "stmt": "第13章「终有一别」 · 陈默 · 蒙德城 · 真正的安全 · 埋怨 · 情书", "gold": 13, "nums": [13, 19], "hit1": true, "hitk": true}
+{"qid": "q022", "pi": 4, "truth": false, "stmt": "第17章「反击宣告」 · 琴团长 · 自由之地 · 有权选择自己想要什么 · 兴奋 · 原神", "gold": 17, "nums": [17, 9], "hit1": true, "hitk": true}
+{"qid": "q022", "pi": 5, "truth": false, "stmt": "第19章「蒙德的自由」 · 琴团长 · 西风骑士团 · 再这样下去，蒙德或许会 · 凝重 · 酒盏", "gold": 19, "nums": [19, 23], "hit1": true, "hitk": true}
+{"qid": "q023", "pi": 0, "truth": true, "stmt": "第5章「历史的断层」 · 张明远 · 巨子塔 · 能进去至少需要5级的贡献 · 好奇 · 指南", "gold": 5, "nums": [5, 7], "hit1": true, "hitk": true}
+{"qid": "q023", "pi": 1, "truth": false, "stmt": "第16章「生命的需求」 · 巨子 · 舱室 · 为什么我要坚决反对永生 · 坚定 · 原石", "gold": 16, "nums": [16, 23], "hit1": true, "hitk": true}
+{"qid": "q023", "pi": 2, "truth": true, "stmt": "第2章「巧合还是阴谋」 · 陈默 · 轨道 · 防止自我维护 · 耐人寻味 · 自动化机器人", "gold": 2, "nums": [2, 1], "hit1": true, "hitk": true}
+{"qid": "q023", "pi": 3, "truth": true, "stmt": "第21章「问题的答案」 · 巨子 · 蒙德城 · 自由的灵魂被我安放在此处 · 骄傲 · 小道具", "gold": 21, "nums": [21, 10], "hit1": true, "hitk": true}
+{"qid": "q023", "pi": 4, "truth": false, "stmt": "第9章「灵境：原神」 · 派蒙 · 蒙德城 · 采集蒲公英 · 凝重 · 原石", "gold": 9, "nums": [23, 9], "hit1": false, "hitk": true}
+{"qid": "q023", "pi": 5, "truth": false, "stmt": "第6章「权限与贡献点」 · 派蒙 · 求知园 · 是需要公民通过神经认证 · 语重心长 · 贡献点", "gold": 6, "nums": [6, 16], "hit1": true, "hitk": true}
+{"qid": "q024", "pi": 0, "truth": true, "stmt": "第4章「蜂巢社会蓝图」 · 陈默 · 舱室 · 像极了《墨子》 · 不安 · 工程控制论", "gold": 4, "nums": [4, 2], "hit1": true, "hitk": true}
+{"qid": "q024", "pi": 1, "truth": false, "stmt": "第15章「永恒奴役」 · 陈默 · 全息界面 · 不是恐惧技术 · 凝重 · 光幕", "gold": 15, "nums": [15, 23], "hit1": true, "hitk": true}
+{"qid": "q024", "pi": 2, "truth": false, "stmt": "第2章「巧合还是阴谋」 · 派蒙 · 求知园 · 为我们创造了这个新世界 · 庄重 · 工程控制论", "gold": 2, "nums": [2, 4], "hit1": true, "hitk": true}
+{"qid": "q024", "pi": 3, "truth": true, "stmt": "第6章「权限与贡献点」 · 张老 · 蜂巢 · 智能化机器人大战 · 认真 · 光幕", "gold": 6, "nums": [6, 5], "hit1": true, "hitk": true}
+{"qid": "q024", "pi": 4, "truth": true, "stmt": "第21章「问题的答案」 · 巨子 · 蒙德城 · 我只是一个拙劣的模仿者 · 遗憾 · 道具", "gold": 21, "nums": [21, 3], "hit1": true, "hitk": true}
+{"qid": "q024", "pi": 5, "truth": false, "stmt": "第8章「化解误会」 · 小李 · 摘星崖 · 他们看到的只是一部分真相 · 疑惑 · 防护服", "gold": 8, "nums": [8, 7], "hit1": true, "hitk": true}
+{"qid": "q025", "pi": 0, "truth": true, "stmt": "第2章「巧合还是阴谋」 · 陈默 · 求知园 · 在光幕上点击提交 · 满足 · 贡献点", "gold": 2, "nums": [2, 1], "hit1": true, "hitk": true}
+{"qid": "q025", "pi": 1, "truth": true, "stmt": "第5章「历史的断层」 · 张明远 · 求知园 · 都会将技术转移到巨子塔 · 认真 · 控制论", "gold": 5, "nums": [5, 6], "hit1": true, "hitk": true}
+{"qid": "q025", "pi": 2, "truth": false, "stmt": "第4章「蜂巢社会蓝图」 · 巨子 · 蜂巢 · 确实导致智能涌现 · 冷汗 · 量子通信", "gold": 4, "nums": [4, 8], "hit1": true, "hitk": true}
+{"qid": "q025", "pi": 3, "truth": false, "stmt": "第1章「初见蜂巢世界」 · 陈默 · 白色房间 · 现在是2045年 · 茫然 · 电子徽章", "gold": 1, "nums": [1, 5], "hit1": true, "hitk": true}
+{"qid": "q025", "pi": 4, "truth": false, "stmt": "第7章「被请喝茶」 · 秦熙 · 蒙德城 · 请你谅解我们的职责 · 无奈 · 防护服", "gold": 7, "nums": [7, 20], "hit1": true, "hitk": true}
+{"qid": "q025", "pi": 5, "truth": true, "stmt": "第3章「身份谜团」 · 陈默 · 舱室 · 也许是内置化的脑机接口芯片 · 不甘 · 指南", "gold": 3, "nums": [3, 1], "hit1": true, "hitk": true}
+{"qid": "q026", "pi": 0, "truth": true, "stmt": "第13章「终有一别」 · 派蒙 · 摘星崖 · 你们终究是不一样的 · 埋怨 · 塞西莉亚花", "gold": 13, "nums": [13, 17], "hit1": true, "hitk": true}
+{"qid": "q026", "pi": 1, "truth": false, "stmt": "第21章「问题的答案」 · 巨子 · 蒙德城 · 答案交给你这样的后来人 · 温和 · 情书", "gold": 21, "nums": [21, 13], "hit1": true, "hitk": true}
+{"qid": "q026", "pi": 2, "truth": true, "stmt": "第3章「身份谜团」 · 陈默 · 舱室 · 现存公民名称为陈默的结果是5人 · 诡异 · 指南", "gold": 3, "nums": [3, 1], "hit1": true, "hitk": true}
+{"qid": "q026", "pi": 3, "truth": false, "stmt": "第5章「历史的断层」 · 派蒙 · 求知园 · 都会将技术转移到巨子塔 · 低沉 · 光幕", "gold": 5, "nums": [5, 1], "hit1": true, "hitk": true}
+{"qid": "q026", "pi": 4, "truth": false, "stmt": "第9章「灵境：原神」 · 陈默 · 蒙德城 · 我们来接取委托 · 凝重 · 蒲公英", "gold": 9, "nums": [9, 18, 19], "hit1": true, "hitk": true}
+{"qid": "q026", "pi": 5, "truth": true, "stmt": "第6章「权限与贡献点」 · 张老 · 蜂巢 · 当时叫做智能工兵 · 冷峻 · 词条", "gold": 6, "nums": [6, 8], "hit1": true, "hitk": true}
+{"qid": "q027", "pi": 0, "truth": false, "stmt": "第8章「化解误会」 · 小李 · 求知园 · 必须得穿一套全方位的防护服 · 伤感 · 防护服", "gold": 8, "nums": [8, 7], "hit1": true, "hitk": true}
+{"qid": "q027", "pi": 1, "truth": true, "stmt": "第21章「问题的答案」 · 风神 · 蒙德城 · 重现了蒙德城 · 温和 · 小道具", "gold": 21, "nums": [21, 18], "hit1": true, "hitk": true}
+{"qid": "q027", "pi": 2, "truth": true, "stmt": "第4章「蜂巢社会蓝图」 · 陈默 · 巨子塔 · 在离开巨子塔后会进行记忆屏蔽 · 不安 · 词条", "gold": 4, "nums": [4, 2], "hit1": true, "hitk": true}
+{"qid": "q027", "pi": 3, "truth": false, "stmt": "第3章「身份谜团」 · 陈默 · 舱室 · 向所有公民提供实时信息反馈 · 诧异 · 原石", "gold": 3, "nums": [3, 23], "hit1": true, "hitk": true}
+{"qid": "q027", "pi": 4, "truth": false, "stmt": "第13章「终有一别」 · 派蒙 · 摘星崖 · 我们都是自由的灵魂 · 头疼 · 情书", "gold": 13, "nums": [13, 17], "hit1": true, "hitk": true}
+{"qid": "q027", "pi": 5, "truth": true, "stmt": "第2章「巧合还是阴谋」 · 陈默 · 轨道 · 防止自我维护 · 不安 · 指南", "gold": 2, "nums": [2, 4], "hit1": true, "hitk": true}
+{"qid": "q028", "pi": 0, "truth": false, "stmt": "第2章「巧合还是阴谋」 · 张明远 · 蜂巢 · 为我们创造了这个新世界 · 庄重 · 词条", "gold": 2, "nums": [2, 1], "hit1": true, "hitk": true}
+{"qid": "q028", "pi": 1, "truth": false, "stmt": "第7章「被请喝茶」 · 秦熙 · 白色房间 · 请你谅解我们的职责 · 温暖 · 防护服", "gold": 7, "nums": [7, 23], "hit1": true, "hitk": true}
+{"qid": "q028", "pi": 2, "truth": false, "stmt": "第4章「蜂巢社会蓝图」 · 巨子 · 蜂巢 · 资源难道是无限的么 · 不安 · 控制论", "gold": 4, "nums": [2, 4, 8], "hit1": false, "hitk": true}
+{"qid": "q028", "pi": 3, "truth": true, "stmt": "第19章「蒙德的自由」 · 琴 · 广场 · 清晰地传遍整个广场 · 坚定 · 风鹰剑", "gold": 19, "nums": [19, 18], "hit1": true, "hitk": true}
+{"qid": "q028", "pi": 4, "truth": true, "stmt": "第5章「历史的断层」 · 张明远 · 求知园 · 夺走了我们九成九以上的人口 · 震惊 · 避难所", "gold": 5, "nums": [5], "hit1": true, "hitk": true}
+{"qid": "q028", "pi": 5, "truth": true, "stmt": "第14章「暗流涌动」 · 秦熙 · 警戒检查中心 · 我需要向你了解具体情况 · 严肃 · 全息投影", "gold": 14, "nums": [14, 15], "hit1": true, "hitk": true}
+{"qid": "q029", "pi": 0, "truth": true, "stmt": "第5章「历史的断层」 · 张明远 · 巨子塔 · 能进去至少需要5级的贡献 · 好奇 · 指南", "gold": 5, "nums": [5, 7], "hit1": true, "hitk": true}
+{"qid": "q029", "pi": 1, "truth": true, "stmt": "第4章「蜂巢社会蓝图」 · 陈默 · 巨子塔 · 能确保信息传递过程中纹丝不动 · 冷汗 · 指南", "gold": 4, "nums": [4, 2], "hit1": true, "hitk": true}
+{"qid": "q029", "pi": 2, "truth": false, "stmt": "第6章「权限与贡献点」 · 派蒙 · 求知园 · 这是第五个了吧 · 羡慕 · 授权", "gold": 6, "nums": [6, 16], "hit1": true, "hitk": true}
+{"qid": "q029", "pi": 3, "truth": true, "stmt": "第1章「初见蜂巢世界」 · 陈默 · 六边形房间 · 你想漫游新世界么 · 茫然 · 指南", "gold": 1, "nums": [1, 5], "hit1": true, "hitk": true}
+{"qid": "q029", "pi": 4, "truth": false, "stmt": "第8章「化解误会」 · 小李 · 舱室 · 必须得穿一套全方位的防护服 · 若有所思 · 原石", "gold": 8, "nums": [8, 6], "hit1": true, "hitk": true}
+{"qid": "q029", "pi": 5, "truth": false, "stmt": "第23章「再别蒙德」 · 秦熙 · 舱室 · 自由派的活动正在升级 · 严肃 · 防护服", "gold": 23, "nums": [23, 7], "hit1": true, "hitk": true}
+{"qid": "q030", "pi": 0, "truth": false, "stmt": "第9章「灵境：原神」 · 派蒙 · 蒙德城 · 我们去冒险者协会接取委托吧 · 期待 · 断剑", "gold": 9, "nums": [9, 22], "hit1": true, "hitk": true}
+{"qid": "q030", "pi": 1, "truth": true, "stmt": "第7章「被请喝茶」 · 陈默 · 舱室 · 警戒检查中心节点到了 · 紧张 · 指南", "gold": 7, "nums": [7, 1], "hit1": true, "hitk": true}
+{"qid": "q030", "pi": 2, "truth": true, "stmt": "第2章「巧合还是阴谋」 · 陈默 · 蜂巢 · 设计师留下的系统把他抓来了 · 庄重 · 指南", "gold": 2, "nums": [2, 1], "hit1": true, "hitk": true}
+{"qid": "q030", "pi": 3, "truth": false, "stmt": "第6章「权限与贡献点」 · 派蒙 · 求知园 · 上次那小子拿了授权就跑路 · 鄙夷 · 授权", "gold": 6, "nums": [6, 16], "hit1": true, "hitk": true}
+{"qid": "q030", "pi": 4, "truth": true, "stmt": "第4章「蜂巢社会蓝图」 · 陈默 · 巨子塔 · 访问需要5级权限或者特殊权限 · 冷汗 · 词条", "gold": 4, "nums": [4, 2], "hit1": true, "hitk": true}
+{"qid": "q030", "pi": 5, "truth": false, "stmt": "第1章「初见蜂巢世界」 · 陈默 · 轨道 · 解锁未知词条吗 · 兴奋 · 原石", "gold": 1, "nums": [1, 9], "hit1": true, "hitk": true}
+{"qid": "q031", "pi": 0, "truth": true, "stmt": "第16章「生命的需求」 · 张老 · 求知园 · 会有怎样的价值观念 · 坚定 · 光幕", "gold": 16, "nums": [16, 5], "hit1": true, "hitk": true}
+{"qid": "q031", "pi": 1, "truth": false, "stmt": "第6章「权限与贡献点」 · 张老 · 舱室 · 而不是塑造一个魔鬼 · 温暖 · 词条", "gold": 6, "nums": [6, 8], "hit1": true, "hitk": true}
+{"qid": "q031", "pi": 2, "truth": false, "stmt": "第12章「何为自由」 · 陈默 · 警戒检查中心 · 是浪子的真情 · 认真 · 塞西莉亚花", "gold": 12, "nums": [12, 6], "hit1": true, "hitk": true}
+{"qid": "q031", "pi": 3, "truth": true, "stmt": "第5章「历史的断层」 · 张明远 · 巨子塔 · 能进去至少需要5级的贡献 · 好奇 · 指南", "gold": 5, "nums": [5, 7], "hit1": true, "hitk": true}
+{"qid": "q031", "pi": 4, "truth": true, "stmt": "第21章「问题的答案」 · 巨子 · 蒙德城 · 我面对一个永恒的难题 · 温和 · 小道具", "gold": 21, "nums": [21, 18], "hit1": true, "hitk": true}
+{"qid": "q031", "pi": 5, "truth": false, "stmt": "第16章「生命的需求」 · 巨子 · 舱室 · 为什么我要坚决反对永生 · 心中一颤 · 推演模型", "gold": 16, "nums": [16, 23], "hit1": true, "hitk": true}
+{"qid": "q032", "pi": 0, "truth": false, "stmt": "第10章「初次见面」 · 派蒙 · 蒙德城 · 风神是这个世界的创造者 · 严肃 · 风鹰剑", "gold": 10, "nums": [10, 18], "hit1": true, "hitk": true}
+{"qid": "q032", "pi": 1, "truth": true, "stmt": "第12章「何为自由」 · 陈默 · 摘星崖 · 是浪子的真情 · 认真 · 塞西莉亚花", "gold": 12, "nums": [12, 17], "hit1": true, "hitk": true}
+{"qid": "q032", "pi": 2, "truth": false, "stmt": "第13章「终有一别」 · 派蒙 · 蒙德城 · 我们都是自由的灵魂 · 疑惑 · 情书", "gold": 13, "nums": [13, 9], "hit1": true, "hitk": true}
+{"qid": "q032", "pi": 3, "truth": true, "stmt": "第21章「问题的答案」 · 陈默 · 蒙德城 · 正是和陈默有几分相似的老人 · 好奇 · 幻想朋友", "gold": 21, "nums": [21, 9], "hit1": true, "hitk": true}
+{"qid": "q032", "pi": 4, "truth": false, "stmt": "第19章「蒙德的自由」 · 琴 · 广场 · 清晰地传遍整个广场 · 坚定 · 原石", "gold": 19, "nums": [19, 18], "hit1": true, "hitk": true}
+{"qid": "q032", "pi": 5, "truth": true, "stmt": "第17章「反击宣告」 · 派蒙 · 摘星崖 · 我不是风神，你也并非是派蒙 · 哀求 · 塞西莉亚花", "gold": 17, "nums": [17, 13], "hit1": true, "hitk": true}
+{"qid": "q033", "pi": 0, "truth": false, "stmt": "第10章「初次见面」 · 派蒙 · 蒙德城 · 风神是这个世界的创造者 · 严肃 · 塞西莉亚花", "gold": 10, "nums": [10, 18], "hit1": true, "hitk": true}
+{"qid": "q033", "pi": 1, "truth": false, "stmt": "第12章「何为自由」 · 陈默 · 广场 · 是浪子的真情 · 认真 · 塞西莉亚花", "gold": 12, "nums": [12, 18], "hit1": true, "hitk": true}
+{"qid": "q033", "pi": 2, "truth": true, "stmt": "第5章「历史的断层」 · 张明远 · 巨子塔 · 能进去至少需要5级的贡献 · 好奇 · 指南", "gold": 5, "nums": [5, 7], "hit1": true, "hitk": true}
+{"qid": "q033", "pi": 3, "truth": true, "stmt": "第16章「生命的需求」 · 张老 · 求知园 · 确实导致智能涌现 · 坚定 · 贡献点", "gold": 16, "nums": [16, 5], "hit1": true, "hitk": true}
+{"qid": "q033", "pi": 4, "truth": false, "stmt": "第19章「蒙德的自由」 · 琴 · 广场 · 清晰地传遍整个广场 · 疲惫 · 风鹰剑", "gold": 19, "nums": [19], "hit1": true, "hitk": true}
+{"qid": "q033", "pi": 5, "truth": true, "stmt": "第21章「问题的答案」 · 巨子 · 蒙德城 · 机器人中产生了一批自由的灵魂 · 好奇 · 小道具", "gold": 21, "nums": [21, 5], "hit1": true, "hitk": true}
+{"qid": "q034", "pi": 0, "truth": false, "stmt": "第6章「权限与贡献点」 · 张老 · 蒙德城 · 而不是塑造一个魔鬼 · 认真 · 词条", "gold": 6, "nums": [6, 5], "hit1": true, "hitk": true}
+{"qid": "q034", "pi": 1, "truth": false, "stmt": "第7章「被请喝茶」 · 陈默 · 警戒检查中心 · 警戒检查中心节点到了 · 疑惑 · 原石", "gold": 7, "nums": [7, 8], "hit1": true, "hitk": true}
+{"qid": "q034", "pi": 2, "truth": false, "stmt": "第4章「蜂巢社会蓝图」 · 巨子 · 蜂巢 · 能确保信息传递过程中纹丝不动 · 紧张 · 量子通信", "gold": 4, "nums": [4, 7], "hit1": true, "hitk": true}
+{"qid": "q034", "pi": 3, "truth": true, "stmt": "第3章「身份谜团」 · 陈默 · 舱室 · 就是咱们的反馈机制 · 不甘 · 控制论", "gold": 3, "nums": [3, 2], "hit1": true, "hitk": true}
+{"qid": "q034", "pi": 4, "truth": true, "stmt": "第19章「蒙德的自由」 · 琴 · 广场 · 清晰地传遍整个广场 · 坚定 · 风鹰剑", "gold": 19, "nums": [19, 18], "hit1": true, "hitk": true}
+{"qid": "q034", "pi": 5, "truth": true, "stmt": "第8章「化解误会」 · 陈默 · 舱室 · 首先是要对系统设置一个目标值 · 头疼 · 光幕", "gold": 8, "nums": [8, 1], "hit1": true, "hitk": true}
+{"qid": "q035", "pi": 0, "truth": false, "stmt": "第7章「被请喝茶」 · 秦熙 · 白色房间 · 提升公民权限等级至5级 · 紧张 · 防护服", "gold": 7, "nums": [7, 8], "hit1": true, "hitk": true}
+{"qid": "q035", "pi": 1, "truth": false, "stmt": "第6章「权限与贡献点」 · 张老 · 求知园 · 而不是塑造一个魔鬼 · 语重心长 · 原石", "gold": 6, "nums": [6, 5], "hit1": true, "hitk": true}
+{"qid": "q035", "pi": 2, "truth": true, "stmt": "第3章「身份谜团」 · 陈默 · 巨子塔 · 你就是那个反馈的眼睛和耳朵 · 不甘 · 指南", "gold": 3, "nums": [3, 2], "hit1": true, "hitk": true}
+{"qid": "q035", "pi": 3, "truth": true, "stmt": "第8章「化解误会」 · 陈默 · 舱室 · 首先是要对系统设置一个目标值 · 头疼 · 光幕", "gold": 8, "nums": [8, 1], "hit1": true, "hitk": true}
+{"qid": "q035", "pi": 4, "truth": false, "stmt": "第8章「化解误会」 · 小李 · 巨子塔 · 必须得穿一套全方位的防护服 · 埋怨 · 防护服", "gold": 8, "nums": [8, 7], "hit1": true, "hitk": true}
+{"qid": "q035", "pi": 5, "truth": true, "stmt": "第21章「问题的答案」 · 巨子 · 蒙德城 · 他们是我的骄傲，也是我的遗憾 · 骄傲 · 道具", "gold": 21, "nums": [21, 3], "hit1": true, "hitk": true}
+{"qid": "q036", "pi": 0, "truth": true, "stmt": "第3章「身份谜团」 · 陈默 · 舱室 · 权限不足 · 不甘 · 扫描光束", "gold": 3, "nums": [3, 1], "hit1": true, "hitk": true}
+{"qid": "q036", "pi": 1, "truth": true, "stmt": "第2章「巧合还是阴谋」 · 陈默 · 求知园 · 在光幕上点击提交 · 满足 · 贡献点", "gold": 2, "nums": [2, 1], "hit1": true, "hitk": true}
+{"qid": "q036", "pi": 2, "truth": false, "stmt": "第7章「被请喝茶」 · 秦熙 · 白色房间 · 请你谅解我们的职责 · 无奈 · 推演模型", "gold": 7, "nums": [7, 20], "hit1": true, "hitk": true}
+{"qid": "q036", "pi": 3, "truth": false, "stmt": "第6章「权限与贡献点」 · 张老 · 蜂巢 · 智能化机器人大战 · 认真 · 原石", "gold": 6, "nums": [6, 5], "hit1": true, "hitk": true}
+{"qid": "q036", "pi": 4, "truth": true, "stmt": "第4章「蜂巢社会蓝图」 · 巨子 · 蜂巢 · 这样的技术我们已经有了 · 不安 · 神经认证", "gold": 4, "nums": [4, 8], "hit1": true, "hitk": true}
+{"qid": "q036", "pi": 5, "truth": false, "stmt": "第5章「历史的断层」 · 陈默 · 白色房间 · 达到5级贡献者 · 好奇 · 控制论", "gold": 5, "nums": [5, 7], "hit1": true, "hitk": true}
+{"qid": "q037", "pi": 0, "truth": true, "stmt": "第6章「权限与贡献点」 · 张老 · 求知园 · 从5级别跌落 · 语重心长 · 贡献点", "gold": 6, "nums": [6, 5], "hit1": true, "hitk": true}
+{"qid": "q037", "pi": 1, "truth": false, "stmt": "第7章「被请喝茶」 · 陈默 · 蒙德城 · 舱室的最大时速是多少 · 疑惑 · 指南", "gold": 7, "nums": [7, 9], "hit1": true, "hitk": true}
+{"qid": "q037", "pi": 2, "truth": true, "stmt": "第21章「问题的答案」 · 诺艾尔 · 蒙德城 · 旅行者，你的幻想朋友是你自己 · 惊讶 · 道具", "gold": 21, "nums": [21, 23], "hit1": true, "hitk": true}
+{"qid": "q037", "pi": 3, "truth": false, "stmt": "第14章「暗流涌动」 · 秦熙 · 个人办公室 · 资源难道是无限的么 · 疲惫 · 全息投影", "gold": 14, "nums": [14, 15], "hit1": true, "hitk": true}
+{"qid": "q037", "pi": 4, "truth": false, "stmt": "第8章「化解误会」 · 陈默 · 舱室 · 必须得穿一套全方位的防护服 · 鄙夷 · 指南", "gold": 8, "nums": [6, 8], "hit1": false, "hitk": true}
+{"qid": "q037", "pi": 5, "truth": true, "stmt": "第5章「历史的断层」 · 张明远 · 巨子塔 · 能进去至少需要5级的贡献 · 好奇 · 指南", "gold": 5, "nums": [5, 7], "hit1": true, "hitk": true}
+{"qid": "q038", "pi": 0, "truth": true, "stmt": "第2章「巧合还是阴谋」 · 陈默 · 轨道 · 必须由公民定期进行检测 · 耐人寻味 · 清洁机器人", "gold": 2, "nums": [2, 1], "hit1": true, "hitk": true}
+{"qid": "q038", "pi": 1, "truth": true, "stmt": "第16章「生命的需求」 · 张老 · 求知园 · 会有怎样的价值观念 · 心中一颤 · 光幕", "gold": 16, "nums": [16, 5], "hit1": true, "hitk": true}
+{"qid": "q038", "pi": 2, "truth": false, "stmt": "第7章「被请喝茶」 · 秦熙 · 警戒检查中心 · 请你谅解我们的职责 · 紧张 · 电子徽章", "gold": 7, "nums": [7, 8], "hit1": true, "hitk": true}
+{"qid": "q038", "pi": 3, "truth": false, "stmt": "第21章「问题的答案」 · 巨子 · 求知园 · 我开始感到好奇和恐惧 · 恐惧 · 道具", "gold": 21, "nums": [21, 2], "hit1": true, "hitk": true}
+{"qid": "q038", "pi": 4, "truth": false, "stmt": "第15章「永恒奴役」 · 陈默 · 舱室 · 资源难道是无限的么 · 头皮发麻 · 推演模型", "gold": 15, "nums": [15, 23], "hit1": true, "hitk": true}
+{"qid": "q038", "pi": 5, "truth": true, "stmt": "第5章「历史的断层」 · 张明远 · 巨子塔 · 能进去至少需要5级的贡献 · 好奇 · 指南", "gold": 5, "nums": [5, 7], "hit1": true, "hitk": true}

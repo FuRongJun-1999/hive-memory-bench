@@ -1,0 +1,45 @@
+{
+ "retrieval_prod": {
+  "n": 552,
+  "top1": 0.9783,
+  "topk": 0.9982,
+  "chapters": 23,
+  "nodes": 146
+ },
+ "uniform_mat1_k1": {
+  "n": 552,
+  "tp": 226,
+  "tn": 252,
+  "fp": 24,
+  "fn": 50,
+  "tpr": 81.9,
+  "tnr": 91.3,
+  "balanced_acc": 0.8659,
+  "phi": 0.7352,
+  "q_all": 36,
+  "q_n": 92,
+  "mat_avg": 2710
+ },
+ "uniform_mat3_k3": {
+  "n": 552,
+  "tp": 234,
+  "tn": 246,
+  "fp": 30,
+  "fn": 42,
+  "tpr": 84.8,
+  "tnr": 89.1,
+  "balanced_acc": 0.8696,
+  "phi": 0.7398,
+  "q_all": 39,
+  "q_n": 92,
+  "mat_avg": 5296
+ },
+ "heading_effect": {
+  "with_heading": 0.8659,
+  "without_heading": 0.7717,
+  "delta": 0.0942
+ },
+ "judge": "deepseek-chat",
+ "temperature": 0.0,
+ "max_tokens": 16
+}
