@@ -1,0 +1,24 @@
+{
+ "state_track": {
+  "n": 552,
+  "top1": 0.942,
+  "balanced": 0.9783,
+  "tp": 266,
+  "tn": 274,
+  "fp": 2,
+  "fn": 10
+ },
+ "e2e_timepack": {
+  "n": 552,
+  "tp": 89,
+  "tn": 271,
+  "fp": 5,
+  "fn": 187,
+  "balanced_acc": 0.6522,
+  "phi": 0.4048,
+  "mat_avg": 10006,
+  "judge": "deepseek-chat",
+  "temperature": 0.0,
+  "max_tokens": 16
+ }
+}
